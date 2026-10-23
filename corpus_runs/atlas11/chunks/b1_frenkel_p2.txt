@@ -1,0 +1,439 @@
+well as the link between automorphic representations and moduli spaces of bundles. I then formulate the geometric Langlands conjecture for GLn (following
+
+Drinfeld and Laumon) and discuss it in great detail in the abelian case_n = 1. This brings into the game some familiar geometric objects, such as the Jacobian,
+
+as well as the Fourier-Mukai transform. Next, we discuss the ingredients necessary for formulating the Langlands correspondence for arbitrary reductive groups.
+
+In particular, we discuss in detail the affine Grassmannian, the Satake correspondence and its geometric version. At the end of Part II we speculate about a
+
+possible non-abelian extension of the Fourier-Mukai transform and its “quantum” deformation.
+
+Part III is devoted to the construction of Hecke eigensheaves in the framework of conformal field theory, following the work of Beilinson and Drinfeld \[15\]. I
+
+start by recalling
+
+the notions of conformal blocks and bundles of conformal blocks in conformal field theories with affine Lie algebra symmetry, first as bundles (or sheaves) over
+
+the moduli spaces of pointed Riemann surfaces and then over the moduli spaces of G-bundles. I discuss in detail the familiar example of the WZW models. Then I
+
+consider the center of the chiral algebra of an affine Lie algebra bg of critical level and its isomorphism with the classical W-algebra associated to the
+
+Langlands dual group LG following \[11, 12\]. I explain how this isomorphism arises in the context of T-duality. We then use this isomorphism to construct
+
+representations of bg attached to geometric objects called opers. The sheaves of coinvariants corresponding to these representations are the sought-after Hecke
+
+eigensheaves. I also discuss the connection with the Hitchin system and a generalization to
+
+more general flat LG-bundles, with and without ramification.
+
+Even in a long survey it is impossible to cover all essential aspects of the Langlands Program. To get a broader picture, I recommend the interested reader to
+
+consult the informative reviews \[21\]–\[27\]. My earlier review articles \[28, 29\] contain some of the material of the present notes in a more concise form as
+
+well as additional topics not covered here.
+
+| 8  EDWARD FRENKEL |  |
+
+| --- | --- |
+
+| Acknowledgments. These notes grew out of the lectures that I gave at the Les Houches |  |
+
+| School “Number Theory and Physics” in March of 2003 and at the DARPA Workshop |  |
+
+| “Langlands Program and Physics” at the Institute for Advanced Study in March of 2004. |  |
+
+|  | I thank the organizers of the Les Houches School, especially B. Julia, for the invitation |  |
+
+| and for encouraging me to write this review. |  |
+
+|  | I am grateful to P. Goddard and E. Witten for their help in organizing the DARPA |  |
+
+| Workshop at the IAS. I thank DARPA for providing generous support which made this |  |
+
+| Workshop possible. |  |
+
+|  | I have benefited from numerous discussions of the Langlands correspondence with A. |  |
+
+| Beilinson, D. Ben-Zvi, V. Drinfeld, B. Feigin, D. Gaitsgory, D. Kazhdan and K. Vilonen. |  |
+
+| I am grateful to all of them. I also thank K. Ribet and A.J. Tolland for their comments |  |
+
+| on the draft of this paper. |  |
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 9
+
+### Part I. The origins of the Langlands Program
+
+In the first part of this article I review the origins of the Langlands Program. We start by recalling some basic notions of number theory (Galois group,
+
+Frobenius elements, abelian class field theory). We then consider examples of the Langlands correspondence for the group GL2 over the rational ad\`eles. These
+
+examples relate in a surprising and non-trivial way modular forms on the upper half-plane and elliptic curves defined over rational numbers. Next, we recall the
+
+analogy between number fields and function fields.
+
+In the context of function fields the Langlands correspondence has been established in the works of V. Drinfeld and L. Lafforgue. We give a pricise formulation
+
+of their results.
+
+1. The Langlands correspondence over number fields
+
+1.1. Galois group. Let us start by recalling some notions from number theory. A number field is by definition a finite extension of the field Q of rational
+
+numbers, i.e., a field
+
+containing Q which is a finite-dimensional vector space over Q. Such a field F is necessarily an algebraic extension of Q, obtained by adjoining to Q roots of
+
+polynomials with
+
+coefficients in Q. For example, the field
+
+\[
+
+Q(i) = {a + bi\|a \in Q,b \in Q}
+
+\]
+
+is obtained from Q by adjoining the roots of the polynomial x 2 + 1, denoted by i and −i.
+
+The coefficients of this polynomial are rational numbers, so the polynomial is defined over Q, but its roots are not. Therefore adjoining them to Q we obtain a
+
+larger field, which has dimension 2 as a vector space over Q.
+
+\[
+
+More generally, adjoining to Q a primitive Nth root of unity \zeta N we obtain the Nth cyclotomic field Q(\zeta N). Its dimension over Q is \varphi(N), the
+
+Euler function of N: the number of integers between_1 and N such that (m,N) = 1 (this notation means that_m is
+
+\]
+
+### 2πi/N , but
+
+relatively prime to N). We can embed Q(ζN ) into C in such a way that ζN_7→ e this is not the only possible embedding of Q(ζN ) into C; we could also send ζN_7→
+
+e 2πim/N , where (m,N) = 1.Suppose now that F is a number field, and let K be its finite extension, i.e., another field containing F, which has finite
+
+dimension as a vector space over F. This dimension is called the degree of this extension and is denoted by degF K. The group of all field automorphisms σ of K,
+
+preserving the field structures and such that σ(x) = x for all x ∈ F, is called the Galois group of K/F and denoted by Gal(K/F). Note that if K′ is an
+
+extension of K, then any field automorphism of K′ will preserve K (although not pointwise), and so we have a natural homomorphism Gal(K′/F) → Gal(K/F). Its
+
+kernel is the normal subgroup of those elements that fix K pointwise, i.e., it is isomorphic to Gal(K′/K).
+
+For example, the Galois group Gal(Q(ζN )/Q) is naturally identified with the group
+
+\[
+
+(Z/NZ) \times = {[n] \in Z/NZ\|(n,N) = 1},
+
+\]
+
+| 10  EDWARD FRENKEL |  |
+
+| --- | --- |
+
+\[
+
+| with respect to multiplication. The element [n] \in (Z/NZ) | \times gives rise to the automorphism of Q(\zeta N) sending \zeta N to \zeta |
+
+\]
+
+| n m | mn |
+
+| N , and hence ζ N to ζ | N for all_m. If M divides N, | | then Q(ζM) is contained in Q(ζN ), and the corresponding homomorphism of the Galois | | | groups
+
+Gal(Q(ζN )/Q) → Gal(Q(ζM)/Q) coincides, under the above identification, with | |
+
+| the natural surjective homomorphism |  |
+
+| × → (Z/MZ) pN,M : (Z/NZ) | ×, |
+
+| sending [n] to [n] mod M. |  |
+
+The field obtained from F by adjoining the roots of all polynomials defined over F is called the algebraic closure of F and is denoted by F. Its group of
+
+symmetries is the Galois group Gal(F/F). Describing the structure of these Galois groups is one of the main questions of number theory.
+
+1.2. Abelian class field theory. While at the moment we do not have a good description of the entire group Gal(F/F), it has been known for some time what is the
+
+maximal abelian quotient of Gal(F/F) (i.e., the quotient by the commutator subgroup). This quotient is naturally identified with the Galois group of the
+
+maximal abelian extension F ab of F. By definition, F ab is the largest of all subfields of F whose Galois group is abelian.
+
+\[
+
+For F = Q, the classical Kronecker-Weber theorem says that the maximal abelian extension Qab is obtained by adjoining to Q all roots of unity. In other words,
+
+Qab is the | union of all cyclotomic fields Q(\zeta N) (where Q(\zeta M) is identified with the corresponding subfield of Q(\zeta N) for M dividing N).
+
+Therefore we obtain that the Galois group Gal(Qab/Q) | |
+
+\]
+
+| --- | --- |
+
+| is isomorphic to the inverse limit of the groups (Z/NZ) | × with respect to the system of |
+
+| × → (Z/MZ) × for M dividing N: surjections pN,M : (Z/NZ) |  |
+
+| (1.1) Gal(Q (Z/NZ) ab/Q) ≃ lim←− | ×. |
+
+| By definition, an element of this inverse limit is a collection (xN ),N > 1, of elements of | | | (Z/NZ) × such that pN,M(xN ) = xM for all pairs N,M such
+
+that M divides N. | |
+
+This inverse limit may be described more concretely using the notion of p-adic numbers.
+
+Recall (see, e.g., \[30\]) that if p is a prime, then a p-adic number is an infinite series of the form
+
+### (1.2)  akp k + ak+1p k+1 + ak+2p k+2 + ... ,
+
+where each ak is an integer between_0 and p − 1, and we choose_k ∈ Z in such a way that ak_6= 0. One defines addition and multiplication of such expressions by
+
+“carrying” the result of powerwise addition and multiplication to the next power. One checks that with respect to these operations the p-adic numbers form a
+
+field denoted by Qp (for example, it is possible to find the inverse of each expression (1.2) by solving the obvious system of recurrence relations). It
+
+contains the subring Zp of p-adic integers which consists of the above expressions with_k ≥ 0. It is clear that Qp is the field of fractions of Zp. Note that
+
+the subring of Zp consisting of all finite series of the form (1.2) with_k ≥ 0 is just the ring of integers Z. The resulting embedding Z ֒→ Zp gives rise to the
+
+embedding Q ֒→ Qp.
+
+It is important to observe that Qp is in fact a completion of Q. To see that, define a
+
+ka/b\|p = p
+
+norm \| · \|p on Q by the formula \|p −k
+
+, where a,b are integers relatively prime to
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 11
+
+k becomes smaller and smaller as_k → +∞ (in contrast to
+
+### p. With respect to this norm p
+
+\[
+
+the usual norm where p_k becomes smaller as_k \to -\infty). That is why the completion of Q with respect to this norm is the set of all infinite series of the
+
+form \tag{1.2}
+
+\]
+
+\[
+
+, going =in the wrong direction”. This is precisely the field Qp. This norm extends uniquely to Qp, with the norm of the p-adic number \tag{1.2}
+
+\]
+
+\[
+
+(with ak_6= 0 as was our assumption) being equal to
+
+\]
+
+### p −k
+
+.
+
+In fact, according to Ostrowski’s theorem, any completion of Q is isomorphic to either Qp or to the field R of real numbers.
+
+Now observe that if N = Q mp is the prime factorization of N, then Z/NZ ≃
+
+p
+
+p
+
+Q p Z/pmpZ. Let Zb be the inverse limit of the rings Z/NZ with respect to the natural surjections Z/NZ → Z/MZ for M dividing N:
+
+(1.3)  Zb = lim←− Z/NZ ≃ Y Zp.
+
+p
+
+It follows that
+
+Zb ≃ Y lim←− Z/prZ
+
+,
+
+p
+
+where the inverse limit in the brackets is taken with respect to the natural surjective homomorphisms Z/prZ → Z/psZ,r > s. But this inverse limit is nothing but
+
+Zp! So we find that
+
+(1.4)  Zb ≃ Y Zp.
+
+p
+
+Note that Zb defined above is actually a ring. The Kronecker-Weber theorem (1.1) implies that Gal(Qab/Q) is isomorphic to the multiplicative group Zb× of
+
+invertible elements of the ring Zb. But we find from (1.4) that Zb× is nothing but the direct product of the multiplicative groups Z ×
+
+p of the rings of p-adic integers where p runs over the set of all
+
+primes. We thus conclude that
+
+### Gal(Q ab/Q) ≃ Zb× ≃ Y Z ×
+
+p .
+
+p
+
+An analogue of the Kronecker-Weber theorem describing the maximal abelian extension F ab of an arbitrary number field F is unknown in general. But the abelian
+
+class field theory (ACFT – no pun intended!) describes its Galois group Gal(F ab/F), which is the maximal abelian quotient of Gal(F/F). It states that Gal(F
+
+ab/F) is isomorphic to the group of
+
+×\\A × × is the multiplicative group of
+
+connected components of the quotient F
+
+F . Here A F
+
+invertible elements in the ring AF of ad\`eles of F, which is a subring in the direct product of all completions of F.
+
+\[
+
+We define the ad+eles first in the case when F = Q. In this case, as we mentioned above, the completions of Q are the fields Qp of p-adic numbers, where p runs
+
+over the set of all primes p, and the field R of real numbers. Hence the ring AQ is a subring of the direct product of the fields Qp. More precisely, elements
+
+of AQ are the collections ((fp)p\in P,f\infty), where fp \in Qp and f\infty \in R, satisfying the condition that fp \in Zp for all but finitely many
+
+\]
+
+### 12  EDWARD FRENKEL
+
+### p’s. It follows from the definition that
+
+#### AQ ≃ (Zb \otimes Z Q) × R.
+
+We give the ring Zb defined by (1.3) the topology of direct product, Q the discrete topology and R its usual topology. This defines AQ the structure of
+
+topological ring on AQ. Note that we have a diagonal embedding Q ֒→ AQ and the quotient
+
+#### Q\\AQ ≃ Zb × (R/Z)
+
+is compact. This is in fact the reason for the above condition that almost all fp’s belong to Zp. We also have the multiplicative group A ×
+
+of invertible ad\`eles (also called id\`eles)
+
+Q
+
+### ×
+
+and a natural diagonal embedding of groups Q× ֒→ A
+
+Q .
+
+\[
+
+In the case when F = Q, the statement of ACFT is that Gal(Qab/Q) is isomorphic to the group of connected components of the quotient Q\times \\A \times
+
+Q . It is not difficult to see that
+
+### Q ×\\A × Y Z ×
+
+Q ≃ p × R>0.
+
+p
+
+Hence the group of its connected components is isomorphic to Y Z ×
+
+p , in agreement with
+
+p
+
+the Kronecker-Weber theorem.
+
+For an arbitrary number field F one defines the ring AF of ad\`eles in a similar way. Like Q, any number field F has non-archimedian completions parameterized
+
+by prime ideals in its ring of integers OF . By definition, OF consists of all elements of F that are roots of monic polynomials with coefficients in F; monic
+
+means that the coefficient in front of the highest power is equal to 1. The corresponding norms on F are defined similarly to the p-adic norms, and the
+
+completions look like the fields of p-adic numbers (in fact, each of them is isomorphic to a finite extension of Qp for some p). There are also archimedian
+
+completions, which are isomorphic to either R or C, parameterized by the real and complex embeddings of F. The corresponding norms are obtained by taking the
+
+composition of an embedding of F into R or C and the standard norm on the latter.
+
+We denote these completions by Fv, where v runs over the set of equivalence classes of norms on F. Each of the non-archimedian completions contains its own
+
+“ring of integers”, denoted by Ov, which is defined similarly to Zp. Now AF is defined as the restricted product of all (non-isomorphic) completions. Restricted
+
+means that it consists of those collections of elements of Fv which belong to the ring of integers Ov ⊂ Fv for all but finitely many v’s corresponding to the
+
+non-archimedian completions. The field F diagonally embeds into AF , and the multiplicative group F × of F into the multiplicative group A ×
+
+of invertible
+
+F
+
+×\\A × is well-defined as an abelian group.
+
+elements of AF . Hence the quotient F
+
+F
+
+The statement of ACFT is now
+
+group of connected
+
+(1.5)  Galois group ≃
+
+### Gal(F ab/F) ×\\A ×
+
+components of F
+
+F
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 13
+
+In addition, this isomorphism satisfies a very important property, which rigidifies it. In order to explain it, we need to introduce the Frobenius
+
+automorphisms, which we do in the next subsection.
+
+1.3. Frobenius automorphisms. Let us look at the extensions of the finite field of p elements Fp, where p is a prime. It is well-known that there is a unique,
+
+up to an isomorphism, extension of Fp of degree_n = 1, 2,... (see, e.g., \[30\]). It then has q = p_n elements and is denoted by Fq. The Galois group Gal(Fq/Fp)
+
+is isomorphic to the cyclic group Z/nZ. A generator of this group is the Frobenius automorphism, which sends x ∈ Fq to x p ∈ Fq. It is clear from the binomial
+
+formula that this is indeed a field automorphism of Fq. Moreover, x p = x for all x ∈ Fp, so it preserves all elements of Fp. It is also not difficult to show
+
+that this automorphism has order exactly_n and that all automorphisms of Fq preserving Fp are its powers. Under the isomorphism Gal(Fq/Fp) ≃ Z/nZ the Frobenius
+
+automorphism goes to_1 mod_n. Observe that the field Fq may be included as a subfield of Fq ′ = q ′
+
+n
+
+### ′ whenever q . The
+
+algebraic closure Fp of Fp is therefore the union of all fields Fq,q = p_n
+
+### ,n > 0, with respect
+
+to this system of inclusions. Hence the Galois group Gal(Fp/Fp) is the inverse limit of the cyclic groups Z/nZ and hence is isomorphic to Zb introduced in
+
+formula (1.3).
+
+### ′ = q ′
+
+Likewise, the Galois group Gal(Fq n
+
+′/Fq), where q , is isomorphic to the cyclic group
+
+Z/n′Z generated by the automorphism x 7→ x q
+
+, and hence Gal(Fq/Fq) is isomorphic to Zb
+
+for any q that is a power of a prime. The group Zb has a preferred element which projects onto 1 mod n under the homomorphism Zb → Z/nZ. Inside Zb it generates
+
+the subgroup Z ⊂ Zb, of which Zb is a completion, and so it may be viewed as a topological generator of Zb. We will call it the Frobenius automorphism of Fq.

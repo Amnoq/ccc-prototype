@@ -1,0 +1,206 @@
+## Node 11p — tones gate on the 11l candidate: PARTIAL (r=2 present, r=1 absent) (2026-10-05)
+Runs the toroidal phonon letter's Node 11a gate exactly as sequenced,
+on the 11l quantum-graph candidate: the candidate's pair-correlation
+tones must reproduce the measured Berry tones -- r=1 (p=2,3,5,7),
+r=2 (p=2,3), r=3 (p=2).
+- Method: 11l spectrum recomputed live (1015 vertex roots + 1020
+  Dirichlet levels = 2035 merged levels, bit-identical count to 11l);
+  the 11g gate probe (degree-10 detrended Lomb-Scargle, z-scores at
+  the 7 letter frequencies f=r*log(p)/(2*pi)); GUE + shuffled
+  controls, same seeds. Script: node11p_gate.py (Idea execution);
+  output: node11p_gate.json.
+- RESULT (live re-run, reproduces 11l's stored detail to 0.1):
+  (2,1) z=1.24, (3,1) z=-0.09, (5,1) z=0.62, (7,1) z=0.55,
+  (2,2) z=9.23, (3,2) z=8.12, (2,3) z=0.20.
+  Controls at the same 7 frequencies: GUE mean 0.61 (max 1.60),
+  shuffled mean -0.09 (max 1.41).
+- VERDICT: the gate as strictly stated is NOT passed -- the r=1
+  fundamentals, the most prominent measured Berry tones, sit at
+  control level (absent). But the candidate genuinely carries
+  prime-power tones: (2,2) and (3,2) at z~9 and ~8, far above any
+  control. (2,3) absent. Mean z over the 7: graph 2.84 vs GUE 0.61.
+- Reading: 11l proves the orbit->tone mechanism (tones follow closed-
+  orbit lengths), but its tone *pattern* (strong r=2, weak r=1) does
+  not match the measured Berry-tone pattern (strong r=1). The
+  mechanism is right; the specific spectral realization is not the
+  letter's operator. The hunt continues.
+  [computationally verified]
+
+## Node 11q — corollary test of the interference theorem: CONFIRMED (amplitude level) (2026-10-06)
+Tests the interference theorem's corollary — merged even-r tones
+enhanced over odd-r — at r=3/r=4: (2,4),(3,4) vs (2,3),(3,3).
+Run as a methodology probe: the subagent was handed METHODOLOGY.md
+as its sole operating manual and graded on the method, not the answer.
+- Method: 11l spectrum recomputed live (1015 roots + 1020 Dirichlet
+  = 2035; density cross-check 0.025 step finds 1023, +0.8%);
+  triadic fork — claim (merged r=4>r=3), polar opposite (no
+  generalization beyond r=2), null (GUE + shuffled); 11p anchors
+  reproduced (pipeline validated); exact complex amplitudes via the
+  hierarchy-investigation method.
+- RESULT: z-score probe does NOT resolve r=3/r=4 (merged 0.78/1.15
+  inside control background) — clean null, sensitivity limit, not a
+  refutation. Amplitude level: (2,3),(3,3) align -0.98/-0.99
+  (destructive); (2,4),(3,4) align +1.00 (constructive); additivity
+  |Cv+Cd|=|Cm| to 4e-4; |Cm(2,4)|>|Cm(2,3)|, |Cm(3,4)|>|Cm(3,3)|.
+- VERDICT: corollary CONFIRMED at the amplitude level
+  [computationally verified]. The r=3/r=4 alignment pattern is a
+  second independent witness for the phase-alternation law (b);
+  analytic origin still open. Vertex-hierarchy leg at r>=3
+  inconclusive (mixed amplitudes; composite orbits) — reported, not
+  forced. 11p gate verdict unchanged.
+- Method verdict: the manual ran clean cold — triadic fork (the
+  opposite leg forced the decisive amplitude test), labels on every
+  claim, branching identifiers, honest negatives, density check.
+  Backward touch specified but tree edits left to parent (done here).
+  Full record: node11q_corollary_test.md.
+
+## Node 15 — the 0/0.5/1 triple: two witnesses, one form (2026-10-06)
+Synthesis observation closing the interference arc. The triple
+(0 = return/cancellation, 0.5 = half-shift/half-span, 1 = completed
+unit) appears independently in the spectrum (interference theorem:
+r=1,3 cancel; π phase alternation; r=2,4 constructively win —
+computationally verified) and in Circle C's geometry (singularity
+at zero; radius p/2; the double traversal as the only unit of
+measure — exact by construction). The spectrum did not invent the
+triple; the sieve had it from the beginning (2026-09-29).
+- Reading: the double traversal completing the unit is the form;
+  the half flips destruction to construction. Second triple
+  artifact in the same place — the witness pattern again.
+- Bears on lemma (b): the phase alternation has a geometric
+  antecedent, constraining the open derivation to the
+  double-traversal geometry.
+- Prospective third witness: tunneling bounce — **2026-10-06
+  (Node 11r): confirmed at the level of form** (0/1/2 traversal
+  division of labor is real: 0-sector ambiguous, 1-sector gives the
+  splitting, 2-sector/bounce carries the imaginary half-phase
+  completing the 0-sector — standard BZJ resurgence); **heuristic
+  as evidence for universality** (no additional even/odd pattern
+  beyond dilute-gas + BZJ; the polar opposite held). Structural
+  wall mapped: the 2-sector's real fingerprint is inseparable by
+  theorem from the 0-sector's Borel ambiguity. **2026-10-06
+  (Node 11s): second angle, same verdict** — the form appears in the
+  false-vacuum decay width (0: PT real/asymptotic, blind to decay;
+  0.5: bounce S_b=3.294/2.919/2.583, the decay channel; 1: Γ real
+  and complete); no additional pattern found (polar opposite holds,
+  pre-registered). Sharp boundaries: (a)-as-specified impossible
+  for confining potentials (Im E=0 to machine precision — open the
+  channel by design); quartic x⁴ wall forces X_c trade-off, blocking
+  precision Γ_exact/Γ_bounce. Witness 3 stays form-level/heuristic.
+- Full record: triple_artifact_0_5_1.md.
+
+## Node 11r — tunneling traversal-sector probe: third witness at level of form (2026-10-06)
+Tests the triple's prospective third witness: does the 0/0.5/1
+phase structure appear in tunneling amplitudes? Double well
+V=(x²−1)², exact diagonalization (FD + HO basis, convergence
+checked), ℏ∈{0.12,…,0.30}.
+- Anchors: tunnel splitting reproduced — S₀,fit=1.922 vs 1.886
+  exact (1.9%) [computationally verified]; single-well null clean.
+- Triadic fork: claim (even/odd traversal phase structure) /
+  polar opposite (standard instanton calculus exhausts it) / null
+  (single well). **The polar opposite held** — no additional
+  interference pattern in any real observable beyond dilute-gas +
+  BZJ. That holding is itself the finding.
+- The form is real: 0-sector (perturbation theory)
+  incomplete/ambiguous, 1-sector (instanton) gives the real
+  splitting, 2-sector (bounce, double traversal) carries the
+  imaginary half-phase ±i·e^{−2S₀} completing the 0-sector — the
+  standard BZJ resurgence structure.
+- Three isolation attempts, three nulls, each moved a level; the
+  wall is structural and was mapped, not evaded: the 2-sector's
+  real fingerprint is inseparable by theorem from the 0-sector's
+  Borel ambiguity — that inseparability IS the BZJ point.
+- Honest negatives owned: prefactor ℏ^{1/2} inconclusive (2-loop
+  contamination); Padé-Borel spurious poles; fit collinearity.
+- VERDICT: third witness **confirmed at the level of form**;
+  **heuristic** as evidence for the triple's universality.
+- Branching: its chain queues the false-vacuum decay width as the
+  direct observable of the bounce's half-phase (identified, not
+  forced — the verdict doesn't depend on it).
+- Record: node11r_tunneling.md; rerunnable scripts:
+  node11r_scripts/ (4 parts).
+
+## Node 16 — vertex phase-alternation lemma: DERIVED (pole-sum, exact); precise obstruction located (2026-10-06)
+Attacks the interference theorem's load-bearing open lemma (b):
+why the vertex phase alternates (−π/2 odd r, +π/2 even r).
+Analytic work (not computation); triadic fork — claim (derives
+from pole-interlacing) / polar opposite (no analytic origin;
+eliminated) / null (already in literature; checked, not found).
+- Derivation (exact theorem): vertex roots ⟺ zeros of
+  F(k)=Σ_j tan(kL_j/2) (Lemma 1: cos-zeros aren't G-zeros, by
+  irrationality of log ratios); F strictly increasing between
+  poles ⟹ exactly one root per inter-pole interval, poles all
+  distinct by unique factorization (Lemma 2); N_v=N_poles−1+dither
+  (Lemma 3); N_poles,osc=Σ_jΣ_n(−1)^n sin(nkL_j)/(πn) (Lemma 4) —
+  the (−1)^n comes from poles at ODD multiples π(2m+1)/L_j vs
+  Dirichlet levels at EVEN multiples 2πm/L_j (the half-period
+  offset = Node 15's "sieve's 0.5 was there first," now in
+  spectral form). Unique factorization ⟹ only (p,r) contributes
+  at tone (p,r): C_v^pole(p,r)=i(−1)^r/(πr) — phase −π/2 (odd r),
+  +π/2 (even r). Dirichlet calibration (+π/2, no alternation)
+  also exact.
+- Precise obstruction: the dither (bounded, mean-zero) — its
+  Fourier anti-alignment with the pole tone (phase = pole+π,
+  ~25% magnitude; measured live) is computationally verified, NOT
+  derived. A constant-displacement model would give −π/2 rotation,
+  so the truth is subtler; the missing sub-lemma is the joint
+  structure of root displacements at tone frequencies (likely via
+  torus ergodicity). This is the exact step that resists.
+- Passed triadic check: derivation uses only ℚ-independence of
+  log p_j ⟹ correctly predicts prime-independence (11n
+  consistent). The periodic-orbit trace formula's primitive-loop
+  amplitude ((1/R)^r, +π/2, tiny) is decisively NOT the origin —
+  future attempts start from interlacing, not orbits.
+- VERDICT: lemma (b)'s analytic origin DERIVED (exact theorem,
+  pole-sum part); obstruction precisely located (dither
+  anti-alignment). The theorem's conditional lifts for the phase
+  pattern.
+- Backward touch specified: interference_theorem.md §(b) →
+  "derived (exact, Node 16); sub-step open: dither
+  anti-alignment"; correct the "expected route" paragraph (actual
+  route was secular-equation pole structure, not scattering
+  powers). Node 15: the 0.5 constraint satisfied.
+- Full record: node16_lemma_derivation.md; validation script:
+  node16_scripts/validate_pole_derivation.py (1023 roots;
+  interior intervals all exactly 1 root; phases/magnitudes at 10
+  tones for pole/dither/total separately).
+
+## Node 11s — false-vacuum decay width: third witness, second angle (2026-10-06)
+Runs the queued probe (11r's chain item 1): is the 0/0.5/1 triple an
+observable pattern in the false-vacuum decay width Γ, or does standard
+Coleman dilute-gas + BZJ exhaust it? V(x;ε)=(x²−1)²−εx, ε∈{0.1,0.2,0.3}.
+Pre-registered prediction: polar opposite holds (11r predicts it).
+- Anchors: S_b two-way (quadrature vs bounce-profile ODE integral)
+  agrees to 1.4–3.4×10⁻¹⁰ — S_b(0.1)=3.2942195661, S_b(0.2)=2.9185048151,
+  S_b(0.3)=2.5832702673 [computationally verified]. 1-loop prefactor:
+  INCONCLUSIVE (honest) — finite-interval zero mode swamped by O(dt)
+  discretization error (measured linear in dt→0); T-truncation breaks
+  mode structure; order-of-magnitude only (K∼800±25%). Null (single
+  well): Im E₀→0 as dx² (FD) and ∼10⁻¹⁶ (HO basis) [verified].
+- CONCEPTUAL FINDING [computationally verified, two instruments]:
+  charter's (a) as specified is IMPOSSIBLE for the confining potential —
+  complex scaling yields Im E=0 to machine precision (HO: −9×10⁻¹⁴ at
+  N=150). No resonances exist in 1D confining QM; the bounce's Γ is the
+  width of a resonance requiring an open channel. Discovered by
+  computing. All future width probes: open the channel by design.
+- "0" leg: RS around false vacuum (22 orders) — all coefficients real,
+  factorial growth, optimal truncation N=3 — PT knows nothing of decay
+  [computationally verified].
+- Open-channel attempt: X_c=3.0 → width ∼10⁻³⁶ (x⁴ wall blocks; correct
+  but unresolvable); X_c=1.0 → resolvable but X_c-dependent (7–50%) and
+  S_b,fit=2.51 vs 2.92 — the trade-off is structural to the quartic
+  choice, not technical. Honest negatives owned.
+- VERDICT: polar opposite HOLDS (no additional pattern found). The
+  0/0.5/1 FORM appears in the decay-width setting — second angle after
+  11r: 0-sector (PT) real/incomplete, 0.5-sector (bounce, S_b computed)
+  carrying the imaginary half-phase as the entire decay channel,
+  1 (Γ) real and complete (standard Coleman/BZJ = the triple's form).
+  Witness 3: confirmed at level of form (two angles now); HEURISTIC as
+  universality evidence. The (c) comparison was blocked by §B–§D;
+  "suggestive but not discriminating" is the honest grade for the
+  strong claim.
+- Backward touch: triple_artifact_0_5_1.md witness-3 status updated;
+  Node 15 updated (below); interference_theorem.md untouched.
+  Resumable: purpose-built open potential (no x⁴ wall) queued as 11t;
+  charter drafted launch-ready (node11t_charter.md, 2026-10-06 — NOT
+  launched; one word from the user launches).
+- Full record: node11s_falsevacuum.md; scripts: node11s_scripts/.

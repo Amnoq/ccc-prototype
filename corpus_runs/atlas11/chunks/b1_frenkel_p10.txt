@@ -1,0 +1,451 @@
+\[
+
+\sigma \sigma Y) ni = 1, if X [xi] = (g),
+
+\]
+
+### σ(Frxi ni
+
+### i i
+
+where g is an arbitrary rational function on X. This identity is a non-trivial reciprocity law which has been proved in the abelian class field theory, by Lang
+
+and Rosenlicht (see \[64\]).
+
+It is instructive to contrast this to Deligne’s geometric proof reproduced above. When we replace functions by sheaves we can use additional information which
+
+is “invisible” at the level of functions, such as the fact that that the sheaf corresponding to the function f ′
+
+### σ
+
+is locally constant and that the fibers of the Abel-Jacobi map are simply-connected. This is one of the main motivations for studying the Langlands
+
+4.3. Another take for curves over C. In the case when X is a complex curve, there is a more direct construction of the local system Aut0
+
+E on the Jacobian Jac = Pic0.
+
+Namely, we observe that defining a rank one local system E on X is the same as defining a homomorphism π1(X,x0) → C ×. But since C × is abelian, this
+
+homomorphism factors through the quotient of π1(X,x0) by its commutator subgroup, which is isomorphic to H1(X,Z). However, it is know that the cup product on
+
+H1(X,Z) is a unimodular bilinear form, so we can identify H1(X,Z) with H1 (X,Z). But H1 (X,Z) is isomorphic to the fundamental group π1(Jac), because we can
+
+realize the Jacobian as the quotient H1 (X, OX )/H1 (X,Z) ≃ C g/H1 (X,Z). Thus, we obtain a homomorphism π1(Jac) → C ×, which gives us a rank one local system
+
+EJac on Jac. We claim that this is Aut0 E. We can then construct Autd
+
+E recursively using formula (4.3).
+
+It is not immediately clear why the sheaves Autd
+
+### E,d 6= 0, constructed this way should
+
+\[
+
+satisfy the Hecke property \tag{4.1}
+
+\]
+
+\[
+
+and why they do not depend on the choices of points on X, which is essentially an equivalent question. To see that, consider the map_j : X \to Jac sending x \in
+
+X to the line bundle OX (x - x_0) for some fixed reference point x_0 \in X. In more concrete terms this map may be described as follows: choose a basis
+
+\omega_1,...,\omega g of the space H_0 (X,\Omega) of holomorphic differentials on X. Then
+
+\]
+
+x x
+
+\[
+
+j(x) = Z \omega_1,..., Z \omega g
+
+### x0 x0
+
+considered as a point in C g/L ≃ Jac, where L is the lattice spanned by the integrals of \omega_i ’s over the integer one-cycles in X.
+
+It is clear from this construction that the homomorphism H1(X,Z) → H1(Jac,Z), induced by the map j is an isomorphism. Viewing it as a homomorphism of the
+
+abelian
+
+### 52  EDWARD FRENKEL
+
+quotients of the corresponding fundamental groups, we see that the pull-back of EJac to X under the map j has to be isomorphic to E.
+
+\[
+
+More generally, the homomorphism H_1(S dX,Z) ≃ H_1(X,Z) \to H_1(Jac,Z) induced by the map S dX \to Jac sending (xi),i = 1,...,d to the line bundle OX(x_1 + ...
+
++ xd - dx0)is also an isomorphism. This means that the pull-back of EJac to S dX under this map is isomorphic to E(d), for any d > 0. Thus, we obtain a
+
+different proof of the fact that
+
+\]
+
+E(d) is constant along the fibers of the Abel-Jacobi map. By using an argument similar to the recursive algorithm discussed above that extended AutE to Picd,d ≤
+
+2g − 2, we then identify EJac with Aut0
+
+### E. In addition, we also identify the sheaves on the other
+
+components Picd obtained from EJac by applying formula (4.3), with AutE. The bonus of this argument is that we obtain another geometric insight (in the case
+
+when X is a complex curve) into why E(d) is constant along the fibers of the Abel-Jacobi map.
+
+4.4. Connection to the Fourier-Mukai transform. As we saw at the end of the previous section, the construction of the Hecke eigensheaf AutE associated to a rank
+
+one local system E on a complex curve X (the case_n = 1) is almost tautological: we use the fact that the fundamental group of Jac is the maximal abelian
+
+quotient of the fundamental group of X. However, one can strengthen the statement of the geometric Langlands conjecture by interpreting it in the framework of
+
+the Fourier-Mukai transform. Let Loc1 be the moduli space of rank one local systems on X. A local system is a pair (F, \nabla), where F is a holomorphic line
+
+bundle and \nabla is a holomorphic connection on F. Since F supports a holomorphic (hence flat) connection, the first Chern class of F, which is the degree of
+
+F, has to vanish. Therefore F defines a point of Pic0 = Jac. Thus, we obtain a natural map p : Loc1 → Jac sending (F, \nabla) to F. What are the fibers of this
+
+map? The fiber of p over F is the space of holomorphic connections on F. Given a connection \nabla on F, any other connection can be written uniquely as \nabla′
+
+= \nabla+ω, where ω is a holomorphic one-form on X. It is clear that any F supports a holomorphic connection. Therefore the fiber of p over F is an affine
+
+space over the vector space H0 (X, Ω) of holomorphic oneforms on X. Thus, Loc1 is an affine bundle over Jac over the trivial vector bundle with the fiber H0 (X,
+
+Ω). This vector bundle is naturally identified with the cotangent bundle T ∗ Jac. Indeed, the tangent space to Jac at a point corresponding to a line bundle F
+
+is the (X,End F) = H1 (X, OX ). Therefore space of infinitesimal deformations of F, which is H1 its dual is isomorphic to H0 (X, Ω) by the Serre duality.
+
+Therefore Loc1 is what is called the twisted cotangent bundle to Jac. As we explained in the previous section, a holomorphic line bundle with a holomorphic
+
+connection on X is the same thing as a holomorphic line bundle with a flat holomorphic connection on Jac, E = (F, \nabla) 7→ EJac = Aut0 E. Therefore Loc1 may
+
+be interpreted as the moduli space of pairs (Fe, \nabla e), where Fe is a holomorphic line bundle on Jac and \nabla e is a flat holomorphic connection on Fe.
+
+Now consider the product Loc1 × Jac. Over it we have the “universal flat holomorphic line bundle” P, whose restriction to (Fe, \nabla e )× Jac is the line
+
+bundle with connection (Fe, \nabla e) on Jac. It has a partial flat connection along Jac, i.e., we can differentiate its sections
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 53
+
+along Jac using \nabla e. Thus, we have the following diagram:
+
+P
+
+### ↓
+
+Loc1 × Jac
+
+### p1 p2
+
+### ւ ց
+
+Loc1  Jac
+
+It enables us to define functors F and G between the (bounded) derived category
+
+Db (OLoc1 (DJac -mod)
+
+-mod) of (coherent) O-modules on Loc1 and the derived category Db
+
+of D-modules on Jac: (4.5)  F : M 7→ Rp1∗p ∗ (M \otimes P), G : K 7→ Rp2∗p ∗ (K \otimes P).
+
+### 2 1
+
+For example, let E = (F, \nabla) be a point of Loc1 and consider the “skyscraper” sheaf SE supported at this point. Then by definition G(SE) = (Fe, \nabla e),
+
+considered as a D-module on Jac. So the simplest O-modules on Loc1, namely, the skyscraper sheaves supported at points, go to the simplest D-modules on Jac,
+
+namely, flat line bundles, which are the (degree zero components of) the Hecke eigensheaves AutE. We should compare this picture to the picture of Fourier
+
+transform. The Fourier transform sends the delta-functions δx,x ∈ R (these are the analogues of the skyscraper sheaves) to the exponential functions e ixy,y ∈
+
+R, which can be viewed as the simplest D-modules ixy is the solution of the differential equation (∂y − ix)Φ(y) = 0, so it corresponds to the trivial line
+
+bundle on R with the connection \nabla = ∂y − ix. Now, it is quite
+
+on R. Indeed, e
+
+clear that a general function in x can be thought of as an integral, or superposition, of the delta-functions δx,x ∈ R. The main theorem of the Fourier analysis
+
+is that the Fourier transform is an isomorphism (of the appropriate function spaces). It may be viewed, loosely, as the statement that on the other side of the
+
+transform the exponential functions ixy,x ∈ R, also form a good “basis” for functions. In other words, other functions can be e written as Fourier integrals.
+
+An analogous thing happens in our situation. It has been shown by G. Laumon \[65\] and M. Rothstein \[66\] that the functors F and G give rise to mutually
+
+inverse (up to a sign and cohomological shift) equivalences of derived categories
+
+derived category of
+
+(4.6)  derived category of
+
+### ←→ D-modules on Jac
+
+### O-modules on Loc1
+
+### SE  ←→  Aut0
+
+E
+
+Loosely speaking, this means that the Hecke eigensheaves Aut 0
+
+### E on Jac form a “good basis”
+
+of the derived category on the right hand side of this diagram. In other words, any object
+
+(DJac -mod) may be represented as a “Fourier integral” of Hecke eigensheaves, just
+
+of Db like any object of Db (OLoc1
+
+-mod) may be thought of as an “integral” of the skyscraper
+
+sheaves SE.
+
+This equivalence reveals the true meaning of the Hecke eigensheaves and identifies them as the building blocks of the derived category of D-modules on Jac, just
+
+like the skyscraper sheaves are the building blocks of the derived category of D-modules.
+
+### 54  EDWARD FRENKEL
+
+This is actually consistent with the picture emerging from the classical Langlands correspondence. In the classical Langlands correspondence (when X is a curve
+
+over Fq) the Hecke eigenfunctions on GLn(F)\\GLn(A)/GLn(O) form a basis of the appropriate space of functions on GLn(F)\\GLn(A)/GLn(O).39 That is why we should
+
+expect that the geometric objects that replace the Hecke eigenfunctions – namely, the Hecke eigensheaves on Bunn – should give us a kind of “spectral
+
+decomposition” of the derived category of Dmodules on Bun0
+
+n . The Laumon-Rothstein theorem may be viewed a precise formulation
+
+of this statement.
+
+The above equivalence is very closely related to the Fourier-Mukai transform. Let us recall that the Fourier-Mukai transform is an equivalence between the
+
+derived categories of coherent sheaves on an abelian variety A and its dual A∨, which is the moduli space of line bundles on A (and conversely, A is the moduli
+
+space of line bundles on A∨). Then we have the universal (also known as the Poincar´e) line bundle P on A∨ ×A whose restriction to a ∨ × a, where a ∨ ∈ A∨, is
+
+the line bundle L(a ∨) corresponding to a ∨ (and likewise for the restriction to A∨ × a). Then we have functors between the derived categories of coherent
+
+sheaves (of O-modules) on A and A∨ defined in the same way as in formula (4.5), which set up an equivalence of categories, called the Fourier-Mukai transform.
+
+Rothstein and Laumon have generalized the Fourier-Mukai transform by replacing A∨, which is the moduli space of line bundles on A, by A♮
+
+, the moduli space of flat line bundles
+
+on A. They showed that the corresponding functors set up an equivalence between the derived category of coherent sheaves on A♮ and the derived category of
+
+D-modules on A.
+
+Now, if A is the Jacobian variety Jac of a complex curve X, then A∨ ≃ Jac and A♮ ≃ Loc1, so we obtain the equivalence discussed above.
+
+A slightly disconcerting feature of this construction, as compared to the original FourierMukai transform, is the apparent asymmetry between the two categories.
+
+But it turns out
+
+| that this equivalence has a deformation in which this asymmetry disappears (see Sect. 6.3). |  |  |
+
+| --- | --- |  |
+
+| 4.5. A special case of the Fourier-Mukai transform. Recall that the moduli space |  |  |
+
+| Loc1 of flat line bundles on X fibers over Jac = Pic0 with the fiber over F ∈ Jac being | |
+
+| the space of all (holomorphic) connections on F, which is an affine space over the space |  |  |
+
+\[
+
+| (X,\Omega) of holomorphic one-forms on X. In particular, the fiber p H_0 -1 | \tag{F0}
+
+\]
+
+\[
+
+over the trivial | | line bundle F_0 is just the space of holomorphic differentials on X, H_0 | (X,\Omega). As we have |
+
+\]
+
+| seen above, each point of Loc1 gives rise to a Hecke eigensheaf on Pic, which is a line |  |  |
+
+| bundle with holomorphic connection. Consider a point in the fiber over F0, i.e., a flat |  |  |
+
+| line bundle of the form (F0,d + ω). It turns out that in this case we can describe the |  |  |
+
+| corresponding Hecke eigen-line bundle quite explicitly. | |
+
+We will describe its restriction to Jac. First of all, as a line bundle on Jac, it is trivial (as F0 is the trivial line bundle on X), so all we need to do is
+
+to specify a connection on the trivial bundle corresponding to ω ∈ H0 (X, Ω). This connection is given by a holomorphic one-form on Jac, which we denote by ωe.
+
+But now observe that that space of holomorphic (X, Ω) of holomorphic one-forms on X. one-forms on Jac is isomorphic to the space H0 Hence ω ∈ H0 (X, Ω) gives
+
+rise to a holomorphic one-form on Jac, and this is the desired ωe.
+
+39actually, this is only true if one restricts to the cuspidal functions; but for n = 1 the cuspidality condition is vacuous
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 55
+
+One can also say it slightly differently: observe that the tangent bundle to Jac is trivial,
+
+(X, OX ). Hence
+
+with the fiber isomorphic to the g-dimensional complex vector space H1 the Lie algebra of global vector fields on Jac is isomorphic to H1 (X, OX ), and it acts
+
+simply transitively on Jac. Therefore to define a connection on the trivial line bundle on Jac we need to attach to each ξ ∈ H1 (X, Ω) a holomorphic function fξ
+
+on Jac, which is necessarily constant as Jac is compact. The corresponding connection operators are then \nabla ξ = ξ + fξ. This is the same as the datum of a
+
+linear functional H1 (X, OX ) → C. Our (X, Ω) gives us just such a functional by the Serre duality. ω ∈ H0
+
+We may also express the resulting D-module on Jac in terms of the general construction outlined in Sect. 3.4 (which could be called “D-modules as systems of
+
+differential equations”). Consider the algebra DJac of global differential operators on Jac. From the above
+
+description of the Lie algebra of global vector fields on Jac it follows that DJac is commutative and is isomorphic to Sym H1
+
+\[
+
+(X,OX) = Fun H_0 (X,\Omega), by the Serre duality.40 Therefore each point \omega \in H_0 (X,\Omega) gives rise to a homomorphism \lambda \omega : DJac \to C.
+
+Define the D-module Aut0 on Jac by the formula
+
+### Eω
+
+(4.7) Aut0
+
+\[
+
+E\omega = D/ Ker \lambda \omega, where D is the sheaf of differential operators on Jac, considered as a (left) module over itself (compare with formula
+
+\tag{3.4}
+
+\]
+
+\[
+
+). This is the holonomic D-module on Jac that is the restriction of the Hecke eigensheaf corresponding to the trivial line bundle on X with the connection d +
+
+\omega .
+
+\]
+
+The D-module Aut0 represents the system of differential equations
+
+### Eω
+
+\[
+
+D · f = \lambda \omega(D)f, D \in DJac
+
+\]
+
+(compare with (3.5)) in the sense that for any homomorphism from Aut0 to another
+
+### Eω
+
+\[
+
+D-module K the image of_1 \in Aut0 in K is (locally) a solution of the system \tag{4.8}
+
+\]
+
+\[
+
+. Of
+
+\]
+
+### Eω
+
+\[
+
+course, the equations \tag{4.8}
+
+\]
+
+\[
+
+are just equivalent to the equations (d + \omega e)f = 0 on horizontal sections of the trivial line bundle on Jac with the connection d + \omega e.
+
+\]
+
+The concept of Fourier-Mukai transform leads us to a slightly different perspective on the above construction. The point of the Fourier-Mukai transform was that
+
+not only do we have a correspondence between rank one vector bundles with a flat connection on Jac and points of Loc1, but more general D-modules on Jac
+
+correspond to O-modules on Loc1 other than the skyscraper sheaves.41 One such D-module is the sheaf D itself, considered as a (left) D-module. What O-module on
+
+Loc1 corresponds to it? From the point of view of the above analysis, it is not surprising what the answer is: it is the O-module
+
+i∗(Op−1(F0) ) (see \[66\]).
+
+Here Op−1(F0) ) denotes the structure sheaf of the subspace of connections on the trivial line bundle F0 (which is the fiber over F0 under the projection p :
+
+Loc1 → Jac), and i is the inclusion i : p −1 (F0) ֒→ Loc1.This observation allows us to represent a special case of the Fourier-Mukai transform in more concrete
+
+terms. Namely, amongst all O-modules on Loc1 consider those that are
+
+\[
+
+-1 \tag{F0}
+
+\]
+
+\[
+
+, in other words, the O-modules of the form M = i^*(M), where M
+
+\]
+
+supported on p
+
+40here and below for an affine algebraic variety V we denote by Fun V the algebra of polynomial functions on V
+
+### 41in general, objects of the derived category of O-modules
+
+| 56  EDWARD FRENKEL |  |  |
+
+| --- | --- |  |
+
+\[
+
+| is an O-module on p -1 | \tag{F0}
+
+\]
+
+\[
+
+, or equivalently, a Fun H_0 (X,\Omega)-module. Then the restriction |
+
+\]
+
+| of the Fourier-Mukai transform to the subcategory of these O-modules is a functor from |  |  |
+
+\[
+
+| the category of Fun H_0 | (X,\Omega)-modules to the category of D-modules on Jac given by | | \tag{4.9}
+
+\]
+
+\[
+
+M_7\to G(M) = D \otimes | M. |
+
+\]
+
+### DJac
+
+\[
+
+Here we use the fact that Fun H_0 (X,\Omega) ≃ DJac. In particular, if we take as M the onedimensional module corresponding to a homomorphism \lambda \omega as
+
+above, then G(M) = Aut0
+
+E\omega .
+
+Thus, we obtain a very explicit formula for the Fourier-Mukai functor restricted to the
+
+(X, Ω) ⊂ Loc1.
+
+subcategory of O-modules on Loc1 supported on H0 We will discuss in Sect. 6.3 and Sect. 9.5 a non-abelian generalization of this construction, due to Beilinson

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-3 — algebra sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-3 — algebra sky</div>
+    <div class="sub">Harris 2501.17197 (modular representation theory) + Liu–Ren 2309.02372 (Gorenstein homological algebra), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {"example-4-9-the-surjection-s-x-x-2-s-with-s-not-": {"display": "Example 4.9: the surjection S[[x]]/(x^2) -> S with S not Iwanaga-Gorenstein has ascent and descent of Gorenstein projective property, yet is not a Frobenius extension, not a homomorphism between Iwanaga-Gorenstein rings, and not a complete intersection map", "status": "killed", "cluster": "algebra", "facets": [{"chunk": "liuren_p1", "cid": "c1", "label": "ascent and descent of Gorenstein projective property", "kind": "definition", "status": "exact", "genre": "original", "note": "Introduced in the Introduction as the paper's motivating property: a finitely generated A-module is Gorenstein projective iff the underlying R-module is."}, {"chunk": "liuren_p1", "cid": "c9", "label": "Theorem 1.1 / Theorem 4.3: characterization of ascent and descent of Gorenstein projective property", "kind": "result", "status": "exact", "genre": "original", "note": "Previewed as Theorem 1.1 and proved as Theorem 4.3 within this chunk: (1) A Gorenstein projective over R plus Hom_R(A,R) projective over A on both sides is equivalent to (2) ascent and descent; moreover Gdim_R(M) = Gdim_A(M) for finitely generated M."}, {"chunk": "liuren_p1", "cid": "c24", "label": "Corollary 4.6: ascent and descent of Gorenstein projective property is a local property", "kind": "result", "status": "conjectural", "genre": "reframed", "note": "Stated in the Introduction (see Corollary 4.6): the ascent and descent of Gorenstein projective property holds for phi iff it holds for each localization phi_p; deduced from Theorem 1.1. Proof lies in Section 4, beyond this chunk."}, {"chunk": "liuren_p2", "cid": "c1", "label": "ascent and descent of Gorenstein projective property (for a ring homomorphism phi: R -> A)", "kind": "definition", "status": "exact", "genre": "original", "note": "Definition introduced at the start of Section 4: for phi: R -> A, finitely generated left (resp. right) A-modules are Gorenstein projective over A iff they are Gorenstein projective over R (resp. R^op)."}, {"chunk": "liuren_p2", "cid": "c3", "label": "Theorem 4.3: for R commutative noetherian and A a finite R-algebra, (A Gorenstein projective over R and Hom_R(A, R) projective over A on both sides) iff phi has ascent and descent of Gorenstein projective property; then Gdim_R(M) = Gdim_A(M)", "kind": "result", "status": "exact", "genre": "original", "note": "Theorem 4.3, both directions proved; key new ingredient is Lemma 4.2. Also yields Gdim_R(M) = Gdim_A(M) for finitely generated left A-modules M."}, {"chunk": "liuren_p2", "cid": "c4", "label": "Corollary 4.4: a finite local homomorphism of Gorenstein local rings with the same Krull dimension has ascent and descent of Gorenstein projective property", "kind": "result", "status": "exact", "genre": "original", "note": "Corollary 4.4, stated as immediate from [9, Theorem 3.3.7] and Theorem 4.3."}, {"chunk": "liuren_p2", "cid": "c6", "label": "Corollary 4.6: ascent and descent of Gorenstein projective property is a local property, checkable on R_p -> A_p for each prime p (resp. each maximal ideal m)", "kind": "result", "status": "exact", "genre": "original", "note": "Corollary 4.6, combining Theorem 4.3 with Lemma 4.5; compared with the question in Remark 3.13."}, {"chunk": "liuren_p2", "cid": "c8", "label": "Corollary 4.7: a Frobenius extension phi: R -> A (R commutative noetherian, A a finite R-algebra) has ascent and descent of Gorenstein projective property", "kind": "result", "status": "exact", "genre": "original", "note": "Corollary 4.7, immediate from Theorem 4.3; a stronger result was already established in [11, 32, 34]."}, {"chunk": "liuren_p2", "cid": "c9", "label": "Example 4.8: the injection k[[t]]/(t^2) -> k[[x,y,z]]/(x^2-y^2, x^2-z^2, xy, xz, yz) has ascent and descent of Gorenstein projective property but is not a Frobenius extension", "kind": "result", "status": "exact", "genre": "original", "note": "Example 4.8; both rings Gorenstein local noetherian by [9, Example 3.2.11]; dim_k(R)=2 < dim_k(A)=5, so A is not free, hence not projective, over the local ring R."}, {"chunk": "liuren_p2", "cid": "c10", "label": "Example 4.9: the surjection S[[x]]/(x^2) -> S with S not Iwanaga-Gorenstein has ascent and descent of Gorenstein projective property, yet is not a Frobenius extension, not a homomorphism between Iwanaga-Gorenstein rings, and not a complete intersection map", "kind": "result", "status": "exact", "genre": "original", "note": "Example 4.9; checked directly that Hom_R(S,R) ~= S as S-modules and S is Gorenstein projective as an R-module, then Theorem 4.3 applies."}, {"chunk": "liuren_p2", "cid": "c17", "label": "the converse of Corollary 4.7: ascent and descent of Gorenstein projective property implies the extension is Frobenius", "kind": "claim", "status": "killed", "genre": "original", "note": "KILLED: the converse of Corollary 4.7 is refuted in the paper by Example 4.8, which has ascent and descent of Gorenstein projective property but is not a Frobenius extension."}], "status_note": null, "chunks": ["liuren_p1", "liuren_p2"], "killed_facets": 0}, "frobenius-extension-of-rings-s-subset-a-a-finite": {"display": "Frobenius extension of rings S subset A (A finitely generated projective as left S-module with _A A_S ~= Hom_S(_S A_A, S) as A-S bimodules, and the right-handed analogue)", "status": "exact", "cluster": "algebra", "facets": [{"chunk": "liuren_p1", "cid": "c8", "label": "Frobenius extension", "kind": "definition", "status": "exact", "genre": "reframed", "note": "Recalled in the Introduction: A finitely generated projective over R with Hom_R(A,R) congruent to A as R-A-bimodules; sufficient but not necessary for the ascent and descent property (Examples 4.8, 4.9)."}, {"chunk": "liuren_p2", "cid": "c7", "label": "Frobenius extension of rings S subset A (A finitely generated projective as left S-module with _A A_S ~= Hom_S(_S A_A, S) as A-S bimodules, and the right-handed analogue)", "kind": "definition", "status": "conjectural", "genre": "reframed", "note": "Standard definition recalled from [27], with the two equivalent conditions (1)(2); interesting examples in [26]. Not established in this chunk."}], "status_note": null, "chunks": ["liuren_p1", "liuren_p2"], "killed_facets": 0}, "lemma-4-2-a-finitely-generated-left-a-module-m-w": {"display": "Lemma 4.2: a finitely generated left A-module M with Gdim_A(M) = n < infinity and Ext^i_A(M, A) = 0 for all i > 0 is Gorenstein projective", "status": "exact", "cluster": "algebra", "facets": [{"chunk": "liuren_p1", "cid": "c18", "label": "Lemma 4.2: finite Gorenstein dimension plus Ext^i_A(M,A) = 0 forces Gorenstein projective", "kind": "result", "status": "exact", "genre": "original", "note": "Proved within this chunk using Lemma 3.11 and the biduality isomorphisms M congruent to M^{**}, Ext^i_{A^op}(M^*,A) = 0."}, {"chunk": "liuren_p2", "cid": "c2", "label": "Lemma 4.2: a finitely generated left A-module M with Gdim_A(M) = n < infinity and Ext^i_A(M, A) = 0 for all i > 0 is Gorenstein projective", "kind": "result", "status": "exact", "genre": "original", "note": "Lemma 4.2, proved in the paper via the exact triangle of Lemma 3.11 and the double-dual isomorphism M -> M**."}], "status_note": null, "chunks": ["liuren_p1", "liuren_p2"], "killed_facets": 0}}, "standalone": [{"id": "the-relation-uparrow-on-i-omega-g-k-v-uparrow-l-", "display": "the relation uparrow on I(Omega(G)): (K,V) uparrow (L,U) if K is a subfield of L and U divides V tensor_K L in mod-LG", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "definition", "genre": "original", "note": "Stipulated in the paper: (K,V) uparrow (L,U) iff K is a subfield of L and U divides V tensor_K L in mod-LG; shown reflexive and transitive."}, {"id": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "display": "the class E(W) of an indecomposable FG-module W: E(W) = {(K,V) in FI(Omega(G)) | (F,W) uparrow (K,V)}", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "definition", "genre": "original", "note": "Stipulated in the paper: the class attached to an indecomposable FG-module W, built from the uparrow relation over finite subfields."}, {"id": "iti-kg-resp-its-kg-a-set-of-representatives-of-t", "display": "ITI(KG) (resp. ITS(KG)): a set of representatives of the isomorphism types of indecomposable (resp. simple) modules in mod-KG", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "definition", "genre": "original", "note": "Notation introduced in the paper, following [2, Section 2]."}, {"id": "fi-omega-g-and-fs-omega-g-the-members-of-i-omega", "display": "FI(Omega(G)) and FS(Omega(G)): the members of I(Omega(G)) with first component K a finite subfield (K in Delta)", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "definition", "genre": "original", "note": "Notation introduced in the paper for the finite-subfield slices of I(Omega(G)), with F in Delta."}, {"id": "2-k-v-uparrow-l-u-in-fi-omega-g-iff-v-divides-re", "display": "(2): (K,V) uparrow (L,U) in FI(Omega(G)) iff V divides Res_K^L(U) in mod-KG", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (2) of the paper; proof given citing [2, Proposition 1.14 (a) and (b)]."}, {"id": "3-e-w-is-nonempty", "display": "(3): E(W) is nonempty", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (3); immediate since (F,W) belongs to E(W)."}, {"id": "4-if-k-v-in-e-w-then-res-f-k-v-is-isomorphic-to-", "display": "(4): if (K,V) in E(W) then Res_F^K(V) is isomorphic to sW in mod-FG for some positive integer s", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (4); proved in the paper citing [2, Proposition 1.14]."}, {"id": "5-for-fixed-k-in-delta-the-members-of-e-w-over-k", "display": "(5): for fixed K in Delta the members of E(W) over K are exactly the Galois conjugates (K, V^sigma) for sigma in Aut(K)", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (5); proved in the paper citing [4, VII, Theorem 1.20]."}, {"id": "6-e-w-is-closed-under-uparrow-k-v-uparrow-l-u-im", "display": "(6): E(W) is closed under uparrow: (K,V) uparrow (L,U) implies (K,V) in E(W) iff (L,U) in E(W)", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (6); the paper says (2) and (4) yield the proof."}, {"id": "7-members-of-e-w-have-related-green-theory-invar", "display": "(7): members of E(W) have related Green-theory invariants: Q is a vertex of V, a Q-source U of V divides W tensor_F K, and Gr_G^H(V) divides Gr_G^H(W) tensor_F K", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (7) of the paper: the three Green-theory facts; proved citing [2, Proposition 1.13]."}, {"id": "8-w-simple-fg-iff-some-k-v-in-e-w-is-simple-kg-i", "display": "(8): W simple FG iff some (K,V) in E(W) is simple KG iff every (K,V) in E(W) is simple KG", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Numbered claim (8): the (a)<->(b)<->(c) simplicity equivalence; proved citing [4, Lemma 1.15 and Theorem 1.16]."}, {"id": "proposition-1-gr-g-h-w-is-an-indecomposable-fh-m", "display": "Proposition 1: Gr_G^H(W) is an indecomposable FH-module with vertex-source pair (Q, scrW), and Gr_G^H gives a bijection E(W) -> E(Gr_G^H(W))", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "result", "genre": "original", "note": "Proposition 1, proved in the paper from [2, Proposition 1.12 (c) and Proposition 1.13 (b)]."}, {"id": "theorem-2-finite-descent-an-indecomposable-jg-mo", "display": "Theorem 2 (finite descent): an indecomposable JG-module X with vertex Q, J a subfield of bar F, admits finite K subset J and Y over KG with vertex Q such that Y tensor_K J is isomorphic to X", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "result", "genre": "original", "note": "Theorem 2; full proof given, constructing the finite field K from the matrix coefficients of X and of a Q-projective splitting (using (1))."}, {"id": "proposition-3-a-component-x-of-w-tensor-f-j-desc", "display": "Proposition 3: a component X of W tensor_F J descends to (K,V) in E(W) with K finite in J and V tensor_K J isomorphic to X", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "result", "genre": "original", "note": "Proposition 3; proved in the paper from Theorem 2 and [4, VII, Theorem 1.21]."}, {"id": "remark-4-an-indecomposable-resp-simple-bar-f-g-m", "display": "Remark 4: an indecomposable (resp. simple) bar F G-module is an absolutely indecomposable (resp. simple) module", "status": "conjectural", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "reframed", "note": "Stated as a consequence of [4, VII, Lemma 2.2 and 6.7 (b)]; no proof given in this chunk, so conjectural-from-chunk."}, {"id": "remark-5-for-w-simple-fg-and-k-v-in-e-w-v-is-sim", "display": "Remark 5: for W simple FG and (K,V) in E(W), V is simple KG, and Y isomorphic to V tensor_K bar F is simple bar F G", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "Remark 5; the paper gives a proof from (7) and [4, VII, Lemma 1.15]."}, {"id": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "display": "Theorem 6: the map Gamma: ITI(bar F G) -> ITI(FG) is a well-defined surjection and ITI(bar F G) = union of the nonempty fibers Gamma^{-1}(W) is a partition, with vertex/source and Green-correspondent compatibilities", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "result", "genre": "original", "note": "Theorem 6: Gamma is a well-defined surjection, Gamma^{-1}(W) nonempty for each W, and the preimages partition ITI(bar F G); proved from Theorem 2, [2, Lemma 2.3 and Proposition 1.12], and Proposition 3."}, {"id": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "display": "Theorem 7: the map Sigma: ITS(bar F G) -> ITS(FG) is a well-defined surjection and ITS(bar F G) = union of the nonempty fibers Sigma^{-1}(W) is a partition, with vertex/source and Green-correspondent compatibilities", "status": "exact", "cluster": "algebra", "chunk": "harris_p1", "kind": "result", "genre": "original", "note": "Theorem 7: Sigma is a well-defined surjection, Sigma^{-1}(W) nonempty for each W, and the preimages partition ITS(bar F G); proved from Theorem 2, (7), [2, Lemma 2.3], and Proposition 3."}, {"id": "remark-8-the-proofs-of-2-theorems-3-1-3-5-and-re", "display": "Remark 8: the proofs of [2, Theorems 3.1-3.5 and Remarks 3.3 and 3.5] are completed by the present article", "status": "conjectural", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "original", "note": "The paper's own assessment that its proofs complete those of [2]; not demonstrated within the chunk itself."}, {"id": "kuhlshammer-s-objection-2-proposition-2-7-is-fal", "display": "Kuhlshammer's objection: [2, Proposition 2.7] is false in its generality, so the results of [2, Section 3] relying on it are unsound as stated", "status": "killed", "cluster": "algebra", "chunk": "harris_p1", "kind": "claim", "genre": "killed", "note": "The paper reports Kuhlshammer's (private email) observation that [2, Proposition 2.7] is false in its generality, so the [2, Section 3] results resting on it are refuted as stated."}, {"id": "ascent-and-descent-of-finite-gorenstein-dimensio", "display": "ascent and descent of finite Gorenstein dimension property", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "original", "note": "Definition 3.1: finiteness of Gorenstein dimension over A iff over R, for complexes in D^b_f(A) and in D^b_f(A^op)."}, {"id": "gorenstein-projective-module-totally-acyclic-com", "display": "Gorenstein projective module (totally acyclic complex; totally reflexive module)", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Standard background restated from 2.1: module is a syzygy of a totally acyclic complex of projectives; finitely generated case is Auslander-Bridger's totally reflexive module [1]."}, {"id": "gorenstein-dimension-gorenstein-projective-resol", "display": "Gorenstein dimension (Gorenstein projective resolution)", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Standard definition restated from 2.3: length of a bounded-above Gorenstein projective resolution; Gdim <= pd with equality when pd is finite [22]."}, {"id": "semi-dualizing-complex-dualizing-complex", "display": "semi-dualizing complex (dualizing complex)", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Definition from 2.6: bounded-above complex of bimodules with finitely generated homology, injective components, and homothety quasi-isomorphisms m_D, m'_D; dualizing if bounded. Coincides with Christensen [14] in the commutative case."}, {"id": "perfect-complex", "display": "perfect complex", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Standard background from 2.5: isomorphic in D(A) to a bounded complex of finitely generated projectives; equivalently compact; smallest thick subcategory containing A."}, {"id": "iwanaga-gorenstein-ring", "display": "Iwanaga-Gorenstein ring", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Standard background from 2.4: finite injective dimension as left and right module; then id_A(A) is two-sided and every finitely generated module has finite Gorenstein dimension [16]."}, {"id": "theorem-3-12-characterization-of-ascent-and-desc", "display": "Theorem 3.12: characterization of ascent and descent of finite Gorenstein dimension property", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Fully stated and proved within this chunk: (1) Gdim_R(A) < infinity and RHom_R(A,R) perfect over A on both sides implies (2); converse needs finite Krull dimension of R. Proof uses Propositions 3.5, 3.7 and Lemmas 3.2, 3.4, 3.10, 3.11."}, {"id": "proposition-3-5-d-hom-r-a-i-is-a-semi-dualizing-", "display": "Proposition 3.5: D = Hom_R(A,I) is a semi-dualizing complex over A; quasi-isomorphism theta_M", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk: for finite R-algebra A with Gdim_R(A) finite, D = Hom_R(A,I) satisfies the semi-dualizing axioms, and if D is perfect there is the right A-linear quasi-isomorphism theta_M: Q tensor_A D -> Hom_R(P,I)."}, {"id": "proposition-3-7-evaluation-morphism-e-m-d-is-a-q", "display": "Proposition 3.7: evaluation morphism e_{M,D} is a quasi-isomorphism for semi-dualizing perfect D", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk: for semi-dualizing D perfect over A, the evaluation morphism e_{M,D} is a quasi-isomorphism for M of finite Gorenstein dimension. Differs from the dualizing-complex case [23] in that D need not be dualizing."}, {"id": "example-3-6-semi-dualizing-perfect-complex-that-", "display": "Example 3.6: semi-dualizing perfect complex that is not dualizing (A = R[x]/(x^2))", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk: for A = R[x]/(x^2), Hom_R(A,I) is semi-dualizing and perfect over A, yet cannot be dualizing when R is not Iwanaga-Gorenstein (via Theorems 3.12 and 5.1)."}, {"id": "corollary-3-14-answer-to-the-avramov-foxby-quest", "display": "Corollary 3.14: answer to the Avramov-Foxby question on Gdim_R(M)", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Deduced from Theorem 3.12 within this chunk: under RHom_R(A,R) perfect over A, finiteness of Gdim_R(A) and Gdim_A(M) forces Gdim_R(M) finite. Local case recovers Avramov-Foxby/Christensen results."}, {"id": "corollary-3-16-any-complete-intersection-map-has", "display": "Corollary 3.16: any complete intersection map has ascent and descent of finite Gorenstein dimension property", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Deduced from Theorem 3.12 within this chunk: for A = R/(x_1,...,x_n) with regular sequence, pd_R(A) < infinity and RHom_R(A,R) congruent to A[-n], so condition (1) holds; recovers [13, Theorem 2.3.12]."}, {"id": "lemma-3-10-gorenstein-projective-n-with-ext-n-a-", "display": "Lemma 3.10: Gorenstein projective N with Ext^n_A(M,N) = 0 for all Gorenstein projective M is projective", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk by dimension shifting along a Gorenstein projective resolution: Ext^n_A(M,N) = 0 for all Gorenstein projective M forces the cokernel C projective, hence N projective."}, {"id": "lemma-3-11-exact-triangle-k-n-1-p-m-k-n-for-m-of", "display": "Lemma 3.11: exact triangle K[n-1] -> P -> M -> K[n] for M of finite Gorenstein dimension n", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk via homotopy projective resolution and brutal truncation: a complex of Gorenstein dimension n fits into K[n-1] -> P -> M -> K[n] with P perfect and K Gorenstein projective."}, {"id": "theorem-1-2-iwanaga-gorenstein-property-ascends-", "display": "Theorem 1.2: Iwanaga-Gorenstein property ascends and descends along phi", "status": "conjectural", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "reframed", "note": "Stated in the Introduction as Theorem 1.2 (see 5.1): Iwanaga-Gorenstein descends from R to A under the finite-Gorenstein-dimension ascent/descent hypothesis; converse needs nonzero fibres. Proof lies in Section 5, beyond this chunk."}, {"id": "remark-3-13-does-2-imply-1-in-theorem-3-12-witho", "display": "Remark 3.13: does (2) imply (1) in Theorem 3.12 without finite Krull dimension?", "status": "conjectural", "cluster": "algebra", "chunk": "liuren_p1", "kind": "question", "genre": "original", "note": "The paper's own open question: whether (2) implies (1) in Theorem 3.12 without finite Krull dimension, equivalently whether the property localizes to each prime ideal; linked to an Avramov-Foxby question [4, Section 4]."}, {"id": "totally-reflexive-extension-of-rings-chen-11", "display": "totally reflexive extension of rings (Chen [11])", "status": "conjectural", "cluster": "algebra", "chunk": "liuren_p1", "kind": "method", "genre": "reframed", "note": "Cited from Chen [11]: totally reflexive extensions have ascent and descent of Gorenstein projective property; extended by Ren [32] and Zhao [34] to not-necessarily-finitely-generated modules over Frobenius extensions."}, {"id": "buchweitz-s-example-z-zg-integral-group-ring-ext", "display": "Buchweitz's example: Z -> ZG integral group ring extension has ascent and descent", "status": "conjectural", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "reframed", "note": "Cited from Buchweitz [10, 8.2]: for the integral group ring extension Z -> ZG, a finitely generated ZG-module is Gorenstein projective iff the underlying Z-module is Z-free; the classical Frobenius extension example."}, {"id": "complete-intersection-map", "display": "complete intersection map", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "definition", "genre": "reframed", "note": "Recalled before Corollary 3.16: a surjective map whose kernel is generated by a regular sequence; then pd_R(A) is finite and RHom_R(A,R) congruent to A[-n]."}, {"id": "lemma-3-2-finite-gorenstein-dimension-iff-rhom-a", "display": "Lemma 3.2: finite Gorenstein dimension iff RHom_A(M,A) in D^b_f(A^op) and biduality morphism delta_M is an isomorphism", "status": "conjectural", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "reframed", "note": "Included from [13, Corollary 2.3.8] for commutative A; the non-commutative case is asserted with proof omitted in this chunk."}, {"id": "lemma-3-4-biduality-isomorphism-iff-pi-is-a-quas", "display": "Lemma 3.4: biduality isomorphism iff pi^* is a quasi-isomorphism; tensoring with perfect complexes", "status": "exact", "cluster": "algebra", "chunk": "liuren_p1", "kind": "result", "genre": "original", "note": "Proved within this chunk: delta_M is an isomorphism iff pi^*: P^{**} -> Q^* is a quasi-isomorphism, and tensoring with a perfect bounded-above X preserves the quasi-isomorphism pi tensor X."}, {"id": "lemma-4-5-m-is-gorenstein-projective-over-a-iff-", "display": "Lemma 4.5: M is Gorenstein projective over A iff M_p is Gorenstein projective over A_p for each prime p (resp. each maximal ideal m); also holds with 'projective'", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "original", "note": "Lemma 4.5; said to follow from the characterization of Gorenstein projective modules in 2.1, and to hold verbatim with 'projective' in place of 'Gorenstein projective'."}, {"id": "theorem-5-1-if-phi-has-ascent-and-descent-of-fin", "display": "Theorem 5.1: if phi has ascent and descent of finite Gorenstein dimension property and R is Iwanaga-Gorenstein, then so is A; the converse holds if the fibre A tensor_R R/m is nonzero for each maximal ideal m of R", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "original", "note": "Theorem 5.1, proved via the dualizing complex D = Hom_R(A, I); uses Proposition 3.5 and Theorem 3.12. The converse uses Ext^i_R(M,R) ~= Ext^i_A(M,D) and [9, Proposition 3.1.14]."}, {"id": "corollary-5-2-avramov-foxby-for-a-finite-local-h", "display": "Corollary 5.2 (Avramov-Foxby): for a finite local homomorphism (R, m, k) -> (A, n, l) with A Gorenstein, R is Gorenstein iff Gdim_R(A) is finite", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "reframed", "note": "Due to Avramov and Foxby [4, 4.4.4 and 7.7.2]; proof given in the paper as a consequence of Theorems 3.12 and 5.1."}, {"id": "the-adjoint-pair-f-omega-tensor-a-a-mod-r-mod-g-", "display": "the adjoint pair F = omega tensor_A - : A-mod <-> R-mod : G = Hom_R(omega, -) with omega = Hom_R(A, R), restricting to an adjoint pair A-Gproj <-> R-Gproj (Lemma 6.1)", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "method", "genre": "original", "note": "Lemma 6.1, proved: F = omega tensor_A - preserves totally acyclic complexes of finitely generated projectives, and G ~= A tensor_R - via the Hom-evaluation isomorphism theta_X."}, {"id": "lemma-6-2-f-a-gproj-r-gproj-is-faithful-and-the-", "display": "Lemma 6.2: F: A-Gproj -> R-Gproj is faithful and the unit eta_M: M -> GF(M) is a monomorphism for each M in A-Gproj", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "original", "note": "Lemma 6.2, proved by a double-dual argument: F(eta_M) injective forces F(iota)=0, whence iota** = 0 and iota = 0."}, {"id": "lemma-6-3-if-a-is-a-projective-generator-in-r-mo", "display": "Lemma 6.3: if A is a projective generator in R-mod then G: R-mod -> A-mod is faithful and the counit epsilon_N: FG(N) -> N is an epimorphism", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "original", "note": "Lemma 6.3, proved: A is a projective generator in R-mod iff A is faithfully flat, and the counit claim follows from [12, Lemma 2.1 (2)]."}, {"id": "theorem-6-4-the-induced-adjoint-pair-gives-mutua", "display": "Theorem 6.4: the induced adjoint pair gives mutually inverse equivalences of stable categories A-Gproj_underline <-> R-Gproj_underline iff Coker(eta_M) and Ker(epsilon_N) have finite projective dimension for all M in A-Gproj, N in R-Gproj", "status": "exact", "cluster": "algebra", "chunk": "liuren_p2", "kind": "result", "genre": "original", "note": "Theorem 6.4, main result of Section 6, proved via Lemmas 6.1-6.3 and the canonical fully faithful functor into the singularity category D_sg(A); compared with [29, Theorem I] and [30, Theorem 0.3]."}], "edges": [{"a": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "b": "the-relation-uparrow-on-i-omega-g-k-v-uparrow-l-", "rel": "depends_on", "count": 1}, {"a": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "b": "fi-omega-g-and-fs-omega-g-the-members-of-i-omega", "rel": "depends_on", "count": 1}, {"a": "2-k-v-uparrow-l-u-in-fi-omega-g-iff-v-divides-re", "b": "the-relation-uparrow-on-i-omega-g-k-v-uparrow-l-", "rel": "refines", "count": 1}, {"a": "3-e-w-is-nonempty", "b": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "rel": "depends_on", "count": 1}, {"a": "4-if-k-v-in-e-w-then-res-f-k-v-is-isomorphic-to-", "b": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "rel": "depends_on", "count": 1}, {"a": "5-for-fixed-k-in-delta-the-members-of-e-w-over-k", "b": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "rel": "depends_on", "count": 1}, {"a": "6-e-w-is-closed-under-uparrow-k-v-uparrow-l-u-im", "b": "2-k-v-uparrow-l-u-in-fi-omega-g-iff-v-divides-re", "rel": "depends_on", "count": 1}, {"a": "7-members-of-e-w-have-related-green-theory-invar", "b": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "rel": "depends_on", "count": 1}, {"a": "8-w-simple-fg-iff-some-k-v-in-e-w-is-simple-kg-i", "b": "7-members-of-e-w-have-related-green-theory-invar", "rel": "depends_on", "count": 1}, {"a": "proposition-1-gr-g-h-w-is-an-indecomposable-fh-m", "b": "7-members-of-e-w-have-related-green-theory-invar", "rel": "refines", "count": 1}, {"a": "proposition-3-a-component-x-of-w-tensor-f-j-desc", "b": "theorem-2-finite-descent-an-indecomposable-jg-mo", "rel": "depends_on", "count": 1}, {"a": "proposition-3-a-component-x-of-w-tensor-f-j-desc", "b": "the-class-e-w-of-an-indecomposable-fg-module-w-e", "rel": "depends_on", "count": 1}, {"a": "remark-5-for-w-simple-fg-and-k-v-in-e-w-v-is-sim", "b": "8-w-simple-fg-iff-some-k-v-in-e-w-is-simple-kg-i", "rel": "depends_on", "count": 1}, {"a": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "b": "theorem-2-finite-descent-an-indecomposable-jg-mo", "rel": "depends_on", "count": 1}, {"a": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "b": "proposition-3-a-component-x-of-w-tensor-f-j-desc", "rel": "depends_on", "count": 1}, {"a": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "b": "remark-4-an-indecomposable-resp-simple-bar-f-g-m", "rel": "depends_on", "count": 1}, {"a": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "b": "theorem-2-finite-descent-an-indecomposable-jg-mo", "rel": "depends_on", "count": 1}, {"a": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "b": "proposition-3-a-component-x-of-w-tensor-f-j-desc", "rel": "depends_on", "count": 1}, {"a": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "b": "remark-5-for-w-simple-fg-and-k-v-in-e-w-v-is-sim", "rel": "depends_on", "count": 1}, {"a": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "b": "remark-4-an-indecomposable-resp-simple-bar-f-g-m", "rel": "depends_on", "count": 1}, {"a": "remark-8-the-proofs-of-2-theorems-3-1-3-5-and-re", "b": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "rel": "supports", "count": 1}, {"a": "remark-8-the-proofs-of-2-theorems-3-1-3-5-and-re", "b": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "rel": "supports", "count": 1}, {"a": "kuhlshammer-s-objection-2-proposition-2-7-is-fal", "b": "theorem-6-the-map-gamma-iti-bar-f-g-iti-fg-is-a-", "rel": "supports", "count": 1}, {"a": "kuhlshammer-s-objection-2-proposition-2-7-is-fal", "b": "theorem-7-the-map-sigma-its-bar-f-g-its-fg-is-a-", "rel": "supports", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "depends_on", "count": 6}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "theorem-3-12-characterization-of-ascent-and-desc", "rel": "depends_on", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "lemma-4-2-a-finitely-generated-left-a-module-m-w", "rel": "depends_on", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "frobenius-extension-of-rings-s-subset-a-a-finite", "rel": "generalizes", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "ascent-and-descent-of-finite-gorenstein-dimensio", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "proposition-3-5-d-hom-r-a-i-is-a-semi-dualizing-", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "proposition-3-7-evaluation-morphism-e-m-d-is-a-q", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "lemma-3-2-finite-gorenstein-dimension-iff-rhom-a", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "lemma-3-4-biduality-isomorphism-iff-pi-is-a-quas", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "lemma-3-10-gorenstein-projective-n-with-ext-n-a-", "rel": "depends_on", "count": 1}, {"a": "theorem-3-12-characterization-of-ascent-and-desc", "b": "lemma-3-11-exact-triangle-k-n-1-p-m-k-n-for-m-of", "rel": "depends_on", "count": 1}, {"a": "proposition-3-5-d-hom-r-a-i-is-a-semi-dualizing-", "b": "semi-dualizing-complex-dualizing-complex", "rel": "illustrates", "count": 1}, {"a": "proposition-3-5-d-hom-r-a-i-is-a-semi-dualizing-", "b": "lemma-3-4-biduality-isomorphism-iff-pi-is-a-quas", "rel": "depends_on", "count": 1}, {"a": "proposition-3-7-evaluation-morphism-e-m-d-is-a-q", "b": "lemma-3-4-biduality-isomorphism-iff-pi-is-a-quas", "rel": "depends_on", "count": 1}, {"a": "proposition-3-7-evaluation-morphism-e-m-d-is-a-q", "b": "semi-dualizing-complex-dualizing-complex", "rel": "depends_on", "count": 1}, {"a": "example-3-6-semi-dualizing-perfect-complex-that-", "b": "semi-dualizing-complex-dualizing-complex", "rel": "illustrates", "count": 1}, {"a": "example-3-6-semi-dualizing-perfect-complex-that-", "b": "proposition-3-5-d-hom-r-a-i-is-a-semi-dualizing-", "rel": "depends_on", "count": 1}, {"a": "corollary-3-14-answer-to-the-avramov-foxby-quest", "b": "theorem-3-12-characterization-of-ascent-and-desc", "rel": "refines", "count": 1}, {"a": "corollary-3-16-any-complete-intersection-map-has", "b": "ascent-and-descent-of-finite-gorenstein-dimensio", "rel": "illustrates", "count": 1}, {"a": "corollary-3-16-any-complete-intersection-map-has", "b": "complete-intersection-map", "rel": "depends_on", "count": 1}, {"a": "corollary-3-16-any-complete-intersection-map-has", "b": "theorem-3-12-characterization-of-ascent-and-desc", "rel": "depends_on", "count": 1}, {"a": "lemma-3-11-exact-triangle-k-n-1-p-m-k-n-for-m-of", "b": "gorenstein-dimension-gorenstein-projective-resol", "rel": "depends_on", "count": 1}, {"a": "lemma-4-2-a-finitely-generated-left-a-module-m-w", "b": "lemma-3-11-exact-triangle-k-n-1-p-m-k-n-for-m-of", "rel": "depends_on", "count": 1}, {"a": "lemma-4-2-a-finitely-generated-left-a-module-m-w", "b": "gorenstein-projective-module-totally-acyclic-com", "rel": "depends_on", "count": 1}, {"a": "theorem-1-2-iwanaga-gorenstein-property-ascends-", "b": "ascent-and-descent-of-finite-gorenstein-dimensio", "rel": "depends_on", "count": 1}, {"a": "theorem-1-2-iwanaga-gorenstein-property-ascends-", "b": "iwanaga-gorenstein-ring", "rel": "depends_on", "count": 1}, {"a": "remark-3-13-does-2-imply-1-in-theorem-3-12-witho", "b": "theorem-3-12-characterization-of-ascent-and-desc", "rel": "depends_on", "count": 1}, {"a": "totally-reflexive-extension-of-rings-chen-11", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "illustrates", "count": 1}, {"a": "buchweitz-s-example-z-zg-integral-group-ring-ext", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "illustrates", "count": 1}, {"a": "buchweitz-s-example-z-zg-integral-group-ring-ext", "b": "frobenius-extension-of-rings-s-subset-a-a-finite", "rel": "illustrates", "count": 1}, {"a": "gorenstein-dimension-gorenstein-projective-resol", "b": "gorenstein-projective-module-totally-acyclic-com", "rel": "depends_on", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "ascent-and-descent-of-finite-gorenstein-dimensio", "rel": "supports", "count": 1}, {"a": "lemma-4-2-a-finitely-generated-left-a-module-m-w", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "supports", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "lemma-4-5-m-is-gorenstein-projective-over-a-iff-", "rel": "depends_on", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "frobenius-extension-of-rings-s-subset-a-a-finite", "rel": "depends_on", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "contradicts", "count": 1}, {"a": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "b": "example-4-9-the-surjection-s-x-x-2-s-with-s-not-", "rel": "refines", "count": 1}, {"a": "corollary-5-2-avramov-foxby-for-a-finite-local-h", "b": "theorem-5-1-if-phi-has-ascent-and-descent-of-fin", "rel": "depends_on", "count": 1}, {"a": "the-adjoint-pair-f-omega-tensor-a-a-mod-r-mod-g-", "b": "theorem-6-4-the-induced-adjoint-pair-gives-mutua", "rel": "supports", "count": 1}, {"a": "lemma-6-2-f-a-gproj-r-gproj-is-faithful-and-the-", "b": "theorem-6-4-the-induced-adjoint-pair-gives-mutua", "rel": "supports", "count": 1}, {"a": "lemma-6-3-if-a-is-a-projective-generator-in-r-mo", "b": "theorem-6-4-the-induced-adjoint-pair-gives-mutua", "rel": "supports", "count": 1}], "loops": [{"chunk": "liuren_p1", "label": "remark-3-13-does-2-imply-1-in-theorem-3-12-witho", "node": null}], "stats": {"subjects": 3, "cross_edges": 65, "concepts": 63}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

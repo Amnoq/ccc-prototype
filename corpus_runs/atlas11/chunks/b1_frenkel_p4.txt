@@ -1,0 +1,481 @@
+(g · f)(h) = f(hg), g ∈ GL2(A).
+
+In particular, the subgroup GL2(R) ⊂ GL2(A), and hence its complexified Lie algebra gl2 and the universal enveloping algebra of the latter also act.
+
+The group GL2(A) has the center Z(A) ≃ A × which consists of all diagonal matrices.
+
+For a character χ : Z(A) → C × and a complex number ρ let Cχ,ρ(GL2(Q)\\GL2(A))
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 19
+
+be the space of smooth functions f : GL2(Q)\\GL2(A) → C satisfying the following additional requirements:
+
+• (K-finiteness) the (right) translates of f under the action of elements of the compact subgroup K span a finite-dimensional vector space;
+
+\[
+
+• (central character) f(gz) = \chi(z)f(g) for all g \in GL2(A),z \in Z(A), and C ·f = \rho f, where C is the Casimir element \tag{1.8}
+
+\]
+
+\[
+
+;
+
+\]
+
+### • (growth) f is bounded on GLn(A);
+
+1 u
+
+• (cuspidality) Z f g du = 0.
+
+0 1
+
+#### Q\\NA
+
+\[
+
+The space C\chi,\rho(GL2(Q)\\GL2(A)) is a representation of the group GL2(A f) = Y ′GL2(Qp)
+
+\]
+
+### p prime
+
+and the Lie algebra gl2 (corresponding to the infinite place), whose actions commute with each other. In addition, the subgroup O2 of GL2(R) acts on it, and the
+
+action of O2 is compatible with the action of gl2 making it into a module over the so-called HarishChandra pair (gl2,O2).
+
+It is known that Cχ,ρ(GL2(Q)\\GL2(A)) is a direct sum of irreducible representations
+
+f ) × gl2, each occurring with multiplicity one.10 The irreducible representations
+
+\[
+
+of GL2(A occurring in these spaces (for different \chi,\rho) are called the cuspidal automorphic representations of GL2(A). We now explain how to attach to such
+
+a representation a modular form on the upper half-plane H+. First of all,an irreducible cuspidal automorphic representation \pi may be written as a restricted
+
+infinite tensor product \tag{1.9}
+
+\]
+
+\[
+
+\pi = O ′\pi p \otimes \pi \infty,
+
+\]
+
+### p prime
+
+where πp is an irreducible representation of GL2(Qp) and π∞ is a gl2-module. For all but finitely many primes p, the representation πp is unramified, which
+
+means that it contains a non-zero vector invariant under the maximal compact subgroup GL2(Zp) of GL2(Qp).
+
+This vector is then unique up to a scalar. Let us choose GL2(Zp)-invariant vectors vp at all unramified primes p.
+
+\[
+
+Then the vector space \tag{1.9}
+
+\]
+
+\[
+
+is the restricted infinite tensor product in the sense that it consists of finite linear combinations of vectors of the form \otimes pwp \otimes w\infty, where
+
+wp = vp for all but finitely many prime numbers p (this is the meaning of the prime at the tensor f = Q′ f) acts
+
+\]
+
+product sign). It is clear from the definition of A
+
+### p Qp that the group GL2(A
+
+on it.
+
+Suppose now that p is one of the primes at which πp is ramified, so πp does not contain GL2(Zp)-invariant vectors. Then it contains vectors invariant under
+
+smaller compact subgroups of GL2(Zp). 10the above cuspidality and central character conditions are essential in ensuring that irreducible representations occur
+
+in Cχ,ρ(GL2(Q)\\GL2(A)) discretely.
+
+### 20  EDWARD FRENKEL
+
+Let us assume for simplicity that χ ≡ 1. Then one shows that there is a unique, up to a scalar, non-zero vector in πp invariant under the compact subgroup
+
+### a b \| c ≡ 0 mod p
+
+### K′ npZp
+
+p = c d for some positive integer np. 11 Let us choose such a vector vp at all primes where π is ramified. In order to have uniform notation, we will set np = 0
+
+at those primes at which
+
+Q
+
+### πp is unramified, so at such primes we have K′
+
+p = GL2(Zp). Let K′ = p K′ p .
+
+Thus, we obtain that the space of K′
+
+-invariants in π is the subspace
+
+(1.10) πe∞ = \otimes pvp \otimes π∞, which carries an action of (gl2,O2). This space of functions contains all the information about π because other elements of
+
+π may be obtained from it by right translates by elements of GL2(A). So far we have not used the fact that π is an automorphic representation, i.e., that it is
+
+realized in the space of smooth functions on GL2(A) left invariant under the subgroup GL2(Z). Taking this into account, we find that the space πe∞ of K′
+
+-invariant vectors in π is realized in the space of functions on the double quotient
+
+### GL2(Q)\\GL2(A)/K′
+
+.
+
+Next, we use the strong approximation theorem (see, e.g., \[32\]) to obtain the following
+
+### Q np and consider the subgroup
+
+useful statement. Let us set N = p
+
+p
+
+Γ0(N) = a b \| c ≡ 0 mod NZ
+
+### c d
+
+of SL2(Z). Then
+
+### GL2(Q)\\GL2(A)/K′ ≃ Γ0(N)\\GL+ (R),
+
+(R) consists of matrices with positive determinant.
+
+where GL+
+
+Thus, the smooth functions on GL2(Q)\\GL2(A) corresponding to vectors in the space
+
+(R)
+
+\[
+
+\pi e\infty given by \tag{1.10}
+
+\]
+
+\[
+
+are completely determined by their restrictions to the subgroup GL+ of GL2(R) \subset GL2(A). The central character condition implies that these functions are
+
+further determined by their restrictions to SL2(R). Thus, all information about \pi is contained in the space \pi e\infty realized in the space of smooth
+
+functions on \Gamma 0(N)\\SL2(R), where it forms a representation of the Lie algebra sl2 on which the Casimir operator C of U(sl2) acts by multiplication by
+
+\rho .
+
+\]
+
+At this point it is useful to recall that irreducible representations of (gl2(C),O(2)) fall into the following categories: principal series, discrete series,
+
+the limits of the discrete series and finite-dimensional representations (see \[36\]).
+
+Consider the case when π∞ is a representation of the discrete series of (gl2(C),O(2)). In this case ρ = k(k −2)/4, where_k is an integer greater than_1. Then,
+
+as an sl2-module, π∞ is the direct sum of the irreducible Verma module of highest weight −k and the irreducible Verma module with lowest weight_k. The former is
+
+generated by a unique, up to a scalar, highest weight vector v∞ such that X0 · v∞ = −kv∞, X+ · v∞ = 0, 11if we do not assume that χ ≡ 1, then there is a
+
+unique, up to a scalar, vector invariant under the subgroup of elements as above satisfying the additional condition that d ≡ mod p np Zp
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 21
+
+1 0
+
+and the latter is generated by the lowest weight vector · v∞.
+
+0 −1
+
+\[
+
+Thus, the entire gl2(R)-module \pi \infty is generated by the vector v\infty, and so we focus on the function on \Gamma 0(N)\\SL2(R) corresponding to this
+
+vector. Let \varphi \pi be the corresponding function on SL2(R). By construction, it satisfies \varphi \pi(\gamma g) = \varphi \pi(g), \gamma \in \Gamma 0(N),
+
+= e
+
+\[
+
+\cos \theta \sin \theta ik\theta \varphi \pi(g) 0 \le \theta \le 2\pi . \varphi \pi g - \sin \theta \cos \theta We assign to \varphi \pi a function f\pi on the
+
+upper half-plane H = {\tau \in C\| Im \tau > 0}.
+
+\]
+
+Recall that H ≃ SL2(R)/SO2 under the correspondence
+
+### a b a + bi
+
+### SL2(R) ∋ g = 7→
+
+c d c + di ∈ H.
+
+We define a function fπ on SL2(R)/SO2 by the formula
+
+\[
+
+f\pi(g) = \varphi(g)(ci + d) k
+
+\]
+
+.
+
+When written as a function of τ , the function f satisfies the conditions12 aτ + b_k a b f\pi f\pi(τ ), ∈ Γ0(N). = (cτ + d) cτ + d c d In addition, the “highest
+
+weight condition” X+ · v∞ = 0 is equivalent to fπ being a holomorphic function of τ . Such functions are called modular forms of weight_k and level N. Thus, we
+
+have attached to an automorphic representation π of GL2(A) a holomorphic modular form fπ of weight_k and level N on the upper half-plane. We expand it in the
+
+Fourier series fπ(q) = X∞ n 2πiτ
+
+### anq
+
+, q = e .
+
+### n=0
+
+\[
+
+The cuspidality condition on \pi means that f\pi vanishes at the cusps of the fundamental domain of the action of \Gamma 0(N) on H. Such modular forms are
+
+called cusp forms. In particular, it vanishes at q = 0 which corresponds to the cusp \tau = i\infty, and so we have a_0 = 0. Further, it can shown that a_1 6=
+
+0, and we will normalize f\pi by setting a_1 = 1.The normalized modular cusp form f\pi(q) contains all the information about the automorphic representation \pi
+
+\]
+
+13 In particular, it “knows” about the Hecke eigenvalues of
+
+π.
+
+12In the case when_k is odd, taking −I2 ∈ Γ0(N) we obtain fπ(τ ) = −fπ(τ ), hence this condition can only be satisfied by the zero function. To cure that, we
+
+should modify it by inserting in the right hand × → C × such that χN (−1) = −1. This character side the factor χN (d), where χN is a character (Z/NZ)
+
+corresponds to the character χ in the definition of the space Cχ,ρ(GL2(Q)\\GL2(A)). We have set χ ≡ 1 because our main example is_k = 2 when this issue does not
+
+arise. 13Note that fπ corresponds to a unique, up to a scalar, “highest weight vector” in the representation π invariant under the compact subgroup K′ and the
+
+Borel subalgebra of sl2.
+
+### 22  EDWARD FRENKEL
+
+Let us give the definition the Hecke operators. This is a local question that has to do with the local factor πp in the decomposition (1.9) of π at a prime p,
+
+which is a representation of GL2(Qp). Suppose that πp is unramified, i.e., it contains a unique, up to a scalar, vector vp that is invariant under the subgroup
+
+GL2(Zp). Then it is an eigenvector of the spherical Hecke algebra Hp which is the algebra of compactly supported GL2(Zp) bi-invariant functions on GL2(Qp), with
+
+respect to the convolution product. This algebra is isomorphic to the polynomial algebra in two generators H1,p and H2,p, whose action on
+
+### vp is given by the formulas
+
+Z
+
+\[
+
+\rho p(g) · vp dg, H_1,p · vp =
+
+\]
+
+### M1 (Zp)
+
+Z
+
+\[
+
+\rho p(g) · \rho p dg, H_2,p · vp =
+
+\]
+
+### M2 (Zp)
+
+(Zp),i = 1, 2, are
+
+\[
+
+where \rho p : GL2(Zp) \to End \pi p is the representation homomorphism, Mi_2 the double cosets (Zp) = GL2(Zp) p_0 (Zp) = GL2(Zp) p_0
+
+### M1 GL2(Zp), M2 GL2(Zp)
+
+2 0 1 2 0 p
+
+\[
+
+in GL2(Qp), and we use the Haar measure on GL2(Qp) normalized so that the volume of the compact subgroup GL2(Zp) is equal to_1.These cosets generalize the Z
+
+\times coset of the element p \in GL1(Qp) = Q\times
+
+p p , and that is
+
+why the matching condition between the Hecke eigenvalues and the Frobenius eigenvalues that we discuss below generalizes the “rigidity” condition (1.7) of the
+
+ACFT isomorphism.
+
+Since the integrals are over GL2(Zp)-cosets, H1,p ·vp and H2,p ·vp are GL2(Zp)-invariant vectors, hence proportional to vp. Under our assumption that the center
+
+Z(A) acts trivially on π (χ ≡ 1) we have H2 · vp = vp. But the eigenvalue h1,p of H1,p on vp is an important invariant of πp. This invariant is defined for all
+
+primes p at which π is unramified (these are the primes that do not divide the level N introduced above). These are precisely the Hecke eigenvalues that we
+
+discussed before. Since the modular cusp form fπ encapsulates all the information about the automorphic representation π, we should be able to read them off the
+
+form fπ. It turns out that the operators H1,p have a simple interpretation in terms of functions on the upper half-plane.
+
+Namely, they become the classical Hecke operators (see, e.g., \[32\] for an explicit formula).
+
+Thus, we obtain that fπ is necessarily an eigenfunction of the classical Hecke operators.
+
+Moreover, explicit calculation shows that if we normalize fπ as above, setting a1 = 1, then the eigenvalue h1,p will be equal to the pth coefficient ap in the
+
+q-expansion of fπ. Let us summarize: to an irreducible cuspidal automorphic representation π (in the special case when χ ≡ 1 and ρ = k(k−2)/4, where_k ∈ Z>1) we
+
+have associated a modular cusp form fπ of weight_k and level N on the upper half-plane which is an eigenfunction of the classical Hecke operators
+
+(corresponding to all primes that do not divide N) with the eigenvalues equal to the coefficients ap in the q-expansion of fπ.
+
+1.7. Elliptic curves and Galois representations. In the previous subsection we discussed some concrete examples of automorphic representations of GL2(A) that
+
+can be
+
+realized by classical modular cusp forms. Now we look at examples of the objects arising
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 23
+
+on the other side of the Langlands correspondence, namely, two-dimensional representations of the Galois group of Q. Then we will see what matching their
+
+invariants means.
+
+As we mentioned above, one can construct representations of the Galois group of Q by taking the ´etale cohomology of algebraic varieties defined over Q. The
+
+simplest example of a two-dimensional representation is thus provided by the first ´etale cohomology of an elliptic curve defined over Q, which (just as its
+
+topological counterpart) is two-dimensional.
+
+A smooth elliptic curve over Q may concretely be defined by an equation
+
+2 = x_3 + ax + b
+
+y
+
+### 3 + 27b 2 6= 0. More precisely, this equation
+
+where a,b are rational numbers such that 4a defines an affine curve E′
+
+. The corresponding projective curve E is obtained by adding
+
+to E′ a point at infinity; it is the curve in P 2 defined by the corresponding homogeneous equation.
+
+The first ´etale cohomology H1 is isomorphic
+
+### ´et(EQ , Q\ell) of EQ with coefficients in Q\ell
+
+to Q2
+
+\ell . The definition of ´etale cohomology necessitates the choice of a prime \ell, but as
+
+we will see below, important invariants of these representations, such as the Frobenius eigenvalues, are independent of \ell. This space may be concretely
+
+realized as the dual of the Tate module of E, the inverse limit of the groups of points of order \ell n on E (with respect to the abelian group structure on E),
+
+tensored with Q\ell
+
+. Since E is defined over
+
+Q, the Galois group Gal(Q/Q) acts by symmetries on H1
+
+### ´et(EQ , Q\ell), and hence we obtain
+
+a two-dimensional representation σE,\ell : Gal(Q/Q) → GL2(Q\ell). This representation is continuous with respect to the Krull topology14 on Gal(Q/Q) and the
+
+usual \ell-adic topology on GL2(Q\ell).
+
+What information can we infer from this representation? As explained in Sect. 1.5, important invariants of Galois representations are the eigenvalues of the
+
+Frobenius conjugacy classes corresponding to the primes where the representation is unramified. In the
+
+case at hand, the representation is unramified at the primes of “good reduction”, which do not divide an integer NE, the conductor of E. These Frobenius
+
+eigenvalues have a nice interpretation. Namely, for p_6 \|NE we consider the sum of their inverses, which is the trace of σE(Frp). One can show that it is equal
+
+to Tr σE(Frp) = p + 1 − #E(Fp) where #E(Fp) is the number of points of E modulo p (see, \[33, 35\]). In particular, it is independent of \ell. Under the
+
+Langlands correspondence, the representation σE of Gal(Q/Q) should correspond to a cuspidal automorphic representation π(σE) of the group GL2(A). Moreover, as
+
+we discussed in Sect. 1.5, this correspondence should match the Frobenius eigenvalues of σE and the Hecke eigenvalues of π(σE). Concretely, in the case at hand,
+
+the matching condition is that Tr σE(Frp) should be equal to the eigenvalue h1,p of the Hecke operator H1,p, at all primes p where σE and π(σE) are unramified.
+
+It is not difficult to see that for this to hold, π(σE) must be a cuspidal automorphic representation of GL2(A) corresponding to a modular cusp form of
+
+weight_k = 2. Therefore, if
+
+14in this topology the base of open neighborhoods of the identity is formed by normal subgroups of finite index (i.e., such that the quotient is a finite group)
+
+### 24  EDWARD FRENKEL
+
+we believe in the Langlands correspondence, we arrive at the following startling conjecture: for each elliptic curve E over Q there should exist a modular cusp
+
+form fE(q) = P∞ n
+
+### n=1 anq
+
+\[
+
+with a_1 = 1 and \tag{1.13}
+
+\]
+
+\[
+
+ap = p + 1 - #E(Fp) for all but finitely many primes p! This is in fact the statement of the celebrated TaniyamaShimura conjecture that has recently been proved
+
+by A. Wiles and others [38]. It implies
+
+\]
+
+Fermat’s last theorem, see \[35\] and references therein.
+
+In fact, the modular cusp form fE(q) is what is called a newform (this means that it does not come from a modular form whose level is a divisor of NE).
+
+Moreover, the Galois representation σE and the automorphic representation π are unramified at exactly the same primes (namely, those which do not divide NE),
+
+and formula (1.13) holds at all of those primes \[37\]. This way one obtains a bijection between isogeny classes of elliptic curves defined over Q with
+
+conductor NE and newforms of weight_2 and level NE with integer Fourier coefficients.
+
+One obtains similar statements by analyzing from the point of view of the Langlands correspondence the Galois representations coming from other algebraic
+
+varieties, or more general motives.
+
+2. From number fields to function fields
+
+As we have seen in the previous section, even special cases of the Langlands correspondence lead to unexpected number theoretic consequences. However, proving
+
+these results
+
+is notoriously difficult. Some of the difficulties are related to the special role played by the archimedian completion R in the ring of ad\`eles of Q (and
+
+similarly, by the archimedian completions of other number fields). Representation theory of the archimedian factor GLn(R)
+
+of the ad\`elic group GLn(AQ) is very different from that of the other, non-archimedian, factors GL2(Qp), and this leads to problems.
+
+Fortunately, number fields have close cousins, called function fields, whose completions are all non-archimedian, so that the corresponding theory is more
+
+uniform. The function field version of the Langlands correspondence turned out to be easier to handle than the correspondence in the number field case. In fact,
+
+it is now a theorem! First, V. Drinfeld \[39, 40\] proved it in the 80’s in the case of GL2, and more recently L. Lafforgue \[41\] proved it for GLn with an
+
+arbitrary_n.
+
+In this section we explain the analogy between number fields and function fields and formulate the Langlands correspondence for function fields.

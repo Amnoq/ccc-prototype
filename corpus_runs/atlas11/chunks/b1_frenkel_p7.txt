@@ -1,0 +1,397 @@
+locally constant sheaf (i.e., a local system) on X as the sheaf of horizontal sections of E with respect to \nabla.
+
+This construction in fact sets up an equivalence of the two categories if X is compact (for example, a smooth projective curve). This is called the
+
+Riemann-Hilbert correspondence.
+
+More generally, in the Langlands correspondence we consider local systems defined on the non-compact curves X\\S, where X is a projective curve and S is a
+
+finite set. Such local systems are called ramified at the points of S. In this case the above equivalence of categories is valid only if we restrict ourselves
+
+to holomorphic bundles with holomorphic connections with regular singularities at the points of the set S (that means that the order of pole of the connection
+
+at a point in S is at most_1). However, in this paper (with the exception of Sect. 9.8) we will restrict ourselves to unramified local systems. In general, we
+
+expect that vector bundles on curves with connections that have singularities, regular or irregular, also play an important role in the geometric Langlands
+
+correspondence, see \[44\]; we discuss this in Sect. 9.8 below.
+
+To summarize, we believe that we have found the right substitute for the (unramified) n-dimensional Galois representations in the case of a compact complex
+
+curve X: these are the rank n local systems on X, or equivalently, rank n holomorphic vector bundles on X with a holomorphic connection.
+
+3.2. Ad\`eles and vector bundles. Next, we wish to interpret geometrically the objects appearing on the other side of the Langlands correspondence, namely, the
+
+automorphic representations. This will turn out to be more tricky. The essential point here is the interpretation of automorphic representations in terms of the
+
+moduli spaces of rank n vector bundles.
+
+For simplicity, we will restrict ourselves from now on to the irreducible automorphic representations of GLn(A) that are unramified at all points of X, in the
+
+sense explained in Sect. 2.3. Suppose that we are given such a representation π of GLn(A). Then the
+
+Q
+
+space of GLn(O)-invariants in π, where O =
+
+### x∈X Ox, is one-dimensional, spanned by the
+
+### 36  EDWARD FRENKEL
+
+vector
+
+\[
+
+O O ′\pi x = \pi, v = vx \in x\in X x\in X where vx is defined in Sect. 2.3. Hence v gives rise to a GLn(O)-invariant function on GLn(F)\\GLn(A), or
+
+equivalently, a function f\pi on the double quotient
+
+GLn(F)\\GLn(A)/GLn(O).
+
+\[
+
+By construction, this function is an eigenfunction of the spherical Hecke algebras Hx defined above for all x \in X, a property we will discuss in more detail
+
+later. The function f\pi completely determines the representation \pi because other vectors in \pi may be obtained as linear combinations of the right
+
+translates of f\pi on GLn(F)\\GLn(A).
+
+\]
+
+Hence instead of considering the set of equivalence classes of irreducible unramified cuspidal automorphic representations of GLn(A), one may consider the set
+
+of unramified
+
+\[
+
+automorphic functions on GLn(F)\\GLn(A)/GLn(O) associated to them (each defined up to multiplication by a non-zero scalar).25 The following key observation is
+
+due to A. Weil. Let X be a smooth projective curve over any field_k and F = k(X) the function field of X. We define the ring A of ad+eles and its subring O of
+
+integer ad-eles in the same way as in the case when_k = Fq. Then we have the following:
+
+\]
+
+Lemma 2. There is a bijection between the set GLn(F)\\GLn(A)/GLn(O) and the set of isomorphism classes of rank n vector bundles on X.
+
+For simplicity, we consider this statement in the case when X is a complex curve (the proof in general is similar). We note that in the context of conformal
+
+field theory this statement has been discussed in \[5\], Sect. V.
+
+We use the following observation: any rank n vector bundle V on X can be trivialized over the complement of finitely many points. This is equivalent to the
+
+existence of n meromorphic sections of V whose values are linearly independent away from finitely many points of X. These sections can be constructed as
+
+follows: choose a non-zero meromorphic section of V. Then, over the complement of its zeros and poles, this section spans a line
+
+### ′ of rank
+
+subbundle of V. The quotient of V by this line subbundle is a vector bundle V n − 1. It also has a non-zero meromorphic section. Lifting this section to a
+
+section of V in an arbitrary way, we obtain two sections of V which are linearly independent away from finitely many points of X. Continuing like this, we
+
+construct n meromorphic sections of V satisfying the above conditions.
+
+Let x1,... ,xN be the set of points such that V is trivialized over X\\{x1,... ,xN }. The bundle V can also be trivialized over the small discs Dxi around those
+
+points. Thus, we consider the covering of X by the open subsets X\\{x1,... ,xN } and Dxi ,i = 1,... ,N. The
+
+overlaps are the punctured discs D×
+
+xi , and our vector bundle is determined by the transition
+
+functions on the overlaps, which are GLn-valued functions gi on D×
+
+xi ,i = 1,... ,N.
+
+The difference between two trivializations of V on Dxi amounts to a GLn-valued function hi on Dxi that differs from the old one by hi
+
+. If we consider a new trivialization on Dxi ,
+
+25note that this is analogous to replacing an automorphic representation of GL2(AQ) by the corresponding modular form, a procedure that we discussed in Sect.
+
+1.6
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 37
+
+then the ith transition function gi will get multiplied on the right by hi \|D
+
+### : gi 7→ gihi ×
+
+,
+
+### xi
+
+whereas the other transition functions will remain the same. Likewise, the difference between two trivializations of V on X\\{x1,... ,xN } amounts to a
+
+GLn-valued function h on X\\{x1,... ,xN }. If we consider a new trivialization on X\\{x1,... ,xN } that differs from the old one by h, then the ith transition
+
+function gi will get multiplied on the left by h: gi for all_i = 1,... ,N.
+
+### 7→ h\|D × gi
+
+### xi
+
+\[
+
+We obtain that the set of isomorphism classes of rank_n vector bundles on X which become trivial when restricted to X\\{x_1,...,xN } is the same as the quotient
+
+\tag{3.3}
+
+\]
+
+\[
+
+GLn(X\\{x_1,...,xN }\\YN)/ YN). i=1GLn(D\times xi_i=1GLn(Dxi
+
+\]
+
+Here for an open set U we denote by GLn(U) the group of GLn-valued function on U, with pointwise multiplication.
+
+If we replace each Dxi by the formal disc at xi ) will become GLn(Fx),
+
+, then GLn(D× xi
+
+\[
+
+where Fx ≃ C((tx)) is the algebra of formal Laurent series with respect to a local coordinate tx at x, and GLn(Dxi) will become GLn(Ox), where Ox ≃ C[[tx]] is
+
+the ring of formal Taylor series. Then, if we also allow the set x_1,...,xN to be an arbitrary finite subset of X, we will obtain instead of \tag{3.3}
+
+\]
+
+\[
+
+the double quotient
+
+\]
+
+### GLn(F)\\ Y′ Y
+
+\[
+
+x\in XGLn(Fx)/ x\in XGLn(Ox),
+
+\]
+
+where F = C(X) and the prime means the restricted product, defined as in Sect. 2.3.26 But this is exactly the double quotient in the statement of the Lemma.
+
+This completes the proof.
+
+3.3. From functions to sheaves. Thus, when X is a curve over Fq, irreducible unramified automorphic representations π are encoded by the automorphic functions
+
+fπ, which are functions on GLn(F)\\GLn(A)/GLn(O). This double quotient makes perfect sense when X is defined over C and is in fact the set of isomorphism
+
+classes of rank_n bundles on X. But what should replace the notion of an automorphic function fπ in this case?
+
+We will argue that the proper analogue is not a function, as one might naively expect, but a sheaf on the corresponding algebro-geometric object: the moduli
+
+stack Bunn of rank n bundles on X.
+
+This certainly requires a leap of faith. The key step is the Grothendieck fonctionsfaisceaux dictionary. Let V be an algebraic variety over Fq. Then,
+
+according to Grothendieck
+
+, the “correct” geometric counterpart of the notion of a (Q\ell -valued) function on the
+
+set of Fq-points of V is the notion of a complex of \ell-adic sheaves on V . A precise definition of an \ell-adic sheaf would take us too far afield. Let us
+
+just say that the simplest example of an \ell-adic sheaf is an \ell-adic local system, which is, roughly speaking, a locally constant Q\ell - sheaf on V (in the
+
+´etale topology).27 For a general \ell-adic sheaf there exists a stratification of V by locally closed subvarieties Vi such that the sheaves F\|Vi are locally
+
+constant.
+
+26the passage to the formal discs is justified by an analogue of the “strong approximation theorem” that was mentioned in Sect. 1.6 27The precise definition
+
+(see, e.g., \[45, 46\]) is more subtle: a typical example is a compatible system of locally constant Z/\ell nZ-sheaves for_n > 0
+
+### 38  EDWARD FRENKEL
+
+The important property of the notion of an \ell-adic sheaf F on V is that for any morphism f : V ′ → V from another variety V ′ to V the group of symmetries of
+
+this morphism will
+
+### ′
+
+act on the pull-back of F to V
+
+. In particular, let x be an Fq-point of V and x the Fq-point
+
+corresponding to an inclusion Fq ֒→ Fq. Then the pull-back of F with respect to the composition x → x → V is a sheaf on x, which is nothing but the fiber Fx of
+
+F at x, a
+
+Q\ell
+
+\[
+
+-vector space. But the Galois group Gal(Fq/Fq) is the symmetry of the map x \to x, and therefore it acts on Fx. In particular, the (geometric) Frobenius element
+
+Frx, which is the generator of this group acts on Fx. Taking the trace of Frx on Fx, we obtain a number Tr(Frx,Fx) \in Q\ell
+
+\]
+
+.
+
+Hence we obtain a function fF on the set of Fq-points of V , whose value at x is
+
+fF(x) = Tr(Frx,Fx).
+
+More generally, if K is a complex of \ell-adic sheaves, one defines a function f(K) on V (Fq) by taking the alternating sums of the traces of Frx on the stalk
+
+cohomologies of K at x:
+
+fK(x) = X (−1)i Tr(Frx,Hi (K)).
+
+x
+
+i
+
+The map K → fK intertwines the natural operations on complexes of sheaves with natural operations on functions (see \[47\], Sect. 1.2). For example, pull-back
+
+of a sheaf corresponds to the pull-back of a function, and push-forward of a sheaf with compact support corresponds to the fiberwise integration of a
+
+function.28
+
+Thus, because of the existence of the Frobenius automorphism in the Galois group Gal(Fq/Fq) (which is the group of symmetries of an Fq-point) we can pass from
+
+\ell-adic sheaves to functions on any algebraic variety over Fq. This suggests that the proper geometrization of the notion of a function in this setting is the
+
+notion of \ell-adic sheaf.
+
+The passage from complexes of sheaves to functions is given by the alternating sum of cohomologies. Hence what matters is not K itself, but the corresponding
+
+object of the derived category of sheaves. However, the derived category is too big, and there are many objects of the derived category which are non-zero, but
+
+whose function is equal to zero.
+
+For example, consider a complex of the form 0 → F → F → 0 with the zero differential.
+
+It has non-zero cohomologies in degrees_0 and_1, and hence is a non-zero object of the derived category. But the function associated to it is identically zero.
+
+That is why it would be useful to identify a natural abelian category C in the derived category of \ell-adic sheaves such that the map assigning to an object K
+
+∈ C the function fK gives rise to an injective map from the Grothendieck group of C to the space of functions on V . 29 The naive category of \ell-adic sheaves
+
+(included into the derived category as the subcategory whose objects are the complexes situated in cohomological degree_0) is not a good
+
+choice for various reasons; for instance, it is not stable under the Verdier duality. The correct choice turns out to be the abelian category of perverse
+
+sheaves.
+
+What is a perverse sheaf? It is not really a sheaf, but a complex of \ell-adic sheaves on V satisfying certain restrictions on the degrees of their non-zero
+
+stalk cohomologies
+
+### 28this follows from the Grothendieck-Lefschetz trace formula
+
+29more precisely, to do that we need to extend this function to the set of all Fq1
+
+-points of V , where
+
+m, m > 0 q1 = q
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 39
+
+(see [48, 49, 50, 51]).30 Examples are \ell-adic local systems on a smooth variety V , placed in cohomological degree equal to − dim V . General perverse
+
+sheaves are “glued” from such local systems defined on the strata of a particular stratification V = S Vi of V by
+
+i
+
+locally closed subvarieties. Even though perverse sheaves are complexes of sheaves, they form an abelian subcategory inside the derived category of sheaves, so
+
+we can work with them like with ordinary sheaves. Unlike the ordinary sheaves though, the perverse sheaves have the following remarkable property: an
+
+irreducible perverse sheaf on a variety V is completely determined by its restriction to an arbitrary open dense subset (provided that this restriction is
+
+non-zero). For more on this, see Sect. 5.4.Experience shows that many “interesting” functions on the set V (Fq) of points of an algebraic variety V over Fq are
+
+of the form fK for a perverse sheaf K on V . Unramified automorphic functions on GLn(F)\\GLn(A)/GLn(O) certainly qualify as “interesting”
+
+functions. Can we obtain them from perverse sheaves on some algebraic variety underlying the set GLn(F)\\GLn(A)/GLn(O)?
+
+In order to do that we need to interpret the set GLn(F)\\GLn(A)/GLn(O) as the set of Fq-points of an algebraic variety over Fq. Lemma 2 gives us a hint as to
+
+what this variety should be: the moduli space of rank n vector bundles on the curve X.
+
+Unfortunately, for_n > 1 there is no algebraic variety whose set of Fq-points is the set of isomorphism classes of all rank_n bundles on X. 31 The reason is
+
+that bundles have groups of automorphisms, which vary from bundle to bundle. So in order to define the structure of an algebraic variety we need to throw away
+
+the so-called unstable bundles, whose groups of automorphisms are too large, and glue together the so-called semi-stable bundles. Only the points corresponding
+
+to the so-called stable bundles will survive. But an automorphic function is a priori defined on the set of isomorphism classes of all bundles. Therefore we do
+
+not want to throw away any of them.32 The solution is to consider the moduli stack Bunn of rank_n bundles on X. It is not an algebraic variety, but it looks
+
+locally like the quotient of an algebraic variety by the action of an algebraic group (these actions are not free, and therefore the quotient is no longer an
+
+algebraic variety). For a nice introduction to algebraic stacks, see \[52\]. Examples of stacks familiar to physicists include the Deligne-Mumford stack of
+
+stable curves of a fixed genus and the moduli stacks of stable maps. In these cases the groups of automorphisms are actually finite, so these stacks may be
+
+viewed as orbifolds. The situation is more complicated for vector bundles, for which the groups of automorphisms are typically continuous. The corresponding
+
+moduli stacks are called Artin stacks. For example, even in
+
+the case of line bundles, each of them has a continuous groups of automorphisms, namely, the multiplicative group. What saves the day is the fact that the group
+
+of automorphisms is the same for all line bundles. This is not true for bundles of rank higher than 1.The technique developed in \[53, 15\] allows us to define
+
+sheaves on algebraic stacks and to operate with these sheaves in ways that we are accustomed to when working with algebraic varieties. So the moduli stack Bunn
+
+will be sufficient for our purposes.
+
+\[
+
+30more precisely, a perverse sheaf is an object of the derived category of sheaves 31for_n = 1, the Picard variety of X may be viewed as the moduli space of
+
+line bundles 32actually, one can show that each cuspidal automorphic function vanishes on a subset of unstable bundles (see [55],Lemma_6.11), and this opens up
+
+the possibility that somehow moduli spaces of semistable bundles would suffice
+
+\]
+
+### 40  EDWARD FRENKEL
+
+Thus, we have now identified the geometric objects which should replace unramified automorphic functions: these should be perverse sheaves on the moduli stack
+
+Bunn of rank_n bundles on our curve X. The concept of perverse sheaf makes perfect sense for varieties over C (see, e.g., \[49, 50, 51\]), and this allows us to
+
+formulate the geometric Langlands conjecture when X (and hence Bunn) is defined over C. But over the field of complex numbers there is one more reformulation
+
+that we can make, namely, we can to pass from perverse sheaves to D-modules. We now briefly discuss this last reformulation.
+
+3.4. From perverse sheaves to D-modules. If V is a smooth complex algebraic variety, we can define the sheaf DV of algebraic differential operators on V (in
+
+Zariski topology).
+
+The space of its sections on a Zariski open subset U ⊂ V is the algebra D(U) of differential operators on U. For instance, if U ≃ C n
+
+, then this algebra is isomorphic to the Weyl
+
+algebra generated by coordinate functions xi
+
+\[
+
+,i = 1,...,n, and the vector fields \partial /\partial xi,i =
+
+\]
+
+1,... ,n. A (left) D-module F on V is by definition a sheaf of (left) modules over the sheaf DV . This means that for each open subset U ⊂ V we are given a
+
+module F(U) over D(U), and these modules satisfy the usual compatibilities.
+
+The simplest example of a DV -module is the sheaf of holomorphic sections of a holomorphic vector bundle E on V equipped with a holomorphic (more precisely,
+
+algebraic)
+
+flat connection. Note that D(U) is generated by the algebra of holomorphic functions O(U) on U and the holomorphic vector fields on U. We define the action of
+
+the former on E(U) in the usual way, and the latter by means of the holomorphic connection. In the special case when E is the trivial bundle with the trivial
+
+connection, its sheaf of sections is the sheaf OV of holomorphic functions on V .
+
+Another class of examples is obtained as follows. Let DV = Γ(V, DV ) be the algebra of global differential operators on V . Suppose that this algebra is

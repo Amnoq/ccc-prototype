@@ -1,0 +1,82 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: 2-torus linked to 3-torus by self-adjoint operator
+18: five linkages L1-L5: product, mapping torus, UT bundle, Deninger, Heisenberg
+19: flat-T3 Laplacian spectrum 2pisqrt(m2+n2+k2); 554,981 points enumerated
+20: Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3
+21: zeros-as-subset of higher-d spectrum not closed by Weyl
+22: Deninger-type foliated 3D system with closed orbits as primes
+23: Heisenberg probe negative on three panels; 65,401 eigenvalues
+24: arithmetic flavor != zero spectrum; Laplacian+theta fails
+25: Node 12 closed: Laplacian path dead, dynamics live
+26: new guardrails D10-D13 from archive archaeology
+27: sieve faces Delta_z = fermionic Fock basis over primes <=z
+28: H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+29: H_int spacings Poisson: <r> 0.459-0.400, not GUE
+30: Fock-diagonal interaction shifts energies, causes no transitions
+31: canonical p<q, r<s sectors; ordered quadruples give zero
+32: pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda
+33: shuffled weights also GUE (0.524): TBRE-class generic chaos
+34: robustness: <r>~0.528-0.535 at dim 2048-8192; Delta_3 inconclusive
+35: prime-frequency probe negative: no prime lines; hump f~0.67
+36: operator GUE-chaotic but does not hear primes; universality only
+37: strengtheners pending: Delta_3 rigidity, density of states, z=43
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21 22 23 24 25 26
+S27:27 28 29 30 31 32 33 34 35 36 37
+E19:1 25
+E20:2 18
+E21:11 20
+E22:12 18
+E23:10 24
+E24:1 25
+E25:6 22
+E28:6 27
+E29:6 28
+E30:7 29
+E31:5 32
+E32:6 30,12 29
+E33:3 32
+E34:1 32
+E35:3 32
+E36:6 35,11 32
+A:17 13,18 13,19 14,20 14,21 16,22 16,23 14,24 13,25 13,26 13,27 13,28 14,29 14,30 13,31 13,32 14,33 14,34 14,35 14,36 13,37 16
+L:21 22 37
+N17: user's original idea, never written down
+N18: foundation rebuilt in multi_torus_framework.md
+N19: 554,981 lattice points; 300 vs 300 zeros, no relation
+N20: exact theorem; d=2 too slow by log, d>=3 too fast
+N21: honest loophole recorded in framework doc
+N22: conjectural; non-probable per D8, formulate only
+N23: 65,401 eigenvalues; negative on three panels
+N24: moral drawn from Heisenberg probe
+N25: multi-torus via Laplacian dead; dynamics live
+N26: five April-2026 docs mined as archaeology
+N27: exact identification; native, not imported
+N28: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+N29: z<=29 dim<=1024; <r> 0.459-0.419 vs Poisson 0.386
+N30: the valuable part of the 13c understanding
+N31: a_r a_s = -a_s a_r forces canonical sectors
+N32: <r> 0.52-0.55, z>=17 all lambda; level repulsion
+N33: shuffled control 0.524; TBRE-class generic chaos
+N34: z=31,37 dense; z=41 Lanczos <r>=0.528
+N35: z-score -0.35 arith vs -0.36 shuffled at 10 lines
+N36: verdict: universality result, not bridge plank
+N37: Delta_3 flat ~0.33 inconclusive; z=43 running

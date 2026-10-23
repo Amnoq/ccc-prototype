@@ -1,0 +1,75 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: ψ(x) as signed face-sum over Δ_x
+18: Δ_x incidence complex of sieve to x
+19: Lehmer φ(x,a) as link recursion of Δ_x
+20: binary geometry rule: 1_prime + 1_shared = 1
+21: composites as zero locus of F(n), primes as support
+22: Figueiredo recipe steps 2–4 without positive region
+23: no known positive region for the sieve
+24: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S
+25: Σw(S) → 1 as X→∞, equivalent to PNT
+26: zeta zeros regulate face-sum convergence via −ζ′/ζ²
+27: weights signed, alternate with face dimension
+28: positive region with these weights as stratum residues
+29: territory removal as soft-limit two-term split
+30: never put the answer in by hand; primality emerges
+31: link({p}) = Δ_{⌊x/p⌋} minus p, exact recursion
+32: empty face anchors alternating sum (d=1, log1=0)
+33: bare Δ_∞ is contractible infinite simplex, no topology
+34: weighted infinite complex as the limit object
+
+INJECTED STRUCTURE (grouped compact):
+
+S18:17 18 19 24 31 32
+S22:17 19 20 21 22 29 30
+S25:24 25 26 27 33 34
+S0:23 28
+E17:5 22,6 18
+E19:5 22
+E20:11 22
+E21:11 20
+E23:3 22
+E25:6 24
+E26:8 25
+E28:6 27
+E29:5 22,11 19
+E30:1 29
+E31:1 19
+E32:1 17
+E34:6 24,12 33
+A:17 14,18 14,19 14,20 13,21 14,22 13,23 16,24 13,25 14,26 14,27 13,28 16,29 13,30 13,31 14,32 13,33 15,34 13
+L:23 28
+N17: exact at x=30,100,500
+N18: link-face counts match; integer bijection exact
+N19: face counts match; bijection holds exactly
+N20: reformulation, not new prime information
+N21: F(n) zero-locus verified to 60
+N22: steps 2–4 analogues; cf. arXiv:2309.15913
+N23: no known positive region; gap stands
+N24: x-independent canonical face-weight definition
+N25: S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+N26: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+N27: weights signed, alternate with face dimension
+N28: sharpest question of the program (text)
+N29: split exact; mapping conceptual, cf. arXiv:2405.09608
+N30: deepest insight applied throughout D1–D5
+N31: link({p})=Δ_{⌊x/p⌋} minus p, exact recursion
+N32: empty face d=1, log1=0, anchors sum
+N33: bare Δ_∞ infinite simplex, contractible, no topology
+N34: limit object = weighted complex, not bare

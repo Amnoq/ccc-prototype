@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-4 — statistical sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-4 — statistical sky</div>
+    <div class="sub">Cortes &amp; Vapnik 1995 (Support-Vector Networks), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {}, "standalone": [{"id": "support-vector-network-a-new-learning-machine-fo", "display": "support-vector network: a new learning machine for two-group classification problems; input vectors are non-linearly mapped to a very high-dimension feature space, in which a linear decision surface with special generalization properties is constructed; extended here to non-separable training data", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "definition", "genre": "original", "note": "New machine defined in the Abstract and section 1; its algorithm is derived analytically in sections 2-4, extending the separable-only prior result of Boser, Guyon & Vapnik (1992) to non-separable training data."}, {"id": "optimal-hyperplane-the-unique-linear-decision-fu", "display": "optimal hyperplane: the unique linear decision function with maximal margin between the vectors of the two classes; equivalently the minimizer of w.w under yi(w.xi+b) >= 1", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "definition", "genre": "reframed", "note": "Reviewed from Vapnik (1982) / the 1965 optimal-hyperplane result; uniqueness of the maximal-margin separator and its equivalence to w.w minimization are re-derived in Appendix A.1."}, {"id": "support-vectors-training-vectors-for-which-yi-w-", "display": "support vectors: training vectors for which yi(w.xi+b) = 1 (Kuhn-Tucker equality cases); the only training data that determine the margin and enter the solution expansion w0 = sum alpha_i^0 yi xi", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "definition", "genre": "reframed", "note": "Defined via the Kuhn-Tucker equality alpha_i[yi(xi.w0+b0)-1] = 0 in Appendix A.1; only terms with alpha_i > 0 enter w0 = sum alpha_i^0 yi xi."}, {"id": "support-vector-error-bound-e-pr-error-e-number-o", "display": "support-vector error bound: E[Pr(error)] <= E[number of support vectors] / number of training vectors; the bound does not explicitly contain the dimensionality of the space of separation", "status": "conjectural", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "reframed", "note": "Stated as previously shown (1965; Vapnik 1982, equation 5); no proof appears in this paper. Empirically checked: section 6 reports the bound holding on real problems."}, {"id": "optimal-hyperplane-algorithm-dual-quadratic-prog", "display": "optimal hyperplane algorithm (dual quadratic programming): maximize W(Lambda) = Lambda^T 1 - 1/2 Lambda^T D Lambda with Dij = yi yj xi.xj, subject to Lambda >= 0 and Lambda^T y = 0", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "method", "genre": "reframed", "note": "Dual QP derived through the Lagrangian saddle point in Appendix A.1 (equations 42-48); the relation W(Lambda_0) = rho_0^2/2 (equation 19) is derived."}, {"id": "incremental-portion-scheme-for-the-qp-divide-tra", "display": "incremental portion scheme for the QP: divide training data into portions, solve the QP per portion, carry its support vectors into the next portion's set; W(Lambda) is monotonically increasing; either the optimal hyperplane is built or inseparability is detected", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "method", "genre": "original", "note": "Procedure stated with its monotonicity argument: W(Lambda) increases as more training vectors enter the optimization, so the scheme either builds the optimal hyperplane or proves inseparability."}, {"id": "soft-margin-hyperplane-for-non-separable-data-mi", "display": "soft margin hyperplane: for non-separable data, minimize 1/2 w^2 + C F(sum xi_i) subject to yi(w.xi+b) >= 1 - xi_i and xi_i >= 0, where F is a monotone convex function", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "definition", "genre": "original", "note": "Derived in section 3 and Appendix A.2 for F(u) = u^sigma and for general monotone convex F (equations 26-30, 51-66); the dual convex/QP problems are stated explicitly."}, {"id": "sigma-1-avoids-np-completeness-minimizing-the-nu", "display": "sigma = 1 avoids NP-completeness: minimizing the number of training errors is in general NP-complete; the smallest exponent with a unique QP solution is sigma = 1, which minimizes summed deviations of training errors while maximizing the margin for correctly classified vectors", "status": "conjectural", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "original", "note": "The NP-completeness claim for minimizing training errors is asserted, not proved, in this paper; the sigma = 1 efficient QP construction is derived in section 3 and Appendix A.2."}, {"id": "convolution-of-the-dot-product-in-feature-space-", "display": "convolution of the dot-product in feature space: replace dot-products by K(u,v); by the Hilbert-Schmidt expansion and Mercer's theorem, a symmetric K whose eigenvalues are all positive defines a dot-product in a feature space", "status": "conjectural", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "method", "genre": "reframed", "note": "The Hilbert-Schmidt expansion and Mercer's condition (integral of K(u,v)g(u)g(v) >= 0 for all g) are quoted from Anderson & Bahadur (1966) and Courant & Hilbert (1953); not proved in this paper."}, {"id": "polynomial-dot-product-k-u-v-u-v-1-d-constructs-", "display": "polynomial dot-product K(u,v) = (u.v + 1)^d: constructs polynomial classifiers of degree d in n-dimensional input space", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "method", "genre": "original", "note": "K(u,v) = (u.v+1)^d is exhibited as a Mercer-satisfying dot-product implementing degree-d polynomial classifiers (equation 37) and is used in all reported experiments."}, {"id": "radial-basis-function-machines-via-k-u-v-exp-u-v", "display": "Radial Basis Function machines via K(u,v) = exp(-|u-v|^2 / 2 sigma^2): the support-vector network constructs both the centers xi and the weights alpha_i", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "method", "genre": "original", "note": "The RBF convolution form is exhibited as an admissible case in section 5.2; it is constructed analytically but not exercised in the reported experiments."}, {"id": "vc-dimension-test-error-bound-pr-test-error-freq", "display": "VC-dimension test-error bound: Pr(test error) <= Frequency(training error) + Confidence Interval, with probability 1 - eta; the confidence interval depends on the VC-dimension, the number of training elements, and eta", "status": "conjectural", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "reframed", "note": "Bound (38) is stated from Vapnik (1982); the VC-dimension of bounded-weight linear indicators is discussed as depending on the weight bound, not proved here."}, {"id": "structural-risk-minimization-occam-razor-princip", "display": "structural risk minimization (Occam-Razor principle): resolve the error/capacity trade-off by minimizing the sum of the two bound terms; the Occam-Razor case keeps the training error at zero and minimizes the confidence term, which the optimal margin classifier executes by minimizing w.w", "status": "heuristic", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "reframed", "note": "Structural risk minimization is proposed as the resolution of the trade-off; the reading of optimal-margin minimization as an Occam-Razor execution is interpretive discussion in section 5.3."}, {"id": "plane-experiments-with-2nd-degree-polynomial-dec", "display": "plane experiments with 2nd-degree polynomial decision surfaces: solutions optimal in the sense that no 2nd-degree polynomial makes fewer errors; numbers of support patterns small relative to training patterns", "status": "computationally_verified", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "result", "genre": "original", "note": "Figure 5 plane examples with K(u,v) = (u.v+1)^2; optimality in the stated sense and small support-pattern counts are demonstrated on the constructed pattern sets."}, {"id": "us-postal-service-digit-database-polynomials-deg", "display": "US Postal Service digit database, polynomials degree 1-7: 7300 train / 2000 test; raw error 12.0/4.7/4.4/4.3/4.3/4.2/4.3%; support vectors 200/127/148/165/175/185/190; feature-space dimensionality 256 to ~10^16; error nearly flat with dimensionality (no over-fitting); bound (5) holds (<=3% bound, <=1.5% actual per single classifier); degree >= 2 outperforms LeNet1 (5.1%)", "status": "computationally_verified", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "result", "genre": "original", "note": "Table 2: degree 1-7 polynomials on the USPS set (16x16, pre-processing: centering, de-slanting, Gaussian smoothing sigma = 0.75); the LeNet1 reference figure 5.1% raw error is beaten by degree >= 2."}, {"id": "nist-database-4th-degree-polynomial-classifier-6", "display": "NIST database, 4th-degree polynomial classifier: 60000 train / 10000 test; combined test error 1.1%; best in the benchmark study against linear classifier, k=3-nearest neighbor, LeNet1, and LeNet4", "status": "computationally_verified", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "result", "genre": "original", "note": "Table 3 and Figure 9: 1.1% combined test error on the NIST benchmark (60k train / 10k test); per-classifier support counts 1379-2765; compared against linear, k=3-NN, LeNet1, LeNet4 per Bottou et al. (1994)."}, {"id": "support-vector-networks-are-universal-machines-a", "display": "support-vector networks are universal machines: as powerful and universal as neural networks; changing K(u,v) changes the set of implemented decision functions", "status": "heuristic", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "original", "note": "Asserted in section 1 and the conclusion; supported by the experiments against neural networks but not proved."}, {"id": "capacity-control-via-the-parameter-c-the-soft-ma", "display": "capacity control via the parameter C: the soft-margin parameter C controls the trade-off between complexity of the decision rule and frequency of error, even when no zero-error solution exists", "status": "heuristic", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "original", "note": "The role of C is argued in section 5.3; the QP mechanics showing C's effect are derived, but the generalization-control reading remains discussion."}, {"id": "decision-function-as-expansion-on-support-vector", "display": "decision function as expansion on support vectors: f(x) = sign(sum y_i alpha_i K(x, x_i) + b); classification is conceptually a two-layer network", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "definition", "genre": "original", "note": "Derived from the linearity of the dot-product (equations 31-33); the two-layer-network interpretation is illustrated in Figures 3-4."}, {"id": "a-priori-knowledge-via-special-convolution-funct", "display": "a priori knowledge via special convolution functions: special K reflecting prior knowledge of the problem at hand can be constructed; further improvement of performance expected from K reflecting a priori information", "status": "heuristic", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "original", "note": "Suggested in section 5.2 and at the end of section 6.2.2; no special-K experiment is reported."}, {"id": "the-three-combined-ideas-the-support-vector-netw", "display": "the three combined ideas: the support-vector network combines the solution technique from optimal hyperplanes (expansion of the solution vector on support vectors), the convolution of the dot-product (linear to non-linear decision surfaces), and soft margins (errors on the training set allowed)", "status": "exact", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "original", "note": "Summary verdict of the paper in the conclusion (section 7); the three components are each constructed earlier in the paper."}, {"id": "prior-art-positioning-pattern-recognition-began-", "display": "prior-art positioning: pattern recognition began with linear decision surfaces (Fisher 1936); perceptrons implement piecewise-linear separating surfaces; back-propagation (1986) adapts all weights to locally minimize error", "status": "conjectural", "cluster": "statistical", "chunk": "statistical_cortesvapnik95", "kind": "claim", "genre": "reframed", "note": "Historical survey in section 1 citing Fisher (1936), Rosenblatt (1962), and Rumelhart-Hinton-Williams (1986); none of these claims is established in this paper."}], "edges": [{"a": "optimal-hyperplane-the-unique-linear-decision-fu", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}, {"a": "optimal-hyperplane-algorithm-dual-quadratic-prog", "b": "optimal-hyperplane-the-unique-linear-decision-fu", "rel": "supports", "count": 1}, {"a": "support-vectors-training-vectors-for-which-yi-w-", "b": "optimal-hyperplane-algorithm-dual-quadratic-prog", "rel": "depends_on", "count": 1}, {"a": "support-vector-error-bound-e-pr-error-e-number-o", "b": "support-vectors-training-vectors-for-which-yi-w-", "rel": "depends_on", "count": 1}, {"a": "incremental-portion-scheme-for-the-qp-divide-tra", "b": "optimal-hyperplane-algorithm-dual-quadratic-prog", "rel": "supports", "count": 1}, {"a": "soft-margin-hyperplane-for-non-separable-data-mi", "b": "optimal-hyperplane-the-unique-linear-decision-fu", "rel": "generalizes", "count": 1}, {"a": "sigma-1-avoids-np-completeness-minimizing-the-nu", "b": "soft-margin-hyperplane-for-non-separable-data-mi", "rel": "refines", "count": 1}, {"a": "convolution-of-the-dot-product-in-feature-space-", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}, {"a": "polynomial-dot-product-k-u-v-u-v-1-d-constructs-", "b": "convolution-of-the-dot-product-in-feature-space-", "rel": "illustrates", "count": 1}, {"a": "radial-basis-function-machines-via-k-u-v-exp-u-v", "b": "convolution-of-the-dot-product-in-feature-space-", "rel": "illustrates", "count": 1}, {"a": "decision-function-as-expansion-on-support-vector", "b": "support-vectors-training-vectors-for-which-yi-w-", "rel": "depends_on", "count": 1}, {"a": "decision-function-as-expansion-on-support-vector", "b": "convolution-of-the-dot-product-in-feature-space-", "rel": "depends_on", "count": 1}, {"a": "structural-risk-minimization-occam-razor-princip", "b": "vc-dimension-test-error-bound-pr-test-error-freq", "rel": "depends_on", "count": 1}, {"a": "optimal-hyperplane-the-unique-linear-decision-fu", "b": "structural-risk-minimization-occam-razor-princip", "rel": "illustrates", "count": 1}, {"a": "capacity-control-via-the-parameter-c-the-soft-ma", "b": "soft-margin-hyperplane-for-non-separable-data-mi", "rel": "depends_on", "count": 1}, {"a": "capacity-control-via-the-parameter-c-the-soft-ma", "b": "structural-risk-minimization-occam-razor-princip", "rel": "supports", "count": 1}, {"a": "plane-experiments-with-2nd-degree-polynomial-dec", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}, {"a": "us-postal-service-digit-database-polynomials-deg", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}, {"a": "nist-database-4th-degree-polynomial-classifier-6", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}, {"a": "us-postal-service-digit-database-polynomials-deg", "b": "support-vector-error-bound-e-pr-error-e-number-o", "rel": "illustrates", "count": 1}, {"a": "us-postal-service-digit-database-polynomials-deg", "b": "support-vector-networks-are-universal-machines-a", "rel": "supports", "count": 1}, {"a": "nist-database-4th-degree-polynomial-classifier-6", "b": "support-vector-networks-are-universal-machines-a", "rel": "supports", "count": 1}, {"a": "a-priori-knowledge-via-special-convolution-funct", "b": "convolution-of-the-dot-product-in-feature-space-", "rel": "refines", "count": 1}, {"a": "support-vector-network-a-new-learning-machine-fo", "b": "the-three-combined-ideas-the-support-vector-netw", "rel": "supports", "count": 1}, {"a": "prior-art-positioning-pattern-recognition-began-", "b": "support-vector-network-a-new-learning-machine-fo", "rel": "supports", "count": 1}], "loops": [{"chunk": "statistical_cortesvapnik95", "label": "a-priori-knowledge-via-special-convolution-funct", "node": null}, {"chunk": "statistical_cortesvapnik95", "label": "soft-margin-hyperplane-for-non-separable-data-mi", "node": null}], "stats": {"subjects": 0, "cross_edges": 25, "concepts": 22}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

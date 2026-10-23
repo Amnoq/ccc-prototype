@@ -1,0 +1,12 @@
+9/9 directional agreements (praise->rank<=3, criticize->rank!=1)
+  g1 6.Nf3 praise rank 1 OK
+  g1 6...c5 criticize rank 4 OK
+  g1 9.Qxc3 praise rank 1 OK
+  g1 12.Qd2 praise rank 1 OK
+  g1 12...Qb6 criticize rank 4 OK
+  g1 23...Qxb2 criticize rank 3 OK
+  g1 25...f6 criticize rank 4 OK
+  g2 5...d5 praise rank 2 OK
+  g2 11.Kd3 historical rank 2 HISTORICAL
+  g2 20.Kc2 praise rank 3 OK
+K10-1 VERIFIED: zero directional contradictions 9/9 (+1 historical note, engine rank 2, no contradiction). Note: comparison is exploratory (post-hoc), not pre-registered.

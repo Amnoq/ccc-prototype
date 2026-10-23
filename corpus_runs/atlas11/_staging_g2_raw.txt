@@ -1,0 +1,681 @@
+L0: ### STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD
+L3: ### COMPACTIFICATIONS
+L6: #### PHILIP TOSTESON
+L9: Abstract. Using the the theory of FSop modules, we study the asymptotic behavior of the
+L12: homology of Mg,n, the Deligne–Mumford compactification of the moduli space of curves, for n ≫ 0. An FSop module is a contravariant functor from the category of
+L13: finite sets and
+L16: n 20 surjections to vector spaces. Via maps that glue on marked P1 ’s, we give the homology of
+L19: Mg,n the structure of an FSop module and bound its degree of generation. As a consequence, we prove that the generating function P dim(Hi(Mg,n))t n is rational,
+L20:  and its denominator
+L23: n
+L26: 1 Ja has roots in the set {1, 1/2, . . ., 1/p(g, i)} where p(g, i) is a polynomial of order O(g_2 i_2 ). We
+L29: also obtain restrictions on the decomposition of the homology of Mg,n into irreducible Sn representations.
+L32: # G\] 1
+L35: ##### th.A 1. Introduction
+L38: In this paper we study Hi(Mg,n), the homology of the Deligne–Mumford moduli space
+L41: # \[ma
+L44: of stable marked curves, from the point of view of representation stability. The space Mg,n is a natural compactification of the moduli space of smooth curves
+L45: with n marked points,
+L48: 4v1 obtained by allowing families of smooth curves to degenerate to singular curves with double
+L51: points. The symmetric group Sn acts on Mg,n by relabeling the marked points, so that if
+L54: 389 we fix i and g we obtain a sequence of symmetric group representations n 7→ Hi(Mg,n, Q).
+L57: Our goal is to understand the asymptotic behavior of these Sn representations for n ≫ 0.
+L59: The following theorem gives applications of our main result.
+L62: # 01.0
+L65: \[
+L67: Theorem_1.1. Let_i, g \in N. There is a constant C = p(g,i), where p is a polynomial in g
+L69: \]
+L72: 2 i 2 ), such that the following hold.
+L75: ##### v:18 and i of order O(g
+L78: (1) The generating function for the dimension of Hi(Mg,n) is rational and takes the form
+L81: ##### arXi f(t)
+L84: X
+L87: ### dim Hi(Mg,n)t n =
+L90: ### QC dj
+L93: n_j=1(1 − jt)
+L96: for some polynomial f(t) and dj ∈ N.
+L98: In particular, there exist polynomials f1(n), . . . , fC(n) such that for n ≫ 0 we have
+L101: C
+L104: dim Hi(Mg,n) = X fj (n)j_n
+L107: ### j=1
+L110: \[
+L112: Let \lambda be an integer partition of_n. If the irreducible Sn representation M\lambda occurs in the decomposition of Hi(Mg,n,Q), then \lambda has length \le
+L113: C. (The Young diagram of \lambda has \le C rows).
+L115: \]
+L118: Date: Sunday 23rd June, 2019.
+L121: ### 2  PHILIP TOSTESON
+L124: \[
+L126: Let \lambda = \lambda_1 \ge \lambda_2 \ge · · · \ge \lambda C be an integer partition of_k, and \lambda + n be the partition \lambda_1 + n \ge \lambda_2 \ge · ·
+L127:  · \ge \lambda C. The multiplicity of \lambda + n in Hi(Mg,n+k),
+L129: \]
+L132: ### (Mλ+n, Hi(Mg,n+k)),
+L135: ### n 7→ dim HomSn+k
+L138: is bounded by a polynomial of degree C − 1.
+L140: To establish Theorem 1.1 we use techniques from the field of representation stability.
+L143: We extend the action of the symmetric groups to the action of a category, and we prove that the homology groups are finitely generated under this action. Finite
+L144:  generation then constrains the behavior of Hi(Mg,n) for n ≫ 0.
+L146: 1.1. Main Result. Let FSop be the opposite of the category of finite sets and surjections.
+L148: We give n 7→ H•(Mg,n) the structure of an FSop module.
+L151: More concretely, let [n] be the set {1, . . . , n}. For every surjection f : [n] → [m], we
+L154: ### define a map
+L157: ### f ∗
+L160: ### : H•(Mg,n) ← H•(Mg,m),
+L163: such that (f ◦ g) ∗ = g ∗f ∗ ∗ in two special cases, which suffice to determine
+L166: ### . We describe f
+L169: it in general. In these cases, f ∗ is the map on homology induced by a map of spaces,
+L172: ### F ∗
+L175: : Mg,n ← Mg,m.
+L178: When f is a bijection, F ∗ is the map that takes a stable marked curve C and permutes
+L181: its marked points by precomposing with f.
+L184: \[
+L186: When f : [n+ 1] \to [n] is the surjection defined by f(n+ 1) = n and f(i) = i otherwise, F^* is the map that glues a copy of P_1 to the point_n \in C and marks
+L187: P_1⊔{n}C by keeping the marked points {1, . . ., n-1} \subset C and marking two new points {n, n+ 1} \subset (P_1⊔{n} C)-C.
+L189: \]
+L192: Our main theorem states that this FSop module is finitely generated.
+L195: \[
+L197: Theorem_1.2. Let g, i \in N. Then the FSop module
+L199: \]
+L202: ### n 7→ Hi(Mg,n, Q)
+L205: \[
+L207: is a subquotient of an FSop module that is finitely generated in degree \le p(g,i) where p(g,i) is a polynomial in g and_i of order \mathcal{O}(g_2i_2).
+L209: \]
+L212: Theorem 1.1 is implied by Theorem 1.2 and results on finitely generated FSop modules
+L215: due to Sam and Snowden \[15\]. The polynomial of Theorem_1.2 is the same as the polynomial of Theorem_1.1.Remark_1.3. The category FSop acts on the homology of
+L216: Mg,n through maps that glue on copies of P1 with two marked points. These maps are a very small part of the full operadic structure on H•(Mg,n) generated by all
+L217:  gluing maps. The tautological ring is the subring
+L220: (Mg,n) generated by the image of all of the fundamental classes \[Mg,n\] under gluing
+L223: ### of H• maps and cup products. In some sense, Theorem 1.2 says that for i, g fixed, all of the classes in Hi(Mg,n) are tautological “relative” to a finite
+L224: list of classes, using only maps that glue on copies of P1 with 2 marked points.
+L227: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 3
+L230: 1.2. Stability. Although the dimensions dim Hi(Mg,n) grow exponentially in n, and therefore do not stabilize in the naive sense, Theorem 1.2 implies that there
+L231: exists a constant N
+L234: \[
+L236: such that the Sn representations Hi(Mg,n) are completely determined by the vector spaces {Hi(Mg,m)}m\le N and the algebraic structure they inherit from
+L237: surjections [m] ։ [m′]. For_r \in N, let FSop r be the full subcategory of FSop spanned by sets of size \le r. We
+L239: \]
+L242: ### may restrict an FSop module M to an FSop
+L245: ### r module, denoted Resr M. The functor Resr has
+L248: ### a left adjoint Indr, which takes an FSop
+L251: ### r module to the FSop module freely generated by it
+L254: ### modulo relations from FSop
+L257: r .
+L260: \[
+L262: Theorem_1.4. Let_i, g \in N. There exists N \in N such that the natural map of FSop modules
+L264: \]
+L267: ### IndN ResN Hi(Mg,−) → Hi(Mg,−)
+L270: is an isomorphism. In particular, any free presentation of the FSop
+L273: ### N module ResN Hi(Mg,−)
+L276: gives a free presentation of the FSop module Hi(Mg,−). We also have
+L279: Since FSN is a finite category and IndN can be described explicitly as a colimit, Theorem
+L282: 1.4 shows that we may compute Hi(Mg,n) from a finite amount of algebraic data.
+L285: Theorem 1.4 follows from Theorem 1.2 and a noetherianity result due to Sam and
+L288: Snowden \[15\].
+L291: 1.3. Relation to other work. Our work is motivated by the approach to representation stability introduced by Church, Ellenberg and Farb, which uses modules over
+L292:  FI, the category of finite sets and injections \[2\].
+L295: The theory of FI modules has been used by Rolland to study the homology of Mg,n
+L298: \[13\], and by Duque and Rolland to study the real locus of M0,n \[14\]. Because the homology of Mg,n grows at an exponential rate, it cannot admit the
+L299: structure of a finitely
+L302: generated FI module, and so a larger category is needed to control the homology of the full compactification.
+L305: Using an explicit presentation of the cohomology ring H• (M0,n) given in \[8\], Sam defined an action of FSop on the cohomology of M0,n, and proved that it was
+L306: finitely generated.
+L309: Our work was motivated by his suggestion that there could exist a finitely generated FSop action on the cohomology of Mg,n for general g.
+L312: Sam and Snowden showed that FSop is noetherian (submodules of finitely generated
+L315: modules are finitely generated), and described the Hilbert series of finitely generated FSop modules \[15\]. We use their results to deduce concrete
+L316: implications from Theorem 1.2.
+L318: Proudfoot and Young have used FSop modules to study the intersection cohomology
+L321: \[
+L323: of a space closely related to M_0,n [12]. The FSop module they construct is closely related to our construction in the case g = 0. The statement of our
+L324: Theorem_1.1 parallels their Theorem_4.3.
+L326: \]
+L328: Faber and Pandharipande \[9\] established restrictions on the Sn representations that
+L331: appear in the tautological ring, which resemble the restrictions on Sn representations we obtain in Theorem 1.1.
+L333: 1.4. Structure of the Paper. In the next section, §2, we describe the action of FSop on Hi(Mg,n) in more detail. Then we sketch the proof of Theorem 1.2 and
+L334: describe how the other sections of the paper fit into the proof.
+L337: ### 4  PHILIP TOSTESON
+L340: In the final section, §7, we ask further questions.
+L343: 1.5. Acknowledgements. We thank Steven Sam for sharing his work on the cohomology of M0,n. We also thank Dan Petersen, John Wiltshire-Gordon and Andrew Snowden
+L344: for helpful conversations.
+L347: ### 2. The Action of FSop
+L350: Let FS be the category of finite sets and surjections. The objects of FS are the sets
+L353: \[
+L355: [n] = {1, . . ., n} for_n \ge 1, and the morphisms are surjections. An FSop module, or an action of FSop on a sequence of vector spaces Vn, is a functor from
+L356: FSop to the category of vector spaces_n 7\to Vn.
+L358: \]
+L361: Let Mg,n be the Deligne–Mumford stack of stable genus g curves with n marked points.
+L364: \[
+L366: The stack Mg,n parameterizes genus curves C and markings p_1, . . ., pn \in C, such that all of the singularities of C are double points, each marked point pi
+L367: is smooth, and each genus_0 component of C isomorphic to P_1 contains at least_3 marked or singular.
+L369: \]
+L371: Remark 2.1. Since our results concern homology with rational coefficients, we may work with either the homology of the coarse moduli space or the homology of
+L372: the Deligne–Mumford stack. For definiteness, we will work with the moduli stack defined over the complex numbers, but our methods are algebraic and should apply
+L373:  over other algebraically closed fields.
+L376: 2.1. Action of binary trees. Before passing to homology, the category FSop does not naturally act on Mg,n. Instead, we construct an action of a category of
+L377: binary trees.
+L380: We define BT to be the category whose objects are natural numbers, and whose morphisms m → n are rooted binary forests with the leaves labelled by [m] and the
+L381: roots labelled
+L384: by [n]. (Morphisms n → n are binary forests such that each tree is a single root). Composition is defined by gluing the roots to the leaves. For a forest F, the
+L385:  function that takes each
+L388: leaf to its root is a surjection hF : [n] → [m]. The assignment F 7→ hF defines a functor BT → FS that realizes FS as a quotient of BT.
+L391: The category BTop acts on Mg,n by gluing on trees of marked projective lines. For each
+L394: labelled binary forest F ∈ BT(m, n), there is a corresponding variety LF which is a disjoint union of trees and projective lines. The variety LF has a component
+L395:  for each binary tree T of F: if T consists only of a root, then the component is a point; otherwise the component is a genus zero stable curve with dual graph
+L396: isomorphic to T. 1 The variety LF is naturally marked by {1, . . . , m} and {1, . . . n} in a way that is unique up to unique isomorphism. From a stable curve C
+L397:  ∈ Mg,n and a labelled rooted forest F ∈ BT(m, n), we obtain a new stable curve F ∗C ∈ Mg,m by gluing LF to C along the marked points {1, . . . , m}, and using
+L398: the marking of LF by {1, . . . , n} to mark F ∗C. This defines a gluing map F ∗ : Mg,m → Mg,n for each F ∈ BT(n, m), and these maps define an action of BTop on
+L399: Mg,n.
+L402: ### To see that the representation of BTop
+L405: ### , n 7→ Hi(Mg,n), factors through FSop, let F1
+L408: and F2 be two forests inducing the same surjection h : [n] → [m]. There is a family of gluing
+L411: 1See Section 3 for definition of dual graph.
+L414: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 5
+L417: ### maps from Mg,m to Mg,n,
+L420: ###  
+L423: Y
+L426: ### Mg,m × M0,#h−1(i)+1
+L429: |  |  |  → Mg,n. | 
+L432: | | | i∈[m], h−1(i)>1 |
+L435: | The maps F | ∗ and F | ∗ correspond to evaluating at the points in the second factor defined by | 
+L438: |  | 1 | 2 | 
+L439: | the components of LF1 and LF2 |  | ∗ and respectively. Since the second factor is connected, F |
+L442: F ∗ induce the same map on homology.
+L445: 2.2. Sketch of proof of Theorem 1.2. We stratify Mg,n by dual graphs G. To prove finite generation of Hi(Mg,n), it suffices to show that only finitely many
+L446: strata MG contribute FSop generators. The stratum MG is a quotient of a product of moduli spaces Q
+L449: v∈G Mg(v),n(v) .
+L452: Since the homology of Mg,n is pure, it suffices to consider the pure Borel–Moore homology of the strata: W−iHBM
+L455: (MG). By fibering Mg,n over Mg,1 we show that the pure Borel–
+L458: i
+L461: \[
+L463: Moore homology of Mg,n vanishes for_n > i+3, so only strata MG for which P val(v)-3 \le i
+L465: \]
+L468: v
+L471: contribute to Hi(Mg,n).
+L474: Thus for G ranging over all graphs that contribute to Hi(Mg,n), the number of vertices
+L477: \[
+L479: of G that have valence > 3 and genus > 0 is bounded by a function of g and_i. So as_n \to \infty, the number of trivalent genus_0 vertices of G must increase.
+L481: \]
+L484: Say that a stable graph H has an external Y if it has a genus 0 trivalent vertex v which
+L487: is adjacent to two external edges. Since FSop acts on graphs by gluing on trivalent vertices2
+L490: ,
+L492: 
+L493: if H has an external Y then the classes from MH are pushed forward from lower degree. If G has two adjacent trivalent genus_0 vertices v1, v2 such that each vi
+L494: has an external edge, the cross ratio relation shows that the classes from MG are homologous to classes from MH, where H has an external Y, and thus are also
+L495: pushed forward from lower degree. Therefore, to prove finite generation, it is enough to show that when the number of trivalent genus_0 vertices of G is large
+L496: (and the number of > 3-valent vertices is bounded), then either G has an external Y, or G has two adjacent trivalent genus_0 vertices with external edges. We
+L497: use the inequality χ(G) ≤ g to establish this.
+L500: 2.3. Structure of the proof. Unfortunately, in formalizing the above argument, we encounter the problem that FSop does not act on the Borel–Moore homology
+L501: spectral sequence
+L504: for the stable graph stratification, and the category of binary trees, BTop, which does act, is not known to be noetherian.
+L507: Accordingly, in §3, we define a coarsening of the stable graph stratification for which
+L510: FSop does act on the associated Borel–Moore homology spectral sequence. In §4, we bound the pure Borel–Moore homology of Mg,n. In §5, we prove two combinatorial
+L511:  lemmas about stable graphs. And in §6, we combine the results from previous sections to prove Theorem 1.2.
+L514: ### 3. Stable graph stratification
+L517: A stable graph G of genus g, with n external edges is a connected graph G: a subset of
+L520: the univalent vertices of G are marked as external and are put in bijection with {1, . . . , n}, and the other vertices v are assigned a genus g(v) ∈ N. This
+L521: data is subject to the condition
+L524: ### 2More accurately, BTop acts
+L527: ### 6  PHILIP TOSTESON
+L530: ### that dim H1 (G) + P
+L533: \[
+L535: v internal g(v) = g, each internal genus_0 vertex is at least trivalent, and each internal genus_1 vertex is at least_1-valent. We write g = g(G) and_n = n(G),
+L536: and_n(v) for the valence of an internal vertex. We call the edges adjacent to external vertices external: every external vertex corresponds to a unique external
+L537:  edge. For this reason we do not refer to external vertices directly: we reserve the symbol v for internal vertices only, and refer to external edges instead of
+L538:  external vertices.
+L540: \]
+L543: If G is a stable graph and G′ is a quotient graph, such that none of the external edges
+L546: of G are identified, then G′ inherits a stable structure: the external vertices are the images of the external vertices under π : G → G′ with the induced
+L547: labelling, and the genus of a is dim H1 (π (G)) + P is a
+L550: vertex w of G′ −1 g(v). We say that the stable graph G′
+L553: \[
+L555: v\in \pi -1(w)
+L557: \]
+L560: quotient of G.
+L563: Write Stab(g, n) for the set of isomorphism classes of stable graphs of genus g with n
+L566: external edges. Then Stab(g, n) is naturally a poset: we define G ≥ G′ if G is a quotient of G′ if G′ can be obtained from G by quotienting a single edge.
+L569: ### . And we say that G ≺ G′
+L572: It is standard that the Deligne-Mumford compactification Mg,n admits a stratification
+L575: by the poset of stable graphs Stab(g, n): the stratum MG for G ∈ Stab(g, n) is the locus of stable curves C such that the dual graph of C is isomorphic to G.
+L578: Here the dual graph of C is the stable graph that has an internal vertex v for each
+L581: irreducible component of C, an edge between v and w for every a double point joining their irreducible components, and an external edge for each marked point of
+L582:  C adjacent to the vertex of the irreducible component that the point lies on. The genus g(v) of an internal vertex is the genus of its irreducible component.
+L585: We use a coarsening of the standard stratification by Stab(g, n), which has the property
+L588: that FSop still acts on the corresponding Borel–Moore homology spectral sequence, to prove Theorem 1.2. This stratification is defined in terms of the operation
+L589:  in the next proposition:
+L592: \[
+L594: Proposition_3.1. Let G be a stable graph. Then there is a unique stable quotient G \ge G such that no two distinct genus_0 vertices of G are connected by an
+L595: edge, and G \to G only identifies edges between genus_0 vertices.
+L597: \]
+L600: Proof. Consider the subgraph spanned by the (internal) genus 0 vertices of G and the edges between them. Choose a minimal spanning tree Ti for each connected
+L601: component, and define H to be the quotient of G such that each Ti is identified to a point.
+L604: Any other quotient of G satisfying the hypotheses of the proposition must collapse a
+L607: minimal spanning tree, and all quotients of minimal spanning trees are isomorphic.
+L610: \[
+L612: Notice that H = H. Warning: It is not true that if G \le H, then G \le H. Let Q(g,n) be the set of stable graphs G \in Stab(g,n) such that that no distinct
+L613: genus
+L615: \]
+L618: 0 vertices are connected by an edge. The next proposition gives the stratification of Mg,n
+L621: ### by Q(g, n) that we use:
+L624: \[
+L626: Proposition_3.2. There is a poset structure on Q(g,n) such that the map H_7\to H is a surjection of posets Stab(g,n) \to Q(g,n) . This surjection induces a
+L627: stratification of Mg,n, where the stratum corresponding G \in Q(g,n) is S(G) = S
+L629: \]
+L632: #### H, H=G MH.
+L635: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 7
+L638: Proof. Let G, H ∈ Q(g, n). We say that G ≤Q H ⇐⇒ there is sequence of stable graphs G = G0, G1, . . . , Gn = H such that either Gi ≺ Gi+1 or Gi ≻ Gi+1 and Gi is
+L639:  obtained from Gi+1 by collapsing an edge between two genus_0 vertices. By definition, ≤Q is reflexive and transitive. To prove antisymmetry, suppose G ≤Q H and
+L640:  H ≤Q G, and let G = G0, G1, . . . , Gn = H be as sequence exhibiting that G ≤ H. For a stable graph J, we define s(J) ∈ N\oplus∞ to be the vector whose 0th
+L641: entry is the number of edges between genus_0 vertices and genus ≥ 1 vertices, and whose ith entry for_i ≥ 1 is the number of vertices of genus_i. Totally order
+L642: these vectors reverse lexicographically.
+L644: If J and J ′ are related by collapsing an edge between genus distinct genus 0 vertices, then
+L647: ′ ). If J and J ′ are related by collapsing a self edge of a genus 0 vertex, an edge
+L650: ### s(J) = s(J
+L653: \[
+L655: between two genus \ge 1 vertices, or an edge from a genus \ge 1 vertex to a genus_0 vertex, then ′). Thus s(Gi) \le s(Gi+1) for all_i, and we have s(G) \le s(H)
+L656:  and s(H) \le s(G).
+L658: \]
+L661: ### s(J) < s(J
+L664: For every i, the graphs Gi and Gi+1 are related by collapsing edges between distinct
+L667: \[
+L669: genus zero vertices. Otherwise, we would have s(Gi) < s(Gi+1), contradicting s(G) = s(H). Therefore Gi = Gi+1 for all_i, and so G = G = H = H, establishing
+L670: antisymmetry. The map H_7\to H is map of posets since H \le G if and only if H and G are related by a sequence of edge collapses, and H, H and G, G are related
+L671: by a sequence of collapses between distinct genus zero vertices. Composing these three sequences proves that H \le Q G.
+L673: \]
+L676: ### Finally, the surjection Stab(g, n) → Q(g, n) shows that
+L679: ### Z(G) :=  \[ MJ
+L682: \[
+L684: H\in Q(g,n), J\in Stab(g,n)\| H\le QG, J=H
+L686: \]
+L689: ### is a closed subset of Mg,n and
+L692: ###
+L695: #### S(G) := Z(G) − \[ Z(H) \[ MG.
+L698: ###  =
+L701: H∈Q(g,n), H<G J=G
+L704: ### Definition 3.3. Define Se(G) to be the space
+L707: Y
+L710: ### Se(G) :=  Y Me(v),n(v),0 × Mg(v),n(v)
+L713: ,
+L716: v vertex, g(v)=0 v vertex, g(v)≥1
+L719: where e(v) is the number of self edges of v and Me,n,0 is the moduli space of stable curves C of genus e and n marked points, such that all of the irreducible
+L720: components of C have genus
+L722: 0.
+L724: There is a canonical map Se(G) → S(G) given by gluing a product of curves along the
+L727: points joined by the graph.
+L730: The data of the graph G can be encoded as a set of half edges, a partition that records
+L733: which half edges are adjacent to the same vertex, and an involution that records which half edges are glued together. Let A be the group of permutations of half
+L734:  edges that do not belong to self edges between genus 0 vertices of G. Let AG ⊂ A be the subgroup which preserves the partition and involution (i.e. respects
+L735: the graph structure). The group AG acts on Se(G) by relabeling.
+L738: ### 8  PHILIP TOSTESON
+L741: Proposition 3.4. The map Se(G) → S(G) induces an isomorphism Se(G)/AG ∼= S(G).
+L744: Proof. On C points Se(G)(C) is the groupoid of collections of marked curves {Cv}v∈Vert(G)
+L747: ,
+L750: such such that if g(v) ≥ 1 then Cv is smooth of genus g(v) and if g(v) = 0, then Cv is genus e(v) and each irreducible component of Cv has genus_0. Similarly,
+L751: S(G)(Spec C) is the groupoid of stable marked curves C whose dual graph H has H = G. The group AG acts strictly on the groupoid Se(G)(Spec C), by taking σ({Cv})
+L752:  = {Cσv} and relabeling marked points according to the action of σ on half edges. There are canonical isomorphisms σ : glue({Cv}) −→∼ glue({Cσv}); any curve in
+L753: S(G)(C) is glued from a curve in Se(G)(C); and any isomorphism glue({Cv}) → glue({C ′ v}) factors uniquely as a relabeling of the components of Cv by σ ∈ Ag,
+L754: and isomorphisms between the components fv : Cσv → C ′
+L757: σv.
+L760: This shows that S(G)(C) is the groupoid quotient of Se(G)(C) by G.
+L763: Next we show the map is an isomorphism in formal neighborhoods. More precisely, let
+L766: \[
+L768: {Cv}v\in G \in Se(G)(C) be a point, let C := glue({Cv}) have dual graph H, and let A be a local
+L773: ### artinan C algebra. We claim that
+L776: Se(G)(B)/AG ×Se(G)(C) {Cv} → S(G)(B) ×S(G)(C) C
+L779: is an equivalence.
+L782: By deformation theory, we have that S(G)(B) ×S(G)(C) C is naturally equivalent to
+L785: ### Hom(Spec B, X) where
+L788: X ⊂ Ext1 (ΩC, OC) × Y
+L791: ### Npi
+L794: ### pi∈C
+L797: is a union of linear subspaces (here {pi} n i=1 are the marked points of C). There is one
+L800: subspace for each spanning forest of the subgraph H0 ⊂ H spanned by genus 0 vertices. The
+L803: ### subspace corresponding to a spanning forest F is
+L806: ### \\ (ΩC, OC) → Ext1 Y
+L809: ### ker(Ext1 (ΩCˆe ) × Npi
+L812: ### , OCˆe ,
+L815: \[
+L817: e\in edge(G-F) pi\in C where \hat{C} e is the formal neighborhood of the double point e \in C corresponding to e. Similarly we have Se(G)(B)/AG \times Se(G)(C)
+L818: {Cv} = Se(G)(B) \times Se(G)(C) {Cv} is equivalent to
+L820: \]
+L823: ### Hom(Spec B, Xe), where
+L826: ### Xe ⊂ Y (Cv, ΩCv ) × Yn
+L829: ### Ext1 Npi
+L832: ### i=1
+L835: ### v∈vert(G)
+L838: is a union of subspaces, one for each spanning forest of H0. The subspace corresponding to
+L841: ### F is
+L844: ###
+L847: ### \\ Y ) → Ext1 ) Y
+L850: ker Ext1 (ΩCv (ΩCˆe Npi
+L853: ###  , OCv , OCˆe  ×
+L856: \[
+L858: e\in edge(H_0-F) v\in vert(G) pi\in C
+L860: \]
+L863: ### From these identifications, and the fact that
+L866: \[
+L868: Y Ext1 (\Omega Cv,OCv) = \\ ker(Ext1 (\Omega C,OC) \to Ext1 (\Omega Cˆe))
+L870: \]
+L873: ### , OCˆe
+L876: \[
+L878: v\in vert(G) e\in edge(G-H_0) it follows that the map is an isomorphism on formal neighborhoods, as claimed above.
+L880: \]
+L883: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 9
+L886: Now let H be the hilbert scheme of tricanonically embedded stable curves of genus g(G)
+L889: \[
+L891: with_n(G) marked points. Let H(G) be the stratum consisting of curves with dual graph J such that J = G. Then H(G) is a finite type scheme which surjects onto
+L892: S(G), and the fibre product He(G) := H(G) \times S(G) Se(G)/AG is a locally closed subscheme of a product of hilbert schemes, hence also of finite type. Base
+L893: changing, we see that f : He(G)(C) \to H(G)(C) is
+L898: ### an equivalence and
+L901: ### He(G)(B) ×He(G)(C) x → H(G)(B) ×H(G)(C) f(x)
+L904: is an equivalence for all x ∈ He(G)(C) and B as above. This implies that He(G) → H(G) is an isomorphism, and so Se(G)/AG → S(G) is an isomorphism. We extend the
+L905:  action of BTop Mg,n to an action on ⊔G∈Q(g,n)S(G) and ⊔G∈Q(g,n)Se(G), as follows. The category BTop acts on the poset Q(g, n) by gluing on trees of stable
+L906: graphs, and the gluing map f : Mg,n → Mg,n corresponding to f ∈ BT([m], [n]) induces maps S(G) → S(f ∗G) and Se(G) → Se(f ∗G), which give maps on the disjoint
+L907: union.
+L910: From the stratification of Mg,n by Q(g, n), we obtain a Borel–Moore homology spectral
+L913: sequence. The next proposition records how the isomorphism of Proposition 3.4 is compatible with the action of FSop, and the spectral sequence of this
+L914: stratification.
+L916: \[
+L918: Proposition_3.5. The actions of BTop on ⊔G\in Q(g,n)S(G) and ⊔G\in Q(g,n)Se(G) induce an FSop module structure on Borel-Moore homology such that
+L920: \]
+L923: ### M H BM (S(G)) → M H BM (Se(G))
+L926: \[
+L928: • • ### G\in Q(g,n) G\in Q(g,n)
+L930: \]
+L933: is a map of FSop modules, and the Borel–Moore homology spectral sequence
+L936: M H BM (S(G)) =⇒ H•(Mg,n)
+L939: ### • ### G∈Q(g,n)
+L942: is a spectral sequence of FSop modules.
+L945: Proof. By definition, the action of BTop preserves the stratification and acts through closed embeddings, and so induces maps of spectral sequences. On
+L946: Borel–Moore homology, the action factors through FSop because the gluing map for a tree T with n leaves T : Se(G) → Se(T ∗G) extends to a map S(G) × M0,n → S(T
+L947: ∗G), the maps corresponding to different trees correspond to evaluating on different boundary strata of M0,n. Since M0,n is smooth
+L950: (M0,n) = Q, and so every tree induces the same map on Borel-Moore
+L953: ### and proper, HBM
+L956: homology.
+L959: ### 4. Bounding Pure Classes in Mg,n
+L962: We use Deligne’s theory of weights \[5, 6\]. The next lemma bounds the number of pure
+L965: \[
+L967: classes that appear in Hi for_n ≫ 0.Proposition_4.1. Let g \ge 1. We have W-iHBM (Mg,n) = 0 for all_n > i + 1,
+L969: \]
+L972: i
+L974: 
+L975: Proof. Since Borel–Moore homology is dual to cohomology with compact support, it is equivalent to show that WiHi
+L978: (Mg,n) = 0 for all_n > i + 1
+L981: c
+L984: ### 10  PHILIP TOSTESON
+L987: \[
+L989: For g \ge 1, there is a map Mg,n \to Mg,1, and the fibre over a pointed curve (C,p) \in Mg,1
+L991: \]
+L994: is Confn−1(C − p). Then by Proposition 4.3 the pure classes of H• (Confn−1(C − p)) are
+L997: c
+L1000: \[
+L1002: concentrated in degrees \ge n - 1, and so by Proposition_4.4 the same is true for the fibre Mg,n. Thus if_i < n - 1, then WiHi (Mg,n) = 0.
+L1004: \]
+L1006: c
+L1009: ### Definition 4.2. We write
+L1012: \[
+L1014: PX (q,t) := X dim WiH_j (X,Q)q_i t_j
+L1016: \]
+L1019: c
+L1022: ### i,j
+L1025: \[
+L1027: for the Poincar-e-Serre polynomial of X. For polynomials f, g \in Z[q, t] we say that f(q,t) \le pure
+L1029: \]
+L1032: j t j in f is less than or equal to the coefficient of q j t j in
+L1035: ### g(q, t) if for all j the coefficent of q
+L1038: g.
+L1041: \[
+L1043: Proposition_4.3. Let C be a genus g curve and p \in C be a point. Then PConfn(C-p)(q,t) \le pure (2g qt + q_2 t_2) n Proof. This follows quickly from Getzler’s
+L1044: [10] spectral sequence for the compactly supported cohomology of configuration space. For a more general reference that covers this case see [11]. The pure
+L1045: classes on the E_1 page are exactly L_0,q (C - p) \otimes n = Q2g \tag{1}
+L1046: \]
+L1049: \[
+L1050: [-1] \oplus q E_1 = H• c
+L1052: \]
+L1055: ### Q(2)\[−2\])\otimes n
+L1058: , which establishes the bound.
+L1061: \[
+L1063: Proposition_4.4. Let f : X \to Y be a smooth map to a smooth and proper scheme Y over C. If the pure classes of H• (Xy) are concentrated in degree \ge k then
+L1064: the pure classes of
+L1066: \]
+L1069: c
+L1072: H• (X) are concentrated in degree ≥ k.
+L1075: c
+L1078: Proof. We prove the Verdier dual statement: if the pure classes of H• (Xy) are concentrated in degrees ≤ 2 dim Xy − k then the pure classes of H• (X) are
+L1081: concentrated in degree ≤ 2 dim X −k. We have that Rqf∗Q is of weight < q if q ≤ 2 dim Xy −k, and so Hp (Y, R qf∗Q) is of weight < p + q if q ≤ 2 dim Xy − k. So
+L1084: ### 5. Bounding Graphs
+L1085: The two lemmas in this subsection are technical: the first says that there are only
+L1088: finitely many graphs in Q(g, n) with ≤ i + 1 valent genus one vertices, and genus zero vertices obeying certain bounds.
+L1091: ### Lemma 5.1. If G is a stable genus g graph such that:
+L1094: \[
+L1099: There are no edges between distinct genus_0 vertices (2) Every genus \ge 1 vertex has valence \le i + 1 (3) Every genus_0 vertex with e self edges and a edges
+L1100: to other internal vertices, has \le 11i + 7e + 9a - 5 external edges.
+L1101: \]
+L1105: Then the total number of external edges of G is bounded by:
+L1108: ### 2 i 2 + 25g 2 i + 16g 2 + 11gi2 + 7gi − 4g
+L1111: ### n(G) ≤ 9g
+L1114: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 11
+L1117: Proof. Define f(i, e, a) = 11i + 7e + 9a − 5. For a vertex v, let e(v) be the number of self edges and a(v) be the number of edges to a distinct internal
+L1118: vertex.
+L1121: ### By 2) and 3) we have
+L1124: X (i + 1) + X f(i, e(v), a(v)).
+L1127: ### n(G) ≤
+L1130: \[
+L1132: v,g(v)\ge 1 v, g(v)=0 For every genus_0 vertex v, we have e(v) \le g and a(v) \le (i+ 1)g because any genus_0 vertex is adjacent to a vertex of genus \ge 1.
+L1133: Thus f(i,e(v),a(v)) \le f(i,g,(i + 1)g).
+L1138: Now either G has only one internal genus 0 vertex, or every internal genus 0 vertex
+L1141: \[
+L1143: must be adjacent to a genus \ge 1 vertex. In the first case_n(G) \le f(i,g,0), and in the second
+L1145: \]
+L1148: ### we have
+L1151: \[
+L1153: #{ genus_0 vertices } \le (i + 1)g
+L1155: \]
+L1158: ### So either n(G) ≤ f(i, e, 0) or
+L1161: n(G) ≤ (i + 1)g + (i + 1)gf(i, g,(i + 1)g)
+L1164: and expanding proves the claim.
+L1167: The next lemma says that stable graphs of genus g that correspond to strata of dimension ≤ i and only have genus_0 vertices must contain certain subgraphs
+L1168: when_n(H) ≫ 0. Lemma_5.2. Let J be the stable graph consisting of a single genus_0 vertex, e self edges, and_n − e labelled external edges, with a partition of
+L1169: the [n − e] sets [a] and [b] of size a and b. If b > 11i + 7e + 9a − 5 then every stable graph H with H = J satisfies at least one of the following: (1) The sum
+L1170:  P v internal vertex(n(v) − 3) is > i
+L1173: (2) There is a trivalent vertex v adjacent to 2 external edges in [b] (3) There are two adjacent trivalent vertices v, v′ ′ are adjacent to
+L1176: such that both v and v
+L1179: external edges in \[b\]
+L1182: Proof. We prove the contrapositive. Let a(v), b(v), and e(v) denote the number of edges adjacent to v that are respectively external in [a], external in [b],
+L1183: and self edges. Let H be
+L1186: a stable graph with H = G and which satisfies:
+L1189: ### (1) P
+L1192: v internal vertex(n(v) − 3) ≤ i
+L1195: ### (2) Every trivalent vertex has b(v) ≤ 1
+L1198: \[
+L1200: There are no two adjacent trivalent vertices v, v′ with b(v), b(v ′) \ge 1.First, by_1), H has \le i internal vertices of valence \le 3. Next by retracting
+L1201: external edges and computing the (negative) euler characteristic of H, we have (1/2 #{non external edges of v} - 1). e - 1 = X
+L1203: \]
+L1206: ### v internal
+L1209: ### 12  PHILIP TOSTESON
+L1212: We have that #{non external edges of v} = n(v) − a(v) − b(v). Then breaking up the sum
+L1215: ### by n(v) and a(v), we have:
+L1218: (1/2(n(v) − a(v) − b(v)) − 1) +  X (1/2(n(v) − a(v) − b(v)) − 1)
+L1220: e − 1 = X v, n(v)>3 v, n(v)=3, a(v)≥1
+L1223: ### X 0 +  X 1/2
+L1226: +
+L1229: \[
+L1231: v, n(v)=3, a(v)=0, b(v)=1 v, n(v)=3, a(v)=0, b(v)=0 \ge - i - a + 0 + X_1/2. v, n(v)=3, a(v)=0, b(v)=0
+L1233: \]
+L1236: ### Here we used 2) and the bound on edges of valence > 3. Thus
+L1239: \[
+L1241: {trivalent vertices v, s.t. b(v) = 0} \le 2(i + a + e - 1) And so there are \le 2(i + a + e - 1) + a trivalent vertices with b(v) = 0.
+L1244: \]
+L1245: Next by 3) every trivalent vertex with b(v) = 1 is either: adjacent to a trivalent vertex
+L1248: with b(v) = 0, has a self edge, is adjacent to a vertex of valence > 3, or is the only internal
+L1251: ### vertex. Thus
+L1254: \[
+L1256: {trivalent vertices with b(v) = 1 } \le 3#{trivalent vertices v, s.t. b(v) = 0} + e + i + 1 \le 3(2(i + a + e - 1) + a) + e + i + 1 = 9a + 7i + 7e - 5
+L1258: \]
+L1261: Thus the valence 3 vertices contribute at most 9a + 7i + 7e − 5 to b.
+L1264: And by P (n(v) − 3) ≤ i we have
+L1267: ### v, n(v)>3
+L1270: \[
+L1272: X b(v) \le i + X \le i + 3i, v b(v)>3 v b(v)>3 so the vertices of valence > 3 contribute at most 4i to b. In total we see that b \le 11i + 7e + 9a - 5.
+L1274: \]
+L1277: ### 6. Proof of Finite generation
+L1280: \[
+L1282: Write p(i,g) = 9g_2 i_2+25g_2 i+16g_2+11gi2+7gi-4g. We now show that the FSop module n_7\to Hi(Mg,n,Q) is a subquotient of one that is finitely generated in
+L1283: degrees \le p(i,g). In particular, since Sam and Snowden[15] proved that submodules of finitely generated FSop modules are finitely generated, we see that the
+L1284: homology is finitely generated.
+L1286: \]
+L1288: Proof of Theorem 1.2. We use the Borel–Moore homology spectral sequence for the stratification of Mg,n by Q(g, n) defined in Section 3. Write S(G) for the
+L1289: stratum corresponding
+L1292: \[
+L1294: to G and Se(G) = Q Q for the cover of S(G). v internal, g(v)=0 M_0,n(v) \times v internal, g(v)\ge 1 Mg(v),n(v)
+L1296: \]
+L1299: Then because of the compatibility of operad structures, Proposition 3.5, this is a spectral sequence of FSop modules. And there is a homomorphism of FSop
+L1300: modules
+L1303: ### M H BM (S(G)) → M H BM Se(G)
+L1306: • • .
+L1309: \[
+L1311: G\in Q(g,n) G\in Q(g,n)
+L1313: \]
+L1316: By Proposition 3.4, the left hand side is identified with the AG invariants of the right hand side.
+L1319: STABILITY IN THE HOMOLOGY OF DELIGNE–MUMFORD COMPACTIFICATIONS 13
+L1322: Since the homology of Mg,n is pure, to show that Hi(Mg,n) is finitely generated, it
+L1325: suffices to show that L Se(G) is a finitely generated FSop module.
+L1328: ### G∈Q(g,n) W−iHBM i
+L1331: \[
+L1333: By Lemma_5.1, all graphs G \in Q(g,n) with
+L1338: ### (1) no genus 1 vertices of valence > i + 1
+L1341: \[
+L1343: no genus_0 vertices with e self edges, a edges to adjacent vertices and > 11i+7e+9a-5 external edges. have_n \le p(i,g). Thus for the rest of the proof, we show
+L1344:  that the FSop module defined by
+L1349: ### M BM (Se(G))
+L1352: ### W−iH
+L1355: i
+L1358: ### G∈Q(g,n)
+L1361: is generated by the groups W−iHBM (Se(L)) for graphs L satisfying 1 and 2.
+L1363: i
+L1366: Accordingly, let c be a pure class in HBM (Se(G)), where G is a graph that does not
+L1369: i
+L1372: satisfy 1 and 2. We want to show that c is a linear combination of classes pushed forward from lower degrees. (In other words c is a linear combination of
+L1373: classes of the form f ∗ (d) for some surjection f : [n] → [n − 1]).
+L1376: ### We have that
+L1379: ###  
+L1382: BM (Se(G)) = M O BM (M0(v)) \otimes O BM
+L1385: ### H W−j(v)H W−j(v)H (Mn(v),g(v))
+L1388: i  j(v) j(v)  .
+L1391: ### j:Vert(G)→N, P j(v)=i
+L1394: v, g(v)=0 v, g(v)≥1
+L1397: v
+L1400: \[
+L1402: If G has a genus \ge 1 vertex with valence > i + 1, then by Proposition_4.1 we have that W-jHj (Mg(v),n(v)) = 0 for all_j \le i. Thus He BM (Se(G)) = 0 and the
+L1403: claim follows.
+L1405: \]
+L1408: i
+L1411: So assume that w is a genus 0 vertex of G with e self edges, a edges to distinct vertices,
+L1414: and > 11i + 7e + 9a − 5 external edges. Taking linear combinations it suffices to show c = f ∗ (d) for classes c of the form c = cw \otimes c ′
+L1417: ### , where cw ∈ Hj(w)(M0(w)) is a pure class for
+L1420: ### some j(w) ≤ i and
+L1423: ###  
+L1426: ### Y Y
+L1429: ### Me(v),n(v),0 × Mg(v),n(v)
+L1432: ### c ∈ Wj(w)−iHi−j(w)  
+L1435: v6=w, g(v)=0 v, g(v)≥1 Let J be the graph spanned by edges adjacent to v0 and b > 11i + 7e + 9a − 5 external
+L1438: edges. The stable graph stratification Me(v),n(v),0 has strata given by finite quotients of copies of M0,n, so the Borel–Moore homology spectral sequence shows
+L1439: that the pure Borel–Moore homology of Me(v),n(v),0 is spanned by fundamental classes of the strata: \[MH\] for stable
+L1442: \[
+L1444: graphs H with H = J and dimMH \le i. So it suffices to show that [MH] \otimes c ′ = f^* (d) for some surjection f : [n] \to [n - 1]. By Lemma_5.2 at least one
+L1445: of the following holds:
+L1450: ### (1) P
+L1453: \[
+L1455: v vertex(n(v)-3) is > i, this contradicts the dimension of MH and so does not hold \tag{2}
+L1461: There a trivalent vertex v adjacent to_2 external edges, labelled by s < t \in [n]. Let f be the surjection [n] \to [n]/s ∼ t \to [n-1], where we have fixed a
+L1462: bijection b between [n]/s ∼ t and [n - 1]. Let K be the graph obtained from H by merging the edges labelled by s, t, labelled by [n-1] via the bijection b. Then
+L1463:  f^* ([MK]\otimes c ′) = [MH]\otimes c ′
+L1468: .
+L1471: (3) There are two adjacent trivalent vertices v1, v2 in H, such that v1, v2 both have external edges. Then applying the cross ratio relation to H at v1, v2 we
+L1472: have that
+L1475: ### 14  PHILIP TOSTESON
+L1478: \[
+L1480: [MH] = [MH′] where H′ has a vertex which is adjacent to two external edges. Now the same argument as_2) applies. Therefore we have [MH] \otimes c ′ = f^* (d)
+L1481: for some surjection f : [n] \to [n - 1], and we are done.
+L1483: \]
+L1486: ### 7. Further Questions
+L1489: 7.1. Extensions of Theorem 1.2. Is the result of Theorem 1.2 true for integral coefficients?
+L1492: \[
+L1494: From Theorem_1.1, we see that there exists M(g,i) \in N such that the function_n 7\to dim Hi(Mg,n) agrees with a sum of polynomials times exponentials for_n \ge
+L1495:  M(g,i). What is an effective bound on M(g,i)? Equivalently, what is a bound on the degree of the numerator of the generating function P dim Hi(Mg,n)t_n in
+L1496: terms of g and_i?
+L1498: \]
+L1501: n
+L1504: We show that Hi(Mg,n) is a subquotient of a module generated in degree O(g 2 i 2 ). Is
+L1507: ### this bound tight?
+L1510: ### What is an effective bound on the constant N of Theorem 1.4?
+L1513: ### 7.2. Representation theory of FSop
+L1516: ### . Finitely generated FSop modules are not yet as well
+L1519: understood as finitely generated FI modules. Any new results on finitely generated FSop modules will in particular apply to Hi(Mg,n).
+L1522: Let Mλ be an irreducible representation of Sn. What is the decomposition of the
+L1525: projective FSop representation Mλ \otimes Sn QFS(−, n) in degree_m? Equivalently, what is the degree_m term in the plethysm of symmetric functions sλ[ P hk]?
+L1528: ### k≥1
+L1531: The dimension functions of FI modules are eventually polynomial, and there has been
+L1534: much work in studying the invariants of FI modules which control when this occurs. (For recent applications see \[4\]). Which invariants of FSop modules control
+L1535:  when the Hilbert series of a finitely generated FSop module agrees with a sum of polynomials times exponential?
+L1538: ### Which invariants control its presentation degree?
+L1541: 7.3. Other operadic actions on H•(Mg,n). Operads give a conceptual interpretation of
+L1544: ### the FSop action on Hi(Mg,n). The homology of moduli space L
+L1547: ### g,n H•(Mg,n) forms a (modular) operad, and L
+L1550: g,n Hi(Mg,n) is a right module over the suboperad generated by [M0,3].
+L1553: \[
+L1555: This operad is isomorphic to the commutative operad, thus we obtain an right action of the commutative operad, which corresponds to a representation of its
+L1556: opposite wiring category, FSop. Using this approach, we can define other right actions of wiring categories on the homology of moduli space. For example, for
+L1557: any_j, the operad generated by [Mg,n] acts on L_j,g,n\| 3g-3+n-j=i Hj (Mg,n). Is this right module finitely generated?
+L1559: \]
+L1562: ### Similarly for g fixed, the vector space L
+L1565: i,n Hi(Mg,n) is a right module over the hypercommutative operad, the operad spanned by the fundamental classes of M0,n. Is this right
+L1568: ### module finitely generated?
+L1571: For the answers to these questions to have concrete implications, we need to understand
+L1574: the structure of right modules over these operads (equivalently representation theory of their opposite wiring categories). If a sequence of graded vector
+L1575: spaces is a finitely generated module over the hypercommutative operad, is its Hilbert series restricted?
+L1578: ### REFERENCES  15
+L1581: Is the category BTop, the opposite of the wiring category of the free operad on a binary
+L1584: commutative operation, Noetherian? If so, it would be possible to simplify the proof of Theorem 1.2. In \[1\], Barter established the Noetherianity of a
+L1585: category of trees, but we do
+L1588: ### not know of a relationship between this category and BTop
+L1591: .
+L1594: References
+L1597: \[1\] Daniel Barter. “Noetherianity and rooted trees”. arXiv preprint arXiv:1509.04228
+L1600: (2015).
+L1603: \[2\] Thomas Church, Jordan S Ellenberg, and Benson Farb. “FI-modules and stability
+L1606: for representations of symmetric groups”. Duke Mathematical Journal 164.9 (2015), pp. 1833–1910.
+L1608: \[3\] Thomas Church and Benson Farb. “Representation theory and homological stability”.
+L1611: Advances in Mathematics 245 (2013), pp. 250–314.
+L1613: \[
+L1615: [4] Thomas Church, Jeremy Miller, Rohit Nagpal, and Jens Reinhold. =Linear and quadratic ranges in representation stability”. arXiv preprint arXiv:1706.03845
+L1616: \tag{2017}
+L1618: \]
+L1620: \[
+L1622: . [5] Pierre Deligne. =Poids dans la cohomologie des vari-et-es alg-ebriques”. Proceedings of
+L1624: \]
+L1627: the International Congress of Mathematicians (Vancouver, BC, 1974). Vol. 1. 1974, pp. 79–85.
+L1629: \[6\] Pierre Deligne. “Th´eorie de Hodge, II”. Publications Math´ematiques de_l’Institut des
+L1632: Hautes Etudes Scientifiques ´  40.1 (1971), pp. 5–57.
+L1634: \[7\] Pierre Deligne and David Bryant Mumford. “The irreducibility of the space of curves
+L1637: of given genus” (1969).
+L1640: \[8\] Pavel Etingof, Andre Henriques, Joel Kamnitzer, and Eric Rains. “The cohomology
+L1643: ring of the real locus of the moduli space of stable curves of genus 0 with marked points”. arXiv preprint math/0507514 (2005).
+L1646: \[9\] Carel Faber and Rahul Pandharipande. “Tautological and non-tautological cohomology
+L1649: of the moduli space of curves”. arXiv preprint arXiv:1101.5489 (2011).
+L1652: \[
+L1654: [10] Ezra Getzler. =Resolving mixed Hodge modules on configuration spaces”. Duke mathematical journal 96.1 \tag{1999}
+L1656: \]
+L1660: , pp. 175-203. [11] Dan Petersen. =A spectral sequence for stratified spaces and configuration spaces of
+L1662: \]
+L1665: points”. Geometry & Topology 21.4 (2017), pp. 2527–2555.
+L1667: \[12\] Nicholas Proudfoot and Ben Young. “Configuration spaces, FSop-modules, and Kazhdan–
+L1670: Lusztig polynomials of braid matroids”. New York J. Math 23 (2017), pp. 813–832.
+L1673: \[13\] R Jimenez Rolland. “On the cohomology of moduli spaces of curves and pure mapping
+L1675: class groups, J”. Homotopy Relat. Struct (2013).
+L1678: \[14\] R Jim´enez Rolland and J Maya Duque. “Representation stability for the pure cactus
+L1680: group”. Preprint (2015).
+L1684: \[
+L1686: [15] Steven Sam and Andrew Snowden. =Gr\cdot obner methods for representations of combinatorial categories”. Journal of the American Mathematical Society 30.1
+L1687: \tag{2017}
+L1689: \]
+L1693: , pp. 159-
+L1697: 
+L1698: 203.

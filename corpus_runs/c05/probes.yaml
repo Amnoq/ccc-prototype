@@ -1,0 +1,34 @@
+# c05 probes — written 2026-10-03 from corpus/c05_deriv_d10a3_d10c.txt source prose, BEFORE any extraction.
+# Prose answers locked now. Same scoring: parity = same correct answer from both; omission vs hallucination recorded.
+
+probes:
+- id: P1
+  probe: "Why does sharpening the zero detector (w = 2 -> 1 -> 0.5) have a price, and what sets that price?"
+  answer_prose: "The uncertainty principle is the price. Concentration improves (leakage 0.68 -> 0.30 -> 0.0007) but the envelope e^{-w^2 u^2/2} reaches 1e-12 at n = e^{7.4/w}, so the needed prime data explodes: w=2 -> 41, w=1 -> 1700, w=0.5 -> 2.8e6. There is no finite optimum — a Pareto frontier; sharper zero-vision costs exponentially more prime data."
+- id: P2
+  probe: "What is the resonance mechanism by which the primes 'ring' at a zero's frequency in the detector's W?"
+  answer_prose: "When a zero sits in the window, the oscillatory prime sum goes negative and adds to W: at T0=50, w=1.0 the components are pole 0 + arch +1.6548 - (prime-sum -0.5925) = 2.2472 (and w=0.5: +0.8274 - (-0.9788) = 1.8062). When the window is empty (T0=100, w=1, zeros at 98.83/101.32 just outside), the prime-sum is +0.3562 and W is all leakage."
+- id: P3
+  probe: "Why is the pole exactly 0 for these detectors, and what is the honest weak point of the derived bound?"
+  answer_prose: "The pole is exactly 0 because of the e^{-T0^2/2w^2} suppression for detectors at height T0. The honest weak point: the bound is loose when zeros sit at the window edge — concentration relative to actual zero positions is what matters."
+- id: P4
+  probe: "What is the tightest dictionary between the detector's prime side and D8's energy, and why does the window buy something D8 could not have?"
+  answer_prose: "The prime side = 2*Cg*Re[windowed E_1(1/2,T0)]: D8's energy E_1 = -zeta'/zeta, Gaussian-windowed in log(p^k), evaluated at sigma=1/2. The window buys convergence at sigma=1/2, which D8 could not have (it needed sigma>1 unwindowed). Step-2's cancellatory positivity and D8's termwise positivity are two faces: windowed vs unwindowed."
+- id: P5
+  probe: "Why can the D1 face-sum never reach Li's criterion through direct summation — what is the structural obstruction?"
+  answer_prose: "S_1 is archimedean: sum_{|gamma|<=319} 1/rho = 0.0230957 = 1 + gamma/2 - (1/2)log(4pi), proved from the functional equation alone (xi'(1)/xi(1) splitting into 1 from s(s-1), gamma from zeta's Laurent, -(1/2)log pi - log 2 from Gamma). The prime Dirichlet series sum Lambda(n)n^{-s} diverges at s=1, so S_1 admits no convergent prime-sum presentation. Generally the Lambda-sums that 'want' to be lambda_n's coefficients diverge (A_k ~ eps^{-k-1}); lambda_n needs their finite parts (eta_k / Stieltjes constants) — renormalization, not direct summation."
+- id: P6
+  probe: "What is the structural verdict distinguishing Weil from Li — which positivity is face-sum-native and which is Dirichlet-series-native?"
+  answer_prose: "Weil is face-sum-native: convergent windowed prime sums (10a). Li is Dirichlet-series-native: lambda_n = sum_{k} (-1)^{k+1}C(n,k)S_k is coefficient positivity on the Dirichlet side, reachable from the face-sum only through renormalized divergent sums. The heuristic coda: lambda_n is Weil-type positivity for the non-decaying test function 1-((rho-1)/rho)^n — the sharp cutoff is exactly why its prime side diverges; Li is the inadmissible sharp limit of Weil."
+- id: P7
+  probe: "Why did the Part B residual — zero-side sums falling short of the Taylor values — confirm the bridge works instead of refuting it?"
+  answer_prose: "The gap (e.g. n=30: 16.35 zero-side vs 18.55 Taylor, n=10: 2.034 vs 2.279) was the high-zero tail beyond gamma=319; estimating the tail by the zero-density integral matched every observed gap to 3 significant figures (n=30: estimated 2.21, observed 2.21). Fully reconciled — the bridge carries traffic."
+- id: P8
+  probe: "How does the splitting argument prove the Selberg optimizer is exactly Mobius and the minimum is exactly the Mertens product?"
+  answer_prose: "Split T = T1 union T2 with T1 = T cap S, T2 = T \\ S (disjoint), using prod(S union T) = prod S * prod(T\\S). Then (M mu)_S = (1/prod S)[sum_{T1 subset S} mu(T1)][sum_{T2 cap S = empty} mu(T2)/prod T2]. The first bracket is (1-1)^{|S|} = delta_{S,empty}; the second at S=empty is prod_{p<=z}(1-1/p) = delta(z). Hence M mu = delta(z) e_empty, M^{-1} e_empty = mu/delta(z), so with lam_empty = 1: lam*_S = mu(S) and Qmin = delta(z) — the Mertens product recovered exactly at finite z (verified: Qmin/delta(z) = 1 to 12 digits, z<=19)."
+- id: P9
+  probe: "Why is the classical 1/G(z) bound the worse bound, and where do both converge?"
+  answer_prose: "The d<=z truncation is a constraint; the full-face optimum is the better (smaller) bound: 1/G(19) = 0.2348 vs face-native Qmin = delta(19) = 0.1710. Both go to e^{-gamma}/log z asymptotically, but only the face-native form is exact at finite z."
+- id: P10
+  probe: "Why is Selberg's quadratic form only a 'template' and not an independent zero-detecting positivity source?"
+  answer_prose: "It is an upper-bound machine: positive definite by construction (positivity assumed, not discovered from arithmetic), with no analytic continuation and no zeros, and the parity barrier stands — the same form bounds primes and almost-primes alike, so no amount of optimization resolves omega(n) parity. It gives the template (optimized face-quadratic form, exact optimizer = mu); the independent zero-detecting positivity source remains 10d's job."

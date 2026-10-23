@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-4 — bridge sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-4 — bridge sky</div>
+    <div class="sub">LeCun et al. 1989 (Backpropagation Applied to Handwritten Zip Code Recognition), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {}, "standalone": [{"id": "the-ability-of-learning-networks-to-generalize-c", "display": "the ability of learning networks to generalize can be greatly enhanced by providing constraints from the task domain, integrated into a backpropagation network through the architecture of the network (abstract thesis)", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "original", "note": "The paper's thesis claim, supported computationally by the control comparison (c12); generality of 'greatly enhanced' argued qualitatively."}, {"id": "design-principle-reduce-the-number-of-free-param", "display": "design principle: reduce the number of free parameters as much as possible without overly reducing computational power; specialization yields reduced entropy and reduced Vapnik-Chervonenkis dimensionality, raising the probability of correct generalization", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "identification", "note": "Borrowed from cited works (Denker et al. 1987; Patarnello and Carnevali 1987; Tishby et al. 1989; Baum and Haussler 1989) — invoked as design rationale, not derived here."}, {"id": "feature-maps-the-first-hidden-layer-is-composed-", "display": "feature maps: the first hidden layer is composed of several planes called feature maps; all units in a plane share the same set of weights, thereby detecting the same feature at different locations", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "definition", "genre": "original", "note": "Definitional: the paper names and defines 'feature maps' as planes of weight-sharing hidden units (section 3.2)."}, {"id": "weight-sharing-having-several-connections-links-", "display": "weight sharing: having several connections (links) controlled by a single parameter (weight); can be interpreted as imposing equality constraints among the connection strengths; described in Rumelhart et al. (1986) for the so-called T-C problem", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "method", "genre": "reframed", "note": "Attribution to Rumelhart et al. (1986) T-C problem; the 'equality constraints' reading is the authors' interpretation."}, {"id": "local-constrained-connections-with-undersampling", "display": "local constrained connections with undersampling: hidden units combine only local sources of information; receptive fields of adjacent units are two pixels apart (two-to-one undersampling), so some position information is eliminated while approximate position is preserved", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "method", "genre": "original", "note": "Architectural facts: 5x5 receptive fields; adjacent H1 units have receptive fields two pixels apart; two-to-one undersampling input->H1 and H1->H2."}, {"id": "the-function-performed-by-a-feature-map-can-be-i", "display": "the function performed by a feature map can be interpreted as a nonlinear subsampled convolution with a 5 by 5 kernel", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "identification", "note": "Stated as an interpretation ('can thus be interpreted as'); analytic reading of the H1 connection scheme, not a proved equivalence."}, {"id": "network-architecture-totals-1256-units-64-660-co", "display": "network architecture totals: 1256 units, 64,660 connections, 9760 independent parameters (H1: 12 independent 8x8 feature maps; H2: 12 feature maps of 4x4, each unit combining 8 of 12 H1 maps via 5x5 neighborhoods; H3: 30 fully connected units; output: 10 units using place coding)", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Exact counts reported: 1256 units, 64,660 connections, 9760 independent parameters (H1: 768 units/19,968 connections/1068 free params; H2: 192 units/38,592 connections/2592 free params; H3: 30 units; output: 10 units, place coding)."}, {"id": "data-base-9298-segmented-numerals-digitized-from", "display": "data base: 9298 segmented numerals digitized from handwritten zip codes on U.S. mail passing through the Buffalo, NY post office; 7291 for training, 2007 for testing generalization; both sets contain ambiguous, unclassifiable, or misclassified examples", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "method", "genre": "original", "note": "Data facts reported: 9298 segmented numerals from Buffalo, NY post office mail; 7291 training / 2007 test; ambiguous and misclassified examples in both sets."}, {"id": "preprocessing-linear-transformation-fitting-the-", "display": "preprocessing: linear transformation fitting the ~40x60 digit image into a 16x16 image, preserving aspect ratio; resulting image has multiple gray levels, scaled and translated to the range -1 to 1", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "method", "genre": "original", "note": "Procedure facts: linear transform of ~40x60 images to 16x16, aspect ratio preserved; multi-gray-level result scaled to range -1 to 1."}, {"id": "training-setup-backpropagation-simulator-sn-bott", "display": "training setup: backpropagation simulator SN (Bottou and LeCun 1988) on a SUN-4/260; scaled hyperbolic tangent at each node; target values within the quasilinear range of the sigmoid; mean squared error cost; weights initialized uniform between -2.4/Fi and 2.4/Fi; stochastic (on-line) gradient updates, found to converge much faster than the true gradient and to find more robust solutions; diagonal-Hessian-approximation Newton variant (LeCun 1987; Becker and LeCun 1988)", "status": "exact", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "method", "genre": "original", "note": "Procedure facts: simulator SN (Bottou and LeCun 1988) on SUN-4/260; scaled hyperbolic tangent; targets within quasilinear sigmoid range; MSE cost; init uniform -2.4/Fi..2.4/Fi; stochastic on-line updates; diagonal-Hessian Newton variant (LeCun 1987; Becker and LeCun 1988). The 'faster/more robust than true gradient' claim is empirical (their study)."}, {"id": "training-outcome-after-23-passes-through-the-tra", "display": "training outcome: after 23 passes through the training set (167,693 pattern presentations), 0.14% misclassification on the training set (10 mistakes) and 5.0% on the test set (102 mistakes); 12.1% rejection for 1% error on the non-rejected test patterns, with rejection when the difference between the two most active units exceeds a threshold", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Numerical results reported: after 23 passes (167,693 pattern presentations), 0.14% train error (10 mistakes), 5.0% test error (102 mistakes), 12.1% rejection for 1% error on non-rejected (threshold = activity gap of two most active units). FIDELITY WARNING: the MSE figures in the source text are garbled by extraction ('2.5 x ... and 1 .8 x lop2'); error counts are clean."}, {"id": "unconstrained-control-experiment-a-fully-connect", "display": "unconstrained control experiment: a fully connected network with one hidden layer of 40 units (10,690 connections total) gave 1.6% misclassification on the training set, 8.1% on the test set, and 19.4% rejections for 1% error rate — generalization performances quite bad", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Numerical control experiment reported: one-hidden-layer fully connected net (40 units, 10,690 connections) gave 1.6% train / 8.1% test error, 19.4% rejection for 1% error."}, {"id": "synthesized-kernels-some-can-be-interpreted-as-f", "display": "synthesized kernels: some can be interpreted as feature detectors remarkably similar to those found to exist in biological vision systems (Hubel and Wiesel 1962), such as spatial derivative estimators or off-center/on-surround type feature detectors", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Qualitative observation of synthesized kernels; the 'remarkably similar' judgment to biological detectors is the authors' interpretation, not a measured comparison."}, {"id": "constrained-backpropagation-the-first-two-layers", "display": "constrained backpropagation: the first two layers are constrained to be convolutional but the system automatically learns the kernel coefficients (vs the laboriously hand-designed convolution coefficients of Denker et al. 1989); this builds in shift-invariance and vastly reduces entropy, Vapnik-Chervonenkis dimensionality, and free parameters, proportionately reducing the training data required for a given generalization performance", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "original", "note": "The authors' coined framing for their contribution; argued qualitatively and supported by c11/c15 comparisons rather than proved."}, {"id": "the-present-system-performs-slightly-better-than", "display": "the present system performs slightly better than the previous hand-designed system, remarkable considering much less specific information about the problem was built into the network", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Reported comparison against the Denker et al. (1989) hand-designed system: present system slightly better with less problem-specific information built in."}, {"id": "dsp-implementation-recognition-runs-on-an-off-th", "display": "DSP implementation: recognition runs on an off-the-shelf board with an AT&T DSP-32C general purpose DSP (256 kbytes local memory, 12.5 million multiply-add operations per second); overall throughput 10 to 12 classifications per second including image acquisition (normalization-limited), more than 30 per second on normalized digits", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Reported deployment measurements: off-the-shelf AT&T DSP-32C board, 12.5M multiply-adds/sec; 10-12 classifications/sec camera-to-classified (normalization-limited), >30/sec on normalized digits."}, {"id": "scaling-properties-were-far-better-than-one-woul", "display": "scaling properties were far better than one would expect just from extrapolating results of backpropagation on smaller, artificial problems; learning time was relatively short given the training set size, due to data redundancy and the constraints imposed", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "original", "note": "Authors' qualitative reading of their results versus extrapolation from small artificial problems; no formal scaling analysis given."}, {"id": "larger-variant-footnote-a-network-with-100-000-c", "display": "larger variant (footnote): a network with 100,000 connections and 2600 free parameters achieved 9% rejection for 1% error rate — about 30% better than the best of the hand-coded-kernel networks", "status": "computationally_verified", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "result", "genre": "original", "note": "Footnote result: 100,000-connection / 2600-free-parameter variant achieved 9% rejection for 1% error, ~30% better than hand-coded-kernel networks."}, {"id": "the-work-points-out-the-necessity-of-having-flex", "display": "the work points out the necessity of having flexible 'network design' software tools that ease the design of complex, specialized network architectures", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "conjecture", "genre": "original", "note": "Recommendation stated in conclusion; a design-tools claim, not an empirical finding of this paper."}, {"id": "the-full-comparative-study-of-unconstrained-netw", "display": "the full comparative study of unconstrained networks, deferred to another paper", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "question", "genre": "identification", "note": "The paper's own stated deferral: 'A full comparative study will be described in another paper.' Left open by the authors."}, {"id": "the-network-is-directly-fed-with-images-rather-t", "display": "the network is directly fed with images rather than feature vectors (unlike Denker et al. 1989), demonstrating that backpropagation networks can deal with large amounts of low-level information", "status": "heuristic", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "original", "note": "Authors' claim that feeding images directly (vs feature vectors, Denker et al. 1989) demonstrates backpropagation's capacity for low-level information; supported by c11."}, {"id": "unconstrained-fully-connected-networks-are-adequ", "display": "unconstrained fully-connected networks are adequate for this recognition task (refuted: see the c12 control)", "status": "killed", "cluster": "bridge", "chunk": "bridge_lecun89", "kind": "claim", "genre": "identification", "note": "Refuted in the paper: the unconstrained fully-connected control (c12) performed 'quite bad' on generalization relative to the constrained architecture; adequacy ruled out for this task."}], "edges": [{"a": "weight-sharing-having-several-connections-links-", "b": "feature-maps-the-first-hidden-layer-is-composed-", "rel": "supports", "count": 1}, {"a": "local-constrained-connections-with-undersampling", "b": "feature-maps-the-first-hidden-layer-is-composed-", "rel": "supports", "count": 1}, {"a": "feature-maps-the-first-hidden-layer-is-composed-", "b": "the-ability-of-learning-networks-to-generalize-c", "rel": "supports", "count": 1}, {"a": "local-constrained-connections-with-undersampling", "b": "the-ability-of-learning-networks-to-generalize-c", "rel": "supports", "count": 1}, {"a": "design-principle-reduce-the-number-of-free-param", "b": "the-ability-of-learning-networks-to-generalize-c", "rel": "supports", "count": 1}, {"a": "the-network-is-directly-fed-with-images-rather-t", "b": "the-ability-of-learning-networks-to-generalize-c", "rel": "illustrates", "count": 1}, {"a": "the-function-performed-by-a-feature-map-can-be-i", "b": "feature-maps-the-first-hidden-layer-is-composed-", "rel": "refines", "count": 1}, {"a": "the-function-performed-by-a-feature-map-can-be-i", "b": "weight-sharing-having-several-connections-links-", "rel": "depends_on", "count": 1}, {"a": "network-architecture-totals-1256-units-64-660-co", "b": "design-principle-reduce-the-number-of-free-param", "rel": "illustrates", "count": 1}, {"a": "network-architecture-totals-1256-units-64-660-co", "b": "preprocessing-linear-transformation-fitting-the-", "rel": "depends_on", "count": 1}, {"a": "training-setup-backpropagation-simulator-sn-bott", "b": "training-outcome-after-23-passes-through-the-tra", "rel": "supports", "count": 1}, {"a": "training-outcome-after-23-passes-through-the-tra", "b": "constrained-backpropagation-the-first-two-layers", "rel": "supports", "count": 1}, {"a": "the-present-system-performs-slightly-better-than", "b": "constrained-backpropagation-the-first-two-layers", "rel": "supports", "count": 1}, {"a": "unconstrained-control-experiment-a-fully-connect", "b": "constrained-backpropagation-the-first-two-layers", "rel": "supports", "count": 1}, {"a": "unconstrained-control-experiment-a-fully-connect", "b": "unconstrained-fully-connected-networks-are-adequ", "rel": "contradicts", "count": 1}, {"a": "synthesized-kernels-some-can-be-interpreted-as-f", "b": "feature-maps-the-first-hidden-layer-is-composed-", "rel": "illustrates", "count": 1}, {"a": "dsp-implementation-recognition-runs-on-an-off-th", "b": "scaling-properties-were-far-better-than-one-woul", "rel": "supports", "count": 1}, {"a": "larger-variant-footnote-a-network-with-100-000-c", "b": "constrained-backpropagation-the-first-two-layers", "rel": "supports", "count": 1}, {"a": "the-work-points-out-the-necessity-of-having-flex", "b": "network-architecture-totals-1256-units-64-660-co", "rel": "depends_on", "count": 1}, {"a": "constrained-backpropagation-the-first-two-layers", "b": "the-ability-of-learning-networks-to-generalize-c", "rel": "refines", "count": 1}], "loops": [{"chunk": "bridge_lecun89", "label": "the-full-comparative-study-of-unconstrained-netw", "node": null}], "stats": {"subjects": 0, "cross_edges": 20, "concepts": 22}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

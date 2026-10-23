@@ -1,0 +1,741 @@
+### C (n, d)) −→ Pw(V SL)
+
+### over the weighted projective space of V ∗ ∗
+
+### SL defined by the restriction of (3.1) on V SL. We
+
+### now claim
+
+Theorem 3.1 (Effective Jacobian fibration). The Jacobian fibration
+
+### P H : P(HSL ∗
+
+### C (n, d)) −→ Pw(V SL)
+
+is generically effective.
+
+The rest of this section is devoted to the proof of this theorem. The statement is equivalent to the claim that the family of deformations of spectral curves
+
+parametrized by Pw(V
+
+### ∗
+
+### SL)
+
+is effective. Let s ∈ V ∗
+
+SL be a point for which the spectral curve Cs is non-singular, and ¯s
+
+### the corresponding point of Pw(V ∗
+
+### SL). We wish to show that the Kodaira-Spencer map
+
+### Ts¯Pw(V ∗ (Cs, T Cs)
+
+### SL) −→ H1
+
+is injective, where T X denotes the tangent sheaf of X.
+
+The spectral curve Cs of (2.11) is the divisor of T ∗C defined by the section
+
+\[
+
+det(\tau - \varphi) \in H_0 (T^*C,\pi^*K\otimes n),
+
+\]
+
+C
+
+\[
+
+where \tau is the tautological section of \pi^*KC on T^*C. Let Ns denote the normal sheaf of Cs in T^*C. Since KT^*C = \Lambda_2 (T^*C) ∼= OT^*C by the
+
+holomorphic symplectic form \omega C = -d\tau,
+
+\]
+
+### we have
+
+Ns ∼= KCs ∼= π ∗K\otimes n
+
+C .
+
+### From
+
+0 −−−−→ T Cs −−−−→ T T ∗C\|Cs −−−−→ Ns −−−−→ 0,
+
+### we obtain
+
+0 −−−−→ H0 (Cs, T T ∗C) ι −−−−→ H0 (Cs, Ns) κ −−−−→ H1 (Cs, T Cs)
+
+### (3.7) (Cs, T T ∗C) −−−−→ H1 (Cs, Ns).
+
+### −−−−→ H1
+
+### Since
+
+(Cs, Ns) ∼= H0 (C, π∗KCs ) ∼= Mn (C, K\otimes i ) = V ∗
+
+### H0 H0
+
+### C GL,
+
+### i=1
+
+the homomorphism κ is the Kodaira-Spencer map for the deformations of spectral curves
+
+### on V ∗
+
+GL. We thus need to identify the image of ι. We note that the tangent sheaf and
+
+the cotangent sheaf are isomorphic on the total space of the cotangent bundle T ∗C, i.e.,
+
+\[
+
+T T^*C ∼= \Lambda_1 (T^*C).
+
+\]
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 13
+
+### Proposition 3.2. We have the following isomorphisms:
+
+\[
+
+H_0 (T^*C,\Lambda_0 (T^*C)) ∼= C \tag{3.8}
+
+\]
+
+\[
+
+H_0 (T^*C,\Lambda_1 (T^*C)) ∼= H_0 (C,KC) \oplus C · \tau H_0 (T^*C,\Lambda_2 (T^*C)) ∼= C.
+
+\]
+
+Proof. The first isomorphism of (3.8) asserts that every globally defined holomorphic function f on T
+
+∗C is a constant. A section σ ∈ H0 (C, KC) is a map σ : C → T ∗C. Take an arbitrary pair of points (x, y) in T ∗C. If they are not on the same fiber, then there
+
+is a section σ such that both x and y are on the image σ(C). Since f is constant on σ(C), f(x) = f(y). If they are on the same fiber, then choose a point z ∈ T
+
+∗C not on this fiber and use the same argument. Since \Lambda_2 (T ∗C) ∼= OT ∗C, the third isomorphism follows from the first one. The second isomorphism of
+
+(3.8) asserts that every holomorphic_1-form α on T ∗C is either the pull-back of a holomorphic_1-form on C via π : T ∗C → C, the tautological_1-form τ , or a
+
+linear combination of them. Let σ : C → T ∗C be an arbitrary section. Since the normal sheaf of σ(C) in T ∗C is Kσ(C)
+
+### , we have on σ(C)
+
+\[
+
+0 ----\to K-1 1 (T^*C) \otimes O\sigma(C) ----\to K\sigma(C) ----\to 0. \sigma(C) ----\to \Lambda Therefore, identifying C ∼= \sigma(C), we obtain 0 ----\to H_0
+
+(C,\Lambda_1 (T^*C) \otimes OC) ----\to H_0 (C,KC) \kappa_0 ----\to H_1 (C,K-1)
+
+C
+
+(C,Λ_1 (T ∗C) \otimes OC) −−−−→ H1 (C, KC ) −−−−→ 0.
+
+### −−−−→ H1
+
+\[
+
+Here \kappa_0 is the Kodaira-Spencer map assigning a deformation of C to a displacement of C in T^*C through a section of KC. But since \sigma(C) is always
+
+isomorphic to C, we do not obtain any deformation of C in this way. Hence \kappa_0 is the_0-map. Therefore, \tag{3.9}
+
+\]
+
+\[
+
+H_0 (\sigma(C),\Lambda_1 (T^*C) \otimes O\sigma(C)) ∼= H_0 (\sigma(C),K\sigma(C)) ∼= H_0 (C,KC).
+
+\]
+
+### Now consider an exact sequence on T ∗C
+
+0 −−−−→ Λ_1 (T ∗C) \otimes OT ∗C(−σ(C)) −−−−→ Λ_1 (T ∗C) −−−−→ Λ_1 (T ∗C) \otimes Oσ(C) −−−−→ 0,
+
+### which produces
+
+0 −−−−→ H0 (T ∗C,Λ_1 (T ∗C) \otimes OT ∗C(−σ(C))) −−−−→ H0 (T ∗C,Λ_1 (T ∗C)) r −−−−→ H0 (σ(C),Λ_1 (T ∗C) \otimes Oσ(C) ).
+
+Because of (3.9), the homomorphism r is equal to the pull-back
+
+\[
+
+^* 0 (T^*C,\Lambda_1 (T^*C)) -\to H_0 (C,KC) r = \sigma : H by the section \sigma : C \to T^*C. It is surjective because \sigma^* ◦ \pi^* = idH0(C,KC)
+
+\]
+
+### . Therefore, we
+
+### have a splitting exact sequence
+
+### (3.10)
+
+### 0 1 0 1 ∗ 0
+
+0 −→ H (T ∗C,Λ (T ∗C) \otimes O(−σ(C))) −→ H (T ∗C,Λ (T ∗C)) σ (C, KC ) −→ 0.
+
+### −→ H
+
+\[
+
+The tautological_1-form \tau \in H_0 (T^*C,\pi^*KC) defines 1 (T ∧\tau ----\to \Lambda_2 (T 0 ----\to \pi^*KC ----\to \Lambda^*C)^*C) \otimes OT^*C(-C) ----\to
+
+0, noting that \tau vanishes along the divisor C \subset T^*C. Since H_0 (T^*C,\Lambda_2 (T^*C) \otimes OT^*C(-C)) ∼= H_0 (T^*C,OT^*C(-C)) = 0,
+
+\]
+
+### 14  ANDREW HODGE AND MOTOHICO MULASE
+
+### we obtain
+
+\[
+
+H_0 (T^*C,\pi^*KC) ∼= H_0 (T^*C,\Lambda_1 (T^*C)). Take \alpha \in H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-C)) ∼= H_0 (T^*C,\pi^*KC(-C)). Then
+
+(T^*C,\pi^*KC(-C)) \otimes K-1 (C)) ∼= H_0 (T^*C,OT^*C) ∼= C. \alpha /\tau \in H_0
+
+\]
+
+C
+
+\[
+
+Therefore, \alpha is a constant multiple of \tau, and we have obtained \tag{3.11}
+
+\]
+
+\[
+
+H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-C)) ∼= C.
+
+\]
+
+### From (3.10) and (3.11), we conclude that
+
+\[
+
+H_0 (T^*C,\Lambda_1 (T^*C)) ∼= H_0 (C,KC) \oplus C · \tau . Lemma_3.3. Let s \in V^*
+
+\]
+
+GL be a point such that the spectral curve Cs is non-singluar. Then
+
+### we have an isomorphism
+
+\[
+
+H_0 (Cs,T T^*C) ∼= H_0 (Cs,\Lambda_1 (T^*C)) ∼= H_0 (T^*C,\Lambda_1 (T^*C)). Proof. The line bundle on T^*C that corresponds to the divisor Cs \subset T^*C is
+
+\pi^*K\otimes n
+
+\]
+
+### C . Thus
+
+OT ∗C(−Cs) ∼= π ∗K \otimes(−n)
+
+∼= OT ∗C(−nC).
+
+C
+
+### As above, let us consider an exact sequence
+
+0 −−−−→ Λ_1 (T ∗C) \otimes O(−nC) −−−−→ Λ_1 (T ∗C) −−−−→ Λ_1 (T ∗C) \otimes OCs −−−−→ 0
+
+### and its cohomology sequence
+
+0 −→ H0 (T ∗C,Λ_1 (T ∗C) \otimes O(−nC)) −→ H0 (T ∗C,Λ_1 (T ∗C)) q (Cs,Λ_1 (T ∗C) \otimes OCs ).
+
+### −→ H0
+
+### From (3.11), we have
+
+\[
+
+H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-nC)) = 0 for_n \ge 2, hence q is injective. Take \beta \in H_0 (Cs,\Lambda_1 (T^*C)\otimes OCs), and extend it as a
+
+meromorphic_1-form on T^*C. Since deg KC = 2g - 2 > 0, every divisor of T^*C intersects with the_0-section C, and since Cs ∼ nC as a divisor, it also intersects
+
+with Cs. If D \subset T^*C is the pole divisor of \beta, then it cannot intersect with Cs, hence D = ∅. Therefore, q is surjective.
+
+\]
+
+Let us go back to the Kodaira-Spencer map (3.7). We now know from (3.8) and (3.12)
+
+### that
+
+(3.13) 0 −−−−→ H0 (C, KC ) \oplus C · τ ι −−−−→ Ln (C, K\otimes i ) κ −−−−→ H1 (Cs, K−1 ). i=1 H0 C Cs The H0 (C, KC)-factor of the second term of (3.13) maps
+
+to the first component of the third term via the injective homomorphism ι. The tautological_1-form τ on T ∗C that appears as the second factor of the second
+
+term is mapped to a diagonal ray in the third term. To see this fact, we recall that the tangent and cotangent sheaves are isomorphic on T ∗C through the
+
+symplectic form ωC = −dτ . Let v be the vector field on T ∗C corresponding to τ through this isomorphism, i.e., τ = ωC(·, v). This vector field v represents the
+
+C ∗
+
+### -action
+
+on T ∗C along fiber. In terms of a local coordinate system, these correspondences are clearly described. Choose a local coordinate z on the algebraic curve C
+
+around a point p ∈ C, and
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 15
+
+### denote by x the linear coordinate on T ∗
+
+### p C with respect to the basis dzp. Then at the point
+
+(p, xdzp) ∈ T ∗C we have the following expressions:
+
+###
+
+τ = x dz
+
+###
+
+ωC = dz ∧ dx
+
+###  ∂
+
+v = x
+
+∂x .
+
+\[
+
+The \lambda \in C^* action on T^*C generated by the vector fields v produces a displacement of Cs \subset T^*C to C\lambda ·s, which corresponds to the
+
+equivariant action of \lambda on HC(n,d) as described in \tag{3.2}
+
+\]
+
+\[
+
+. In terms of the holomorphic_1-form \tau, its restriction on Cs gives an element (Cs,KCs) ∼= H_0 (C,\pi^*OCs \otimes K\otimes n) ∼= H_0 (C,\oplus n) = Mn H_0
+
+(C,K\otimes i). \tau\|Cs \in H_0 i=1K\otimes i
+
+\]
+
+### C C C
+
+### i=1
+
+\[
+
+This is the image \iota(\tau) of \tag{3.13}
+
+\]
+
+\[
+
+.
+
+### Summing up, we have constructed an injective homomorphism
+
+\[
+
+V^* Ln (C,K\otimes i) H_0 (C,KC) \oplus C · \tau \bar{\kappa} ----\to H_1 (Cs,K-1). SL/C ∼= \iota i=1 H_0 C Cs The image of \bar{\kappa} represents the generic
+
+Kodaira-Spencer class of the Hitchin fibration P H of \tag{3.6}
+
+\]
+
+\[
+
+. This completes the proof of Theorem_3.1.
+
+\]
+
+4. Symplectic quotient of the Higgs moduli space and Prym fibrations
+
+The Hamiltonian vector fields corresponding to the coordinate components of the Hitchin
+
+### map HC(n, d) → V ∗
+
+GL are constant Jacobian flows along each fiber of the map. Suppose we
+
+have a direct sum decomposition of VGL into two Lie subalgebras
+
+### def = Mn−1 1
+
+VGL H (C, K\otimes−i ) = g1 \oplus g2.
+
+C
+
+### i=0
+
+Then there are two possible ways to construct new algebraically completely integrable Hamiltonian systems. If the g1-action on HC(n, d) is integrated to a group
+
+action, then it is Hamiltonian by definition and we can construct the symplectic quotient. Or if the g2-action is integrated to a group action instead, then we
+
+may find a family of g2-orbits in
+
+### HC(n, d) fibered over the dual Lie algebra g ∗
+
+2 . An important difference between real symplectic geometry and holomorphic symplectic geometry is that in the latter case integrations
+
+of the same Lie algebra may generate different (non-isomorphic) Lie groups. Consequently, the idea of symplectic quotient has to be generalized so that we can
+
+allow a family of groups acting on a symplectic manifold. The discovery of Hausel and Thaddeus in \[7\] is that the above two constructions lead to mirror
+
+symmetric pairs of Calabi-Yau spaces in the sense of Strominger-Yau-Zaslow \[25\]. In this section we consider two cases, the SL-P GL duality and the
+
+Sp2m-SO2m+1 duality.
+
+### The SL-P GL duality comes from the decomposition
+
+!
+
+### 1 (C, OC) \oplus Mn−1 H 1 (C, K\otimes−i )
+
+### VGL = H
+
+C .
+
+### i=i
+
+Obviously, the vector fields generated by the H1 (C, OC)-action are integrable to the Jac(C)- action everywhere on HC(n, d). Therefore, we do have the usual
+
+symplectic quotient mod
+
+### 16  ANDREW HODGE AND MOTOHICO MULASE
+
+Jac(C). On the other hand, the integration of the other Lie algebra
+
+### def = Mn−1 1
+
+### VSL H (C, K\otimes−i )
+
+C
+
+### i=i
+
+produces different Lie groups, called Prym varieties, along each fiber of the Hitchin fibration.
+
+The spectral covering π : Cs → C induces two group homomorphisms dual to one another, the pull-back π ∗ and the norm map Nmπ defined by
+
+### ∗ ∗L ∈ Jac(Cs)
+
+\[
+
+\pi : Jac(C) ∋ L_7-\to \pi \tag{4.1}
+
+\]
+
+\[
+
+Nm\pi : Jac(Cs) ∋ L_7-\to det(\pi^*L) \otimes det(\pi^*OCs) -1 \in Jac(C).
+
+\]
+
+In terms of divisors the norm map can be defined alternatively by
+
+### Pic(Cs) ∋ X
+
+\[
+
+m(p) · p_7-\to X_m(p) · \pi(p) \in Jac(C). p\in Cs p\in Cs
+
+\]
+
+### The Prym variety and the dual Prym variety
+
+def = Ker(Nmπ)
+
+### Prym(Cs/C)
+
+### (4.2)
+
+def = Jac(Cs)/π∗
+
+### Prym∗ (Cs/C) Jac(C)
+
+constructed by using these homomorphisms are Abelian varieties of dimension g(Cs)−g(C) and are dual to one another. The algebraically completely integrable
+
+Hamiltonian systems with these Abelian fibrations, that are naturally constructed from HC(n, d), then become SYZ-mirror symmetric.
+
+We have shown in Section 3 that the Jac(C)-action on HC(n, d) is Hamiltonian. So we
+
+### can define the symplectic quotient
+
+def = HC(n, d)//Jac(C) = H
+
+(4.3)  PHC(n, d) −1 (0)/Jac(C).
+
+This is a symplectic space of dimension_2(n_2 − 1)(g − 1) modeled by the moduli space of stable principal P GLn(C)-bundles on C \[8, 9, 18\]. Since the
+
+Jac(C)-action on HC(n, d) preserves the Hitchin fibration, we have an induced Lagrangian fibration
+
+(4.4)  HP GL : PHC(n, d) −→ V ∗ Mn (C, K\otimes i ).
+
+### H0
+
+### SL = C
+
+### i=2
+
+### It’s 0-fiber is H −1
+
+\[
+
+P GL \tag{0}
+
+\]
+
+\[
+
+= UC(n,d)/Jac(C). Following [19] we denote by SUC(n,d) the
+
+\]
+
+moduli space of stable vector bundles with a fixed determinant line bundle. This is a fiber
+
+### of the determinant map
+
+\[
+
+UC(n,d) ∋ E_7-\to det E \in Picd (C),
+
+\]
+
+and is independent of the choice of the value of the determinant. Note that (4.5) is a non-trivial fiber bundle. The equivariant Jac(C)-action on (4.5) is given
+
+by
+
+### \otimes L −−−−→ UC(n, d)
+
+### UC(n, d)
+
+###
+
+(4.6) det  det L ∈ Jac(C).
+
+### y y
+
+### Picd (C) −−−−→ Picd (C)
+
+### \otimes L\otimes n
+
+The isotropy subgroup of the Jac(C)-action on UC(n, d) is the group of n-torsion points
+
+\[
+
+def = {L \in Jac(C)\|L_1 \tag{4.7}
+
+\]
+
+\[
+
+Jn(C) \otimes n = OC} ∼= H (C,Z/nZ),
+
+\]
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 17
+
+\otimes n ∼= det(E). Choose a reference line bundle L0 ∈ since E \otimes L ∼= E implies det(E) \otimes L
+
+### Picd (C) and consider a degree n covering
+
+\[
+
+(C) ∋ L \otimes L_0 7-\to L \otimes n \otimes L_0 \in Picd (C), L \in Jac(C).
+
+\]
+
+### ν : Picd
+
+\[
+
+Then the pull-back bundle \nu^*UC(n,d) on Picd (C) becomes trivial:^*UC(n,d) = Picd (C) \times SUC(n,d).
+
+\]
+
+### ν
+
+\[
+
+The quotient of this product by the diagonal action of Jn(C) is the original moduli space: \tag{4.8}
+
+\]
+
+\[
+
+Picd (C) \times SUC(n,d) Jn(C) ∼= UC(n,d).
+
+\]
+
+### It is now clear that
+
+UC(n, d)/Jac(C) ∼= SUC(n, d)/Jn(C).
+
+\[
+
+What are the other fibers of \tag{4.4}
+
+\]
+
+\[
+
+? Let s \in V^* SL ∩ Ureg be a point such that Cs is nonsingular. We have already noted that the covering map \pi : Cs \to C induces an injective homomorphism
+
+\pi^* : Jac(C) ∋ L_7-\to \pi^*L \in Jac(Cs). Therefore, the fiber H -1
+
+\]
+
+### P GL(s) is
+
+isomorphic to the dual Prym variety Prym∗ (Cs/C). Similarly to the equivariant action
+
+### (4.6), we have
+
+### \otimes L
+
+### Jac(Cs)
+
+### −−−−→ Jac(Cs)
+
+###
+
+(4.9) Nm  Nm L ∈ Jac(C).
+
+### y y
+
+### Jac(C) −−−−→ Jac(C)
+
+### \otimes L\otimes n
+
+### By the same argument of (4.8), we obtain
+
+(4.10) Prym(Cs/C) × Jac(C) Jn(C) ∼= Jac(Cs).
+
+From (4.2) and (4.10), it follows that Prym∗ (Cs/C) = Prym(Cs/C)/Jn(C). We have thus
+
+### established
+
+### Theorem 4.1 (\[9, 10\]). The natural fibration
+
+### HP GL : PHC(n, d) −→ V ∗ Mn H 0 (C, K\otimes i )
+
+### SL = C
+
+### i=2
+
+of (4.4) is a Lagrangian dual Prym fibraion with respect to the canonical holomorphic symplectic form ω¯ on PHC(n, d). We recall that the Higgs moduli space
+
+HC(n, d) contains the cotangent bundle T ∗UC(n, d) as an open dense subspace, and that the holomorphic symplectic form ω is the canonical symplectic form on
+
+this cotangent bundle. Similarly, we can show the following Proposition_4.2. The symplectic form ω¯ on PHC(n, d) given by the symplectic quotient is the
+
+canonical cotangent symplectic form on the cotangent bundle
+
+T ∗ SUC(n, d)/Jn(C) ⊂ PHC(n, d).
+
+Proof. Let E be a stable vector bundle on C. The exact sequence
+
+0 −−−−→ OC −−−−→ End(E) −−−−→ Q = End(E)/OC −−−−→ 0
+
+### induces a cohomology sequence
+
+0 −−−−→ H1 (C, OC ) −−−−→ H1 (C,End(E)).
+
+### 18  ANDREW HODGE AND MOTOHICO MULASE
+
+### Therefore,
+
+TE SUC(n, d)/Jn(C) ∼= H_1 (C,End(E))/H1 (C, OC ).
+
+### Dualizing the situation, we have
+
+### tr
+
+0 −−−−→ End0(E) \otimes KC −−−−→ End(E) \otimes KC
+
+### −−−−→ KC −−−−→ 0,
+
+where End0(E) is the sheaf of traceless endomorphisms of E. We then have
+
+0 (C,End0(E) \otimes KC) −→ H 0 (C,End(E) \otimes KC) tr 0 (C, KC) −→ 0.
+
+### 0 −→ H
+
+### −→ H
+
+The trace homomorphism is globally surjective because OC is contained in End(E). Hence
+
+T ∗ SUC(n, d)/Jn(C) ∼= H0 (C,End0(E) \otimes KC).
+
+E
+
+\[
+
+Since the moment map H_1 of \tag{3.3}
+
+\]
+
+\[
+
+is the trace map, we conclude that the symplectic form \bar{\omega} on the symplectic quotient PHC(n,d) is the canonical cotangent symplectic form on the
+
+### cotangent bundle T ∗ SUC(n, d)/Jn(C)
+
+.
+
+\[
+
+The other reduction of HC(n,d) consisting of the VSL-orbits is the moduli space SHC(n,d) of stable Higgs bundles (E,\varphi) with a fixed determinant det(E) ∼= L and traceless Higgs fields \varphi \in H_0 (C,End0(E) \otimes KC). This moduli space is modeled by the moduli space of stable principal SLn(C)-bundles on C
+
+and has dimension_2(n_2 -1)(g -1). The cotangent bundle T^*SUC(n,d) is an open dense subspace of SHC(n,d). Since tr(\varphi) = 0, the Hitchin fibration H of
+
+\tag{2.9}
+
+\]
+
+\[
+
+naturally restricts
+
+\]
+
+### to
+
+(4.11)  HSL : SHC(n, d) −→ V ∗ Mn (C, K\otimes i ).
+
+### H0
+
+### SL = C
+
+### i=2
+
+### The 0-fiber is H −1 ∗
+
+\[
+
+SL \tag{0}
+
+\]
+
+\[
+
+= SHC(n,d). For a generic s \in V SL such that Cs is non-singular, the fiber H -1 (s) ∼= Jac(Cs) consisting of Higgs bundles (E,\varphi) such
+
+### SL(s) is the subset of H−1
+
+that det(E) = L is fixed and det(x − φ) = s. Therefore, H −1
+
+SL(s) ∼= Prym(Cs/C).
+
+### By comparing PHC(n, d) and SHC(n, d), we find that
+
+\[
+
+SHC(n,d) Jn(C) ∼= PHC(n,d), where the Jn(C)-action on SHC(n,d) is defined by E_7\to E \otimes L for L \in Jn(C). Since Jn(C) is a finite group and PHC(n,d) is a
+
+holomorphic symplectic variety, we can define a holomorphic symplectic form \hat{\omega} on SHC(n,d) via the pull-back of the projection
+
+SHC(n, d) −→ SHC(n, d) Jn(C).

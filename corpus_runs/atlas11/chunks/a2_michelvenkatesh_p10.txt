@@ -1,0 +1,1023 @@
+Observe that since \|b\|, \|c\|  C −1 −1
+
+, \|a\| − 1, \|d\| − 1  C , the integral is zero
+
+\|x\| − 1 ).
+
+unless \|ty\| C −1 6 \delta_0 + O(C −1
+
+, while the x variable satisfies
+
+The above proof carries on mutatis mutandis. At the first stage, we
+
+\[
+
+compute the x-integral, noting that x_7\to \varphi(C\|aty+cx\|)\varphi(\|bty+dx\|-1) satisfies similar smoothness bounds to \varphi(\|x\| - 1), since c\|C\| 1.
+
+Then \tag{3.49}
+
+\]
+
+\[
+
+uses in addition only the fact that we may restrict to\|ty\| C -1
+
+\]
+
+, and so also goes
+
+through.  ut
+
+4. Integral representations of L-functions: global computations.
+
+We now turn to global aspects of the analysis of standard L-functions
+
+on GL(2) (§4.2) and of the triple product L-function (§4.4).
+
+#### 68 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+4.1. Notation
+
+4.1.1. Subgroups. — Henceforth F is a number field, A := AF and we often denote \|.\| for \|.\|A. For G = GL2 or PGL2, we set XG = G(F)\\G(A).
+
+We will often write simply X for XPGL2
+
+.
+
+For the various usual subgroups of G we adopt the notations and parametrizations of §3.1.4. We denote by K the usual maximal open compact subgroup
+
+of G(A).
+
+\[
+
+We put H := A(A) = a(A\times) and H \tag{1}
+
+\]
+
+\[
+
+= A(A \tag{1}
+
+\]
+
+\[
+
+) = {a(y) : y \in A\times :\|y\|A = 1} \subset H.
+
+\]
+
+H and H(1) are closed, non-compact subgroups of GL2(A). By an abuse of notation, we regard them as closed, non-compact subgroups of PGL2(A). We let Y be the
+
+H-orbit of the identity coset in XPGL2
+
+. Then Y carries a Hinvariant measure of infinite volume.
+
+4.1.2. Measures. — We adopt on each of the groups the product of
+
+those measures specified in §3.1.5.
+
+Although not strictly necessary, it is a useful check to be aware of the
+
+relation with a Tamagawa measure. A routine computation shows that, for the measures on PGL2,
+
+\[
+
+dg = (discF) -1 \xi F \tag{2}
+
+\]
+
+\[
+
+d \tau g, (4.1) where d \tau g is the Tamagawa measure. In particular, the volume of the quotient X is 2\xi F (2)(discF)
+
+\]
+
+1/2
+
+.
+
+\[
+
+4.1.3. Additive characters and Fourier expansion. — Let \psi = eF = \otimes v\psi v be the non-trivial additive character of A/F given as eF (.) = eQ(trF/Q(.))
+
+with eQ the unique additive character of A whose restriction to R coincide
+
+\]
+
+2πix
+
+with e
+
+.
+
+For f(g) a function on XGL2
+
+, we denote its constant term fN and Whittaker function Wf by
+
+Z Z
+
+\[
+
+fN (g) := f(n(x)g)dx, Wf (g) = \psi(x)f(n(x)g)dx \tag{4.2}
+
+\]
+
+### A/F A/F
+
+and one has the Fourier expansion
+
+\[
+
+f(g) = fN (g) + X Wf (a(y)g) \tag{4.3}
+
+\]
+
+\[
+
+y\in F \times
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 69
+
+\[
+
+4.1.4. Representations. — In this section, \pi will be a standard automorphic representation on GL \tag{2}
+
+\]
+
+\[
+
+, and C(\pi) will be its analytic conductor, i.e. if \pi = \otimes \pi v, then C(\pi) = Q
+
+\]
+
+v C(πv), the right-hand quantities as in §3.1.8.
+
+\[
+
+If \pi is such, then \pi carries a canonical inner product, and we shall always regard it as a unitary representation with respect to this inner product; we fix
+
+moreover an inner product on each \pi v compatibly with this choice. Therefore, if we say, =let f = \otimes fv \in \pi = \otimes \pi v,” we always have
+
+\]
+
+hf, fi = Y hfv, fvi.
+
+v
+
+\[
+
+Remark. — Here is a note of warning in connection with this terminology. Suppose \pi = \otimes \pi v is a standard automorphic representation. The map f_7\to Wf
+
+intertwines \pi with \otimes vW(\pi v). This map is not an isometry when \pi is endowed with the canonical inner product, and each Whittaker model is endowed
+
+with the norm \tag{3.8}
+
+\]
+
+\[
+
+. See §2.2.2. 4.1.5. Infinite product notation. — We denote by \Lambda(\pi,s) resp. L(\pi,s)
+
+\]
+
+the completed L-function of π, resp. the L-function omitting archimedean factors.
+
+Let us adopt the following notational conventions, to be held in force
+
+through the rest of the paper:
+
+\[
+
+- First of all, if \pi is an automorphic representation, we shall understand the notation A \pi B to mean =there exists absolute constants a, b
+
+\]
+
+b \|B\|.
+
+so that \|A\| 6 aC(π)
+
+- We continue with the already established convention: if we write
+
+\|\`(f)\|  S(f), we mean that there exists a constant d, depending only on [F : Q], so that \|\`(f)\|  Sd(f).
+
+\[
+
+- (Regularizing products over places.) Suppose that \Lambda_1, \Lambda 2(s) are (completed) global L-function with local factors L1v(s), L2v(s); let s_0 be so
+
+that | L1v \tag{s0}
+
+\]
+
+\[
+
+6= 0 and L2v \tag{s0}
+
+\]
+
+\[
+
+6= 0 for all v, and so that \Lambda_1 is holomorphic at | |
+
+\]
+
+| --- | --- |
+
+| s0; and suppose that Ev is a function on places of F with the property |  |
+
+| that Ev = L1v(s0)/L2v(s0) for almost all v. |  |
+
+\[
+
+| \tag{s0}
+
+\]
+
+\[
+
+to be \Lambda 1(s_0)/\Lambda^* (s_0), where \Lambda Put \Lambda^* | (s_0) is the first nonvanishing^* |
+
+\]
+
+| 2 | 2 |
+
+\[
+
+| Laurent coefficient of \Lambda_2 at s = s_0. In particular, \Lambda | \tag{s0}
+
+\]
+
+\[
+
+= \Lambda_1 \tag{s0}
+
+\]
+
+\[
+
+/\Lambda 2 \tag{s0}
+
+\]
+
+\[
+
+^* | | if \Lambda_2 is holomorphic and nonvanishing at s = s_0; we define L | S,^* \tag{s0}
+
+\]
+
+\[
+
+in the | | same way, omitting the factors at v \in S. We shall then write: | |
+
+\]
+
+Ev Ev
+
+\[
+
+Y^* def = \Lambda \tag{s0}
+
+\]
+
+\[
+
+Y S,^* (s) Y Y Ev^* Ev
+
+\]
+
+= L .
+
+\[
+
+L1v \tag{s0}
+
+\]
+
+\[
+
+/L2v(s_0) L1v(s_0)/L2v(s_0) v v v\in S v /\in S
+
+\]
+
+#### 70 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+where the second equality holds for any finite set of places S; we shall often use it with S the set of all archimedean places.
+
+4.1.6. Eisenstein series. — Given two characters χ +, χ− of F ×\\A× +, χ−) or χ + χ − the representation of GL2(A) unitarily induced from the corresponding
+
+representation on
+
+whose product is unitary, we denote by I(χ
+
+B(A): the L 2
+
+-space of functions f on GL2(A) such that
+
+Z
+
+\[
+
+a b_1/2 +(a)\chi\|f(k)\| 2 f(g) = \|a/d\| -(d)f(g), hf, fi = dk. 0 d A \chi
+
+\]
+
+K
+
+Given f in such a space, we denote by E(f) = Eis(f) the corresponding
+
+Eisenstein series (defined by analytic continuation, in general), i.e.
+
+Eis(f) := X f(γg).
+
+#### B(F)\\ GL2(F)
+
+\[
+
+For s a complex parameter and \pi = I(\chi +,\chi -) we set
+
+\]
+
++\|.\| s
+
+\[
+
+\pi s = \pi(s) = I(\chi -s A,\chi -\|.\| A) \tag{4.4}
+
+\]
+
+\[
+
+and for f \in \pi we define fs = f(s) to be the unique function in \pi(s) whose restriction to K coincide with f.
+
+\]
+
+4.1.7. Fourier coefficients of Eisenstein series. — Given an Eisenstein
+
+series, Eis(f), its constant term is given by:
+
+Z
+
+\[
+
+Eis(f)N (g) = f(g) + f(wn(x)g)dx \tag{4.5}
+
+\]
+
+\[
+
+A The Eisenstein series has a pole at the point \chi +/\chi - = \| ·\|A coming
+
+\]
+
+from its constant term; the residue, with respect to the coordinate s as in (4.4), is given by
+
+\[
+
+Z_1 \xi^* \tag{1}
+
+\]
+
+\[
+
+\int Y^* fv(wn(x))dx = (discF) F f(k); \tag{4.6}
+
+\]
+
+\[
+
+-\frac{1}{2} 2 \xi F (2)k\in K
+
+\]
+
+v
+
+\[
+
+^* \tag{1}
+
+\]
+
+\[
+
+:= ress=1\xi F (s); see \tag{3.2}
+
+\]
+
+\[
+
+and discussion thereafter.
+
+\]
+
+with ξ
+
+F
+
+The other Fourier coefficients of Eisenstein series are determined by the
+
+Whittaker function:
+
+Z
+
+\[
+
+Wf,v, f(wn(x)g)\psi(x)dx = Y
+
+\]
+
+WEis(f)(g) =
+
+F\\A
+
+v
+
+Z
+
+Wf,v(g) = fv(wn(x)g)ψv(x)dx.
+
+x∈Fv
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 71
+
+Z
+
+\[
+
+Wf,v(a(y)) = \|y\| 1/2\chi -(y) fv(wn(x))\psi v(xy)dx.
+
+\]
+
+x∈Fv
+
+Let us recall that in §2.2.1, we have discussed two possible norms on
+
+Eisenstein series: the Eisenstein norm hEis(f), Eis(f)iEis = hf, fi and the
+
+canonical norm hEis(f), Eis(f)ican formed out of the inner products of the local Whittaker functions Wf,v (cf. (2.5) and (2.3)). In view of §3.1.10 and
+
+the remark in §3.1.6, we have the following relation – if Λ(π, Ad, 1) has a
+
+/2
+
+\[
+
+simple pole - (recall that \eta kv = q -d\psi v v \zeta v \tag{1}
+
+\]
+
+\[
+
+2/\zeta v(2))
+
+\]
+
+1/2 hfv, fviηkv
+
+\[
+
+hEis(f), Eis(f)ican = \Lambda(\pi,Ad,1)2\xi F \tag{2}
+
+\]
+
+\[
+
+(discF) Y
+
+\]
+
+∗
+
+\[
+
+\xi^* \tag{1}
+
+\]
+
+\[
+
+\zeta v(1)Lv(\pi,Ad,1)/\zeta v(2)F
+
+\]
+
+v
+
+\[
+
+= 2\xi F \tag{2}
+
+\]
+
+\[
+
+hf, fi = 2\xi F \tag{2}
+
+\]
+
+\[
+
+hEis(f), Eis(f)iEis.
+
+\]
+
+4.1.8. The intertwiner operator. — The map M : f 7→ R f(wn(x)g)dx
+
+x∈A
+
+that occurs in (4.5) is the standard intertwining operator. It is an isometry
+
+± are unitary. We shall need
+
+on the “unitary axis,” i.e. when the characters χ at several points to study its analytic behavior off the analytic axis.
+
+\[
+
+\Lambda(\chi +/\chi -,0) (\chi + /\chi - + /\chi - \bar{YM},\psi v,0)L(\chi,1) M = v v v v (\chi +/\chi -,0)\Lambda(\chi +/\chi -,1) v, \bar{M} v := L(\chi +
+
+/\chi -
+
+\]
+
+v v , 0)  Mv.
+
+Here Mv : I(χ + ) 7→ I(χ ), f_7→ R f(wn(x)g)dx; the operator M¯
+
+−
+
+\[
+
+v, \chi - v v, \chi + v x\in Fv v
+
+\]
+
+has the advantage of being holomorphic in χ +
+
+v , χ− v . In view of the functional +/χ−,0) equation, the global correction factor Λ(χ (χ+/χ−,1)Λ(χ+/χ−,1) has absolute value_1
+
+(it is the “scattering matrix”) although it may not be equal to 1.
+
+By §3.1.6, M¯
+
+v takes the spherical vector with value 1 on K, to the
+
+\[
+
+spherical vector with value_1 on K, for almost all v. More generally, it preserves norms up to a scalar depending only on \psi : [26, Section_4]. Lemma. — Let
+
+fv \in I(\chi +). Suppose that\|s\| 6 \delta_0, and the deformation fv,s (s \in C) is as in §3.1.11. Then there exists d so that: v, \chi - v
+
+\]
+
+Z
+
+\|M¯ (f), \|M¯ 2 Sdδ0 (fv) 2
+
+sup
+
+\[
+
+vfv,s(k)\| SI d vfv,s(k)\| \tag{4.9}
+
+\]
+
+\[
+
+k\in K_k\in K
+
+\]
+
+Proof. — Because of (3.11), and with notation as contained there,
+
+\[
+
+\bar{M} 0 (Wf), where \chi_0 = \alpha is \chi -1/2/\chi -, and \bar{where}+ \chi
+
+\]
+
+vf(1) is proportional to ¯\`
+
+R W(y)\chi(y)d×y
+
+the “normalized” functional
+
+\[
+
+L(1/2,\pi \otimes \chi), for W \in W(\pi,\psi). More precisely,
+
+\]
+
+M¯ 0 (f), where
+
+χ
+
+\[
+
+vf \tag{1}
+
+\]
+
+\[
+
+= \bar{Υ}+ Lv(1,\chi + /\chi -)(0,\psi v,\chi + /\chi -)\zeta v \tag{1}
+
+\]
+
+\[
+
+\frac{1}{2} Υ = \zeta_k \tag{1}
+
+\]
+
+\[
+
+-1 \eta v v v v k (\alpha,\psi,0) .
+
+\]
+
+#### 72 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Applying the local functional equation shows that M¯
+
+vfv(1) is given by:
+
+Υ
+
+¯\` 00(Wf ) 1/2 /χ+.
+
+χ
+
+\[
+
+(\pi,\chi_0,1/2), \chi 00 = \alpha The local bound supk\in Kv\|M¯ (f), now follows from Proposition_3.2.3 together with the following observation: the smallest
+
+\]
+
+vfs(k)\|  SI d0
+
+the local Laplacian \Delta v on I(χ + ) is bounded below by a positive power v , χ− v
+
++) + Condv(χ −)). This (a simpler form of Lemma 2.18) allows us
+
+of (Condv(χ to absorb dependencies on χ ± into the Sobolev norm.
+
+To obtain the stated bound for R \|M¯ 2
+
+k∈K vfv,s(k)\| , we interpolate, taking
+
+into account the equality: kM¯
+
+vfv,skL2(Kv) ψ kfvkL2(Kv) whenever <(s) = 0.
+
+This argument is analogous to the interpolation in the proof of Proposition 3.2.4.  ut
+
+We now give a global analogue of this statement:
+
+\[
+
+4.1.9. Lemma. — Let f \in I(\chi +,\chi -). Suppose that\|s\| 6 \delta_0, and the deformation fs (s \in C) is as in \tag{4.4}
+
+\]
+
+\[
+
+. Then there exists d so that
+
+\]
+
+Z
+
+\|Mfs(k)\|  SI (f), \|Mfs(k)\| 2  SI (f) 2
+
+sup
+
+\[
+
+d d\delta 0 \tag{4.10}
+
+\]
+
+\[
+
+k\in K_k\in K
+
+\]
+
+Proof. — An application of (S1d) to the previous Lemma gives the first
+
+\|Mfs(k)\| 2dk is bounded by S I (f).
+
+statement. From this, it follows that R
+
+k∈K d0
+
+In order to deduce the second statement, we observe that R \|Mfs(k)\| 2dk =
+
+k∈K
+
+\[
+
+kfk_2 I when <(s) = 0, and then interpolate, as in the proof of Proposition_3.2.4. ut
+
+\]
+
+4.1.10. The Eisenstein series at a singular parameter. — It will also
+
+\[
+
+be of interest to consider the Eisenstein series associated to \chi + = \chi - = 1.At this point, the map f_7\to (g_7\to R f(wn(x)g)dx) is the negative of the
+
+\]
+
+x∈A
+
+\[
+
+identity map, and accordingly the Eisenstein intertwiner vanishes to order one. Write Eis^* for the (normalized) intertwiner from I(1,1) to C \infty (X), given
+
+by: f_7\to \xi F (1 + 2s)Eis(fs)\|s=0. For f = Q fv factorizable, let us define hEis^* (f), Eis^* (f)ican via \tag{2.5}
+
+\]
+
+\[
+
+and
+
+\]
+
+v
+
+(2.3).
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 73
+
+Then, if f ∈ I(1, 1), then the constant term
+
+(4.11) Eis∗ (f)N (a(y)g)
+
+1 Z
+
+\[
+
+\xi^* \tag{1}
+
+\]
+
+\[
+
+d\|y\| 1/2+s fs(wn(x)g)dx +\|y\| 1/2-s fs(g)
+
+\]
+
+= − F
+
+2 ds\|s=0
+
+x∈A
+
+\[
+
+\xi^* \tag{1}
+
+\]
+
+\[
+
+(2f(g)\|y\| \frac{1}{2} \log y - M^* f(g)\|y\| \frac{1}{2})
+
+\]
+
+= F
+
+f is the derivative, at s = 0, of fs + R fs(wn(x)g)dx; as usual,
+
+where M∗
+
+x∈A
+
+this needs to be interpreted by a process of analytic continuation.
+
+Trivial bounds on M∗ follow from bounds on intertwining operators in
+
+§4.1.8 (in particular, one may bound the derivative of an analytic function by bounding its value on a small circle around the point of interest). This
+
+(I(1, 1)), we have
+
+shows that, for every ϕ belonging to the space of Eis∗
+
+\[
+
+\frac{1}{2} \log\|y\|S\pi(\varphi), \tag{4.12}
+
+\]
+
+\[
+
+\varphi N (a(y)g)\|y\| Now take f = f_0 to be the spherical vector in I(1,1), normalized so that f_0\|K = 1. The function M^* f_0 is continuous, and thus
+
+bounded on compact sets; it follows from \tag{4.11}
+
+\]
+
+\[
+
+that there exists X_0 so that Eis^* (f_0)(x) ht(x) \log ht(x), ht(x) > X_0. (4.13) 4.2. Hecke integrals on PGL2
+
+\]
+
+In this section we shall study the Hecke integral for the standard Lfunction on GL2, and we shall give some bounds on the Hecke integral of a
+
+translate of a given vector, using the method described in §2.5.2, Remark.
+
+4.2.1. The Hecke-Jacquet-Langlands integral. — We recall in this section the integral representation for the standard L-function on GL2, following
+
+Jacquet and Langlands. Let χ be a character of A×/F ×; the integral
+
+Z
+
+\[
+
++ \chi(\varphi) := (\varphi - \varphi N)(a(y))\chi(y)d \times y \tag{4.14}
+
+\]
+
+### A×/F ×
+
+defines a functional on the space of any standard generic automorphic representation π. Indeed, it is absolutely convergent if π is cuspidal, and, in
+
+general, can be interpreted by analytic continuation in the χ variable.
+
+It was observed by Hecke, and generalized by Jacquet and Langlands,
+
+\[
+
+that the period + \chi is very closely related to the standard L-function: if \varphi =
+
+\]
+
+#### 74 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+\otimes \varphi v is a pure tensor in \pi, and we factorize the associated Whittaker function (see \tag{4.2}
+
+\]
+
+\[
+
+) as W\varphi = Q
+
+\]
+
+v Wϕ,v , one has:
+
+!
+
+\[
+
++ \chi v (W\varphi,v) + \chi(\varphi) = Y^* + \chi v (W\varphi,v) = \Lambda(\pi \otimes \chi,1/2)Y, \tag{4.15}
+
+\]
+
+\[
+
+L(\pi v \otimes \chi v,1/2) v v for + \chi v (W\varphi,v) the local Hecke functionals defined in §3.3. The verification of (4.15) is =unfolding.” It is valid
+
+for \pi Eisenstein, even in the singular case.
+
+\]
+
+We will use also use the following “canonically normalized” expression,
+
+\[
+
+given in terms of matrix coefficients and which follows from §3.25 and §2.2.2)(cf. the Remark in §2.5.2): for \chi a unitary character, and \pi standard,\|+
+
+\chi(\varphi)\| 2 2\xi F \tag{2}
+
+\]
+
+\[
+
+(discF) \frac{1}{2} h \chi(\varphi v)
+
+\]
+
+Y∗ (4.16) =
+
+\[
+
+h\varphi, \varphi ican \xi^* \tag{1}
+
+\]
+
+\[
+
+-1 h\varphi v, \varphi vi
+
+\]
+
+F
+
+v
+
+\[
+
+where almost all local factors in the last product are equal to\|Lv(\pi \otimes \chi,1/2)\| \zeta v \tag{1}
+
+\]
+
+\[
+
+Lv(\pi,Ad,1)/\zeta v \tag{2}
+
+\]
+
+\[
+
+. Again, this formula is valid for \pi Eisenstein, even at singular points; of course, at singular points, the regularization implicit in Q^* involves taking a
+
+higher residue of L(s,\pi,Ad) at s = 1.
+
+\]
+
+It should be noted that the right-hand sides of (4.16) and (4.15) make
+
+sense for all χ, even when the left-hand sides must be interpreted by analytic continuation.
+
+4.2.2. Bounds for the Hecke integral of the translate of a function. —
+
+\[
+
+Lemma. — Let \pi be a generic automorphic representation of PGL2. For \varphi \in \pi, any g \in PGL2(A), and unitary \chi : there is an absolute constant d so
+
+that\|+ (g.\varphi)\| \pi,\chi disc(Y g) 1-2\theta(\varphi), \chi - \pi
+
+\]
+
+32 S
+
+d
+
+Here disc(Y g) is the discriminant of the adelic torus orbit Y g as defined in \[21\] – see below – and the unitary structure on π is the canonical norm.
+
+The paper [21, 4.1–4.2] attaches to the adelic torus orbit Y g local and
+
+global discriminants, denoted, respectively, as discv(Y g) and disc(Y g). Although most of that paper deals with the case of adelic points of anisotropic
+
+tori, the definition is perfectly applicable to the split adelic torus H. For our purposes, it is enough to know that, for the special case g0 = n(T), \|T\|A >
+
+1 we have: discv(Y g) max(1, \|T\| 2 ), disc(Y g) Y_2 ) > \|T\| 2
+
+max(1, \|T\| A.  (4.17) v v
+
+v
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 75
+
+Remark. — The exponent − 1−2θ
+
+32 is certainly not best possible: it is
+
+taken from the general computations of loc. cit., which are in no way optimal for PGL2 (see for instance \[15\] for better bounds of similar integrals.) What is
+
+important to us, in this paper, is that this exponent is negative.
+
+Proof. — By (4.16) and (2.8), we have:
+
+Z Z
+
+\[
+
+\|+ \chi v (gv · \varphi v)\| 2 = ha(y)g.\varphi v, g.\varphi vi\chi v(y)d \times y = hg \times y -1 a(y)g.\varphi v, \varphi vi\chi v(y)d
+
+\]
+
+F × F × v v
+
+Z
+
+(ϕv) 2 Ξv(g_1−2θ d ×y
+
+−1 a(y)g)
+
+Sπv
+
+F × v
+
+1−2θ (ϕv) 2 − πv
+
+16 S
+
+discv(Y g) .
+
+The bound in the last step is carried out, in a more general setting in
+
+\[21, Lemma 9.14\], and we do not reproduce it here.
+
+\[
+
+Write Lv = L(\pi v \otimes \chi v,1/2)/L(\pi v,Ad,1)1/2
+
+\]
+
+. We are going to apply Property (1d) of Sobolev norms to Q

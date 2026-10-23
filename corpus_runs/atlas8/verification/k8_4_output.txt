@@ -1,0 +1,6 @@
+K8-4: linear_circle_sieve unshared points == classical primes
+  N=    30  sieve primes=10  classical=10  match=True
+  N=   200  sieve primes=46  classical=46  match=True
+  N=  2000  sieve primes=303  classical=303  match=True
+  N= 10000  sieve primes=1229  classical=1229  match=True
+VERDICT: verified

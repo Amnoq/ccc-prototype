@@ -1,0 +1,475 @@
+seen above. Likewise, the category CIy,χy appears to be the correct replacement for the vector subspace of Iy-invariants in a representation πy of G(Fy). In
+
+retrospect, this does not look so outlandish, because the category of bg-modules itself may be viewed as a “representation” of the loop group G((t)). Indeed, we
+
+have the adjoint action of the group G((t)) on bg, and this action gives rise to an “action” of G((t)) on the category of bg-modules. So it is the loop group
+
+G((t)) that replaces G(F) in the geometric context, while the affine Kac-Moody algebra bg of critical level appears as a tool for building categories equipped
+
+with an action of G((t))! This point of view has been developed in \[44\], where various conjectures and results concerning these categories may be found. Thus,
+
+representation theory of affine Kac-Moody algebras and conformal field theory give us a rare glimpse into the magic world of geometric Langlands
+
+correspondence.
+
+# Index
+
+### D-module, 5, 40
+
+Hecke correspondence, 43
+
+holonomic, 41, 112
+
+Hecke eigensheaf, 4, 45, 46, 49, 64, 65, 100, 105, 112, 116, 118
+
+twisted, 5, 77, 80
+
+| with regular singularities, 42 | Hecke functor, 45 |  |
+
+| --- | --- |  |
+
+| W-algebra, 99 | Hecke operator, 22, 31, 44, 45 |  |
+
+| classical, 94 | Hitchin system, 71, 111 |
+
+| duality isomorphism, 100
+
+| \ell-adic representation, 28 | inertia group, 13 |  |
+
+| --- | --- |  |
+
+| \ell-adic sheaf, 37 | intersection cohomology sheaf, 61 |  |
+
+| ∨, dual Coxeter number, 85 h |  |  |
+
+|  | Langlands correspondence, 16, 31 |  |
+
+| p-adic integer, 10 |  |  |
+
+geometric, see also geometric Langlands correspondence
+
+### p-adic number, 10
+
+### ∨
+
+r , lacing number, 100
+
+local, 117
+
+|  | Langlands dual group, 3, 58, 59, 100 |  |
+
+| --- | --- |  |
+
+| abelian class field theory (ACFT), 11, 12, 15 |  |  |
+
+|  | Lie algebroid, 80 |  |
+
+| ad`ele, 11 |  |  |
+
+|  | local system, 33 |  |
+
+| admissible representation, 117 |  |  |
+
+### \ell-adic, 37
+
+| affine Grassmannian, 61, 62, 82, 109 |  |  |
+
+| --- | --- |  |
+
+| affine Hecke algebra, 117 | irreducible, 47 |  |
+
+| affine Kac-Moody algebra, 61 | ramified, 35 |
+
+trivial, 47
+
+chiral algebra, 86 cuspidal, 18, 19, 29
+
+| algebraic closure, 10 |  |  |
+
+| --- | --- |  |
+
+|  | maximal abelian extension, 10 |  |
+
+| automorphic representation, 16 |  |
+
+\[1\] R.P. Langlands, Problems in the theory of automorphic forms, in Lect. Notes in Math. 170, pp. 18–61, Springer Verlag, 1970.\[2\] P. Goddard, J. Nuyts and
+
+D. Olive, Gauge Theories and Magnetic Change, Nuclear Phys. B125 (1977) 1–28.\[3\] E. Witten, Talk at the DARPA Workshop on the Langlands Program and Physics,
+
+IAS, March 2004; Gauge theory and the geometric Langlands Program, notes of a talk at the Third Simons Workshop, SUNY at Stony Brook, August 2005, available at
+
+http://insti.physics.sunysb.edu/itp/conf/ simonswork3/talks/Witten.pdf \[4\] A. Kapustin, Wilson-’t Hooft operators in four-dimensional gauge theories and
+
+S-duality, Preprint hep-th/0501015.\[5\] E. Witten, Quantum field theory, Grassmannians, and algebraic curves, Comm. Math. Phys. 113 (1988) 529–600.\[6\] A.
+
+Belavin, A. Polyakov and A. Zamolodchikov, Infinite conformal symmetries in two–dimensional quantum field theory, Nucl. Phys. B241 (1984) 333–380.\[7\] D.
+
+Friedan and S. Shenker, The analytic geometry of two-dimensional conformal field theory, Nucl. Phys. B281 (1987) 509–545.\[8\] G. Segal, The definition of
+
+conformal field theory, in Topology, geometry and quantum field theory, pp. 421–577, London Math. Soc. Lecture Note Ser. 308, Cambridge University Press,
+
+2004.\[9\] V. Knizhnik and A. Zamolodchikov, Current algebra and Wess–Zumino model in two dimensions,
+
+|  | Nucl. Phys. B247 (1984) 83–103. |  |
+
+| --- | --- |  |
+
+| [10] E. Witten, Non-abelian bosonization in two dimensions, Comm. Math. Phys. 92 (1984) 455–472. |  |  |
+
+| [11] B. Feigin and E. Frenkel, Affine Kac-Moody algebras at the critical level and Gelfand-Dikii algebras, |  |
+
+|  | Int. J. Mod. Phys. A7, Suppl. 1A (1992) 197–215. |  |
+
+| [12] E. Frenkel, Wakimoto modules, opers and the center at the critical level, Adv. Math. 195 (2005) |  |
+
+|  | 297–404 (math.QA/0210029). |  |
+
+| [13] V. Drinfeld and V. Sokolov, Lie algebras and KdV type equations, J. Sov. Math. 30 (1985) 1975–2036. |  |
+
+| [14] A. Beilinson and V. Drinfeld, Opers, Preprint math.AG/0501398. |  |
+
+| [15] A. Beilinson and V. Drinfeld, Quantization of Hitchin’s integrable system and Hecke eigensheaves, |  |
+
+|  | available at http://www.math.uchicago.edu/∼arinkin/langlands |  |
+
+| [16] A. Polyakov and P. Wiegmann, Goldstone fields in two dimensions with mutivalued actions, Phys. |  |
+
+|  | Lett. 141B (1984) 223–228. |  |
+
+| [17] A. Beilinson and V. Drinfeld, Chiral algebras, American Mathematical Society Colloquium Publications 51, AMS, 2004. |  |
+
+| [18] A. Beilinson, Langlands parameters for Heisenberg modules, Preprint math.QA/0204020. |  |
+
+| [19] D. Gaitsgory, Notes on 2D conformal field theory and string theory, in Quantum fields and strings: a |  |
+
+|  | course for mathematicians, Vol. 2, pp. 1017–1089, AMS, 1999. |  |
+
+| [20] E. Frenkel and D. Ben-Zvi, Vertex Algebras and Algebraic Curves, Mathematical Surveys and Monographs 88, Second Edition, AMS, 2004. |  |
+
+| [21] J. Arthur, Automorphic representations and number theory in Seminar on Harmonic Analysis (Montreal, 1980), pp. 3–51, CMS Conf. Proc. 1, AMS, 1981; The |  |
+
+principle of functoriality, Bull. AMS 40 |  |
+
+|  | (2002) 39–53. |  |
+
+| [23] A.W. Knapp, Introduction to the Langlands program, in Representation theory and automorphic forms |  |
+
+|  | (Edinburgh, 1996), pp. 245–302, Proc. Symp. Pure Math. 61, AMS, 1997. |  |
+
+| [24] M.R. Murty, A motivated introduction to the Langlands program, in Advances in number theory |  |
+
+|  | (Kingston, ON, 1991), pp. 37–66, Oxford Univ. Press, 1993. |  |
+
+| [25] S. Gelbart, An elementary introduction to the Langlands program, Bull. Amer. Math. Soc. 10 (1984) |  |
+
+|  | 177–219. |  |
+
+| [26] G. Laumon, Travaux de Frenkel, Gaitsgory et Vilonen sur la correspondance de Drinfeld-Langland, |  |
+
+|  | S´eminaire Bourbaki, Exp. No. 906 (math.AG/0207078). |
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 125
+
+| [27] J. Bernstein and S. Gelbart, eds., An Introduction to the Langlands Program, Birkh¨auser, 2004. |  |  |
+
+| --- | --- |  |
+
+| [28] E. Frenkel, Affine algebras, Langlands duality and Bethe ansatz, in Proceedings of the International |  |
+
+|  | Congress of Mathematical Physics, Paris, 1994, ed. D. Iagolnitzer, pp. 606–642, International Press, |  |
+
+|  | 1995 (q-alg/9506003). |  |
+
+| [29] E. Frenkel, Recent Advances in the Langlands Program, Bull. AMS 41 (2004) 151–184 |  |
+
+|  | (math.AG/0303074). |  |
+
+| [30] N. Koblitz, p-adic numbers, p-adic analysis, and zeta-functions, Graduate Texts in Mathematics 58, |  |
+
+|  | Springer-Verlag, 1977. |  |
+
+| [31] R. Langlands, Letter to A. Weil, January 1967, available at http://www.sunsite.ubc.ca/ |  |
+
+|  | DigitalMathArchive/Langlands/functoriality.html #weil1967 |  |
+
+| [32] S. Kudla, From modular forms to automorphic forms, in [27], pp. 133–152. |  |
+
+| [33] E. de Shalit, L–functions of elliptic curves and modular forms, in [27], pp. 89–108. |  |
+
+| [34] R. Taylor, Galois representations, available at http://abel.math.harvard.edu/∼rtaylor |  |
+
+| [35] K. Ribet, Galois representations and modular forms, Bull. AMS 32 (1995) 375–402. |  |
+
+| [36] D. Bump, Automorphic Forms and Representations, Cambridge Studies in Advanced Mathematics |  |
+
+|  | 55, Cambridge University Press, 2004. |  |
+
+| [37] H. Carayol, Sur les repr´esentations \ell-adiques associ´ees aux formes modulaires de Hilbert, Ann. Sci. |  |
+
+|  | Ecole Norm. Sup. (4) ´  19 (1986) 409–468. |  |
+
+| [38] A. Wiles, Modular elliptic curves and Fermat’s last theorem, Ann. of Math. (2) 141 (1995) 443–551. |  |
+
+|  | R. Taylor and A. Wiles, Ring-theoretic properties of certain Hecke algebras, Ann. of Math. (2) 141 |  |
+
+|  | (1995) 553–572. |  |
+
+|  | C. Breuil, B. Conrad, F. Diamond and R. Taylor, On the modularity of elliptic curves over Q: wild |  |
+
+|  | 3-adic exercises, J. Amer. Math. Soc. 14 (2001) 843–939. |  |
+
+| [39] V.G. Drinfeld, Two-dimensional \ell–adic representations of the fundamental group of a curve over a |  |
+
+|  | finite field and automorphic forms on GL(2), Amer. J. Math. 105 (1983) 85–114. |  |
+
+| [41] L. Lafforgue, Chtoucas de Drinfeld et correspondance de Langlands, Invent. Math. 147 (2002) 1–241. |  |
+
+|  | (Helsinki, 1978), pp. 565–574; Moduli varieties of F–sheaves, Funct. Anal. Appl. 21 (1987) 107–122; |  |
+
+|  | The proof of Petersson’s conjecture for GL(2) over a global field of characteristic p, Funct. Anal. Appl. |  |
+
+|  | 22 (1988) 28–43. |  |
+
+| [41] L. Lafforgue, Chtoucas de Drinfeld et correspondance de Langlands, Invent. Math. 147 (2002) 1–241. |  |
+
+| [42] A.N. Parshin, Abelian coverings of arithmetic schemes, Sov. Math. Dokl. 19 (1978) 1438–1442. |  |
+
+|  | K. Kato, A generalization of local class field theory by using K–groups, J. Fac. Sci. Univ . Tokyo, Sec. |  |
+
+|  | 1A 26 (1979) 303–376. |  |
+
+| [43] M. Kapranov, Analogies between the Langlands correspondence and topological quantum field theory, |  |
+
+|  | in Functional analysis on the eve of 21st century, S. Gindikin, J. Lepowsky, R. Wilson (eds.), vol. 1, |  |
+
+|  | Progress in Math. 131, p. 119–151, Birkh¨auser, 1995. |  |
+
+| [44] E. Frenkel and D. Gaitsgory, Local geometric Langlands correspondence and affine Kac-Moody algebras, |  |
+
+|  | Preprint math.RT/0508382. |  |
+
+| [45] J.S. Milne, Etale cohomology ´  , Princeton University Press, 1980. |  |
+
+| [46] E. Freitag, R. Kiehl, Etale Cohomology and the Weil conjecture, Springer, 1988. |  |
+
+| [47] G. Laumon, Transformation de Fourier, constantes d’´equations fonctionelles et conjecture de Weil, |  |
+
+|  | Publ. IHES 65 (1987) 131–210. |  |
+
+| [48] A. Beilinson, J. Bernstein, P. Deligne, Faisceaux pervers, Ast´erisque 100 (1982). |  |
+
+| [49] M. Kashiwara and P. Schapira, Sheaves on Manifolds, Springer, 1990. |  |
+
+| [50] S.I. Gelfand and Yu.I. Manin, Homological Algebra, Encyclopedia of Mathematical Sciences 38, |  |
+
+|  | Springer, 1994. |  |
+
+| [51] J. Bernstein, Algebraic theory of D–modules, available at http://www.math.uchicago.edu/∼arinkin/ |  |
+
+|  | langlands |  |
+
+| [52] Ch. Sorger, Lectures on moduli of principal G–bundles over algebraic curves, in School on algebraic geometry (Trieste, 1999), ICTP Lecture Notes 1, ICTP, |  |
+
+Trieste, pp. 1–57, available at |  |  |
+
+|  | http://www.ictp.trieste.it/∼pub off/lectures |  |
+
+| [53] G. Laumon, L. Moret-Bailly, Champs alg´ebriques, Springer-Verlag, 2000. |  |
+
+| [54] A. Borel, e.a., Algebraic D–modules, Academic Press, 1987. |  |
+
+| 126  EDWARD FRENKEL |  |  |
+
+| --- | --- |  |
+
+| [55] E. Frenkel, D. Gaitsgory and K. Vilonen, On the geometric Langlands conjecture, Journal of AMS 15 |  |
+
+|  | (2001) 367–417. |  |
+
+| [56] D. Gaitsgory, On a vanishing conjecture appearing in the geometric Langlands correspondence, Ann. |  |
+
+|  | Math. 160 (2004) 617–682. |  |
+
+| [57] G. Laumon, Correspondance de Langlands g´eom´etrique pour les corps de fonctions, Duke Math. J. 54 |  |
+
+|  | (1987) 309-359. |  |
+
+| [58] G. Laumon, Faisceaux automorphes pour GLn: la premi`ere construction de Drinfeld, Preprint alggeom/9511004. |  |
+
+| [59] G. Laumon, Faisceaux automorphes li´es aux s´eries d’Eisenstein, in Automorphic forms, Shimura varieties, and L-functions, Vol. I (Ann Arbor, MI, 1988), |  |
+
+pp. 227–281, Perspect. Math. 10, Academic |  |
+
+|  | Press, 1990. |  |
+
+| [60] D. Gaitsgory, Automorphic sheaves and Eisenstein series, Ph.D. thesis, 1997. |  |
+
+| [61] A. Braverman and D. Gaitsgory, Geometric Eisenstein series, Invent. Math. 150 (2002) 287–384. |  |
+
+| [62] V. Drinfeld, Talk at the DARPA Workshop at University of Chicago, November 2003, notes available |  |
+
+|  | at http://math.northwestern.edu/langlands/Meetings/03 Chgo/Drinfeld I |  |
+
+| [63] J. Arthur, Unipotent automorphic representations: conjectures, Asterisque 171-172 (1989) 13–71. |  |
+
+| [64] J.-P. Serre, Algebraic Groups and Class Fields, Springer, 1988. |  |
+
+| [65] G. Laumon, Transformation de Fourier g´en´eralis´ee, Preprint alg-geom/9603004. |  |
+
+| [66] M. Rothstein, Connections on the total Picard sheaf and the KP hierarchy, Acta Applicandae Mathematicae 42 (1996) 297–308. |  |
+
+| [67] I. Satake, Theory of spherical functions on reductive algebraic groups over p–adic fields, IHES Publ. |  |
+
+|  | Math. 18 (1963) 5–69. |  |
+
+| [68] T.A. Springer, Reductive groups, in Automorphic forms, representations and L–functions, Proc. Symp. |  |
+
+|  | Pure Math. 33, Part 1, pp. 3–27, AMS, 1979. |  |
+
+| [69] I. Mirkovi´c, K. Vilonen, Geometric Langlands duality and representations of algebraic groups over |  |
+
+|  | commutative rings, Preprint math.RT/0401222. |  |
+
+| [70] V. Ginzburg, Perverse sheaves on a loop group and Langlands duality, Preprint alg-geom/9511007. |  |
+
+| [72] D. Arinkin, Orthogonality of natural sheaves on moduli stacks of SL(2)-bundles with connections on |  |
+
+|  | 1 minus 4 points, Selecta Math. (N.S.) 7 (2001) 213–239. P |  |
+
+| [73] S. Lysenko, Global geometrised Rankin-Selberg method for GL(n), Preprint math.AG/0108208. |  |
+
+| [74] D. Ben-Zvi and E. Frenkel, Geometric Realization of the Segal-Sugawara Construction, in Topology, |  |
+
+|  | geometry and quantum field theory, pp. 46–97, London Math. Soc. Lecture Note Ser. 308, Cambridge |  |
+
+|  | University Press, 2004 (math.AG/0301206). |  |
+
+| [74] D. Ben-Zvi and E. Frenkel, Geometric Realization of the Segal-Sugawara Construction, in Topology, |  |
+
+|  | Part 1, pp. 1–50, AMS, 1993. |  |
+
+| [76] A. Polishchuk and M. Rothstein, Fourier transform for D-algebras, Duke Math. J. 109 (2001) 123–146. |  |
+
+| [78] D. Arinkin, Moduli of connections with a small parameter on a curve, Preprint math.AG/0409373. |  |
+
+| [78] D. Arinkin, Moduli of connections with a small parameter on a curve, Preprint math.AG/0409373. |  |
+
+| [78] D. Arinkin, Moduli of connections with a small parameter on a curve, Preprint math.AG/0409373. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [79] A. Kapustin, Topological strings on noncommutative manifolds, Preprint hep-th/0310057. |  |
+
+| [80] N. Hitchin, The self-duality equations on a Riemann surfaces, Proc. London Math. Soc. 55 (1987) |  |
+
+|  | 59–126. |  |
+
+|  | C. Simpson, Constructing variations of Hodge structure using Yang-Mills theory and applications to |  |
+
+|  | uniformization, J. Amer. Math. Soc. 1 (1988) 867–918; Non-abelian Hodge theory, Proceedings of ICM 1990, |  |
+
+|  | Kyoto, pp. 198–230, Springer, 1991. |  |
+
+Stable G–bundles and projective connections, J. Alg. Geom. 2 (1993) 507–568.\[89\] A. Beilinson and D. Kazhdan, Flat projective connections, unpublished
+
+manuscript. \[90\] K. Nagatomo and A. Tsuchiya, Conformal field theories associated to regular chiral vertex operator algebras. I. Theories over the projective
+
+line, Duke Math. J. 128 (2005) 393–471.\[91\] T. Eguchi and H. Ooguri, Conformal and current algebras on a general Riemann surface, Nucl. Phys. B282 (1987)
+
+308–328.\[92\] E. Witten, Quantum field theory and the Jones polynomial, Comm.Math.Phys.121 (1989) 351–399.\[93\] D. Bernard, On the Wess-Zumino-Witten models
+
+on Riemann surfaces, Nuclear Phys. B309 (1988)145–174.\[94\] G. Felder, The KZB equations on Riemann surfaces, in Symm´etries quantiques (Les Houches, 1995),
+
+pp. 687–725, North-Holland, 1998 (hep-th/9609153). \[95\] K. Hori, Global aspects of gauged Wess-Zumino-Witten models, Comm. Math. Phys. 182 (1996) 1–32.\[96\]
+
+A. Beauville and Y. Laszlo, Un lemme de descente, C.R. Acad. Sci. Paris, S´er. I Math. 320 (1995)335–340.\[97\] V. Drinfeld and C. Simpson, B–structures on
+
+G–bundles and local triviality, Math. Res. Lett. 2 (1995)823–829.\[98\] A. Beilinson and V. Schechtman, Determinant bundles and Virasoro algebras, Comm. Math.
+
+Phys. 118 (1988) 651–701.\[99\] A. Beilinson, B. Feigin and B. Mazur, Introduction to algebraic field theory on curves, unpublished manuscript.
+
+\[100\] V. Kac, Infinite-dimensional Lie Algebras, Third Edition. Cambridge University Press, 1990.\[101\] U. Lindstr¨om and M. Zabzine, Tensionless Strings,
+
+WZW Models at Critical Level and Massless Higher Spin Fields, Phys. Lett. B584 (2004) 178–185.\[102\] I. Bakas and C. Sourdis, On the tensionless limit of
+
+gauged WZW models, JHEP 0406 (2004) 049; Aspects of WZW models at critical level, Fortsch. Phys. 53 (2005) 409–417.\[103\] M. Wakimoto, Fock representations of
+
+affine Lie algebra A (1)1 , Comm. Math. Phys. 104 (1986) 605– 609.\[104\] B. Feigin and E. Frenkel, A family of representations of affine Lie algebras, Russ.
+
+Math. Surv. 43 (1988) no. 5, 221–222; Affine Kac-Moody Algebras and semi-infinite flag manifolds, Comm. Math. Phys. 128 (1990) 161–189.\[105\] A. Malikov, V.
+
+Schechtman and A. Vaintrob, Chiral de Rham complex, Comm. Math. Phys. 204 (1999) 439–473.\[106\] E. Witten, Two-Dimensional Models With (0,2) Supersymmetry:
+
+Perturbative Aspects, Preprint hepth/0504078.
+
+\[107\] N. Nekrasov, Lectures on curved beta-gamma systems, pure spinors, and anomalies, Preprint hepth/0511008.
+
+\[
+
+[108] Vl.S. Dotsenko and V.A. Fateev, Conformal algebra and multipoint correlation functions in 2D statistical models, Nucl. Phys. B240 \tag{1984}
+
+\]
+
+\[
+
+312-348. [109] C. Vafa and E. Zaslow, eds., Mirror symmetry, Clay Mathematics Monographs, vol. 1, AMS 2004.[110] A. Zamolodchikov, Integrable field theory from
+
+conformal field theory, in Integrable systems in quantum field theory and statistical mechanics, pp. 641-674, Adv. Stud. Pure Math. 19, Academic Press,
+
+\]
+
+1989.
+
+| 128  EDWARD FRENKEL |  |  |
+
+| --- | --- |  |
+
+| [111] V. Fateev and S. Lykyanov, The models of two-dimensional conformal quantum field theory with Zn |  |  |
+
+|  | symmetry, Int. J. Mod. Phys. A3 (1988) 507–520. |  |
+
+| [112] E. Frenkel and D. Gaitsgory, D-modules on the affine Grassmannian and representations of affine |  |
+
+|  | Kac-Moody algebras, Duke Math. J. 125 (2004) 279–327. |  |
+
+| [113] N. Hitchin, Stable bundles and integrable systems, Duke Math. J. 54 (1987) 91–114. |  |
+
+| [114] G. Laumon, Un analogue global du cˆone nilpotent, Duke Math. J. 57 (1988) 647–671. |  |
+
+| [115] E. Frenkel, Gaudin model and opers, in Infinite Dimensional Algebras and Quantum Integrable |  |
+
+|  | Systems, eds. P. Kulish, e.a., Progress in Math. 237, pp. 1–60, Birkh¨auser, 2005 (math.QA/0407524). |  |
+
+| [116] E. Frenkel, Opers on the projective line, flag manifolds and Bethe Ansatz, Mosc. Math. J. 4 (2004) |  |
+
+|  | 655–705 (math.QA/0308269). |  |
+
+| [117] V.G. Drinfeld, Two-dimensional \ell–adic representations of the Galois group of a global field of characteristic p and automorphic forms on GL(2), J. |  |
+
+Sov. Math. 36 (1987) 93–105. |  |
+
+| [118] J. Heinloth, Coherent sheaves with parabolic structure and construction of Hecke eigensheaves for |  |
+
+|  | some ramified local systems, Ann. Inst. Fourier (Grenoble) 54 (2004) 2235–2325. |  |
+
+| [119] B. Enriquez, B. Feigin and V. Rubtsov, Separation of variables for Gaudin-Calogero systems, Compositio Math. 110 (1998) 1–16. |  |
+
+Department of Mathematics, University of California, Berkeley, CA 94720, USA

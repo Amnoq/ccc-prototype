@@ -1,0 +1,168 @@
+# CONCEPT REGISTRY (162 entities accumulated from earlier chunks c01-c11)
+When the source text discusses the SAME idea as a registry entity,
+set the concept's "id" to the entity's ID (e.g. "E058") instead of coining c1/c2/...
+Only reuse an ID when you are confident it is the same idea/claim/entity.
+When in doubt, coin a fresh id. A wrong reuse corrupts the registry; a missed reuse only coins one duplicate.
+
+E000: Sieve is simplicial complex Δ_z | aka: Δ_x incidence complex of sieve to x; finite incidence complex: vertices primes <=N, faces products <=N -- finite prime subsets = faces; face-sum Möbius inversion
+E001: Three verified positivity kinds, none zero-detecting | aka: Three verified positivity kinds; none detects zeros independently -- none of the three kinds zero-detecting
+E002: Node 11 operator hunt OPEN, CCM live candidate | aka: Node 11 operator hunt open; 11f live candidate -- Berry–Keating conjectural; Möbius-band claim withdrawn
+E003: CCM recovers zeros 1–8 from primes alone -- ε_even=3.48e-59 at N=120; separation 8771×
+E004: Λ=μ∗log exact fuel dictionary | aka: Lambda = mu*log exact theorem: CCM fuel near face-sum weights -- Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ
+E005: Node 12 closed: Weyl kills L1–L3, Deninger survives -- Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+E006: 13d pair hopping GUE-like, ⟨r⟩=0.528 | aka: pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda; shuffled weights also GUE (0.524): TBRE-class generic chaos; robustness: <r>~0.528-0.535 at dim 2048-8192; Delta_3 inconclusive -- ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE
+E007: 13e negative: operator deaf to primes | aka: prime-frequency probe negative: no prime lines; hump f~0.67 -- 13e prime-frequency probe negative
+E008: 14c refined home: Chern roots −u·log p | aka: K-theoretic home: face-weights as F_z'(1) differentiated residues; refined home E_z with differentiated residues -- face-weights = differentiated residues; closes D4↔D6 loop
+E009: 14a obstruction: no ordinary positive geometry carries w(S) | aka: Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries; Ordinary AHBL positive geometry, residues ±1; no ordinary positive geometry: obstruction theorem -- |w({2})|=(log2)/2≈0.347 ≠ ±1
+E010: Failures ledger: 14 dead ends with mechanisms -- 14 items, each with mechanism of death
+E011: Primality = no shared-boundary relation -- definitional reframing; composites = territory overlaps
+E012: Open: Node 8 bridge heuristic, paper approval, build -- paper outline drafted; fabrication files not created
+E013: Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S | aka: weights signed, alternate with face dimension; canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S) -- Σw(S)→1; Dirichlet GF = −ζ′/ζ²
+E014: PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵ | aka: Σw(S) → 1 as X→∞, equivalent to PNT; weighted infinite simplex total weight 1 = PNT; PNT as total weight 1: no prior art -- 0.999922 at 5·10⁵; PNT as total weight 1
+E015: Figueiredo steer: generative process, not implementation | aka: Figueiredo method transferred as process, not implementation -- take generative process; never copy implementation
+E016: Deformation → twin constant 2C₂=1.32032 | aka: Twin constant S(z)->2C_2=1.32032 derived from deformation; deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032 -- 2160 twin lowers verified ≤200000; conjecture itself unproven
+E017: Positivity located in primitives (−ζ′/ζ, δ(z)>0) | aka: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; Alternating signs come only from Moebius factor; Signed face-weights as the fundamental object -- −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1
+E018: 9c closed negative: positivity blind left of Re(s)=1 | aka: 9c: stronger geometric positivity RH-ward; deformations->trig polynomials; sieve deformations parametrize new positivity for constraining zeros; positivity blind left of Re(s)=1 -- positivity blind left of Re(s)=1
+E019: Saturation is numerical, not geometric | aka: Small-support hope: saturated optimizers fully dense; 9c′: do degree-16 optimizers have small-support autocorrelation structure?; saturated degree-16 optimizers lack small-support structure -- from degree-16 saturated optimizers; small-support dead
+E020: ψ(x) as signed face-sum over Δ_x | aka: D1: Chebyshev psi(x) as signed face-sum -- exact at x=30,100,500
+E021: zeta zeros regulate face-sum convergence via −ζ′/ζ² -- −ζ′/ζ² match ~4 digits at s=1.01–1.20
+E022: positive region with these weights as stratum residues -- sharpest question of the program (text)
+E023: territory removal as soft-limit two-term split | aka: D5: territory removal = Figueiredo soft-limit/splitting move -- split exact; mapping conceptual, cf. arXiv:2405.09608
+E024: never put the answer in by hand; primality emerges | aka: never put the answer in by hand -- deepest insight applied throughout D1–D5
+E025: empty face anchors alternating sum (d=1, log1=0) -- empty face d=1, log1=0, anchors sum
+E026: bare Δ_∞ is contractible infinite simplex, no topology | aka: naive hope: geometry lived in the bare incidence complex -- bare Δ_∞ infinite simplex, contractible, no topology
+E027: weighted infinite complex as the limit object | aka: geometry lives in the weights, not the bare complex -- limit object = weighted complex, not bare
+E028: link({p}) = Δ_{⌊x/p⌋} minus p, exact recursion | aka: Lehmer φ(x,a) as link recursion of Δ_x; D2: Lehmer phi-recursion is the link recursion -- link({p})=Δ_{⌊x/p⌋} minus p, exact recursion
+E029: binary geometry rule: 1_prime + 1_shared = 1 -- reformulation, not new prime information
+E030: composites as zero locus of F(n), primes as support | aka: D3: composites as zero locus of F(n)=prod dist(n,pZ) -- F(n) zero-locus verified to 60
+E031: Figueiredo recipe steps 2–4 without positive region -- steps 2–4 analogues; cf. arXiv:2309.15913
+E032: no known positive region for the sieve | aka: no positive region in finite complex; cutoff-N dependent -- no known positive region; gap stands
+E033: Sieve deformation R_p={0},{0,-2} -- deformation marks R_p={0},{0,-2} residue families
+E034: A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0 -- +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+E035: Classical 3-4-1 proof zeta(1+it)!=0 | aka: 3-4-1 template re-verified from Lambda-sieve -- classical; re-verified 2.26->8.30->20.62 as sigma->1+
+E036: Energy translation: E_0,E_1,E_2 over vertex towers -- translation over vertex towers (prime powers)
+E037: E(sigma,t)=3E_0+4ReE_1+ReE_2>=0 termwise -- two forms agree 6 digits on (sigma,t) grid
+E038: Zero-free line as energy contradiction -- analytic residue -m housed, not derived
+E039: Pole at sigma=1 is infinite total prime energy -- pole expected, not pathological
+E040: 9b verdict: bridge carries traffic, no new theorem -- same traffic, new bridge; no new theorem
+E041: Deformation separates markers from survivors -- markers are primes; survivors a different set
+E042: Deformed survivors = twin lowers: 2160 <=200000 -- 2160 twin lowers <=200000, exact match independent sieve
+E043: Exact mu-identity S(x,z)=sum mu(d)E_d(x) -- exact at (z,x)=(13,50000) and (30,200000)
+E044: Face multiplicities m(S)=prod|R_p| -- forbidden CRT class counts per face
+E045: Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z) | aka: optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p) -- 0.071430 vs 0.071429 at z=7,x=200000
+E046: Unproven: pi_2(x)~Sx/(log x)^2 remains conjecture | aka: unproven twin conjecture pi_2(x)~S x/(log x)^2 -- pi_2 ratio 1.6091 vs 1.3203 at 200000, slow convergence
+E047: residue catalog: q=(1,2,1) excludes; q=(1,3,3,1) 3/2 stronger -- q=(1,2,1) 3-4-1; q=(1,3,3,1) a₁/a₀=3/2
+E048: Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−… -- Davenport; classical exact theorem
+E049: explicit formula verified: T=400→1.36, T=50→4.55 | aka: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400 -- explicit_formula.py; 400 zeros, γ≤679.7
+E050: error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum -- exact translation of D1
+E051: Weil thesis: W(f∗f̃) positivity constrains face-sum error -- programmatic/heuristic
+E052: Guinand–Weil symmetric formula, normalization numerically confirmed -- normalization confirmed by own numerics
+E053: Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15 -- corrected run; first run silently dropped p≥3
+E054: W(h_a)≥0 computed prime-side only, no zeros used -- a=0.5 cancellation to 15 digits
+E055: pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0 | aka: Prime-side positivity cancellatory: pole+arch+drain≈0 at a=0.5 -- not termwise: negative archimedean nearly cancels pole
+E056: hybrid bridge: geometry owns positivity inputs, analysis owns continuation -- hybrid shape replaces 9c-as-RH-proof
+E057: square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|² -- exact translation; same generative move
+E058: Weil criterion W≥0⟺RH cited not derived (Weil 1952) | aka: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; 10a: Weil's criterion in the energy language -- Weil 1952; Bombieri 2000 exposition
+E059: step3: optimize square H — Weil analogue of degree-16 optimization -- forward pointer from D10a-step2
+E060: Euler product ζ_R zero-free for Re(s)>1 -- exact; |R_p|p^{-σ}<1 so no factor vanishes
+E061: pole heavier: F(σ)~2/(σ−1), inequality easier -- 19.33 vs 20.00 at σ=1.1, tail correction
+E062: Selberg parity barrier: ω(n) parity unresolvable -- Selberg; cited literature
+E063: MTY 2022 degree-16 optimization saturates polynomial method -- arXiv:2212.06867; BTY 2026 1/(4.896 log|t|)
+E064: sieve produces positivity geometrically via autocorrelation -- exact identities; a₀−a₁m≥0 forces m<1
+E065: Weil prime-side zero detector (D10a step-3) | aka: verification: 80 zeros vs 1.27M prime powers to 2e7; Prime-side zero detector h_{T0,w} with 4e-16 agreement -- weil_detector.py; primes alone count zeros in window
+E066: Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997) -- cited Li 1997; sum over rho
+E067: Keiper-Taylor check: n=1..40 all lambda_n>=0, min 0.0230957 at n=1 -- n=1..40; lambda_1=0.0230957090, lambda_2=0.0923457352
+E068: S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum -- functional equation proof; prime series diverges at s=1
+E069: Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed -- k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+E070: verdict: Weil face-sum-native, Li Dirichlet-series-native | aka: Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit -- Weil face-sum-native; Li Dirichlet-series-native
+E071: Selberg lambda^2 quadratic form on Delta_z, PD sum of squares | aka: 10c: Selberg λ² sieve on the complex, optimized weights -- z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+E072: 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z -- 1/G(19)=0.2348 vs delta(19)=0.1710
+E073: verdict: template only; upper-bound machine; parity barrier stands -- template not source; parity barrier stands
+E074: independent Gram/intersection positivity source (10d home) -- 10d natural home; no independent source yet
+E075: exact Gaussian detector pair h(r), g(u) -- exact Fourier pair; h>=0 even, peak 1
+E076: classical level-truncated bound 1/G(z) -- constraint; worse bound 0.2348 vs 0.1710
+E077: derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w] -- from h>=0 + Weil formula; table checks
+E078: leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50) | aka: Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum -- T0=50: 0.6827 -> 0.2977 -> 0.0007
+E079: resonance: negative prime sum adds to W when zero inside | aka: Resonance: oscillatory prime sum negative exactly when zero in window -- w=1: prime-sum -0.5925, W=2.2472
+E080: uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12 -- envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+E081: tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)] -- exact algebra; window buys sigma=1/2 convergence
+E082: honesty weak point: certificate numeric only, gamma real unproved -- agreement 1e-15 is certificate; not proved generally
+E083: Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48 | aka: 10d: function-field template from intersection pairing on C×C -- |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+E084: Mean value verified: ratios 0.9948→1.0073 at T0=20000 | aka: Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008 -- H=200,1000,5000,20000; mean-square amplifier real
+E085: Large sieve verified: ratios 0.0041, 0.0080, holds with headroom -- δ=1 and 0.5; bound crude as expected
+E086: Uncertainty wall: n=e^{7.433/w}; w=0.25 needs 8.2e12 primes | aka: Uncertainty wall: w=0.5 needs 2.9e6 primes; w=0.25 infeasible -- w=2→41; w=1→1.7e3; w=0.5→2.9e6; w=0.1→1.9e32; w=1→0.44, w=0.5→0.22 spacings
+E087: 10e verdict: analytic amplifiers only, zero-density plug-in role -- detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+E088: Weighted positive geometries + stringy deformation as home -- deformation parameter u; exponents are prime logs
+E089: Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified | aka: derivative identity for sum_S w(S), 10-digit verified -- proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+E090: Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing -- z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+E091: RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n) -- discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+E092: Refined region: stringy-deformed simplex, arithmetic in weights -- Figueiredo deformations move (D6) as mechanism
+E093: Counting-born positivity, same kind as Λ≥0 -- same kind as deg≥0 (D7/D9 Λ≥0)
+E094: Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues | aka: FF Jacobian: R1–R6 all satisfied, the template itself -- five-part anatomy derived from curve case
+E095: Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula | aka: Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing; Ledger: missing Jacobian-role space, Frobenius operator, pairing -- 10a infinite needs window n~e^{7.4/w}
+E096: Toroidal answer: plane for zeta, torus Jacobian for explainer -- Jacobian J(C) is the complex torus
+E097: Structural verdict: missing object is operator-theoretic 'Frobenius for Δ' -- 'Frobenius for Δ' named; 10a–10e pass closed
+E098: Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99 -- a_n=Λ(n)/√n
+E099: D8: 3-4-1 restated in sieve language, nonnegative stratum energies -- e_{p,k}>=0 termwise 6 digits; residue -m analytic
+E100: RH bridge: dictionary not bridge; attaches at positivity -- Weil-shaped heuristic, precedent not result
+E101: expository paper arc on D1-D6, outline drafted -- PAPER_OUTLINE.md 2026-09-30; awaiting approval
+E102: sieve as relational machine: composites to primes, primes to zero -- user's framing, root node decision
+E103: Bridge span: geometric positivity must connect to Weil positivity -- Weil 1952: RH is positivity; source must be geometric
+E104: Li's criterion λ_n ≥ 0 natively on the face-sum -- killed 2026-09-30: face-sum carries smoothed positivity only
+E105: Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19 -- 12-digit verification, z≤19; proved via (1−1)^{|S|}
+E106: Frobenius-like operator for Δ∞ (refines D4) -- refines D4's; belongs to bridge program's 10d
+E107: 10e: large sieve and explicit-formula uncertainty tools -- verified on our objects; estimates cited not derived
+E108: Guinand-Weil verified zero vs prime side to 2e-16 -- 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+E109: Frobenius checklist R1–R6: operator requirements for sieve setting -- node 11 scoring template; refines 10d ledger
+E110: Connes adele-class space: R2 full, R4 not counting-born -- cited, not re-derived; R1 as missing spectrum
+E111: CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam² -- arXiv:2511.22755; primary-source abstract verified
+E112: CCM independently reproduced: Rust/MPFR, 999 digits, June 2026 -- Rust/MPFR, 999 digits, June 2026; reproduction claims secondary
+E113: Top target: reimplement CCM from prime Euler products alone -- queued: verify spectral coincidence, audit zero-fitting
+E114: Mobius center-cut gives one band, 2x length, 4 half-twists -- Gauss linking integral |lk|=1.9999 → k=4; calibrated
+E115: 1/3 cut gives two linked bands (thin Mobius, 2-twist) -- classical result, previously known
+E116: Bare Mobius Laplacian spectrum λ=(πm)²+(nπ/2T)², m+n odd -- derived not cited; sqrt-spectrum 0.031,0.094,0.157 vs zeros
+E117: Bare geometric operators on M do not see zeros (exact) -- VERDICT negative exact; |σ−1/2| spectrum [0,1/2] continuous
+E118: Operator must see arithmetic prime/weight data, not geometry -- heuristic reflection; next fork: weighted face filtration
+E119: Berry-Keating xp spectral candidate -- semiclassical; no rigorous operator, R4 absent
+E120: Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung -- 8-candidate survey; D1–D13 filter
+E121: Archive dead-end guardrails D1–D9, closed archaeology -- live descendants: Circle CEIVE, honesty practice
+E122: Deninger program: 2024 theorem proves template dynamically only -- missing space is the whole problem
+E123: BK N(T) vs 400 zeros: |S(T)|≤1.164, mean 0.502, drift 5.5e-6 -- 400 zeros; drift slope 5.5e-6, no drift
+E124: Mobius band stage M = strip/(s~1-sbar), R6 exact -- R6 exact: functional equation topological on M
+E125: |xi(1-sbar)|²=|xi(s)|² verified to 3.8e-16, 6 points -- 3.8e-16 agreement, 6 points; exact theorem numerically confirmed
+E126: Zero-orbit collapse 4→2 on M, not 4→1 -- CORRECTION of earlier message: collapse is 4→2
+E127: Missing piece: R1+R4 together — counting-born spectrum operator -- audit across BK, M, Connes, face-complex, FF Jacobian
+E128: Three live fragments: positivity/operator-shape/trace split apart -- three live fragments, none closes R1^R4
+E129: Face-complex Delta operators: R4 counting-born, R1–R3 absent -- R4 from Lambda>=0 counting; 10c PD forms
+E130: 2-torus linked to 3-torus by self-adjoint operator -- user's original idea, never written down
+E131: new guardrails D10-D13 from archive archaeology -- five April-2026 docs mined as archaeology
+E132: sieve faces Delta_z = fermionic Fock basis over primes <=z -- exact identification; native, not imported
+E133: H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p} -- spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+E134: H_int spacings Poisson: <r> 0.459-0.400, not GUE -- z<=29 dim<=1024; <r> 0.459-0.419 vs Poisson 0.386
+E135: Fock-diagonal interaction shifts energies, causes no transitions -- the valuable part of the 13c understanding
+E136: canonical p<q, r<s sectors; ordered quadruples give zero -- a_r a_s = -a_s a_r forces canonical sectors
+E137: five linkages L1-L5: product, mapping torus, UT bundle, Deninger, Heisenberg -- foundation rebuilt in multi_torus_framework.md
+E138: operator GUE-chaotic but does not hear primes; universality only -- verdict: universality result, not bridge plank
+E139: strengtheners pending: Delta_3 rigidity, density of states, z=43 -- Delta_3 flat ~0.33 inconclusive; z=43 running
+E140: flat-T3 Laplacian spectrum 2pisqrt(m2+n2+k2); 554,981 points enumerated -- 554,981 lattice points; 300 vs 300 zeros, no relation
+E141: Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3 -- exact theorem; d=2 too slow by log, d>=3 too fast
+E142: zeros-as-subset of higher-d spectrum not closed by Weyl -- honest loophole recorded in framework doc
+E143: Deninger-type foliated 3D system with closed orbits as primes -- conjectural; non-probable per D8, formulate only
+E144: Heisenberg probe negative on three panels; 65,401 eigenvalues -- 65,401 eigenvalues; negative on three panels
+E145: arithmetic flavor != zero spectrum; Laplacian+theta fails -- moral drawn from Heisenberg probe
+E146: Node 12 closed: Laplacian path dead, dynamics live -- multi-torus via Laplacian dead; dynamics live
+E147: k-tuple deformation sweep at x=10^6 -- 9 tuples + control; three panels (a)(b)(c)
+E148: fermionic prime Fock: independent prior art exists -- goldenphysicsproject 2026 GitHub; Lean CAR formalized
+E149: spectral program 13d/13e: no prior art -- interacting Hamiltonians + GUE/Poisson probes
+E150: CCM D_log reimplemented from prime Euler products -- eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+E151: first zeta zero recovered from primes alone -- zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+E152: even-subspace single tiny eigenvalue eps_N=2.83e-26 -- odd block 581x larger; 8771x at N=120
+E153: controls: shuffled or zeroed input destroys zeros -- A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+E154: mechanism fragile: requires exact prime arithmetic -- noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+E155: exact survivor match on all 9 tuples -- twins 8169=8169, triplets 1393/1444, sext 5=5
+E156: density ratios 0.998-1.015 across tuples -- worst sext, fewest samples
+E157: S_H(1000) matches S(H) to ~0.2% -- sexy to 4C2 nu3=1; sext 17.301
+E158: non-admissible {0,2,4} dies: single survivor n=3 -- nu3=3 kills product; S_H(z)=0 for z>=3
+E159: deformation is general generative machine, not twin fluke -- closed as confirmation sweep; no new mathematics
+E160: simplicial sieve D_z: no prior art found -- Iosif arXiv:1112.5796 focal lines, unrelated
+E161: deforming-marking-rule move new; 2C2 classical -- constant classical Hardy-Littlewood 1923

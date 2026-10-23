@@ -1,0 +1,445 @@
+space of the theory is a direct sum of tensor products of Fock representations over the lattice P and the dual lattice Pˇ of coweights of g. The operators
+
+(8.23) appear as the chiral
+
+magnetic vertex operators corresponding to the simple roots, whereas the operators (8.24)are the chiral electric vertex operators corresponding to the simple
+
+coroots (considered as
+
+Lh ∗ / √ ∨νPˇ
+
+elements of Pˇ). The T-dual theory is the free bosonic theory with the target r
+
+R
+
+and the metric induced by ˇκ −1
+
+0 .
+
+Under the T-duality the magnetic operators of the theory on Lh ∗ / √ ∨νPˇ become the
+
+r
+
+R
+
+### ∗ / 1 P. Therefore the isomorphism (8.26) means that
+
+electric operators of the theory on h
+
+R
+
+### ν
+
+the chiral algebras of the two T-dual theories deformed by the magnetic operators corresponding to simple roots of g and Lg are isomorphic (for irrational ν
+
+2 ). In the “infinite
+
+(D).
+
+volume” limit one obtains the isomorphism of z(g) and Fun OpLg Thus, we see that T-duality is ultimately responsible for the appearance of the Langlands dual
+
+Lie algebra in the description of the center at the critical level.
+
+The existence of the duality (8.26) indicates that W-algebras should play a prominent
+
+\[
+
+role in a deformation of the =non-abelian Fourier-Mukai transform” discussed in Sect. 6.3.It also shows that we need to make an adjustment to the formulation
+
+\tag{6.4}
+
+\]
+
+\[
+
+and replace the relation_k = ˇk -1 by the relation that appears in formula \tag{8.26}
+
+\]
+
+\[
+
+.78
+
+\]
+
+9. Constructing Hecke eigensheaves
+
+Having described the center of the chiral algebra V−h∨ (g) in terms of Lg-opers, we now
+
+set out to construct the corresponding twisted D-modules on BunG, using the Lg-opers as parameters. We will see, following Beilinson and Drinfeld \[15\], that
+
+these D-modules turn out to be the sought-after Hecke eigensheaves, whose eigenvalues are global Lg-opers on our curve.
+
+### 77a reformulation that does not use r ∨
+
+is given in \[20\], Sect. 15.4.7
+
+78here we assume that G is a simple Lie group and the inner products \kappa_0 and ˇκ0 on g and Lg used in Sect. 6.3 are the standard normalized inner products
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 101
+
+We are ready to apply the machinery of localization functors developed in Sect. 7.4 to representations of bg of critical level. So let X be a smooth projective
+
+curve over C.
+
+\[
+
+Recall that for any (bg,G[[t]])-module M of level_k we construct a D′ k -module \Delta(M) on BunG, the moduli stack of G-bundles on X. As a warm-up, let us
+
+apply this construction to M = Vk(g), the vacuum module of level_k introduced in Sect. 8.1. We claim that \Delta(Vk(g)) is the sheaf D′ considered as a left
+
+module over itself.
+
+\]
+
+k
+
+In order to see that, we observe that \Delta(M) may be defined as follows. In the notation
+
+\[
+
+of Sect. 7.4, we have a De′ M on Gout\\G((t)), and \Delta(M) = k -module \Delta(e M) = De′ k \otimes
+
+\]
+
+### Uk(bg)
+
+\[
+
+(\pi^*(\Delta(e M)))G[[t]], where \pi is the projection Gout\\G((t)) \to Gout\\G((t))/G[[t]] = BunG . Now, since Vk(g) = Uk(bg)/Uk(bg) · g[[t]], we obtain that
+
+\Delta(e Vk(g)) = De′ /De′
+
+\]
+
+k_k · g[\[t]\] and so
+
+\[
+
+\Delta(Vk(g)) = /De′ ′ \pi^*(De′ k_k · g[[t]])G[[t]] = D_k
+
+\]
+
+.
+
+Here we use the general fact that if Z is a variety with an action of a group K and
+
+### S = Z/K, then
+
+DS ≃ (π∗(DZ/DZ · k) K , where π : Z → S is the natural projection. The same is true for twisted D-modules.
+
+Incidentally, this shows that the sheaf of differential operators on a quotient Z/K may be obtained via quantized hamiltonian reduction (also known as the “BRST
+
+reduction”) of the sheaf of differential operators on Z. The corresponding quasi-classical statement is well-known: the algebras of symbols of differential
+
+operators on Z and S are the algebras of functions on the cotangent bundles T ∗Z and T ∗S, respectively, and the latter may be obtained from the former via the
+
+usual hamiltonian (or Poisson) reduction.
+
+Thus, we see that the twisted D-module corresponding to Vk(g) is the sheaf D′
+
+k . This
+
+\[
+
+D-module is =too big”. We obtain interesting D-modules from quotients of Vk(g) by their =null-vectors”. For example, if_k \in Z+, then Vk(g) has as a quotient
+
+the vacuum integrable module L_0,k. The corresponding D′ -module is much smaller. As discussed in Sect. 7.6, it
+
+\]
+
+k
+
+is isomorphic to H0 (Bun, L \otimes k ) ∗ \otimes L \otimes k
+
+.
+
+9.1. Representations parameterized by opers. Now consider the vacuum module of critical level V−h∨ (g). Each element A of the center z(g) ⊂ V−h∨ (g) gives rise
+
+to the nontrivial endomorphism of V−h∨ (g), commuting with bg, sending the vacuum vector v−h∨ to A.
+
+Conversely, any endomorphism of V−h∨ (g) that commutes with bg is uniquely determined by the image of v−h∨ . Since v−h∨ is annihilated by g[\[t]\], this image
+
+necessarily belongs to the space of g[\[t]\]-invariants in V−h∨ (g) which is the space z(g). Thus, we obtain an identification z(g) = Endbg(V−h∨ (g)) which
+
+gives z(g) an algebra structure. This is a commutative algebra structure which coincides with the structure induced from the commutative chiral algebra
+
+structure on z(g). Thus, we obtain from Theorem_9 that (9.1) z(g) = Endbg(V−h∨ (g)) ≃ Fun OpLg (D). Now each Lg-oper χ ∈ OpLg (D) gives rise to an algebra
+
+homomorphism Fun OpLg (D) → C taking a function f to its value f(χ) at χ. Hence we obtain an algebra homomorphism
+
+### 102  EDWARD FRENKEL
+
+\[
+
+Endbg(V-h∨ (g)) \to C which we denote by \chi e. We then set \tag{9.2}
+
+\]
+
+\[
+
+V\chi = V-h∨ (g)/ Ker \chi e · V-h∨ (g). For instance, if g = sl2, then OpLg (D) = Proj(D), hence \chi is described by a second
+
+\]
+
+\]
+
+order operator ∂ t − v(t), where
+
+v(t) = X vnt −n−2
+
+, vn ∈ C.
+
+### n≤−2
+
+\[
+
+The algebra Endslb_2 (V-2 \tag{sl2}
+
+\]
+
+\[
+
+) is the free polynomial algebra generated by Sn,n \le -2, where each Sn is the Segal-Sugawara operator given by formula (8.2), considered as an endomorphism of
+
+V-2(sl2). The corresponding quotient V\chi is obtained by setting Sn equal to vn \in C for all_n \le -2 (note that Sn ≡ 0 on V-2(sl2) for_n > -2). We can also
+
+think about this as follows: the space of null-vectors in V-2(sl2) is spanned by the monomials
+
+### Sn1
+
+\[
+
+... Snmv-2, where n_1 \le ... \le nm \le -2. We take the quotient of V-2(g) by identifying each monomial of this form with a multiple of the vacuum vector vn1
+
+\]
+
+### ... vnmvk and taking
+
+into account all consequences of these identifications. This means, for instance, that the vector J a a vk.
+
+### −1Sn1 ... Snmv−2 is identified with vn1 ... vnmJ −1
+
+For example, if all vn’s are equal to zero, this means that we just mod out by the slb2- submodule of V−2(sl2) generated by all null-vectors. But the condition
+
+v(t) = 0 depends on the choice of coordinate_t on the disc. As we have seen, v(t) transforms as a projective connection. Therefore if we apply a general
+
+coordinate transformation, the new v(t) will not be equal to zero. That is why there is no intrinsically defined “zero projective connection” on the disc D, and
+
+we are forced to consider all projective connections on D as the data for our quotients. Of course, these quotients will no longer be Z-graded.
+
+But the Z-grading has no intrinsic meaning either, because, as we have seen, the action of infinitesimal changes of coordinates (in particular, the vector field
+
+−t∂t) cannot be realized as an “internal symmetry” of V−2(sl2).
+
+Yet another way to think of the module Vχ is as follows. The Sugawara field S(z) defined by formula (8.2) is now central, and so in particular it is regular at
+
+z = 0. Nothing can prevent us from setting it to be equal to a “c-number” power series v(z) ∈ C[\[z]\] as long as this v(z) transforms in the same way as S(z)
+
+under changes of coordinates, so as not to break any symmetries of our theory. Since S(z) transforms as a projective connection, v(z) has to be a c-number
+
+projective connection on D, and then we set S(z) = v(z). Of course, we should also take into account all corollaries of this identification, so, for example,
+
+the field \partial_z S(z) should be identified with \partial_z v(z) and the field A(z)S(z) should be identified with A(z)v(z). This gives us a new chiral
+
+algebra. As an slb_2-module, this is precisely Vχ.
+
+Though we will not use it in this paper, it is possible to realize the slb
+
+### 2-modules Vχ in
+
+\[
+
+terms of the \beta \gamma -system introduced in Sect. 8.5. We have seen that at the critical level the bosonic system describing the free field realization of
+
+bg of level_k becomes degenerate. Instead of the bosonic field \partial_z \varphi(z) we have the commutative field eb(z) which appears as the limit of \nu
+
+i\partial z\varphi(z) as \nu = \sqrt{k} + 2 \to 0. The corresponding commutative chiral algebra is \pi e_0 ≃ C[ebn]n<0. Given a numeric series u(z) = X unz -n-1
+
+\in C[[z]],
+
+### n<0
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 103
+
+\[
+
+we define a one-dimensional quotient of \pi e_0 by setting ebn = un,n < 0. Then the free field realization \tag{8.16}
+
+\]
+
+\[
+
+becomes J +(z) 7\to \beta(z), (9.3) u(z), J_0 (z) 7\to :\beta(z)\gamma(z): + 1 J -(z) 7\to -:\beta(z)\gamma(z) 2 : + 2\partial z\gamma(z) - \gamma(z)u(z).
+
+\]
+
+It realizes the chiral algebra of slb
+
+2 of critical level in the chiral algebra F of the βγ system
+
+(really, in the chiral differential operators of CP1 ), but this realization now depends on a parameter u(z) ∈ C\[\[z\]\].
+
+It is tempting to set u(z) = 0. However, as we indicated in Sect. 8.5, u(z) does not transform as function, but rather as a connection on the line bundle Ω−1/2
+
+on the disc.79 So there is no intrinsically defined “zero connection”, just like there is no “zero projective connection”, and we are forced to consider the
+
+realizations (9.3) for all possible connections ∂z +u(z) on Ω−1/2 (they are often referred to as “affine connections” or “affine structures”, see \[20\], Sect.
+
+8.1). If we fix such a connection, then in the realization (9.3) the current
+
+### S(z) will act as
+
+1 1
+
+S(z) 7→ 2 − \partial_z u(z).
+
+### u(z)
+
+4 2
+
+(see formula (8.17)). In other words, it acts via a character corresponding to the projective
+
+\[
+
+connection \chi = \partial
+
+\]
+
+z − v(z), where v(z) is given by the right hand side of this formula.
+
+Therefore the slb2-module generated in the chiral algebra F of the βγ system from the vacuum vector is precisely the module Vχ considered above. Actually, it is
+
+equal to the space of global sections of a particular sheaf of chiral differential operators on CP1
+
+, as
+
+those are also parameterized by affine connections ∂z + u(z). This gives us a concrete realization of the modules Vχ in terms of free fields. Now consider an
+
+arbitrary simple Lie algebra g. Then we have an action of the center z(g) on the module V−h∨ (g). The algebra z(g) is generated by the currents Si(z),i = 1,...
+
+,\ell. Therefore we wish to define a quotient of V−h∨ (g) by setting the generating field Si(z) to be equal to a numeric series vi(z) ∈ C[\[z]\],i = 1,...
+
+,\ell. But since the Si(z)’s are the components of an operator-valued Lg-oper on the disc, for this identification to be consistent and coordinate-independent,
+
+these vi(z)’s have to be components of a numeric Lg-oper on the disc, as in formula (8.10). Therefore choosing such vi(z),i = 1,... ,\ell, amounts to picking a
+
+Lg-oper χ on the disc. The resulting quotient is the bg-module Vχ given by formula (9.2). These modules may also realized in terms of the βγ system (see
+
+\[12\]).
+
+It is instructive to think of the vacuum module V−h∨ (g) as a vector bundle over the infinite-dimensional affine space space OpLg (D). We know that the algebra
+
+of functions
+
+(D) acts on V−h∨ (g), and we have the usual correspondence between modules
+
+on OpLg over the algebra FunZ, where Z is an affine algebraic variety, and quasicoherent sheaves
+
+(D), and so the corresponding
+
+over Z. In our case V−h∨ (g) is a free module over Fun OpLg
+
+\[
+
+79This is clear from the second formula in \tag{9.3}
+
+: the current J_0 (z) is a one-form, but the current :\beta(z)\gamma(z): is anomalous. To compensate for this, we must make u(z) transform with the opposite
+
+anomalous term, which precisely means that it should transform as a connection on \Omega -\frac{1}{2}
+
+.
+
+### 104  EDWARD FRENKEL
+
+(D). From this
+
+quasicoherent sheaf is the sheaf of sections of a vector bundle on OpLg
+
+(D). This
+
+point of view, Vχ is nothing but the fiber of this vector bundle at χ ∈ OpLg more geometrically oriented point of view on V−h∨ (g) is useful because we can see
+
+more clearly various actions on V−h∨ (g). For example, the action of Lie algebra bg on V−h∨ (g) comes from its fiberwise action on this bundle. It is also
+
+interesting to consider the Lie group Aut O of automorphisms of C[\[t]\], which is the formal version of the group of diffeomorphisms of the disc. Its Lie
+
+algebra is Der O = C[\[t]\]∂t The group Aut O acts naturally on g((t)) and hence on bg. Moreover, it preserves the Lie subalgebra g[\[t]\] ⊂ bg and therefore
+
+acts on V−h∨ (g). What does its action on V−h∨ (g) look like when we realize V−h∨ (g) as a vector bundle over OpLg (D)? In contrast to the bg-action, the action
+
+of Aut O does not preserve the fibers Vχ! Instead, it acts along the fibers and along the base of this bundle. The base is the space of Lg-opers on the disc D
+
+and Aut O acts naturally on it by changes of coordinate (see Sect. 8.3). Thus, we encounter a new phenomenon that the action of the group of formal
+
+diffeomorphisms of the disc D does not preserve a given bg-module Vχ. Instead, φ ∈ Aut O maps Vχ to another module Vφ(χ)
+
+.
+
+Away from the critical level we take it for granted that on any (positive energy) bgmodule the action of bg automatically extends to an action of the
+
+semi-direct product of
+
+the Virasoro algebra and bg. The action of the Lie subalgebra Der O of the Virasoro algebra may then be exponentiated to an action of the group Aut O. The
+
+reason is that away from the critical level we have the Segal-Sugawara current (8.3) which defines the action of the Virasoro algebra. But at the critical level
+
+this is no longer the case. So while the Lie algebra Der O and the group Aut O still act by symmetries on bg, these actions do not necessarily give rise to
+
+actions on any given bg-module. This is the main difference between the categories of representations of bg at the critical level and away from it.
+
+9.2. Twisted D-modules attached to opers. Now to Vχ we wish associate a D′ −h∨ - module \Delta(Vχ) on BunG. What does this twisted D-module look like? At this
+
+point we need to modify slightly the construction of the localization functor \Delta that we have used so far. In our construction we realized BunG as the
+
+double quotient (7.8). This realization depends on the choice of a point x ∈ X and a local coordinate_t at x. We now would like to rephrase this in a way that
+
+does not require us to choose_t. Let Fx be the completion of the field F of rational functions on X at the point x, and let Ox ⊂ Fx be the corresponding
+
+completed local ring. If we choose a coordinate_t at x, we may identify Fx with C((t)) and Ox with C[\[t]\], but Fx and Ox are well-defined without any choices.
+
+So are the groups G(Ox) ⊂ G(Fx). Moreover, we have a natural embedding C[X\\x] ֒→ Fx and hence the embedding Gout = G(C[X\\x]) ֒→ G(Fx). We now realize BunG in
+
+a coordinate-independent way as (9.4) BunG = Gout\\G(Fx)/G(Ox).
+
+With respect to this realization, the localization functor, which we will denote by \Delta x, assigns twisted D-modules on BunG to (bgx,G(Ox))-modules. Here bgx
+
+is the central extension of g(Fx) defined as in Sect. 7.1. Note that the central extension is defined using the
+
+residue of one-form which is coordinate-independent operation. We define the bgx-module Vk(g)x as Indbgx Ck and z(g)x as the algebra of bgx-endomorphisms of
+
+g(Ox)\oplus C1
+
+V−h∨ (g)x. As
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 105
+
+since the isomorphism (9.1) is natural and coordinate-independent, we obtain from it a canonical isomorphism (9.5)  z(g)x ≃ Fun OpLg (Dx),
+
+\[
+
+where Dx is the formal disc at x \in X (in the algebro-geometric jargon,Dx = Spec Ox). Therefore, as before, for any Lg-oper \chi x on Dx we have a homomorphism
+
+\chi ex : z(g)x \to C and so we define a bgx module V\chi x = V-h∨ (g)x/ Ker \chi ex · V-h∨ (g)x.
+
+\]
+
+We would like to understand the structure of the D′ ). This is the
+
+−h∨ -module \Delta x(Vχx
+
+twisted D-module on BunG encoding the spaces of conformal blocks of a “conformal field theory” of critical level associated to the Lg-oper χx.
+
+Finally, all of our hard work will pay off: the D-modules \Delta x(Vχx ) turn out to be the sought-after Hecke eigensheaves! This is neatly summarized in the
+
+following theorem of A. Beilinson and V. Drinfeld, which shows that D-modules of coinvariants coming from the general machinery of CFT indeed produce Hecke
+
+eigensheaves. Before stating it, we need to make a few remarks. First of all, we recall that our assumption is that G is a connected and simply-connected simple
+
+Lie group, and so LG is a Lie group of adjoint type. Second, as we mentioned at the beginning of Sect. 8, the line bundle L \otimes(−h ∨) is isomorphic to the
+
+square root K1/2 of the canonical line bundle on BunG. This square root exists and is unique under our assumption on G (see \[15\]).
+
+Thus, given a D′ is an ordinary (untwisted)
+
+### −h∨ -module F, the tensor product F \otimes O K−1/2

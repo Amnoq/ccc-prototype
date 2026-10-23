@@ -1,0 +1,160 @@
+## D10a-step3 — the prime-side zero detector; resolution priced by uncertainty (2026-09-30)
+
+**Status: computationally verified.** Script: `weil_detector.py`.
+
+**Construction (exact):** detector bump at height T0, width w,
+h(r) = e^{-(r-T0)^2/2w^2} + e^{-(r+T0)^2/2w^2} (sum of squares, >=0,
+peak 1, even), with exact Fourier partner
+g(u) = w*sqrt(2/pi) * e^{-w^2 u^2/2} * cos(T0*u).
+Derived bound (h >= 0 + Weil formula): with B+ = [T0-w, T0+w],
+N+(B+) <= e^{1/2} * W(h), W(h) computed prime-side.
+
+**Verification (W prime-side vs zero-side, 80 zeros, 1.27M prime powers to 2e7):**
+
+| T0  | w   | W'     | N+ | bound | leakage |
+|-----|-----|--------|----|-------|---------|
+| 50  | 2.0 | 3.8861 | 2  | 6.41  | 0.6827  |
+| 50  | 1.0 | 2.2472 | 1  | 3.71  | 0.2977  |
+| 50  | 0.5 | 1.8062 | 1  | 2.98  | 0.0007  |
+| 100 | 2.0 | 3.9959 | 2  | 6.59  | 0.7001  |
+| 100 | 1.0 | 1.8518 | 0  | 3.05  | 1.8518  |
+
+Agreement 4e-16 (8e-13 at w=0.5). Primes alone count zeros in a
+window: the bridge working as an instrument.
+
+**Resonance mechanism (components, T0=50):**
+w=1.0: pole 0 + arch +1.6548 - (prime-sum -0.5925) = 2.2472.
+w=0.5: pole 0 + arch +0.8274 - (prime-sum -0.9788) = 1.8062.
+When a zero sits in the window, the oscillatory prime sum goes
+*negative* and adds to W -- the primes "ring" at the zero's
+frequency. Window empty (T0=100, w=1, zeros at 98.83/101.32 just
+outside): prime-sum +0.3562, W all leakage. The pole is exactly 0
+for detectors (e^{-T0^2/2w^2}); the archimedean term is the positive
+background. Honest weak point: the bound is loose when zeros sit at
+the window edge -- concentration *relative to actual zero positions*
+is what matters.
+
+**Tightest dictionary (exact algebra, derived):**
+prime-sum = 2*Cg*Re[ sum_{p,k} (log p) p^{-k(1/2+iT0)} e^{-w^2(k log p)^2/2} ]
+i.e. the detector's prime side = 2*Cg*Re[ *windowed* E_1(1/2,T0) ],
+our D8 energy E_1 = -zeta'/zeta, Gaussian-windowed in log(p^k),
+evaluated at sigma=1/2. The window buys the convergence D8 could not
+have at sigma=1/2 (needed sigma>1 unwindowed). Step-2's cancellatory
+positivity and D8's termwise positivity are two faces: windowed vs
+unwindowed.
+
+**Optimization answer (derived):** the figure of merit is
+*concentration* -- leakage 0.68 -> 0.30 -> 0.0007 as w = 2 -> 1 -> 0.5.
+The price is the uncertainty principle: envelope e^{-w^2 u^2/2}
+reaches 1e-12 at n = e^{7.4/w}: w=2 -> 41, w=1 -> 1700, w=0.5 ->
+2.8e6. No finite optimum -- a Pareto frontier. The uncertainty
+principle is the bridge's load limit in detector form: sharper
+zero-vision costs exponentially more prime data.
+
+**10a complete.** The formula now runs entirely on our objects:
+grounded (step 1), positivity structured (step 2), detector built and
+priced (step 3). The remaining open span -- an *independent*
+Gram/intersection source for the positivity -- belongs to the whole
+bridge program (10d its natural home), not to translation.
+**Honesty:** the detector bound uses h >= 0 at the zeros, i.e. gamma
+real -- certified numerically per-window here (agreement to 1e-15 *is*
+the certificate), not proved in general. Weil's criterion cited.
+
+## D10b — Li's criterion through the D1 face-sum (2026-09-30)
+
+**Status: computationally verified (Parts A-D); structural verdict derived.**
+Script: `li_criterion.py` (bug note: zero-side sums initially missed the
+rho<->rhobar doubling; caught by the n=1 mismatch, fixed).
+
+**Criterion (cited, Li 1997):** RH <=> lambda_n >= 0 for all n >= 1,
+lambda_n = sum_rho [1 - (1-1/rho)^n].
+
+**Part A -- Keiper-Taylor (exact, no zeros):** lambda_n = n[z^n]log xi(1/(1-z)),
+via L(w) = log xi(1+w) series (Stieltjes numbers to k=40, polygamma at 1/2,
+formal log + composition with w = z/(1-z)). n = 1..40: all lambda_n >= 0
+(min 0.0230957 at n=1). lambda_1 = 0.0230957090, lambda_2 = 0.0923457352
+(match known values). lambda_n/(n log n) = 0.067, 0.063, 0.072, 0.099,
+0.146, 0.182, 0.207 (n = 2..40) -- rising toward the known (1/2)n log n
+asymptote.
+
+**Part B -- zero side:** 2Re sum_{0<gamma<=319}[1-(1-1/rho)^n] (150 zeros)
+vs Taylor: n=1: 0.020642 vs 0.023096; n=10: 2.034 vs 2.279; n=30: 16.35
+vs 18.55. Residual = high-zero tail; tail estimated by the zero-density
+integral matches every observed gap to 3 s.f. (n=30: est 2.21, obs 2.21).
+Fully reconciled -- the bridge carries traffic.
+
+**Part C -- S_1 is archimedean (structural):** sum_{|gamma|<=319} 1/rho
+-> 0.0230957 = 1 + gamma/2 - (1/2)log(4pi). Its proof uses only the
+functional equation: S_1 = xi'(1)/xi(1) = [1 from s(s-1)] + [gamma from
+zeta's Laurent] + [-(1/2)log pi - log 2 from Gamma]. The prime Dirichlet
+series sum Lambda(n)n^{-s} *diverges* at s=1 -- it never appears as a
+convergent sum. **S_1 admits no convergent prime-sum presentation; its
+value is fixed by archimedean constants.**
+
+**Part D -- obstruction generalized:** A_k(X,eps) = sum_{n<=X}
+Lambda(n)(log n)^k n^{-1-eps} grows as eps^{-k-1}: k=0: 7.45 -> 10.50
+(eps 0.10 -> 0.05); k=1: 30.7 -> 47.7; k=2: 98.0 -> 156.2 -- tracking
+k!/eps^{k+1} up to X-truncation. The Lambda-sums that "want" to be
+lambda_n's coefficients *diverge*; lambda_n needs their finite parts
+(eta_k / Stieltjes constants). Renormalization, not direct summation.
+
+**Structural verdict (derived):** lambda_n = sum_{k=1}^n (-1)^{k+1}C(n,k)S_k
+is a *coefficient* positivity on the Dirichlet side. The D1 face-sum
+reaches it only through renormalized divergent sums. **Weil is
+face-sum-native (convergent windowed prime sums, 10a); Li is
+Dirichlet-series-native (finite parts of divergent sums).** Formal coda
+(heuristic, labeled): lambda_n is Weil-type positivity for the
+non-decaying "test function" 1-((rho-1)/rho)^n -- the sharp cutoff is
+exactly why its prime side diverges; Li is the inadmissible sharp limit
+of Weil.
+
+**10b closed.** Lesson for the bridge program: the face-sum's native
+positivity is Weil-type (smoothed/windowed); do not expect it to carry
+coefficient-positivity directly. This sharpens the hunt: 10c (Selberg
+lambda^2, a genuine quadratic form) and 10d (function-field template)
+are where an independent source can live.
+
+## D10c — Selberg's lambda^2 sieve as an optimized quadratic form (2026-09-30)
+
+**Status: exact theorem (optimizer + minimum); computationally verified
+(PD, sum-of-squares, classical comparison).** Script: `selberg_form.py`.
+
+**Face-native form.** Squarefree d <-> face S, prod S = d; lcm = prod of
+union. On the finite complex Delta_z (primes <= z):
+    Q(lam) = sum_{S,T} lam_S lam_T / prod(S union T),   lam_empty = 1.
+M_{S,T} = 1/prod(S union T) is positive definite (Cholesky + all
+eigenvalues > 0, verified z <= 19; min eig 1.1e-8 at z=19), so
+Q(lam) = sum_k w_k (v_k . lam)^2 -- an explicit sum of squares,
+Weil-shaped positivity by construction. (Caught+fixed own bug: square
+reconstruction must use M's eigendecomposition, not M^{-1}'s.)
+
+**Exact theorem: the optimizer is Mobius.** (M mu)_S
+= sum_T mu(T)/prod(S union T). Since prod(S union T) = prod S * prod(T\S),
+split T = T1 union T2 with T1 = T cap S, T2 = T\S (disjoint):
+    = (1/prod S) [sum_{T1 subset S} mu(T1)] [sum_{T2 cap S = empty} mu(T2)/prod T2].
+The first bracket is (1-1)^{|S|} = delta_{S,empty}; the second at S=empty
+is prod_{p<=z}(1-1/p) = delta(z). Hence M mu = delta(z) e_empty,
+M^{-1} e_empty = mu/delta(z), and with lam_empty = 1:
+    lam*_S = mu(S),   Qmin = delta(z) = prod_{p<=z}(1-1/p).
+Verified: Qmin/delta(z) = 1 to 12 digits, max|lam*-mu| < 5e-14, z<=19.
+The sieve's optimal quadratic form *is* inclusion-exclusion: the Mobius
+weights are the energy minimizers, and the minimum recovers the Mertens
+product *exactly* (not just asymptotically).
+
+**Classical comparison.** Level-truncated 1/G(z), G(z)=sum_{d<=z}mu^2(d)/phi(d):
+1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710. The d<=z truncation
+is a *constraint*; the full-face optimum is the better (smaller) bound.
+Both -> e^{-gamma}/log z asymptotically, but only the face-native form
+is exact at finite z.
+
+**Structural verdict (derived).** Selberg's form is the canonical
+*optimized quadratic form on the complex*: finite, convergent,
+Weil-type (sum of squares) -- consistent with 10b's lesson that the
+face-sum carries Weil-type, not Li-type, positivity. But it is an
+*upper-bound machine*: PD by construction (positivity assumed, not
+discovered from arithmetic), no analytic continuation, no zeros, and the
+parity barrier stands -- the same form bounds primes and almost-primes
+alike, so no amount of optimization resolves omega(n) parity. 10c gives
+the *template* (optimized face-quadratic form, exact optimizer = mu),
+not an independent zero-detecting positivity source. That remains 10d.
+

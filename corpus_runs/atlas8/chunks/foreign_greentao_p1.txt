@@ -1,0 +1,87 @@
+The primes contain arbitrarily long arithmetic progressions
+
+The primes contain arbitrarily long arithmetic progressionsThanks: While this work was carried out the first author was a PIMS postdoctoral fellow at the University of British Columbia, Vancouver, Canada. The second author was
+a Clay Prize Fellow and was supported by a grant from the Packard Foundation.
+
+Ben Green
+
+Address: School of Mathematics
+
+University Walk
+
+Bristol
+
+BS8 1TW
+
+Email address: b.j.green@bristol.ac.uk
+
+ and 
+Terence Tao
+
+Address: Department of Mathematics
+
+University of California at Los Angeles
+
+Los Angeles CA 90095
+
+Email address: tao@math.ucla.edu
+
+Abstract.
+ 
+
+We prove that there are arbitrarily long arithmetic progressions of primes.
+
+ 
+
+There are three
+major ingredients. The first is Szemerédi’s theorem, which asserts that any subset of the integers of positive density
+contains progressions of arbitrary length. The second, which is the main new ingredient of this paper,
+is a certain transference principle. This allows us to deduce from Szemerédi’s theorem that any subset of a sufficiently
+pseudorandom set (or measure) of positive relative density
+contains progressions of arbitrary length. The third ingredient is a recent result of Goldston
+and Yıldırım, which we reproduce here. Using this, one may place (a large fraction of) the primes
+inside a pseudorandom set of “almost primes” (or more precisely, a pseudorandom measure concentrated on almost primes)
+with positive relative density.
+
+ 
+
+1991 Mathematics Subject Classification11N13, 11B25, 374A5
+
+1. Introduction
+
+It is a well-known conjecture that there are arbitrarily long arithmetic progressions of prime numbers. The conjecture is best described as “classical”, or maybe even “folklore”. In Dickson’s History it is stated that around 1770 Lagrange and Waring investigated how large the common difference of an arithmetic progression of LL primes must be, and it is hard to imagine that they did not at least wonder whether their results were sharp for all LL.
+
+It is not surprising that the conjecture should have been made, since a simple heuristic based on the prime number theorem would suggest that there are ≫N2/logk⁡N\gg N^{2}/\log^{k}N kk-tuples of primes p1,…,pkp_{1},\dots,p_{k} in arithmetic progression, each pip_{i} being at most NN. Hardy and Littlewood [24], in their famous paper of 1923, advanced a very general conjecture which, as a special case, contains the hypothesis that the number of such kk-term progressions is asymptotically Ck​N2/logk⁡NC_{k}N^{2}/\log^{k}N for a certain explicit numerical factor Ck>0C_{k}>0 (we do not come close to establishing this conjecture here, obtaining instead
+a lower bound (γ⁡(k)+o⁡(1))​N2/logk⁡N(\gamma(k)+o(1))N^{2}/\log^{k}N for some very small γ⁡(k)>0\gamma(k)>0).
+
+The first theoretical progress on these conjectures was made by van der Corput [42] (see also [8]) who, in 1939, used Vinogradov’s method of prime number sums to establish the case k=3k=3, that is to say that there are infinitely many triples of primes in arithmetic progression. However, the question of longer arithmetic progressions seems to have remained completely open (except for upper bounds), even for k=4k=4. On the other hand, it has been known for some time that better results can be obtained if one replaces the primes with
+a slightly larger set of almost primes. The most impressive such result is due to Heath-Brown [25]. He showed that there are infinitely many 4-term progressions consisting of three primes and a number which is either prime or a product of two primes. In a somewhat different direction, let us mention the beautiful results of Balog [2, 3]. Among other things he shows that for any mm there are mm distinct primes p1,…,pmp_{1},\dots,p_{m} such that all of the averages 12​(pi+pj)\frac{1}{2}(p_{i}+p_{j}) are prime.
+
+The problem of finding long arithmetic progressions in the primes has also attracted the interest of computational mathematicians. At the time of writing the longest known arithmetic progression of primes is of length 23, and was found in 2004 by Markus Frind, Paul Underwood, and Paul Jobling:
+
+56211383760397+44546738095860​k;k=0,1,…,22.56211383760397+44546738095860k;\quad k=0,1,\ldots,22.
+
+An earlier arithmetic progression of primes of length 22 was found by Moran, Pritchard and Thyssen [32]:
+
+11410337850553+4609098694200​k;k=0,1,…,21.11410337850553+4609098694200k;\quad k=0,1,\ldots,21.
+
+Our main theorem resolves the above conjecture.
+
+Theorem 1.1.
+
+The prime numbers contain infinitely many arithmetic progressions of length kk for all kk.
+
+In fact, we can say something a little stronger:
+
+Theorem 1.2 (Szemerédi’s theorem in the primes).
+
+Let AA be any subset of the prime numbers of positive relative upper density, thus lim supN→∞π​(N)−1​|A∩[1,N]|>0\limsup_{N\to\infty}\pi(N)^{-1}|A\cap[1,N]|>0, where π⁡(N)\pi(N) denotes the number of primes less than or equal to NN. Then AA contains infinitely many arithmetic progressions of length kk for all kk.
+
+If one replaces “primes” in the statement of Theorem 1.2 by the set of all positive integers ℤ+{\mathbb{Z}}^{+}, then this is a famous theorem of Szemerédi [38]. The special case k=3k=3 of Theorem 1.2 was recently established by the first author [21] using methods of Fourier analysis. In contrast, our
+methods here have a more ergodic theory flavour and do not involve much Fourier analysis (though the argument does rely on Szemerédi’s theorem which can be proven by either combinatorial, ergodic theory, or Fourier analysis arguments). We also remark that if the primes were replaced
+by a random subset of the integers, with density at least N−1/2+εN^{-1/2+{\varepsilon}} on each interval [1,N][1,N], then the k=3k=3 case of the above theorem was established in [30].
+
+Acknowledgements The authors would like to thank Jean Bourgain, Enrico Bombieri, Tim Gowers, Bryna Kra, Elon Lindenstrauss, Imre Ruzsa, Roman Sasyk, Peter Sarnak and Kannan Soundararajan for helpful conversations. We are particularly indebted to Andrew Granville for drawing our attention to the work of Goldston and Yıldırım, and to Dan Goldston for making the preprint [17] available. We are also indebted to Yong-Gao Chen and his students, Bryna Kra, Jamie Radcliffe, Lior Silberman and Mark Watkins for corrections to earlier versions of the manuscript. We are
+particularly indebted to the anonymous referees for a very thorough reading and many helpful corrections and suggestions, which have
+been incorporated into this version of the paper.
+Portions of this work were completed while the first author was visiting UCLA and Université de Montréal, and he would like to thank these institutions for their hospitality. He would also like to thank Trinity College, Cambridge for support over several years.

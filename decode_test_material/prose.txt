@@ -1,0 +1,31 @@
+Research status: prime distribution investigation. Four active threads.
+
+(1) Gap analysis: prime_gaps, maximal_prime_gap, jacobsthal_function,
+primorial_wheel, wheel_210, gap_residues, mod9_analysis. The wheel_210
+case is verified (established). The jacobsthal_function bounds
+maximal_prime_gap.
+
+(2) Spectral statistics: zeta_zeros, gue_statistics, berry_tones,
+number_variance, odlyzko_computation, lattice_echo, finite_T_correction,
+rmt_limit. Berry_tones were measured in the number_variance; the
+lattice_echo is closed as a finite_T_correction (established);
+gue_statistics is the rmt_limit.
+
+(3) Analytic machinery: hardy_littlewood, singular_series,
+sieve_methods, explicit_formula, mobius_function, euler_product,
+prime_zeta. The hardy_littlewood singular_series is validated to 0.1%
+(established). Sieve_methods attack twin_primes; the explicit_formula
+sums over zeta_zeros; prime_zeta comes from the euler_product
+logarithm.
+
+(4) CCC project: ccc_codec, registry_sync, cursor_layer, fountain_code,
+context_compression, llm_context_window, token_budget, prompt_caching.
+The ccc_codec implements context_compression; cursor_layer and
+fountain_code are layers of the ccc_codec; registry_sync is overhead of
+the ccc_codec; token_budget is constrained by the llm_context_window;
+prompt_caching eases token_budget pressure.
+
+Cross-thread: prime_gaps and zeta_zeros both probe prime distribution.
+
+Open loops (unresolved): riemann_hypothesis (unproven), twin_primes
+(open).

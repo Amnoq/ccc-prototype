@@ -1,0 +1,5 @@
+K9-3: overnight gap structure
+  AAPL: mean|gap|=0.0063; |gap|>1%: 81 days, fill rate=0.56; overnight log-ret total=-0.243 vs intraday total=0.621
+  MSFT: mean|gap|=0.0073; |gap|>1%: 107 days, fill rate=0.56; overnight log-ret total=0.026 vs intraday total=0.172
+  NVDA: mean|gap|=0.0122; |gap|>1%: 237 days, fill rate=0.50; overnight log-ret total=0.848 vs intraday total=-0.169
+VERDICT: VERIFIED (structure recomputed from raw files; numbers are window facts)

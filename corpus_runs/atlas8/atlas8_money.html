@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Atlas-8 — prime distribution: literature vs the circle sieve</title>
+<style>
+body{background:#141419;color:#d8d8e0;font-family:system-ui,sans-serif;max-width:1100px;margin:0 auto;padding:24px}
+h1{color:#fff}h2{color:#ffd700;border-bottom:1px solid #3a3a44;padding-bottom:6px}
+img{max-width:100%;border:1px solid #3a3a44}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{border:1px solid #3a3a44;padding:8px;text-align:left;vertical-align:top;font-size:14px}
+th{background:#1e1e26;color:#ffd700}
+.verified{color:#70ad47;font-weight:bold}.undec{color:#e0a030;font-weight:bold}
+a{color:#5b9bd5}.note{color:#9a9aa5;font-size:13px}
+code{background:#1e1e26;padding:2px 5px;border-radius:3px}
+</style></head><body>
+<h1>Atlas-8 — the prime-distribution run</h1>
+<p>Landmark prime-distribution literature (foreign sky, 212 concepts) vs the
+pilot's circle-sieve sky (home, 133 concepts, spans first-class).
+<strong>4 of 5 crack candidates verify computationally.</strong></p>
+<h2>Money view</h2>
+<img src="atlas8_money.png" alt="Atlas-8 money view">
+<h2>Crack list (lead exhibit)</h2>
+<table><tr><th>Crack</th><th>What the literature does not state</th><th>Label</th><th>Verification</th></tr>
+<tr><td><b>K8-1</b> PNT as total weight 1</td><td>PNT as the identity Σw(S)→1 on the weighted infinite complex (framing)</td><td>computationally_verified</td><td class="verified">✅ verified</td></tr>
+<tr><td><b>K8-2</b> Admissibility emergent</td><td>Admissible constellations as sieve output; the obstruction ({0,2,4} dies) emerges uninserted</td><td>computationally_verified</td><td class="verified">✅ verified</td></tr>
+<tr><td><b>K8-3</b> Twin series as sieve weight</td><td>2C₂ derived as renormalized total weight of the deformed sieve (the asymptotic stays unclaimed)</td><td>computationally_verified</td><td class="verified">✅ verified</td></tr>
+<tr><td><b>K8-4</b> Circle sieve independent</td><td>A geometric sieve built without the literature, checked against Eratosthenes</td><td>exact</td><td class="verified">✅ verified</td></tr>
+<tr><td><b>K8-5</b> Selberg λ² face form</td><td>Face-native quadratic-form reframing (source truncated)</td><td>heuristic</td><td class="undec">❓ undecidable</td></tr>
+</table>
+<p class="note">Full four-field records + verification scripts/outputs: <code>CRACK_LIST.md</code>, <code>verification/</code></p>
+<h2>Adjudications (13)</h2>
+<table><tr><th>ID</th><th>Verdict</th><th>Pair</th><th>Role difference / reason</th></tr>
+<tr><td>A8-01</td><td>split_link (S1 control)</td><td>Maynard cites Zhang [9] ↔ Zhang Theorem 1</td><td>cited breakthrough vs proved theorem — control resolves</td></tr>
+<tr><td>A8-02</td><td>split_link</td><td>Elkies diagonalization lemma ↔ home λ² face form</td><td>proved classical lemma vs face-native reframing</td></tr>
+<tr><td>A8-03</td><td>split_link</td><td>Selberg's inequality ↔ home λ² face form</td><td>proved upper bound vs method reframing</td></tr>
+<tr><td>A8-04</td><td>split_link</td><td>Maynard k-dim Selberg weights ↔ home λ² face form</td><td>working engine vs structural reframing</td></tr>
+<tr><td>A8-05</td><td>split_link</td><td>Maynard Lemma 5.1 diagonal y-form ↔ home λ² face form</td><td>analytic evaluation vs geometric reframing</td></tr>
+<tr><td>A8-06</td><td>split_link</td><td>Zagier/Newman PNT ↔ home D4 weight identity</td><td>Tauberian proof vs combinatorial identity</td></tr>
+<tr><td>A8-07</td><td>rejected</td><td>HL 1923 (APs) ↔ home HL twin constant</td><td>different HL conjectures; shared name only</td></tr>
+<tr><td>A8-08</td><td>rejected</td><td>Brun's theorem ↔ home twin-density boundary</td><td>different claims about twins</td></tr>
+<tr><td>A8-09</td><td>split_link</td><td>Zhang Theorem 1 ↔ home k-tuple combos</td><td>tuples as theorem-engine vs as exhibited output</td></tr>
+<tr><td>A8-10</td><td>split_link</td><td>Maynard admissibility def ↔ home emergent obstruction</td><td>stipulated input vs emergent output</td></tr>
+<tr><td>A8-11</td><td>split_link</td><td>k-tuples conjecture ↔ home twin-density honest boundary</td><td>conjectured vs mechanism-without-claim</td></tr>
+<tr><td>A8-12</td><td>split_link</td><td>Maynard Theorem 1.2 ↔ home k-tuple sweep</td><td>proved proportion vs exhibited census</td></tr>
+<tr><td>A8-13</td><td>split_link</td><td>Elkies sieve setup ↔ home circle sieve</td><td>classical divisibility vs geometric shared-boundary sifting</td></tr>
+</table>
+<h2>Recorded misses (absences, not links)</h2>
+<ul>
+<li>M8-1 Cramér's conjecture (max gap) — no home counterpart</li>
+<li>M8-2 Green–Tao arbitrarily long APs — no home counterpart</li>
+<li>M8-3 Cramér's urn model — no home counterpart (pilot is deterministic)</li>
+<li>M8-4 Selberg parity barrier — no foreign counterpart in these chunks</li>
+<li>M8-5 Level of distribution — no home counterpart</li>
+</ul>
+<p class="note">Full records: <code>ATLAS8_REPORT.md</code> · <code>atlas8_adjudications.json</code> ·
+<code>grading_packet.md</code> · <code>graphs/atlas8_raw.json</code> · <code>candidates.json</code></p>
+</body></html>

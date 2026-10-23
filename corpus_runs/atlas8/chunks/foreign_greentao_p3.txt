@@ -1,0 +1,152 @@
+3. Pseudorandom measures
+
+In this section we specify exactly what we mean by a pseudorandom measure on ℤN\mathbb{Z}_{N}. First, however, we set up some notation. We fix the length kk of the arithmetic progressions we are seeking. N=|ℤN|N=|\mathbb{Z}_{N}| will always be assumed to be prime and large (in particular, we can invert any of the numbers 1,…,k1,\ldots,k in ℤN{\mathbb{Z}}_{N}), and we will write o⁡(1)o(1) for a quantity that tends to zero as N→∞N\rightarrow\infty. We will write O⁡(1)O(1) for a bounded quantity. Sometimes quantities of this type will tend to zero (resp. be bounded) in a way that depends on some other, typically fixed, parameters. If there is any danger of confusion as to what is being proved, we will indicate such dependence using subscripts, thus for instance Oj,ε​(1)O_{j,{\varepsilon}}(1) denotes a quantity whose magnitude is bounded by C⁡(j,ε)C(j,{\varepsilon}) for some quantity C⁡(j,ε)>0C(j,{\varepsilon})>0 depending only j,εj,{\varepsilon}. Since every quantity in this paper will depend on kk, however, we will not bother indicating the kk dependence throughout this paper. As is customary
+we often abbreviate O⁡(1)​XO(1)X and o⁡(1)​Xo(1)X as O⁡(X)O(X) and o⁡(X)o(X) respectively for various non-negative quantities XX.
+
+If AA is a finite non-empty set (for us AA is usually just ℤN\mathbb{Z}_{N}) and f:A→ℝf:A\to{\mathbb{R}} is a function,
+we write 𝔼⁡(f):=𝔼⁡(f⁡(x)|x∈A){\mathbb{E}}(f):={\mathbb{E}}(f(x)|x\in A) for the average value of ff, that is to say
+
+𝔼⁡(f):=1|A|​∑x∈Af⁡(x).{\mathbb{E}}(f):=\frac{1}{|A|}\sum_{x\in A}f(x).
+
+Here, as is usual, we write |A||A| for the cardinality of the set AA. More generally, if P⁡(x)P(x) is any statement concerning an element of AA which is true for at least one x∈Ax\in A,
+we define
+
+𝔼(f(x)|P(x)):=∑x∈A:P⁡(x)f(x)|{x∈A:P⁡(x)}|.{\mathbb{E}}(f(x)|P(x)):=\frac{\sum_{x\in A:P(x)}f(x)}{|\{x\in A:P(x)\}|}.
+
+This notation extends to functions of several variables in the obvious manner. We now define two notions of randomness
+for a measure, which we term the linear forms condition and the correlation condition.
+
+Definition 3.1 (Linear forms condition).
+
+Let ν:ℤN→ℝ+\nu:\mathbb{Z}_{N}\rightarrow\mathbb{R}^{+} be a measure. Let m0,t0m_{0},t_{0} and L0L_{0} be small positive integer parameters. Then we say that ν\nu satisfies the (m0,t0,L0)(m_{0},t_{0},L_{0})-linear forms condition if the following holds. Let m⩽m0m\leqslant m_{0} and t⩽t0t\leqslant t_{0} be arbitrary, and suppose that (Li​j)1⩽i⩽m,1⩽j⩽t(L_{ij})_{1\leqslant i\leqslant m,1\leqslant j\leqslant t} are arbitrary rational numbers with numerator and denominator at most L0L_{0} in absolute value, and that bib_{i}, 1⩽i⩽m1\leqslant i\leqslant m, are arbitrary elements of ℤN\mathbb{Z}_{N}. For 1⩽i⩽m1\leqslant i\leqslant m, let ψi:ℤNt→ℤN\psi_{i}:{\mathbb{Z}}_{N}^{t}\to{\mathbb{Z}}_{N} be the linear forms ψi​(𝐱)=∑j=1tLi​j​xj+bi\psi_{i}(\mathbf{x})=\sum_{j=1}^{t}L_{ij}x_{j}+b_{i}, where 𝐱=(x1,…,xt)∈ℤNt\mathbf{x}=(x_{1},\dots,x_{t})\in\mathbb{Z}_{N}^{t}, and where the rational numbers Li​jL_{ij} are interpreted as elements of ℤN{\mathbb{Z}}_{N} in the usual manner (assuming NN is prime and larger than L0L_{0}). Suppose that as ii ranges over 1,…,m1,\ldots,m, the tt-tuples (Li​j)1⩽j⩽t∈ℚt(L_{ij})_{1\leqslant j\leqslant t}\in{\mathbb{Q}}^{t} are non-zero, and no tt-tuple is a rational multiple of any other.
+Then we have
+
+𝔼⁡(ν⁡(ψ1​(𝐱))​…​ν​(ψm​(𝐱))|𝐱∈ℤNt)=1+oL0,m0,t0​(1).\mathbb{E}\left(\nu(\psi_{1}(\mathbf{x}))\dots\nu(\psi_{m}(\mathbf{x}))\;|\;\mathbf{x}\in\mathbb{Z}_{N}^{t}\right)=1+o_{L_{0},m_{0},t_{0}}(1).
+
+(3.1)
+
+Note that the rate of decay in the o⁡(1)o(1) term is assumed to be uniform in the choice of b1,…,bmb_{1},\ldots,b_{m}.
+
+Remarks. It is the parameter m0m_{0}, which controls the number of linear forms, that is by far the most important, and will be kept relatively small. It will eventually be set equal to k⋅2k−1k\cdot 2^{k-1}. Note that the m=1m=1 case of the linear forms condition recovers the measure condition (2.4). Other simple examples of the linear forms condition which we will encounter later are
+
+𝔼⁡(ν⁡(x)​ν​(x+h1)​ν​(x+h2)​ν​(x+h1+h2)|x,h1,h2∈ℤN)=1+o⁡(1){\mathbb{E}}(\nu(x)\nu(x+h_{1})\nu(x+h_{2})\nu(x+h_{1}+h_{2})\;|\;x,h_{1},h_{2}\in{\mathbb{Z}}_{N})=1+o(1)
+
+(3.2)
+
+(here (m0,t0,L0)=(4,3,1)(m_{0},t_{0},L_{0})=(4,3,1));
+
+𝔼⁡(ν⁡(x+h1)​ν​(x+h2)​ν​(x+h1+h2)|h1,h2∈ℤN)=1+o⁡(1){\mathbb{E}}\big(\nu(x+h_{1})\nu(x+h_{2})\nu(x+h_{1}+h_{2})\;|\;h_{1},h_{2}\in{\mathbb{Z}}_{N}\big)=1+o(1)
+
+(3.3)
+
+for all x∈ℤNx\in{\mathbb{Z}}_{N} (here (m0,t0,L0)=(3,2,1)(m_{0},t_{0},L_{0})=(3,2,1)) and
+
+𝔼(ν((x−y)/2)ν((x−y+h2)/2)ν(−y)ν(−y−h1)×\displaystyle{\mathbb{E}}\bigg(\nu((x-y)/2)\nu((x-y+h_{2})/2)\nu(-y)\nu(-y-h_{1})\times
+
+×ν((x−y′)/2)ν((x−y′+h2)/2)ν(−y′)ν(−y′−h1)×\displaystyle\qquad\times\;\nu((x-y^{\prime})/2)\nu((x-y^{\prime}+h_{2})/2)\nu(-y^{\prime})\nu(-y^{\prime}-h_{1})\times
+
+×ν(x)ν(x+h1)ν(x+h2)ν(x+h1+h2)|x,h1,h2,y,y′∈ℤN)\displaystyle\qquad\qquad\times\;\nu(x)\nu(x+h_{1})\nu(x+h_{2})\nu(x+h_{1}+h_{2})\;\bigg|\;x,h_{1},h_{2},y,y^{\prime}\in{\mathbb{Z}}_{N}\bigg)
+
+=1+o⁡(1)\displaystyle\qquad\qquad\qquad\qquad=1+o(1)
+
+(3.4)
+
+(here (m0,t0,L0)=(12,5,2)(m_{0},t_{0},L_{0})=(12,5,2)).
+For those readers familiar with the Gowers uniformity norms Uk−1U^{k-1}
+(which we shall discuss in detail later), the example (3.2) demonstrates that ν\nu is close to 1 in the U2U^{2} norm (see Lemma 5.2). Similarly, the linear forms condition with appropriately many parameters implies that ν\nu is close to 11 in the UdU^{d} norm, for any fixed d⩾2d\geqslant 2. However, the linear forms condition is much stronger than simply asserting that ‖ν−1‖Ud\|\nu-1\|_{U^{d}} is small for various dd.
+
+For the application to the primes, the measure ν\nu will be constructed using truncated divisor sums, and the linear forms condition will be deduced from some arguments of Goldston and Yıldırım. From a probabilistic point of view, the linear
+forms condition is asserting a type of joint independence between the “random variables” ν​(ψj​(𝐱))\nu(\psi_{j}(\mathbf{x})); in the application to the primes,
+ν\nu will be concentrated on the “almost primes”, and the linear forms condition is then saying that the events “ψj​(𝐱)\psi_{j}(\mathbf{x}) is almost prime” are essentially independent of each other as jj varies99
+ 9
+ 
+ 
+ This will only be true after first eliminating some local correlations in the almost primes arising from small divisors. This will be achieved by a simple “WW-trick” which we will come to later in this paper..
+
+Definition 3.2 (Correlation condition).
+
+Let ν:ℤN→ℝ+\nu:\mathbb{Z}_{N}\rightarrow\mathbb{R}^{+} be a measure, and let m0m_{0} be a positive integer parameter. We say that ν\nu satisfies the m0m_{0}-correlation condition if for every 1<m⩽m01<m\leqslant m_{0}
+there exists a weight
+function τ=τm:ℤN→ℝ+\tau=\tau_{m}:\mathbb{Z}_{N}\to{\mathbb{R}}^{+} which obeys the moment conditions
+
+𝔼⁡(τq)=Om,q​(1){\mathbb{E}}(\tau^{q})=O_{m,q}(1)
+
+(3.5)
+
+for all 1⩽q<∞1\leqslant q<\infty
+and such that
+
+𝔼⁡(ν⁡(x+h1)​ν​(x+h2)​…​ν​(x+hm)|x∈ℤN)⩽∑1⩽i<j⩽mτ⁡(hi−hj){\mathbb{E}}(\nu(x+h_{1})\nu(x+h_{2})\ldots\nu(x+h_{m})\;|\;x\in\mathbb{Z}_{N})\leqslant\sum_{1\leqslant i<j\leqslant m}\tau(h_{i}-h_{j})
+
+(3.6)
+
+for all h1,…,hm∈ℤNh_{1},\ldots,h_{m}\in{\mathbb{Z}}_{N} (not necessarily distinct).
+
+Remarks. The condition (3.6) may look a little strange, since if ν\nu were to be chosen randomly then we would expect such a condition to hold with 1+o⁡(1)1+o(1) on the right-hand side, at least when h1,…,hmh_{1},\ldots,h_{m} are distinct. Note that one cannot use the linear
+forms condition to control the left-hand side of (3.6) because the linear components of the forms x+hjx+h_{j} are all the same.
+The correlation condition has been designed with the primes in mind1010
+ 10
+ 
+ 
+ A simpler, but perhaps less interesting, model case occurs when one is trying to prove Szemerédi’s theorem relative to a random subset of {1,…,N}\{1,\ldots,N\} of density 1/log⁡N1/\log N (cf. [30]). The pseudorandom weight ν\nu would then be a Bernoulli random variable, with each ν⁡(x)\nu(x) equal to log⁡N\log N with independent probability 1/log⁡N1/\log N and equal to 00 otherwise. In such a case,
+we can (with high probability)
+bound the left-hand side of (3.6) more cleanly by O⁡(1)O(1) (and even obtain the asymptotic 1+o⁡(1)1+o(1))
+when the hjh_{j} are distinct, and by O⁡(logm⁡N)O(\log^{m}N) otherwise.,
+because in that case we must tolerate slight “arithmetic” nonuniformities. Observe, for example, that the number of p⩽Np\leqslant N for which p−hp-h is also prime is not bounded above by a constant times N/log2⁡NN/\log^{2}N if hh contains a very large number of prime factors, although such exceptions will of course be very rare and one still expects to have moment conditions such as (3.5). It is phenomena like this which prevent us from assuming an L∞L^{\infty} bound for τ\tau. While m0m_{0} will be restricted to be small (in fact, equal to 2k−12^{k-1}), it will be important for us that there is no upper bound required on qq (which we will eventually need to be a very large function of kk, but still independent of NN of course). Since the correlation condition is an upper bound rather than an asymptotic, it is
+fairly easy to obtain; we shall prove it using the arguments of Goldston and Yıldırım (since we are using those methods in any case to prove
+the linear forms condition), but these upper bounds could also be obtained by more standard sieve theory methods.
+
+Definition 3.3 (Pseudorandom measures).
+
+Let ν:ℤN→ℝ+\nu:\mathbb{Z}_{N}\rightarrow\mathbb{R}^{+} be a measure. We say that ν\nu is kk-pseudorandom if it satisfies the (k⋅2k−1,3​k−4,k)(k\cdot 2^{k-1},3k-4,k)-linear forms condition and also the 2k−12^{k-1}-correlation condition.
+
+Remarks. The exact values k⋅2k−1k\cdot 2^{k-1}, 3​k−43k-4, kk, 2k−12^{k-1} of the parameters chosen here
+are not too important; in our application to the primes, any quantities
+which depend only on kk would suffice. It can be shown that if C=Ck>1C=C_{k}>1 is any constant independent of NN and if S⊆ℤNS\subseteq\mathbb{Z}_{N} is chosen at random, each x∈ℤNx\in\mathbb{Z}_{N} being selected to lie in SS independently at random with probability 1/logC⁡N1/\log^{C}N, then (with high probability) the measure ν=logC⁡N​𝟏S\nu=\log^{C}N{\bf 1}_{S} is kk-pseudorandom, and the Hardy-Littlewood prime tuples conjecture can be viewed as an assertion that the Von Mangoldt function is essentially of this form (once one eliminates the obvious obstructions to pseudorandomness coming from small prime divisors). While we will of course not attempt to establish this conjecture here, in §9 we will construct pseudorandom measures which are concentrated on the almost primes instead of the primes; this is of course consistent with the so-called “fundamental lemma of sieve theory”,
+but we will need a rather precise variant of this lemma due to Goldston and Yıldırım.
+
+The function νconst≡1\nu_{\mbox{\scriptsize const}}\equiv 1 is clearly kk-pseudorandom for any kk. In fact the pseudorandom measures are star-shaped
+around the constant measure:
+
+Lemma 3.4.
+
+Let ν\nu be a kk-pseudorandom measure. Then ν1/2:=(ν+νconst)/2=(ν+1)/2\nu_{1/2}:=(\nu+\nu_{\mbox{\scriptsize{const}}})/2=(\nu+1)/2 is also a kk-pseudorandom measure (though possibly with slightly different bounds in the O⁡()O() and o⁡()o() terms).
+
+Proof. It is clear that ν1/2\nu_{1/2} is non-negative and has expectation 1+o⁡(1)1+o(1). To verify the linear forms condition (3.1), we simply
+replace ν\nu by (ν+1)/2(\nu+1)/2 in the definition and expand as a sum of 2m2^{m} terms, divided by 2m2^{m}. Since each term can be verified to be
+1+o⁡(1)1+o(1) by the linear forms condition (3.1), the claim follows. The correlation condition is verified
+in a similar manner. (A similar result holds for (1−θ)​ν+θ​νconst(1-\theta)\nu+\theta\nu_{\mbox{\scriptsize const}} for any 0⩽θ⩽10\leqslant\theta\leqslant 1, but we will not need to use
+this generalization.) 
+
+The following result is one of the main theorems of the paper. It asserts that for the purposes of Szemerédi’s theorem (and ignoring o⁡(1)o(1) errors), there is no distinction
+between a kk-pseudorandom measure ν\nu and the constant measure νconst\nu_{\mbox{\scriptsize const}}.
+
+Theorem 3.5 (Szemerédi’s theorem relative to a pseudorandom measure).
+
+Let k⩾3k\geqslant 3 and 0<δ⩽10<\delta\leqslant 1 be fixed parameters. Suppose that ν:ℤN→ℝ+\nu:\mathbb{Z}_{N}\to{\mathbb{R}}^{+} is kk-pseudorandom. Let f:ℤN→ℝ+f:\mathbb{Z}_{N}\to{\mathbb{R}}^{+} be any non-negative function obeying the bound
+
+0⩽f⁡(x)⩽ν⁡(x)​ for all ​x∈ℤN0\leqslant f(x)\leqslant\nu(x)\hbox{ for all }x\in\mathbb{Z}_{N}
+
+(3.7)
+
+and
+
+𝔼⁡(f)⩾δ.{\mathbb{E}}(f)\geqslant\delta.
+
+(3.8)
+
+Then we have
+
+𝔼⁡(f⁡(x)​f​(x+r)​…​f​(x+(k−1)​r)|x,r∈ℤN)⩾c⁡(k,δ)−ok,δ​(1){\mathbb{E}}(f(x)f(x+r)\ldots f(x+(k-1)r)|x,r\in\mathbb{Z}_{N})\geqslant c(k,\delta)-o_{k,\delta}(1)
+
+(3.9)
+
+where c⁡(k,δ)>0c(k,\delta)>0 is the same constant which appears in Proposition 2.3. (The decay rate ok,δ​(1)o_{k,\delta}(1), on the other hand, decays significantly slower than that in Proposition 2.3, and depends of course on the decay rates in the linear forms and correlation conditions).
+
+We remark that while we do not explicitly assume that NN is large in Theorem 3.5, we are free to do so since the conclusion
+(3.9) is trivial when N=Ok,δ​(1)N=O_{k,\delta}(1). We certainly encourage the reader to think of NN has being extremely large compared
+to other quantities such as kk and δ\delta, and to think of o⁡(1)o(1) errors as being negligible.
+
+The proof of this theorem will occupy the next few sections, §4–8. Interestingly, the proof requires no Fourier analysis, additive combinatorics, or number theory; the argument is instead a blend of quantitative ergodic theory arguments with some combinatorial estimates related to Gowers uniformity and sparse hypergraph regularity. From §9 onwards we will apply this theorem to
+the specific case of the primes, by establishing a pseudorandom majorant for
+(a modified version of) the von Mangoldt function.

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-3 — bridge sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-3 — bridge sky</div>
+    <div class="sub">Frenkel hep-th/0512172 (Langlands program lectures), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {}, "standalone": [{"id": "hecke-eigensheaf-as-holonomic-twisted-d-module-o", "display": "Hecke eigensheaf as holonomic twisted D-module on Bun_n determined by E", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "definition", "genre": "original", "note": "Defined as a D-module on Bun_n satisfying a property determined by a holomorphic rank-n bundle with connection E on X; for general G it attaches to a holomorphic ^L G-bundle with connection a Hecke eigensheaf on Bun_G."}, {"id": "geometric-langlands-correspondence-holomorphic-l", "display": "geometric Langlands correspondence: holomorphic ^L G-bundles with connection on X map to Hecke eigensheaves on Bun_G", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "claim", "genre": "original", "note": "Stated as the geometric Langlands prediction (boxed diagram): holomorphic ^L G-bundles with connection on X -> Hecke eigensheaves on Bun_G. Precise definitions deferred to Part II of the survey; no proof here."}, {"id": "langlands-duality-and-s-duality-as-non-abelian-f", "display": "Langlands duality and S-duality as non-abelian Fourier transforms", "status": "heuristic", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "claim", "genre": "reframed", "note": "Intro asserts both the Langlands correspondence and physics dualities 'have emerged as some sort of non-abelian Fourier transforms' — an analogy stated to motivate the two goals, not derived."}, {"id": "kapustin-witten-scenario-t-hooft-operators-reduc", "display": "Kapustin-Witten scenario: t'Hooft operators reduce to Hecke operators, t'Hooft eigenbrane to Hecke eigensheaf", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "method", "genre": "reframed", "note": "Witten's scenario: dimensional reduction of 4d gauge theory turns Kapustin's t'Hooft operators into Hecke operators; a t'Hooft 'eigenbrane' becomes a Hecke 'eigensheaf'. Presented as 'a possible scenario' the author 'outlined', not proved."}, {"id": "conformal-blocks-construction-giving-twisted-d-m", "display": "conformal blocks construction giving (twisted) D-modules on moduli spaces of curves and bundles", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "method", "genre": "original", "note": "Chiral correlation functions in (rational) CFT as sections of a holomorphic vector bundle with projectively flat connection on moduli of curves (Segal's axioms [9]); with affine Lie algebra symmetry (e.g. WZW), conformal blocks give projectively flat bundles on moduli of G-bundles. Asserted with citations, not derived here."}, {"id": "critical-level-center-isomorphism-center-of-chir", "display": "critical-level center isomorphism: center of chiral algebra at k=-h^v canonically isomorphic to classical W-algebra of ^L G (^L G-opers)", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "result", "genre": "original", "note": "At critical level k=-h^v the Segal-Sugawara current becomes commutative, and the center of the chiral algebra is canonically isomorphic to the classical W-algebra of ^L G (Drinfeld-Sokolov construction, ^L G-opers), shown in [12,13] and linked to T-duality of free bosons on tori. Cited, not proved in this chunk."}, {"id": "beilinson-drinfeld-construction-d-module-for-a-l", "display": "Beilinson-Drinfeld construction: D-module for a ^L G-oper E is the Hecke eigensheaf with eigenvalue E", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "result", "genre": "original", "note": "Beilinson-Drinfeld [16]: the D-module of conformal blocks attached to a ^L G-oper E is the sought-after Hecke eigensheaf with 'eigenvalue' E, solving the construction problem for opers. Stated as their 'marvelous result', proof not in this chunk."}, {"id": "chiral-hecke-algebra-scenario-conformal-blocks-a", "display": "chiral Hecke algebra scenario: conformal blocks at integral level k < -h^v conjectured to be Hecke eigensheaves with eigenvalue E", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "conjecture", "genre": "original", "note": "Beilinson and Drinfeld have conjectured that for an affine Lie algebra at integral level k < -h^v, with the chiral Hecke algebra carrying ^L G-symmetry twisted by E, the sheaf of conformal blocks on Bun_G is a Hecke eigensheaf with 'eigenvalue' E. Explicitly a conjecture; abelian case in [19]."}, {"id": "kronecker-weber-theorem-and-gal-q-ab-q-as-produc", "display": "Kronecker-Weber theorem and Gal(Q^ab/Q) as product of Z_p^x", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "result", "genre": "reframed", "note": "Kronecker-Weber theorem: Q^ab is the union of all cyclotomic fields Q(zeta_N), so Gal(Q^ab/Q) ~= lim<- (Z/NZ)^x ~= product over p of Z_p^x. Presented as classical background."}, {"id": "abelian-class-field-theory-isomorphism-1-5-with-", "display": "abelian class field theory isomorphism (1.5) with Frobenius rigidity (1.7)", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "result", "genre": "original", "note": "ACFT isomorphism (1.5): Gal(F^ab/F) ~= group of connected components of F^x \\ A_F^x, rigidified by the condition that the geometric Frobenius Fr_p goes to the adele (1,...,1,p,1,...). Standard result, stated without proof in this chunk."}, {"id": "langlands-correspondence-n-dimensional-galois-re", "display": "Langlands correspondence: n-dimensional Galois representations related to automorphic representations of GL_n(A_F)", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p1", "kind": "conjecture", "genre": "reframed", "note": "Langlands' insight (letter to Weil [32], [2]): n-dimensional representations of Gal(F-bar/F) should correspond to automorphic representations of GL_n(A_F) in functions on GL_n(F) \\ GL_n(A_F). Schematically boxed as the Langlands correspondence; a conjecture in this context."}, {"id": "langlands-conjecture-n-dimensional-representatio", "display": "Langlands' conjecture: n-dimensional representations of Gal(Fbar/F) are related to automorphic representations of GL_n(A_F)", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "conjecture", "genre": "original", "note": "Paper states Langlands' proposal (letter to Weil [32], [2]): n-dimensional representations of Gal(Fbar/F) should be related to irreducible representations of GL_n(A_F) occurring in functions on GL_n(F)\\GL_n(A_F). No proof given in chunk."}, {"id": "automorphic-representations-irreducible-represen", "display": "automorphic representations (irreducible representations of GL_n(A_F) occurring in functions on GL_n(F)\\GL_n(A_F), discrete spectrum)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper defines automorphic representations as irreducible representations of GL_n(A_F) occurring in functions on GL_n(F)\\GL_n(A_F); restricted to the discrete spectrum to avoid continuous-spectrum subtleties."}, {"id": "rigidity-matching-condition-frobenius-conjugacy-", "display": "rigidity/matching condition: Frobenius conjugacy classes coincide with Hecke eigenvalues for almost all v", "status": "conjectural", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "conjecture", "genre": "original", "note": "Paper formulates the matching condition: under sigma -> pi, Frobenius conjugacy classes for sigma coincide with Hecke eigenvalues for pi for almost all prime ideals v (those where both are unramified); n=1 reduces to ACFT rigidity (1.7). Stated as part of the conjecture."}, {"id": "frobenius-conjugacy-class-decomposition-group-d-", "display": "Frobenius conjugacy class (decomposition group D_vbar, inertia I_vbar, unramified representation, geometric Frobenius Fr_v)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper defines decomposition subgroup D_vbar, inertia I_vbar, unramified-at-v (I_vbar subset Ker sigma), geometric Frobenius Fr_v, and the resulting well-defined Frobenius conjugacy class in GL_n."}, {"id": "tannakian-philosophy-reconstruct-a-group-from-th", "display": "Tannakian philosophy: reconstruct a group from the category of its finite-dimensional representations with the tensor product", "status": "heuristic", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "claim", "genre": "reframed", "note": "Paper cites the Tannakian philosophy (reconstruct a group from its category of finite-dimensional representations with tensor product) as motivation for studying equivalence classes of Galois representations."}, {"id": "cuspidal-automorphic-representation-of-gl-2-a-th", "display": "cuspidal automorphic representation of GL_2(A) (the space C_{chi,rho}: smooth functions on GL_2(Q)\\GL_2(A) with K-finiteness, central character, growth, cuspidality)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper defines cuspidal automorphic representations of GL_2(A) via the space C_{chi,rho}: smooth functions on GL_2(Q)\\GL_2(A) with K-finiteness, central character, growth (boundedness), and cuspidality (vanishing period integral); a representation of GL_2(A^f) x gl_2 and an (gl_2, O_2) Harish-Chandra pair module."}, {"id": "restricted-tensor-product-decomposition-pi-tenso", "display": "restricted tensor product decomposition pi = tensor'_p pi_p tensor pi_infty (1.9); strong approximation identification GL_2(Q)\\GL_2(A)/K' ~= Gamma_0(N)\\GL_2^+(R)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "result", "genre": "reframed", "note": "Paper gives the restricted tensor product pi = tensor'_p pi_p tensor pi_infty (1.9), notes unramified pi_p has a unique (up to scalar) GL_2(Z_p)-invariant vector, and uses the strong approximation theorem ([33]) to identify GL_2(Q)\\GL_2(A)/K' with Gamma_0(N)\\GL_2^+(R), where N = product p^{n_p}."}, {"id": "the-modular-form-f-pi-of-weight-k-and-level-n-on", "display": "the modular form f_pi of weight k and level N on the upper half-plane attached to pi (discrete series rho = k(k-2)/4; holomorphic; cusp form; normalized a_1 = 1)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper derives the attached modular form f_pi: for pi_infty discrete series with rho = k(k-2)/4, the highest-weight vector v_infty (X_0.v = -k v, X_+.v = 0) yields phi_pi on SL_2(R) and then f_pi on H = {Im tau > 0} with f_pi(gamma tau) = (c tau+d)^k f_pi(tau) for gamma in Gamma_0(N); holomorphicity from X_+.v=0; cuspidality gives a cusp form with a_0=0, normalized a_1=1."}, {"id": "spherical-hecke-algebra-h-p-compactly-supported-", "display": "spherical Hecke algebra H_p (compactly supported GL_2(Z_p)-biinvariant functions on GL_2(Q_p) under convolution; generators H_{1,p}, H_{2,p})", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "reframed", "note": "Paper defines the spherical Hecke algebra H_p as compactly supported GL_2(Z_p)-biinvariant functions on GL_2(Q_p) under convolution, isomorphic to a polynomial algebra in generators H_{1,p}, H_{2,p} given by integrals over the double cosets M^1_2, M^2_2 (1.11)-(1.12); the GL_2(Z_p)-invariant vector v_p is an eigenvector."}, {"id": "hecke-eigenvalue-equals-fourier-coefficient-f-pi", "display": "Hecke eigenvalue equals Fourier coefficient: f_pi is an eigenfunction of the classical Hecke operators with h_{1,p} = a_p", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "result", "genre": "original", "note": "Paper computes that H_{1,p} becomes the classical Hecke operator on the upper half-plane, f_pi is an eigenfunction, and with normalization a_1=1 the eigenvalue h_{1,p} equals the pth coefficient a_p of the q-expansion f_pi(q) = sum a_n q^n."}, {"id": "galois-representation-sigma-e-ell-from-the-first", "display": "Galois representation sigma_{E,ell} from the first etale cohomology of an elliptic curve E over Q (dual of the Tate module)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper constructs sigma_{E,ell}: Gal(Qbar/Q) -> GL_2(Q_ell) from the first etale cohomology H^1_et(E_Qbar, Q_ell) ~= Q_ell^2 of an elliptic curve E over Q, concretely the dual of the Tate module; continuous in the Krull topology; unramified at primes of good reduction not dividing the conductor N_E."}, {"id": "trace-of-frobenius-equals-point-count-tr-sigma-e", "display": "trace of Frobenius equals point count: Tr sigma_E(Fr_p) = p + 1 - #E(F_p), independent of ell", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "result", "genre": "reframed", "note": "Paper states (citing [34, 36]) Tr sigma_E(Fr_p) = p+1 - #E(F_p) for p not dividing N_E, independent of the auxiliary prime ell."}, {"id": "taniyama-shimura-conjecture-proved-by-wiles-and-", "display": "Taniyama-Shimura conjecture proved by Wiles and others; implies Fermat's last theorem; bijection between isogeny classes of elliptic curves over Q of conductor N_E and newforms of weight 2 and level N_E with integer Fourier coefficients", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "result", "genre": "reframed", "note": "Paper states the Taniyama-Shimura conjecture — for each E/Q a modular cusp form f_E(q) = sum a_n q^n with a_p = p+1 - #E(F_p) (1.13) — has been proved by Wiles and others [39] and implies Fermat's last theorem; f_E is a newform, formula (1.13) holds at all primes not dividing N_E [38], giving a bijection between isogeny classes of elliptic curves over Q of conductor N_E and newforms of weight 2, level N_E with integer Fourier coefficients."}, {"id": "function-field-langlands-correspondence-is-a-the", "display": "function-field Langlands correspondence is a theorem (Drinfeld for GL_2 in the 1980s; Lafforgue for GL_n with arbitrary n)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "result", "genre": "reframed", "note": "Paper states the function-field Langlands correspondence is a theorem: Drinfeld proved it in the 1980s for GL_2 [40, 41], Lafforgue proved it for GL_n with arbitrary n [42]. Cited without proof in this chunk."}, {"id": "function-field-f-q-x-of-a-smooth-projective-conn", "display": "function field F_q(X) of a smooth projective connected curve X over F_q, analogous to Q or a number field", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper defines the function field F_q(X) of rational functions on a smooth projective connected curve X over F_q, and argues it should be viewed as analogous to Q or a number field."}, {"id": "completions-of-a-function-field-are-labeled-by-p", "display": "completions of a function field are labeled by points of X and all non-archimedean (F_q((t)) 'without carry' versus Q_p 'with carry'; characteristic p versus characteristic 0)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "claim", "genre": "original", "note": "Paper shows completions of F_q(X) are labeled by points of X, all non-archimedean (no analogues of R or C); e.g. F_q((t)) looks like Q_p but with addition/multiplication 'without carry' (characteristic p) versus Q_p's 'with carry' (characteristic 0); rings of integers F_p[[t]] vs Z_p, same residue field F_p."}, {"id": "langlands-correspondence-for-function-fields-of-", "display": "Langlands correspondence for function fields of varieties of dimension greater than one (no known formulation)", "status": "heuristic", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "question", "genre": "original", "note": "Paper states no one knows how to formulate a Langlands correspondence for function fields of varieties of dimension greater than one (completions of a surface's function field are labeled by point-plus-germ-of-curve, complete field is power series in two variables); an abelian class field theory analogue exists [43]; finding such a formulation is a very important open problem."}, {"id": "function-field-langlands-for-complex-curves-rela", "display": "function-field Langlands for complex curves related to two-dimensional conformal field theory (Part III claim); hoped higher-dimensional analogue with quantum field theories in dimensions greater than two", "status": "heuristic", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "conjecture", "genre": "original", "note": "Paper announces that Part III will argue the Langlands correspondence for function fields of curves — transported to complex curves — is closely related to two-dimensional conformal field theory, and expresses the hope of a similar connection between a higher-dimensional Langlands correspondence and quantum field theories in dimensions greater than two [44]. Programmatic, no argument given in chunk."}, {"id": "frobenius-conjugacy-class-at-a-point-x-of-a-curv", "display": "Frobenius conjugacy class at a point x of a curve over F_q (decomposition group D_x, inertia I_x, geometric Frobenius Fr_x)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "definition", "genre": "original", "note": "Paper defines the function-field analogue: Gal(Fbar/F) as deck transformations of the maximal (ramified) cover of X; decomposition group D_x and inertia I_x at a point x; geometric Frobenius Fr_x inverse to y -> y^{q_x}; unramified-at-x means I_x in Ker sigma, giving a well-defined conjugacy class sigma(Fr_x)."}, {"id": "acft-reformulated-one-dimensional-representation", "display": "ACFT reformulated: one-dimensional representations of Gal(Fbar/F) in bijection with representations of GL_1(A_F) occurring in functions on GL_1(F)\\GL_1(A_F)", "status": "exact", "cluster": "bridge", "chunk": "frenkel_p2", "kind": "claim", "genre": "reframed", "note": "Paper reformulates the ACFT isomorphism (1.5): one-dimensional representations of Gal(Fbar/F) are essentially in bijection with one-dimensional representations of F^x\\A_F^x, viewed as representations of GL_1(A_F) occurring in functions on GL_1(F)\\GL_1(A_F). Proved theorem (abelian class field theory)."}], "edges": [{"a": "geometric-langlands-correspondence-holomorphic-l", "b": "hecke-eigensheaf-as-holonomic-twisted-d-module-o", "rel": "depends_on", "count": 1}, {"a": "kapustin-witten-scenario-t-hooft-operators-reduc", "b": "geometric-langlands-correspondence-holomorphic-l", "rel": "supports", "count": 1}, {"a": "kapustin-witten-scenario-t-hooft-operators-reduc", "b": "langlands-duality-and-s-duality-as-non-abelian-f", "rel": "illustrates", "count": 1}, {"a": "conformal-blocks-construction-giving-twisted-d-m", "b": "geometric-langlands-correspondence-holomorphic-l", "rel": "supports", "count": 1}, {"a": "critical-level-center-isomorphism-center-of-chir", "b": "conformal-blocks-construction-giving-twisted-d-m", "rel": "depends_on", "count": 1}, {"a": "beilinson-drinfeld-construction-d-module-for-a-l", "b": "critical-level-center-isomorphism-center-of-chir", "rel": "depends_on", "count": 1}, {"a": "beilinson-drinfeld-construction-d-module-for-a-l", "b": "geometric-langlands-correspondence-holomorphic-l", "rel": "refines", "count": 1}, {"a": "chiral-hecke-algebra-scenario-conformal-blocks-a", "b": "conformal-blocks-construction-giving-twisted-d-m", "rel": "depends_on", "count": 1}, {"a": "chiral-hecke-algebra-scenario-conformal-blocks-a", "b": "geometric-langlands-correspondence-holomorphic-l", "rel": "refines", "count": 1}, {"a": "abelian-class-field-theory-isomorphism-1-5-with-", "b": "kronecker-weber-theorem-and-gal-q-ab-q-as-produc", "rel": "depends_on", "count": 1}, {"a": "langlands-correspondence-n-dimensional-galois-re", "b": "abelian-class-field-theory-isomorphism-1-5-with-", "rel": "generalizes", "count": 1}, {"a": "langlands-conjecture-n-dimensional-representatio", "b": "acft-reformulated-one-dimensional-representation", "rel": "generalizes", "count": 1}, {"a": "automorphic-representations-irreducible-represen", "b": "acft-reformulated-one-dimensional-representation", "rel": "refines", "count": 1}, {"a": "rigidity-matching-condition-frobenius-conjugacy-", "b": "langlands-conjecture-n-dimensional-representatio", "rel": "depends_on", "count": 1}, {"a": "rigidity-matching-condition-frobenius-conjugacy-", "b": "frobenius-conjugacy-class-decomposition-group-d-", "rel": "depends_on", "count": 1}, {"a": "rigidity-matching-condition-frobenius-conjugacy-", "b": "spherical-hecke-algebra-h-p-compactly-supported-", "rel": "depends_on", "count": 1}, {"a": "tannakian-philosophy-reconstruct-a-group-from-th", "b": "langlands-conjecture-n-dimensional-representatio", "rel": "supports", "count": 1}, {"a": "cuspidal-automorphic-representation-of-gl-2-a-th", "b": "automorphic-representations-irreducible-represen", "rel": "refines", "count": 1}, {"a": "restricted-tensor-product-decomposition-pi-tenso", "b": "cuspidal-automorphic-representation-of-gl-2-a-th", "rel": "depends_on", "count": 1}, {"a": "the-modular-form-f-pi-of-weight-k-and-level-n-on", "b": "cuspidal-automorphic-representation-of-gl-2-a-th", "rel": "depends_on", "count": 1}, {"a": "the-modular-form-f-pi-of-weight-k-and-level-n-on", "b": "restricted-tensor-product-decomposition-pi-tenso", "rel": "depends_on", "count": 1}, {"a": "spherical-hecke-algebra-h-p-compactly-supported-", "b": "rigidity-matching-condition-frobenius-conjugacy-", "rel": "supports", "count": 1}, {"a": "hecke-eigenvalue-equals-fourier-coefficient-f-pi", "b": "the-modular-form-f-pi-of-weight-k-and-level-n-on", "rel": "depends_on", "count": 1}, {"a": "hecke-eigenvalue-equals-fourier-coefficient-f-pi", "b": "spherical-hecke-algebra-h-p-compactly-supported-", "rel": "depends_on", "count": 1}, {"a": "galois-representation-sigma-e-ell-from-the-first", "b": "frobenius-conjugacy-class-decomposition-group-d-", "rel": "illustrates", "count": 1}, {"a": "trace-of-frobenius-equals-point-count-tr-sigma-e", "b": "galois-representation-sigma-e-ell-from-the-first", "rel": "depends_on", "count": 1}, {"a": "taniyama-shimura-conjecture-proved-by-wiles-and-", "b": "rigidity-matching-condition-frobenius-conjugacy-", "rel": "depends_on", "count": 1}, {"a": "taniyama-shimura-conjecture-proved-by-wiles-and-", "b": "hecke-eigenvalue-equals-fourier-coefficient-f-pi", "rel": "depends_on", "count": 1}, {"a": "taniyama-shimura-conjecture-proved-by-wiles-and-", "b": "trace-of-frobenius-equals-point-count-tr-sigma-e", "rel": "depends_on", "count": 1}, {"a": "function-field-langlands-correspondence-is-a-the", "b": "langlands-conjecture-n-dimensional-representatio", "rel": "supports", "count": 1}, {"a": "completions-of-a-function-field-are-labeled-by-p", "b": "function-field-f-q-x-of-a-smooth-projective-conn", "rel": "depends_on", "count": 1}, {"a": "langlands-correspondence-for-function-fields-of-", "b": "function-field-f-q-x-of-a-smooth-projective-conn", "rel": "depends_on", "count": 1}, {"a": "function-field-langlands-for-complex-curves-rela", "b": "function-field-langlands-correspondence-is-a-the", "rel": "depends_on", "count": 1}, {"a": "function-field-langlands-for-complex-curves-rela", "b": "completions-of-a-function-field-are-labeled-by-p", "rel": "depends_on", "count": 1}, {"a": "frobenius-conjugacy-class-at-a-point-x-of-a-curv", "b": "frobenius-conjugacy-class-decomposition-group-d-", "rel": "refines", "count": 1}], "loops": [{"chunk": "frenkel_p1", "label": "geometric-langlands-correspondence-holomorphic-l", "node": null}, {"chunk": "frenkel_p1", "label": "chiral-hecke-algebra-scenario-conformal-blocks-a", "node": null}, {"chunk": "frenkel_p2", "label": "langlands-correspondence-for-function-fields-of-", "node": null}], "stats": {"subjects": 0, "cross_edges": 35, "concepts": 31}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

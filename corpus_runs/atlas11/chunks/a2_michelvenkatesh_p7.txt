@@ -1,0 +1,893 @@
+We shall use the following estimtes for the \gamma -factor: given_0 < < \frac{1}{100},
+
+\]
+
+one has for GL1,
+
+\[
+
+\|\gamma(\chi,\psi,\sigma)\|,q -(\sigma -\frac{1}{2}) d\psi Cond(\chi), (\sigma \in [,1/2 -]), \tag{3.5}
+
+\]
+
+\[
+
+and for GL2,\|\gamma(\pi,\psi,\sigma)\|,q -(\sigma -\frac{1}{2}) d\psi Cond(\pi), (\sigma \in [3/26 +,1/2 -]) (3.6) This follows from the prior remark, the
+
+dependence of \epsilon -factors on \psi, and the fact that L(\pi,s) and L(\tilde{\pi},1-s) are uniformly bounded above and below in the stated region, if_k is
+
+nonarchimedean; and by a direct computation (see [38,Chap. 1,§5 & 6]) when_k is archimedean.
+
+\]
+
+For GL1, the same bound remains valid (with the same proof), so long
+
+as π is unitary; we may even replace (3/26, 1/2) by any compact subinterval of \[0, 1\].
+
+\[
+
+3.1.13. Let f \in C \infty (R+), and consider the integral
+
+\]
+
+c
+
+Z ∞
+
+\[
+
+G(\lambda,t) := f(x)\|x\| i\lambda e itxdx. The method of stationary phase shows that the dominant contribution to this integral comes from stationary points of
+
+the phase function \lambda log(x)+tx, i.e., when x = \lambda /t. If f is fixed, it therefore follows that G(\lambda,t) is small unless \lambda and_t are of the
+
+same order of magnitude. Moreover, stationary phase predicts that, when \lambda ∼ t, the magnitude\|G(\lambda,t)\| ∼ \lambda -\frac{1}{2}
+
+\]
+
+.
+
+A similar phenomenon occurs when we replace R by a nonarchimedean
+
+local field with residue field of size q; in that case, the pertinent integrals are
+
+\[
+
+f\chi > 1, closely related to Gauss sums. If \chi is a character of conductor C = q d\psi the discriminant of \psi, then: for_t \in k \times, and D = q
+
+\]
+
+(
+
+\[
+
+Z_0,\|u\| 6= CD/\|t\| \times x = \tag{3.7}
+
+\]
+
+\[
+
+\chi(x)\psi(tx)d\|u\| <\chi\|x\|= \|u\| \eta C-1/2,\|u\| = CD/\|t\| with\|\eta\| = 1.
+
+\]
+
+The following general version will be helpful:
+
+#### 44 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+3.1.14. Lemma. — Let A < B \in R. Let_k be a local field, \varphi \in C \infty (k \times)
+
+\]
+
+c
+
+\[
+
+a smooth function, and \chi a character of_k of conductor C such that, writing\|\chi(x)\| = \|x\| \sigma, one has A_6 \sigma_6 B. Set, for_t \in k \times,
+
+\]
+
+Z
+
+\[
+
+G\varphi(\chi,t) = \varphi(x)\psi(tx)\chi(x)dx.
+
+\]
+
+k
+
+Then:
+
+1. For every N > 0, > 0, we have:
+
+1 + \|t\| C N
+
+\|Gφ(χ, t)\| φ,N,A,B, C −1/2+ max
+
+;
+
+C , \|t\|
+
+\[
+
+2. Fix \epsilon > 0. Then there exists_t, satisfying \log\|t\|
+
+\]
+
+log(C+1) − 1 6 ε, so that
+
+\|Gφ(χ, t)\| ϕ,ε C
+
+−1/2−2ε
+
+.
+
+Proof. — The statement (2) follows from statement (1) and Plancherel
+
+formula:
+
+\[
+
+\int \int\|G\varphi(\chi,t)\| 2 dt = \|\varphi(x)\chi(x)\| 2 dx,
+
+\]
+
+k k
+
+noting that the volume of the set \|t\| 6 C is  C. It suffices thereby to prove (1).
+
+We shall give the proof of the bound \|Gφ(χ, t)\| φ,N,A,B ((1 + \|t\|)/C) N . Let us suppose, first of all, that_k is archimedean, and fix a basis {Di} of_k
+
+×-invariant differential operators on_k × of degree [k : R]. Then χ is an eigenfunction of each Di
+
+, and there exists i so that the eigenvalue λi satisfies
+
+\|λi \| C. Now,
+
+Z
+
+\|Gφ(χ, t)\| C D N (φ(x)ψ(tx))χ(x) φ,N,A,B C N
+
+−N −N (1 + \|t\|)
+
+i
+
+\[
+
+If_k is nonarchimedean, there exists a constant c > 0, depending only on \varphi and the discriminant of \psi, so that \varphi(x)\psi(tx) is invariant under
+
+x_7\to xy whenever\|t(y - 1)\| 6 c. In particular, G\varphi(\chi,t) vanishes whenever\|t\|C -1 < c. The bound\|G\varphi(\chi,t)\| \varphi,N,A,B (\|t\|/C) -N is
+
+similar; we replace the role
+
+\]
+
+of multiplicative translations and multiplicatively invariant differential operators by additive translations and additively invariant differential operators.
+
+We also reverse the roles of χ and ψ in the prior argument.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 45
+
+As for the bound Gφ(χ, t) φ,N,A,B C −1/2+ε
+
+, we may assume that χ is
+
+\[
+
+unitary, after replacing \varphi by \varphi\|x\| \sigma suitable \sigma . Fix \epsilon > 0 small. By \tag{3.4}
+
+\]
+
+\[
+
+, 1-\epsilon \psi(tx), we may write G\varphi(\chi,t) as applied to x_7\to \varphi(x)\|x\| R (\varphi \alpha \\1-\epsilon)(x + t)(\chi \alpha \epsilon) (x)dx R
+
+(\varphi \alpha \\1-\epsilon)(x)\chi(x - t)\|x - t\|
+
+\]
+
+−1 −1 −εdx
+
+k k
+
+= .
+
+\[
+
+\gamma(\chi,\psi,\epsilon) \gamma(\chi,\psi,\epsilon) Our assertion follows from the rapid decay of (\varphi \alpha \\1-\epsilon)(x) and \tag{3.5}
+
+\]
+
+\[
+
+. ut
+
+\]
+
+3.2. Whittaker models.
+
+Let ψ be the non-trivial additive character of_k described previously. Given π a generic representation of G, π admits a unique realization in a Whittaker
+
+model, which we shall denote by W(π, ψ), and thereby in a Kirillov model, which we denote by K (π, ψ). We equip the Kirillov model with
+
+that inner product given by the L 2 ×:
+
+-inner product on k Z
+
+\[
+
+hW, Wi = \|W(y)\| 2 d \times y \tag{3.8}
+
+\]
+
+\[
+
+k\times
+
+\]
+
+Unless otherwise specified, the inner product (3.8) is always the one that we will put on any Kirillov or Whittaker model.
+
+Let us suppose, moreover, that π is unitary, i.e. equipped with a Ginvariant inner product. Then we may choose an intertwiner π_7→ K (π, ψ) which preserves
+
+inner products. Such an intertwiner is unique up to a scalar of absolute value_1, and we will regard it as having been fixed; thus we will identify π with K (π,
+
+ψ). Throughout this paper, since we are concerned only with the size of various quantities, the scalar of absolute value_1 will not prove a problem. Therefore
+
+– in the setting where π is equipped with an inner product – we will regard the following statement, for example, as meaningful: Choose v ∈ π corresponding to
+
+the element W ∈ W(π, ψ) . . . (3.9) 3.2.1. Intertwiners from the induced model to the Whittaker model. — It will be useful later to record these in somewhat
+
+explicit form. Notation as in §3.1.10, let π = I(ω, \omega_0 ). An explicit intertwiner π → K(π, ψ) is given by:
+
+Z
+
+\[
+
+f_7\to Wf, Wf (g) = \eta -\frac{1}{2} f(wn(x)g)\psi(x)dx, \eta_k = \zeta_k \tag{1}
+
+\]
+
+\[
+
+\iota_k (3.10) k
+
+\]
+
+k
+
+\[
+
+If \omega, \omega_0 are unitary, then the map \tag{3.10}
+
+\]
+
+\[
+
+is isometric by (3.2); this was the reason for the inclusion of \eta_k.
+
+\]
+
+#### 46 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Taking g = a(y), one has
+
+Z
+
+\[
+
+Wf (a(y)) = \eta -\frac{1}{2}\|y\| 1/2\omega_0 (y) f(wn(x))\psi(xy)dx.
+
+\]
+
+k
+
+x∈k
+
+In general, the right-hand integral is not absolutely convergent, but it is conditionally convergent – interpreted as a limit of integrals over increasing com
+
+pacta \|x\| 6 R – if f is a smooth vector.
+
+It follows from the above expressions, using the shorthand α(y) := \|y\|,
+
+that:
+
+Z Z
+
+\[
+
+\frac{1}{2} Wf (y)\chi(y)d \times y = f(wn(x))\chi_0 (x) dx_0-1 \eta -1 \gamma(\chi k,\psi,1)\zeta k \tag{1}
+
+\]
+
+\[
+
+, \tag{3.11}
+
+\]
+
+\[
+
+0 \frac{1}{2} where \chi := \chi \omega 0\alpha
+
+\]
+
+.
+
+\[
+
+Remark. — It is useful to discuss convergence. Suppose \omega, \omega_0 unitary. The left hand side of \tag{3.11}
+
+\]
+
+\[
+
+is holomorphic for <(\chi) > -\frac{1}{2}. On the other hand, the right-hand side integral is absolutely convergent and holomorphic in the range -\frac{1}{2} <
+
+<(\chi) < \frac{1}{2}.
+
+\]
+
+We observe that the left-hand side of (3.11) has poles precisely when
+
+\[
+
+\chi \omega = \alpha -\frac{1}{2} or \chi \omega 0 = \alpha -\frac{1}{2}
+
+\]
+
+. These poles arise from the asymptotics of W(y)
+
+as \|y\| → 0. On the right-hand side, the integral involving f has poles at
+
+1/2
+
+\[
+
+\chi \omega 0 = \alpha
+
+\]
+
+, arising from the behavior as \|x\| → 0; this pole is cancelled by
+
+the zero of the γ-factor γ(χ −1ω_0−1
+
+, ψ, 1/2) at this point. Moreover, one has
+
+\[
+
+(arising from the asymptotics of f as\|x\| \to \infty) and poles at \chi \omega = \alpha -\frac{1}{2}
+
+\]
+
+(arising from the pole of γ).
+
+\[
+
+\chi \omega 0 = \alpha -\frac{1}{2}
+
+\]
+
+3.2.2. The Jacquet-Langlands functional equation. — Let π be generic,
+
+\[
+
+not necessarily unitary. For \chi a character of F \times, let <\chi denote the real part <\chi) and set for W \in K (\pi,\psi), of \chi(\|\chi(.)\| = \|.\|
+
+\]
+
+Z
+
+\[
+
++ \chi(W) := W(u)\chi(u)d \times u; \tag{3.12}
+
+\]
+
+\[
+
+k\times This integral is absolutely convergent for <(\chi) = \sigma > 0. By the theory of Hecke and Tate, + \chi(W) admits a meromorphic continuation to
+
+kc\times ; more precisely the ratio +
+
+\]
+
+χ(W)
+
+\[
+
+L(\pi \otimes \chi,1/2) is holomorphic; it satisfies the local functional equation \chi(W) = + \omega -1\chi -1 (Wf) \tag{3.13}
+
+\]
+
+\[
+
+\gamma(\pi \otimes \chi,\psi,1/2)+ where Wf = \pi(w).W, and \omega is the central character of \pi .
+
+\]
+
+Note we regard Wf as belonging to the Whittaker model of π; it would
+
+also be possible to incorporate the ω-twist into it and regard it as being in
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 47
+
+\[
+
+the Whittaker model of \tilde{\pi}, bearing in mind that \tilde{\pi} ∼= \omega(det)-1 \otimes \pi . In any case, the Sobolev norms of Wf and W are the same,
+
+because the element w belongs to K.
+
+\]
+
+3.2.3. Proposition. — (Pointwise bounds for the Whittaker function.)
+
+\[
+
+For any N > 1, any \epsilon > 0 and all W \in K, there exists d = d(N) so that:
+
+\]
+
+(
+
+\|y\| 1/2−θ \|W(y)\| N S K (π,ψ) (W) , \|y\| 6 1,
+
+d \|y\| .
+
+\[
+
+-N,\|y\| > 1 Proof. — The assertion for\|y\| > 1 is elementary; it is a quantification of the well-known fact that Whittaker functions decay at \infty . For
+
+example, in the real case, one may use the fact that there exists an element of the Lie algebra of G which acts on the Kirillov model by W(y) 7\to yW(y). We
+
+leave it to the reader (see also [7, \tag{29}
+
+\]
+
+\[
+
+]). As a consequence for the assertion with\|y\| > 1, we deduce that\|+ \chi(W)\| S K (\pi,\psi) (W) (3.14) whenever <(\chi) > 0.
+
+\]
+
+By inverse Mellin transform22 and (3.13) , we have
+
+Z Z
+
+\[
+
+W(y) = -1 (y)d\chi W(u)\chi(u)d \times u
+
+\]
+
+χ
+
+\[
+
+<\chi =\sigma 1 k\times Z + \chi -1\omega -1 (Wf)
+
+\]
+
+−1 (y)
+
+\[
+
+= \chi <\chi =\sigma 1 \gamma(\pi \otimes \chi,\psi,1/2).d\chi Z + \chi -1\omega -1 (Wf)
+
+\]
+
+−1 (y)
+
+\[
+
+= \chi <\chi =\sigma 0 \gamma(\pi \otimes \chi,\psi,1/2).d\chi . At the last stage, we have shifted the contour to <\chi = \sigma_0 for \sigma_0 \in (3
+
+\]
+
+26−1/2, 0):
+
+under our convention, the contour shift does not cross any pole of the local L-factor L(π × χ, 1/2), and therefore the integrand remains holomorphic.
+
+We observe that in the nonarchimedean case
+
+Z
+
+\[
+
+Wf(u)\chi -1 (u)\omega -1 (u)d \times u = 0
+
+\]
+
+k×
+
+\[
+
+as long as the conductor of \chi \omega is strictly greater than any_r for which Wf is e[r]-invariant. Applying then \tag{S4d}
+
+\]
+
+\[
+
+, (3.6), the previous bound (3.14) in the 22 The measure on the space of \chi is obtained as follows: the \chi -space is a principal homogeneous space
+
+\]
+
+for the dual group to k×, and we transport the dual measure to that space.
+
+#### 48 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+) > 0 and the previous observations, we conclude that, for any
+
+range <(χ −1
+
+m > 1,
+
+Z
+
+\|W(y)\| m,σ0 \|y\| 0 S K (π,ψ) (W) C(χ \otimes ω) 0 −σ −mC(π \otimes χ) σ
+
+.
+
+χ
+
+\[
+
+The inner integral may be expressed as R C(\chi) 0 0 < 0 the -mC(\tilde{\pi} \otimes \chi) \sigma \chi . Since \sigma inner integral is bounded independently of
+
+\pi by taking_m large enough. (This is only for convenience; an implicit dependence on C(\pi) could be absorbed into the Sobolev norm using the results of
+
+§2.6.5.) In the archimedean case, we reason similarly, replacing the statement =· · · = 0 as long as the conductor of \chi is strictly greater than ... ” by
+
+integration by parts23
+
+\]
+
+.
+
+ut
+
+We shall need later the following variant also. Its role in our proof will
+
+be the following: we shall need, at certain points, to utilize non-unitarizable representations, and this Proposition that follows allows us to maintain control
+
+on their Whittaker functions so long as they are “close enough” to being
+
+unitary.
+
+\[
+
+3.2.4. Proposition. — Notation as in §3.1.11, so that \pi is a unitary principal series, f = f_0 \in \pi = \pi_0, and fs \in \pi s a deformation as in
+
+§3.1.11.Let Ws be the image of fs under the intertwiner \tag{3.10}
+
+\]
+
+\[
+
+. Then there exists an absolute d > 0 so that, for_0 6 \delta_6 \frac{1}{20}, and\|<(s)\| 6 \delta,
+
+\]
+
+Z
+
+\|Ws(a(y))\| 2 max(\|y\|, \|y\| ) δ d ×y Sπ_2
+
+−1
+
+dδ(f) ,  (3.15) k×
+
+\[
+
+Proof. — The Mellin transform R \times x is absolutely convergent for <(\chi) > -\frac{1}{2}, cf. Remark_3.2.1.
+
+\]
+
+k× W0(x)χ(x)d
+
+\[
+
+Fix any \eta \in (0,1/2); we will use it to parameterize a compact subinterval of [0, 1]. Take any \beta \in (-1 + \eta,-\eta); by Mellin inversion and
+
+\tag{3.11}
+
+\]
+
+\[
+
+, \frac{1}{2} Z + \frac{1}{2} \tag{W0}
+
+\]
+
+\[
+
+\chi \omega 0-1\alpha f_0(wn(x)) = \eta_k
+
+\]
+
+χ(x)
+
+\[
+
+\zeta_k \tag{1}
+
+\]
+
+\[
+
+\gamma(\chi -1 <(\chi)=\beta,\psi,0) d\chi, \tag{3.16}
+
+\]
+
+\[
+
+with the measure d\chi is as before. We now bound f_0(wn(x)): we apply Proposition_3.2.3 and (3.6) to equation (3.11), and use similar reasoning to Proposition
+
+\]
+
+3.2.3 to pass from a pointwise bound for the integrand in (3.16), to
+
+the integral.
+
+\[
+
+23 in the archimedean case, there is an element Z \in g (more precisely in the Lie algebra of a(k\times)) of bounded norm so that R (u)d\times u C(\chi)-1 R
+
+(u)d\times u. k\times Wf(u)\chi -1 k\times Z.Wf(u)\chi -1
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 49
+
+\[
+
+We arrive at the existence of d so that for x \in k and \beta \in [-1 + \eta, -\eta]:\|f0(wn(x))\| \eta S \pi \tag{f0}
+
+\]
+
+\[
+
+\|x\| \beta d \tag{3.17}
+
+\]
+
+\[
+
+Observe that: fs(wn(x)) = f_0(wn(x))q(x) s (notations of §3.1.6). Combining this with \tag{3.17}
+
+\]
+
+\[
+
+and substituting into (3.11),
+
+\]
+
+−2
+
+, where q(x) = k(1, x)k
+
+\[
+
+we see that for \eta \in (0,1/2) there exists d = d(\eta) > 0 so that, whenever\|<(\chi)\| +\|2<(s)\| 6 \frac{1}{2} - \eta, Z Ws(y)\chi(y)d \times y \tag{f0}
+
+\]
+
+\[
+
+C(\chi) d
+
+\]
+
+Sπ d .
+
+\[
+
+Now fix \beta = \frac{1}{20}. Estimate R\|Ws(y)\| 2\|y\| \pm \beta d \times y by Plancherel, yet again
+
+\]
+
+controlling the χ-integration as in Proposition 3.2.3. Thus, there exists d so
+
+\[
+
+Z\|Ws(y)\| 2 max(\|y\|,\|y\|) \beta d \times y S\pi \tag{f0}
+
+\]
+
+\[
+
+2 (\|<(s)\| 6 \beta) (3.18) -1
+
+\]
+
+d
+
+This is almost what we want; however, the “number of derivatives” in
+
+the Sobolev norm in (3.18) is “small,” whereas (3.18) involves an unspecified number of derivatives (i.e., we have no control of d). To get around this, we
+
+interpolate.
+
+\[
+
+Define for every complex s with <(s) \in [0, \beta] and \tau \in [-1, 1], a function Fs \in L_2 (k \times) via the rule Fs(y) = W\tau s(\Delta - d s f_0) ·
+
+max(\|y\|,\|y\| -1) s/2
+
+\]
+
+β
+
+\[
+
+Here \Delta denote the local laplacian discussed in §2.3.3 and W\tau s(\Delta - d s f_0) denotes the result of applying the intertwiner \tag{3.10}
+
+\]
+
+\[
+
+to the representation \pi \tau s
+
+\]
+
+β
+
+− d s f0. Also, d is as in
+
+\[
+
+and the vector whose restriction to K is that of \Delta \beta \tag{3.18}
+
+\]
+
+\[
+
+. Then s_7\to Fs is a holomorphic function from {s \in C :\|<(s)\| 6 \beta } to L_2 (k \times). Moreover, independently of \tau, kFsk_2 kf0k_2 for <(s) = 0,
+
+while for <(s) = \beta, we have by \tag{3.18}
+
+\]
+
+\[
+
+kFsk_2 S\pi(\Delta d f_0) 2 = k\Delta(1- s)d f0k_2 = kf0k_2 - s \beta \beta ;
+
+\]
+
+d
+
+\[
+
+hence we have kFs0 k_2 kf0k_2 in the region < \tag{s0}
+
+\]
+
+\[
+
+\in [0, \beta] (independently of \tau) : for every s_0, apply the usual maximum principle to the holomorphic function s_7\to hFs, Fs0 i. We have shown that for
+
+all\|<(s)\| = \delta, all \tau \in [-1, 1],
+
+\]
+
+Z
+
+\[
+
+\|W\tau s(f)\| 2 max(\|y\|,\|y\|) \delta Sd\delta /\beta \tag{f0}
+
+\]
+
+\[
+
+2
+
+\]
+
+−1
+
+,
+
+which implies the desired assertion.  ut
+
+#### 50 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+3.2.5. Computations in the Kirillov model. — Suppose that_k is archimedean; the action of the Lie algebra of G, g, on K (\pi,\psi) is well known [38, Chap. 1
+
+§5,6]. For instance, it follows from the explicit computations of [67, §8.1.1] that given Z_1, . . ., Zm \in g, a smooth compactly supported function W \in C
+
+\infty (k \times) \subset K (\pi,\psi) one has
+
+\]
+
+c
+
+kZ1 · Z2 · . . . Zm · Wk C(π) m/ deg(k)S_k×
+
+2m(W),
+
+where
+
+Z
+
+S k× (\|y\| + \|y\| ) 2m\| X DiW\| 2 d ×y,
+
+−1
+
+2m(W) :=
+
+k×
+
+i
+
+and Di ranges over a basis of k ×-invariant differential operators of degree 6 2m.
+
+Remark. — This result is stated in [67, Lemma_8.4], except the exponent of C(π) is given as 2m/ deg(k) rather than_m/ deg(k). however, the im proved statement
+
+follows from a simple computation: if λπ denote the Casimir eigenvalue, νπ the eigenvalue for the action of the Lie algebra of diagonal
+
+d
+
+\[
+
+matrices and D := y dy, then there are generators of the Lie algebra (independent of \pi) which act respectively as \nu \pi +D, y, y-1 (\lambda \pi +(\nu \pi
+
++D)-(\nu \pi +D) 2). Taking into account that both \nu \pi and \lambda \pi - \nu_2
+
+\]
+
+are bounded by C(π), we are
+
+π
+
+done.
+
+\[
+
+By the mean-value Theorem, we have, for \delta \in R, 0 < \delta < 1: k exp(\delta Z).W - Wk\pi \delta sup_k exp(\delta 0Z) · Z · Wk = \delta kZ.Wk \delta_0\in
+
+[0,\delta] 1/ deg(k)S_k\times (W) \tag{3.19}
+
+\]
+
+\[
+
+\delta C(\pi) 2
+
+\]
+
+Moreover, all the implicit constants in the above inequalities may be
+
+taken to depend continuously on Zi or on Z. In particular, they may be taken to be uniform when Z is restricted to a fixed compact set.
+
+3.2.6. Some norms related to Whittaker models. — Let \pi_2, \pi_3 be two generic irreducible representations of G with \pi_3 isomorphic to a unitary principal
+
+series I3 (see §3.1.10); let \chi_i
+
+, i = 2, 3 denote their central characters.
+
+Let L_2 (N\\G; \chi_2 \chi_3) be the L_2
+
+-space of N-equivariant functions on G which
+
+transform by \chi_2 \chi_3 under multiplication by the center, with respect to the inner product
+
+Z
+
+\[
+
+h\varphi, \varphi iN\\G = \|\varphi(g)\| 2 dg
+
+\]
+
+N\\G¯
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 51
+
+3.2.7. Lemma. — The GL2(k)-equivariant map
+
+\[

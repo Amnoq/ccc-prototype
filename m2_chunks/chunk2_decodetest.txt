@@ -1,0 +1,25 @@
+ASSISTANT: The decisive experiment is run. The result is mixed in exactly the way that tells us what to do next.
+
+**Test A — can the model decode the wire itself? Correctness: yes. Practicality: no.** I wrote complete decoder instructions and an independent implementation from the spec alone reproduced the reference decode exactly — the format is sound. But the mechanical burden killed the architecture: this *toy* message needs 73 triples → 657 bits → 25 hand gamma-decodes plus factoring a 16-digit product plus a 73-term checksum. A model doing that mentally would be glacial and slip-prone, with silent arithmetic errors as the failure mode. The "model reads raw wire" vision is dead. The viable deployment is harness-parses: deterministic code does the parsing, the model reads the structured form.
+
+**Test B — can the model reason over the structured form as well as prose? 10/10 on both.** Every probe — factual, relational, multi-hop, negative — answered correctly from structured context and from prose alike. But the probes were structural, which is exactly what the codec encodes, and the test exposed two real gaps: **strand labels don't survive** (prose says "Gap analysis," the wire says "strand 1") and **edge types don't survive** (prose says *bounds*, the wire says *related*). The codec carries the skeleton; prose carries the meat. For "why/how" questions, prose wins by construction.
+
+**The honest economics.** The wire is 76 tokens vs 360 for prose — the 4.7× serialization win is real. But the registry legend costs 262 tokens, so cold-start is a tie (338 vs 360). Steady-state, with the registry cached: compact indices run 206 vs 360 — **1.75×, not the 11×** from earlier ledgers (that was wire vs raw transcript; against an already-compressed prose summary the margin is much thinner at this scale). It should widen with scale — prose grows with verbosity, indices grow with concepts — but that's an argument, not a measurement.
+
+**Bottom line:** the project survives, narrowed. The architecture that works is harness-side codec plus compact structured injection. The next build is concrete and clear: v5 with labeled strands, typed edges, and status payloads to close the expressiveness gap — then re-run Test B with why/how probes. Still genuinely untested: a naive model on the structured form, and anything at real registry scale.
+
+The full report is saved at `~/workspace/ccc-prototype/decode_test_report.md`, and the spec, test material, and independent decoder are all in the prototype directory. Want me to build v5?
+
+USER: Yes
+
+ASSISTANT: Done. v5 is built, tested, and the gaps are closed.
+
+**What v5 adds:** labeled strands, typed *directed* edges (`jacobsthal_function --bounds--> maximal_prime_gap`, direction now preserved — v4 was undirected), and anchor status payloads (`lattice_echo` → closed-as-transient). Types, labels, and statuses are just ordinary registry concepts, so the decoder needs no side tables. Wire format untouched; version 5 selected by the telomere.
+
+**Test results:** independent spec-only v5 decoder reproduces the reference exactly (Test A passes). All 10 new why/how probes — "how does X relate to Y", "why is this established", "what does X do to Y" — answerable from the structured form, parity with prose. No regression on the original structural probes.
+
+**One honest correction to my own ledger:** the 1.75× steady-state figure was information-asymmetric. The v4 structure *omitted* labels, relation types, and statuses that the prose contained — so it was a lossy structure beating a full prose. Now that both sides carry equal information, the real number is **1.27×** (284 vs 360 tokens). The wire itself is genuinely dense — 4.4 tokens per fact versus prose's 14.4 — but the injection syntax the model can actually consume eats about half the advantage.
+
+So the project stands, narrowed further: real but modest at toy scale. The one claim left that decides everything is whether the ratio *grows* at real scale — hundreds of concepts, registry amortized, denser graphs. That's the next experiment if you want it.
+
+USER: Please

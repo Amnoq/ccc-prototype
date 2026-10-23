@@ -1,0 +1,5 @@
+K9-2: volume-spike structure
+  AAPL: corr(volume,|r|)=0.600; spikes=25; mean next-day return after spike=0.0075 vs unconditional 0.0008
+  MSFT: corr(volume,|r|)=0.635; spikes=27; mean next-day return after spike=0.0038 vs unconditional 0.0004
+  NVDA: corr(volume,|r|)=0.628; spikes=8; mean next-day return after spike=-0.0182 vs unconditional 0.0014
+VERDICT: VERIFIED (structure recomputed from raw files; numbers are window facts)

@@ -1,0 +1,547 @@
+-module, Beilinson and Drinfeld prove that Wλ is isomorphic to a direct
+
+sum of copies of V−h∨ (g).83 The Tannakian formalism and the Satake equivalence (see
+
+\[
+
+82as a bg-module, the object on the right hand side is just the direct sum of dim V\lambda copies of V-h∨ (g) 83as for the vanishing of higher cohomologies,
+
+expressed by formula \tag{9.13}
+
+\]
+
+\[
+
+, we note that according to [112], the functor of global sections on the category of all critically twisted D-modules is exact (so all higher cohomologies are
+
+identically zero)
+
+\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 111
+
+Theorem 6) then imply the Hecke property (9.12). A small modification of this argument gives the full Hecke property (9.9).
+
+9.5. Quantization of the Hitchin system. As the result of Theorem 10 we now have at our disposal the Hecke eigensheaves AutE on BunG associated to the LG-local
+
+systems on X admitting an oper structure (such a structure, if exists, is unique). What do these
+
+### D-modules on BunG look like?
+
+Beilinson and Drinfeld have given a beautiful realization of these D-modules as the D-modules associated to systems of differential equations on BunG (along the
+
+lines of Sect. 3.4). These D-modules can be viewed as generalizations of the Hecke eigensheaves constructed in Sect. 4.5 in the abelian case. In the abelian
+
+case the role of the oper bundle on X is played by the trivial line bundle, and so abelian analogues of opers are connections on the trivial line bundle. For
+
+such rank one local systems the construction of the Hecke eigensheaves can be phrased in particularly simple terms. This is the construction which Beilinson and
+
+Drinfeld have generalized to the non-abelian case.
+
+Namely, let D′
+
+−h∨ = Γ(BunG, D′ −h∨ ) be the algebra of global differential operators on
+
+### \otimes(−h ∨) over BunG. Beilinson and Drinfeld show that
+
+the line bundle K1/2 = L
+
+(9.15) Fun OpLg (X) ∼−→ D ′
+
+−h∨ .
+
+To prove this identification, they first construct a map in one direction. This is done as follows. Consider the completed universal enveloping algebra Ue−h∨
+
+(bg). As discussed
+
+### ∨) on Gr gives rise to a homomorphism
+
+above, the action of bg on the line bundle Le\otimes(−h of algebras Ue−h∨ (bg) → D−h∨ , where D−h∨ is the algebra of global differential operators
+
+### ∨)
+
+on Le\otimes(−h
+
+. In particular, the center Z(bg) maps to D−h∨ . As we discussed above, the
+
+“positive modes” from Z(bg) go to zero. In other words, the map Z(bg) → D−h∨ factors through Z(bg) ։ z(g) → D−h∨ . But central elements commute with the action
+
+of Gout and hence descend to global differential operators on the line bundle L \otimes(−h ∨) on BunG. Hence we obtain a map
+
+Fun OpLg (Dx) → D ′
+
+−h∨ .
+
+Finally, we use an argument similar to the one outlined in Sect. 9.3 to show that this map factors as follows:
+
+Fun OpLg (Dx) ։ Fun OpLg (X) → D ′
+
+−h∨ .
+
+Thus we obtain the desired homomorphism (9.15).
+
+To show that it is actually an isomorphism, Beilinson and Drinfeld recast it as a quantization of the Hitchin integrable system on the cotangent bundle T
+
+### ∗ BunG. Let us recall
+
+the definition of the Hitchin system.
+
+Observe that the tangent space to BunG at P ∈ BunG is isomorphic to H1 (X, gP),
+
+g. Hence the cotangent space at P is isomorphic to H0 (X, g ∗
+
+\[
+
+where gP = P \times P \otimes \Omega) by the
+
+\]
+
+G
+
+Serre duality. We construct the Hitchin map p : T ∗ BunG → HG, where HG is the Hitchin space
+
+### \ell
+
+\[
+
+HG(X) = M H_0 (X,\Omega \otimes (di+1)).
+
+\]
+
+### i=1
+
+### 112  EDWARD FRENKEL
+
+Recall that the algebra of invariant functions on g ∗ is isomorphic to the graded polynomial
+
+\[
+
+], where deg Pi = di + 1. For \eta \in H_0 (X,g^* algebra C[P_1,...,P\ell P \otimes \Omega), Pi(\eta) is well-defined (X,\Omega \otimes (di+1)). as an element
+
+of H_0 By definition, the Hitchin map p takes (P,\eta) \in T^* BunG, where \eta \in H_0 (X,g^* P \otimes \Omega) to (P_1(\eta),...,P\ell (\eta)) \in HG. It has
+
+been proved in [113, 88] that over an open dense subset of HG the morphism p is smooth and its fibers are proper. Therefore we obtain an isomorphism
+
+\]
+
+(9.16) Fun T ∗ BunG ≃ Fun HG.
+
+Now observe that both Fun OpLg (X) and D′
+
+### −h∨ are filtered algebras. The filtration on
+
+Fun OpLg (X) comes from its realization given in formula (8.13). Since Proj(X) is an affine
+
+(X, Ω \otimes 2 ), we find that OpLg (X) is an affine space modeled precisely on the
+
+space over H0 Hitchin space HG. Therefore the associated graded algebra of Fun OpLg (X) is Fun HG.
+
+The filtration on D′
+
+−h∨ is the usual filtration by the order of differential operator. It is easy
+
+to show that the homomorphism (9.15) preserves filtrations. Therefore it induces a map from Fun HG the algebra of symbols, which is Fun T ∗ BunG. It follows
+
+from the description given in Sect. 8.2 of the symbols of the central elements that we used to construct (9.15)that this map is just the Hitchin isomorphism
+
+(9.16). This immediately implies that the map (9.15) is also an isomorphism.
+
+\[
+
+More concretely, let D_1,..., DN, where N = P\ell i=1(2di + 1)(g - 1) = dim G(g - 1) (for g > 1), be a set of generators of the algebra of functions on T^* BunG
+
+which according to \tag{9.16}
+
+\]
+
+\[
+
+is isomorphic to Fun HG. As shown in [113], the functions Di commute with each
+
+\]
+
+other with respect to the natural Poisson structure on T ∗ BunG (so that p gives rise to an algebraic completely integrable system). According to the above
+
+discussion, each of these functions can be “quantized”, i.e., there exists a global differential operator Di on the line bundle K1/2 on BunG, whose symbol is Di
+
+. Moreover, the algebra D′ −h∨ of global
+
+differential operators acting on K1/2 is a free polynomial algebra in Di
+
+\[
+
+,i = 1,...,N. Now, given an Lg-oper \chi on X, we have a homomorphism Fun OpLG(X) \to C and hence a homomorphism \chi e : D′
+
+\]
+
+−h∨ → C. As in Sect. 3.4, we assign to it a D′ −h∨ -module
+
+\[
+
+\Delta \chi e = D ′ ′ -h∨ / Ker \chi e · D -h∨
+
+\]
+
+This D-module “represents” the system of differential equations
+
+\[
+
+Dif = \chi e(Di)f, i = 1,...,N.
+
+\]
+
+in the sense explained in Sect. 3.4 (compare with formulas (3.4) and (3.5)). The simplest examples of these systems in genus 0 and 1 are closely related to the
+
+Gaudin and Calogero systems, respectively (see \[28\] for more details).
+
+\[
+
+The claim is that \Delta \chi e is precisely the D′) constructed above by means -h∨ -module \Delta x(V\chi x of the localization functor (for any choice of x
+
+\in X). Thus,we obtain a more concrete
+
+) as the D-module representing a system of
+
+\[
+
+realization of the Hecke eigensheaf \Delta x(V\chi x differential equations \tag{9.17}
+
+\]
+
+\]
+
+. Moreover, since dim BunG = dim G(g - 1) = N, we find that this Hecke eigensheaf is holonomic, so in particular it corresponds to a perverse sheaf on BunG
+
+under the Riemann-Hilbert correspondence (see Sect. 3.4).
+
+\]
+
+It is important to note that the system (9.17) has singularities. We have analyzed a toy example of a system of differential equations with singularities in
+
+Sect. 3.5 and we saw
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 113
+
+that solutions of such systems in general have monodromies around the singular locus.
+
+This is precisely what happens here. In fact, one finds from the construction that the “singular support” of the D-module \Delta χe is equal to the zero locus p
+
+−1 (0) of the Hitchin map p, which is called the global nilpotent cone [57, 114, 59, 15]. This means, roughly, that the singular locus of the system (9.17) is
+
+the subset of BunG that consists of those bundles P which admit a Higgs field η ∈ H0 (X, g ∗ M \otimes Ω) that is everywhere nilpotent. For G = GLn Drinfeld
+
+called the G-bundles in the complement of this locus “very stable” (see \[114\]). Thus, over the open subset of BunG of “very stable” G-bundles the system
+
+(9.17)describes a vector bundle (whose rank is as predicted in \[59\], Sect. 6) with a projectively flat connection. But horizontal sections of this connection
+
+have non-trivial monodromies around the singular locus.84 These horizontal sections may be viewed as the “automorphic functions” on BunG corresponding to the
+
+oper χ. However, since they are multivalued and transcendental, we find it more convenient to describe the algebraic system of differential equations that these
+
+functions satisfy rather then the functions themselves. This system is nothing but the D-module \Delta χe. From the point of view of the conformal field theory
+
+definition of \Delta χe, as the sheaf of
+
+), the singular locus in BunG is distinguished by the property that
+
+coinvariants \Delta x(Vχx the dimensions of the fibers of \Delta x(Vχx ) drop along this locus. As we saw above, these fibers are just the spaces of
+
+coinvariants HP(Vχx ). Thus, from this point of view the nontrivial nature of the D-module \Delta χe is explained by fact that the dimension of the space
+
+of coinvariants (or, equivalently, conformal blocks) depends on the underlying G-bundle P. This is the main difference between conformal field theory at the
+
+critical level that gives us Hecke eigensheaves and the more traditional rational conformal field theories with Kac-Moody symmetry, such as the WZW models
+
+discussed in Sect. 7.6, for which the dimension of the spaces of conformal blocks is constant over the entire moduli space BunG. The reason is that the
+
+bg-modules that we use in WZW models are integrable, i.e., may be exponentiated to the Kac-Moody group Gb, whereas the bg-modules of critical level that we used
+
+may only be exponentiated to its subgroup G\[\[t\]\].
+
+\[
+
+The assignment \chi \in OpLg (X) 7\to \Delta \chi e extends to a functor from the category of modules
+
+(X) to the category of D′
+
+over Fun OpLg
+
+### −h∨ -modules on BunG:
+
+M 7→ D−h∨ \otimes M.
+
+### D′
+
+### −h∨
+
+Here we use the isomorphism (9.15). This functor is a non-abelian analogue of the functor (4.9) which was the special case of the abelian Fourier-Mukai
+
+transform. Therefore we may think of it as a special case of a non-abelian generalization of the Fourier-Mukai transform discussed in Sect. 6.2 (twisted by K1/2
+
+along BunG).
+
+9.6. Generalization to other local systems. Theorem 10 gives us an explicit construction of Hecke eigensheaves on BunG as the sheaves of coinvariants
+
+corresponding to a
+
+“conformal field theory” at the critical level. The caveat is that these Hecke eigensheaves are assigned to LG-local systems of special kind, namely, Lg-opers
+
+on the curve X. Those form a half-dimensional subspace in the moduli stack LocLG of all LG-local systems on
+
+84conjecturally, the connection has regular singularities on the singular locus
+
+### 114  EDWARD FRENKEL
+
+X, namely, the space of all connections on a particular LG-bundle. Thus, this construction establishes the geometric Langlands correspondence only partially.
+
+What about other
+
+### LG-local systems?
+
+It turns out that the construction can be generalized to accommodate other local systems, with the downside being that this generalization introduces some
+
+unwanted parameters
+
+(basically, certain divisors on X) into the picture and so at the end of the day one
+
+needs to check that the resulting Hecke eigensheaf is independent of those parameters. In what follows we briefly describe this construction, following
+
+Beilinson and Drinfeld (unpublished). We recall that throughout this section we are under assumption that G is a
+
+connected and simply-connected Lie group and so LG is a group of adjoint type.
+
+From the point of view of conformal field theory this generalization is a very natural one: we simply consider sheaves of coinvariants with insertions of more
+
+general vertex operators which are labeled by finite-dimensional representations of g.
+
+Let (F, \nabla) be a general flat LG-bundle on a smooth projective complex curve X (equivalently, a LG-local system on X). In Sect. 8.3 we introduced the oper
+
+bundle FLG on X. The space OpLG(X) is identified with the (affine) space of all connections on FLG, and for such pairs (FLG, \nabla) the construction presented
+
+above gives us the desired Hecke eigensheaf with the eigenvalue (FLG, \nabla). Now suppose that we have an arbitrary LG-bundle F on X with a connection \nabla.
+
+This connection does not admit a reduction FLB+ to the Borel subalgebra LB+ ⊂ LG on X that satisfies the oper condition formulated in Sect. 8.3. But one can
+
+find such a reduction on the complement to a finite subset S of X. Moreover, it turns out that the degeneration of the oper condition at each point of S
+
+corresponds to a dominant integral weight of g.
+
+To explain this, recall that F may be trivialized over X\\x. Let us choose such a trivialization. Then a LB+-reduction of F\|X\\x is the same as a map (X\\x) →
+
+LG/LB+.
+
+\[
+
+A reduction will satisfy the oper condition if its differential with respect to \nabla takes values in an open dense subset of a certain \ell -dimensional
+
+distribution in the tangent bundle to LG/LB+ (see,e.g.,[115]). Such a reduction can certainly be found for the restriction of (F,\nabla) to the formal disc at
+
+any point y \in X\\x. This implies that we can find such a reduction on the complement of finitely many points in X\\x.
+
+\]
+
+For example, if G = SL2, then LG/LB+ ≃ CP1
+
+. Suppose that (F, \nabla) is the trivial local
+
+system on X\\x. Then a LB+-reduction is just a map (X\\x) → CP1
+
+, i.e., a meromorphic
+
+function, and the oper condition means that its differential is nowhere vanishing. Clearly, any non-constant meromorphic function on X satisfies this condition
+
+away from finitely many points of X.
+
+Thus, we obtain a LB+-reduction of F away from a finite subset S of X, which satisfies the oper condition. Since the flag manifold LG/LB+ is proper, this
+
+reduction extends to a LB+-reduction of F over the entire X. On the disc Dx near a point x ∈ S the connection
+
+### \nabla will have the form
+
+### \ell
+
+\[
+
+\nabla = \partial t + X \psi i(t)fi + v(t), v(t) \in l b+[[t]],
+
+\]
+
+### i=1
+
+where
+
+\[
+
+\psi i(t) = t h\alpha i,\lambda ˇi (\kappa i + t(...)) \in C[[t]], \kappa i_6= 0,
+
+\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 115
+
+\[
+
+and \lambda ˇ is a dominant integral weight of g (we denote them this way to distinguish them from the weights of Lg). The quotient of the space of operators
+
+\tag{9.18}
+
+\]
+
+\[
+
+by the gauge action (Dx)\lambda ˇ of opers on Dx with degeneration of type \lambda ˇ at x. They
+
+\]
+
+of LB+\[\[t\]\] is the space OpLg were introduced by Beilinson and Drinfeld (see \[116\], Sect. 2.3, and \[44\]). Opers from OpLg (Dx)λˇ may be viewed as
+
+Lg-opers on the punctured disc D×
+
+x . When brought to the
+
+\[
+
+canonical form \tag{8.13}
+
+\]
+
+\[
+
+, they will acquire poles at_t = 0. But these singularities are the artifact of a particular gauge, as the connection \tag{9.18}
+
+\]
+
+\[
+
+is clearly regular at_t = 0. In particular, it has trivial monodromy around x. For example, for g = sl2, viewing \lambda ˇ as a non-negative integer, the space
+
+Opsl2 (Dx)\lambda ˇ is the space of projective connections on D\times of the form
+
+x
+
+\[
+
+\lambda ˇ(\lambda ˇ + 2) \tag{9.19}
+
+\]
+
+\[
+
+\partial 2 X
+
+\]
+
+### t −2 − vnt −n−1
+
+### t − 4
+
+### n≤−1
+
+The triviality of monodromy imposes a polynomial equation on the coefficients vn (see \[28\], Sect. 3.9).
+
+\[
+
+Thus, we now have a LB+-reduction on F such that the restriction of (F,\nabla) to X\\S, where S = {x_1,...,xn} satisfies the oper condition, and so (F,\nabla)
+
+is represented by an is \chi xi \in OpLg (Dxi)\lambda ˇ for all_i =
+
+oper. Furthermore, the restriction of this oper to D×
+
+### xi i
+
+1,... ,n. Now we wish to attach to (F, \nabla) a D′
+
+### −h∨ -module on BunG. This is done as
+
+follows.
+
+Let Lλˇ be the irreducible finite-dimensional representation of g of highest weight λˇ.
+
+Consider the corresponding induced bgx-module of critical level
+
+\[
+
+L\lambda,x ˇ = Indbgx L\lambda ˇ,
+
+\]
+
+g(Ox)\oplus C1
+
+\[
+
+∨. Note that L_0,x = V-h∨ (g)x. Let z(g)\lambda,x ˇ where_1 acts on L\lambda ˇ by multiplication by -h be the algebra of endomorphisms of L\lambda,x ˇ which
+
+commute with bgx. We have the following description of z(g)\lambda,x ˇ which generalizes \tag{9.5}
+
+\]
+
+\[
+
+: (9.20) z(g)\lambda,x ˇ ≃ OpLg (Dx)\lambda ˇ
+
+\]
+
+(see \[115, 116\] for more details).
+
+\[
+
+For example, for g = sl2 the operator S_0 acts on L\lambda,x ˇ by multiplication by \lambda ˇ(\lambda ˇ + 2)/4.This is the reason why the most singular
+
+coefficient in the projective connection \tag{9.19}
+
+\]
+
+\[
+
+is equal to \lambda ˇ(\lambda ˇ + 2)/4.It is now clear what we should do: the restriction of (F,\nabla) to D\times defines \chi xi \in
+
+\]
+
+### xi
+
+OpLg (Dxi )λˇ
+
+: z(g)λ,x ˇ
+
+\[
+
+i, which in turn gives rise to a homomorphism \chi exi_i \to C, for all i = 1,...,n. We then define bgxi
+
+\]
+
+-modules
+
+\[
+
+L\lambda,\chi ˇ xi / Ker \chi exi = L\lambda,x ˇ · L\lambda,x ˇ, i = 1,...,n.
+
+\]
+
+### i i
+
+Finally, we define the corresponding D′ )i=1,...,n), where
+
+−h∨ -module on BunG as \Delta S((Lλˇ_i,χxi \Delta S is the multi-point version of the localization functor introduced in Sect. 9.4. In words, this is the sheaf
+
+of coinvariants corresponding to the insertion of the modules Lλ,x ˇ at the
+
+i
+
+points xi
+
+,i = 1,... ,n.
+
+According to Beilinson and Drinfeld, we then have an analogue of Theorem 10,(3):
+
+\[
+
+the D′)i=1,...,n) \otimes K-1/2 is a Hecke eigensheaf with the eigenvalue -h∨ -module \Delta S((L\lambda ˇ_i,\chi xi
+
+\]
+
+### 116  EDWARD FRENKEL
+
+being the original local system (F, \nabla). Thus, we construct Hecke eigensheaves for arbitrary LG-local systems on X, by realizing them as opers with
+
+singularities. The drawback of this construction is that a priori it depends on the choice of the Borel reduction FLB+ satisfying the oper condition away from
+
+finitely many points of X. A general local system admits many such reductions (unlike connections on the oper bundle FLG, which admit a unique reduction that

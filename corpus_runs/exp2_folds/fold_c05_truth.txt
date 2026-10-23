@@ -1,0 +1,926 @@
+=== V05_000 sim=0.393
+  H [c18] verdict: template only; upper-bound machine; parity barrier stands
+    hnote: template not source; parity barrier stands
+  E [F05E062/c04/c6] Selberg parity barrier: ω(n) parity unresolvable
+    enotes: Selberg; cited literature
+
+=== V05_001 sim=0.338
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_002 sim=0.321
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E087/c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V05_003 sim=0.316
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_004 sim=0.284
+  H [c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    hnote: cited Li 1997; sum over rho
+  E [F05E086/c08/c10] Li's criterion λ_n ≥ 0 natively on the face-sum
+    enotes: killed 2026-09-30: face-sum carries smoothed positivity only
+
+=== V05_005 sim=0.280
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E111/c09/c5] |xi(1-sbar)|²=|xi(s)|² verified to 3.8e-16, 6 points
+    enotes: 3.8e-16 agreement, 6 points; exact theorem numerically confirmed
+
+=== V05_006 sim=0.258
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E088/c08/c12] 10c: Selberg λ² sieve on the complex, optimized weights
+    enotes: 10c executed: Selberg quadratic form on complex, small cases
+
+=== V05_007 sim=0.256
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V05_008 sim=0.254
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E092/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V05_009 sim=0.245
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E094/c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    enotes: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V05_010 sim=0.239
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E086/c08/c10] Li's criterion λ_n ≥ 0 natively on the face-sum
+    enotes: killed 2026-09-30: face-sum carries smoothed positivity only
+
+=== V05_011 sim=0.237
+  H [c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    hnote: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  E [F05E095/c08/c9] Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+    enotes: leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+
+=== V05_012 sim=0.219
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E094/c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    enotes: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V05_013 sim=0.209
+  H [c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    hnote: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  E [F05E094/c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    enotes: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V05_014 sim=0.195
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E043/c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    enotes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V05_015 sim=0.195
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_016 sim=0.195
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E094/c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    enotes: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V05_017 sim=0.194
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E095/c08/c9] Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+    enotes: leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+
+=== V05_018 sim=0.190
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E045/c03/c6] Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z)
+    enotes: 0.071430 vs 0.071429 at z=7,x=200000
+
+=== V05_019 sim=0.177
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E110/c09/c4] Mobius band stage M = strip/(s~1-sbar), R6 exact
+    enotes: R6 exact: functional equation topological on M
+
+=== V05_020 sim=0.170
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E115/c09/c9] Face-complex Delta operators: R4 counting-born, R1–R3 absent
+    enotes: R4 from Lambda>=0 counting; 10c PD forms
+
+=== V05_021 sim=0.170
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E118/c10/c11] sieve faces Delta_z = fermionic Fock basis over primes <=z
+    enotes: exact identification; native, not imported
+
+=== V05_022 sim=0.168
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E085/c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    enotes: Weil 1952: RH is positivity; source must be geometric
+
+=== V05_023 sim=0.167
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E137/c11/c16] first zeta zero recovered from primes alone
+    enotes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V05_024 sim=0.161
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E051/c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    enotes: programmatic/heuristic
+
+=== V05_025 sim=0.160
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V05_026 sim=0.157
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E119/c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    enotes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V05_027 sim=0.156
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E004/c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    enotes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V05_028 sim=0.153
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E059/c04/c22] step3: optimize square H — Weil analogue of degree-16 optimization
+    enotes: forward pointer from D10a-step2
+
+=== V05_029 sim=0.152
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E061/c04/c4] pole heavier: F(σ)~2/(σ−1), inequality easier
+    enotes: 19.33 vs 20.00 at σ=1.1, tail correction
+
+=== V05_030 sim=0.152
+  H [c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    hnote: cited Li 1997; sum over rho
+  E [F05E058/c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language; c12/c3: Weil positivity of W(h) equivalent
+    enotes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V05_031 sim=0.150
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E094/c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    enotes: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V05_032 sim=0.147
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E034/c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    enotes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V05_033 sim=0.141
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E069/c06/c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    enotes: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+
+=== V05_034 sim=0.140
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E118/c10/c11] sieve faces Delta_z = fermionic Fock basis over primes <=z
+    enotes: exact identification; native, not imported
+
+=== V05_035 sim=0.139
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E034/c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    enotes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V05_036 sim=0.139
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E073/c06/c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    enotes: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+
+=== V05_037 sim=0.135
+  H [c9] honesty weak point: certificate numeric only, gamma real unproved
+    hnote: agreement 1e-15 is certificate; not proved generally
+  E [F05E137/c11/c16] first zeta zero recovered from primes alone
+    enotes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V05_038 sim=0.134
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E003/c01/c12] CCM recovers zeros 1–8 from primes alone
+    enotes: ε_even=3.48e-59 at N=120; separation 8771×
+
+=== V05_039 sim=0.133
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E008/c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c06/c20: K-theoretic home: face-weights as F_z'(1) differentiated residues; c11/c14: refined home E_z with differentiated residues
+    enotes: face-weights = differentiated residues; closes D4↔D6 loop; primes-only input as Chern roots −u log p
+
+=== V05_040 sim=0.133
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E054/c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    enotes: a=0.5 cancellation to 15 digits
+
+=== V05_041 sim=0.133
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E007/c01/c16] 13e negative: operator deaf to primes
+    aliases: c10/c19: prime-frequency probe negative: no prime lines; hump f~0.67
+    enotes: 13e prime-frequency probe negative; z-score -0.35 arith vs -0.36 shuffled at 10 lines
+
+=== V05_042 sim=0.130
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V05_043 sim=0.129
+  H [c11] Keiper-Taylor check: n=1..40 all lambda_n>=0, min 0.0230957 at n=1
+    hnote: n=1..40; lambda_1=0.0230957090, lambda_2=0.0923457352
+  E [F05E087/c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V05_044 sim=0.128
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E045/c03/c6] Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z)
+    enotes: 0.071430 vs 0.071429 at z=7,x=200000
+
+=== V05_045 sim=0.127
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E137/c11/c16] first zeta zero recovered from primes alone
+    enotes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V05_046 sim=0.126
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E010/c01/c19] Failures ledger: 14 dead ends with mechanisms
+    enotes: 14 items, each with mechanism of death
+
+=== V05_047 sim=0.126
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E070/c06/c17] Weighted positive geometries + stringy deformation as home
+    enotes: deformation parameter u; exponents are prime logs
+
+=== V05_048 sim=0.125
+  H [c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    hnote: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  E [F05E160/c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    enotes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V05_049 sim=0.125
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E136/c11/c15] CCM D_log reimplemented from prime Euler products
+    enotes: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+
+=== V05_050 sim=0.125
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E037/c03/c15] E(sigma,t)=3E_0+4ReE_1+ReE_2>=0 termwise
+    enotes: two forms agree 6 digits on (sigma,t) grid
+
+=== V05_051 sim=0.124
+  H [c20] classical level-truncated bound 1/G(z)
+    hnote: constraint; worse bound 0.2348 vs 0.1710
+  E [F05E067/c06/c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    enotes: δ=1 and 0.5; bound crude as expected
+
+=== V05_052 sim=0.124
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_053 sim=0.124
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E091/c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    enotes: verified on our objects; estimates cited not derived
+
+=== V05_054 sim=0.120
+  H [c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    hnote: cited Li 1997; sum over rho
+  E [F05E087/c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V05_055 sim=0.120
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E057/c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    enotes: exact translation; same generative move
+
+=== V05_056 sim=0.120
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E149/c12/c10] Selberg/Mayer control: dream works in hyperbolic world
+    enotes: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+
+=== V05_057 sim=0.120
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E119/c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    enotes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V05_058 sim=0.120
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E062/c04/c6] Selberg parity barrier: ω(n) parity unresolvable
+    enotes: Selberg; cited literature
+
+=== V05_059 sim=0.119
+  H [c9] honesty weak point: certificate numeric only, gamma real unproved
+    hnote: agreement 1e-15 is certificate; not proved generally
+  E [F05E156/c12/c17] self-adjointness buys real spectrum, not identification
+    enotes: real spectrum != zero identification; conjectural
+
+=== V05_060 sim=0.117
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E080/c06/c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    enotes: a_n=Λ(n)/√n
+
+=== V05_061 sim=0.116
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E087/c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V05_062 sim=0.116
+  H [c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    hnote: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  E [F05E049/c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    enotes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V05_063 sim=0.116
+  H [c9] honesty weak point: certificate numeric only, gamma real unproved
+    hnote: agreement 1e-15 is certificate; not proved generally
+  E [F05E158/c12/c19] D_log convergence as N,lambda->inf unproved
+    enotes: unproved; 'strategy toward a proof'; quantify D2 bars
+
+=== V05_064 sim=0.116
+  H [c18] verdict: template only; upper-bound machine; parity barrier stands
+    hnote: template not source; parity barrier stands
+  E [F05E076/c06/c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    aliases: c09/c19: FF Jacobian: R1–R6 all satisfied, the template itself
+    enotes: five-part anatomy derived from curve case; reference template cited
+
+=== V05_065 sim=0.114
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E039/c03/c17] Pole at sigma=1 is infinite total prime energy
+    enotes: pole expected, not pathological
+
+=== V05_066 sim=0.113
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_067 sim=0.112
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V05_068 sim=0.112
+  H [c20] classical level-truncated bound 1/G(z)
+    hnote: constraint; worse bound 0.2348 vs 0.1710
+  E [F05E069/c06/c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    enotes: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+
+=== V05_069 sim=0.112
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E138/c11/c17] even-subspace single tiny eigenvalue eps_N=2.83e-26
+    enotes: odd block 581x larger; 8771x at N=120
+
+=== V05_070 sim=0.111
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E085/c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    enotes: Weil 1952: RH is positivity; source must be geometric
+
+=== V05_071 sim=0.110
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E090/c08/c16] Frobenius-like operator for Δ∞ (refines D4)
+    enotes: refines D4's; belongs to bridge program's 10d
+
+=== V05_072 sim=0.109
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E058/c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language; c12/c3: Weil positivity of W(h) equivalent
+    enotes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V05_073 sim=0.108
+  H [c2] exact Gaussian detector pair h(r), g(u)
+    hnote: exact Fourier pair; h>=0 even, peak 1
+  E [F05E006/c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    aliases: c10/c16: pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda; c10/c17: shuffled weights also GUE (0.524): TBRE-class generic chaos; c10/c18: r
+    enotes: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE; <r> 0.52-0.55, z>=17 all lambda; level repulsion
+
+=== V05_074 sim=0.107
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E100/c09/c13] Top target: reimplement CCM from prime Euler products alone
+    enotes: queued: verify spectral coincidence, audit zero-fitting
+
+=== V05_075 sim=0.107
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E026/c02/c16] empty face anchors alternating sum (d=1, log1=0)
+    enotes: empty face d=1, log1=0, anchors sum
+
+=== V05_076 sim=0.107
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E014/c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    aliases: c02/c11: weights signed, alternate with face dimension; c02/c8: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; c06/c14: Face-weights w(S)=(−1)
+    enotes: Σw(S)→1; Dirichlet GF = −ζ′/ζ²; weights signed, alternate with face dimension
+
+=== V05_077 sim=0.105
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E092/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V05_078 sim=0.104
+  H [c9] honesty weak point: certificate numeric only, gamma real unproved
+    hnote: agreement 1e-15 is certificate; not proved generally
+  E [F05E148/c12/c1] 8-point operator audit checklist
+    enotes: 8 criteria applied to candidates A-H
+
+=== V05_079 sim=0.104
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E053/c04/c17] Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+    enotes: corrected run; first run silently dropped p≥3
+
+=== V05_080 sim=0.104
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E149/c12/c10] Selberg/Mayer control: dream works in hyperbolic world
+    enotes: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+
+=== V05_081 sim=0.104
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E109/c09/c3] BK N(T) vs 400 zeros: |S(T)|≤1.164, mean 0.502, drift 5.5e-6
+    enotes: 400 zeros; drift slope 5.5e-6, no drift
+
+=== V05_082 sim=0.103
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E058/c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language; c12/c3: Weil positivity of W(h) equivalent
+    enotes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V05_083 sim=0.103
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E065/c06/c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    aliases: c08/c14: 10d: function-field template from intersection pairing on C×C
+    enotes: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p; F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V05_084 sim=0.102
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E046/c03/c8] Unproven: pi_2(x)~Sx/(log x)^2 remains conjecture
+    aliases: c07/c15: unproven twin conjecture pi_2(x)~S x/(log x)^2
+    enotes: pi_2 ratio 1.6091 vs 1.3203 at 200000, slow convergence; ratio 1.6091 at 2e5; algebra not conjecture
+
+=== V05_085 sim=0.102
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E054/c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    enotes: a=0.5 cancellation to 15 digits
+
+=== V05_086 sim=0.102
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E137/c11/c16] first zeta zero recovered from primes alone
+    enotes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V05_087 sim=0.102
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V05_088 sim=0.101
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E098/c09/c11] CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam²
+    enotes: arXiv:2511.22755; primary-source abstract verified
+
+=== V05_089 sim=0.101
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E052/c04/c16] Guinand–Weil symmetric formula, normalization numerically confirmed
+    enotes: normalization confirmed by own numerics
+
+=== V05_090 sim=0.101
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E134/c11/c10] fermionic prime Fock: independent prior art exists
+    enotes: goldenphysicsproject 2026 GitHub; Lean CAR formalized
+
+=== V05_091 sim=0.101
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E021/c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    enotes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V05_092 sim=0.100
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E096/c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    enotes: node 11 scoring template; refines 10d ledger
+
+=== V05_093 sim=0.100
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E071/c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    aliases: c11/c13: derivative identity for sum_S w(S), 10-digit verified
+    enotes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}; z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V05_094 sim=0.099
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E015/c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    aliases: c02/c9: Σw(S) → 1 as X→∞, equivalent to PNT; c07/c10: weighted infinite simplex total weight 1 = PNT; c11/c8: PNT as total weight 1: no prior art
+    enotes: 0.999922 at 5·10⁵; PNT as total weight 1; S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+
+=== V05_095 sim=0.099
+  H [c2] exact Gaussian detector pair h(r), g(u)
+    hnote: exact Fourier pair; h>=0 even, peak 1
+  E [F05E092/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V05_096 sim=0.098
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E140/c11/c19] mechanism fragile: requires exact prime arithmetic
+    enotes: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+
+=== V05_097 sim=0.098
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E035/c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    enotes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V05_098 sim=0.098
+  H [c18] verdict: template only; upper-bound machine; parity barrier stands
+    hnote: template not source; parity barrier stands
+  E [F05E069/c06/c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    enotes: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+
+=== V05_099 sim=0.098
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E159/c12/c2] Connes 1999 adele trace formula, live framework killed proof
+    enotes: semilocal derived, exact; full statement RH-equivalent; killed as proof
+
+=== V05_100 sim=0.098
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E156/c12/c17] self-adjointness buys real spectrum, not identification
+    enotes: real spectrum != zero identification; conjectural
+
+=== V05_101 sim=0.097
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E072/c06/c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    enotes: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+
+=== V05_102 sim=0.096
+  H [c2] exact Gaussian detector pair h(r), g(u)
+    hnote: exact Fourier pair; h>=0 even, peak 1
+  E [F05E003/c01/c12] CCM recovers zeros 1–8 from primes alone
+    enotes: ε_even=3.48e-59 at N=120; separation 8771×
+
+=== V05_103 sim=0.096
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E036/c03/c14] Energy translation: E_0,E_1,E_2 over vertex towers
+    enotes: translation over vertex towers (prime powers)
+
+=== V05_104 sim=0.095
+  H [c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    hnote: agreement 4e-16; 8e-13 at w=0.5
+  E [F05E160/c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    enotes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V05_105 sim=0.095
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E049/c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    enotes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V05_106 sim=0.095
+  H [c20] classical level-truncated bound 1/G(z)
+    hnote: constraint; worse bound 0.2348 vs 0.1710
+  E [F05E147/c11/c9] deforming-marking-rule move new; 2C2 classical
+    enotes: constant classical Hardy-Littlewood 1923
+
+=== V05_107 sim=0.094
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E085/c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    enotes: Weil 1952: RH is positivity; source must be geometric
+
+=== V05_108 sim=0.094
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E042/c03/c3] Deformed survivors = twin lowers: 2160 <=200000
+    enotes: 2160 twin lowers <=200000, exact match independent sieve
+
+=== V05_109 sim=0.094
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E130/c10/c7] Heisenberg probe negative on three panels; 65,401 eigenvalues
+    enotes: 65,401 eigenvalues; negative on three panels
+
+=== V05_110 sim=0.094
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E020/c02/c1] ψ(x) as signed face-sum over Δ_x
+    aliases: c07/c6: D1: Chebyshev psi(x) as signed face-sum
+    enotes: exact at x=30,100,500; Moebius reframed; classical theorems in new clothes
+
+=== V05_111 sim=0.094
+  H [c18] verdict: template only; upper-bound machine; parity barrier stands
+    hnote: template not source; parity barrier stands
+  E [F05E032/c02/c7] no known positive region for the sieve
+    aliases: c07/c5: no positive region in finite complex; cutoff-N dependent
+    enotes: no known positive region; gap stands; Betti [74,101,26,0] at N=1000; killed naive hope
+
+=== V05_112 sim=0.093
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E087/c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V05_113 sim=0.093
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E050/c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    enotes: exact translation of D1
+
+=== V05_114 sim=0.093
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E159/c12/c2] Connes 1999 adele trace formula, live framework killed proof
+    enotes: semilocal derived, exact; full statement RH-equivalent; killed as proof
+
+=== V05_115 sim=0.092
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E071/c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    aliases: c11/c13: derivative identity for sum_S w(S), 10-digit verified
+    enotes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}; z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V05_116 sim=0.092
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E045/c03/c6] Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z)
+    enotes: 0.071430 vs 0.071429 at z=7,x=200000
+
+=== V05_117 sim=0.091
+  H [c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    hnote: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  E [F05E092/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V05_118 sim=0.091
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E021/c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    enotes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V05_119 sim=0.091
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E053/c04/c17] Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+    enotes: corrected run; first run silently dropped p≥3
+
+=== V05_120 sim=0.091
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E133/c11/c1] k-tuple deformation sweep at x=10^6
+    enotes: 9 tuples + control; three panels (a)(b)(c)
+
+=== V05_121 sim=0.091
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E018/c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights
+    enotes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V05_122 sim=0.091
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E080/c06/c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    enotes: a_n=Λ(n)/√n
+
+=== V05_123 sim=0.090
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E091/c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    enotes: verified on our objects; estimates cited not derived
+
+=== V05_124 sim=0.089
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E080/c06/c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    enotes: a_n=Λ(n)/√n
+
+=== V05_125 sim=0.089
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E155/c12/c16] Connes absorption spectrum: zeros as missing lines
+    enotes: exact, conditional on trace formula; explains explicit-formula minus sign
+
+=== V05_126 sim=0.089
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E035/c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    enotes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V05_127 sim=0.088
+  H [c9] honesty weak point: certificate numeric only, gamma real unproved
+    hnote: agreement 1e-15 is certificate; not proved generally
+  E [F05E071/c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    aliases: c11/c13: derivative identity for sum_S w(S), 10-digit verified
+    enotes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}; z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V05_128 sim=0.088
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E067/c06/c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    enotes: δ=1 and 0.5; bound crude as expected
+
+=== V05_129 sim=0.088
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E057/c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    enotes: exact translation; same generative move
+
+=== V05_130 sim=0.087
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E018/c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights
+    enotes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V05_131 sim=0.087
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E058/c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language; c12/c3: Weil positivity of W(h) equivalent
+    enotes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V05_132 sim=0.087
+  H [c17] 1/G(19)=0.2348 vs face-native Qmin=delta(19)=0.1710; both->e^{-gamma}/log z
+    hnote: 1/G(19)=0.2348 vs delta(19)=0.1710
+  E [F05E125/c10/c21] strengtheners pending: Delta_3 rigidity, density of states, z=43
+    enotes: Delta_3 flat ~0.33 inconclusive; z=43 running
+
+=== V05_133 sim=0.087
+  H [c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    hnote: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+  E [F05E095/c08/c9] Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+    enotes: leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+
+=== V05_134 sim=0.086
+  H [c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    hnote: functional equation proof; prime series diverges at s=1
+  E [F05E158/c12/c19] D_log convergence as N,lambda->inf unproved
+    enotes: unproved; 'strategy toward a proof'; quantify D2 bars
+
+=== V05_135 sim=0.085
+  H [c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    hnote: Weil face-sum-native; Li Dirichlet-series-native
+  E [F05E092/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V05_136 sim=0.085
+  H [c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    hnote: exact algebra; window buys sigma=1/2 convergence
+  E [F05E077/c06/c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    aliases: c06/c6: Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing; c08/c15: Ledger: missing Jacobian-role space, F
+    enotes: 10a infinite needs window n~e^{7.4/w}; Δ∞ contractible (D4); object must live in weights/operators
+
+=== V05_137 sim=0.085
+  H [c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    hnote: from h>=0 + Weil formula; table checks
+  E [F05E085/c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    enotes: Weil 1952: RH is positivity; source must be geometric
+
+=== V05_138 sim=0.084
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E051/c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    enotes: programmatic/heuristic
+
+=== V05_139 sim=0.083
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E119/c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    enotes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V05_140 sim=0.083
+  H [c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    hnote: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  E [F05E125/c10/c21] strengtheners pending: Delta_3 rigidity, density of states, z=43
+    enotes: Delta_3 flat ~0.33 inconclusive; z=43 running
+
+=== V05_141 sim=0.083
+  H [c19] independent Gram/intersection positivity source (10d home)
+    hnote: 10d natural home; no independent source yet
+  E [F05E098/c09/c11] CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam²
+    enotes: arXiv:2511.22755; primary-source abstract verified
+
+=== V05_142 sim=0.082
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E132/c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    enotes: multi-torus via Laplacian dead; dynamics live
+
+=== V05_143 sim=0.082
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E084/c07/c3] sieve as relational machine: composites to primes, primes to zero
+    enotes: user's framing, root node decision
+
+=== V05_144 sim=0.081
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E029/c02/c4] binary geometry rule: 1_prime + 1_shared = 1
+    enotes: reformulation, not new prime information
+
+=== V05_145 sim=0.081
+  H [c1] Weil prime-side zero detector (D10a step-3)
+    hnote: weil_detector.py; primes alone count zeros in window
+  E [F05E000/c01/c1] Sieve is simplicial complex Δ_z
+    aliases: c02/c2: Δ_x incidence complex of sieve to x; c07/c4: finite incidence complex: vertices primes <=N, faces products <=N
+    enotes: finite prime subsets = faces; face-sum Möbius inversion; link-face counts match; integer bijection exact
+
+=== V05_146 sim=0.081
+  H [c6] resonance: negative prime sum adds to W when zero inside
+    hnote: w=1: prime-sum -0.5925, W=2.2472
+  E [F05E130/c10/c7] Heisenberg probe negative on three panels; 65,401 eigenvalues
+    enotes: 65,401 eigenvalues; negative on three panels
+
+=== V05_147 sim=0.081
+  H [c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    hnote: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  E [F05E093/c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: prime-side agrees with zero side to 4e-16; counts zeros
+
+=== V05_148 sim=0.080
+  H [c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    hnote: cited Li 1997; sum over rho
+  E [F05E004/c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    enotes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V05_149 sim=0.080
+  H [c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    hnote: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+  E [F05E005/c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    enotes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated

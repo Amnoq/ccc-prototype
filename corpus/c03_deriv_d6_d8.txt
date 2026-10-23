@@ -1,0 +1,154 @@
+## D6. Deformation: the singular series as renormalized total weight
+
+Her deformations preserve a shared zero locus while changing the geometry.
+The sieve's deformation: prime p now marks residues R_p = {0} (p = 2),
+{0, −2} (p odd) — i.e. n is marked if p | n or p | (n+2). Code:
+`deformed_sieve.py`; picture: `deformed_sieve_twins.svg` (red family marks
+multiples of p, blue family marks n ≡ −2 mod p with circles spanning
+[kp−2, (k+1)p−2]).
+
+**The deformation separates markers from survivors.** In the classic sieve the
+markers and the survivors coincide (primes). Here the markers are the primes
+but the survivors are a different set — verified: the generative deformed
+sieve's survivors ≤ 200000 are *exactly* the twin prime lowers (2160 of
+them), checked against an independent primality sieve.
+
+**Exact deformed identities (verified).**
+- Static z-sieve S(x,z) = #{n ≤ x : ∀p ≤ z, n mod p ∉ R_p} satisfies the exact
+  μ-identity S(x,z) = Σ_{d|P(z)} μ(d)·E_d(x) with E_d the exact CRT
+  residue-class counts — verified exact at (z,x) = (13, 50000) and (30, 200000).
+- Faces of the deformed complex carry multiplicities m(S) = ∏_{p∈S}|R_p|
+  (the number of forbidden CRT classes); the finite total weight is exactly
+  δ(z) = ∏_{p≤z}(1 − |R_p|/p), and S(x,z)/x → δ(z) — verified: 0.071430 vs
+  0.071429 at z = 7, x = 200000.
+
+**The singular series, derived.** Renormalize the total weight by the prime
+baseline:
+
+    δ(z) = [∏_{p≤z}(1 − 1/p)²] · 𝔖(z),   𝔖(z) = ∏_{p≤z} (1 − |R_p|/p)/(1 − 1/p)².
+
+The first factor → 0 (Mertens); the second converges: 𝔖(z) → 2C₂ = 1.32032… —
+verified: 1.367187, 1.344116, 1.330277, 1.322754 at z = 7, 13, 30, 100.
+The Hardy–Littlewood twin-prime constant is *derived* as the renormalized
+total weight of the deformed incidence complex — it comes out of the sieve's
+deformation, never inserted.
+
+**Honest boundary.** The passage from 𝔖(z) to the asymptotic
+π₂(x) ~ 𝔖·x/(log x)² is the *unproven* twin prime conjecture. Numerically
+π₂(200000)·(log 200000)²/200000 = 1.6091 vs conjectured 1.3203 — slow
+convergence, as expected; we verify the algebra (local factors assemble to
+𝔖), not the conjecture. What D6 establishes: her deformation move, executed
+on the sieve, *generates* the singular series. The open analytic step is
+exactly where her program would need its canonical form.
+
+## D7. Positivity lives in the primitive (node 9, first half resolved)
+
+**The finding.** The signed face-weights were never the fundamental object.
+The primitive analytic objects are positive:
+
+- −ζ′/ζ(s) = Σ_{n≥1} Λ(n)n^{−s}, Λ ≥ 0 (von Mangoldt), Re(s) > 1.
+- log ζ(s) = Σ_{p,k} 1/(kp^{ks}) > 0 for real s > 1.
+- Finite-z density δ(z) = ∏_{p≤z}(1 − 1/p) > 0, with
+  −log δ(z) = Σ_{p≤z}Σ_{k≥1} 1/(kp^k) — a manifestly positive sum
+  (verified to 6 digits at z = 10, 30, 100, 1000; δ(1000) = 0.080965).
+
+The face-weights' generating function factors:
+
+    −ζ′/ζ² = (−ζ′/ζ)·(1/ζ) = (positive series)·(Σ_m μ(m)m^{−s}).
+
+The signs come *entirely* from the Möbius factor — i.e. from
+inclusion-exclusion. Geometrically: the positive "volume" δ(z) is
+primary; its inclusion–exclusion expansion Σ_{d|P(z)} μ(d)/d is where the
+alternating signs appear. Verified side by side: δ(X) > 0 monotone
+decreasing → 0, while A(X) = Σ_{d≤X} μ(d)/d oscillates in sign
+(+0.0311, +0.0044, −0.0021, −0.0005 at X = 10²…10⁵) toward the same
+limit 0. Same limit, two presentations — the signs live only in the
+additive one.
+
+**The mechanism exists — classically.** "Positivity constrains zeros" is
+not a hope; it is the 3-4-1 proof that ζ(1+it) ≠ 0. Since
+3 + 4cosθ + cos2θ = 2(1+cosθ)² ≥ 0 and −ζ′/ζ = ΣΛ(n)n^{−s} has positive
+coefficients,
+
+    3(−ζ′/ζ)(σ) + 4Re(−ζ′/ζ)(σ+it) + Re(−ζ′/ζ)(σ+2it) ≥ 0,
+
+which a zero on Re(s) = 1 would violate as σ → 1⁺ (the 3/(σ−1) pole
+cannot be canceled). Verified numerically from the Λ-sieve: the sum stays
+positive on a t-grid and grows 2.26 → 8.30 → 20.62 as σ → 1⁺. So:
+
+    positivity of the primitive (Λ ≥ 0)  ⟹  a zero-free region.
+
+This is the Weil-shaped mechanism in miniature — positivity telling zeros
+where they cannot stand.
+
+**The bridge program, concretely.** Node 9 splits:
+- **9a (closed):** where positivity lives — the primitive (Λ, Euler
+  products, δ(z)); the signs are an expansion artifact of Möbius
+  inversion, not a property of the geometry's volume.
+- **9b (open):** stepping stone #2 — translate the 3-4-1 argument into the
+  incidence-complex language. Can the sieve's geometry *carry* the
+  classical zero-free line? If yes, the bridge carries traffic.
+- **9c (open):** what *stronger* geometric positivity is available that
+  could push left of Re(s) = 1 — the RH-ward question.
+
+Honest labels: the positivity location is exact (identities) +
+computationally verified; 3-4-1 is classical (cited, re-verified here);
+9b/9c are open research, not results.
+
+## D8. The zero-free line in the energy language (9b: the bridge carries traffic)
+
+**The translation.** Write −ζ′/ζ as a sum over the complex's vertex
+towers (prime powers). For σ > 1:
+
+    E₀(σ)    = Σ_p Σ_{k≥1} (log p) p^{−kσ}            = −ζ′/ζ(σ),
+    E₁(σ,t)  = Σ_p Σ_{k≥1} (log p) p^{−kσ} e^{−ikt log p} = −ζ′/ζ(σ+it),
+    E₂(σ,t)  = Σ_p Σ_{k≥1} (log p) p^{−kσ} e^{−2ikt log p} = −ζ′/ζ(σ+2it).
+
+The 3-4-1 trigonometric polynomial is a fourth power of a modulus:
+
+    3 + 4cosθ + cos2θ = ½|1 + e^{iθ}|⁴ ≥ 0.
+
+Hence the classical nonnegative combination is a sum of *stratum
+energies*, each manifestly nonnegative:
+
+    E(σ,t) = ½ Σ_p Σ_{k≥1} (log p) p^{−kσ} |1 + p^{ikt}|⁴
+           = 3E₀(σ) + 4ReE₁(σ,t) + ReE₂(σ,t)  ≥  0,
+
+with e_{p,k}(σ,t) = ½(log p)p^{−kσ}|1+p^{ikt}|⁴ ≥ 0 termwise.
+Verified numerically to 6 digits on a (σ,t) grid
+(`zero_free.py`): the two forms agree everywhere.
+
+**The proof, restated.** E(σ,t) ≥ 0 as a sum of nonnegative stratum
+energies. E₀(σ) ~ 1/(σ−1): the pole is *infinite total prime energy*
+at σ = 1 — expected, not pathological. If ζ(1+it₀) = 0 of order m ≥ 1,
+then −ζ′/ζ has residue −m there, so 4ReE₁(σ,t₀) ~ −4m/(σ−1) → −∞:
+the total energy would diverge *negatively*. A sum of nonnegative
+stratum energies cannot do that. (ReE₂ can only worsen it: a zero at
+1+2it₀ contributes −m₂/(σ−1).) Hence no zeros on Re(s) = 1. The
+contradiction is now physical: *negative infinite total energy built
+from nonnegative strata is impossible.*
+
+**Numerical illustration.** E₀ climbs toward the pole (0.57 → 4.02 as
+σ: 2 → 1.2) while ReE₁, ReE₂ stay bounded at generic t — e.g. at
+t = 14.1347 (first-zero height): ReE₁ = −1.06, ReE₂ = +0.47 at σ = 1.2,
+bounded, no −m/(σ−1) divergence. That boundedness is the numerical
+shadow of "no zero on the line there." E > 0 on the whole grid.
+
+**Honest verdict on 9b.** The bridge carries traffic: the complete
+classical argument — Dirichlet series, trig positivity, pole/zero
+singularity structure — is now expressible in the sieve's language, and
+the energy reading makes the contradiction *visible* (termwise
+nonnegativity versus a required negative divergence) in a way the bare
+trig identity hides. What the translation does NOT do: it does not
+eliminate the analysis. The singularity structure (residue −m at a
+zero) is an analytic fact about Dirichlet series that the complex
+*houses* but does not *derive*. So: same traffic, new bridge, one
+genuinely new visible feature — no new theorem yet. 9c (stronger
+positivity → a new zero-free region) remains the real test.
+
+*Direction noted for 9c (speculative):* the mechanism is
+deformation-agnostic — for any residue pattern with |R_p| ≥ 0 the
+deformed log-derivative keeps positive coefficients — so the space of
+sieve deformations may parametrize the space of admissible positive
+trig polynomials used in modern zero-free regions. Undeveloped.
+

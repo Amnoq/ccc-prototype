@@ -1,0 +1,715 @@
+Fv. We also fix a basis for g. In that way, we regard the adjoint embedding as a map Ad : G → GL(dim g).
+
+#### 20 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Let
+
+#### X := G(F)\G(A).
+
+We denote by C ∞(X) the space of smooth functions on X; the space X can be understood as an inverse limit of quotients of real Lie groups by discrete subgroups,
+
+and a smooth function simply means one that factors through a smooth function on one of these quotients.
+
+2.1.4. We fix a maximally F-split torus T ⊂ G and, correspondingly,
+
+a minimal parabolic F-subgroup B containing T.
+
+2.1.5. For v non-archimedean and_m > 0 an integer, we denote by
+
+Kv\[m\] the open-compact (principal congruence) subgroup
+
+Kv[m] := G(Fv) ∩ m )
+
+g ∈ GLr(Ov), g ≡ Idr ($
+
+v ,
+
+where $v is a uniformizer in Fv.
+
+Choose, for each place v, a maximal compact subgroup Kv so that :
+
+1. Kv ⊃ Kv\[0\] when v is nonarchimedean (this implies that Kv = Kv\[0\] for almost all v);
+
+2. For v nonarchimedean, Kv is special, i.e. it is the stabilizer of a special vertex in the building of G(Fv).
+
+This entails, in particular, that if Pv is the set of Fv-points of any parabolic subgroup, then PvKv = G(Fv).
+
+There exists a constant A, depending on G and the chosen faithful
+
+representation, so that
+
+\[Kv : Kv\[mv\]\]
+
+(1 + A/qv) −1 6 6 (1 + A/qv).  (2.1) mv dim(G)
+
+q
+
+v
+
+We denote by m : v 7→ mv any function on the set of places of F to
+
+the non-negative integers, which is zero for almost all v. Write kmk = Q mv
+
+q
+
+v v
+
+(we take qv = e = 2.718 . . . for archimedean places); we note that \|{m : kmk_6 N}\| = O(N).
+
+For such m, we set
+
+K[m] := Y Kv[mv].
+
+v finite
+
+We also put K = Q
+
+v Kv.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 21
+
+2.1.6. We now fix a normalization of left-invariant Haar measures on
+
+the various groups: the Fv and A-points of G, as well as any parabolic subgroup P ⊂ G, as well as of any Levi factor M ⊂ P; and finally, on Kv, for every v.
+
+These measures should have the following properties:
+
+1. The measures on adelic points should be the product of local measures;
+
+2. The projection P(F)\P(A) → M(F)\M(A) corresponding to the decomposition P = MN is measure-preserving (for the left Haar measures!)
+
+3. For all v, the measure on Kv has mass 1. For nonarchimedean v, it is the restriction of the measure from G(Fv).
+
+4. The map P(F)\P(A)×K → G(F)\G(A) should be measure-preserving (i.e., the preimage of any set has the same measure as the set).
+
+It is not difficult to construct such measures; we shall make an explicit choice, in the case of G = GL2, in §3.1.5. It is worth observing that,
+
+since we are only concerned with upper bounds in this paper, and not exact formulas, precise choices are never of importance, so long as they remain
+
+−ε
+
+consistent. With any such choice, it follows from (2.1) that kmk
+
+dim(G)  kmk ε
+
+vol(K\[m\])kmk ; in fact, one can replace the upper and lower bounds by constants in the case that G is semisimple.
+
+Finally, put on X the corresponding quotient measure.
+
+If H is any locally compact group, we define the modular character
+
+\[
+
+\delta H : H \to R\times via the rule \mu(Sh) = \delta H(h) -1\mu(S), where \mu is a left Haar measure on H, and S is any set with \mu(S) > 0. In other words,
+
+if dlh is a left Haar measure, then dl(hh0) = \delta H(h_0) -1dlh. 2.1.7. For g \in G(Fv), we define kgk = supij\|\rho ij (gv)\|; in the adelic case,
+
+\]
+
+we take the product over all places. We set kAd(g)k to be defined as kgk, but with ρ replaced by the adjoint embedding. (The “functional” difference between
+
+these two norms lies in the fact that kAd(g)k is invariant under the center, whereas kgk is not.)
+
+For g ∈ G(A), define the height by
+
+ht(g) Y \|(Ad(g).x)i \|v.
+
+−1 := inf sup
+
+x∈Fr−{0} i=1...r
+
+v
+
+\[
+
+This descends to a function on X, and - if the center of G is anisotropic - the map ht : X \to R>1 is proper. Lemma. — Fix x_0 \in X. For any x \in X, there
+
+exists g \in G(A) with
+
+\]
+
+x0g = x and kAd(g)k 6 ht(x) ?
+
+.
+
+Proof. — This is well-known; see e.g. \[20\], footnote 15 for a proof in
+
+the case of real groups, from which the stated result is easily deduced.  ut
+
+#### 22 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+2.1.8. Throughout this paper the phrase =\pi is a unitary representation of the group G” will be understood to mean that the underlying space of \pi is a
+
+Hilbert space and G acts by isometries on that space.9 Let V be a unitary representation of G(Fv). The space of smooth vectors V \infty is defined, in the case
+
+when v is nonarchimedean, as the subspace
+
+\]
+
+of V comprising vectors whose stabilizer is open; in the case when v is archimedean, it is that subspace for which the map g 7→ g.v defines a smooth map from
+
+G(Fv) to V . It is always dense in V .
+
+Let V be a unitary representation of G(A). It factorizes as a tensor
+
+product of unitary representations of G(Fv), and we define the smooth subspace V
+
+∞ as the (image in V of the) tensor product of the local smooth
+
+subspaces.
+
+2.2. Structure of adelic quotients and the Plancherel formula
+
+In the present section we are going to recall the “Plancherel formula”
+
+for L 2 (X), that is to say, its decomposition into irreducible G(A)-representations.
+
+2.2.1. Eisenstein series. — There is a standard parameterization of
+
+\[
+
+the automorphic spectrum via the theory of =Eisenstein series” that we shall now recall. See also [1] for a_r-esum-e of the theory, and [51] for a detailed
+
+treatment. Let X denote the set of pairs (M,\sigma), where M is a F-Levi subgroup of a F-parabolic subgroup, containing T, and let \sigma be an irreducible
+
+subrepresentation of the space of functions on M(F)\M(A), which is =discrete series” in the following sense: all f \in \sigma are square-integrable with
+
+respect to the inner product
+
+\]
+
+Z
+
+f 7→ kfk 2 \|f\| 2
+
+σ = ,
+
+#### ZM(A)M(F)\M(A)
+
+where ZM(A) denote the center of M(A).
+
+We can equip X with a measure in the following way: We write
+
+X = G XM,
+
+M
+
+9 In some contexts, unitary representation is used to mean “unitarizable”, i.e., such that there exists
+
+some inner product. We shall always understand it to mean that we have fixed a specific inner product.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 23
+
+\[
+
+indexed by Levis containing T. We require that for any continuous assignment of \chi \in XM to f\chi in the underlying space of \chi,
+
+\]
+
+#### Z Z 2 Z
+
+fχdχ kfχk_2
+
+=
+
+σdχ. M(F)\M(A) χ χ This uniquely specifies a measure dχ on XM, and so also on X . There exists a natural equivalence relation ∼ on X : declare (M, σ)
+
+) to be equivalent if there exists w in the normalizer of T with
+
+and (M0
+
+, σ0
+
+\[
+
+Ad(w)M = M_0 and Ad(w)\sigma = \sigma_0
+
+\]
+
+. There is a natural quotient measure on
+
+X / ∼.
+
+\[
+
+For \chi = (M,\sigma) \in X, we denote by I(\chi) the unitarily induced representation IndG(A) \sigma, where P is any parabolic subgroup containing M. (Its
+
+\]
+
+### P(A)
+
+\[
+
+isomorphism class is - not obviously - independent of the choice of P.) It consists of functions G(A) \to V\sigma(where V\sigma is a vector space realizing the
+
+representation \sigma) satisfying the transformation property f(pg) = \delta_1/2 (p)\sigma(mp)f(g), where \delta is the modular character (cf. §2.1.6) and
+
+p_7\to mp the projection P \to M. We define a norm on I(\chi) by
+
+\]
+
+Z
+
+kfk 2 kf(k)k 2 dk,
+
+Eis := Vσ
+
+K
+
+where K is equipped with the Haar probability measure.
+
+There exists a natural intertwiner (the “unitary Eisenstein series”, obtained by averaging over P(F)\G(F) and analytic continuation):
+
+Eis
+
+I(χ) → C ∞(X). The map Eis is an isomorphism away from a set of parameters χ of measure zero; we call the latter the set of singular parameters. For instance in
+
+the case of GL2 the parameters are pairs of unitary characters (χ +, χ−) for M = GL1 × GL1 ,→ B (the standard Borel) and the singular ones are the ones for
+
+which χ + = χ −; for this reason, we shall define for this case a variant Eis∗ of Eis which is non-zero (see §4.1.10.) In any case, to almost every χ ∈ X is
+
+associated an automorphic representation – the image of I(χ) – denoted Eis(χ). The resulting automorphic representation depends only on the class of χ in X / ∼.
+
+If Eis is an isomorphism – as is so away from a set of χ of measures_0 – we equip Eis(χ) with
+
+a norm by requiring Eis to be an isometry. Whenever defined, we call this norm the Eisenstein norm on the space Eis(χ). 10
+
+\[
+
+10 The terminology may be slightly misleading; if \pi \subset L_2 (X) is, e.g., a cuspidal representation, then (G,\pi) \in X, and the Eisenstein norm on \pi is
+
+simply the restriction of the L_2
+
+\]
+
+-norm.
+
+#### 24 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Theorem. — (Langlands). The map R 2 (X), defined by integrating the map Eis, extends to an isometric isomorphism of the Hilbert space
+
+\[
+
+\chi \in X I(\chi) \to L R I(\chi)d\chi and L_2 (X).
+
+\]
+
+X
+
+For a slightly more precise formulation, we refer to \[1\].
+
+\[
+
+We shall call any automorphic representation that occurs as an Eis(\chi), \chi \in
+
+\]
+
+X , a standard automorphic representation. Not every automorphic representation is standard. For example, every standard automorphic representation
+
+is abstractly unitarizable. The standard automorphic representations are precisely those needed for unitary decomposition.
+
+The set of standard automorphic representations will be denoted by
+
+Gˆ Aut and the push-forward of the measure dχ on X to Gˆ Aut will be denoted by dµP. Remark. — The Plancherel decomposition of a function in, e.g., C ∞ (X)
+
+c
+
+\[
+
+is pointwise defined; explicitly, for \varphi \in C \infty (X), we have the equality of continuous functions,
+
+\]
+
+c
+
+Z
+
+\[
+
+X h\varphi, Eis(f)iEis(f) d\chi, \varphi = \chi \in X f\in B(\chi) where B(\chi) is an orthogonal basis for I(\chi), and the right-hand side is absolutely
+
+convergent. This is not a triviality; it follows, for example, from the results of W. M\cdot uller [55]; it may be that there is a more elementary proof also.
+
+\]
+
+2.2.2. The canonical norm for GL2. — In the case of GLn for generic
+
+\[
+
+standard representations - although not necessarily cuspidal - it is possible to give a simple description of a canonical norm on the space of any standard
+
+automorphic representation. We explain for GL2; the general case is obtained by replacing the role of a(y) below with g \in GLn-1 \subset GLn embedded as usual.
+
+Suppose \pi is generic. Let W\pi = \otimes vW\pi,v be the Whittaker model of \pi .
+
+\]
+
+There are two natural inner products that one can equip Wπ,v with, namely – see §3.1.5 for the measure normalizations –
+
+Z
+
+\[
+
+hWv, W_0 i = Wv(a(y))W0 (a(y))d \times y,hWv, W_0 ireg \tag{2.2}
+
+\]
+
+\[
+
+v v v
+
+\]
+
+F × v
+
+R (a(y))d ×y
+
+F × v
+
+= v Wv(a(y))W0
+
+\[
+
+\zeta v \tag{1}
+
+\]
+
+\[
+
+Lv(\pi,Ad,1)/\zeta v(2) .
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 25
+
+The latter inner product has certain good normalization properties, eg.
+
+\[
+
+hWv, Wvireg = \|Wv \tag{1}
+
+\]
+
+\[
+
+\| 2
+
+\]
+
+for almost all v.
+
+We define an inner product on Wπ, by its value on pure tensors W =
+
+Q
+
+v Wv.
+
+\[
+
+kWk_2 (\pi,Ad,1) \times Y hWv, Wvireg; \tag{2.3}
+
+\]
+
+\[
+
+^* reg := \Lambda
+
+\]
+
+v
+
+where
+
+\[
+
+\Lambda(\pi,Ad,s) \Lambda^* (\pi,Ad,1) = lims\to 1
+
+\]
+
+(s − 1)r ,
+
+\[
+
+with \Lambda(\pi,Ad,s) = Q v L(\pi v,Ad,s) denotes the completed L-function and_r is
+
+\]
+
+taken to be the largest non-negative integer for which the limit is nonzero.
+
+\[
+
+The regularized value L^* (\pi,Ad,1) satisfy ([24]) L^* (\pi,Ad,1) = C(\pi) o \tag{1}
+
+\]
+
+\[
+
+, as C(\pi) \to \infty . (2.4) Finally, we define the canonical norm on the space of \pi by the rule
+
+\]
+
+| 1/2 2ξF (2)(discF) |  |
+
+| --- | --- |
+
+| 2 kϕk | 2 |
+
+\[
+
+| \tag{1}
+
+\]
+
+\[
+
+kW\varphi k can = \xi^* | reg, \tag{2.5}
+
+\]
+
+\[
+
+|
+
+\]
+
+F
+
+\[
+
+where \varphi_7\to W\varphi is the usual intertwiner \tag{4.2}
+
+\]
+
+\[
+
+. The terminology is justified by 2.2.3. Lemma. — Suppose \pi generic and standard. Then, for \varphi \in \pi, k\varphi k_2 2 if \pi is cuspidal; and k\varphi
+
+k_2 2 can = k\varphi k L_2(X) can = 2\xi F \tag{2}
+
+\]
+
+\[
+
+k\varphi k Eis if \pi is Eisenstein and nonsingular.
+
+\]
+
+The verification of this equality for cusp forms is a consequence of the
+
+Rankin-Selberg method (cf. §4.4.2); the Eisenstein case is detailed in §4.1.7.
+
+Remark. — One unfortunate consequence (perhaps unavoidable) is that
+
+\[
+
+the canonical norm does not always behave continuously in families. It is possible to have a family of automorphic forms \varphi(s) belonging to standard
+
+generic automorphic representations so that \varphi(s) \to \varphi \tag{0}
+
+\]
+
+\[
+
+pointwise on X, but the canonical norms do not converge. This happens when the order of pole of the adjoint L-function jumps, e.g. at singular parameters.
+
+\]
+
+#### 26 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+2.3. Norms on adelic quotients
+
+2.3.1. We shall set up two families of Hilbert norms, valid for any
+
+d ∈ R:
+
+V
+
+- A notion of “Sobolev norm” S on any unitary G(A)-representation
+
+d
+
+V .
+
+X for functions on X.
+
+- A finer notion of “Sobolev norm” S d
+
+We shall follow the following convention: If \` ∈ V ∗ is a functional
+
+V (f), without a subscript d, it means there exists
+
+and we write \|\`(f)\| 6 S a constant d, depending on only the isomorphism class of G over F, so that \|\`(f)\| 6 S V (f). In particular, \` is continuous in
+
+the topology defined by the
+
+d
+
+family of norms S V
+
+d .
+
+1. We would like to warn the reader that the constructions are not
+
+totally formal. Namely, some of the subtler features of the norms rely on Bernstein’s uniform admissibility theorem as well as M¨uller’s theorem \[3, 55\].
+
+Indeed, one of the properties of the norms is established only for the group G = GLn. In fact, for the purpose of the present paper, none of these deep results
+
+are important.
+
+2. We observe that all our norms can take the value ∞. (In precise
+
+terms, we understand a norm N on a vector space V to be a function N : V → [0,∞] that satisfies the usual axioms; equivalently, we could regard N to be a pair
+
+consisting of a subspace W ⊂ V , and a (usual, finite-valued) norm on W.) S V ∞; S X
+
+d will always take finite values on V d will always take finite
+
+∞ (X). We
+
+values on the space of compactly supported smooth functions C
+
+c
+
+∞ in the norm induced by S V
+
+shall sometimes refer to the completion of V
+
+d
+
+V X
+
+as the Hilbert space associated to S
+
+d . Similarly for S d .
+
+2.3.2. The Sobolev norms on a unitary representation. — Let V be a
+
+unitary admissible representation of either G(Fv) (some place v) or G(A).
+
+\[
+
+We shall define, in both contexts, a generalized Laplacian operator \Delta : V \infty \to V \infty . This being so, we define the dth Sobolev norm via S V (f)
+
+:= k\Delta d fkV \tag{2.6}
+
+\]
+
+\[
+
+d The Laplacian will have the property that \Delta is invertible, and a suitable power of \Delta -1 is trace class from V to itself.
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 27
+
+2.3.3. Local. — Let v be a place and V an unitary admissible representation of G(Fv). We shall make a certain (Hilbert) orthogonal decom
+
+position V = \oplus m>0V [m]; roughly speaking, vectors in V [m] have “higher frequency” as_m grows.
+
+- If v is a finite place, we define V [m] to be the orthogonal complement of the Kv[m−1]-invariants vectors inside the Kv[m]-invariants vectors.
+
+- If v is archimedean, fix a basis {Xi} for the Lie algebra gv := g\otimes F Fv
+
+(1 − X2 ); let V [m] be the direct sum of all C-eigenspaces
+
+and let C := P
+
+i i
+
+\[
+
+with eigenvalue in [e_m, em+1) (here e = \exp \tag{1}
+
+\]
+
+\[
+
+= 2.718 . . .).
+
+\]
+
+The space V [m] is finite dimensional. Write ev[m] for the projector onto
+
+V [m], and put:
+
+\Delta v = X
+
+q m ev[m].
+
+v
+
+m>0
+
+Note that P
+
+m ev\[m\] is the identity.
+
+2.3.4. Global. — In the global setting, we use, as before, the notation
+
+m for a function v 7→ mv from places to non-negative integers, and set
+
+Xkmke\[m\]
+
+e[m] := Y ev[mv], \Delta A =
+
+v
+
+Note that one has P
+
+m e[m] = 1.
+
+2.3.5. Sobolev norms on C ∞(X). — On C ∞(X) we shall introduce
+
+X
+
+an increasing system of Sobolev norms S d which will take into account the noncompactness of the space X. Let H be the operation of “multiplication by 1 +
+
+ht(x).” Put:
+
+\[
+
+S X (f) := kH d\Delta d_2 d Afk_2 .
+
+\]
+
+2.4. Properties of the Sobolev norms.
+
+This section enunciates the properties of the Sobolev norms, defined in
+
+the prior section.
+
+2.4.1. Properties of the unitary Sobolev norms. — Write G for either
+
+G(A) or G(Fv).
+
+\[
+
+S1a. (Sobolev inequality) For f \in C(G) and a fixed smooth function \omega : G \to C of compact support with \omega \tag{1}
+
+\]
+
+\[
+
+= 1,\|f \tag{1}
+
+\]
+
+\[
+
+\| \omega S L_2 (G) (f · \omega).
+
+\]
+
+#### 28 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+S1b. (Distortion property) There is a constant κ, depending only11 on (G, ρ), so that, for V a unitary representation of G, S V (gf) kAd(g)k κdS V (f).
+
+d d
+
+S1c. (Embedding) For each d, there exists d_0 > d so that the trace of
+
+#### S V V
+
+d w.r.t. S d_0 is finite. (See \[4\]*Appendix for definitions; this means that the inclusion from the Hilbert space associated to S V

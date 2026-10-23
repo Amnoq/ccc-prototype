@@ -1,0 +1,393 @@
+satisfies the oper condition everywhere). We expect that for a generic local system (F, \nabla) all of the resulting D′
+
+### −h∨ -modules on BunG
+
+are isomorphic to each other, but this has not been proved so far.
+
+9.7. Ramification and parabolic structures. Up to now we have exclusively considered Hecke eigensheaves on BunG with the eigenvalues being unramified LG-local
+
+systems
+
+on X. One may wonder whether the conformal field theory approach that we have used to construct the Hecke eigensheaves might be pushed further to help us
+
+understand what the geometric Langlands correspondence should look like for LG-local systems that are ramified at finitely many points of X. This is indeed the
+
+case as we will now explain, following the ideas of \[44\]. Let us first revisit the classical setting of the Langlands correspondence. Recall that a
+
+representation πx of G(Fx) is called unramified if it contains a vector invariant under the subgroup G(Ox). The spherical Hecke algebra H(G(Fx),G(Ox)) acts on
+
+the space of G(Ox)-invariant vectors in πx. The important fact is that H(G(Fx),G(Ox)) is a commutative algebra. Therefore its irreducible representations are
+
+one-dimensional. That is why
+
+an irreducible unramified representation has a one-dimensional space of G(Ox)-invariants which affords an irreducible representation of H(G(Fx),G(Ox)), or
+
+equivalently, a homomorphism H(G(Fx),G(Ox)) → C. Such homomorphisms are referred to as characters
+
+of H(G(Fx),G(Ox)). According to Theorem_5, these characters are parameterized by semi-simple conjugacy classes in LG. As the result, we obtain the Satake
+
+correspondence which sets up a bijection between irreducible unramified representations of G(Fx) and semi-simple conjugacy classes in LG for each x ∈ X. Now,
+
+given a collection (γx)x∈X of semi-simple conjugacy classes in LG, we obtain a collection of irreducible unramified representations πx of G(Fx) for all x ∈ X.
+
+Taking their tensor product, we obtain an irreducible unramified representation π = N′ x∈X πx
+
+of the ad\`elic group G(A). We then ask whether this representation is automorphic, i.e., whether it occurs in the appropriate space of functions on the
+
+quotient G(F)\\G(A) (on which G(A) acts from the right). The Langlands conjecture predicts (roughly) that this happens when the conjugacy classes γx are the
+
+images of the Frobenius conjugacy classes Frx in the Galois group Gal(F/F), under an unramified homomorphism Gal(F/F) → LG.
+
+\[
+
+Suppose that this is the case. Then, according to the Langlands conjecture, \pi is realized in the space of functions on G(F)\\G(A). But \pi contains a unique,
+
+up to a scalar, spherical vector that is invariant under G(O) = Q
+
+### x∈X G(Ox). The spherical vector gives rise to a
+
+function fπ on
+
+#### (9.21)  G(F)\\G(A)/G(O),
+
+\[
+
+which is a Hecke eigenfunction. This function contains all information about \pi and so we replace \pi by f\pi . We then realize that \tag{9.21}
+
+\]
+
+is the set of points of BunG. This allows us
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 117
+
+to reformulate the Langlands correspondence geometrically by replacing fπ with a Hecke eigensheaf on BunG.
+
+This is what happens for the unramified homomorphisms σ : Gal(F/F) → LG. Now suppose that we are given a homomorphism σ that is ramified at finitely many points
+
+y1,... ,yn of X. Suppose that G = GLn and σ is irreducible, in which case the Langlands correspondence is proved for unramified as well as ramified Galois
+
+representations (see Theorem_1). Then to such σ we can also attach an automorphic representation N′ x∈X πx, where πx is still unramified for x ∈ X\\{y1,...
+
+,yn}, but is not unramified at y1,... ,yn, i.e., the space of G(Oyi )-invariant vectors in πyi is zero. What is this πyi ?
+
+The equivalence class of each πx is determined by the local Langlands correspondence, which, roughly speaking, relates equivalence classes of n-dimensional
+
+representations of the local Galois group Gal(Fx/Fx) and equivalence classes of irreducible admissible representations of G(Fx).85 The point is that the local
+
+Galois group Gal(Fx/Fx) may be realized
+
+\[
+
+as a subgroup of the global one Gal(F/F), up to conjugation, and so a representation \sigma of Gal(F/F) gives rise to an equivalence class of representations
+
+\sigma x of Gal(Fx/Fx). To this \sigma x the local Langlands correspondence attaches an admissible irreducible representation \pi x of G(Fx). Schematically,
+
+this is represented by the following diagram: global ←\to \pi = O ′\pi x
+
+### σ
+
+### x∈X
+
+local ←→ πx.
+
+### σx
+
+So πyi is a bona fide irreducible representation of G(Fyi ) attached to σyi
+
+### σyi
+
+in ramified too, that is to say it has no no-zero G(Oyi )-invariant vectors. Therefore our representation π does not have a spherical vector. Hence we cannot
+
+attach to π a function on G(F)\\G(A)/G(O) as we did before. What should we do? Suppose for simplicity that σ is ramified at a single point y ∈ X. The
+
+irreducible representation πy attached to y is ramified, but it is still admissible, in the sense that the subspace of K-invariants in πy is finite-dimensional
+
+for any open compact subgroup K. An example of such a subgroup is the maximal compact subgroup G(Oy), but by our
+
+### G(Oy)
+
+\[
+
+assumption \pi y = 0. Another example is the Iwahori subgroup Iy: the preimage of a Borel subgroup B \subset G in G(Oy) under the homomorphism G(Oy) \to G.
+
+Suppose that the subspace of invariant vectors under the Iwahori subgroup Iy in \pi y is non-zero. Such \pi y correspond to the so-called tamely ramified
+
+representations of the local Galois group
+
+\]
+
+### Iy
+
+y of Iy-invariant vectors in πy is necessarily finite-dimensional
+
+as πy is admissible. This space carries the action of the affine Hecke algebra H(G(Fy ),Iy) of Iy bi-invariant compactly supported functions on G(Fy), and
+
+because πy is irreducible,
+
+### Iy
+
+the H(G(Fy),Iy)-module π
+
+y is also irreducible.
+
+85this generalizes the Satake correspondence which deals with unramified Galois representations; these are parameterized by semi-simple conjugacy classes in LG
+
+= GLn and to each of them corresponds an unramified irreducible representation of G(Fx)
+
+### 118  EDWARD FRENKEL
+
+The problem is that H(G(Fy ),Iy) is non-commutative, and so its representations generically have dimension greater than 1.86
+
+### Iy
+
+If π is automorphic, then the finite-dimensional space π
+
+### y , tensored with the onedimensional space of Q
+
+### πx embeds into the space of functions
+
+### x6=y G(Ox)-invariants in N x6=y
+
+on the double quotient (9.22)  G(F)\\G(A)/Iy × Y G(Ox).
+
+### x6=y
+
+This space consists of eigenfunctions with respect to the (commutative) spherical Hecke algebras H(G(Fx),G(Ox)) for x_6= y (with eigenvalues determined by the
+
+Satake correspondence), and it carries an action of the (non-commutative) affine Hecke algebra H(G(Fy ),Iy). In other words, there is not a unique (up to a
+
+scalar) automorphic function associated to π, but there is a whole finite-dimensional vector space of such functions, and it is realized not on the double
+
+quotient (9.21), but on (9.22). Now let us see how this plays out in the geometric setting. For an unramified LGlocal system E on X, the idea is to replace a
+
+single cuspidal spherical function fπ on (9.21) corresponding to an unramified Galois representation σ by a single irreducible (on each component) perverse
+
+Hecke eigensheaf on BunG with eigenvalue E. Since fπ was unique up to a scalar, our expectation is that such Hecke eigensheaf is also unique, up to isomorphism.
+
+Thus, we expect that the category of Hecke eigensheaves whose eigenvalue is an irreducible unramified local system which admits no automorphisms is equivalent
+
+to the category of vector spaces. We are ready to consider the ramified case in the geometric setting. The analogue of a Galois representation tamely ramified
+
+at a point y ∈ X in the context of complex curves is a local system E = (F, \nabla), where F a LG-bundle F on X with a connection \nabla that has regular
+
+singularity at y and unipotent monodromy around y. What should the geometric Langlands correspondence attach to such E? It is clear that we need to find a
+
+replacement for the finite-dimensional representation of H(G(Fy ),Iy) realized in the space of functions on (9.22). While (9.21) is the set of points of the
+
+moduli stack BunG of G-bundles, the double quotient (9.22) is the set of points of the moduli space BunG,y of G-bundles with the parabolic structure at y; this
+
+is a reduction of the fiber of a G-bundle at y to B ⊂ G.
+
+Therefore a proper replacement is the category of Hecke eigensheaves on BunG,y. Since our LG-local system E is now ramified at the point y, the definition of
+
+the Hecke functors and Hecke property given in Sect. 6.1 should be modified to account for this fact. Namely, the Hecke functors are now defined using the Hecke
+
+correspondences over X\\y (and not over X as before), and the Hecke condition (6.2) now involves not E, but E\|X\\y which is unramified.
+
+We expect that there are as many irreducible Hecke eigensheaves on BunG,y with the eigenvalue E\|X\\y as the dimension of the corresponding representation of
+
+H(G(Fy ),Iy) arising in the classical context. So we no longer speak of a particular irreducible Hecke eigensheaf (as we did in the unramified case), but of a
+
+category AutE of such sheaves.
+
+86in the case of GLn, for any irreducible smooth representation πy of GLn(Fy) there exists a particular
+
+K
+
+\[
+
+open compact subgroup K such that dim \pi_i = 1, but the significance of this fact for the geometric theory is presently unknown
+
+\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 119
+
+This category may be viewed as a “categorification” of the corresponding representation of the affine Hecke algebra H(G(Fy),Iy).
+
+In fact, just like the spherical Hecke algebra, the affine Hecke algebra has a categorical version (discussed in Sect. 5.4), namely, the derived category of
+
+Iy-equivariant perverse sheaves (or D-modules) on the affine flag variety G(Fy)/Iy. This category, which we denote by PIy
+
+, is equipped with a convolution tensor product which is a categorical version
+
+of the convolution product of Iy bi-invariant functions on G(Fy). However, in contrast to the categorification PG(O) of the spherical Hecke algebra (see Sect.
+
+5.4), this convolution
+
+(PIy ). Nevertheless, this category “acts”, in the appropriate sense, on the derived category of the
+
+product is not exact, so we are forced to work with the derived category Db
+
+category of Hecke eigensheaves AutE. It is this “action” that replaces the action of the affine Hecke algebra on the corresponding space of functions on (9.22).
+
+Finally, we want to mention one special case when the representation of the affine Hecke
+
+### Iy
+
+algebra on π y is one-dimensional. In the geometric setting this corresponds to connections that have regular singularity at y with the monodromy being in the
+
+regular unipotent conjugacy class in LG. According to \[44\], we expect that there is a unique irreducible Hecke eigensheaf whose eigenvalue is a local system
+
+of this type.87 For G = GLn these eigensheaves have been constructed in \[117, 118\].
+
+9.8. Hecke eigensheaves for ramified local systems. All this fits very nicely in the formalism of localization functors at the critical level. We explain this
+
+briefly following \[44\] where we refer the reader for more details.
+
+Let us revisit once again how it worked in the unramified case. Suppose first that E is an unramified LG-local system that admits the structure of a Lg-oper χ
+
+on X without singularities. Let χy be the restriction of this oper to the disc Dy. According to the isomorphism (9.5), we may view χy as a character of z(g)y
+
+and hence of the center Z(bgy) of the completed enveloping algebra of bgy a the critical level. Let CG(Oy),χy be the category of (bgy,G(Oy))-modules such that
+
+Z(bgy) acts according to the character χy. Then the localization functor \Delta y may be viewed as a functor from the category CG(Oy),χy to the category of
+
+Hecke eigensheaves on BunG with the eigenvalue E.
+
+In fact, it follows from the results of \[112\] that CG(Oy),χy is equivalent to the category of vector spaces. It has a unique up to isomorphism irreducible
+
+object, namely, the bgy-module
+
+### Vχy
+
+\[
+
+, and all other objects are isomorphic to the direct sum of copies of V\chi y . The localization functor sends this module to the Hecke eigensheaf \Delta
+
+y(V\chi y), discussed extensively above. Moreover, we expect that \Delta y sets up an equivalence between the categories CG(Oy),\chi y and AutE. More generally,
+
+in Sect. 9.6 we discussed the case when E is unramified and is represented by a Lg-oper \chi with degenerations of types \lambda ˇ i at points xi,i = 1,...,n,
+
+but with
+
+trivial monodromy around those points. Then we also have a localization functor from the cartesian product of the categories CG(Oxi to the category AutE of
+
+Hecke eigensheaves
+
+### ),χxi
+
+on BunG with eigenvalue E. In this case we expect (although this has not been proved yet) that CG(Oxi is again equivalent to the category of vector spaces, with
+
+the unique
+
+### ),χxi
+
+87however, we expect that this eigensheaf has non-trivial self-extensions, so the corresponding category is non-trivial
+
+### 120  EDWARD FRENKEL
+
+up to isomorphism irreducible object being the bgxi -module Lλˇ
+
+i,χxi . We also expect that
+
+the localization functor \Delta{x1,...,xn} sets up an equivalence between the cartesian product of the categories CG(Oxi ),χxi and AutE when E is generic. Now
+
+we consider the Iwahori case. Then instead of unramified LG-local systems on X we consider pairs (F, \nabla), where F is a LG-bundle and \nabla is a connection
+
+with regular singularity at y ∈ X and unipotent monodromy around y. Suppose that this local system may be represented by a Lg-oper χ on X\\y whose restriction
+
+χy to the punctured disc D×
+
+y
+
+belongs to the space nOpLg (Dy) of nilpotent Lg-opers introduced in \[44\].
+
+The moduli space BunG,y has a realization utilizing only the point y:
+
+BunG,y = Gout\\G(Fy)/Iy.
+
+Therefore the formalism developed in Sect. 7.5 may be applied and it gives us a localization
+
+### Iy
+
+functor \Delta Iy from the category (bgy,Iy)-modules of critical level to the category of D
+
+### −h∨ - ### Iy
+
+modules, where D
+
+−h∨ is the sheaf of differential operators acting on the appropriate critical
+
+line bundle on BunG,y. 88 Here, as before, by a (bgy,Iy)-module we understand a bgy-module on which the action of the Iwahori Lie algebra exponentiates to the
+
+action of the Iwahori group. For instance, any bgy-module generated by a highest weight vector corresponding to an integral weight (not necessarily dominant),
+
+such as a Verma module, is a (bgy,Iy)- module. Thus, we see that the category of (bgy,Iy)-modules is much larger than that of (bgy,G(Oy))-modules.
+
+\[
+
+Let CIy,\chi y be the category (bgy,Iy)-modules on which the center Z(bgy) acts according to the character \chi y \in nOpLg (Dy) introduced above.89 One shows,
+
+in the same way as in the
+
+### Iy
+
+unramified case, that for any object M of this category the corresponding D
+
+### −h∨ -module
+
+on BunG,y is a Hecke eigensheaf with eigenvalue E. Thus, we obtain a functor from CIy,χy to AutE, and we expect that it is an equivalence of categories (see
+
+\[44\]).
+
+This construction may be generalized to allow singularities of this type at finitely many points y1,... ,yn. The corresponding Hecke eigensheaves are then
+
+D-modules on the moduli space of G-bundles on X with parabolic structures at y1,... ,yn. Non-trivial examples
+
+of these Hecke eigensheaves arise already in genus zero. These sheaves were constructed explicitly in \[28\] (see also \[115, 116\]), and they are closely
+
+related to the Gaudin integrable system (see \[119\] for a similar analysis in genus one).
+
+In the language of conformal field theory this construction may be summarized as follows: we realize Hecke eigensheaves corresponding to local systems with
+
+ramification by considering chiral correlation functions at the critical level with the insertion at the ramification points of “vertex operators” corresponding
+
+to some representations of bg. The type of ramification has to do with the type of highest weight condition that these vertex operators satisfy: no
+
+ramification means that they are annihilated by g[\[t]\] (or, at least, g[\[t]\] acts on them through a finite-dimensional representation), “tame” ramification,
+
+in the sense described above, means that they are highest weight vectors of bgy in the usual
+
+88actually, there are now many such line bundles – they are parameterized by integral weights of G, but since at the end of the day we are going to “untwist”
+
+our D-modules anyway, we will ignore this issue 89recall that Z(bgy) is isomorphic to Fun OpLg (D× (Dy) ⊂ OpLg (D×
+
+y), so any \chi y \in nOpLg y) determines
+
+a character of Z(bgy)
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 121
+
+sense, and so on. The idea of inserting vertex operators at the points of ramification of our local system is of course very natural from the point of view of
+
+CFT. For local systems with irregular singularities we should presumably insert vertex operators corresponding to even more complicated representations of bgy.
+
+What can we learn from this story?
+
+The first lesson is that in the context of general local systems the geometric Langlands correspondence is inherently categorical: we are dealing not with
+
+individual Hecke
+
+eigensheaves, but with categories of Hecke eigensheaves on moduli spaces of G-bundles on X with parabolic structures (or more general “level structures”). The
+
+second lesson is that the emphasis now shifts to the study of local categories of bgy-modules, such as the
+
+categories CG(Oy),χy and CIy,χy
+
+. The localization functor gives us a direct link between
+
+these local categories and the global categories of Hecke eigensheaves, and we can infer a lot of information about the global categories by studying the local
+
+ones. This is a new phenomenon which does not have an analogue in the classical Langlands correspondence.
+
+This point of view actually changes our whole perspective on representation theory of the affine Kac-Moody algebra bg. Initially, it would be quite tempting for
+
+us to believe that bg should be viewed as a kind of a replacement for the local group G(F), where F = Fq((t)), in the sense that in the geometric situation
+
+representations of G(F) should be replaced by representations of bg. Then the tensor product of representations πx of G(Fx) over x ∈ X (or a subset of X) should
+
+be replaced by the tensor product of representations of bgx, and so on. But now we see that a single representation of G(F) should be replaced in the geometric
+
+context by a whole category of representations of bg. So a particular representation of bg, such as a module Vχ considered above, which is an object of this
+
+category, corresponds not to a representation of G(F), but to a vector in such a representation. For instance, Vχ corresponds to the spherical vector as we have

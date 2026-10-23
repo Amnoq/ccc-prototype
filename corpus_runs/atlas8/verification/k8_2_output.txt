@@ -1,0 +1,5 @@
+K8-2a: deformed-sieve survivors == twin lowers
+  x=20000: survivors=342, brute-force twin lowers=342, match=True
+K8-2b: {0,2,4} dies — only (3,5,7)
+  prime triples (n,n+2,n+4) below 1e5: [(3, 5, 7)]
+VERDICT: verified

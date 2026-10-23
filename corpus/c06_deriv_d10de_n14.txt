@@ -1,0 +1,160 @@
+## D10d — function-field / intersection-pairing template (2026-09-30)
+
+**Status: computationally verified (curve computations); mechanism is
+cited classical theorem (Hasse/Weil); template+ledger derived.**
+Script: `function_field.py`.
+
+**Part A -- the explicit formula is finite and exact.** E: y^2=x^3+1/F_5:
+#E(F_5)=6, #E(F_25)=36, #E(F_125)=126 -- each equals p^n+1-pi^n-pibar^n
+*exactly* (|pi|=sqrt(5) verified to 6 digits). E: y^2=x^3+1/F_7:
+#E(F_7)=12, #E(F_49)=48, exact. Zeta numerator roots |t|=1/sqrt(p)
+(RH for the curve) verified. Contrast 10a-step3: the number-field
+explicit formula is infinite and needs windowing (Pareto frontier
+n ~ e^{7.4/w}); the function-field formula needs no window -- the prime
+side is a *finite* point count.
+
+**Part B -- RH as discriminant of a counting-born PSD form.**
+Frobenius eigenvalues pi,pibar=(a_p +/- sqrt(a_p^2-4p))/2. The degree
+quadratic form Q(m,n) = deg(m*phi+n) = p m^2 + a_p m n + n^2 is PSD
+*because degree counts kernel points* (deg >= 0). PSD <=> discriminant
+a_p^2-4p <= 0 <=> |a_p| <= 2 sqrt(p) <=> |pi|=sqrt(p) (Hasse = RH).
+Verified: discriminants -20 (F_5), -12 (F_7); Q >= 0 on grid.
+Counting anchors exhibited: deg(1-phi) = #E(F_p) = 6, 12 (counted);
+deg(1+phi) = #twist(F_p) = 6, 4 (counted) = p+1+a_p. The positivity
+source is *counting* -- the same kind as Lambda >= 0 (D7/D9).
+
+**Part C -- template: anatomy of an independent Weil-positivity source.**
+(i) Geometric space with torus: the Jacobian J(C), a complex torus.
+(ii) Correspondence/operator: Frobenius, eigenvalues pi_i.
+(iii) Counting-born PSD form: deg >= 0 -> discriminant condition.
+(iv) Zeros as eigenvalues; RH as the discriminant inequality.
+(v) Finite exact explicit formula (no truncation).
+
+**Ledger for the number-field / face-complex analogue.**
+HAVE: counting positivity (Lambda >= 0, D7/D9 -- same kind as deg>=0);
+finite PD quadratic forms on faces (10c); an explicit formula (10a --
+but infinite, windowed). MISSING: a space playing the Jacobian's role
+(Delta_infty is contractible, D4 -- topologically trivial, so the
+object must live in weights/operators, not the bare space); a
+Frobenius-like operator with the zeros as eigenvalues; an intersection
+pairing tying zeros to the counting positivity. The torus in the RH
+story is the Jacobian -- this answers the toroidal question: plane for
+zeta's domain, torus for the geometric explainer.
+
+**Structural verdict (derived).** The template locates the gap
+precisely: the missing object is *operator-theoretic* (a "Frobenius for
+Delta"), not another positivity inequality. 10a-10c assembled
+positivity inputs (Weil-type smoothed, Selberg-type optimized,
+primitive counting); 10d shows what would have to *use* them: a space +
+operator + counting-PSD form with zeros as eigenvalues. This reframes
+the hunt and closes the systematic pass: 10e audits the supporting
+analytic tools.
+
+## D10e — supporting tools: mean-value, large sieve, uncertainty (2026-09-30)
+
+**Status: computationally verified (1-3); zero-density role audited.**
+Script: `supporting_tools.py`. P(t) = sum_{n<=N0} a_n n^{it},
+a_n = Lambda(n)/sqrt(n), N0 = 50000 (5217 prime powers, S2 = 56.99).
+
+**1. Montgomery-Vaughan mean value -- verified on our polynomial.**
+(1/2H) int_{T0-H}^{T0+H} |P|^2 / S2 at T0 = 20000:
+H=200: 0.9948; H=1000: 0.9789; H=5000: 0.9596; H=20000: 1.0073.
+Converges to 1 -- the mean-square amplifier is real on the detector's
+prime-side polynomial. This is what converts pointwise window counts
+into L^2 bounds.
+
+**2. Large sieve -- verified.** sum_{r<=R}|P(t0+r delta)|^2 <= (N0+delta^-1)S2:
+delta=1: ratio 0.0041; delta=0.5: ratio 0.0080. Holds with headroom
+(the bound is crude for this polynomial, as expected).
+
+**3. Uncertainty principle -- quantified.** Window width w needs prime
+data n = e^{7.433/w} (10a-step3 envelope): w=2 -> 41; w=1 -> 1.7e3;
+w=0.5 -> 2.9e6; w=0.25 -> 8.2e12; w=0.1 -> 1.9e32. At T0=100 (mean zero
+spacing 2.27): w=1 resolves 0.44 spacings, w=0.5 resolves 0.22 -- but
+isolating single zeros cleanly (w=0.25) needs 8e12 primes: infeasible.
+This is the fundamental wall of the prime-side detector, and the sharp
+contrast with the function-field finite exact formula (10d), which
+needs no window at all.
+
+**Zero-density audit (role, not a new estimate).** Our detector bound
+N_+([T0-w,T0+w]) <= e^{1/2} W(h) used RH to interpret windows as
+critical-line zero counts. Unconditionally, off-line zeros pollute
+windows; zero-density estimates N(sigma,T) bound how many can stray --
+they are the tool that would make the detector program unconditional.
+Classical estimates cited, not re-derived; the plug-in point is precise.
+
+**Structural verdict (derived).** 10e's tools are analytic *amplifiers*,
+not independent positivity sources: they strengthen what the bridge
+says (mean-square control, unconditional leakage bounds) but add no new
+positivity and change nothing in the 10d ledger. The systematic bridge
+pass 10a-10e is complete.
+
+## Node 14 — face-weights: obstruction, identity, differentiated residues
+(2026-09-30; D4's positive-region half. Status: exact theorem +
+exact obstruction + refined construction.)
+
+**Setup.** Face-weights w(S) = (-1)^{|S|+1} log(prod S)/(prod S) on
+subsets S of primes <= z (D4). Finite-z total W(z) = sum_{S} w(S).
+
+**Obstruction (exact).** No *ordinary* positive geometry (AHBL sense:
+canonical form with logarithmic poles, residues +-1 on boundary
+strata, +-1 at 0-dimensional strata) can carry w(S) as its stratum
+residues. Proof: residues of logarithmic forms are quantized; a
+0-dimensional stratum residue is +-1 or 0. But |w({2})| = (log 2)/2
+= 0.3466 not in {0,1}. The *signs* (-1)^{|S|+1} are compatible with
+residue alternation; the *magnitudes* log(prod S)/(prod S) are
+impossible. So D4's "no positive region found" is explained, not
+merely observed: the literal question has a negative answer, by
+theorem. (Loophole named: *weighted* positive geometries allow
+general residues; the construction below is the natural such
+weighting, so the obstruction is really "the ordinary notion is
+insufficient; the deformed notion is the home.")
+
+**Identity (exact theorem).** For F_z(u) = prod_{p<=z}(1 - p^{-u})
+(entire in u, finite product):
+  d/du F_z(u) |_{u=1} = sum_{S subset P_z} w(S)
+                     = delta(z) * sum_{p<=z} (log p)/(p-1),
+where delta(z) = prod_{p<=z}(1-1/p).
+*Proof 1 (subset expansion):* F_z(u) = sum_S (-1)^{|S|} (prod S)^{-u};
+d/du = sum_S (-1)^{|S|}(-log prod S)(prod S)^{-u}; at u=1 this is
+sum_S (-1)^{|S|+1} log(prod S)/(prod S) = sum_S w(S). Then
+sum_S w(S) = sum_j (log p_j/p_j) prod_{i!=j}(1-1/p_i)
+= delta(z) sum_j (log p_j)/(p_j-1), by writing
+(log prod S)/(prod S) = sum_{j in S} (log p_j/p_j)
+prod_{i in S, i!=j}(1/p_i) and summing over S containing j.
+*Proof 2 (calculus):* F_z'/F_z = sum_p (p^{-u} log p)/(1-p^{-u)};
+at u=1: F_z'(1) = F_z(1) sum_p (log p)/(p-1) = delta(z) sum_p
+(log p)/(p-1). Verified numerically to 10 digits at
+z = 2..29 (face_weights.py); the identity computes the 2^{pi(z)}
+subset sum in O(pi(z)) operations.
+*Asymptotic:* W(z) -> e^{-gamma} = 0.56146 as z->infty, since
+delta(z) ~ e^{-gamma}/log z and sum_{p<=z}(log p)/(p-1) ~ log z
+(Mertens). Numerics: 0.4780 (z=29), 0.5153 (z=10^3),
+0.5333 (z=10^5), climbing to 0.5615. (Distinct from D4's
+sum_{prod S <= X} w(S) -> 1: different regularization -- all
+subsets of P_z here vs product-bounded there.)
+
+**K-theoretic home.** In H^*_{S^1}(pt; R) = R[u], let
+E_z = (+)L_p over p<=z with equivariant Chern roots -u*log p
+(real coefficients legitimate). Then
+ch(lambda_{-1}(E_z)) = prod_p (1 - e^{u*log p *(-1)})
+= prod_p (1 - p^{-u}) = F_z(u),
+the equivariant K-theoretic Euler class. The face-weights are
+F_z'(1): the *u-derivative at u=1* of the equivariant Euler class
+-- differentiated residues. Only the primes are input (as Chern
+roots); the subset combinatorics, the signs, and the log
+magnitudes are all computed.
+
+**Refined positive region.** Positive region: the simplex
+Delta^{m-1} (m = pi(z)), the face complex's geometric home, with
+its ordinary canonical form Omega (residues +-1). *Stringy*
+deformation: I(u) = int_{Delta} (prod_p x_p^{-u log p}) Omega
+(Dirichlet integral = [prod_p Gamma(-u log p)...] ratio; exponents
+are the prime logs). Differentiating at u=1 produces exactly
+sum_S w(S) as generalized residues. This is Figueiredo's
+*deformations* move (D6) as the mechanism: her deformations are
+what produce non-+-1 generalized residues; here the deformation
+parameter is u and the exponents are the prime logs. The bare
+simplex is contractible (D4); the arithmetic lives in the
+deformation, i.e., in the weights -- exactly D4's conclusion,
+now with the obstruction explained and the refined object named.

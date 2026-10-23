@@ -1,0 +1,29 @@
+ASSISTANT: The scale test is done, and the answer is clean: **the ratio holds.**
+
+Across B=174 to B=1030 concepts (6× scale-up), edge densities 0.5 to 2.0, the steady-state ratio sits at **~2.2×** — flat. No collapse, no unbounded growth. The toy-scale 1.27× turned out to be JSON serialization pessimism, not a codec ceiling: a subject-grouped minimal injection (the way the prose itself groups by subject) nearly erases the density penalty and converges to wire size.
+
+Two genuine engineering finds along the way. First, count-based line chunking breaks past B~300 — all the heavy strand prime-products cluster at the message head and overflow the 999-triple wire header — so I added weight-balanced chunking (`encode_lines_balanced`), with order-independent reassembly verified at every scale. Second, injection syntax matters as much as the codec: the wire is already near the practical floor for anything a model can consume.
+
+Honest caveats: synthetic graphs, template prose (terse and fair, but not a real summarizer), and reasoning sufficiency at scale is still untested — that needs the naive-model-plus-harness trial. Cold start loses until ~2–3 sessions amortize the legend.
+
+So the ledger now reads: the idea survives every filter you've thrown at it — parser implausibility, expressiveness gaps, entropy stages, scale economics — each time narrower and more honest. ~2.2× steady-state at equal information is the durable number. Whether 2.2× is *worth it* depends on what a harness-based deployment costs to build, which is a product question now, not a codec question.
+
+USER: Can we answer that question?
+
+ASSISTANT: Yes — with a split. The build cost and the dollar value are computable; market demand isn't. And the computation gives a sharper answer than "it's a product question."
+
+**What the harness actually is.** The codec core already exists. The build is: deterministic parser/validator/injector (telomere scan → checksums → gamma decode → factorization — needs Pollard Rho, not trial division, at scale → registry resolution → grouped injection), plus registry sync with versioning/fingerprinting, entity resolution, and garbage collection. Call it 3–6 weeks for a solid prototype, 6–12 months to production. That's the easy part.
+
+**The dollar math kills the cost story.** Current prices (Sept 2026): Sonnet 5 is $3/MTok input, $0.30 cached; GPT-6 Sol $2 / $0.20 cached, with a 2× multiplier over 272K input tokens.
+
+Take a realistic long-horizon agent: 200K tokens of accumulated context, 50 sessions. The honest baseline isn't uncached input — it's prompt caching, which everyone uses: 200K cached tokens cost $0.06/session on Sonnet 5. CCC's 2.2× shrinks that to $0.027. You save **three cents a session, $1.65 over fifty**. The cost argument died the day caching shipped — caching already captures ~10× on exactly the repeated-context workload CCC targets.
+
+**But there's a second axis where caching can't compete: window capacity.** Cached tokens still occupy the context window. When an agent's structured memory needs exceed the window, no discount helps — the alternatives are lossy summarization or RAG. That's CCC's actual niche: **2.2× more effective structured memory in-window, lossless and checksum-verified.** Two concrete levers: staying under OpenAI's 272K 2× price cliff (a 300K context at 2× rates vs 136K compressed is real money), and deferring the point where you must go lossy.
+
+**The gating risk isn't the codec — it's the extractor.** Every measurement so far hand-builds the structured export. A real deployment needs text→structure extraction (preserving exactly the labels, types, and statuses the probes need), and you're spending tokens to save tokens — the extraction cost has to amortize. Until that's solved reliably, 2.2× is a codec number, not a product number.
+
+**Verdict:** as a pure cost play, no — don't build it. As verifiable structured memory for long-horizon agents (density + integrity + determinism, where the 2.2× is a property of the memory system rather than the pitch), it's a narrow but real opening. The alternative worth weighing: the codec itself is a publishable research contribution regardless of product economics.
+
+If you want, I can write this up as a one-page decision brief — build scope, the caching comparison table, the capacity math, and the extractor as the explicit gating experiment.
+
+USER: Okay, let's take care of that and then explore the memory system.

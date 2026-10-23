@@ -1,0 +1,134 @@
+In 1937 Cramér decided to try to guess at the true order of max (pn+1 − pn )
+                                                                               pn ≤x
+using a sophisticated heuristic argument based on Gauss’s observations above, but
+quite unlike anything seen before in analytic number theory. In Cramér’s words:
+         “In investigations concerning the asymptotic properties of arithmetic
+      functions, it is often possible to make an interesting heuristic use of
+      probability arguments. If, e.g., we are interested in the distribution of
+      a given sequence S of integers, we then consider S as a member of an
+      infinite class C of sequences, which may be concretely interpreted as
+      the possible realizations of some game of chance. It is then in many
+      cases possible to prove that, with a probability = 1, a certain relation
+      R holds in C, i.e. that in a definite mathematical sense “almost all”
+      sequences of C satisfy R. Of course we cannot in general conclude that
+      R holds for the particular sequence S, but results suggested in this way
+      may sometimes afterwards be rigorously proved by other methods.
+            With respect to the ordinary prime numbers, it is well known that,
+      roughly speaking, we may say that the chance that a given integer n
+      should be a prime is approximately log1 n . This suggests that by consider-
+      ing the following series of independent trials we should obtain sequences
+      of integers presenting a certain analogy with the sequence of ordinary
+      prime numbers pn .
+   15 In 1871 Sylvester had conjectured a similar asymptotic formula but with a slightly different
+
+constant. Hardy and Littlewood contrast their conjecture with Sylvester’s in the same way that
+we have contrasted (6) with (2). They explained such discrepancies between different heuristic
+models by stating, “Probability is not a notion of pure mathematics, but of philosophy or physics.”
+                       THE DISTRIBUTION OF PRIME NUMBERS                                   9
+
+           Let U1 , U2 , U3 , . . . be an infinite series of urns containing black and
+     white balls, the chance of drawing a white ball from Un being log1 n for
+     n > 2, while the composition of U1 and U2 may be arbitrarily chosen.
+     We now assume that one ball is drawn from each urn, so that an infinite
+     series of alternately black and white balls is obtained. If Pn denotes the
+     number of the urn from which the nth white ball in the series was drawn,
+     the numbers P1 , P2 , . . . will form an increasing sequence of integers, and
+     we shall consider the class C of all possible sequences (Pn ). Obviously
+     the sequence S of ordinary prime numbers (pn ) belongs to this class.
+           We shall denote by Π(x) the number of those Pn which are ≤ x,
+     thus forming an analogy to the ordinary notation π(x) for the number
+     of primes pn ≤ x. Then Π(x) is a random variable, and if we denote by
+     zn a variable taking the value 1 if the nth urn gives a white ball and
+     the value 0 in the opposite case, we have
+                                                  X
+                                        Π(x) =        zn ,
+                                              n≤x
+
+     and it is easily seen that the mean value of Π(x) is, for large values
+     of x, asymptotically equal to Li(x). It is, however, possible to obtain
+     much more precise information concerning the behaviour of Π(x) for
+     large values of x. As a matter of fact, it may be shown that, with a
+     probability = 1, the relation
+                                     |Π(x) − Li(x)|
+                             lim sup √     q             =1
+                               x→∞     2x · logloglogx x
+
+     is satisfied. With respect to the corresponding difference π(x) − Li(x) in
+     the prime number problem, it is known that, if the Riemann hypothesis
+     is assumed,√the true maximum order of this difference lies between the
+                          √
+     functions logxx and x · log x. It is interesting to find that the order of
+     the function occurring in the denominator in the above equation falls
+     inside this interval of indetermination.
+           We shall now consider the order of magnitude of the difference
+     Pn+1 − Pn . Let c > 0 be a given constant and let Em denote the event
+     that black balls are obtained from all urns Um+v with 1 ≤ v ≤ c(log m)2 .
+     Then it is seen that the following two events have the same probability:
+     a) The inequality
+                                Pn+1 − Pn > c(log Pn )2                                  (*)
+      is satisfied for an infinity of values of n, and
+         b) An infinite number of the events Em are realized.”
+     Cramér next proves that the probability of the event Em occurring is  m−c .
+Citing Cantelli he continues,
+         “Thus the probability of an infinite number of solutions of the in-
+      equality (*) is equal to zero if c > 1 and to one if c < 1. Combining
+      these two results, we obtain the following theorem: With a probability
+      = 1, the relation
+                                          Pn+1 − Pn
+                                 lim sup              =1
+                                   n→∞     (log Pn )2
+10                              ANDREW GRANVILLE
+
+      is satisfied. — Obviously we may take this as a suggestion that, for the
+      particular sequence of ordinary prime numbers pn , some similar relation
+      may hold.”
+   So what Cramér seems to be suggesting, on probabilistic grounds, is that the
+largest gap between consecutive primes ≤ x is ∼ log2 x; more precisely,
+                             max (pn+1 − pn ) ∼ log2 x.                         (14)
+                             pn ≤x
+
+This statement (or the weaker O(log2 x)) is known as ‘Cramér’s Conjecture.’ Shanks
+reformulated this statement to suggest that the first occurence√
+                                                                  of a gap between
+consecutive primes of size > g would occur with pn = e{1+o(1)} g . Computations of
+gaps between consecutive primes indicate that Cramér may well have been correct:
+
+                    pn               pn+1 − pn     (pn+1 − pn )/ log2 pn
+                   31397                72                .6715
+                  370261               112                .6812
+                  2010733              148                .7025
+                 20831323              210                .7394
+                25056082087            456                .7953
+               2614941710599           652                .7975
+              19581334192423           778                .8177
+
+             Record-breaking gaps between primes, up to 1014
+
+   Gauss’s assertion is really about the number of primes in a short interval near
+to a given value of x: that is
+                                   π(x + y) − π(x)
+where y is ‘small’ compared to x.
+   Cramér’s analysis of Π(x) provided ‘expected results’ which are similar to those
+obtained from assuming the Riemann Hypothesis, for y about the same size as
+x. Since his predictions fit the facts so well for y around size x, we now consider
+analogous arguments for smaller values of y.
+   The independent random variables zj , with j close to x, satisfy
+                  Prob(zj = 1) ≈ p    and Prob(zj = 0) ≈ 1 − p
+for each j, where p = 1/ log x. It is well known that if, for such binomial distribu-
+tions, we let n → ∞ while keeping np fixed, then we get a Poisson distribution for
+the sum z1 + z2 + · · · + zn . Thus for any fixed λ > 0 and integer k ≥ 0, we have
+                                                                    λk
+           #{integers x ≤ X : Π(x + λ log x) − Π(x) = k} ∼ e−λ         X        (15)
+                                                                    k!
+as X → ∞, with probability 1 in C.
+   In 1966 Gallagher investigated some consequences of Hardy and Littlewood’s
+conjecture (13) about the distribution of prime k-tuplets. By assuming (13) holds
+in an appropriate ‘uniform’ way, Gallagher deduced that (15) holds for π, the
+sequence of primes, as well as ‘almost certainly’ for Π. Yet another success for
+predictions arising out of Cramér’s model, and especially interesting because the
+ideas motivating Hardy and Littlewood’s conjecture are quite different from the
+ideas motivating the Riemann Hypothesis.
+                             THE DISTRIBUTION OF PRIME NUMBERS                                      11
+
+   Thus, for y large ( x), Cramér’s model confirms what is known from assuming
+the Riemann Hypothesis, and for y small ( log x), it confirms what is known from

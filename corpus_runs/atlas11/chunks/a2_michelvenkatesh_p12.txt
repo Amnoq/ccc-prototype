@@ -1,0 +1,989 @@
+\pi generic (the Sobolev norms are relative to the canonical inner product.) Note that this is easy if \pi_2, \pi_3 are cuspidal; in that case it can be deduced
+
+directly from (S3b). In the remaining cases, by virtue of the bounds of §2.6.5, it suffices to check that for for \pi generic and any d > 0 Sd(\Pi \pi(\varphi
+
+2\varphi 3)) Sd 0(\varphi 2)Sd_0(\varphi 3) (4.25) for some d_0 depending on d only.
+
+\]
+
+For this we appeal to the prior formula. The bound on Bv is supplied
+
+\[
+
+by \tag{3.5.2}
+
+\]
+
+\[
+
+; we use also the fact that L(\pi \otimes \pi_2 \otimes \pi_3,1/2) is bounded polynomially in the C(\pi i) and that L(\pi i o \tag{1}
+
+\]
+
+\[
+
+, i = 1, 2. This yields a, Ad, 1) = C(\pi i)
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 83
+
+\[
+
+bound as in \tag{4.25}
+
+\]
+
+\[
+
+, but only for factorizable \varphi_2 = \otimes v\varphi 2,v, \varphi_3 = \otimes v\varphi 3,v, and
+
+\]
+
+where the bound on the right-hand side is instead
+
+C(π1) AC(π2) AY Sd(ϕ2,v)Sd(ϕ3,v).
+
+v
+
+\[
+
+We now apply \tag{S1d}
+
+\]
+
+\[
+
+(see also Remark_2.6.3), together with (2.18) to absorb C(\pi 1) A, C(\pi 2) A into the Sobolev norms. Since we did not prove (2.18),
+
+\]
+
+we draw attention to the fact that we do not need this last step in any
+
+AC(π2) A.
+
+application; it would be fine to retain the factor C(π1) 4.4.2. The Rankin-Selberg integral. — In this section, we shall prove
+
+the main results under the assumption that either \pi_1 or \pi_2 are cuspidal. In this case, we may proceed by the usual Rankin-Selberg method.
+
+We recall here the definition and basic properties of the Rankin/Selberg
+
+integral: let πi
+
+, i = 1, 2, 3 be generic automorphic representations of GL2(A)
+
+\[
+
+such that the product of their central characters \chi_1 \chi_2 \chi_3 is trivial. We assume that \pi_3 is Eisenstein, (say \pi_3 = \chi + for a pair of
+
+characters satisfying
+
+\]
+
+−
+
+3  χ 3
+
++
+
+\[
+
+\chi_3 .\chi - 3 = \chi_3) and \pi_1 is cuspidal.
+
+\]
+
+The (absolutely convergent) integral
+
+Z
+
+\[
+
+L(\varphi 1,\varphi_2,\varphi_3) := \varphi 1\varphi 2\varphi 3(g)dg, \varphi_i \in V\pi i
+
+\]
+
+, i = 1, . . . , 3,
+
+X
+
+\[
+
+defines a linear functional on the space of the representation \pi_1 \otimes \pi_2 \otimes \pi 3.If the \varphi_i are factorisable vectors, so that W\varphi i =
+
+Q v Wi,v and \varphi_3 = Eis \tag{f3}
+
+\]
+
+\[
+
+, with f_3 = \otimes vf3,v the Rankin-Selberg unfolding method yield the following factorization (if \chi +)
+
+\]
+
+−
+
+\[
+
+3 6= \chi_3
+
+\]
+
+Z LRS,v(W1,v, W2,v, f3,v)
+
+\[
+
+Y^* \tag{4.26}
+
+\]
+
+\[
+
+\varphi 1\varphi 2\varphi 3(g)dg =
+
+\]
+
+ζv(1)1/2
+
+X
+
+v
+
+where (see (3.28))
+
+LRS,v(W1,v, W2,v, f3,v) Z
+
+W1,vW2,vf3,v(g)dg;
+
+=
+
+ζv(1)1/2
+
+N(Fv)\\PGL2(Fv)
+
+and, for almost every v,
+
+LRS,v(W1,v, W2,v, f3,v) +
+
+\[
+
+3, \frac{1}{2}) W_1,v \tag{1}
+
+\]
+
+\[
+
+W_2,v \tag{1}
+
+\]
+
+\[
+
+f_3,v \tag{1}
+
+\]
+
+\[
+
+= \zeta v \tag{1}
+
+\]
+
+\[
+
+1/2Lv(\pi 1 \otimes \pi_2 \otimes \chi Lv(\chi + /\chi -
+
+\]
+
+3 3 , 1)  .  (4.27) Taking residue at the pole point χ + 1/2
+
+\[
+
+3 = \|.\|, \varphi_2 = \varphi_1, and using \tag{4.6}
+
+\]
+
+\[
+
+,
+
+\]
+
+yields:
+
+\[
+
+\xi F \tag{2}
+
+\]
+
+\[
+
+h\varphi 1, \varphi 1iX = 2(discF) \frac{1}{2} Y^* hW1,v, W_1,vi \xi^* \tag{1}
+
+\]
+
+\[
+
+F
+
+\]
+
+v
+
+#### 84 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+with hW1,v, W_1,vi = \zeta_k \tag{1}
+
+\]
+
+\[
+
+L(\pi,Ad,1)/\zeta k(2) for a.e. v. This proves (2.5) in the cuspidal case.
+
+\]
+
+From these remarks, (4.26), together with the definition of the canonical norm in §2.2.2, we deduce that:
+
+R 2
+
+\[
+
+1 \zeta v \tag{1}
+
+\]
+
+\[
+
+\|LRS,v(W_1,v,W_2,v,f_3,v)\| 2 \varphi 1\varphi 2\varphi 3(g)dg X (discF) \tag{4.28}
+
+\]
+
+\[
+
+= -1Y^* k\varphi 1k_2 2 4 \zeta v \tag{2}
+
+\]
+
+\[
+
+2 Q_2 cank\varphi 2k can_i=1hWi,v, Wi,vi
+
+\]
+
+v
+
+1 )
+
+with almost all factors equal to L(π1,v\otimes π2,v\otimes π3,v, 2
+
+ζ −1
+
+\[
+
+v \tag{1}
+
+\]
+
+\[
+
+Q_3 i=1 L(\pi i,Ad,1) . Note that, since \pi_3 is Eisenstein, the product would not converge without the inclusion of the \zeta v \tag{1}
+
+\]
+
+factor. Now (4.21) - in the case where one of \pi_1, \pi_2 is cuspidal, and \pi_3 is not isomorphic to_1 1 - follows, taking into account the equality between
+
+LRS and LW that was already established in §3.4.1, together with the relation (4.8) between Q hfv, fvi and the canonical norm on \pi_3.
+
+\]
+
+v
+
+4.4.3. A regularized triple product. — We discuss now the situation
+
+when all πi are Eisenstein, i.e.
+
+\[
+
++)), \varphi_i = Eis(fi), \pi_i = Eis(I(\chi i,\chi - i
+
+\]
+
+±
+
+we the χ are unitary. There are two equivalent definitions of the regularized
+
+i
+
+integral \pi_1 \otimes \pi_2 \otimes \pi_3 → C; we define them and prove their equivalence:
+
+Set
+
+Z reg
+
+\[
+
+La : \varphi_1 \otimes \varphi_2 \otimes \varphi_3 7\to \varphi_1 \varphi_2 \varphi_3, \tag{4.29}
+
+\]
+
+### XPGL2
+
+\[
+
+and set Lc : \pi_1 \times \pi_2 \times \pi_3 \to C to be the value at s = 0 of the meromorphic continuation (from <(s) 1) of the following expression:
+
+\]
+
+Z
+
+\[
+
+Ls : \varphi_1 \otimes \varphi_2 \otimes Eis \tag{f3}
+
+\]
+
+\[
+
+7\to ((\varphi 1\varphi 2)N - (\varphi 1)N (\varphi 2)N)f3(s)dg.
+
+\]
+
+### N(A)A(F)\\PGL2(AF )
+
+\[
+
+Note that the later expression is convergent for <s_1 due to the rapid decay of (\varphi 1\varphi 2)N - (\varphi 1)N (\varphi 2)N and unfolds to
+
+\]
+
+Z
+
+\[
+
+s_7\to W\varphi 1W\varphi 2 f_3(s)dg \tag{4.31}
+
+\]
+
+### N(A)A(A)\\PGL2(A)
+
+which extends to an holomorphic function in a neighborhood of s = 0.
+
+Lemma. — La = Lc. Moreover, if we write L for the common value of
+
+these expressions,
+
+\[
+
+\|L(\varphi 1,\varphi_2,\varphi_3)\| 2 1 \zeta v \tag{1}
+
+\]
+
+\[
+
+\|Lv(\varphi 1,v,\varphi 2,v,\varphi 3,v)\| 2 (discF) -1Y^* \tag{4.32}
+
+\]
+
+\[
+
+k\varphi 1k =
+
+\]
+
+2 2 2 8 ζv(2)3 Q3
+
+\[
+
+cank\varphi 2k cank\varphi 3k can_i=1h\varphi i,v, \varphi i,vi
+
+\]
+
+v
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 85
+
+In this way, we have established (4.21) in the remaining case also.
+
+Proof. — Considering the central characters χi
+
+, i = 1, 2, 3 fixed, the
+
++ ) i = 1, 2, 3 such that χ +
+
+pairs of characters (χ −
+
+\[
+
+i, \chi - i_i \chi_i = \chi_i will be referred
+
+\]
+
+as the parameters. The set of parameters has the structure of a 3-dimensional complex manifold with infinitely many connected components.
+
+The reasoning by which we derived (4.21) in the “at least one πi cuspidal” case may be applied to Lc, at least on an open set of parameters
+
+which intersects every connected component. By analytic continuation this
+
+2 is indeed given by (4.21) everywhere.
+
+shows that \|Lc\|
+
+To establish La = Lc, we consider the parameters in a given connected
+
+±
+
+component: in other words, assuming the characters χ
+
+i , i = 1, 2, 3 unitary,
+
+we consider any analytic deformation
+
+\[
+
+\varphi_1 \tag{s1}
+
+\]
+
+\[
+
+\otimes \varphi 2(s_2) \otimes \varphi 3(s_3) \in \pi 1(s_1) \otimes \pi 2(s_2) \otimes \pi 3(s_3) indexed by the complex parameters (s_1,s_2,s_3) \in C_3
+
+\]
+
+. Clearly, the integral
+
+(4.30) extends (via (4.31)) to an holomorphic function on an open subset
+
+(containing (0, 0, 0))
+
+of C3
+
+Z
+
+\[
+
+(s_1,s_2,s_3) 7\to ((\varphi 1 \tag{s1}
+
+\]
+
+\[
+
+\varphi 2(s_2))N - (\varphi 1(s_1))N (\varphi 2(s_2))N)f3(s_3)dg.
+
+\]
+
+### N(A)A(F)\\PGL2(AF )
+
+\[
+
+Let E(s_1,s_2) be the Eisenstein series formed out of the exponents of the product \Phi := \varphi_1 \tag{s1}
+
+\]
+
+\[
+
+.\varphi 2 \tag{s2}
+
+\]
+
+\[
+
+which are of real part > \frac{1}{2}. Explicitly: let S\Phi be the set of exponents of \Phi ; let \Phi^* be the part of \Phi^* N,>1/2 N that corresponds to
+
+exponents \chi \in S\Phi with <(\chi) > \frac{1}{2}, and let E(s_1,s_2) := Eis(\Phi^*), interpreted by analytic continuation if there exists \chi \in S\Phi with
+
+<(\chi) \in (1/2,1).
+
+\]
+
+N,>1/2
+
+The map (s1, s2) 7→ E(s1, s2) defines a meromorphic function on an open
+
+subset of C2 ; in an open subset of C3
+
+, one has
+
+Z reg Z reg
+
+\[
+
+(\varphi 1 \tag{s1}
+
+\]
+
+\[
+
+\varphi_2 \tag{s2}
+
+\]
+
+\[
+
+- E(s_1,s_2))\varphi 3 \tag{s3}
+
+\]
+
+\[
+
+. \varphi_1 \tag{s1}
+
+\]
+
+\[
+
+\varphi_2 \tag{s2}
+
+\]
+
+\[
+
+\varphi_3 \tag{s3}
+
+\]
+
+\[
+
+=
+
+\]
+
+### XPGL2
+
+Considering Fourier expansions, one see that, given any N > 1, one has
+
+\[
+
+\varphi_1 \tag{s1}
+
+\]
+
+\[
+
+\varphi 2(s_2)(x) - E(s_1,s_2)(x) N ht(x) -N, x \in XPGL2, (4.34) as long as <s1 N <s2 N_1. Therefore, there is an open subset of C_3 (in which s_3 >
+
+\frac{1}{2}) so that
+
+\]
+
+the previous integral is absolutely convergent. It unfolds to
+
+Z
+
+\[
+
+((\varphi 1 \tag{s1}
+
+\]
+
+\[
+
+\varphi 2(s_2))N - E(s_1,s_2)N)f3(s_3)dg. (4.35)
+
+\]
+
+### N(A)A(F)\\PGL2(A)
+
+#### 86 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+Indeed, \tag{4.34}
+
+\]
+
+\[
+
+implies that the constant term ((\varphi 1(s_1)\varphi 2(s_2))N - E(s_1,s_2)N is bounded,and from this one justifies the unfolding process.
+
+\]
+
+The definitions (4.33) and (4.35) are a priori convergent in different
+
+regions and they cannot be compared directly. Nonetheless, they coincide on the intersection of their domains of holomorphic continuation. Indeed, there exists
+
+a nonempty open set of parameters, intersecting every connected component of either domain of holomorphic continuation, so that both (4.33) and
+
+(4.35) can be defined by regularizing the integral over N(A)A(F)\\PGL2(A); this being done, their difference vanishes by invariance of the regularized integral.
+
+To be more specific, we have, whenever \|s1\| + \|s2\| 6 A, the bound
+
+\[
+
+(\varphi \tag{s1}
+
+\]
+
+\[
+
+\varphi(s_2))N (a(y)k) max(\|y\|,\|y\|) 1+A
+
+\]
+
+−1
+
+,
+
+\[
+
+with bounds of similar nature for \varphi \tag{s1}
+
+\]
+
+\[
+
+N \varphi(s_2)N and also E(s_1,s_2)N). Therefore, if <(s_3) A_1, and we write out the integrals (4.35) and (4.33) in the Iwasawa decomposition, we obtain
+
+functions of a(y)k which are integrable in the region\|y\| 6 1. By contrast, in the region\|y\| > 1 they are asymptotic to sums of finite functions of y, i.e.,
+
+functions whose translates span
+
+\]
+
+a finite-dimensional vector space; these may be regularized as in §4.3.1, and our conclusion follows. 27
+
+ut
+
+\[
+
+4.5. An example: F = Q at full level. For F = Q, we have in particular \xi^* \tag{1}
+
+\]
+
+\[
+
+= discF = 1. Let us describe
+
+\]
+
+F
+
+some explicit consequences of the foregoing remarks. In particular, we elaborate on the remark, contained in the introduction, that the “evident” identity
+
+(1.2) gives rise to an identity between families of L-functions.
+
+4.5.1. Let M be the set of even Maass cusp forms on SL2(Z)\\H. Let
+
+\[
+
+\xi(s) = \pi -s/2\Gamma(s/2)\zeta(s). We shall use \Lambda to denote the completed L-function. For \varphi \in M define \eta \varphi(x,y) = \Lambda(\varphi,1/2
+
++ x + y)\Lambda(\varphi,1/2 + x - y), the corresponding definition for an Eisenstein series Es \in Eis(\|.\| s) is:
+
+\]
+
+−s
+
+, \|.\|
+
+\[
+
+\eta(s,x,y) = \xi(1/2+s+x+y)\xi(1/2-s+x+y)\xi(1/2+s+x-y)\xi(1/2-s+x-y);
+
+\]
+
+27 The reader may wish to consider the following simpler example of this reasoning: the characteristic
+
+function of \[0, 1\] and the characteristic function of [1, ∞] have Mellin transforms, respectively, 1 (s > 0) and
+
+s
+
+(s < 0). However, the fact that the meromorphic extensions are negative to each other can be deduced
+
+− 1 s
+
+without computation: the sum of f1 + f2 is the constant function, and its Mellin transform in any regularized sense must be zero wherever defined, by
+
+invariance.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 87
+
+The quotient of X by the maximal compact K may be identified with
+
+the quotient of SL2(Z)\\H, by z_7→ −z. The measure of the quotient is π
+
+3 ,
+
+i.e. it arises from 2 dx dy
+
+2  (but if we work on SL2(Z)\\H, it is simply dx dy 2 ).
+
+y y
+
+\[
+
+For s \in C\times let Es resp. E^*
+
+\]
+
+s be the result of applying the Eisenstein
+
+\[
+
+intertwiner to the vector f \in\| ·\|s\| ·\|-s whose restriction to K is_1 resp.
+
+\]
+
+ξ(1+2s). Then Es and E ∗
+
+s descend to functions on SL2(Z)\\H; their constant
+
+terms are
+
+ξ(2s)
+
+\[
+
+1/2+s + 1/2-s_1+2s + \xi(1 - 2s)y_1-2s y y resp. \xi(1 + 2s)y \xi(1 + 2s) . For s \in iR\times, we have by \tag{4.8}
+
+\]
+
+\[
+
+, hEs, Esican = 2\xi \tag{2}
+
+\]
+
+\[
+
+= \pi /3 while hE^* ican = 2\xi \tag{2}
+
+\]
+
+\[
+
+\xi(1 + 2s)\xi(1 - 2s) \to \infty, s \to 0 s, E^* s By (4.21), if \psi \in M or is an Eisenstein series,
+
+\]
+
+kψk 2 2
+
+\[
+
+\eta \psi(t_1,t_2) hE^*^* 2 = can t1E t_2, \psi_i 2\xi \tag{2}
+
+\]
+
+\[
+
+\Lambda^* (1,Ad,\psi) For t_1 6= \pm t_2 \in iR: \xi(1 + 2t_0)\xi(1 + 2t_0)
+
+\]
+
+X 1 2 (4.36) E ∗ ∗ E1/2+t
+
+t1E 0 0
+
+\[
+
+t_2 = \xi(2 + 2t_0 0)
+
+\]
+
+1+t 2
+
+1 + 2t 2
+
+\[
+
+t_0 1=\pm t_1,t0 2=\pm t_2 \eta \varphi(t_1,t_2) 1 Z_i\infty \eta(s,t_1,t_2) X + \varphi + E^* p 2\xi \tag{2}
+
+\]
+
+\[
+
+L(Ad,\psi,1)k\varphi kcan 2\pi \xi(1 + 2s)\xi(1 - 2s) s
+
+\]
+
+s=0
+
+\[
+
+\varphi \in M
+
+\]
+
+The first and third term on the right-hand side are, of course, intimately related, through a process of contour-shifting; indeed, if we compute
+
+the constant term of the right-hand side, one finds that (after shifting contours) the residues of the third term match exactly, and indeed cancel, part
+
+of the constant term of the first term.
+
+It is interesting to substitute the point i (“period over a non-split torus
+
+with class number one”). Noting that,
+
+E ∗ (i) = 2s+3/2 ξQ(i)(1/2 + s),
+
+s
+
+\[
+
+the resulting formula relates \xi Q(i)(1/2 + t_1)\xi Q(i)(1/2 + t_2) with \xi Q(i)(1 \pm t_1 \pm t_2) and integrals over the critical line. The contribution of
+
+cusp forms may be expressed in terms of Fourier coefficients of half-integral weight. In this case, PARI/GP evaluates (with t_1 = 0.9i,t_2 = -1.3i) the
+
+noncuspidal part of the right hand side to_0.10553970, whereas the left-hand side comes to_0.10554092.
+
+\]
+
+#### 88 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+4.5.2. The associativity formula. — (4.36) expresses a “multiplication
+
+table” for forms; this is of course constrained by the associativity of multiplication. These constraints lead (among other things) to identities generalizing
+
+that of Kuznetsov:
+
+Set
+
+\[
+
+f_1(t_1,t_2,t_3,t_4) = \xi(1 + 2t3)\xi(1 + 2t4) \eta(t_1,t_2,1/2 + t_3 + t_4) \xi(2 + 2t3 + 2t4)(f(t_1,t_2,\pm t_3,\pm t_4)+P f(t_3,t_4,\pm t_1,\pm t_2). Then
+
+and take \Delta(t_1,t_2,t_3,t_4) = P
+
+\]
+
+±,± ±,±
+
+the function Σ defined by:
+
+\[
+
+Z_i\infty ds \eta(s,t_1,t_2)\eta(s,t_3,t_4) 3 \eta \varphi(t_1,t_2)\eta \varphi(t_3,t_4) \Sigma = X
+
+\]
+
++
+
+\[
+
+2\pi \xi(1 + 2s)\xi(1 - 2s) \pi \Lambda(\varphi,Ad,1) + \Delta(t_1,t_2,t_3,t_4) s=0 \varphi \in M
+
+\]
+
+is invariant under all permutations of coordinates. This is a spectral identity between families of L-functions; a version was first discovered by Kuznetsov.
+
+\[
+
+We tried to test this numerically. For (t_1,t_2,t_3,t_4) = (1.2i,1.5i,3i,4i), the difference between the noncuspidal parts of
+
+\Sigma(t_1,t_2,t_3,t_4)-\Sigma(t_1,t_3,t_2,t_4).
+
+\]
+
+This is estimated by PARI/GP to be 8.29×10−11. (To get a sense of size, each of the degenerate terms have size ∼ −0.005, and the difference between the two
+
+degenerate terms has size ∼ 2.6 × 10−9
+
+.) Nonetheless, this quantity –
+
+while very small – is in fact substantially larger than the contribution of the first Maass form. It is quite possible that error in the numerical integration
+
+is responsible for most of the difference.
+
+4.5.3. The Motohashi formula. — One may also take the period of
+
+(4.36) over a split torus, i.e., integrate R Et1 (a(y))Et2 (a(y))d ×y; the integral does not converge, but can be regularized as in §4.3.1.
+
+y∈R+
+
+The resulting formula relates, on the left-hand side, Z
+
+\[
+
+\xi(1/2 + t_1 + \nu)\xi(1/2 - t_1 + \nu)\xi(1/2 + t_2 + \lambda - \nu)\xi(1/2 - t_2 + \lambda - \nu) \nu \in iR
+
+\]
+
+to, on the right hand side,
+
+X Λ(1/2 + t1 + t2, ϕ)Λ(1/2 + t1 − t2, ϕ)Λ(1/2 + λ, ϕ)
+
+M
+
++ Eisenstein and degenerate terms
+
+This is an example of a formula of Motohashi \[52\]; it is perhaps most interesting to let t1, t2, λ = 0.
+
+The possibility of thus deriving the Motohashi formula was remarked in
+
+\[50\] in §4.3.3 together with the remark that the divergence of the resulting
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 89
+
+integrals would “cause considerable technical difficulty.” The method of using regularized integrals thus settles that issue in a satisfactory way. We would
+
+like to remark that it is necessary to be wary of the following point: the regularized integral cannot be interchanged naively with the continuous integral over
+
+the Eisenstein series that occurs on the right of (4.36). In “commuting” the two, we obtain an extra factor of η(−1/2−λ,t1,t2) η(−1/2+λ,t1,t2) ξ(2+2λ) +
+
+ξ(2−2λ) .
+
+4.5.4. Commentary. — For the purpose of analytic number theory the
+
+| above formulas, although beautiful, are insufficient; one needs a family with |  |
+
+| --- | --- |
+
+| --- | --- |
+
+| more flexibility of “test functions.” This extra flexibility is provided by the |  |
+
+| work of Motohashi and Kuznetsov. From the point of view of the method |  |
+
+| above, this can be obtained by varying the choice of test vector in the representations underlying E |  |
+
+| ∗ and E | ∗ |
+
+| t1 | t2 . |
+
+The associativity formula, and that of Motohashi, have played an important – though not always explicit – role in analytic number theory on
+
+GL2. We invite the reader to see “shadows” of these formulas hiding in various other papers on the subject.
+
+The primary advantage of the formalism above seems to be that it
+
+generalizes immediately to ramified settings. One may, for instance, replace E ∗ by an Eisenstein series in the representation \chi_1 to get a new formula;
+
+t1
+
+or one may replace Q by a number field. It is a very interesting question to investigate more deeply the “test function” version of such formulas in a general
+
+setting, and to study the integral transforms – both archimedean and p-adic – that intervene.
+
+Such general formulas would probably lead to, among other things, a
+
+good exponent in the subconvexity theorem. In the present paper we have taken a “short cut” to subconvexity.
+
+5. Proof of the theorems.
+
+5.1. Subconvexity of character twists.
+
+In the present section we shall prove the following theorem which is a
+
+special case of our main result, Theorem 1.1, but which is also necessary in its proof.
+
+We continue with notation as in §4.1.
+
+\[
+
+5.1. Theorem. — There are absolute constants \delta, A > 0 such that for F a number field, \pi an automorphic representation of GL2(AF), and \chi a
+
+\]
+
+#### 90 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+unitary (Hecke) character of F ×\\A×
+
+F ,
+
+L(π × χ, ) F,π C(χ) 1/2−δ
+
+2 ,
+
+where C(χ) denotes the analytic conductor, and our conventions about  are

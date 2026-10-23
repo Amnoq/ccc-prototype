@@ -1,0 +1,1555 @@
+The Project Gutenberg eBook of Chess Fundamentals
+    
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online
+at www.gutenberg.org. If you are not located in the United States,
+you will have to check the laws of the country where you are located
+before using this eBook.
+
+Title: Chess Fundamentals
+
+Author: José Raúl Capablanca
+
+
+        
+Release date: October 18, 2010 [eBook #33870]
+
+Language: English
+
+Other information and formats: www.gutenberg.org/ebooks/33870
+
+Credits: Produced by Suzanne Lybarger, Suzanne Shell, Jana Srna,
+        Keith Edkins and the Online Distributed Proofreading Team
+        at http://www.pgdp.net
+
+
+*** START OF THE PROJECT GUTENBERG EBOOK CHESS FUNDAMENTALS ***
+
+
+
+
+Produced by Suzanne Lybarger, Suzanne Shell, Jana Srna,
+Keith Edkins and the Online Distributed Proofreading Team
+at http://www.pgdp.net
+
+
+
+
+
+[Illustration: JOSE R. CAPABLANCA]
+
+CHESS
+FUNDAMENTALS
+
+BY
+
+JOSE R. CAPABLANCA
+
+_CHESS CHAMPION OF THE WORLD_
+
+
+
+
+
+NEW YORK HARCOURT, BRACE & WORLD, INC.
+LONDON: G. BELL AND SONS, LTD.
+
+       *       *       *       *       *
+
+
+COPYRIGHT, 1921, BY
+
+HARCOURT, BRACE & WORLD, INC.
+
+(c) 1949 BY OLGA CAPABLANCA
+
+_All rights reserved. No part of this publication may be reproduced or
+transmitted in any form or by any means, electronic or mechanical,
+including photocopy, recording, or any information storage and retrieval
+system, without permission in writing from the publisher._
+
+_Seventeenth Printing_
+
+
+
+PRINTED IN THE UNITED STATES OF AMERICA
+
+       *       *       *       *       *
+
+
+PREFACE
+
+_Chess Fundamentals_ was first published thirteen years ago. Since then
+there have appeared at different times a number of articles dealing with
+the so-called Hypermodern Theory. Those who have read the articles may well
+have thought that something new, of vital importance, had been discovered.
+The fact is that the Hypermodern Theory is merely the application, during
+the opening stages generally, of the same old principles through the medium
+of somewhat new tactics. There has been no change in the fundamentals. The
+change has been only a change of form, and not always for the best at that.
+
+In chess the tactics may change but the strategic fundamental principles
+are always the same, so that _Chess Fundamentals_ is as good now as it was
+thirteen years ago. It will be as good a hundred years from now; as long in
+fact as the laws and rules of the game remain what they are at present. The
+reader may therefore go over the contents of the book with the assurance
+that there is in it everything he needs, and that there is nothing to be
+added and nothing to be changed. _Chess Fundamentals_ was the one standard
+work of its kind thirteen years ago and the author firmly believes that it
+is the one standard work of its kind now.
+
+J. R. CAPABLANCA
+
+_New York_
+
+_Sept. 1, 1934_
+
+       *       *       *       *       *
+
+
+LIST OF CONTENTS
+
+  PART I
+
+  CHAPTER I
+
+  First Principles: Endings, Middle-game and Openings
+
+                                                          PAGE
+
+  1. SOME SIMPLE MATES                                       3
+
+  2. PAWN PROMOTION                                          9
+
+  3. PAWN ENDINGS                                           13
+
+  4. SOME WINNING POSITIONS IN THE MIDDLE-GAME              19
+
+  5. RELATIVE VALUE OF THE PIECES                           24
+
+  6. GENERAL STRATEGY OF THE OPENING                        25
+
+  7. CONTROL OF THE CENTRE                                  28
+
+  8. TRAPS                                                  32
+
+  CHAPTER II
+
+  FURTHER PRINCIPLES IN END-GAME PLAY
+
+  9. A CARDINAL PRINCIPLE                                   35
+
+  10. A CLASSICAL ENDING                                    37
+
+  11. OBTAINING A PASSED PAWN                               40
+
+  12. HOW TO FIND OUT WHICH PAWN WILL BE THE FIRST TO QUEEN 41
+
+  13. THE OPPOSITION                                        43
+
+  14. THE RELATIVE VALUE OF KNIGHT AND BISHOP               50
+
+  15. HOW TO MATE WITH KNIGHT AND BISHOP                    59
+
+  16. QUEEN AGAINST ROOK                                    62
+
+  CHAPTER III
+
+  PLANNING A WIN IN MIDDLE-GAME PLAY
+
+  17. ATTACKING WITHOUT THE AID OF KNIGHTS                  68
+
+  18. ATTACKING WITH KNIGHTS AS A PROMINENT FORCE           71
+
+  19. WINNING BY INDIRECT ATTACK                            75
+
+  CHAPTER IV
+
+  GENERAL THEORY
+
+  20. THE INITIATIVE                                        77
+
+  21. DIRECT ATTACKS EN MASSE                               78
+
+  22. THE FORCE OF THE THREATENED ATTACK                    82
+
+  23. RELINQUISHING THE INITIATIVE                          89
+
+  24. CUTTING OFF PIECES FROM THE SCENE OF ACTION           94
+
+  25. A PLAYER'S MOTIVES CRITICISED IN A SPECIMEN GAME      99
+
+  CHAPTER V
+
+  END-GAME STRATEGY
+
+  26. THE SUDDEN ATTACK FROM A DIFFERENT SIDE              111
+
+  27. THE DANGER OF A SAFE POSITION                        120
+
+  28. ENDINGS WITH ONE ROOK AND PAWNS                      122
+
+  29. A DIFFICULT ENDING: TWO ROOKS AND PAWNS              127
+
+  30. ROOK, BISHOP AND PAWNS _v._ ROOK, KNIGHT AND PAWNS   138
+  (A Final Example of preserving Freedom whilst
+  imposing restraint.)
+
+  CHAPTER VI
+
+  FURTHER OPENINGS AND MIDDLE-GAMES
+
+  31. SOME SALIENT POINTS ABOUT PAWNS                      143
+
+  32. SOME POSSIBLE DEVELOPMENTS FROM A RUY LOPEZ
+  (showing the weakness of a backward Q B P; the
+  power of a Pawn at K 5, etc.)                            146
+
+  33. THE INFLUENCE OF A "HOLE"                            150
+
+  PART II
+
+  ILLUSTRATIVE GAMES
+
+  GAME.
+
+   1. QUEEN'S GAMBIT DECLINED (MATCH, 1909)                159
+      White: F. J. Marshall. Black: J. R. Capablanca.
+
+   2. QUEEN'S GAMBIT DECLINED (SAN SEBASTIAN, 1911)        163
+      White: A. K. Rubinstein. Black: J. R. Capablanca.
+
+   3. IRREGULAR DEFENCE (HAVANA, 1913)                     169
+      White: D. Janowski. Black: J. R. Capablanca.
+
+   4. FRENCH DEFENCE (ST. PETERSBURG, 1913)                174
+      White: J. R. Capablanca. Black: E. A. Snosko-Borovski.
+
+   5. RUY LOPEZ (ST. PETERSBURG, 1914)                     181
+      White: Dr. E. Lasker. Black: J. R. Capablanca.
+
+   6. FRENCH DEFENCE (RICE MEMORIAL TOURNAMENT, 1916)      189
+      White: O. Chajes. Black: J. R. Capablanca.
+
+   7. RUY LOPEZ (SAN SEBASTIAN, 1911)                      197
+      White: J. R. Capablanca. Black: A. Burn.
+
+   8. CENTRE GAME (BERLIN, 1913)                           201
+      White: J. Mieses. Black: J. R. Capablanca.
+
+   9. QUEEN'S GAMBIT DECLINED (BERLIN, 1913)               209
+      White: J. R. Capablanca. Black: R. Teichmann.
+
+  10. PETROFF DEFENCE (ST. PETERSBURG, 1914)               215
+      White: J. R. Capablanca. Black: F. J. Marshall.
+
+  11. RUY LOPEZ (ST. PETERSBURG, 1914)                     221
+      White: J. R. Capablanca. Black: D. Janowski.
+
+  12. FRENCH DEFENCE (NEW YORK, 1918)                      225
+      White: J. R. Capablanca. Black: O. Chajes.
+
+  13. RUY LOPEZ (NEW YORK, 1918)                           231
+      White: J. S. Morrison. Black: J.R. Capablanca.
+
+  14. QUEEN'S GAMBIT DECLINED (NEW YORK, 1918)             238
+      White: F. J. Marshall. Black: J.R. Capablanca.
+
+       *       *       *       *       *
+
+
+{3}
+
+CHESS FUNDAMENTALS
+
+PART I
+
+CHAPTER I
+
+FIRST PRINCIPLES: ENDINGS, MIDDLE-GAME AND OPENINGS
+
+The first thing a student should do, is to familiarise himself with the
+power of the pieces. This can best be done by learning how to accomplish
+quickly some of the simple mates.
+
+1. SOME SIMPLE MATES
+
+EXAMPLE 1.--The ending Rook and King against King.
+
+_The principle is to drive the opposing King to the last line on any side
+of the board_.
+
+[Illustration] {4}
+
+In this position the power of the Rook is demonstrated by the first move,
+R - R 7, which immediately confines the Black King to the last rank, and
+the mate is quickly accomplished by: 1 R - R 7, K - Kt 1; 2 K - Kt 2.
+
+The combined action of King and Rook is needed to arrive at a position in
+which mate can be forced. The general principle for a beginner to follow is
+to
+
+_keep his King as much as possible on the same rank, or, as in this case,
+file, as the opposing King._
+
+When, in this case, the King has been brought to the sixth rank, it is
+better to place it, not on the same file, but on the one next to it towards
+the centre.
+
+2...K - B 1; 3 K - B 3, K - K 1; 4 K - K 4, K - Q 1; 5 K - Q 5, K - B 1;
+6 K - Q 6.
+
+Not K - B 6, because then the Black King will go back to Q 1 and it will
+take much longer to mate. If now the King moves back to Q 1, R - R 8 mates
+at once.
+
+6...K - Kt 1; 7 R - Q B 7, K - R 1; 8 K - B 6, K - Kt 1; 9 K - Kt 6,
+K - R 1; 10 R - B 8 mate.
+
+It has taken exactly ten moves to mate from the original position. On move
+5 Black could have played K - K 1, and, according to principle, White would
+have continued 6 K - Q 6, K - B 1 (the Black King will ultimately be forced
+to move in front of the White King and be mated by R - R 8); 7 K - K 6,
+K - Kt 1; 8 K - B 6, K - R 1; 9 K - Kt 6, K - Kt 1; 10 R - R 8 mate. {5}
+
+EXAMPLE 2.
+
+[Illustration]
+
+Since the Black King is in the centre of the board, the best way to proceed
+is to advance your own King thus: 1 K - K 2, K - Q 4; 2 K - K 3. As the
+Rook has not yet come into play, it is better to advance the King straight
+into the centre of the board, not in front, but to one side of the other
+King. Should now the Black King move to K 4, the Rook drives it back by
+R - R 5 ch. On the other hand, if 2... K - B 5 instead, then also
+3 R - R 5. If now 3... K - Kt 5, there follows 4 K - Q 3; but if instead
+3... K - B 6; then 4 R - R 4, keeping the King confined to as few squares
+as possible.
+
+Now the ending may continue: 4...K - B 7; 5 R - B 4 ch, K - Kt 6;
+6 K - Q 3, K - Kt 7; 7 R - Kt 4 ch, K - R 6; 8 K - B 3, K - R 7. It should
+be noticed how often the White King has moved next to the Rook, not only to
+defend it, but also to reduce the mobility of the opposing King. Now {6}
+White mates in three moves thus: 9 R - R 4 ch, K - Kt 8; 10 R -  any square
+on the Rook's file, forcing the Black King in front of the White, K - B 8;
+11 R - R 1 mate. It has taken eleven moves to mate, and, under any
+conditions, I believe it should be done in under twenty. While it may be
+monotonous, it is worth while for the beginner to practice such things, as
+it will teach him the proper handling of his pieces.
+
+EXAMPLE 3.--Now we come to two Bishops and King against King.
+
+[Illustration]
+
+Since the Black King is in the corner, White can play 1 B - Q 3, K - Kt 2;
+2 B - K Kt 5, K - B 2; 3 B - B 5, and already the Black King is confined to
+a few squares. If the Black King, in the original position, had been in the
+centre of the board, or away from the last row, White should have advanced
+his King, and then, with the aid of his Bishops, restricted {7} the Black
+King's movements to as few squares as possible.
+
+We might now continue: 3...K - Kt 2; 4 K - B 2. In this ending the Black
+King must not only be driven to the edge of the board, but he must also be
+forced into a corner, and, before a mate can be given, the White King must
+be brought to the sixth rank and, at the same time, in one of the last two
+files; in this case either K R 6, K Kt 6, K B 7, K B 8, and as K R 6 and
+K Kt 6 are the nearest squares, it is to either of these squares that the
+King ought to go. 4...K - B 2; 5 K - Kt 3, K - Kt 2; 6 K - R 4, K - B 2;
+7 K - R 5, K - Kt 2; 8 B - Kt 6, K - Kt 1; 9 K - R 6, K - B 1. White must
+now mark time and move one of the Bishops, so as to force the Black King to
+go back; 10 B - R 5, K - Kt 1; 11 B - K 7, K - R 1. Now the White Bishop
+must take up a position from which it can give check next move along the
+White diagonal, when the Black King moves back to Kt 1. 12 B - K Kt 4,
+K - Kt 1; 13 B - K 6 ch, K - R 1; 14 B - B 6 mate.
+
+It has taken fourteen moves to force the mate and, in any position, it
+should be done in under thirty.
+
+In all endings of this kind, care must be taken not to drift into a stale
+mate.
+
+In this particular ending one should remember that the King must not only
+be driven to the edge of the board, but also into a corner. In all such
+endings, however, it is immaterial whether the King is forced {8} on to the
+last rank, or to an outside file, e.g. K R 5 or Q R 4, K 1 or Q 8.
+
+EXAMPLE 4.--We now come to Queen and King against King. As the Queen
+combines the power of the Rook and the Bishop, it is the easiest mate of
+all and should always be accomplished in under ten moves. Take the
+following position:
+
+[Illustration]
+
+A good way to begin is to make the first move with the Queen, trying to
+limit the Black King's mobility as much as possible. Thus: 1 Q - B 6,
+K - Q 5; 2 K - Q 2. Already the Black King has only one available square
+2...K - K 4; 3 K - K 3, K - B 4; 4 Q - Q 6, K - Kt 4. (Should Black play
+K - Kt 5, then Q - Kt 6 ch); 5 Q - K 6, K - R 5 (if K - R 4, K - B 4 and
+mate next move); 6 Q - K Kt 6, K - R 6; 7 K - B 3, K moves; 8 Q mates.
+
+In this ending, as in the case of the Rook, the Black King must be forced
+to the edge of the board; only {9} the Queen being so much more powerful
+than the Rook, the process is far easier and shorter. These are the three
+elementary endings and in all of these the principle is the same. In each
+case the co-operation of the King is needed. In order to force a mate
+without the aid of the King, at least two Rooks are required.
+
+       *       *       *       *       *
+
+2. PAWN PROMOTION
+
+The gain of a Pawn is the smallest material advantage that can be obtained
+in a game; and it often is sufficient to win, even when the Pawn is the
+only remaining unit, apart from the Kings. It is essential, speaking
+generally, that
+
+_the King should be in front of his Pawn, with at least one intervening
+square_.
+
+If the opposing King is directly in front of the Pawn, then the game cannot
+be won. This can best be explained by the following examples.
+
+EXAMPLE 5.
+
+[Illustration] {10}
+
+The position is drawn, and the way to proceed is for Black to keep the King
+always directly in front of the Pawn, and when it cannot be done, as for
+instance in this position because of the White King, then the Black King
+must be kept in front of the White King. The play would proceed thus:
+1 P - K 3, K - K 4; 2 K - Q 3, K - Q 4. This is a very important move. Any
+other move would lose, as will be shown later. As the Black King cannot be
+kept close up to the Pawn, it must be brought as far forward as possible
+and, at the same time, in front of the White King.
+
+3 P - K 4 ch, K - K 4; 4 K - K 3, K - K 3; 5 K - B 4, K - B 3. Again the
+same case. As the White King comes up, the Black King must be kept in front
+of it, since it cannot be brought up to the Pawn.
+
+6 P - K 5 ch, K - K 3; 7 K - K 4, K - K 2; 8 K - Q 5, K - Q 2;
+9 P - K 6 ch, K - K 2; 10 K - K 5, K - K 1; 11 K - Q 6, K - Q 1. If now
+White advances the Pawn, the Black King gets in front of it and White must
+either give up the Pawn or play K - K 6, and a stale mate results. If
+instead of advancing the Pawn White withdraws his King, Black brings his
+King up to the Pawn and, when forced to go back, he moves to K _in front_
+of the Pawn ready to come up again or to move in front of the White King,
+as before, should the latter advance.
+
+The whole mode of procedure is very important and the student should become
+thoroughly conversant {11} with its details; for it involves principles to
+be taken up later on, and because many a beginner has lost identical
+positions from lack of proper knowledge. At this stage of the book I cannot
+lay too much stress on its importance.
+
+EXAMPLE 6.--In this position White wins, as the King is in front of his
+Pawn and there is one intervening square.
+
+[Illustration]
+
+The method to follow is to
+
+_advance the King as far as is compatible with the safety of the Pawn and
+never to advance the Pawn until it is essential to its own safety_.
+
+Thus:
+
+        1. K - K 4, K - K 3.
+
+Black does not allow the White King to advance, therefore White is now
+compelled to advance his Pawn so as to force Black to move away. He is then
+able to advance his own King.
+
+        2. P - K3, K - B 3; 3. K - Q 5, K - K 2.
+
+{12} If Black had played 3...K - B 4, then White would be forced to advance
+the Pawn to K 4, since he could not advance his King without leaving Black
+the opportunity to play K - K 5, winning the Pawn. Since he has not done
+so, it is better for White not to advance the Pawn yet, since its own
+safety does not require it, but to try to bring the King still further
+forward. Thus:
+
+        4. K - K 5, K - Q 2; 5. K - B 6, K - K 1.
+
+Now the White Pawn is too far back and it may be brought up within
+protection of the King.
+
+        6. P - K 4, K - Q 2.
+
+Now it would not do to play K - B 7, because Black would play K - Q 3, and
+White would have to bring back his King to protect the Pawn. Therefore he
+must continue.
+
+        7. P - K 5, K - K 1.
+
+Had he moved anywhere else, White could have played K - B 7, followed by
+the advance of the Pawn to K 6, K 7, K 8; all these squares being protected
+by the King. As Black tries to prevent that, White must now force him to
+move away, at the same time always keeping the King in front of the Pawn.
+Thus:
+
+        8. K - K 6.
+
+P - K 6 would make it a draw, as Black would then play K - B, and we would
+have a position similar to the one explained in connection with Example 5.
+
+        8...K - B 1;  9. K - Q 7.
+
+{13} King moves and the White Pawn advances to K 8, becomes a Queen, and it
+is all over.
+
+This ending is like the previous one, and for the same reasons should be
+thoroughly understood before proceeding any further.
+
+       *       *       *       *       *
+
+3. PAWN ENDINGS
+
+I shall now give a couple of simple endings of two Pawns against one, or
+three against two, that the reader may see how they can be won. Fewer
+explanations will be given, as it is up to the student to work things out
+for himself. Furthermore, nobody can learn how to play well merely from the
+study of a book; it can only serve as a guide and the rest must be done by
+the teacher, if the student has one; if not, the student must realise by
+long and bitter experience the practical application of the many things
+explained in the book.
+
+EXAMPLE 7.
+
+[Illustration]
+
+{14} In this position White cannot win by playing 1 P - B 6, because Black
+plays, not P x P, which would lose, but 1...K - Kt 1, and if then 2 P x P,
+K x P, and draws, as shown in a previous case. If 2 P - B 7 ch, K - B 1,
+and White will never be able to Queen his Pawn without losing it. If
+2 K - K 7, P x P; 3 K x P, K - B 1, and draws. White, however, can win the
+position given in the diagram by playing:
+
+1 K - Q 7, K - Kt 1; 2 K - K 7, K - R 1; 3 P - B 6, P x P. If 3...K - Kt 1;
+4 P - B 7 ch, K - R 1; 5 P - B 8 (Q) mate.
+
+4 K - B 7, P - B 4; 5 P - Kt 7 ch, K - R 2; 6 P - Kt 8 (Q) ch, K - R 3;
+7 Q - Kt 6 mate.
+
+[Illustration]
+
+EXAMPLE 8.--In the above position White can't win by 1 P - B 5. Black's
+best answer would be P - Kt 3 draws. (The student should work this out.) He
+cannot win by 1 P - Kt 5, because P - Kt 3 draws. (This, because of the
+principle of the "_opposition_" {15} which governs this ending as well as
+all the Pawn-endings already given, and which will be explained more fully
+later on.)
+
+White can win, however, by playing: 1 K - K 4, K - K 3. (If 1...P - Kt 3;
+2 K - Q 4, K - K 3; 3 K - B 5, K - B 3; 4 K - Q 6, K - B 2; 5 P - Kt 5,
+K - Kt 2; 6 K - K 7, K - Kt 1; 7 K - B 6, K - R 2; 8 K - B 7 and White wins
+the Pawn.)
+
+2 P - B 5 ch, K - B 3; 3 K - B 4, P - Kt 3. (If this Pawn is kept back we
+arrive at the ending shown in Example 7.) 4 P - Kt 5 ch, K - B 2;
+5 P - B 6, K - K 3; 6 K - K 4, K - B 2; 7 K - K 5, K - B 1. White cannot
+force his Bishop's Pawn into Q (find out why), but by giving his Pawn up he
+can win the other Pawn and the game. Thus:
+
+8 P - B 7, K x P; 9 K - Q 6, K - B 1; 10 K - K 6, K - Kt 2; 11 K - K 7,
+K - Kt 1; 12 K - B 6, K - R 2; 13 K - B 7, K - R 1; 14 K x P , K - Kt 1.
+
+There is still some resistance in Black's position. In fact, the only way
+to win is the one given here, as will easily be seen by experiment.
+
+15 K - R 6 (if K - B 6, K - R 2; and in order to win White must get back to
+the actual position, as against 16 P - Kt 6 ch, K - R 1 draws), K - R 1;
+16 P - Kt 6, K - Kt 1; 17 P - Kt 7, K - B 2; 18 K - R 7, and White queens
+the Pawn and wins.
+
+This ending, apparently so simple, should show the student the enormous
+difficulties to be surmounted, {16} even when there are hardly any pieces
+left, when playing against an adversary who knows how to use the resources
+at his disposal, and it should show the student, also, the necessity of
+paying strict attention to these elementary things which form the basis of
+true mastership in Chess.
+
+EXAMPLE 9.--In this ending
+
+[Illustration]
+
+White can win by advancing any of the three Pawns on the first move, but it
+is convenient to follow the general rule, whenever there is no good reason
+against it, of _advancing the Pawn that has no Pawn opposing it_. Thus we
+begin by--
+
+        1. P - B 5, K - K 2.
+
+If P - Kt 3, P - B 6; and we have a similar ending to one of those shown
+above. If 1...P - R 3; 2 P - Kt 5.
+
+        2. K - K 5, K - B 2; 3. P - Kt 5, K - K 2.
+
+{17} If 3...P - Kt 3; 4 P - B 6, and if 3...P - R 3; 4 P - Kt 6 ch, and in
+either case we have a similar ending to one of those already shown.
+
+        4. P - R 5,
+
+and by following it up with P - Kt 6 we have the same ending previously
+shown. Should Black play 4...P - Kt 3, then R P x P, P x P; P - B 6 ch with
+the same result.
+
+Having now seen the cases when the Pawns are all on one side of the board
+we shall now examine a case when there are Pawns on both sides of the
+board.
+
+EXAMPLE 10.--In these cases the general rule is to _act immediately on the
+side where you have the superior forces_. Thus we have:
+
+[Illustration]
+
+        1. P - K Kt 4.
+
+{18} It is generally advisable to advance the Pawn that is free from
+opposition.
+
+        1. ........               P - Q R 4.
+
+Black makes an advance on the other side, and now White considers whether
+or not he should stop the advance. In this case either way wins, but
+generally the advance should be stopped when the opposing King is far away.
+
+        2. P - Q R 4, K - B 3; 3. P - R 4, K - K 3.
+
+If 3...K - Kt 3, then simple counting will show that White goes to the
+other side with his King, wins the P at Q R 4, and then Queens his single
+Pawn long before Black can do the same.
+
+        4. P - Kt 5, K - B 2; 5. K - B 5, K - Kt 2; 6. P - R 5, K - B 2.
+
+If 6...P - R 3; 7 P - Kt 6, and then the two Pawns defend themselves and
+White can go to the other side with his King, to win the other Pawn.
+
+        7. K - K 5.
+
+Now it is time to go to the other side with the King, win the Black Pawn
+and Queen the single Pawn. This is typical of all such endings and should
+be worked out by the student in this case and in similar cases which he can
+put up. {19}
+
+       *       *       *       *       *
+
+4. SOME WINNING POSITIONS IN THE MIDDLE-GAME
+
+By the time the student has digested all that has been previously
+explained, he, no doubt, is anxious to get to the actual game and play with
+all the pieces. However, before considering the openings, we shall devote a
+little time to some combinations that often arise during the game, and
+which will give the reader some idea of the beauty of the game, once he
+becomes better acquainted with it.
+
+EXAMPLE 11.
+
+[Illustration]
+
+It is Black's move, and thinking that White merely threatens to play
+Q - R 6 and to mate at K Kt 7, Black plays 1 ... R - K 1, threatening mate
+by way of R - K 8. White now uncovers his real and most effective threat,
+viz.:
+
+1 ... R - K 1; 2 Q x P ch, K x Q; 3 R - R 3 ch, K - Kt 1; 4 R - R 8 mate.
+{20}
+
+This same type of combination may come as the result of a somewhat more
+complicated position.
+
+EXAMPLE 12.
+
+[Illustration]
+
+White is a piece behind, and unless he can win it back quickly he will
+lose; he therefore plays:
+
+        1. Kt x Kt                B - Kt 4
+
+He cannot take the Kt because White threatens mate by Q x P ch followed by
+R - R 3 ch.
+
+        2. Kt - K 7 ch            Q x Kt
+
+Again if B x Kt; Q x P ch, K x Q; R - R 3 ch, King moves; R - R 8 mate.
+
+        3. R x Q                  B x R
+        4. Q - Q 7
+
+and White wins one of the two Bishops, remains with a Q and a B against a R
+and B, and should therefore win easily. These two examples show the {21}
+danger of advancing the K Kt P one square, after having Castled on that
+side.
+
+EXAMPLE 13.
+
+[Illustration]
+
+This is another very interesting type of combination. Black has a R for a
+Kt and should therefore win, unless White is able to obtain some
+compensation immediately. White, in fact, mates in a few moves thus:
+
+        1. Kt - B 6 ch            P x Kt
+
+Forced, otherwise Q X P mates.
+
+        2. Q - Kt 3 ch            K - R 1
+        3. B x P mate.
+
+EXAMPLE 14.--The same type of combination occurs in a more complicated form
+in the following position. {22}
+
+[Illustration]
+
+        1. B x Kt                 Q x B.
+
+If ...B x Kt; Q - B 3 threatens mate, and therefore wins the Q, which is
+already attacked.
+
+        2. Kt - B 6 ch            P x Kt
+        3. R - Kt 3 ch            K - R 1
+        4. B x P mate.
+
+EXAMPLE 15.--A very frequent type of combination is shown in the following
+position.
+
+[Illustration] {23}
+
+Here White is the exchange and a Pawn behind, but he can win quickly thus:
+1 B x P ch, K x B. (If 1...K - R 1; 2 Q - K R 5, P - K Kt 3; 3 Q - R 6, and
+wins.)
+
+2 Q - R 5 ch, K - Kt 1; 3 Kt - Kt 5, and Black cannot stop mate at K R 7
+except by sacrificing the Queen by Q - K 5, which would leave White with a
+Q for a R.
+
+EXAMPLE 16.--This same type of combination is seen in a more complicated
+form in the following position.
+
+[Illustration]
+
+White proceeds as follows: 1 Kt x Kt ch (this clears the line for the B);
+B x Kt (to stop the Kt from moving to Kt 5 after the sacrifice of the B);
+2 R x B, Kt x R best; 3 B x P ch, K x B. (If 3..K - R 1; 4 Q - R 5,
+P - K Kt 3; 5 B x P ch, K - Kt 2; 6 Q - R 7 ch, K - B 3; 7 P - Kt 5 ch,
+K - K 3; 8 B x P ch, R x B; 9 Q - K 4 mate.) 4 Q - R 5 ch, K - Kt 1;
+5 Kt - Kt 5, R - B 1; {24} 6 Q - R 7 ch, K - B 1; 7 Q - R 8 ch, Kt - Kt 1;
+8 Kt - R 7 ch, K - K 2; 9 R - K 1 ch, K - Q 1; 10 Q x Kt mate.
+
+This combination is rather long and has many variations, therefore a
+beginner will hardly be able to fathom it; but, knowing the type of
+combination, he might under similar circumstances undertake and carry out a
+brilliant attack which he would otherwise never think of. It will be seen
+that all the combinations shown have for a foundation the proper
+co-ordination of the pieces, which have all been brought to bear against a
+weak point.
+
+       *       *       *       *       *
+
+5. RELATIVE VALUE OF THE PIECES
+
+Before going on to the general principles of the openings, it is advisable
+to give the student an idea of the proper relative value of the pieces.
+There is no complete and accurate table for all of them, and the only thing
+to do is to compare the pieces separately.
+
+For all general theoretical purposes the Bishop and the Knight have to be
+considered as of the same value, though it is my opinion that the Bishop
+will prove the more valuable piece in most cases; and it is well known that
+two Bishops are almost always better than two Knights.
+
+The Bishop will be stronger against Pawns than the Knight, and in
+combination with Pawns will also be stronger against the Rook than the
+Knight will be. {25}
+
+A Bishop and a Rook are also stronger than a Knight and a Rook, but a Queen
+and a Knight may be stronger than a Queen and a Bishop.
+
+A Bishop will often be worth more than three Pawns, but a Knight very
+seldom so, and may even not be worth so much.
+
+A Rook will be worth a Knight and two Pawns, or a Bishop and two Pawns,
+but, as said before, the Bishop will be a better piece against the Rook.
+
+Two Rooks are slightly stronger than a Queen. They are slightly weaker than
+two Knights and a Bishop, and a little more so than two Bishops and a
+Knight. The power of the Knight decreases as the pieces are changed off.
+The power of the Rook, on the contrary, increases.
+
+The King, a purely _defensive_ piece throughout the middle-game, becomes an
+_offensive_ piece once all the pieces are off the board, and sometimes even
+when there are one or two minor pieces left. The handling of the King
+becomes of paramount importance once the end-game stage is reached.
+
+       *       *       *       *       *
+
+6. GENERAL STRATEGY OF THE OPENING
+
+The main thing is to _develop the pieces quickly_. Get them into play as
+fast as you can.
+
+From the outset two moves, 1 P - K 4  or 1 P - Q 4, open up lines for the
+Queen and a Bishop. Therefore, theoretically one of these two moves must be
+the best, as no other first move accomplishes so much. {26}
+
+EXAMPLE 17.--Suppose we begin:
+
+        1. P - K 4                P - K 4
+        2. Kt - K B 3
+
+This is both an attacking and a developing move. Black can now either reply
+with the identical move or play
+
+        2. ........               Kt - Q B 3
+
+This developing move at the same time defends the King's Pawn.
+
+        3. Kt - B 3               Kt - B 3
+
+These moves are of a purely developing nature.
+
+        4. B - Kt 5
+
+_It is generally advisable not to bring this Bishop out until one Knight is
+out_, preferably the King's Knight. The Bishop could also have been played
+to B 4, but it is advisable whenever possible to combine development and
+attack.
+
+        4. ........               B - Kt 5
+
+Black replies in the same manner, threatening a possible exchange of Bishop
+for Knight with Kt x P to follow.
+
+        5. O - O
+
+an indirect way of preventing 5...B x Kt, which more experience or study
+will show to be bad. At the same time _the Rook is brought into action in
+the centre, a very important point_. {27}
+
+        5. ........               O - O
+
+Black follows the same line of reasoning.
+
+        6. P - Q 3                P - Q 3
+
+These moves have a two-fold object, viz.: to protect the King's Pawn and to
+open the diagonal for the development of the Queen's Bishop.
+
+        7. B - Kt 5
+
+[Illustration]
+
+A very powerful move, which brings us to the middle-game stage, as there is
+already in view a combination to win quickly by Kt - Q 5. This threat makes
+it impossible for Black to continue the same course. (There is a long
+analysis showing that Black should lose if he also plays B - Kt 5.) He is
+now forced to play 7...B x Kt, as experience has shown, thus bringing up to
+notice three things.
+
+First, the complete development of the opening has taken only seven moves.
+(This varies up to ten or twelve moves in some very exceptional cases. As a
+rule, eight should be enough.) Second, Black has {28} been compelled to
+exchange a Bishop for a Knight, but as a compensation he has isolated
+White's Q R P and doubled a Pawn. (This, at such an early stage of the
+game, is rather an advantage for White, as the Pawn is doubled towards the
+centre of the board.) Third, White by the exchange brings up a Pawn to
+control the square Q 4, puts Black on the defensive, as experience will
+show, and thus keeps _the initiative_, an unquestionable advantage.[1]
+
+The strategical principles expounded above are the same for all the
+openings, only their tactical application varies according to the
+circumstances.
+
+Before proceeding further I wish to lay stress on the following point which
+the student should bear in mind.
+
+_Before development has been completed no piece should be moved more than
+once, unless it is essential in order to obtain either material advantage
+or to secure freedom of action._
+
+The beginner would do well to remember this, as well as what has already
+been stated: viz., _bring out the Knights before bringing out the Bishops_.
+
+       *       *       *       *       *
+
+7. CONTROL OF THE CENTRE
+
+The four squares, K 4 and Q 4 on each side respectively, are the centre
+squares, and control of these squares is called control of the centre. _The
+control of the centre is of great importance._ No violent attack can
+succeed without controlling at least two of these {29} squares, and
+possibly three. Many a manoeuvre in the opening has for its sole object the
+control of the centre, which invariably ensures the initiative. It is well
+always to bear this in mind, since it will often be the reason of a series
+of moves which could not otherwise be properly understood. As this book
+progresses I shall dwell more fully on these different points. At present I
+shall devote some time to openings taken at random and explain the moves
+according to general principles. The student will in that way train his
+mind in the proper direction, and will thus have less trouble in finding a
+way out when confronted with a new and difficult situation.
+
+EXAMPLE 18.
+
+        1. P - K 4                P - K 4
+        2. Kt - K B 3             P - Q 3
+
+A timid move. Black assumes a defensive attitude at once. On principle the
+move is wrong. In the openings, whenever possible, _pieces should be moved
+in preference to Pawns_.
+
+        3. P - Q 4
+
+White takes the offensive immediately and strives to control the centre so
+as to have ample room to deploy his forces.
+
+        3. ........               Kt - Q 2
+
+Black does not wish to relinquish the centre and also prefers the text move
+to Kt - Q B 3, which would be the more natural square for the Kt. But on
+{30} principle the move is wrong, because it blocks the action of the
+Queen's Bishop, and instead of facilitating the action of Black's pieces,
+tends, on the contrary, to cramp them.
+
+        4. B - Q B 4              P - K R 3
+
+Black is forced to pay the penalty of his previous move. Such a move on
+Black's part condemns by itself any form of opening that makes it
+necessary. White threatened Kt - Kt 5 and Black could not stop it with
+4...B - K 2, because of 5 P x P, Kt x P (if 5...P x P, 6 Q - Q 5);
+6 Kt x Kt, P x Kt; 7 Q - R 5, and White wins a Pawn and has besides a
+perfectly safe position.
+
+        5. Kt - B 3               K Kt - B 3
+        6. B - K 3                B - K 2
+        7. Q - K 2
+
+It should be noticed that White does not Castle yet. The reason is that he
+wants to deploy his forces first, and through the last move force Black to
+play P - Q B 3 to make room for the Queen as White threatens R - Q 1, to be
+followed by P x P. Black's other alternatives would finally force him to
+play P x P, thus abandoning the centre to White.
+
+        7. ........               P - B 3
+        8. R - Q 1                Q - B 2
+        9. O - O
+
+With this last move White completes his development, while Black is
+evidently somewhat hampered. A simple examination will suffice to show that
+White's position {31} is unassailable. There are no weak spots in his
+armour, and his pieces are ready for any manoeuvre that he may wish to
+carry out in order to begin the attack on the enemy's position. The student
+should carefully study this example. It will show him that it is sometimes
+convenient to delay Castling. I have given the moves as they come to my
+mind without following any standard book on openings. Whether the moves
+given by me agree or not with the standard works, I do not know, but at the
+present stage of this book it is not convenient to enter into discussions
+of mere technicalities which the student will be able to understand when he
+has become more proficient.
+
+EXAMPLE 19.
+
+        1. P - K 4                P - K 4
+        2. Kt - K B 3             P - Q 3
+        3. P - Q 4                B - Kt 5
+
+A bad move, which violates one of the principles set down, according to
+which at least one Knight should be developed before the Bishops are
+brought out, and also because it exchanges a Bishop for a Knight, which in
+the opening is generally bad, unless there is some compensation.
+
+        4. P x P                  B x Kt
+
+4...P x P loses a Pawn.
+
+        5. Q x B                  P x P
+        6. B - Q B 4              Q - B 3
+
+If Kt - B 3; Q - Q Kt 3 wins a Pawn.
+
+{32} /*    7. Q - Q Kt 3 P - Q Kt 3    8. Kt - B 3 P - Q B 3 */
+
+To prevent Kt - Q 5.
+
+[Illustration]
+
+Black, however, has no pieces out except his Queen, and White, with a
+Bishop and a Knight already developed, has a chance of obtaining an
+advantage quickly by playing Kt - Q 5 anyway. The student is left to work
+out the many variations arising from this position.
+
+These examples will show the practical application of the principles
+previously enunciated. The student is warned against playing Pawns in
+preference to pieces at the beginning of the game, especially P - K R 3 and
+P - Q R 3, which are moves very commonly indulged in by beginners.
+
+       *       *       *       *       *
+
+8. TRAPS
+
+I shall now give a few positions or traps to be avoided in the openings,
+and in which (practice has shown) beginners are often caught. {33}
+
+EXAMPLE 20.
+
+[Illustration]
+
+White plays:
+
+        1. P x P                  Kt x P
+
+Black should have recaptured with the Pawn.
+
+        2. Kt x Kt                B x Q
+        3. B x P ch               K - K 2
+        4. Kt - Q 5 mate.
+
+EXAMPLE 21.
+
+[Illustration]
+
+{34} Black, having the move, should play P - K 3. But suppose he plays
+Kt - K B 3 instead, then comes--
+
+        1. B x P ch
+
+Kt - K 5 would also give White the advantage, the threat being of course if
+B x Q; 2 B x P mate. Nor does B - R 5 help matters, because of 2 Q x B,
+1... B - K 3 leaves Black with the inferior position. But White's move in
+the text secures an immediate material advantage, and the beginner at any
+rate should never miss such an opportunity for the sake of a speculative
+advantage in position.
+
+        1. ........               K x B
+        2. Kt - K 5 ch            K moves
+        3. Kt x B
+
+and White has won a Pawn besides having the better position.
+
+There are a good many other traps--in fact, there is a book written on
+traps on the chess board; but the type given above is the most common of
+all.
+
+       *       *       *       *       *
+
+
+{35}
+
+CHAPTER II
+
+FURTHER PRINCIPLES IN END-GAME PLAY
+
+We shall now go back to the endings in search of a few more principles,
+then again to the middle-game, and finally to the openings once more, so
+that the advance may not only be gradual but homogeneous. In this way the
+foundation on which we expect to build the structure will be firm and
+solid.
+
+9. A CARDINAL PRINCIPLE
+
+[Illustration]
+
+In the position shown above, White can draw by playing P - Kt 4 according
+to the general rule that governs such cases, i.e. _to advance the Pawn that
+is free from opposition_. But suppose that White, either because he does
+not know this principle or because he {36} does not, in this case,
+sufficiently appreciate the value of its application; suppose, we say, that
+he plays 1 P - Q R 4. Then Black can win by playing 1... P - Q R 4,
+applying one of the cardinal principles of the high strategy of chess--
+
+        _A unit that holds two._
+
+In this case one Pawn would hold two of the opponent's Pawns. The student
+cannot lay too much stress on this principle. It can be applied in many
+ways, and it constitutes one of the principal weapons in the hands of a
+master.
+
+EXAMPLE 22.--The example given should be sufficient proof. We give a few
+moves of the main variation:--
+
+        1. P - R 4                P - Q R 4
+        2. K - Kt 2               K - B 5
+            (Best; see why.)
+        3. P - Kt 4               P x P
+            (Best.)
+        4. P - R 5                P - Kt 6
+        5. P - R 6                P - Kt 7
+        6. P - R 7                P - Kt 8 (Q)
+        7. P - R 8 (Q)            Q - K 5 ch
+        8. Q x Q                  K x Q
+
+This brings the game to a position which is won by Black, and which
+constitutes one of the classical endings of King and Pawns. I shall try to
+explain the guiding idea of it to those not familiar with it. {37}
+
+       *       *       *       *       *
+
+10. A CLASSICAL ENDING
+
+[Illustration]
+
+EXAMPLE 23.--In this position White's best line of defence consists in
+keeping his Pawn where it stands at R 2. As soon as the Pawn is advanced it
+becomes easier for Black to win. On the other hand, Black's plan to win
+(supposing that White does not advance his Pawn) may be divided into three
+parts. The first part will be to get his King to K R 6, at the same time
+keeping intact the position of his Pawns. (This is all important, since, in
+order to win the game, it is essential at the end that Black may be able to
+advance his rearmost Pawn one or two squares according to the position of
+the White King.)
+
+        1. K - Kt 3               K - K 6
+        2. K - Kt 2
+
+If 2 K - Kt 4, K - B 7; 3 P - R 4, P - Kt 3 will win. {38}
+
+        2. ........               K - B 5
+        3. K - B 2                K - Kt 5
+        4. K - Kt 2               K - R 5
+        5. K - Kt 1               K - R 6
+
+The first part has been completed.
+
+[Illustration]
+
+The second part will be short and will consist in advancing the R P up the
+K.
+
+        6. K - R 1                P - R 4
+        7. K - Kt 1               P - R 5
+
+This ends the second part.
+
+[Illustration] {39}
+
+The third part will consist in timing the advance of the Kt P so as to play
+P - Kt 6 when the White King is at R 1. It now becomes evident how
+necessary it is to be able to move the Kt P either one or two squares
+according to the position of the White King, as indicated previously.[2] In
+this case, as it is White's move, the Pawn will be advanced two squares
+since the White King will be in the corner, but if it were now Black's move
+the Kt P should only be advanced one square since the White King is at
+Kt 1.
+
+        8. K - R 1                P - Kt 4
+        9. K - Kt 1               P - Kt 5
+       10. K - R 1                P - Kt 6
+       11. P x P
+
+If K - Kt 1, P - Kt 7.
+
+       11. ........               P x P
+       12. K - Kt 1               P - Kt 7
+       13. K - B 2                K - R 7
+
+and wins.
+
+It is in this analytical way that the student should try to learn. He will
+thus train his mind to follow a logical sequence in reasoning out any
+position. This example is excellent training, since it is easy to divide it
+into three stages and to explain the main point of each part.
+
+The next subject we shall study is the simple {40} opposition, but before
+we devote our time to it I wish to call attention to two things.
+
+       *       *       *       *       *
+
+11. OBTAINING A PASSED PAWN
+
+When three or more Pawns are opposed to each other in some such position as
+the one in Example 24, there is always a chance for one side or the other
+of obtaining a passed Pawn.
+
+[Illustration]
+
+EXAMPLE 24.--In the above position the way of obtaining a passed Pawn is to
+advance the centre Pawn.
+
+        1. P - Kt 6               R P x P
+  If B P x P; P - R 6,
+        2. P - B 6                P x B P
+        3. P - R 6
+
+and as in this case the White Pawn is nearer to Queen than any of the Black
+Pawns, White will {41} win. Now if it had been Black's move Black could
+play
+
+        1. ........               P - Kt 3
+        2. B P x P                B P x P
+
+It would not be advisable to try to obtain a passed Pawn because the White
+Pawns would be nearer to Queen than the single Black Pawn.
+
+        3. P x P                  P x P
+
+and the game properly played would be a draw. The student should work this
+out for himself.
+
+       *       *       *       *       *
+
+12. HOW TO FIND OUT WHICH PAWN WILL BE FIRST TO QUEEN
+
+When two Pawns are free, or will be free, to advance to Queen, you can find
+out, by counting, which Pawn will be the first to succeed.
+
+EXAMPLE 25.--In this position whoever moves first wins.
+
+[Illustration] {42}
+
+The first thing is to find out, by counting, whether the opposing King can
+be in time to stop the passed Pawn from Queening. When, as in this case, it
+cannot be done, the point is to count which Pawn comes in first. In this
+case the time is the same, but the Pawn that reaches the eighth square
+first and becomes a Queen is in a position to capture the adversary's Queen
+when he makes one. Thus:
+
+        1. P - R 4                P - K R 4
+        2. P - R 5                P - R 5
+        3. P - Kt 6               P x P
+
+Now comes a little calculation. White can capture the Pawn, but if he does
+so, he will not, when Queening, command the square where Black will also
+Queen his Pawn. Therefore, instead of taking, he plays:
+
+        4. P - R 6                P - R 6
+        5. P - R 7                P - R 7
+        6. P - R 8 (Q), and wins.
+
+The student would do well to acquaint himself with various simple endings
+of this sort, so as to acquire the habit of counting, and thus be able to
+know with ease when he can or cannot get there first. Once again I must
+call attention to the fact that a book cannot by itself teach how to play.
+It can only serve as a guide, and the rest must be learned by experience,
+and if a teacher can be had at the same time, so much the faster will the
+student be able to learn. {43}
+
+       *       *       *       *       *
+
+13. THE OPPOSITION
+
+When Kings have to be moved, and one player can, by force, bring his King
+into a position similar to the one shown in the following diagram, so that
+his adversary is forced to move and make way for him, the player obtaining
+that advantage is said to have _the opposition_.
+
+[Illustration]
+
+EXAMPLE 26.--Suppose in the above position White plays
+
+        1. K - Q 4
+
+Now Black has the option of either opposing the passage of the White King
+by playing K - Q 3 or, if he prefers, he can _pass_ with his own King by
+replying K - B 4. Notice that the Kings are directly opposed to each other,
+and the number of intervening squares between them is odd--one in this
+case.
+
+The opposition can take the form shown above, {44} which can be called
+actual or close frontal opposition; or this form:
+
+[Illustration]
+
+which can be called actual or close diagonal opposition, or, again, this
+form:
+
+[Illustration]
+
+which can be called actual or close lateral opposition.
+
+In practice they are all one and the same. The Kings are always on squares
+of the same colour, there is only one intervening square between the Kings,
+and the player who has moved last "_has the opposition_." {45}
+
+Now, if the student will take the trouble of moving each King backwards as
+in a game in the same frontal, diagonal or lateral line respectively shown
+in the diagrams, we shall have what may be called _distant_ frontal,
+diagonal and lateral opposition respectively.
+
+The matter of the opposition is highly important, and takes at times
+somewhat complicated forms, all of which can be solved mathematically; but,
+for the present, the student should only consider the most simple forms.
+(An examination of some of the examples of King and Pawns endings already
+given will show several cases of close opposition.)
+
+In all simple forms of opposition,
+
+_when the Kings are on the same line and the number of intervening squares
+between them is even, the player who has the move has the opposition_.
+
+[Illustration]
+
+EXAMPLE 27.--The above position shows to advantage the enormous value of
+the opposition. The {46} position is very simple. Very little is left on
+the board, and the position, to a beginner, probably looks absolutely even.
+It is not the case, however. _Whoever has the move wins._ Notice that the
+Kings are directly in front of one another, and that the number of
+intervening squares is _even_.
+
+Now as to the procedure to win such a position. The proper way to begin is
+to move straight up. Thus:
+
+        1. K - K 2                K - K 2
+        2. K - K 3                K - K 3
+        3. K - K 4                K - B 3
+
+Now White can exercise the option of either playing K - Q 5 and thus
+passing with his King, or of playing K - B 4 and prevent the Black King
+from passing, thereby keeping the opposition. Mere counting will show that
+the former course will only lead to a draw, therefore White takes the
+latter course and plays:
+
+        4. K - B 4                K - Kt 3
+
+If 4...K - K 3; 5 K - Kt 5 will win.
+
+        5. K - K 5                K - Kt 2
+
+Now by counting it will be seen that White wins by capturing Black's Knight
+Pawn.
+
+The process has been comparatively simple in the variation given above, but
+Black has other lines of {47} defence more difficult to overcome. Let us
+begin anew.
+
+        1. K - K 2                K - Q 1
+
+Now if 2 K - Q 3, K - Q 2, or if 2 K - K 3, K - K 2, and Black obtains the
+opposition in both cases. (When the Kings are directly in front of one
+another, and the number of intervening squares between the Kings is _odd_,
+the player who has moved last has the opposition.)
+
+Now in order to win, the White King must advance. There is only one other
+square where he can go, B 3, and that is the right place. Therefore it is
+seen that in such cases when the opponent makes a so-called waiting move,
+you must advance, leaving a rank or file free between the Kings. Therefore
+we have--
+
+        2. K - B 3                K - K 2
+
+Now, it would be bad to advance, because then Black, by bringing up his
+King in front of your King, would obtain the opposition. It is White's turn
+to play a similar move to Black's first move, viz.:
+
+        3. K - K 3
+
+which brings the position back to the first variation shown. The student
+would do well to familiarise himself with the handling of the King in all
+examples of opposition. It often means the winning or losing of a game.
+
+{48} EXAMPLE 28.--The following position is an excellent proof of the value
+of the opposition as a means of defence.
+
+[Illustration]
+
+White is a Pawn behind and apparently lost, yet he can manage to draw as
+follows:
+
+        1. K - R 1 !
+
+The position of the Pawns does not permit White to draw by means of the
+actual or close opposition, hence he takes the distant opposition: in
+effect if 1 K - B 1 (actual or close opposition), K - Q 7; 2 K - B 2,
+K - Q 6 and White cannot continue to keep the lateral opposition essential
+to his safety, because of his own Pawn at B 3. On the other hand, after the
+text move, if
+
+        1. ........               K - Q 7
+        2. K - R 2                K - Q 6
+        3. K - R 3 !              K - K 7
+  {49}
+        4. K - Kt 2               K - K 6
+        5. K - Kt 3               K - Q 5
+        6. K - Kt 4
+
+attacking the Pawn and forcing Black to play 6... K - K 6 when he can go
+back to Kt 3 as already shown, and always keep the opposition.
+
+Going back to the original position, if
+
+        1. K - R 1                P - Kt 5
+
+White does not play P x P, because P - K 5 will win, but plays:
+
+        2. K - Kt 2               K - Q 7
+
+If 2...P x P ch; 3 K x P, followed by K - K 4, will draw.
+
+        3. P x P                  P - K 5
+
+and mere counting will show that both sides Queen, drawing the game.
+
+If the student will now take the trouble to go back to the examples of King
+and Pawns which I have given in this book,[3] he will realise that in all
+of them the matter of the opposition is of paramount importance; as, in
+fact, it is in nearly all endings of King and Pawns, except in such cases
+where the Pawn-position in itself ensures the win.
+
+{50}
+
+       *       *       *       *       *
+
+14. THE RELATIVE VALUE OF KNIGHT AND BISHOP
+
+Before turning our attention to this matter it is well to state now that
+_two Knights alone cannot mate_, but, under certain conditions of course,
+they can do so if the opponent has one or more Pawns.
+
+[Illustration]
+
+EXAMPLE 29.--In the above position White cannot win, although the Black
+King is cornered, but in the following position, in which Black has a Pawn,
+
+[Illustration]
+
+White wins with or without the move. Thus:
+
+        1. Kt - Kt 6              P - R 5
+
+{51} White cannot take the Pawn because the game will be drawn, as
+explained before.
+
+        2. Kt - K 5               P - R 6
+        3. Kt - B 6               P - R 7
+        4. Kt - Kt 5              P - R 8 (Q)
+        5. Kt - B 7 mate
+
+The reason for this peculiarity in chess is evident.
+
+_White with the two Knights can only stalemate the King, unless Black has a
+Pawn which can be moved._
+
+EXAMPLE 30.--Although he is a Bishop and a Pawn ahead the following
+position cannot be won by White.
+
+[Illustration]
+
+It is the greatest weakness of the Bishop, that when the Rook's Pawn Queens
+on a square of opposite colour and the opposing King is in front of the
+Pawn, the Bishop is absolutely worthless. All that Black has to do is to
+keep moving his King close to the corner square. {52}
+
+[Illustration]
+
+EXAMPLE 31.--In the above position White with or without the move can win.
+Take the most difficult variation.
+
+        1. ........               K - R 7
+        2. Kt - Kt 4 ch           K - R 8
+        3. K - B 1                P - Kt 4
+        4. K - B 2                P - R 7
+        5. Kt - K 3               P - Kt 5
+        6. Kt - B 1               P - Kt 6 ch
+        7. Kt x P mate
+
+Now that we have seen these exceptional cases, we can analyse the different
+merits and the relative value of the Knight and the Bishop.
+
+It is generally thought by amateurs that the Knight is the more valuable
+piece of the two, the chief reason being that, unlike the Bishop, the
+Knight can command both Black and White squares. However, the fact is
+generally overlooked that the Knight, at any one time, {53} has the choice
+of one colour only. It takes much longer to bring a Knight from one wing to
+the other. Also, as shown in the following Example, a Bishop can stalemate
+a Knight; a compliment which the Knight is unable to return.
+
+EXAMPLE 32.
+
+[Illustration]
+
+The weaker the player the more terrible the Knight is to him, but as a
+player increases in strength the value of the Bishop becomes more evident
+to him, and of course there is, or should be, a corresponding decrease in
+his estimation of the value of the Knight as compared to the Bishop. In
+this respect, as in many others, the masters of to-day are far ahead of the
+masters of former generations. While not so long ago some of the very best
+amongst them, like Pillsbury and Tchigorin, preferred Knights to Bishops,
+there is hardly a master of to-day who would not completely agree with the
+statements made above. {54}
+
+EXAMPLE 33.--This is about the only case when the Knight is more valuable
+than the Bishop.
+
+[Illustration]
+
+It is what is called a "_block position_," and all the Pawns are on one
+side of the board. (If there were Pawns on both sides of the board there
+would be no advantage in having a Knight.) In such a position Black has
+excellent chances of winning. Of course, there is an extra source of
+weakness for White in having his Pawns on the same colour-squares as his
+Bishop. This is a mistake often made by players. The proper way, generally,
+in an ending, is to have your Pawns on squares of opposite colour to that
+of your own Bishop. When you have your Pawns on squares of the same colour
+the action of your own Bishop is limited by them, and consequently the
+value of the Bishop is diminished, since the value of a piece can often be
+measured by the number of squares it commands. While on this subject, I
+shall also call attention to the {55} fact that it is generally preferable
+to keep your Pawns on squares of the same colour as that of the opposing
+Bishop, particularly if they are passed Pawns supported by the King. The
+principles might be stated thus:
+
+_When the opponent has a Bishop, keep your Pawns on squares of the same
+colour as your opponent's Bishop._
+
+_Whenever you have a Bishop, whether the opponent has also one or not, keep
+your Pawns on squares of the opposite colour to that of your own Bishop._
+
+Naturally, these principles have sometimes to be modified to suit the
+exigencies of the position.
+
+EXAMPLE 34.--In the following position the Pawns are on one side of the
+board, and there is no advantage in having either a Knight or a Bishop. The
+game should surely end in a draw.
+
+[Illustration] {56}
+
+EXAMPLE 35.--Now let us add three Pawns on each side to the above position,
+so that there are Pawns on both sides of the board.
+
+[Illustration]
+
+It is now preferable to have the Bishop, though the position, if properly
+played out, should end in a draw. The advantage of having the Bishop lies
+as much in its ability to command, at long range, both sides of the board
+from a central position as in its ability to move quickly from one side of
+the board to the other.
+
+[Illustration] {57}
+
+EXAMPLE 36.--In the above position it is unquestionably an advantage to
+have the Bishop, because, although each player has the same number of
+Pawns, they are not balanced on each side of the board. Thus, on the King's
+side, White has three to two, while on the Queen's side it is Black that
+has three to two. Still, with proper play, the game should end in a draw,
+though White has somewhat better chances.
+
+[Illustration]
+
+EXAMPLE 37.--Here is a position in which to have the Bishop is a decided
+advantage, since not only are there Pawns on both sides of the board, but
+there is a passed Pawn (K R P for White, Q R P for Black). Black should
+have extreme difficulty in drawing this position, if he can do it at all.
+{58}
+
+EXAMPLE 38.--Again Black would have great difficulty in drawing this
+position.
+
+[Illustration]
+
+The student should carefully consider these positions. I hope that the many
+examples will help him to understand, in their true value, the relative
+merits of the Knight and Bishop. As to the general method of procedure, a
+teacher, or practical experience, will be best. I might say generally,
+however, that the proper course in these endings, as in all similar
+endings, is: Advance of the King to the centre of the board or towards the
+passed Pawns, or Pawns that are susceptible of being attacked, and rapid
+advance of the passed Pawn or Pawns as far as is consistent with their
+safety.
+
+To give a fixed line of play would be folly. Each ending is different, and
+requires different handling, according to what the adversary proposes to
+do. Calculation by visualising the future positions is what will count.
+{59}
+
+       *       *       *       *       *
+

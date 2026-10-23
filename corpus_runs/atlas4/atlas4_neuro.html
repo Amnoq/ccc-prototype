@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-4 — neuroscience sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-4 — neuroscience sky</div>
+    <div class="sub">Hubel &amp; Wiesel 1959 (receptive fields, cat striate cortex), extracted blind — 1962 paper unobtainable, substituted per charter · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {}, "standalone": [{"id": "the-receptive-field-of-a-single-cortical-unit-ha", "display": "the receptive field of a single cortical unit (Hartline's concept applied to cortex): the restricted retinal area from which the firing of the unit could be influenced by light", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "definition", "genre": "reframed", "note": "Paper applies Hartline's (1938) receptive-field concept, introduced for retinal ganglion cells, to single cortical units; stated at p. 576."}, {"id": "excitatory-and-inhibitory-on-and-off-regions-wit", "display": "excitatory and inhibitory ('on' and 'off') regions within a cortical receptive field, defined by effects seen during the light stimulus (arbitrary terms; 'inhibition' used descriptively)", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "definition", "genre": "original", "note": "Defined at pp. 576-577: excitatory if illumination increases firing frequency; inhibitory if light suppresses maintained activity and/or is followed by an 'off' discharge. Terms called arbitrary and descriptive."}, {"id": "mutual-antagonism-of-excitatory-and-inhibitory-r", "display": "mutual antagonism of excitatory and inhibitory regions: simultaneous stimulation of the two gives a weaker response than either alone; a spot covering the whole receptive field, or diffuse illumination of the retina, is relatively ineffective", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "claim", "genre": "original", "note": "Demonstrated in Figs. 1f, 2c, 4c: whole-field spots evoked no response; diffuse retinal illumination ineffective. Basis of claim in Summary point 4."}, {"id": "side-by-side-arrangement-of-regions-a-central-ar", "display": "side-by-side arrangement of regions: a central area of one type flanked by antagonistic areas, usually elongated (long narrow centres, slit-shaped flanks); axes oriented vertically, horizontally or obliquely; flanks often asymmetrical", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Common pattern Figs. 1-3 (long narrow central region with flanks); variants Figs. 6-10; two-region side-by-side fields Fig. 4. Axes found vertical, horizontal and oblique. Summary point 5."}, {"id": "summation-within-a-region-of-the-same-type-the-s", "display": "summation within a region of the same type: the strongest response is obtained with a stimulus having approximately the shape of that region", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Shown p. 578: vertically oriented 1 x 8 degree slit over excitatory region strongly activated; strongest response with stimulus approximating the region's shape."}, {"id": "orientation-specificity-of-stimuli-a-slit-of-opt", "display": "orientation specificity of stimuli: a slit of optimum orientation strongly activates a unit while a slit at another orientation is ineffective; responses rise rapidly to a maximum as the optimum orientation is approached", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Demonstrated in Figs. 3A and 5: horizontal slit ineffective on vertically elongated field; responses increased rapidly to maximum as optimum orientation approached."}, {"id": "effective-driving-of-a-cortical-unit-requires-a-", "display": "effective driving of a cortical unit requires a stimulus specific in form, size, position and orientation, the specificity given by the arrangement of excitatory and inhibitory regions within its receptive field", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "claim", "genre": "original", "note": "Summary point 6; the paper's central organizational claim, derived from c3-c6 across Figs. 1-10."}, {"id": "movement-as-a-potent-activator-a-moving-spot-or-", "display": "movement as a potent activator: a moving spot or slit of light is generally effective and often more so than a stationary stimulus, and sometimes the only means by which a unit's firing could be influenced", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Reported pp. 581-584 and Figs. 5-8; same finding in freely moving cats (Hubel, 1959). Slit-shaped spots moved transversely were the standard movement stimulus."}, {"id": "directional-selectivity-of-movement-responses-a-", "display": "directional selectivity of movement responses: a slit gives greater responses for some directions of transverse movement than for others, in some units responding to one direction only", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Fig. 7: strong response moving down-left, feeble up-right; Fig. 8: only movements up and to the right evoked responses. Discussion offers tentative interpretation via flank asymmetry."}, {"id": "synergism-between-opposite-type-areas-with-movin", "display": "synergism between opposite-type areas with moving stimuli: regions antagonistic when tested with stationary spots (Fig. 10A) can act synergistically when a spot moves from an 'off' area into an 'on' area, producing a greatly enhanced response (Fig. 10B)", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Fig. 10A (stationary: inhibitory centre of left eye + excitatory flank of right eye cancel) vs Fig. 10B (moving spot from 'off' to 'on' area gives greatly increased response)."}, {"id": "binocular-interaction-of-45-units-36-driven-from", "display": "binocular interaction: of 45 units, 36 driven from one eye only (15 ipsilateral, 21 contralateral) and 9 from the two eyes independently; receptive fields in roughly homologous parts of the two retinas, similar in shape, orientation and region arrangement", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Counts p. 584 / Summary point 8: 36 monocular (15 ipsilateral, 21 contralateral), 9 binocular. Binocular fields in homologous retinal parts, alike in form and orientation."}, {"id": "summation-and-mutual-antagonism-between-the-rece", "display": "summation and mutual antagonism between the receptive fields of the two eyes: stimulation of corresponding regions in the two eyes summates; opposite-type regions across the eyes can antagonize, just as within a single receptive field", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Fig. 9A-9C: simultaneous stimulation of corresponding excitatory areas stronger than either alone; 'off' responses summated; antagonism shown between eyes in Fig. 10A. Summary point 10."}, {"id": "degrees-of-dominance-of-one-eye-over-the-other-i", "display": "degrees of dominance of one eye over the other: in binocular units the two eyes were not always equally effective, showing various degrees of dominance", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "claim", "genre": "original", "note": "Stated p. 584: some binocular cells activated equally from either eye, often one eye more effective; Summary point 8."}, {"id": "cortical-receptive-fields-differ-from-retinal-ga", "display": "cortical receptive fields differ from retinal ganglion-cell fields (Kuffler, 1953): no cortical unit (afferent fibres excluded) had the concentric centre-surround configuration; circular spots were often ineffective at the cortical level", "status": "conjectural", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "claim", "genre": "original", "note": "Discussion pp. 586-587: main difference from Kuffler (1953) ganglion cells is the arrangement of parts; no cortical unit had concentric fields; circular spots often ineffective. From-this-paper claim, contrast cited without re-proof."}, {"id": "hierarchical-convergence-units-activated-by-slit", "display": "hierarchical convergence: units activated by slits and boundaries may converge upon units of higher order which require still more complex stimuli for their activation", "status": "conjectural", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "conjecture", "genre": "original", "note": "Discussion p. 587: 'Units activated by slits and boundaries may converge upon units of higher order' - stated as a suggestion, no evidence offered."}, {"id": "single-unit-extracellular-recording-from-cat-str", "display": "single-unit extracellular recording from cat striate cortex in acute preparations: 24 cats, thiopental anaesthesia, succinylcholine immobilization with artificial respiration, tungsten micro-electrodes, electrolytic lesions and cresyl-violet sections to localize units", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "method", "genre": "original", "note": "Methods pp. 575-576: 24 cats, thiopental 40 mg/kg, succinylcholine immobilization, artificial respiration, atropine-dilated pupils; hydraulically positioned tungsten electrodes; electrolytic lesions + cresyl violet sections confirmed grey-matter locations; fibre vs cell-body spike criteria from Frank & Fuortes (1955)."}, {"id": "maintained-activity-in-the-light-adapted-state-c", "display": "maintained activity: in the light-adapted state cortical cells fired 0.1-10 impulses/sec in the absence of changes in retinal illumination; deepening anaesthesia suppressed it", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Results p. 576: maintained activity 0.1-10 impulses/sec, lower than in freely moving animals; deepening anaesthesia decreased it. Summary point 2."}, {"id": "two-suggested-functions-of-the-excitatory-inhibi", "display": "two suggested functions of the excitatory-inhibitory arrangements: (1) they determine the form, size and orientation of the most effective stimuli; (2) they may play a part in perception of movement", "status": "heuristic", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "conjecture", "genre": "original", "note": "Discussion p. 589: 'two further possible functions' - explicitly tentative, no test offered."}, {"id": "possible-relief-fixation-role-of-binocular-units", "display": "possible relief/fixation role of binocular units: since only corresponding retinal images summate, objects at the fixed distance should stand out in relief; the units may relate to mechanisms of binocular fixation, perhaps projecting to mid-brain nuclei regulating convergence", "status": "heuristic", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "conjecture", "genre": "original", "note": "Discussion p. 589: conditional reasoning ('If that is so...') about relief and binocular fixation; explicitly speculative ('may lead in some way')."}, {"id": "receptive-field-mapping-with-small-spots-and-sli", "display": "receptive-field mapping with small spots and slits: stimulation through a Talbot-Kuffler multibeam ophthalmoscope and by projecting spots on a screen, responsive areas marked on paper sheets as excitatory or inhibitory", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "method", "genre": "original", "note": "Methods pp. 575-576: Talbot-Kuffler ophthalmoscope for left eye (background 0.17 log m.c., stimulus up to 1.65 log m.c.) and screen projection for binocular work; paper sheets as permanent records of field shape, size, orientation."}, {"id": "cortical-cells-afferent-fibres-excluded-are-not-", "display": "cortical cells (afferent fibres excluded) are not primarily concerned with levels of diffuse illumination; this reconciles the findings with Jung and co-workers' diffuse-light results, which drove mainly afferent fibres", "status": "conjectural", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "claim", "genre": "original", "note": "Discussion pp. 586-587: discrepancy with Jung (1953, 1958) attributed to inclusion of afferent fibres in those studies (Hubel, 1960 showed ~half the recorded units were fibres); supported by Smith (1937) brightness-discrimination after striate ablation."}, {"id": "topography-of-fields-all-receptive-fields-lay-en", "display": "topography of fields: all receptive fields lay entirely within the contralateral half-field of vision, in the highly reflecting tapetal part of the cat's retina; field sizes ranged from about 4 to 10 degrees", "status": "exact", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "result", "genre": "original", "note": "Results p. 580: fields entirely within contralateral half-field; tapetal retina; sizes 4-10 degrees; inhibitory region in Fig. 4 only ~1 degree within a 12-degree field."}, {"id": "units-with-more-complex-properties-not-understan", "display": "units with more complex properties, not understandable solely in terms of separable excitatory and inhibitory areas, are now under study; with only 45 units the sample is small and possibly biased, so no classification into separate groups is attempted", "status": "conjectural", "cluster": "neuro", "chunk": "neuro_hubelwiesel59", "kind": "question", "genre": "original", "note": "Discussion pp. 587-588: complex-property units 'are now under study'; 45-unit sample 'small' and possibly biased by micro-electrode technique; classification deliberately not attempted."}], "edges": [{"a": "mutual-antagonism-of-excitatory-and-inhibitory-r", "b": "effective-driving-of-a-cortical-unit-requires-a-", "rel": "supports", "count": 1}, {"a": "side-by-side-arrangement-of-regions-a-central-ar", "b": "excitatory-and-inhibitory-on-and-off-regions-wit", "rel": "depends_on", "count": 1}, {"a": "mutual-antagonism-of-excitatory-and-inhibitory-r", "b": "excitatory-and-inhibitory-on-and-off-regions-wit", "rel": "depends_on", "count": 1}, {"a": "summation-within-a-region-of-the-same-type-the-s", "b": "orientation-specificity-of-stimuli-a-slit-of-opt", "rel": "supports", "count": 1}, {"a": "orientation-specificity-of-stimuli-a-slit-of-opt", "b": "effective-driving-of-a-cortical-unit-requires-a-", "rel": "supports", "count": 1}, {"a": "cortical-receptive-fields-differ-from-retinal-ga", "b": "effective-driving-of-a-cortical-unit-requires-a-", "rel": "supports", "count": 1}, {"a": "synergism-between-opposite-type-areas-with-movin", "b": "mutual-antagonism-of-excitatory-and-inhibitory-r", "rel": "refines", "count": 1}, {"a": "directional-selectivity-of-movement-responses-a-", "b": "movement-as-a-potent-activator-a-moving-spot-or-", "rel": "refines", "count": 1}, {"a": "summation-and-mutual-antagonism-between-the-rece", "b": "mutual-antagonism-of-excitatory-and-inhibitory-r", "rel": "generalizes", "count": 1}, {"a": "binocular-interaction-of-45-units-36-driven-from", "b": "the-receptive-field-of-a-single-cortical-unit-ha", "rel": "depends_on", "count": 1}, {"a": "degrees-of-dominance-of-one-eye-over-the-other-i", "b": "binocular-interaction-of-45-units-36-driven-from", "rel": "depends_on", "count": 1}, {"a": "hierarchical-convergence-units-activated-by-slit", "b": "effective-driving-of-a-cortical-unit-requires-a-", "rel": "generalizes", "count": 1}, {"a": "two-suggested-functions-of-the-excitatory-inhibi", "b": "mutual-antagonism-of-excitatory-and-inhibitory-r", "rel": "depends_on", "count": 1}, {"a": "two-suggested-functions-of-the-excitatory-inhibi", "b": "movement-as-a-potent-activator-a-moving-spot-or-", "rel": "depends_on", "count": 1}, {"a": "possible-relief-fixation-role-of-binocular-units", "b": "summation-and-mutual-antagonism-between-the-rece", "rel": "depends_on", "count": 1}, {"a": "maintained-activity-in-the-light-adapted-state-c", "b": "single-unit-extracellular-recording-from-cat-str", "rel": "depends_on", "count": 1}, {"a": "receptive-field-mapping-with-small-spots-and-sli", "b": "single-unit-extracellular-recording-from-cat-str", "rel": "depends_on", "count": 1}, {"a": "topography-of-fields-all-receptive-fields-lay-en", "b": "the-receptive-field-of-a-single-cortical-unit-ha", "rel": "depends_on", "count": 1}, {"a": "cortical-cells-afferent-fibres-excluded-are-not-", "b": "maintained-activity-in-the-light-adapted-state-c", "rel": "depends_on", "count": 1}], "loops": [{"chunk": "neuro_hubelwiesel59", "label": "units-with-more-complex-properties-not-understan", "node": null}, {"chunk": "neuro_hubelwiesel59", "label": "directional-selectivity-of-movement-responses-a-", "node": null}, {"chunk": "neuro_hubelwiesel59", "label": "cortical-cells-afferent-fibres-excluded-are-not-", "node": null}], "stats": {"subjects": 0, "cross_edges": 19, "concepts": 23}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

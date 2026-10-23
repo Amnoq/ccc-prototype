@@ -1,0 +1,552 @@
+=== H000 sim=0.874
+  A [c09/c22] Deninger program: 2024 theorem proves template dynamically only
+    note: missing space is the whole problem
+  B [c12/c7] Deninger program: conjectural, missing space is whole problem
+    note: space missing; 2024 theorem proves template only
+  judge: Both denote the Deninger program as conjectural: missing space is the whole problem; 2024 theorem proves template only.
+
+=== H001 sim=0.679
+  A [c04/c19] pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0
+    note: not termwise: negative archimedean nearly cancels pole
+  B [c08/c6] Prime-side positivity cancellatory: pole+arch+drain≈0 at a=0.5
+    note: pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0, a=0.5
+  judge: Identical numbers: pole 2.266297 - arch 1.196347 - drain 1.069950 ~ 0; same cancellatory positivity claim.
+
+=== H002 sim=0.662
+  A [c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    note: explicit_formula.py; 400 zeros, γ≤679.7
+  B [c08/c4] Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    note: error 4.55→1.36 as T=50→400; explicit_formula.py
+  judge: Same explicit-formula verification: error 4.55->1.36 as T=50->400, explicit_formula.py, 400 zeros.
+
+=== H003 sim=0.640
+  A [c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    note: classical; re-verified 2.26->8.30->20.62 as sigma->1+
+  B [c07/c17] 3-4-1 template re-verified from Lambda-sieve
+    note: sum 2.26->8.30->20.62 as sigma->1+
+  judge: Same 3-4-1 re-verification with identical numbers 2.26->8.30->20.62 as sigma->1+.
+
+=== H004 sim=0.613
+  A [c01/c6] Deformation → twin constant 2C₂=1.32032
+    note: 2160 twin lowers verified ≤200000; conjecture itself unproven
+  B [c07/c14] deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+    note: 2160 twin lowers <=200000; 1.3228 at z=100
+  judge: Same deformation->twin-constant derivation: 2C2=1.32032, 2160 twin lowers <=200000.
+
+=== H005 sim=0.607
+  A [c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    note: Weil 1952; Bombieri 2000 exposition
+  B [c08/c2] Weil's criterion: W(f∗f̃) ≥ 0 for all test f
+    note: Weil 1952; Bombieri 2000; Connes–Consani 2020
+  judge: Same Weil criterion W>=0 iff RH (Weil 1952); one notes it is cited not derived.
+
+=== H006 sim=0.567
+  A [c01/c17] 14c refined home: Chern roots −u·log p
+    note: face-weights = differentiated residues; closes D4↔D6 loop
+  B [c06/c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    note: primes-only input as Chern roots −u log p
+  judge: Same 14c/K-theoretic refined home: face-weights as differentiated residues, Chern roots -u log p.
+
+=== H007 sim=0.565
+  A [c03/c8] Unproven: pi_2(x)~Sx/(log x)^2 remains conjecture
+    note: pi_2 ratio 1.6091 vs 1.3203 at 200000, slow convergence
+  B [c07/c15] unproven twin conjecture pi_2(x)~S x/(log x)^2
+    note: ratio 1.6091 at 2e5; algebra not conjecture
+  judge: Same unproven twin conjecture pi_2(x)~S x/(log x)^2; same 1.6091 ratio.
+
+=== H008 sim=0.560
+  A [c02/c5] composites as zero locus of F(n), primes as support
+    note: F(n) zero-locus verified to 60
+  B [c07/c8] D3: composites as zero locus of F(n)=prod dist(n,pZ)
+    note: primes as support of F(n)
+  judge: Same D3 concept: composites as zero locus of F(n), primes as support.
+
+=== H009 sim=0.555
+  A [c01/c8] 9c closed negative: positivity blind left of Re(s)=1
+    note: positivity blind left of Re(s)=1
+  B [c04/c5] positivity blind left of Re(s)=1
+    note: series converges only for σ>1; structural
+  judge: Same proposition (positivity blind left of Re(s)=1); one is the 9c closure verdict = status update.
+
+=== H010 sim=0.550
+  A [c06/c12] Uncertainty wall: n=e^{7.433/w}; w=0.25 needs 8.2e12 primes
+    note: w=2→41; w=1→1.7e3; w=0.5→2.9e6; w=0.1→1.9e32; w=1→0.44, w=0.5→0.22 spacings
+  B [c08/c18] Uncertainty wall: w=0.5 needs 2.9e6 primes; w=0.25 infeasible
+    note: w=0.5→2.9e6 primes; w=0.25→8.2e12 infeasible
+  judge: Same uncertainty-wall table: w=0.5->2.9e6, w=0.25->8.2e12 primes.
+
+=== H011 sim=0.548
+  A [c02/c13] territory removal as soft-limit two-term split
+    note: split exact; mapping conceptual, cf. arXiv:2405.09608
+  B [c07/c13] D5: territory removal = Figueiredo soft-limit/splitting move
+    note: conceptual ID; arXiv:2405.09608
+  judge: Same D5 identification: territory removal = Figueiredo soft-limit split, arXiv:2405.09608.
+
+=== H012 sim=0.526
+  A [c07/c10] weighted infinite simplex total weight 1 = PNT
+    note: Sum w(S)->1 IS the PNT
+  B [c11/c8] PNT as total weight 1: no prior art
+    note: reframes PNT, does not reprove
+  judge: Same PNT reframing: weighted infinite simplex total weight 1.
+
+=== H014 sim=0.512
+  A [c01/c8] 9c closed negative: positivity blind left of Re(s)=1
+    note: positivity blind left of Re(s)=1
+  B [c07/c19] D9 negative: positivity blind left of Re(s)=1
+    note: Selberg parity; analysis owns continuation
+  judge: Same closure verdict: 9c/D9 negative, positivity blind left of Re(s)=1.
+
+=== H016 sim=0.485
+  A [c06/c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    note: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  B [c08/c14] 10d: function-field template from intersection pairing on C×C
+    note: F5, F7 elliptic curves; finite exact explicit formula by counting
+  judge: Same function-field template: finite exact explicit formula from F5/F7 point counts.
+
+=== H017 sim=0.477
+  A [c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    note: |w({2})|=(log2)/2≈0.347 ≠ ±1
+  B [c11/c12] no ordinary positive geometry: obstruction theorem
+    note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  judge: Same 14a obstruction theorem: |w({2})|=(log 2)/2=0.3466 not in {0,1}.
+
+=== H018 sim=0.470
+  A [c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    note: 0.999922 at 5·10⁵; PNT as total weight 1
+  B [c07/c10] weighted infinite simplex total weight 1 = PNT
+    note: Sum w(S)->1 IS the PNT
+  judge: Same PNT reframing: sum w(S)->1, 0.999922 at 5x10^5.
+
+=== H019 sim=0.470
+  A [c01/c21] Saturation is numerical, not geometric
+    note: from degree-16 saturated optimizers; small-support dead
+  B [c07/c20] saturated degree-16 optimizers lack small-support structure
+    note: F16 dense 17/17; PR 3.62; numerically not geometric
+  judge: Same finding: degree-16 saturated optimizers lack small-support structure; saturation numerical.
+
+=== H022 sim=0.441
+  A [c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    note: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  B [c11/c13] derivative identity for sum_S w(S), 10-digit verified
+    note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  judge: Same derivative identity F_z'(1)=sum w(S), 10-digit verified.
+
+=== H023 sim=0.430
+  A [c01/c11] Node 11 operator hunt OPEN, CCM live candidate
+    note: Berry–Keating conjectural; Möbius-band claim withdrawn
+  B [c11/c21] Node 11 operator hunt open; 11f live candidate
+    note: face-sum dictionary entry Lambda=mu*log explicit
+  judge: Same Node-11 status: hunt open, CCM/11f live candidate.
+
+=== H024 sim=0.427
+  A [c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    note: 0.999922 at 5·10⁵; PNT as total weight 1
+  B [c11/c8] PNT as total weight 1: no prior art
+    note: reframes PNT, does not reprove
+  judge: Same PNT-as-total-weight-1 reframing.
+
+=== H025 sim=0.413
+  A [c06/c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    note: residues quantized; 0-dim residue ∈ {±1,0}
+  B [c11/c12] no ordinary positive geometry: obstruction theorem
+    note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  judge: Same 14a obstruction: |w({2})|=0.3466 bars ordinary geometries.
+
+=== H026 sim=0.402
+  A [c01/c10] Three verified positivity kinds, none zero-detecting
+    note: none of the three kinds zero-detecting
+  B [c08/c20] Three verified positivity kinds; none detects zeros independently
+    note: bridge program complete; 10a–10e closed 2026-09-30
+  judge: Same finding: three verified positivity kinds, none zero-detecting.
+
+=== H027 sim=0.401
+  A [c01/c6] Deformation → twin constant 2C₂=1.32032
+    note: 2160 twin lowers verified ≤200000; conjecture itself unproven
+  B [c03/c7] Twin constant S(z)->2C_2=1.32032 derived from deformation
+    note: S(z)=1.367187,1.344116,1.330277,1.322754 at z=7,13,30,100
+  judge: Same twin-constant derivation: S(z)->2C2=1.32032 from deformation.
+
+=== H028 sim=0.390
+  A [c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    note: Σw(S)→1; Dirichlet GF = −ζ′/ζ²
+  B [c07/c9] D4: face-weights w(S)=(-1)^{|S|+1}log(prod S)/prod S
+    note: 1.001658 at 2e6; gf -zeta'/zeta^2 ~4 digits
+  judge: Same D4 face-weight definition w(S)=(-1)^{|S|+1} log(prod S)/prod S.
+
+=== H029 sim=0.389
+  A [c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    note: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE
+  B [c10/c18] robustness: <r>~0.528-0.535 at dim 2048-8192; Delta_3 inconclusive
+    note: z=31,37 dense; z=41 Lanczos <r>=0.528
+  judge: Same 13d result: pair-hopping GUE-like <r>=0.528 at z=41; b adds robustness detail.
+
+=== H030 sim=0.386
+  A [c02/c15] link({p}) = Δ_{⌊x/p⌋} minus p, exact recursion
+    note: link({p})=Δ_{⌊x/p⌋} minus p, exact recursion
+  B [c07/c7] D2: Lehmer phi-recursion is the link recursion
+    note: phi(x,a)=phi(x,a-1)-phi(x/p_a,a-1)
+  judge: Same D2 identification: Lehmer phi-recursion is the link recursion.
+
+=== H032 sim=0.373
+  A [c03/c7] Twin constant S(z)->2C_2=1.32032 derived from deformation
+    note: S(z)=1.367187,1.344116,1.330277,1.322754 at z=7,13,30,100
+  B [c07/c14] deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+    note: 2160 twin lowers <=200000; 1.3228 at z=100
+  judge: Same deformation->2C2=1.32032 derivation.
+
+=== H034 sim=0.369
+  A [c01/c17] 14c refined home: Chern roots −u·log p
+    note: face-weights = differentiated residues; closes D4↔D6 loop
+  B [c11/c14] refined home E_z with differentiated residues
+    note: numerics hygiene; constructions exact
+  judge: Same refined home E_z/14c with differentiated residues.
+
+=== H036 sim=0.363
+  A [c06/c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    note: 10a infinite needs window n~e^{7.4/w}
+  B [c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    note: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3
+  judge: Same number-field ledger entity; one lists HAVE, other MISS - complementary halves.
+
+=== H037 sim=0.361
+  A [c01/c21] Saturation is numerical, not geometric
+    note: from degree-16 saturated optimizers; small-support dead
+  B [c04/c11] 9c′: do degree-16 optimizers have small-support autocorrelation structure?
+    note: literature optimizers are black-box SDP/annealing
+  judge: Same issue (small-support structure of degree-16 optimizers); b is the open question, a the verdict = status update.
+
+=== H040 sim=0.352
+  A [c06/c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    note: Δ∞ contractible (D4); object must live in weights/operators
+  B [c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    note: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3
+  judge: Same ledger MISS list: Jacobian-analogue, Frobenius-like operator, intersection pairing.
+
+=== H041 sim=0.352
+  A [c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    note: 0.999922 at 5·10⁵; PNT as total weight 1
+  B [c02/c9] Σw(S) → 1 as X→∞, equivalent to PNT
+    note: S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+  judge: Same PNT reframing with converging numerics S(X)->1.
+
+=== H043 sim=0.349
+  A [c02/c3] Lehmer φ(x,a) as link recursion of Δ_x
+    note: face counts match; bijection holds exactly
+  B [c07/c7] D2: Lehmer phi-recursion is the link recursion
+    note: phi(x,a)=phi(x,a-1)-phi(x/p_a,a-1)
+  judge: Same D2: Lehmer phi(x,a) as link recursion of Delta_x.
+
+=== H045 sim=0.342
+  A [c02/c14] never put the answer in by hand; primality emerges
+    note: deepest insight applied throughout D1–D5
+  B [c07/c2] never put the answer in by hand
+    note: standing methodology, sieve tests no predicate
+  judge: Same standing methodology: never put the answer in by hand.
+
+=== H046 sim=0.338
+  A [c05/c4] verification: 80 zeros vs 1.27M prime powers to 2e7
+    note: agreement 4e-16; 8e-13 at w=0.5
+  B [c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    note: prime-side agrees with zero side to 4e-16; counts zeros
+  judge: Same verification: 80 zeros vs 1.27M prime powers, 4e-16 agreement.
+
+=== H047 sim=0.334
+  A [c04/c11] 9c′: do degree-16 optimizers have small-support autocorrelation structure?
+    note: literature optimizers are black-box SDP/annealing
+  B [c07/c20] saturated degree-16 optimizers lack small-support structure
+    note: F16 dense 17/17; PR 3.62; numerically not geometric
+  judge: Same 9c' issue; b is the open question, a the verdict (small-support dead) = status update.
+
+=== H048 sim=0.334
+  A [c01/c1] Sieve is simplicial complex Δ_z
+    note: finite prime subsets = faces; face-sum Möbius inversion
+  B [c07/c4] finite incidence complex: vertices primes <=N, faces products <=N
+    note: sieve_complex.py; corrected sieve = classical primes
+  judge: Same Delta_z simplicial/incidence complex identification.
+
+=== H050 sim=0.330
+  A [c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    note: |w({2})|=(log2)/2≈0.347 ≠ ±1
+  B [c06/c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    note: residues quantized; 0-dim residue ∈ {±1,0}
+  judge: Same 14a obstruction theorem.
+
+=== H052 sim=0.329
+  A [c05/c1] Weil prime-side zero detector (D10a step-3)
+    note: weil_detector.py; primes alone count zeros in window
+  B [c08/c7] Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    note: prime-side agrees with zero side to 4e-16; counts zeros
+  judge: Same Weil prime-side zero detector h_{T0,w}, 4e-16 agreement.
+
+=== H053 sim=0.329
+  A [c05/c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    note: Weil face-sum-native; Li Dirichlet-series-native
+  B [c08/c11] Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    note: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+  judge: Same Weil/Li native-setting verdict; b adds technical detail on Li's side.
+
+=== H054 sim=0.328
+  A [c06/c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    note: primes-only input as Chern roots −u log p
+  B [c11/c14] refined home E_z with differentiated residues
+    note: numerics hygiene; constructions exact
+  judge: Same refined/K-theoretic home with differentiated residues.
+
+=== H055 sim=0.327
+  A [c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    note: |w({2})|=(log2)/2≈0.347 ≠ ±1
+  B [c11/c22] ordinary positive region carrying w(S) exists
+    note: superseded by 14a theorem
+  judge: Same proposition (ordinary positive geometry carrying w(S)); b is the hypothesis, a the killing theorem = status update.
+
+=== H056 sim=0.323
+  A [c01/c13] Λ=μ∗log exact fuel dictionary
+    note: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ
+  B [c11/c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    note: numerically verified 3.6e-15 for n<5000
+  judge: Same Lambda=mu*log exact identity (CCM fuel dictionary).
+
+=== H058 sim=0.320
+  A [c04/c5] positivity blind left of Re(s)=1
+    note: series converges only for σ>1; structural
+  B [c07/c19] D9 negative: positivity blind left of Re(s)=1
+    note: Selberg parity; analysis owns continuation
+  judge: Same D9/positivity-blindness verdict.
+
+=== H059 sim=0.314
+  A [c01/c5] Figueiredo steer: generative process, not implementation
+    note: take generative process; never copy implementation
+  B [c07/c1] Figueiredo method transferred as process, not implementation
+    note: 8 papers 2309.15913-2603.03425, none touch primes
+  judge: Same Figueiredo steer: process not implementation.
+
+=== H061 sim=0.314
+  A [c06/c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    note: subsets S of primes ≤z (D4)
+  B [c07/c9] D4: face-weights w(S)=(-1)^{|S|+1}log(prod S)/prod S
+    note: 1.001658 at 2e6; gf -zeta'/zeta^2 ~4 digits
+  judge: Same D4 face-weight definition.
+
+=== H062 sim=0.312
+  A [c01/c9] Small-support hope: saturated optimizers fully dense
+    note: all 32 Fejér–Riesz factors fully dense
+  B [c07/c20] saturated degree-16 optimizers lack small-support structure
+    note: F16 dense 17/17; PR 3.62; numerically not geometric
+  judge: Same small-support finding: saturated optimizers fully dense.
+
+=== H064 sim=0.307
+  A [c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    note: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1
+  B [c07/c16] positivity located: primitive objects positive, signs from Moebius
+    note: 6 digits; -log delta(z) positive prime sum
+  judge: Same 'positivity located in primitives' thesis.
+
+=== H066 sim=0.306
+  A [c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    note: Σw(S)→1; Dirichlet GF = −ζ′/ζ²
+  B [c06/c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    note: subsets S of primes ≤z (D4)
+  judge: Same face-weight definition.
+
+=== H067 sim=0.304
+  A [c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    note: Weil 1952; Bombieri 2000 exposition
+  B [c12/c3] Weil positivity of W(h) equivalent to RH
+    note: Weil proved RH <=> W(h) >= 0; exact theorem
+  judge: Same Weil criterion W(h)>=0 iff RH (Weil 1952).
+
+=== H072 sim=0.285
+  A [c01/c16] 13e negative: operator deaf to primes
+    note: 13e prime-frequency probe negative
+  B [c10/c19] prime-frequency probe negative: no prime lines; hump f~0.67
+    note: z-score -0.35 arith vs -0.36 shuffled at 10 lines
+  judge: Same 13e negative: operator deaf to primes / no prime lines.
+
+=== H075 sim=0.278
+  A [c02/c2] Δ_x incidence complex of sieve to x
+    note: link-face counts match; integer bijection exact
+  B [c07/c4] finite incidence complex: vertices primes <=N, faces products <=N
+    note: sieve_complex.py; corrected sieve = classical primes
+  judge: Same finite incidence complex of the sieve.
+
+=== H079 sim=0.271
+  A [c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    note: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE
+  B [c10/c16] pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda
+    note: <r> 0.52-0.55, z>=17 all lambda; level repulsion
+  judge: Same 13d pair-hopping GUE result, <r> 0.52-0.55.
+
+=== H084 sim=0.268
+  A [c03/c11] Alternating signs come only from Moebius factor
+    note: delta vs A(X) side-by-side; same limit 0
+  B [c07/c16] positivity located: primitive objects positive, signs from Moebius
+    note: 6 digits; -log delta(z) positive prime sum
+  judge: Same thesis: alternating signs come only from the Moebius factor.
+
+=== H086 sim=0.266
+  A [c05/c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    note: z<=19; Cholesky all eigenvalues>0, min 1.1e-8
+  B [c08/c12] 10c: Selberg λ² sieve on the complex, optimized weights
+    note: 10c executed: Selberg quadratic form on complex, small cases
+  judge: Same 10c Selberg lambda^2 quadratic form execution on the complex.
+
+=== H089 sim=0.257
+  A [c01/c8] 9c closed negative: positivity blind left of Re(s)=1
+    note: positivity blind left of Re(s)=1
+  B [c04/c8] 9c-as-prove-RH-by-stronger-positivity closed
+    note: closed by blindness + parity + saturation
+  judge: Same 9c closure: prove-RH-by-stronger-positivity closed.
+
+=== H093 sim=0.252
+  A [c03/c10] Positive primitives: Lambda>=0, log zeta>0, delta(z)>0
+    note: delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+  B [c07/c16] positivity located: primitive objects positive, signs from Moebius
+    note: 6 digits; -log delta(z) positive prime sum
+  judge: Same positive-primitives thesis (Lambda>=0, log zeta>0, delta(z)>0).
+
+=== H094 sim=0.251
+  A [c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    note: Weil 1952; Bombieri 2000 exposition
+  B [c08/c3] 10a: Weil's criterion in the energy language
+  judge: Same Weil criterion; b is the 10a energy-language reformulation.
+
+=== H095 sim=0.250
+  A [c05/c6] resonance: negative prime sum adds to W when zero inside
+    note: w=1: prime-sum -0.5925, W=2.2472
+  B [c08/c8] Resonance: oscillatory prime sum negative exactly when zero in window
+    note: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+  judge: Same resonance: prime sum negative exactly when zero in window (-0.59).
+
+=== H098 sim=0.240
+  A [c05/c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    note: T0=50: 0.6827 -> 0.2977 -> 0.0007
+  B [c08/c9] Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+    note: leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+  judge: Same leakage/concentration numbers 0.68->0.30->0.0007.
+
+=== H100 sim=0.237
+  A [c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    note: Σw(S)→1; Dirichlet GF = −ζ′/ζ²
+  B [c02/c8] canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S
+    note: x-independent canonical face-weight definition
+  judge: Same canonical face-weight definition.
+
+=== H104 sim=0.229
+  A [c02/c17] bare Δ_∞ is contractible infinite simplex, no topology
+    note: bare Δ_∞ infinite simplex, contractible, no topology
+  B [c07/c11] naive hope: geometry lived in the bare incidence complex
+    note: Delta_infty contractible; replaced by c12
+  judge: Same bare-Delta_infty subject: b the failed hope, a the contractibility fact - complementary claims, one entity.
+
+=== H107 sim=0.228
+  A [c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    note: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE
+  B [c10/c17] shuffled weights also GUE (0.524): TBRE-class generic chaos
+    note: shuffled control 0.524; TBRE-class generic chaos
+  judge: Same 13d experiment; b is the shuffled control already noted in a - control arm of one entity.
+
+=== H109 sim=0.226
+  A [c02/c8] canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S
+    note: x-independent canonical face-weight definition
+  B [c06/c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    note: subsets S of primes ≤z (D4)
+  judge: Same D4 face-weight definition.
+
+=== H119 sim=0.217
+  A [c03/c19] 9c: stronger geometric positivity RH-ward; deformations->trig polynomials
+    note: deformations may parametrize admissible trig polynomials
+  B [c04/c1] sieve deformations parametrize new positivity for constraining zeros
+    note: deformation_kill.py; exact zero-freeness, heavier pole
+  judge: Same deformations-parametrize-positivity hypothesis; a the 9c hope, b the killed D8 seed = status update.
+
+=== H126 sim=0.212
+  A [c02/c1] ψ(x) as signed face-sum over Δ_x
+    note: exact at x=30,100,500
+  B [c07/c6] D1: Chebyshev psi(x) as signed face-sum
+    note: Moebius reframed; classical theorems in new clothes
+  judge: Same D1: psi(x) as signed face-sum.
+
+=== H129 sim=0.210
+  A [c03/c19] 9c: stronger geometric positivity RH-ward; deformations->trig polynomials
+    note: deformations may parametrize admissible trig polynomials
+  B [c04/c8] 9c-as-prove-RH-by-stronger-positivity closed
+    note: closed by blindness + parity + saturation
+  judge: Same 9c entity; a the deformation-route hope, b the closure = status update.
+
+=== H134 sim=0.209
+  A [c06/c16] Ordinary AHBL positive geometry, residues ±1
+    note: killed by theorem; signs OK, magnitudes impossible
+  B [c11/c22] ordinary positive region carrying w(S) exists
+    note: superseded by 14a theorem
+  judge: Same failed posit (ordinary positive geometry carrying w(S)); b general phrasing, a AHBL-specific - one entity.
+
+=== H137 sim=0.209
+  A [c02/c9] Σw(S) → 1 as X→∞, equivalent to PNT
+    note: S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+  B [c07/c10] weighted infinite simplex total weight 1 = PNT
+    note: Sum w(S)->1 IS the PNT
+  judge: Same PNT-as-total-weight-1 reframing.
+
+=== H138 sim=0.209
+  A [c02/c18] weighted infinite complex as the limit object
+    note: limit object = weighted complex, not bare
+  B [c07/c12] geometry lives in the weights, not the bare complex
+    note: zeta zeros regulate the face-sum
+  judge: Same weighted-not-bare thesis; a the limit object, b where geometry lives - one evolving thesis.
+
+=== H146 sim=0.203
+  A [c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    note: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1
+  B [c03/c9] Signed face-weights as the fundamental object
+    note: replaced by positive primitives; signs are expansion artifact
+  judge: Same 'fundamental object' question; b the replaced signed-weights stance, a the primitives replacement = status update.
+
+=== M001 sim=0.192
+  A [c03/c6] Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z)
+    note: 0.071430 vs 0.071429 at z=7,x=200000
+  B [c05/c16] optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    note: Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+  judge: same delta(z)=prod(1-|R_p|/p) total-weight identity; S/x->delta and Qmin/delta=1 verify the same object
+
+=== M002 sim=0.191
+  A [c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    note: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3
+  B [c12/c7] Deninger program: conjectural, missing space is whole problem
+    note: space missing; 2024 theorem proves template only
+  judge: both denote the missing Deninger object: Jacobian-role space + Frobenius operator + pairing
+
+=== M005 sim=0.190
+  A [c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    note: Σw(S)→1; Dirichlet GF = −ζ′/ζ²
+  B [c02/c11] weights signed, alternate with face dimension
+    note: weights signed, alternate with face dimension
+  judge: both denote the signed face-weights w(S); alternation is immediate from (-1)^{|S|+1} in the formula
+
+=== M014 sim=0.185
+  A [c02/c7] no known positive region for the sieve
+    note: no known positive region; gap stands
+  B [c07/c5] no positive region in finite complex; cutoff-N dependent
+    note: Betti [74,101,26,0] at N=1000; killed naive hope
+  judge: same 'no positive region' verdict; b gives the finite-complex Betti-number evidence for a's gap
+
+=== M020 sim=0.181
+  A [c02/c11] weights signed, alternate with face dimension
+    note: weights signed, alternate with face dimension
+  B [c06/c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    note: subsets S of primes ≤z (D4)
+  judge: both denote the signed face-weights w(S); D4 note restates the (-1)^{|S|+1} alternation
+
+=== M044 sim=0.159
+  A [c06/c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    note: five-part anatomy derived from curve case
+  B [c09/c19] FF Jacobian: R1–R6 all satisfied, the template itself
+    note: reference template cited
+  judge: both denote the Weil-positivity reference template; a gives the five-part anatomy, b cites the FF Jacobian instance
+
+=== M079 sim=0.141
+  A [c06/c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    note: H=200,1000,5000,20000; mean-square amplifier real
+  B [c08/c19] Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008
+    note: MV ratio 0.995→1.007; large-sieve ratios 0.004, 0.008
+  judge: matching numerics 0.9948->1.0073 vs 0.995->1.007 at T0=20000: same Montgomery-Vaughan mean-value verification
+

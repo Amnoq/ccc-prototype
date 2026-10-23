@@ -1,0 +1,509 @@
+\]
+
+Note that when we write (supp ×h→)∗ we really mean the corresponding derived functor.
+
+\[
+
+3.8. Hecke eigensheaves and the geometric Langlands conjecture. Now let E be a local system E of rank_n on X. A perverse sheaf K on Bunn is called a Hecke
+
+eigensheaf with eigenvalue E, if K_6= 0 and we have the following isomorphisms: \tag{3.9}
+
+\]
+
+\[
+
+ıi (K) ≃-\to ∧iE ⊠ K[-i(n - i)], i = 1,...,n,
+
+\]
+
+: Hi
+
+n
+
+iE is the ith exterior power of E. Here [−i(n − i)] indicates the shift in cohomological degree to the right by i(n − i), which is the complex dimension of the
+
+fibers of
+
+where ∧
+
+h→.
+
+Let us see that this condition really corresponds to an old condition from Theorem_1 matching the Hecke and Frobenius eigenvalues. So let X be a curve over Fq
+
+and σ an ndimensional unramified \ell-adic representation of Gal(F/F). Denote by E the corresponding
+
+### 46  EDWARD FRENKEL
+
+\ell-adic local system on X. Then it follows from the definitions that
+
+\[
+
+Tr(Frx,Ex) = Tr(\sigma(Frx),Q_n) = Xn
+
+### \ell zi(σx)
+
+### i=1
+
+(see Sect. 2.2 for the definition of zi(σx)), and so
+
+\[
+
+Tr(Frx,∧ iEx) = si(z_1(\sigma x),...,zn(\sigma x)),
+
+\]
+
+where si is the ith elementary symmetric polynomial.
+
+Recall that the passage from complexes of sheaves to functions intertwined the operations of inverse and direct image on sheaves with the operations of
+
+pull-back and integration
+
+of functions. Therefore we find that the function fq(K) on
+
+### GLn(F)\\GLn(A)/GLn(O) = Bunn(Fq)
+
+associated to a Hecke eigensheaf K satisfies
+
+### Ti,x(fK) = q i(n−i)
+
+si(z1(σx),... ,zn(σx))fK
+
+x
+
+(the qx-factor comes from the cohomological degree shift). In other words, if K is a Hecke eigensheaf with eigenvalue E, then the function fK associated to it
+
+via the Grothendieck dictionary is a Hecke eigenfunction whose Hecke eigenvalues are equal to the Frobenius eigenvalues of σ, which is the condition of
+
+Theorem_1 (for an irreducible local system E). The difference between the classical Hecke operators and their geometric counterparts is that the former are
+
+defined pointwise while the latter are defined globally on the curve X. In the classical setting therefore it was not clear whether for a given automorphic
+
+representation π one could always find a Galois representation (or an \ell-adic local system) with the same Frobenius eigenvalues as the Hecke eigenvalues of π
+
+(part of Theorem_1 is the statement that there is always a unique one). In the geometric setting this question is mute, because the very notion of a Hecke
+
+eigensheaf presumes that we know what its eigenvalue E is. That is why the geometric Langlands correspondence in the geometric setting is a map in one
+
+direction: from local systems to Hecke eigensheaves.
+
+We are now naturally led to the geometric Langlands conjecture for GLn, whose formulation is due to Drinfeld and Laumon \[57\]. This statement makes sense when
+
+X is over
+
+Fq or over C, and it is now a theorem in both cases. Note that Bunn is a disjoint union of connected components Bund corresponding to vector bundles of degree
+
+d.
+
+n
+
+Theorem 3. For each irreducible rank n local system E on X there exists a perverse sheaf AutE on Bunn which is a Hecke eigensheaf with respect to E. Moreover,
+
+AutE is irreducible on each connected component Bund
+
+n ,
+
+irreducible rank n Hecke eigensheaves local systems on X −→
+
+on Bunn
+
+### E  −→  AutE
+
+This theorem was proved by Deligne for GL1 (we recall it in the next section) and by Drinfeld in the case of GL2 \[39\] (see \[28\], Sect. 6, for a review).
+
+These works motivated the conjecture in the case of GLn, which has been proved in \[55, 56\] (these works were
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 47
+
+also influenced by \[57, 58\]). In the case when X is over C we can replace “perverse sheaf” in the statement of Theorem_3 by “D-module”.36 The reader may be
+
+wondering what has become of the cuspidality condition, which was imposed in Sect. 2.3. It has a transparent geometric analogue (see \[57, 55\]). As shown in
+
+\[55\], the geometric cuspidality condition is automatically satisfied for the Hecke eigensheaves AutE associated in \[55\] to irreducible local systems E. One
+
+cannot emphasize enough the importance of the fact that E is an irreducible rank_n local system on X in the statement Theorem_3. It is only in this case that we
+
+expect the Hecke eigensheaf AutE to be as nice as described in the theorem. Moreover, in this case we expect that AutE is unique up to an isomorphism. If E is
+
+not irreducible, then the situation becomes more complicated. For example, Hecke eigensheaves corresponding to local systems that are direct sums of_n rank_1
+
+local systems – the so-called geometric Eisenstein series – have been constructed in \[59, 60, 61\]. The best case scenario is
+
+when these rank 1 local systems are pairwise non-isomorphic. The corresponding Hecke eigensheaf is a direct sum of infinitely many irreducible perverse sheaves
+
+on Bunn, labeled by the lattice Z n
+
+. More general geometric Eisenstein series are complexes of perverse
+
+sheaves. Moreover, it is expected that in general there are several non-isomorphic Hecke eigensheaves corresponding to such a local system, so it is appropriate
+
+to talk not about a single Hecke eigensheaf AutE, but a category AutE of Hecke eigensheaves with eigenvalue E.
+
+An object of AutE is by definition a collection (K,ıi), where K is a Hecke eigensheaf with eigenvalue E and ıi are isomorphisms (3.9). In general, we should
+
+allow objects to be complexes (not necessarily perverse sheaves), but in principle there are several candidates for AutE depending on what kinds of complexes we
+
+allow (bounded, unbounded, etc.).
+
+The group of automorphisms of E naturally acts on the category AutE. Namely, to
+
+) to
+
+\[
+
+an automorphism g of E we assign the functor AutE \to AutE sending (F,{ıi}\lambda \in P+ (F,{g ◦ıi}\lambda \in P+). For example,in the case when E is the direct
+
+sum of rank_1 local systems that are pairwise non-isomorphic,the group of automorphisms of E is the_n-dimensional torus. Its action on the geometric Eisenstein
+
+series sheaf constructed in [59,61] amounts to a Z_n
+
+\]
+
+-grading on this sheaf, which comes from the construction expressing it as a direct
+
+sum of irreducible objects labeled by Z n
+
+. For non-abelian groups of automorphisms the
+
+corresponding action will be more sophisticated.
+
+This means that, contrary to our naive expectations, the most difficult rank n local system on X is the trivial local system E0. Its group of automorphisms is
+
+GLn which acts non-trivially on the corresponding category AutE0
+
+. Some interesting Hecke eigensheaves
+
+are unbounded complexes in this case, and a precise definition of the corresponding category that would include such complexes is an open problem \[62\]. Note
+
+that for X = CP1
+
+the trivial local system is the only local system. The corresponding category AutE0 can probably be described rather explicitly. Some results in this direction
+
+are presented in \[59\], Sect. 5.
+
+36We remark that the proof of the geometric Langlands correspondence, Theorem_3, gives an alternative proof of the classical Langlands correspondence,
+
+Theorem_1, in the case when the Galois representation σ is unramified everywhere. A geometric version of the Langlands correspondence for general ramified local
+
+systems is much more complicated (see the discussion in Sect. 9.8).
+
+### 48  EDWARD FRENKEL
+
+But is it possible to give an elementary example of a Hecke eigensheaf? For_n = 1 these are rank one local systems on the Picard variety which will be discussed
+
+in the next section.
+
+They are rather easy to construct. Unfortunately, it seems that for n > 1 there are no elementary examples. We will discuss in Part III the construction of
+
+Hecke eigensheaves using conformal field theory methods, but these constructions are non-trivial.
+
+However, there is one simple Hecke eigensheaf whose eigenvalue is not a local system
+
+| on X, but a complex of local systems. This is the constant sheaf C on Bunn. Let us apply |  |  |
+
+| --- | --- | --- |
+
+| the Hecke functors Hi to the constant sheaf. By definition, |  |  |
+
+\[
+
+| | Hi(C) = (supp \times h | \to)^*h ←^*(C) = (supp \times h \to)^*(C). |
+
+\]
+
+| As we explained above, the fibers of supp ×h→ are isomorphic to Gr(i,n), and so Hi(C) |  |  |
+
+| is the constant sheaf on Bunn with the fiber being the cohomology H∗ |  (Gr(i,n), C). Let |  |
+
+| us write |  |  |
+
+| H | ∗ (Gr(i,n), C) = ∧ | i (C[0] \oplus C[−2] \oplus ... \oplus C[−2(n − 1)]) |
+
+| (recall that V [n] means V placed in cohomological degree −n). Thus, we find that |  |  |
+
+| (3.10) Hi(C) ≃ ∧iE | ′ |  |
+
+0 ⊠ C[−i(n − i)], i = 1,... ,n,
+
+where
+
+### E ′
+
+0 = CX[−(n − 1)] \oplus CX[−(n − 3)] \oplus ... \oplus CX [(n − 1)]
+
+is a “complex of trivial local systems” on X. Remembering the cohomological degree shift in formula (3.9), we see that formula (3.10) may be interpreted as
+
+saying that the constant sheaf on Bunn is a Hecke eigensheaf with eigenvalue E′
+
+0 .
+
+The Hecke eigenfunction corresponding to the constant sheaf is the just the constant function on GLn(F)\\GLn(A)/GLn(O), which corresponds to the trivial
+
+one-dimensional representation of the ad\`elic group GLn(A). The fact that the “eigenvalue” E′ is not a
+
+local system, but a complex, indicates that something funny is going on with the trivial representation. In fact, it has to do with the so-called “Arthur’s SL2”
+
+part of the parameter of a general automorphic representation \[63\]. The precise meaning of this is beyond the scope of the present article, but the idea is
+
+as follows. Arthur has conjectured that if we want to consider unitary automorphic representations of GLn(A) that are not necessarily cuspidal, then the true
+
+parameters for those are_n-dimensional representations not of Gal(F/F), but of the product Gal(F/F) × SL2. The homomorphisms whose restriction to the SL2 factor
+
+are trivial correspond to the so-called tempered representations. In the case of GLn all cuspidal unitary representations are tempered, so the SL2 factor does
+
+not play a role. But what about the trivial representation of GLn(A)? It is unitary, but certainly not tempered (nor cuspidal). According to \[63\], the
+
+corresponding parameter is the the_n-dimensional representation of Gal(F/F) × SL2, which is trivial on the first factor and is the irreducible representation of
+
+the second factor. One can argue that it is this non-triviality of the action of Arthur’s SL2 that is observed geometrically in the cohomological grading
+
+discussed above.
+
+In any case, this is a useful example to consider.
+
+4. Geometric abelian class field theory
+
+In this section we discuss the geometric Langlands correspondence for_n = 1, i.e., for rank one local systems. This is a particularly simple case, which is well
+
+understood. Still,
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 49
+
+it already contains the germs of some of the ideas and constructions that we will use for local systems of higher rank.
+
+Note that because CP1 is simply-connected, there is only one (unramified) rank one local system on it, so the (unramified) geometric Langlands correspondence is
+
+vacuous in this case. Hence throughout this section we will assume that the genus of X is positive.
+
+4.1. Deligne’s proof. We present here Deligne’s proof of the_n = 1 case of Theorem_3, following \[57, 59, 26\]; it works when X is over Fq and over C, but when
+
+X is over C there are additional simplifications which we will discuss below. For_n = 1 the moduli stack Bunn is the Picard variety Pic of X classifying line
+
+bundles on X. Recall that Pic has components Picd labeled by the integer d which corresponds to the degree of the line bundle. The degree zero component Pic0 is
+
+the Jacobian variety Jac of X, which is a complex g-dimensional torus H1 (X, OX )/H1 (X,Z).
+
+Conjecture 3 means the following in this case: for each rank one local system E on X there exists a perverse sheaf (or a D-module, when X is over C) AutE on Pic
+
+which satisfies the following Hecke eigensheaf property:
+
+### (4.1)  h ←∗(AutE) ≃ E ⊠ AutE,
+
+where h← : X × Pic → Pic is given by (L,x) 7→ L(x). In this case the maps h← and h→ are one-to-one, and so the Hecke condition simplifies.
+
+\[
+
+To construct AutE, consider the Abel-Jacobi map \pi d : S dX \to Picd sending the divisor D to the line bundle OX (D).37 If d > 2g-2, then \pi d is a projective
+
+bundle, with the fibers -1 (L) = PH0 (X,L) being projective spaces of dimension d - g. It is easy to construct a
+
+\]
+
+### π
+
+d
+
+local system E(d) on S dX satisfying an analogue of the Hecke eigensheaf property
+
+### d>2g−2 S
+
+### (4.2)  eh ←∗(E (d+1)) ≃ E ⊠ E (d)
+
+,
+
+dX × X → S d+1X is given by (D,x) 7→ D + [x]. Namely, let
+
+where eh← : S
+
+symd nX
+
+: Xn → S
+
+be the symmetrization map and set
+
+E (d) = (symd (E ⊠n ))Sd
+
+∗ .
+
+\[
+
+So we have rank one local systems E(d) on S dX,d > 2g - 2, which satisfy an analogue \tag{4.2}
+
+\]
+
+\[
+
+of the Hecke eigensheaf property, and we need to prove that they descend to Picd,d > 2g-2, under the Abel-Jacobi maps \pi d. In other words, we need to prove
+
+that the restriction to each fiber of \pi d is a constant sheaf. Since E(d) is a local system, these restrictions
+
+of E(d)
+
+are locally constant. But the fibers of πd are projective spaces, hence simply-connected.
+
+Therefore any locally constant sheaf along the fiber is constant! So there exists a local
+
+∗ (Autd
+
+\[
+
+system Autd E on Picd such that E(d) = \pi E). Formula \tag{4.2}
+
+\]
+
+\[
+
+implies that the sheaves
+
+\]
+
+d
+
+\[
+
+Autd E form a Hecke eigensheaf on S d>2g-2 Picd. We extend them by induction to the remaining components Picd,d \le 2g - 2 by using the Hecke eigensheaf
+
+property \tag{4.1}
+
+\]
+
+\[
+
+. 37by definition, the sections of OX(D) are meromorphic functions f on X such that for any x \in X we have - ordx f \le Dx, the coefficient of [x] in D
+
+\]
+
+### 50  EDWARD FRENKEL
+
+To do that, let us observe that for for any x ∈ X and d > 2g−1 we have an isomorphism Autd ∗ (Autd (L) = L(x). This implies that for any N-tuple of
+
+### E ≃ E∗ x \otimes h← x E), where h← x
+
+points (xi),i = 1,... ,N and d > 2g − 2 + N we have a canonical isomorphism
+
+N
+
+(4.3) Autd O ∗ ∗ ∗ (Autd+N )),
+
+### E ← ◦ ... ◦ h ←
+
+### E ≃ xi \otimes (h x1 xN E
+
+### i=1
+
+and so in particular we have a compatible (i.e., transitive) system of canonical isomorphisms
+
+### N N
+
+(4.4)  O ∗ ∗ ∗ (Autd+N )) ≃ O ∗ ∗ ∗ (Autd+N )),
+
+### E ← E ← ◦ ... ◦ h ←
+
+### xi \otimes (h x1 ... h← xN E yi \otimes (h y1 yN E
+
+\[
+
+i=1 i=1 for any two N-tuples of points (xi) and (yi) of X and d > 2g - 2.We now define Autd E on Picd with d = 2g - 1 - N as the right hand side of formula
+
+\tag{4.3}
+
+\]
+
+\[
+
+using any N-tuple of points (xi),i = 1,...,N. 38 The resulting sheaf on Picd is independent of these choices. To see that, choose a point x_0 \in X and using
+
+\tag{4.3}
+
+\]
+
+\[
+
+with d = 2g - 1 write
+
+\]
+
+Aut2g−1 ∗ ) \otimes N \otimes (h ← ∗ ← ∗ (Aut2g−1+N )).
+
+E = (E ◦ ... ◦ h
+
+### x0 x0 x0 E
+
+\[
+
+Then the isomorphism \tag{4.4}
+
+\]
+
+\[
+
+with d = 2g - 1 - N, which we want to establish, is just the isomorphism \tag{4.4}
+
+\]
+
+\[
+
+with d = 2g - 1, which we already know, to which we apply N times h←^* and tensor with (E^*) \otimes N on both sides. In the same way we show that the resulting
+
+\]
+
+### x0 x0
+
+sheaves Autd E on Picd with d = 2g − 1 − N satisfy the Hecke property (4.1): it follows from the corresponding property of the sheaves Autd E with d > 2g − 2.
+
+Thus, we obtain a Hecke eigensheaf on the entire Pic, and this completes Deligne’s proof of the geometric Langlands conjecture for_n = 1. It is useful to note
+
+that the sheaf AutE satisfies the following additional property that generalizes the Hecke eigensheaf property (4.1). Consider the natural morphism_m : Pic ×
+
+Pic → Pic taking (L, L ′ ) to L \otimes L ′
+
+. Then
+
+we have an isomorphism
+
+(AutE) ≃ AutE ⊠ AutE .
+
+### m∗
+
+The important fact is that each Hecke eigensheaves AutE is the simplest possible perverse sheaf on Pic: namely, a rank one local system. When X is over C, the
+
+D-module
+
+corresponding to this local system is a rank one holomorphic vector bundle with a holomorphic connection on Pic. This will not be true when n, the rank of E, is
+
+greater than
+
+1.
+
+4.2. Functions vs. sheaves. Let us look more closely at the case when X is defined over a finite field. Then to the sheaf AutE we attach a function on F ×\\A
+
+×/O ×, which is the set of Fq-points of Pic. This function is a Hecke eigenfunction fσ with respect to a one-dimensional Galois representation σ corresponding
+
+to E, i.e., it satisfies the equation fσ(L(x)) = σ(Frx)fσ(L) (since σ is one-dimensional, we do not need to take the trace). 38we could use instead formula
+
+(4.3) with d = d ′ − N with any d ′ > 2g − 2
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 51
+
+We could try to construct this function proceeding in the same way as above. Namely, we define first a function f ′
+
+on the set of all divisors on X by the formula
+
+### σ
+
+!
+
+′ X [xi ] Y )
+
+### f ni
+
+ni = σ(Frxi
+
+σ .
+
+### i i
+
+This function clearly satisfies an analogue of the Hecke eigenfunction condition. It remains to show that the function f ′
+
+σ descends to Pic(Fq), namely, that if two divisors D and D′ ′ (D) = f ′ (D′ ). This is equivalent to the identity
+
+are rationally equivalent, then f

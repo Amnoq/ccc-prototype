@@ -1,0 +1,210 @@
+Newman's Short Proof of the Prime Number Theorem
+Author(s): D. Zagier
+Source: The American Mathematical Monthly, Vol. 104, No. 8 (Oct., 1997), pp. 705-708
+Published by: Mathematical Association of America
+
+REFERENCES
+Linked references are available on JSTOR for this article:
+http://www.jstor.org/stable/2975232?seq=1&cid=pdf-reference#references_tab_contents
+You may need to log in to JSTOR to access the linked references.
+
+range of content in a trusted digital archive. We use information technology and tools to increase productivity and
+facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.
+
+http://about.jstor.org/terms
+
+                 Mathematical Association of America is collaborating with JSTOR to digitize, preserve and
+                 extend access to The American Mathematical Monthly
+
+                                                All use subject to http://about.jstor.org/terms
+PriRemcealNumbe
+           that threThenotaotreiomn .f(7r(x) g(x)x)as("fx aoo.nd g are asymptotical y equal")
+           Newman's Short Proof of the Prime
+                              Number Theorem
+
+                                          D. Zagier
+           Dedicated to the Prime Number Theorem on the occasion of its 100th birthday
+
+   The prime number theorem, that the number of primes < x is asymptotic to
+x/log x, was proved (independently) by Hadamard and de la Vallee Poussin in
+1896. Their proof had two elements: showing that Riemann's zeta function ;(s)
+has no zeros with Sc(s) = 1, and deducing the prime number theorem from this.
+An ingenious short proof of the first assertion was found soon afterwards by the
+same authors and by Mertens and is reproduced here, but the deduction of the
+prime number theorem continued to involve difficult analysis. A proof that was
+elementaty in a technical sense-it avoided the use of complex analysis-was
+found in 1949 by Selberg and Erdos, but this proof is very intricate and much less
+clearly motivated than the analytic one. A few years ago, however, D. J. Newman
+found a very simple version of the Tauberian argument needed for an analytic
+proof of the prime number theorem. We describe the resulting proof, which has a
+beautifully simple structure and uses hardly anything beyond Cauchy's theorem.
+
+means that lim<,Ot(x)/g(x) = 1, and that O(t) denotes a quantity bounded in
+absolute value by a fixed multiple of f. We denote by 7T(X) the number of primes
+< x.
+
+                                         log x
+
+   We present the argument in a series of steps. Specifically, we prove a sequence
+of properties of the three functions
+
+   ;(s) = E sS 4)(S) = E s , #(x) = , logp (s E ¢, x E );
+              n=l           n       p       P      pvx
+
+we always use p to denote a prime. The series defining ;(s) (the Riemann zeta-
+function) and 4>(s) are easily seen to be absolutely and locally uniformly conver-
+gent for S(s) > 1, so they define holomorphic functions in that domain.
+
+ (I).    ;(s)      =    Hlp(l           _        p-S)-1           for         S(s)       >   1.
+
+Proof: From unique factorization and the absolute convergence of ;(s) we have
+
+ ;(s) 5£ (2 23r3 * ww ) = [l ( r F ) = I1 1 _ -5 ( (s) > 1) .
+           r2,       r3,       *    -    20      P    r20         P    p
+
+(II). ;(s)- 1 extends holomotphically to M(s) > 0.
+
+1997]         NEWMAN'S SHORT PROOF OF THE PRIME NUMBER THEOREM                               705
+
+                            All use subject to http://about.jstor.org/terms
+        J nS - xS J dx = sJ s uS+z dx < n<um<anX+l | uS+I | = n(5)+
+Proof: For M(s) > 1 we have
+
+                        1    E    1   JC°        1   E    Jn+lf           1   1    )
+
+The series on the right converges absolutely for M(s) > O because
+
+          n+l t 1 1 i n+l x du I s I Isl
+
+by the mean value theorem.
+
+(III). #(x)= O(x).
+
+Proof: For n E N we have
+
+                             ( ° ) ( 2n ) 2 ( n ) 2 I1 p = e(2n)- o(n)
+
+and hence, since #(x) changes by O(log x) if x changes by 0(1), #(x)-#(x/2)
+ < Cx for any C > log 2 and all x 2 xO = xO(C). Summing this over
+x, x/2, . . ., x/2r, where x/2r 2 xO > x/2r+1, we obtain #(x) < 2Cx + 0(1).
+
+(n). ;(S) + o and 42(s) - 1/(s - 1) is holomorphic for M(s) 2 1.
+
+Proof: For R(s) > 1, the convergent product in (I) implies that ;(s) 7s 0 and that
+
+                   _ ; ( ) = E g P = q>(s) + E g P g
+
+The final sum converges for M(s) > 2v S° this and (II) imply that <>(s) extends
+meromorphically to R(s) > -, with poles only at s = 1 and at the zeros of ;(s),
+and that, if ;(s) has a zero of order ju at s = 1 + ior (or E 1R, or 7s O) and a zero of
+order v at 1 + 2ior(so ,u, v 2 0 by (II)), then
+
+ lim e<)(1 + e) = 1, lim e<)(1 + e _ ior ) = -u, and lim e<)(1 + e + 2ior ) = - v.
+
+The inequality
+
+            2 (2 + r)4)(1 + e + ira) = , gP (pia/2 +p-io.X2)4 0
+
+then implies that 6-8 ju - 2v 2 O, so ju = O, i.e., ;(1 + ior) 7s O.
+
+(V) | ( )2 dx is a convergent integral.
+
+Proof: For R(s) > 1 we have
+
+                       log p w d(x) w (x) w
+
+                   P Ps 11 Xs sl1 X5+1 dx = sl e-st t? (et) dt.
+
+Therefore (V) is obtained by applying the following theorem to the two functions
+f(t) = (et)e-t-1 and g(z) = b(z + 1)/(z + 1)-1/z, which satisfy its hy-
+potheses by (III) and (IV).
+
+               NEWMAN'S SHORT PROOF OF THE PRIME NUMBER THEOREM [October
+  706
+
+                             All use subject to http://about.jstor.org/terms
+(VI). #(x) x.
+Analytic Theorem. Let f(t) (t 2 O) be a bounded and locally integrableff>nction and
+suppose that the function g(z) = t t(t)e-Zt dt (R(z) > O) extends holomorphically
+
+to M(z) 2 O. Then J f (t) dt exists (and equals g(O)).
+
+Proof: Assume that for some A > 1 there are arbitrarily large x with #(x) 2 Ax.
+Since # is non-decreasing, we have
+
+                    AX (t) - t AX)X - t A A - t
+                 1 t2 dt 2 | t2 dt = J1 t2 dt > O
+
+for such x, contradicting (V). Similarly, the inequality #(x) < Ax with A < 1
+would imply
+
+                    x#(t)-t xAx-t 1A-t
+
+                     IAX t dt < | 2 dt
+again a contradiction for A fixed and x big enough.
+   The prime number theorem follows easily from (VI), since for any e > 0
+
+                     # ( x) = , log p < E log x = qr ( x) log x,
+                                 p<x       p<x
+
+               #(x) 2 E logp 2 , (1 - e)logx
+                         x 1 e < p <XX x <p <x
+
+                                             = (1 - e) log x[X7 (x) + o(xl e )] .
+
+Proof of the Analytic Theorem. For T > O set gT(z) = JTt(t)e-t dt. This is
+
+clearly holomorphic for all z. We must show that limToOgT(0) = g(O).
+   Let R be large and let C be the boundary of the region {z E ¢l Izl < R,
+B(z) 2-b}, where 6 > 0 is small enough (depending on R) so that g(z) is
+holomorphic in and on C. Then
+
+              g(°) gT(0) 2gri Jc(g(Z) gT(z))e (1 + R2 ) z
+
+by Cauchy's theorem. On the semicircle C+= C n {R(z) > o} the integrand is
+bounded by 2B/R2, where B = maxt 2ol t(t)l, because
+
+                          JTZ JT S ( Z )
+and
+
+                            e ( 1 + R 2 )- = e ( ) * R 2
+Hence the contribution to g(0)-gT(0) from the integral over C+ is bounded in
+absolute value by B/R. For the integral over C_= C rA {S(z) < 0} we look at
+g(z) and gT(Z) separately. Since gT is entire, the path of integration for the
+integral involving gT can be replaced by the semicircle C' = {z E ¢l lZl = R,
+X(z) < O}, and the integral over C' is then bounded in absolute value by 2FrB/R
+
+1997]         NEWMAN S SHORT PROOF OF THE PRIME NUMBER THEOREM                          707
+
+                            All use subject to http://about.jstor.org/terms
+Finally, the remaining integral over C_ tends to 0 as T oo because the integrand
+by exactly the same estimate as before since
+
+            Ig (z) | = |Tf(t)e-zt dt < BJT | e-ztl dt = ( St(z) < O)
+
+is the product of the function g(z)(1 + z2/R2)/z, which is independent of T, and
+the function eZT, which goes to 0 rapidly and uniformly on compact sets as T > oo
+in the half-plane M(z) < 0. Hence limsuplg(O)-gT(0)l < 2B/R. Since R is
+arbitrary this proves the theorem. Tx
+
+Historical remarks. The "Riemann" zeta function ;(s) was first introduced and
+studied by Euler, and the product representation given in (I) is his. The connection
+with the prime number theorem was found by Riemann, who made a deep study of
+the analytic properties of ;(s). However, for our purposes the nearly trivial
+analytic continuation property (II) is sufficient. The extremely ingenious proof in
+(III) is in essence due to Chebyshev, who used more refined versions of such
+arguments to prove that the ratio of #(x) to x (and hence also of 1T(X) to x/log x)
+lies between 0.92 and 1.11 for x sufficiently large. This remained the best result
+until the prime number theorem was proved in 1896 by de la Vallee Poussin and
+Hadamard. Their proofs were long and intricate. (A simplified modern presenta-
+tion is given on pages 41-47 of Titchmarsh's book on the Riemann zeta function
+[T].) The very simple proof reproduced in (IV) of the non-vanishing of ;(s) on the
+line M(s) = 1 was given in essence by Hadamard (the proof of this fact in de la
+Vallee Poussin's first paper had been about 25 pages long) and then refined by de
+la Vallee Poussin and by Mertens, the version given by the former being particu-
+larly elegant. The Analytic Theorem and its use to prove the prime number
+theorem as explained in steps (V) and (VI) above are due to D. J. Newman. Apart
+from a few minor simplifications, the exposition here follows that in Newman's
+original paper [N] and in the expository paper [K] by J. Korevaar.
+    We refer the reader to P. Bateman and H. Diamond's survey article [B] for a
+beautiful historical perspective on the prime number theorem.

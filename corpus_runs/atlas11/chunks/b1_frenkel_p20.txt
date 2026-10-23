@@ -1,0 +1,597 @@
+D-module on BunG. Finally, as explained at the end of Sect. 8.3, OpLg (X) is naturally identified with the space of all connections on the oper bundle FLG on X.
+
+For a Lg-oper χ on X we denote by Eχ the corresponding LG-bundle with connection.
+
+Theorem 10. (1) The D′ ) is non-zero if and only if there exists a
+
+−h∨ -module \Delta x(Vχx (X) such that χx ∈ OpLg (Dx) is the restriction of χ to Dx. global Lg-oper on X, χ ∈ OpLg (2) If this holds, \Delta x(Vχx ) depends
+
+only on χ and is independent of x in the sense that for any other point y ∈ X, if χy = χ\|Dy ) ≃ \Delta y(Vχy ). , then \Delta x(Vχx (3) For any χ ∈ OpLg (X)
+
+the D-module \Delta x(Vχx ) \otimes K−1/2 is holonomic and it is a Hecke eigensheaf with the eigenvalue Eχ. Thus, for a LG-local system E on X that admits the
+
+structure of an oper χ, we now have a Hecke eigensheaf AutE whose existence was predicted in Conjecture_1: namely, AutE = \Delta x(Vχx ) \otimes K−1/2
+
+.
+
+In the rest of this section we will give an informal explanation of this beautiful result and discuss its generalizations.
+
+\[
+
+9.3. How do conformal blocks know about the global curve? We start with the first statement of Theorem 10. Let us show that if \chi x does not extend to a
+
+regular oper \chi defined globally on the entire curve X, then \Delta x(V\chi x) = 0. For that it is sufficient to show that all fibers of \Delta x(V\chi x) are
+
+zero. But these fibers are just the spaces of coinvariants V\chi x/g P P
+
+### g). The key to proving that these spaces are all
+
+\]
+
+\[
+
+out · V\chi x, where g out = \Gamma(X\\x,P \times
+
+G
+
+### 106  EDWARD FRENKEL
+
+To explain what we mean by this, let us look at the case when P is the trivial Gbundle. Then the space of coinvariants is Hg(Vχx
+
+\[
+
+) = V\chi x/gout. Let \varphi be an element of the
+
+corresponding space of conformal blocks, which we interpret as a linear functional on the
+
+). Then ϕ satisfies the Ward identity (compare with (7.3))
+
+space Hg(Vχx
+
+\[
+
+\varphi(\eta · v) = 0, ∀v \in V\chi x, \eta \in gout. Now observe that if we choose a local coordinate z at x, and write \eta = \eta a(z)J a near x, then
+
+\tag{9.7}
+
+\]
+
+\[
+
+\varphi(\eta · v) = Z a (z) · v)dz, \eta a(z)\varphi(J
+
+\]
+
+where the contour of integration is a small loop around the point x.
+
+Consider the expression ϕ(J a (z) · v)dz. Transformation properties of the current J a (z) imply that this is an intrinsically defined (i.e,
+
+coordinate-independent) meromorphic oneform ω
+
+a (v) on the punctured disc D×
+
+### x at x. The right hand side of (9.7) is just the residue
+
+\[
+
+a (v)\eta a at x. Therefore the Ward identities \tag{9.6}
+
+\]
+
+\[
+
+assert that the residue
+
+\]
+
+of the one-form ω
+
+\[
+
+a (v)\eta a for any \eta a \in C[X\\x] is equal to zero. By (the strong version of) the residue of \omega theorem, this is equivalent to saying that \omega a
+
+(v), which is a priori a one-form defined on D\times
+
+x
+
+actually extends holomorphically to a one-form on X\\x (see \[20\], Sect. 9.2.9). In general, this one-form will have a pole at x (which corresponds to z = 0)
+
+which is determined by the vector v. But if we choose as v the vacuum vector v−h∨ , then J a (z)v−h∨ is regular,
+
+a (z) · v−h∨ )dz is actually regular everywhere on X.
+
+and so we find that this one-form ϕ(J This one-form is actually nothing but the chiral one-point function corresponding to ϕ a (z)dz. 80 Is is usually denoted
+
+by physicists as hJ a (z)iϕdz and the insertion of the current J (we use the subscript ϕ to indicate which conformal block we are using to compute this
+
+correlation function). It is of course a well-known fact that in a conformal field theory with Kac-Moody symmetry this one-point function is a holomorphic
+
+one-form on X, and we have just sketched a derivation of this fact from the Ward identities.
+
+Now the point is that the same holomorphy property is satisfied by any current of any
+
+a (z). For example, consider the stress tensor T(z) in a conformal
+
+chiral algebra in place of J field theory with central charge c (see \[20\], Sect. 9.2). If c = 0, then T(z) transforms as
+
+an operator-valued quadratic differential, and so the corresponding one-point function
+
+### hT(z)iϕ(dz) 2
+
+, which is a priori defined only on Dx, is in fact the restriction to Dx of a
+
+\[
+
+holomorphic (c-number) quadratic differential on the entire curve X, for any conformal block \varphi of the theory. If c_6= 0, then, as we discussed above, the
+
+intrinsic object is the
+
+### 2 6 T(z). Hence we find that for a conformal
+
+operator-valued projective connection ∂
+
+### z − c
+
+block ϕ normalized so that its value on the vacuum vector is_1 (such ϕ can always be found if the space of conformal blocks is non-zero) the expression ∂ 2 6
+
+hT(z)iϕ, which
+
+### z − c
+
+is a priori a projective connection on Dx, is the restriction of a holomorphic projective
+
+connection on the entire X.
+
+Now let us consider the Segal-Sugawara current S(z), which is a certain degeneration
+
+### ∨. We have seen that ∂ 2
+
+of the stress tensor of the chiral algebra Vk(g) as k → −h
+
+### z − S(z)
+
+transforms as a projective connection on D×
+
+x . Suppose that the space of conformal blocks
+
+80this notation only makes sense on an open subset of X where the coordinate z is well-defined, but the one-form is defined everywhere on X
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 107
+
+\[
+
+Cg(V\chi x) is non-zero and let \varphi be a non-zero element of Cg(V\chi x). Then there exists a vector A \in V\chi x such that \varphi(A) = 1. Since S(z) is
+
+central, S(z)v is regular at z = 0 for any A \in V\chi x
+
+\]
+
+. Therefore we have a projective connection on the disc Dx (with a local
+
+coordinate z)
+
+### ∂ 2 2
+
+\[
+
+z - \varphi(S(z) · A) = \partial z - hS(z)A(x)i\varphi,
+
+\]
+
+and, as before, this projective connection is necessarily the restriction of a holomorphic
+
+### 81
+
+projective connection on the entire X.
+
+Suppose that g = sl2. Then by definition of Vχx
+
+, where χx is a (c-number) projective
+
+connection ∂
+
+z − v(z) on Dx, S(z) acts on Vχx by multiplication by v(z). Therefore if the
+
+\[
+
+(V\chi x) is non-zero and we choose \varphi \in Csl2 (V\chi x) as above,
+
+\]
+
+space of conformal blocks Csl2 then
+
+### ∂ 2 2 2
+
+\[
+
+z - \varphi(S(z) · A) = \partial z - \varphi(v(z)A) = \partial z - v(z),
+
+\]
+
+z − v(z) extends to a projective connection on X! Therefore the
+
+(Vχx ), or equivalently, the space of coinvariants, is non-zero
+
+space of conformal blocks Csl2 only if the parameter of the module Vχx extends from the disc Dx to the entire curve X.
+
+The argument is exactly the same for a general SL2-bundle P on X. The point is that
+
+### S(z) commutes with the slb
+
+2, and therefore twisting by a SL2-bundle does not affect it.
+
+\[
+
+We conclude that for g = sl2 we have \Delta x(V\chi x) = 0 unless the projective connection \chi x
+
+\]
+
+extends globally.
+
+Likewise, for a general g we have an operator-valued Lg-oper on the disc Dx, which is
+
+written as
+
+### \ell
+
+X
+
+∂z + p−1 + Si(z)pi
+
+### i=1
+
+in terms of the coordinate z. By definition, it acts on the bgx-module Vχx as the numeric
+
+### Lg-oper χx given by the formula
+
+### \ell
+
+X
+
+∂z + p−1 + vi(z)pi
+
+### , vi(z) ∈ C\[\[z\]\]
+
+### i=1
+
+\[
+
+in terms of the coordinate z. If \varphi \in C P (V\chi x) is a non-zero conformal block and A \in V\chi x
+
+g
+
+is such that ϕ(A) = 1, then in the same way as above it follows from the Ward identities that the Lg-oper
+
+### \ell
+
+X
+
+∂z + p−1 + ϕ(Si(z) · A)pi
+
+### i=1
+
+extends from Dx to the curve X. But this oper on Dx is nothing but χx! Therefore, if the
+
+P (Vχx ) is non-zero, then χx extends to X.
+
+space of conformal blocks C
+
+g
+
+\[
+
+Thus, we obtain the =only if” part of Theorem 10, \tag{1}
+
+\]
+
+\[
+
+. The =if” part will follow from the explicit construction of \Delta x(V\chi x) in the case when \chi x does extend to X, obtained from the quantization of the
+
+Hitchin system (see Sect. 9.5 below). 81this relies on the fact, proved in [20], Sect. 9.3, that the Ward identities (9.6) for the currents J (z)
+
+a
+
+automatically imply the Ward identities for all other currents of V−h∨ (g), such as S(z)
+
+### 108  EDWARD FRENKEL
+
+\[
+
+9.4. The Hecke property. We discuss next parts \tag{2}
+
+\]
+
+\[
+
+and (3) of Theorem 10. In particular, we will see that the Hecke operators correspond to the insertion in the correlation function of certain vertex operators.
+
+We will assume throughout this section that we are given a Lg-oper defined globally on the curve X, and \chi x is its restriction to the disc Dx.
+
+\]
+
+Up to now, in constructing the localization functor, we have used the realization of BunG as the double quotient (9.4). This realization utilizes a single point
+
+of X. However, we know from the Weil construction (see Lemma 2) that actually we can utilize all points of X instead. In other words, we have an isomorphism
+
+BunG ≃ G(F)\\G(A)/G(O),
+
+which is actually how BunG appeared in the theory of automorphic representations in the first place. (Here we use our standard notation that F is the field of
+
+rational functions on
+
+\[
+
+X, A = Q′ Q x\in X Fx and O = x\in X Ox.) This allows us to construct sheaves of coinvariants
+
+\]
+
+by utilizing all points of X. We just insert the vacuum representation of our chiral algebra (or its quotient) at all points of X other than the finitely many
+
+points with non-trivial insertions. The analogy with automorphic representations has in fact been used by E.
+
+Witten \[5\] in his ad\`elic formulation of conformal field theory.
+
+\[
+
+More precisely, we define a localization functor \Delta X assigning to a collection (Mx)x\in X | of (bgx,G(Ox))-modules of level_k a D′ -module \Delta
+
+X((Mx)x\in X) on BunG. This functor is_k | |
+
+\]
+
+| --- | --- |  |
+
+\[
+
+| well-defined if Mx is the quotient of the vacuum module Vk(g)x for x \in X\S, where S is | | | a finite subset of X. If we set Mx = Vk(g)x for all x \in X\S,
+
+then this D′ | -module may_k |
+
+\]
+
+| be constructed by utilizing the set of points S as follows. We realize BunG as the double |  |  |
+
+| quotient |  |  |
+
+| Y G(Fx)/ BunG ≃ Gout\ | Y G(Ox), |  |
+
+\[
+
+| x\in S | x\in S | | where Gout = G(C[X\S]). We then have the localization functor \Delta S | | (Mx)x\in S_7\to \Delta S((Mx)x\in S). If we have Mx = Vk(g)x
+
+for all x \in X\\S, then we have an isomorphism \Delta X((Mx)x\in X) ≃ \Delta S((Mx)x\in S). Likewise, we have \tag{9.8}
+
+\]
+
+\[
+
+\Delta S∪y((Mx)x\in S,Vk(g)y) ≃ \Delta S((Mx)x\in S).
+
+\]
+
+In other words, inserting the vacuum module at additional points does not change the sheaf of coinvariants.
+
+\[
+
+We apply this in our setting. Let us take S = {x} and set Mx = V\chi x and My = V-h∨ (g)y for all y_6= x. Then we have \Delta X (V\chi x).,(V-h∨ (g)y)y\in X\\x)
+
+≃ \Delta x(V\chi x Using the Ward identities from the previous section,it is not difficult to show that the D-module in the left hand side will remain the same
+
+if we replace each V-h∨ (g)y by its quotient V\chi y where \chi y = \chi\|Dy
+
+\]
+
+. Thus, we find that
+
+\[
+
+\Delta x(V\chi x) ≃ \Delta X((V\chi y)y\in X).
+
+\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 109
+
+The object on the right hand side of this formula does not depend on x, but only on
+
+\[
+
+) from the point x \in X stated in part \tag{2}
+
+\]
+
+\[
+
+of \chi . This proves independence of \Delta x(V\chi x
+
+Theorem 10.We use a similar idea to show the Hecke property stated in part (3) of Theorem 10.Recall the definition of the Hecke functors from Sect. 6.1. We need
+
+to show the existence of a compatible collection of isomorphisms
+
+\[
+
+ı\lambda : H\lambda(\Delta x(V\chi x)) ∼-\to V E\chi), \lambda \in P+, \lambda ⊠ \Delta x(V\chi x where H\lambda are the Hecke functors defined in formula
+
+(6.1). This property will then imply the Hecke property of the untwisted D-module \Delta x(V\chi x) \otimes K-1/2
+
+\]
+
+.
+
+Let us simplify this problem and consider the Hecke property for a fixed point y ∈ X.
+
+Then we consider the correspondence
+
+### Heckey
+
+### h←y h→y
+
+### ւ ց
+
+BunG  BunG
+
+where Heckey classifies triples (M,M′
+
+\[
+
+,\beta), where M and M′ are G-bundles on X and \beta is an isomorphism between the restrictions of M and M′ to X\\y. As explained in Sect. 6.1, the fibers of
+
+h\to are isomorphic to the affine Grassmannian Gry = G(Fy)/G(Oy) and hence
+
+\]
+
+y
+
+we have the irreducible D-modules ICλ on Heckey. This allows us to define the Hecke functors Hy on the derived category of twisted D-modules on BunG by the
+
+formula
+
+\[
+
+H\lambda,y(F) = h \to (h ←^* (F) \otimes IC\lambda).
+
+\]
+
+### y∗ y
+
+The functors Hλ are obtained by “gluing” together Hλ,y for y ∈ X. Now the specialization of the Hecke property (9.9) to y ∈ X amounts to the existence of a
+
+compatible collection of isomorphisms (9.10) ıλ : Hλ,y(\Delta x(Vχx )) ∼−→ Vλ \otimes C \Delta x(Vχx ), λ ∈ P+, where Vλ is the irreducible representation of LG
+
+of highest weight λ. We will now explain how Beilinson and Drinfeld derive (9.9). Let us consider a “two-point” realization of the localization functor,
+
+namely, we choose as our set of points S ⊂ X the set {x,y} where x_6= y. Applying the isomorphism (9.8) in this case, we find that (9.11) \Delta x(Vχx ) ≃
+
+\Delta x,y(Vχx
+
+,V−h∨ (g)y).
+
+\[
+
+Consider the Grassmannian Gry. Choosing a coordinate_t at y, we identify it with Gr = G((t))/G[[t]]. Recall that we have a line bundle Le\otimes (-h ∨) on Gr.
+
+Let again IC\lambda be the irreducible D-module on Gr corresponding to the G[[t]]-orbit Gr\lambda . The tensor
+
+\]
+
+∨) is a D−h∨ -module on Gr, where D−h∨ is the sheaf of differential
+
+product ICλ \otimes Le\otimes(−h
+
+### ∨)
+
+operators acting on Le\otimes(−h
+
+. By construction, the Lie algebra bg maps to D−h∨ in such a
+
+### ∨. Therefore the space of global sections
+
+\[
+
+way that the central element_1 is mapped to -h \Gamma(Gr,IC\lambda \otimes Le\otimes (-h ∨)) is a bg-module of the critical level, which we denote by W\lambda .
+
+For example, if \lambda = 0, then the corresponding G[[t]]-orbit consists of one point of Gr, the image of_1 \in G((t)). It is easy to see that the
+
+corresponding bg-module W_0 is nothing
+
+\]
+
+### 110  EDWARD FRENKEL
+
+\[
+
+but the vacuum module V-h∨ (g). What is much more surprising is that for any \lambda \in P+ there is an isomorphism82 \tag{9.12}
+
+\]
+
+\[
+
+W\lambda = \Gamma(Gr,IC\lambda \otimes Le\otimes (-h ∨)) ≃ V\lambda \otimes C V-h∨ (g) and in addition \tag{9.13}
+
+\]
+
+\[
+
+Hi (Gr,IC\lambda \otimes Le\otimes (-h ∨)) = 0 i > 0. The unexpected isomorphism \tag{9.12}
+
+\]
+
+\[
+
+, proved by Beilinson and Drinfeld, is the key to establishing the Hecke property of the sheaves \Delta x(V\chi x
+
+\]
+
+).
+
+Indeed, it follows from the definitions that the cohomological components of the image of the Hecke functor Hλ,y are
+
+(9.14) R_i Hλ,y(\Delta x,y(Vχx (Gr,ICλ \otimes Le\otimes(−h ∨) )). ,V−h∨ (g)y)) ≃ \Delta x,y(Vχx ,Hi In other words, applying the Hecke correspondence Hλ,y at
+
+the point y to the sheaf of coinvariants corresponding to the insertion of Vχx at the point x ∈ X is again a sheaf of coinvariants, but corresponding to the
+
+insertion of Vχx at the point x ∈ X and the insertion of Hi (Gr,ICλ \otimes Le\otimes(−h ∨) ) at the point y ∈ X. Thus, from the point of view of conformal
+
+field theory the Hecke functors at y correspond simply to the insertion in the correlation function of particular vertex operators at the point y. These vertex
+
+operators
+
+∨) ) (in view of (9.13)).
+
+\[
+
+come from the bg-module W\lambda = \Gamma(Gr,IC\lambda \otimes Le\otimes (-h The identification \tag{9.14}
+
+\]
+
+\[
+
+, together with (9.12), (9.13) and (9.11), imply the Hecke property (9.10). How does one prove (9.12)? The proof in [15] is based on the usage of the
+
+=renormalized
+
+♮ at the critical level. To illustrate the construction of U ♮
+
+enveloping algebra” U
+
+, consider
+
+the Segal-Sugawara operators Sn as elements of the completed enveloping algebra Ue−h∨ (bg) at the critical level. The homomorphism of Lie algebras bg → D−h∨ ,
+
+where D−h∨ is the
+
+### ∨)
+
+algebra of global differential operators acting on Le\otimes(−h
+
+, gives rise to a homomorphism
+
+\[
+
+of algebras Ue-h∨ (bg) \to D-h∨ . It is not difficult to see that under this homomorphism Sn,n > -2, go to_0. On the other hand, away from the critical level Sn
+
+goes to a non-zero differential operator corresponding to the action of the vector field -(k + h ∨)t_n\partial t
+
+\]
+
+. The
+
+limit of this differential operator divided by k + h ∨ as k → −h ∨ is well-defined in D−h∨ .
+
+Hence we try to adjoin to Ue−h∨ (bg) the elements Ln = lim 1
+
+k+h∨ Sn,n > −2.
+
+### k→−h∨
+
+It turns out that this can be done not only for the Segal-Sugawara operators but also for the “positive modes” of the other generating fields Si(z) of the
+
+center z(g). The result
+
+is an associative algebra U ♮ ♮ → D−h∨ . It
+
+equipped with an injective homomorphism U
+
+follows that U ♮ acts on any bg-module of the form Γ(Gr,F), where F is a D−h∨ -module on Gr, in particular, it acts on Wλ. Using this action and the fact that
+
+V−h∨ (g) is an irreducible U ♮

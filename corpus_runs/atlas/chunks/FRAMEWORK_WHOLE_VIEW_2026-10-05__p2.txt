@@ -1,0 +1,160 @@
+- **Empirical root:** the triple anomaly at the start of the
+  primes — 2 and 3 adjacent (no integer between); −1,0,1 symmetric
+  about 0; 2 the only even prime. *Observed.*
+- **The chain (logical, not temporal):** 3 presupposes 2, 2
+  presupposes 1, 1 presupposes 0. *Derived.*
+- **2→3:** derived conditional on generativity — a polarity persists
+  but only alternates; propagation requires the *relation* to be
+  carried, hence a third term relating to the relation (mediation).
+  *Derived-conditional (P2).*
+- **Completeness:** {0,1,2,3} = ground, term, relation, meta-relation;
+  every n≥4 is iteration of 3 (recursion, not a new kind) — the
+  "primes" of the ontology; 4+ is "composite."
+  *Derived-conditional (relational-order classifier).*
+- **Self-adjointness:** Within this framework, self-adjointness is
+  interpreted as a formal realization of reciprocal self-relation —
+  in Dirac notation, reaching (H|ψ⟩) and responding (⟨ψ|H) as one act.
+  Exhibited concretely in the 11l Kirchhoff operator, with the claim
+  split three ways (external review, 2026-10-05):
+  (a) the vertex relations cancel the boundary form — *derived
+  calculation*, checkable from the displayed equations;
+  (b) the Kirchhoff conditions define a self-adjoint operator on the
+  stated domain — *theorem* (standard quantum-graph theory;
+  Kirchhoff conditions satisfy the Kostrykin–Schrader criteria;
+  cancellation alone establishes symmetry, the domain argument
+  completes it);
+  (c) this adjoint symmetry as a realization of reciprocal
+  self-relation — *interpretive correspondence*, not part of the
+  operator theorem. The tones are the vertex relations made audible.
+  *Interpretive; heuristic as a claim about the zeta H.*
+- **Three witnesses, one form:** the operator (11l), the method
+  (tonight's self-correction exhibits an analogous
+  proposing/responding structure), the metaphysics — worked
+  independently, same shape, no per-subject adjustments. *Exhibited.*
+- **Purpose:** not a law — a perspective, an understanding. The
+  substrate is the floor already underfoot.
+
+---
+
+## IX. The methodology — the instrument is the subject
+
+1. **Numbered decision tree** (DECISION_TREE.md): every node — date,
+   question, options, decision, evidence, status. Cite node numbers;
+   reopen by number. *Standing practice.*
+2. **Epistemic labels** on every claim: exact theorem /
+   computationally verified / conjectural / heuristic / utterance.
+   The labels sit alongside the tree: labels say what kind each claim
+   is, the tree says where the exploration has been.
+3. **Derive, don't invent:** observe in the work's own forms; formalize
+   only in its terms and only when asked. (The user's 2026-10-04
+   correction, standing.)
+4. **The sieve as method:** the tree never argues for a truth; it
+   eliminates what's false, and what remains is the verdict — as the
+   sieve never tests primality.
+5. **Failures are the method's strength:** do not guard against every
+   failure upfront; let them occur, catch them, absorb them as
+   antibodies. (11n/11o: the method caught its own numerical artifact
+   and is now stronger — the scan-step lesson is in AGENTS.md.)
+6. **Dead ends documented once, rigorously** (archive_dead_ends.md,
+   COMPLETE_MAP §V): fourteen closed, each with its mechanism.
+7. **Observation before interrogation;** re-verify known answers
+   (intelligence is a self-referential loop; bias against re-verifying
+   is counterproductive).
+8. **The goal is not to overturn** the probabilistic paradigm — its
+   predictions are real and verified — but to **light the floor it
+   stands on**: the deterministic, relational generating structure
+   beneath the statistics.
+
+---
+
+## X. Open questions — the live frontier
+
+1. **The operator (Node 11):** CCM is the live candidate; the full
+   Frobenius-like operator question is open. The hunt now knows the
+   structure it needs (prime-labeled closed orbits — 11l) and that
+   the structure is real arithmetic geometry (Deninger, theorem).
+2. **The paper (Node 7):** outline drafted (PAPER_OUTLINE.md);
+   awaiting approval on title/scope + prior-art re-search.
+3. **The RH bridge (Node 8):** heuristic by nature — three verified
+   positivity kinds + one live operator + one exact fuel dictionary.
+4. **The Fock fork:** 13d stands as universality; an operator that
+   HEARS primes is unanswered.
+5. **Physical build:** tetrahedral sieve + territory wall — files not
+   yet made.
+
+---
+
+## XI. Novelty boundaries (prior-art search 2026-09-30)
+
+| Claim | Standing |
+|---|---|
+| Simplicial-sieve framing (Δ_z) | Appears new (framing); math classical |
+| PNT as "weighted simplex, total weight 1" | Appears new (statement) |
+| Deformation → 2C₂ (generative move) | Appears new (move); constant classical |
+| Fock-over-primes identification | SHARED — independent prior art exists |
+| Fock spectral program (13d/13e) | Appears new |
+| CCM reimplementation | Independent verification of published work |
+| Λ = μ∗log as fuel dictionary | Identity classical; the *use* is ours |
+| Derivation of relationship | The author's; formalized 2026-10-05 |
+
+**Rule:** no public novelty claim without re-search. The paper is an
+expository/synthesis vehicle, not a breakthrough claim.
+
+---
+
+## XII. Bridge ledger — what licenses each transition
+
+*(Added 2026-10-05 from external review.) The method records failures;
+this records what licenses each successful crossing — the reader
+should be able to inspect every bridge.*
+
+| Transition | License (what the reader should see) |
+|---|---|
+| Circle construction → sieve | Exact construction rules (unit-circle substrate, new diameter at each unshared n, marks spammed forward); equivalence with Eratosthenes by proof sketch (both mark multiples of each found prime; the next unmarked is prime), with computational checks at every tested cutoff — the argument proves, the checks confirm |
+| Sieve → face-sum | Faces = finite prime subsets (squarefree products); coefficients = (−1)^{\|S\|+1}log(∏S); finite-cutoff conditions stated (D1 verified numerically; D2 bijection verified) |
+| Face-sum → analytic function | The Dirichlet-series identity holds for Re(s)>1, with convergence justified analytically; the reported partial sums are numerical checks (D4). The boundary limit Σw(S)→1 is the Prime Number Theorem itself — a classical theorem, not proved by the computations |
+| Prime geometry → spectrum | Graph lengths (log p), operator domain (Kirchhoff vertex conditions), secular equation G(k)=0, reproducible computations (node11l_graph.py + json/png; controls 11n/11o) |
+| Mathematical structure → ontology | Explicit interpretive premise (§VIII), labeled as interpretive correspondence — never presented as part of an operator theorem |
+
+---
+
+## XIII. Review log
+
+- **2026-10-05:** external review received on the working documents.
+  Five points, all adopted: (1) the central-distinction rewording
+  (§I — the next-unmarked rule is shared with Eratosthenes; novelty
+  is in the construction and its derivatives); (2) the F_prior repair
+  (D3 — the product runs over prior primes; the p=n factor zeroed the
+  original at primes); (3) recurrence vs shared coincidence for prime
+  powers (§I); (4) the three-way split of the self-adjointness claim
+  (§VIII — calculation / theorem / interpretation); (5) this bridge
+  ledger. The review was specific, checkable, and self-correcting —
+  the method working from outside.
+
+- **2026-10-05 (round 2):** second review pass on the repaired
+  document; all prior repairs acknowledged as substantive. Three
+  priority repairs, all adopted: (1) the bridge ledger's convergence
+  sentence rewritten — partial sums are numerical checks, the PNT
+  limit is a classical theorem, and the Eratosthenes row now
+  distinguishes proof sketch from computational checks; (2) indexing
+  conventions stated — D3 restricted to n≥2 (n=1's empty product
+  would misclassify it), D1's finite-cutoff condition (identity
+  equals ψ(x) iff z≥x) now in the section itself; (3) the
+  interpretation label made consistent — the self-adjointness opening
+  hedged as interpretive, "procedural self-adjointness" replaced
+  with analogous-structure phrasing (also removed a duplicated label
+  line left by round 1). Four scope repairs: the xp verdict scoped
+  to the three tested constructions; the blindness claim scoped to
+  the Dirichlet-series argument; 13d scoped to tested z and
+  couplings; log ζ(s)>0 restricted to real s>1. Reviewer's closing
+  assessment: the overview is now explicit enough that the next
+  review should inspect derivations and code, not the vision.
+
+---
+
+*Document status: whole-view working record, 2026-10-05 (two rounds
+of external-review repairs applied same day). Companion records:
+DECISION_TREE.md (the path), DERIVATIONS.md (D1–D14),
+DERIVATION_OF_RELATIONSHIP_2026-10-05.md (the ground),
+COMPLETE_MAP.md (the territory), archive_dead_ends.md (the
+guardrails). Built to be revised by the method it describes.*

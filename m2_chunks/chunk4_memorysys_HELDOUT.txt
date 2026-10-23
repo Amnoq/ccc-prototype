@@ -1,0 +1,39 @@
+ASSISTANT: The brief is building in the background. Here's the exploration.
+
+## CCC as a memory system: where it actually slots in
+
+First, a correction to my own framing from earlier: CCC is not a memory *system*. It's a memory **codec and transport**. The landscape — Letta's tiered core/recall/archival, Zep's temporal knowledge graph, Mem0's per-turn extraction — all of these are *stores* with *retrieval*. None of them has a portable exchange format; the survey I just read notes explicitly that Letta's memory objects "do not have a portable exchange format." That's the slot. The stack would be:
+
+- **Store**: a registry — concept/entity graph, basically Zep-shaped (entities, typed relations, statuses). This is the actual memory.
+- **Transport/checkpoint**: the v5 wire — portable, checksummed, fingerprinted snapshots of registry state or deltas.
+- **Working memory**: the cursor layer you already built — shared accumulated graph evolving in lockstep, 1.3× over structural. That's the session-local live working set; the wire is the cross-session checkpoint.
+
+So CCC doesn't compete with Zep or Letta. It gives a graph memory something none of them have: a **verifiable wire format** — snapshots you can hand across subagent hops, tool boundaries, and sessions with tamper-evidence intact.
+
+## The hard problems, ranked honestly
+
+**1. The extractor (gating, unchanged).** Text→typed structure is the whole game. Design I'd propose: LLM extractor constrained to a strict schema (strands + labels + typed directed edges + anchors with statuses + open loops), followed by a *deterministic* verifier (indices resolve, types from the fixed vocabulary, no duplicate edges, checksum discipline) and a *semantic* check — the Test B probes run against the extracted structure vs. the source text. The metric that matters: probe parity per extraction dollar, amortized over sessions. If extraction costs 5K tokens to save 3K per session, you need the memory to live 2+ sessions to break even — usually true for real agent deployments, but it must be measured, not assumed.
+
+**2. Entity resolution.** "wheel_210" in session 3 vs "the mod-210 wheel" in session 9 must resolve to one concept, or the registry forks and the compression dies from duplicate entries. This is the problem that kills naive implementations. Needs embedding candidates + adjudication, and it's the second gating experiment after extraction.
+
+**3. The read path at scale.** You can't inject 10K concepts. Retrieval has to select a relevant subgraph, and CCC becomes the transport for *whatever is materialized* — the 2.2× applies to the retrieved slice. This is where CCC meets RAG rather than replacing it: RAG finds it, CCC carries it densely and verifiably.
+
+**4. Registry evolution.** Versioning (fingerprints already give you this per version), merges, splits, deprecation, garbage collection of dead concepts. Your `forget` machinery is the philosophical sibling — structured forgetting with provenance.
+
+**5. Time and conflict.** v5 has no temporal validity — Zep's key insight is recording *when* a fact became untrue rather than overwriting. Statuses give you a hook (`st_verified` → `st_superseded`), but real temporal edges would be a v6 consideration. Same for cross-session contradictions: you need a resolution policy, not just a codec.
+
+## The integrity story is the differentiator
+
+This is the part I'd lean into. Per-line checksums, header checksums binding headers to bodies, registry fingerprints, order-independent reassembly, fountain erasure recovery — composed, that's **tamper-evident memory across trust boundaries**. The realistic corruptions: truncation in transit, a model "helpfully" editing the wire, duplicated lines from retried sends, reordered chunks from parallel delivery. The prototype already detects or corrects all of these; vector stores and Postgres-backed memories offer *none* of this on their interchange paths. For multi-agent systems where memory crosses subagent hops, that's a real selling point that has nothing to do with 2.2×.
+
+## Concrete next build
+
+If you want to keep going, the MVP is `memory_harness.py`: registry as a SQLite-backed store, an LLM extractor with the strict schema + deterministic verifier, snapshot/restore through the v5 wire, grouped injection on read, and the two gating experiments instrumented from day one (extraction probe-parity + entity-resolution accuracy). External yardstick: LongMemEval/LoCoMo, so it's comparable to the systems above instead of self-graded.
+
+Want me to save this exploration as design notes alongside the prototype, or go straight to scoping the harness MVP?
+
+ASSISTANT: The decision brief is done — one page, with the build scope, the caching comparison, the capacity math, and the extractor go/no-go experiment with explicit thresholds. Verdict in the brief matches what we worked out: pilot the extractor, don't pursue CCC as a cost play. The thresholds in it are proposed decision criteria, not validated results — they'd be set properly when the extractor experiment is designed.
+
+Still open from my last message: want this memory-system exploration saved as design notes next to the prototype, or should I go straight to scoping the harness MVP?
+
+USER: Yes, we should definitely save it so we have a reference point to go back to. Period. On that note, one practice that I generally keep is a decision tree. When we're doing an exploration like this, it is important to have a documented path of decisions that we come to and the forks that we take so that we know where to go back to

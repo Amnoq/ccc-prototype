@@ -1,0 +1,615 @@
+applying the ergodic principle to the group {n(t) : t \in Z}, we establish the implication (A) =\Rightarrow (B). To show that (B) =\Rightarrow (C) is a little
+
+\]
+
+more subtle, because the choice of H is not clear; we will need to pass to a covering to uncover it! We now discuss this in more detail.
+
+1.3.1. The entry of the ad\`ele group and the implication (B) =⇒ (C).
+
+— It is well-known that the inverse limit (over the principal congruence subgroups)
+
+Xe := lim←− Γ(q)\ SL2(R)
+
+q
+
+carries not only an action of SL2(R) but of the much larger group SL2(AQ), where AQ is the adele ring of Q; there is a natural projection π : Xe →
+
+#### SL2(Z)\ SL2(R).
+
+\[
+
+Let \nu be the measure implicit in (C), that is to say, \nu = Pq x \delta \Lambda x x=1 q .
+
+\]
+
+As we have commented, ν has no apparent invariance.
+
+\[
+
+However, there is a closed subgroup H \tag{1}
+
+\]
+
+\[
+
+\subset SL2(AQ), and a H \tag{1}
+
+\]
+
+\[
+
+-equivariant measure \tilde{\nu} on \tilde{X}, which projects to \nu . In other terms, the measure of (C) acquires invariance after lifting to the adeles. (The
+
+group H \tag{1}
+
+\]
+
+\[
+
+admits a surjection onto (Z/qZ) \times, and this surjection is compatible with the natural action of (Z/qZ) \times on the sets in (B), (C)). Now, by a suitable
+
+application of the ergodic principle on Xe, rather than X, we deduce that (B) =\Rightarrow (C).
+
+\]
+
+In this way, the role of adeles in our proof is not merely to provide
+
+a convenient language, but also the group actions that we use simply do not exist at the level of SL2(Z)\ SL2(R) – or rather, only their shadows, the Hecke
+
+operators, are visible.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 13
+
+Remark. — (The adeles for dynamicists). A somewhat more intuitive
+
+way of constructing this is as follows: fix a prime p, and consider the pth Hecke operator Tp on X. It is a multi-valued function.
+
+We can formally turn it into an invertible single-valued function by considering the space of sequences:
+
+\tilde{X} Z for all i.
+
+\[
+
+p = (. . .,x-2,x-1,x_0,x_1,. . .) \in X, xi+1 \in Tpxi
+
+\]
+
+Then the “shift” operation S : \tilde{X}
+
+p → \tilde{X} p can be considered as a version of
+
+Tp that has been forced to be invertible.
+
+It can be verified that \tilde{X}
+
+p is isomorphic to the quotient:
+
+#### SL2(Z\[p −1 \])\ SL2(R) × SL2(Qp)/M,
+
+where M is the subgroup of diagonal matrices in SL2(Qp) whose entries belong to Z
+
+×
+
+p . Moreover, S is identified with the right action of a diagonal
+
+matrix in SL2(Qp).
+
+If we imitate this procedure for all primes simultaneously, one is naturally led to the space \tilde{X}.
+
+1.4. Geodesic restriction problems
+
+In this section, we present another corollary to our main results and
+
+discuss the idea of its proof, again, largely without mention of L-functions.
+
+This section is phrased in the language of analysis on a Riemannian manifold.
+
+Our discussion can be considered a variation on the sketch of proof that was already presented in our ICM article \[50\].
+
+1.4.1. Geodesic restriction problems: the results of \[11\]. — Let M be
+
+a Riemannian surface of finite volume, with Laplacian \Delta M, and let ϕλ be an eigenfunction of \Delta M with eigenvalue −λ
+
+. Let G be a closed geodesic of
+
+\[
+
+length L on M; we fix a parameterization_t 7\to \gamma(t) of G by arc length, so that \gamma(t + L) = \gamma(t). In this section, we shall discuss the
+
+restriction of \varphi \lambda to G . A theorem
+
+\]
+
+of Burq, Gerard, and Tzvetkov \[11\], generalizing a result of Reznikov \[60\], asserts the following general bound
+
+\[
+
+k\varphi \lambda kL2(G) 6 C(G,M) \lambda_1/4 k\varphi \lambda kL2(M), the constant C(G,M) depending only on M and the geodesic \gamma . This is in fact the
+
+=worst possible behavior” as the following basic example shows: let M = S
+
+\]
+
+, embedded as the unit sphere in R3 , with the
+
+#### 14 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+induced metric. Let \varphi_n be the restriction to M of (x, y, z) 7→ (x + iy) n
+
+. Then
+
+| \varphi_n is a Laplacian eigenfunction of L | 2 −1/4 ; on the other hand, when |
+
+| --- | --- |
+
+|  | -norm  n |
+
+| restricted to the equatorial geodesic z = 0 it corresponds to the function: |  |
+
+int
+
+γ(t) 7→ e
+
+.
+
+In particular, ϕn\|γ is a single Fourier mode, and kϕnkL2(G ) n_1/4kϕnkL2(M)
+
+.
+
+\[
+
+Returning to the general case, let \omega be an integral multiple of 2\pi L . Consider the =\omega -th” Fourier coefficient along G, namely,
+
+\]
+
+Z L
+
+iωtdt.
+
+\[
+
+a(\varphi \lambda,\omega) = \varphi \lambda(\gamma(t))e It measures the correlation of \varphi \lambda\|G with a single Fourier mode. By
+
+CauchySchwarz:\|a(\varphi \lambda,\omega)\|
+
+\]
+
+6 L 1/2 6 C(G , M)λ 1/4
+
+kϕλkL2(M) .
+
+As the above example shows, this bound is indeed sharp.
+
+1.4.2. Geodesic restriction problems in the arithmetic case. — As was
+
+explained to us by A. Reznikov, a consequence to our main result, Theorem_1.2, is that this behavior never occurs on an surface which is of arithmetic type and
+
+when ϕλ varies amongst a suitable orthogonal basis of Laplacian eigenfunctions. We give definitions of these concepts below. In such a situation, we obtain a
+
+much stronger result: let {ϕλ} be a basis of Hecke-Laplace eigenfunctions. Then there is an absolute constant δ > 0 such that \|a(ϕλ, ω)\| 6 C(M, G )λ −δ
+
+kϕλkL2(M) . (1.6) The bound on the right hand side is independent of ω, and includes the “difficult” case when ω and λ are close. Thus the Fourier coefficients
+
+of an Laplace/Hecke eigenform along a fixed geodesic decay uniformly: such uniformity is a direct consequence of the hybrid nature of the subconvex bound
+
+proven in Theorem 1.2.
+
+If M is an arithmetic hyperbolic surface, then it is expected that (1.6) holds for any orthonormal basis of Laplace eigenforms. This comes from the fact that,
+
+in the hyperbolic case, the multiplicities of Laplace eigenvalues are expected to be small, so that any Laplace eigenfunction could be expressed as a short
+
+linear combination of Laplace/Hecke eigenfunctions.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 15
+
+1.4.3. The definition of arithmetic hyperbolic manifold. — By an arithmetic hyperbolic manifold we shall mean the quotient of the upper half-plane
+
+by a lattice that arises from a quaternion algebra over Q. However, for simplicity of exposition, we restrict ourselves to a slight subclass of (M, G ); we
+
+describe this subclass here, and also translate some of our data into automorphic language. We strongly suggest skipping this section at a first reading.
+
+Let D be a quaternion algebra over Q, split at ∞. Let G be the algebraic group GL1(D)/Gm, so that the Q-points of G are D(Q)
+
+×/Q×. Let
+
+\[
+
+A resp. Af be the ring of adeles resp. finite adeles of Q. Let Kf be an open compact subgroup of G(Af) with the property that G(Q)·G(R)·Kf = G(Af). Writing
+
+Γ for G(Q) ∩ Kf, we have a natural homeomorphism from \Gamma \G(R) to G(Q)\G(A)/Kf . Since G(R) ∼= PGL2(R), it acts on H_2 (although only the connected
+
+component preserves orientation). We refer to the
+
+\]
+
+quotient Γ\H2 as an arithmetic hyperbolic manifold.
+
+We therefore have a projection:
+
+\[
+
+G(Q)\G(A) = A\times D(Q) \times \D(A) \times -\to \Gamma \H2
+
+\]
+
+,
+
+For simplicity of exposition, we shall also restrict our discussion to
+
+\[
+
+geodesics G that arise as a projection of of a full adelic orbit (T(Q)\T(A)).g to \Gamma \H2, where T \subset G is a maximal torus and g \in G(A). (In
+
+general,such
+
+\]
+
+a projection is the union of G with finitely many closed geodesics, the number of such geodesics being the class number of a suitable quadratic order;
+
+this restriction, therefore, amounts to the requirement that this class number is 1; (1.6) however remains true without such requirement).
+
+We now associate automorphic data to our eigenfunctions and frequencies:
+
+- Let πλ be the automorphic representation of G generated by the pullback of ϕλ.
+
+×/Q×, where E is a real quadratic
+
+- The torus T(Q) is of the form E field extension of Q.
+
+iωt is a character of T(Q)\T(A),
+
+- Associated to the character γ(t) 7→ e
+
+/E×. Let πω be the automorphic representation of GL2 over Q obtained by automorphic induction and, in particular, a character ωE of A×
+
+E
+
+from (E, ωE); thus, the L-function of πω coincides with the L-function L(s, E, ωE). By a result of Waldspurger, \|a(ϕλ, ω)\| 2 is proportional to the central
+
+1 ).
+
+value of the completed L-function Λ(π × πω,
+
+1.4.4. Sketch of the proof of (1.6). — As mentioned above, (1.6) is
+
+a consequence of Theorem 1.2. We will now outline a proof of this corollary, for arithmetic hyperbolic surfaces, in purely geometric terms.
+
+#### 16 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+The function_t 7→ ϕλ(γ(t)) oscillates over a length scale of size λ −1
+
+. It
+
+therefore stands to reason that the most interesting case of (1.6) is when ω ∼ λ. This is indeed so, and the key step of the proof of Theorem_1.2 corresponds –
+
+in this present language – to the use of certain identities to switch from the “difficult” range when ω ∼ λ to the “easier” range when λ is small and ω is
+
+large. These identities are extremely specific to the arithmetic cases under consideration; we do not know how to prove anything like (1.6)for a general
+
+hyperbolic surface M.
+
+Notation as previous. One may construct (for “deep” number-theoretic
+
+reasons) the following auxiliary data:
+
+- another arithmetic hyperbolic surface Mf, depending only on M;
+
+- a Laplace/Hecke eigenfunction ˜ϕλ on Mf of eigenvalue −λ ; - For each admissible ω, i.e each integral multiple of 2π/L, we associate
+
+1 2
+
+a Laplace eigenfunction θω on Mf with eigenvalue −
+
+4 − ω .
+
+moreover, whenever \omega_1, \omega_2, ω1+ω2 are admissible, one has
+
+Z 2
+
+\|a(ϕλ, ω1)a(ϕλ, \omega_2)\| 2 ∼ θ ω1−ω2 ϕ˜λθ ω1+ω2
+
+.  (1.7) Mf 2 2
+
+The ∼ here does not indicate approximate equality, but rather, equality
+
+up to a constant that is precisely computable; it is essentially a ratio of Γfunctions.
+
+The identity (1.7) has the remarkable feature that the left-hand side
+
+\[
+
+has a =quadrilinear” nature, whereas the right hand side has a =bilinear” nature. Thus the map \varphi \lambda_7\to \tilde{\varphi}\lambda is in no natural
+
+sense linear; rather, it is defined element-by-element over a special basis of Laplace/Hecke eigenfunctions. 1.4.5. Number-theoretic explanation. — Supposing
+
+\omega_1, \omega_2, \omega 1+\omega 2 admissible,
+
+\]
+
+1 1 1
+
+\[
+
+\omega_1 \pm \omega_2 \Lambda(\pi \times \pi \omega 1)\Lambda(\pi \times \pi \omega 2) = \Lambda(\pi \times \pi \omega + \times \pi \omega -,), \omega \pm :=
+
+\]
+
+, 2 , 2 2 2 .
+
+\[
+
+now follows using the main result of [32]: The manifold Mf is a quotient of the unique quaternion algebra D_0 which is nonsplit at those places where
+
+\]
+
+exists, the left-hand side of (1.7) vanishes –
+
+\[
+
+v(\pi \times \pi \omega + \times \pi \omega -) = -1 - if no D_0 and \varphi e\lambda, \theta \omega +, \theta \omega - belong to the Jacquet-Langlands transfer
+
+to D_0 of \pi, \pi \omega +, \pi \omega - .
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 17
+
+\[
+
+1.4.6. The switch of range from \omega ∼ \lambda to \lambda = O \tag{1}
+
+\]
+
+\[
+
+. — Take \omega_1 = \omega_2 = \omega, and apply Cauchy-Schwarz to the right-hand side of \tag{1.7}
+
+\]
+
+\[
+
+to obtain:\|a(\varphi \lambda,\omega)\| 4 . k\varphi \tilde{\lambda} k_2 h\theta_2 iL2(Mf) L_2(Mf) \omega, \theta_2 0 .
+
+\]
+
+We shall analyze this by expanding both θ 2 2 into constituents.
+
+and θ
+
+ω 0
+
+Since \theta_0 is itself a Laplacian eigenfunction with eigenvalue_1/4, all \Delta-eigenfunctions that occur in the spectral expansion of θ_2
+
+0 will have “small” eigenvalue. Carrying this out7
+
+\[
+
+h\theta_2 i = X h\theta_2 i, \tag{1.8}
+
+\]
+
+\[
+
+\omega, \theta_2 0 \omega, \psi \mu ih\psi \mu, \theta_2 0 \Delta \psi \mu =\mu_2 \mu 1 where the \psi \mu -sum ranges over a basis of Hecke-Laplace
+
+eigenfunctions on Mf.
+
+\]
+
+It is, in fact, possible to now apply (1.7) once more to understand the
+
+term hθ 2
+
+\[
+
+\omega, \psi \mu i; however, we apply it =in the reverse direction.” This shows
+
+\]
+
+that there exists a manifold Mˇ and ψˇ
+
+µ so that
+
+\|hθ_2 2 ω , ψµi\|2 ∼ \|a(ψˇ µ, 2ω)a(ψˇ µ, 0)\| .
+
+We have achieved our objective and switched the range: starting with
+
+\[
+
+the analysis of a(\varphi \lambda,\omega) with \lambda, \omega essentially arbitrary, we have reduced it to the analysis of a(\psi ˇ \mu,2\omega) where \mu may
+
+be assumed small relative to \omega . Although we are not done, this allows us to out-flank the most tricky case of the question: when\|\lambda - \omega\| = O
+
+\tag{1}
+
+\]
+
+\[
+
+.
+
+\]
+
+1.4.7. The range when ω is large. — We now discuss bounding the
+
+\[
+
+Fourier coefficient a(\varphi \lambda,\omega) when \omega is very large compared to \lambda . For simplicity, let us assume in the present section that we are
+
+dealing with a fixed eigenfunction \varphi = \varphi \lambda, and analyze the question of bounding a(\varphi \lambda,\omega) as \omega \to \infty .
+
+\]
+
+We need to be more precise about what is necessary to prove. In this
+
+context, it is evident (by real-analyticity) that a(ϕλ, ω) decays exponentially with ω; however, this is not enough. For our previous argument we require:8
+
+π\|ω\|/2 \|a(ϕλ, ω)\| 6 C(ϕλ)\|ω\| −δ
+
+e
+
+\[
+
+, \tag{1.9}
+
+\]
+
+\[
+
+for some \delta > 0. Now, a(\varphi \lambda,\omega) is the integral of \varphi \lambda(\gamma(t)) against e i\omega t. To eliminate the exponential factors, we
+
+deform the path: we replace_t 7\to \gamma(t) by a path_t 7\to
+
+\]
+
+7 In the cases we encounter, there will be difficulties with convergence, and regularization of the
+
+following expression will be needed.
+
+8 The exponential factors arise from, in essence, the Γ-functions that were suppressed in (1.7).
+
+#### 18 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+0 (t) so that, first of all, γ_0 (t) approximates – at least locally – a horocycle; γ secondly, the deformed integral still determines the original integral,
+
+but is larger than it by a factor of size e π\|ω\|/2
+
+. Thus, to prove (1.9), we need only
+
+prove polynomial decay for the deformed integral. The deformed integral is analyzed using dynamical properties of the horocycle flow, especially mixing; it is
+
+related to the analysis in \[67, 1.3.4\].
+
+2. Norms on adelic quotients
+
+The classical Sobolev norms on Rn
+
+, or on a real manifold, measure
+
+the L p
+
+- norms of a function together with its derivatives. For example, let
+
+kfk2,k be defined as the sum of the L 2
+
+-norms of the first k derivatives of
+
+\[
+
+f \in C \infty (R/Z), and let S_2,k be the completion with respect to this norm.
+
+\]
+
+Then:
+
+Sa. Sobolev inequality: The Sobolev norms control point-evaluation, e.g.
+
+\|f(0)\|  kfk2,1;
+
+Sb. Distortion: If h : R/Z → R/Z is a diffeomorphism, then
+
+kf ◦ hk2,1 6 (sup \|h 0 (x)\|)kfk2,1.
+
+x
+
+Sc. Sobolev embedding: The Sobolev norms are compact with respect to each other: the inclusion of S2,k into S2,k0 is compact for_k < k0
+
+.
+
+\[
+
+Sc.* Sobolev embedding in quantitative form: if_k 0 > k + 2, then the trace of S_2,k with respect to S_2,k0 is finite. This means that, if Wk is the completion
+
+of C \infty (R/Z) with respect to S_2,k, then the induced homomorphism Wk \to Wk+2 is trace-class.
+
+\]
+
+Sd. Fourier analysis:
+
+Z
+
+\|S2,k(f)\| 2 (1 + \|λ\|) 2k \| ˆf(λ)\| 2
+
+,
+
+where ˆf(λ) is the Fourier transform.
+
+It is very convenient to have a system of norms on adelic quotients
+
+with corresponding properties. We shall present them in terms of a list of axiomatic properties they satisfy, before giving the definition (§2.3). These
+
+properties are intended to be analogous to (Sa) – (Sd) above. Prior to doing this, we need to first recall L 2
+
+-spectral decomposition (§2.2).
+
+We strongly recommend that the reader ignore the definition of the
+
+Sobolev norms and rather work with its properties.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 19
+
+2.1. Notation
+
+2.1.1. On implicit constants. — We use throughout the notation A
+
+B of Vinogradov to mean: there exists a constant c so that A_6 cB. If we write A δ cB, it means that the constant c is permitted to depend on δ, and so on. We
+
+shall also use a modification of this notation: A B? means that there exist constants c1, c2 so that A_6 c1Bc2
+
+.
+
+Although the notation A  B is generally understood to mean that
+
+the implicit constant is absolute, it is extremely convenient in our context to allow it to depend on certain predetermined parameters (e.g., the number field
+
+over which we work) without explicit comment. We gather together
+
+at this point references to where these conventions are introduced, for the convenience of the reader. To wit: in Part II, constants may depend on the
+
+isomorphism class of (G, ρ) over the number field F; in Part III, the constants may depend on the discriminant of the local field (§3.1.3); in Parts
+
+IV and V, they may depend on the isomorphism class of the ground field F.
+
+For Parts IV and V, we shall in fact make a more stringent use of the
+
+notation where we require certain implicit constants to be polynomial; see §4.1.5.
+
+Later in the text we shall use indexed families of norms – the Sobolev
+
+norms Sd. They will depend on an indexing parameter d, as the notation suggests. In a similar fashion to the Vinogradov convention, we allow ourselves to write
+
+inequalities omitting the parameter d; see §2.3.1 and §3.1.9
+
+for a further discussion of this point.
+
+2.1.2. Let F be a number field. We denote by ξF the complete ζfunction of F. It has a simple pole at_1; the residue is denoted by ξ
+
+∗ (1).
+
+F
+
+2.1.3. Let G a reductive algebraic F-group. Choose a faithful representation G ,→ SL(F
+
+r ) for some_r > 1; we shall suppose that it contains a
+
+copy of the adjoint representation. Henceforth we shall feel free to identify G with a matrix group by means of this embedding. In the case of GL2, we shall fix
+
+the faithful representation to be
+
+g  0
+
+\[
+
+\rho : g_7\to \in SL4,
+
+\]
+
+0 (g t )
+
+−1
+
+t denotes the transpose.
+
+where, as usual, g
+
+Let g be the Lie algebra of G; if v is a place of F, we write gv = g\otimes F

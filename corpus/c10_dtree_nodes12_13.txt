@@ -1,0 +1,148 @@
+## Node 12 — Multi-torus framework, from scratch (2026-09-30)
+The user's original idea (never written down; absent from the April 2026
+archive): link a 2-torus and a 3-torus by a self-adjoint operator.
+Rebuilt from a clean foundation in multi_torus_framework.md. Dead-end
+guardrails (archive_dead_ends.md) apply, especially D8.
+
+- 12a (foundation, DONE): objects T^2 (leaf; also the 10d Jacobian type),
+  T^3 (ambient), operator spec = Node 11 checklist R1-R6. Five linkages:
+  L1 product, L2 mapping torus (flat/Nil/Sol), L3 unit tangent bundle,
+  L4 Deninger-type foliated dynamical system (conjectural), L5 Heisenberg
+  nilmanifold (twisted torus).
+- 12b (Weyl probe, DONE): flat-T^3 Laplacian spectrum is EXACT,
+  2pi*sqrt(m^2+n^2+k^2); 554,981 lattice points enumerated, first 300
+  vs 300 zeta zeros — no relation (multi_torus_weyl.png). EXACT THEOREM:
+  Weyl's law N(Lambda) ~ C_d Vol Lambda^{d/2}; zeros need (T/2pi) log T;
+  d=2 too slow by a log, d>=3 too fast. No fixed-dimension manifold
+  Laplacian has the zeros as its spectrum in counting. L1-L3 DEAD by
+  theorem, not difficulty. Honest loophole recorded in the framework
+  doc: zeros-as-subset of a higher-d spectrum is not closed by Weyl.
+- 12c (Deninger-shaped linkage, DONE as formulation): the SURVIVING form
+  of the user's idea — 3D foliated dynamical system, 2D leaves,
+  flow generator (skew-adjoint) as the leaf-to-ambient link, closed
+  orbits = primes, Ruelle zeta = zeta, explicit formula = Lefschetz
+  trace. Status: conjectural, non-probable per D8 (formulate, do not
+  simulate shadows). This is Deninger's program.
+- 12d (QUEUED): Heisenberg nilmanifold Laplacian probe — the one
+  non-flat computable case (theta-function spectrum via the Weil
+  representation). Expect negative; it is the honest remaining check.
+Verdict: "multi-torus via Laplacian" is dead (Weyl); "multi-torus via
+dynamics" is the live form of the original idea. Framework's computable
+content after 12d is exhausted; L4 remains as formulated conjecture.
+
+- 12d (Heisenberg probe, DONE 2026-09-30): EXACT spectrum from
+  representation theory — (2pih)^2+2pi|h|(2k+1), mult |h|, plus the
+  torus part; 65,401 eigenvalues enumerated (heisenberg_probe.py).
+  NEGATIVE on three panels (heisenberg_probe.png): (i) counting is
+  Weyl d=3, slope 3/2, vs zeros' T log T; (ii) bulk spacings are
+  rigid/degenerate (mass near 0, no level repulsion) vs the zeros'
+  GUE-like repulsion; (iii) sequences unrelated. Moral: genuine
+  theta-function / Weil-representation arithmetic content in a
+  geometric Laplacian still does not give zero statistics —
+  arithmetic flavor != zero spectrum. The missing operator is not
+  "Laplacian + theta". Framework's computable content now exhausted;
+  L4 (Deninger-type dynamics) remains as formulated conjecture.
+  Node 12 CLOSED.
+
+## Archive dead ends, second mining (2026-09-30)
+Five more April-2026 documents read as archaeology at the user's
+direction ("negative results refine the area that could possibly be
+positive"). Three new guardrails appended to archive_dead_ends.md:
+D10 (toroidal five-step proof — resonance/zero identification
+imported, not derived; guardrail: prove the bridge, don't import it
+— our 10a is the derived version), D11 (Prime Zipper Law falsified
+as stated — first counterexample (1129,1151)->21 at the ~190th
+pair; "era interaction" patch is post-hoc; gap quantization dead),
+D12 (rh_final's formal compactification — weight engineered to
+delete the continuous spectrum the conclusion needs gone; Lemma 3
+keeps the test functions but the spectral side is what changed;
+maps where Lax-Phillips genuinely gets stuck). D13 (coset-sum
+numerology != Chebyshev mechanism). s_watts_v2 and the 60-second
+piece filed without new extraction.
+
+## Node 13 — Fermionic Fock fork: operator from the sieve's own materials (2026-09-30)
+User approved the weighted face-filtration fork; first construction.
+- 13a (EXACT identification): faces S of Delta_z = fermionic Fock basis
+  over primes <= z (each prime used at most once = Pauli = squarefree
+  kernel); mu = (-1)^F (fermion parity); face adjacency = fermionic
+  hopping. Native, not imported.
+- 13b (H_2 KILLED BY INSPECTION): H_2 = sum_p (log p / p)(a_p^dag+a_p),
+  one-body hopping with the prime terms of -zeta'/zeta. Terms commute
+  ([O_p,O_q]=0, O_p^2=1) => spectrum EXACTLY {sum_p +/-(log p)/p},
+  verified vs dense diagonalization to 2.4e-15 (z=13); <r>=0.503,
+  spiky structured spacings. Integrable by inspection; no numerics
+  needed beyond the sanity check.
+- 13c (H_int probe, NEGATIVE): H_int = H_2 + sum_{p<q}
+  (log p log q)/(pq) n_p n_q — minimal interacting native Hamiltonian
+  (one-body = zeta'/zeta prime terms, two-body = (zeta'/zeta)^2
+  semiprime terms). Diagonalized z<=29 (dim<=1024, fock_operator.py).
+  Bulk spacings track POISSON, not GUE: <r> = 0.459,0.418,0.400,
+  0.411,0.419 (Poisson 0.386, GUE 0.536); histogram monotone
+  decreasing, max at 0 (fock_probe.png). [computationally verified]
+- Understanding (the valuable part): the interaction is Fock-diagonal
+  — it shifts energies but causes no transitions; all mixing comes
+  from the integrable one-body hopping. Poisson was unsurprising in
+  hindsight. Next construction if the fork continues: OFF-DIAGONAL
+  two-body (pair hopping a^dag a^dag a a with arithmetic weights).
+- D4's positive-region half (canonical form with face-weights as
+  stratum residues) remains OPEN. Node 13's minimal construction
+  closed as a kill; the fork itself stays open via the off-diagonal
+  variant.
+
+## Node 13d — pair-hopping: FIRST POSITIVE operator signal (2026-09-30)
+Added the mixing term 13c lacked: H(lam) = H_2 + H_diag
++ lam * sum_{p,q,r,s} w_p w_q w_r w_s a_p^dag a_q^dag a_r a_s
+(number-conserving pair hop, w_p=(log p)/p). lam_0 fixed by
+||lam_0 H_pair||_F = ||H_2+H_diag||_F; scanned 0.25x-4x; z<=29
+(dim<=1024, fock_pairhop.py). Implementation note: summing over ALL
+ordered quadruples with symmetric weights gives identically zero
+(a_r a_s = -a_s a_r); must use canonical p<q, r<s sectors.
+RESULT: bulk statistics GUE-like across all z>=17 and all lam:
+<r> -> 0.52-0.55 (GUE 0.536, Poisson 0.386); spacing histogram shows
+level repulsion (dip at 0, peak ~0.5) tracking Wigner, far from
+Poisson. [computationally verified]
+CAVEATS (exact): (1) shuffled-weight control ALSO gives GUE (0.524)
+-- this is generic two-body quantum chaos (TBRE class), not created
+by the arithmetic; the non-trivial content is that the arithmetic
+weights are COMPATIBLE with chaos (they could have been too weak/
+structured). (2) Universality class != the zeros: eigenvalues are not
+gamma_n; no zero detection. (3) Finite sizes; histogram not pure
+Wigner yet. Precise claim: the sieve's native Fock space with
+arithmetically-weighted hopping+interaction+pair-hopping is
+quantum-chaotic in the GUE class -- the same universality class as
+the zeta zeros. First operator in the hunt pointing the right way.
+Strengtheners queued: larger z via Lanczos, Delta_3 rigidity,
+density of states.
+- 13d ROBUSTNESS (2026-09-30, fock_robust.py): dense diagonalization at
+  z=31 (dim 2048) and z=37 (dim 4096), lam = 0.5*lam_0 and lam_0:
+  <r> = 0.528/0.531 (z=31), 0.535/0.535 (z=37) -- GUE-compatible at 4x
+  the original dimension, both couplings. The positive is not a
+  small-size artifact. [computationally verified]
+- 13d STRENGTHENERS (2026-09-30, fock_strengthen.py): sparse Lanczos at
+  z=41 (dim 8192): bulk <r>=0.528 (1200 interior eigenvalues) --
+  GUE holds at 8x original dimension. Delta_3 inconclusive (flat at
+  ~0.33 across L=5..40; neither GUE-log nor Poisson-linear --
+  likely unfolding/window artifact on the 1200-eigenvalue sample,
+  not interpreted). z=43 (dim 16384) running. [computationally verified
+  for r-stat; Delta_3 not interpreted]
+
+## Node 13e — prime-frequency probe: NEGATIVE (2026-09-30)
+Asked whether the pair-hop spectrum's fluctuations oscillate at prime
+frequencies f_p = log(p)/2pi (the explicit-formula signature, run in
+reverse). z=29 spectrum, degree-10 detrended N_osc, Lomb-Scargle,
+vs GUE(1024) and shuffled-weight controls (fock_primefreq.py).
+RESULT: no prime-frequency content. Mean z-score at the 10 prime
+lines = -0.35 (arith), -0.36 (shuffled); GUE control 0.28 (flat noise,
+method unbiased). Both arith and shuffled show one broad structural
+hump at f~0.67 (construction-scale, not arithmetic -- identical in
+shuffled). [computationally verified]
+Honest limits: spectral bandwidth only ~7.3 at z=29, so the lowest
+prime frequencies (p=2,3: <1 period across the spectrum) are weakly
+resolved; null is strongest at larger p. Degree-10 detrending could
+partially absorb broad oscillations, but the GUE control through the
+identical pipeline shows the method creates no structure.
+VERDICT: the operator is GUE-chaotic (13d) but does not HEAR the
+primes -- its fluctuations carry no prime-frequency content. The
+"make 10a and 13d talk" attempt returns: they don't, this way. 13d
+stands as a universality result (side chamber), not a bridge plank.
+

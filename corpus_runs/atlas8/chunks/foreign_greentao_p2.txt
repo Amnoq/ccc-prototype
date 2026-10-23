@@ -1,0 +1,125 @@
+2. An outline of the proof
+
+Let us start by stating Szemerédi’s theorem properly. In the introduction we claimed that it was a statement about sets of integers with positive upper density, but there are other equivalent formulations. A “finitary” version of the theorem is as follows.
+
+Proposition 2.1 (Szemerédi’s theorem).
+
+[37, 38] Let NN be a positive integer and let ℤN:=ℤ/N​ℤ\mathbb{Z}_{N}:=\mathbb{Z}/N\mathbb{Z}.11
+ 1
+ 
+ 
+ We will retain this notation throughout the paper, thus ℤN{\mathbb{Z}}_{N} will never refer to the NN-adics. We always assume for convenience that NN is prime. It is very convenient to work in ℤN\mathbb{Z}_{N}, rather than the more traditional [−N,N][-N,N], since we are free to divide by 2,3,…,k2,3,\dots,k and it is possible to make linear changes of variables without worrying about the ranges of summation. There is a slight price to pay for this, in that one must now address some “wraparound” issues when identifying ℤN{\mathbb{Z}}_{N} with a subset of the integers, but these will be easily dealt with.
+Let δ>0\delta>0 be a fixed positive real number, and let k⩾3k\geqslant 3 be an integer. Then there is a minimal N0​(δ,k)<∞N_{0}(\delta,k)<\infty with the following property. If N⩾N0​(δ,k)N\geqslant N_{0}(\delta,k) and A⊆ℤNA\subseteq\mathbb{Z}_{N} is any set of cardinality at least δ​N\delta N, then AA contains an arithmetic progression of length kk.
+
+Finding the correct dependence of N0N_{0} on δ\delta and kk (particularly δ\delta) is a famous open problem. It was a great breakthrough when Gowers [18, 19] showed that
+
+N0​(δ,k)⩽22δ−ck,N_{0}(\delta,k)\leqslant 2^{2^{\delta^{-c_{k}}}},
+
+where ckc_{k} is an explicit constant (Gowers obtains ck=22k+9c_{k}=2^{2^{k+9}}). It is possible that a new proof of Szemerédi’s theorem could be found, with sufficiently good bounds that Theorem 1.1 would follow immediately. To do this one would need something just a little weaker than
+
+N0​(δ,k)⩽2ck​δ−1N_{0}(\delta,k)\leqslant 2^{c_{k}\delta^{-1}}
+
+(2.1)
+
+(there is a trick, namely passing to a subprogression of common difference 2×3×5×⋯×w⁡(N)2\times 3\times 5\times\dots\times w(N) for appropriate w⁡(N)w(N), which allows one to consider the primes as a set of density essentially log⁡log⁡N/log⁡N\log\log N/\log N rather than 1/log⁡N1/\log N; we will use a variant of this “WW-trick” later in this paper to eliminate local irregularities arising from small divisors). In our proof of Theorem 1.2, we will need to use Szemerédi’s theorem, but we will not need any quantitative estimimates on N0​(δ,k)N_{0}(\delta,k).
+
+Let us state, for contrast, the best known lower bound which is due to Rankin [35] (see also Lacey-Łaba [31]):
+
+N0​(δ,k)⩾exp⁡(C​(log⁡1/δ)1+⌊log2⁡(k−1)⌋).N_{0}(\delta,k)\geqslant\exp(C(\log 1/\delta)^{1+\lfloor\log_{2}(k-1)\rfloor}).
+
+At the moment it is clear that a substantial new idea would be required to obtain a result of the strength (2.1). In fact, even for k=3k=3 the best bound is N0​(δ,3)⩽2C​δ−2​log⁡(1/δ)N_{0}(\delta,3)\leqslant 2^{C\delta^{-2}\log(1/\delta)}, a result of Bourgain [6]. The hypothetical bound (2.1) is closely related to the following very open conjecture of Erdős:
+
+Conjecture 2.2 (Erdős conjecture on arithmetic progressions).
+
+Suppose that A={a1<a2<…}A=\{a_{1}<a_{2}<\dots\} is an infinite sequence of integers such that ∑1/ai=∞\sum 1/a_{i}=\infty. Then AA contains arbitrarily long arithmetic progressions.
+
+This would imply Theorem 1.1.
+
+We do not make progress on any of these issues here. In one sentence, our argument can be described instead as a transference principle which allows us to deduce Theorems 1.1 and 1.2 from Szemerédi’s theorem, regardless of what bound we know for N0​(δ,k)N_{0}(\delta,k); in fact we prove a more general statement in Theorem 3.5 below. Thus, in this paper, we must assume Szemerédi’s theorem. However with this one (rather large!) caveat22
+ 2
+ 
+ 
+ We will also require some standard facts from analytic number theory such as the prime number theorem, Dirichlet’s theorem on primes in arithmetic progressions, and the classical zero-free region for the Riemann ζ\zeta-function (see Lemma A.1). our paper is self-contained.
+
+Szemerédi’s theorem can now be proved in several ways. The original proof of Szemerédi [37, 38] was combinatorial. In 1977, Furstenberg made a very important breakthrough by providing an ergodic-theoretic proof [10]. Perhaps surprisingly for a result about primes, our paper has at least as much in common with the ergodic-theoretic approach as it does with the harmonic analysis approach of Gowers. We will use a language which suggests this close connection, without actually relying explicitly on any ergodic-theoretical concepts33
+ 3
+ 
+ 
+ It has become clear that there is a deep connection between harmonic analysis (as applied to solving linear equations in sets of integers) and certain parts of ergodic theory. Particularly exciting is the suspicion that the notion of a kk-step nilsystem, explored in many ergodic-theoretical works (see e.g. [27, 28, 29, 44]), might be analogous to a kind of “higher order Fourier analysis” which could be used to deal with systems of linear equations that cannot be handled by conventional Fourier analysis (a simple example being the equations x1+x3=2​x2x_{1}+x_{3}=2x_{2}, x2+x4=2​x3x_{2}+x_{4}=2x_{3}, which define an arithmetic progression of length 4). We will not discuss such speculations any further here, but suffice it to say that much is left to be understood..
+In particular we shall always remain in the finitary setting of ℤN{\mathbb{Z}}_{N}, in contrast to the standard ergodic theory framework in which one takes weak limits (invoking the axiom of choice) to pass to an infinite measure-preserving system.
+As will become clear in our argument,
+in the finitary setting one can still access many
+tools and concepts from ergodic theory, but often one must incur error terms of the form o⁡(1)o(1) when one does so.
+
+Here is another form of Szemerédi’s theorem which suggests the ergodic theory analogy more closely. We use the conditional expectation notation 𝔼⁡(f|xi∈B)\mathbb{E}(f|x_{i}\in B) to denote the average of ff as certain variables xix_{i} range over the set BB,
+and o⁡(1)o(1) for a quantity which tends to zero as N→∞N\rightarrow\infty (we will give more precise definitions later).
+
+Proposition 2.3 (Szemerédi’s theorem, again).
+
+Write νconst:ℤN→ℝ+\nu_{\mbox{\scriptsize{const}}}:\mathbb{Z}_{N}\rightarrow{\mathbb{R}}^{+} for the constant function νconst≡1\nu_{\mbox{\scriptsize{const}}}\equiv 1. Let 0<δ⩽10<\delta\leqslant 1 and k⩾1k\geqslant 1 be fixed. Let NN be a large integer parameter, and let
+f:ℤN→ℝ+f:\mathbb{Z}_{N}\to{\mathbb{R}}^{+} be a non-negative function obeying the bounds
+
+0⩽f⁡(x)⩽νconst​(x)​ for all ​x∈ℤN0\leqslant f(x)\leqslant\nu_{\mbox{\scriptsize{const}}}(x)\hbox{ for all }x\in\mathbb{Z}_{N}
+
+(2.2)
+
+and
+
+𝔼⁡(f⁡(x)|x∈ℤN)⩾δ.{\mathbb{E}}(f(x)|x\in\mathbb{Z}_{N})\geqslant\delta.
+
+(2.3)
+
+Then we have
+
+𝔼⁡(f⁡(x)​f​(x+r)​…​f​(x+(k−1)​r)|x,r∈ℤN)⩾c⁡(k,δ)−ok,δ​(1){\mathbb{E}}(f(x)f(x+r)\ldots f(x+(k-1)r)|x,r\in\mathbb{Z}_{N})\geqslant c(k,\delta)-o_{k,\delta}(1)
+
+for some constant c⁡(k,δ)>0c(k,\delta)>0 which does not depend on ff or NN.
+
+Remark. Ignoring for a moment the curious notation for the constant function νconst\nu_{\mbox{\scriptsize const}}, there are two main differences between this and Proposition 2.1. One is the fact that we are dealing with functions rather than sets: however, it is easy to pass from sets to functions, for instance by probabilistic arguments. Another difference, if one unravels the 𝔼\mathbb{E} notation, is that we are now asserting the existence of ≫N2\gg N^{2} arithmetic progressions, and not just one. Once again, such a statement can be deduced from Proposition 2.1 with some combinatorial trickery (of a less trivial nature this time – the argument was first worked out by Varnavides [43]). A direct proof of Proposition 2.3 can be found in [40]. A formulation of Szemerédi’s theorem similar to this one was also used by Furstenberg [10]. Combining this argument with the one in Gowers gives an explicit bound on c⁡(k,δ)c(k,\delta) of the form c⁡(k,δ)⩾exp⁡(−exp⁡(δ−ck))c(k,\delta)\geqslant\exp(-\exp(\delta^{-c_{k}})) for some ck>0c_{k}>0.
+
+Now let us abandon the notion that ν\nu is the constant function. We say that ν:ℤN→ℝ+\nu:\mathbb{Z}_{N}\rightarrow{\mathbb{R}}^{+} is a measure44
+ 4
+ 
+ 
+ The term normalized probability density might be more accurate here, but measure has the advantage of brevity.
+One may think of νconst\nu_{\mbox{\scriptsize{const}}} as the uniform probability distribution on ℤN{\mathbb{Z}}_{N}, and ν\nu as some other probability distribution which can concentrate on a subset of ℤN{\mathbb{Z}}_{N} of very small density (e.g. it may concentrate on the “almost primes” in [1,N][1,N]). if
+
+𝔼⁡(ν)=1+o⁡(1).\mathbb{E}(\nu)=1+o(1).
+
+(2.4)
+
+We are going to exhibit a class of measures, more general than the constant function νconst\nu_{\mbox{\scriptsize const}}, for which Proposition 2.3 still holds. These measures, which we will call pseudorandom, will be ones satisfying two conditions called the linear forms condition and the correlation condition. These are, of course, defined formally below, but let us remark that they are very closely related to the ergodic-theory notion of weak-mixing. It is perfectly possible for a “singular” measure - for instance, a measure for which 𝔼⁡(ν2){\mathbb{E}}(\nu^{2}) grows like a power of log⁡N\log N - to be pseudorandom. Singular measures are the ones that will be of interest to us, since they generally support rather sparse sets. This generalisation of Proposition 2.3 is Proposition 3.5 below.
+
+Once Proposition 3.5 is proved, we turn to the issue of finding primes in AP. A possible choice for ν\nu would be Λ\Lambda, the von Mangoldt function (this is defined to equal log⁡p\log p at pmp^{m}, m=1,2,…,m=1,2,\dots, and 00 otherwise). Unfortunately, verifying the linear forms condition and the correlation condition for the von Mangoldt function (or minor variants thereof) is strictly harder than proving that the primes contain long arithmetic progressions; indeed, this task is comparable in difficulty to the notorious Hardy-Littlewood prime tuples conjecture, for which our methods here yield no progress.
+
+However, all we need is a measure ν\nu which (after rescaling by at most a constant factor) majorises Λ\Lambda pointwise. Then, (2.3) will be satisfied with f=Λf=\Lambda. Such a measure is provided to us55
+ 5
+ 
+ 
+ Actually, there is an extra technicality which is caused by the very irregular distribution of primes in arithmetic progressions to small moduli (there are no primes congruent to 4​(mod​ 6)4(\mbox{mod}\,6), for example). We get around this using something which we refer to as the WW-trick, which basically consists of restricting the primes to the arithmetic progression n≡1​(mod​W)n\equiv 1(\mbox{mod}\,W), where W=∏p<w⁡(N)pW=\prod_{p<w(N)}p and w⁡(N)w(N) tends slowly to infinity with NN. Although this looks like a trick, it is actually an extremely important feature of that part of our argument which concerns primes. by recent work of Goldston and Yıldırım [17] concerning the size of gaps between primes. The proof that the linear forms condition and the correlation condition are satisfied is heavily based on their work, so much so that parts of the argument are placed in an appendix.
+
+The idea of using a majorant to study the primes is by no means new – indeed in some sense sieve theory is precisely the study of such objects. For another use of a majorant in an additive-combinatorial setting, see [33, 34].
+
+It is now timely to make a few remarks concerning the proof of Proposition 3.5. It is in the first step of the proof that our original investigations began, when we made a close examination of Gowers’ arguments. If f:ℤN→ℝ+f:\mathbb{Z}_{N}\rightarrow{\mathbb{R}}^{+} is a function then the normalised count of kk-term arithmetic progressions
+
+𝔼⁡(f⁡(x)​f​(x+r)​…​f​(x+(k−1)​r)|x,r∈ℤN){\mathbb{E}}(f(x)f(x+r)\ldots f(x+(k-1)r)|x,r\in\mathbb{Z}_{N})
+
+(2.5)
+
+is closely controlled by certain norms ∥⋅∥Ud\|\cdot\|_{U^{d}}, which we would like to call the Gowers uniformity norms66
+ 6
+ 
+ 
+ Analogous objects have recently surfaced in the genuinely ergodic-theoretical work of Host and Kra [27, 28, 29] concerning non-conventional ergodic averages, thus enhancing the connection between ergodic theory and additive number theory.. They are defined in §5. The formal statement of this fact can be called a generalised von Neumann theorem. Such a theorem, in the case ν=νconst\nu=\nu_{\mbox{\scriptsize const}}, was proved by Gowers [19] as a first step in his proof of Szemerédi’s theorem, using k−2k-2 applications of the Cauchy-Schwarz inequality. In Proposition 5.3 we will prove a generalised von Neumann theorem relative to an arbitrary pseudorandom measure ν\nu. Our main tool is again the Cauchy-Schwarz inequality. We will use the term Gowers uniform loosely to describe a function which is small in some UdU^{d} norm. This should not be confused with the term pseudorandom, which will be reserved for measures on ℤN\mathbb{Z}_{N}.
+
+Sections 6-8 are devoted to concluding the proof of Proposition 3.5. Very roughly the strategy will be to decompose the function ff under consideration into a Gowers uniform component plus a bounded ‘‘Gowers anti-uniform’’ object (plus a negligible error). The notion77
+ 7
+ 
+ 
+ We note that Gowers uniformity, which is a measure of “randomness”, “uniform distribution”, or “unbiasedness” in a function should not be confused with the very different notion of uniform boundedness. Indeed, in our arguments, the Gowers uniform functions will be highly unbounded, whereas the Gowers anti-uniform functions will be uniformly bounded. Anti-uniformity can in fact be viewed as a measure of “smoothness”, “predictability”, “structure”, or “almost periodicity”. of Gowers anti-uniformity is captured using the dual norms (Ud)∗(U^{d})^{*}, whose properties are laid out in §6.
+
+The contribution of the Gowers-uniform part to the count (2.5) will be negligible88
+ 8
+ 
+ 
+ Using the language of ergodic theory, we are essentially claiming that the Gowers anti-uniform functions form a characteristic factor for the expression (2.5). The point is that even though ff is not necessarily bounded uniformly, the fact that it is bounded pointwise by a pseudorandom measure ν\nu allows us to conclude that the projection of ff to the Gowers anti-uniform component is bounded, at which point we can invoke the standard Szemerédi theorem. by the generalised von Neumann theorem. The contribution from the Gowers anti-uniform component will be bounded from below by Szemerédi’s theorem in its traditional form, Proposition 2.3.

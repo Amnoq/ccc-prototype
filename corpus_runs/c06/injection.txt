@@ -1,0 +1,54 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Finite exact explicit formula for E:y²=x³+1/F₅ (6,36,126)
+18: Number-field explicit formula infinite, needs windowing n~e^{7.4/w}
+19: Degree quadratic form PSD from counting: discriminant gives Hasse=RH
+20: Λ≥0 (D7/D9) same positivity kind as deg≥0
+21: Weil-positivity template: Jacobian torus, Frobenius, PSD, finite formula
+22: Number-field ledger HAVE: counting positivity, PD forms, windowed formula
+23: MISSING: Jacobian-role space, Frobenius-like operator, intersection pairing
+24: Missing object operator-theoretic 'Frobenius for Δ', not another inequality
+25: Montgomery–Vaughan mean value verified on P(t), ratio→1
+26: Large sieve verified with headroom (ratios 0.0041, 0.0080)
+27: Uncertainty wall: w=0.25 single-zero isolation needs 8.2e12 primes
+28: Zero-density N(σ,T) as plug-in to uncondition the detector
+29: 10e tools are analytic amplifiers, add no new positivity
+30: Face-weights w(S)=(−1)^{|S|+1} log(∏S)/(∏S) on prime subsets
+31: Obstruction: no ordinary positive geometry carries w(S)
+32: Identity F_z'(1)=Σ_S w(S)=δ(z)Σ(log p)/(p−1), W(z)→e^{−γ}
+33: Face-weights as u-derivative of equivariant K-theoretic Euler class
+34: Stringy-deformed simplex Δ^{m−1}: generalized residues from I'(1)
+
+INJECTED STRUCTURE (grouped compact):
+
+S21:17 18 19 20 21
+S24:22 23 24
+S29:25 26 27 28 29
+S30:30 31 32 33 34
+E17:2 18
+E19:10 21
+E21:9 23
+E23:1 24
+E25:1 29
+E27:11 18
+E28:1 29
+E32:6 30
+E33:11 32
+E34:5 32
+A:17 14,18 13,19 14,20 13,21 13,22 14,23 16,24 13,25 14,26 14,27 14,28 13,29 13,30 13,31 14,32 14,33 13,34 13
+L:23

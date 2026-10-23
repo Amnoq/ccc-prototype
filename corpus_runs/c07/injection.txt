@@ -1,0 +1,57 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Figueiredo positive geometry applied to prime distribution
+18: linear circle sieve as relational machine
+19: transfer generative process, not implementation
+20: never put the answer in by hand
+21: divisor complex: cutoff-dependent, no positive region
+22: D1: Chebyshev ψ(x) as signed face-sum
+23: D2: Lehmer φ-recursion as link recursion
+24: D3: binary/zero-locus form of composites
+25: face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+26: PNT as weighted infinite simplex total weight 1
+27: deformed marking rule R_p={0},{0,−2}
+28: twin constant 2C₂ as renormalized total weight
+29: analytic–geometric bridge for RH
+30: positive region with w(S) as stratum residues
+31: 3-4-1 positivity forcing ζ(1+it)≠0
+32: Selberg parity barrier on sieve positivity
+33: degree-16 optimizers lack small-support autocorrelation
+34: expository paper on geometric sieve language
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21
+S25:22 23 24 25 26 28
+S29:29 30 31 32 33
+S34:34
+E18:1 17
+E19:1 17
+E20:1 19
+E21:2 17,7 25
+E22:10 19
+E23:10 19
+E24:10 19
+E25:1 26,7 30
+E27:5 19,7 28
+E29:6 30
+E31:1 29
+E32:3 29
+E33:3 30
+A:17 13,18 13,19 13,20 13,21 14,22 14,23 14,24 14,25 14,26 14,27 14,28 14,29 16,30 16,31 14,32 14,33 14,34 16
+L:29 30 34

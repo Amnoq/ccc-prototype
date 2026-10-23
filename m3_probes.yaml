@@ -1,0 +1,36 @@
+# M3 probes — written 2026-10-03 from chunk4 source prose, BEFORE any extraction.
+# Prose answers locked now. Structure answers to be filled after extraction.
+# Scoring: parity = same correct answer from both. Failure modes: omission
+# (unanswerable from structure), hallucination (structure supports wrong answer).
+
+probes:
+- id: P1
+  probe: "Why is CCC described as a memory codec/transport rather than a memory system, and what gap does that fill relative to Letta, Zep, and Mem0?"
+  answer_prose: "Letta (tiered core/recall/archival), Zep (temporal knowledge graph), and Mem0 (per-turn extraction) are all stores with retrieval, but none has a portable exchange format (Letta's memory objects explicitly lack one). CCC's slot is the verifiable wire format: portable, checksummed, fingerprinted snapshots handable across subagent hops, tool boundaries, and sessions with tamper-evidence intact."
+- id: P2
+  probe: "Name the three layers of the proposed stack and the role of each."
+  answer_prose: "Store: a registry (concept/entity graph, Zep-shaped: entities, typed relations, statuses) — the actual memory. Transport/checkpoint: the v5 wire — portable, checksummed, fingerprinted snapshots of registry state or deltas. Working memory: the cursor layer — shared accumulated graph evolving in lockstep (1.3x over structural), the session-local live working set; the wire is the cross-session checkpoint."
+- id: P3
+  probe: "Why is the extractor the #1 (gating) hard problem, and what metric decides whether it works?"
+  answer_prose: "Text-to-typed-structure is the whole game: an LLM extractor constrained to a strict schema, followed by a deterministic verifier and a semantic check (probes run against extracted structure vs source text). The metric that matters is probe parity per extraction dollar, amortized over sessions — e.g. if extraction costs 5K tokens to save 3K per session, the memory must live 2+ sessions to break even, and that must be measured, not assumed."
+- id: P4
+  probe: "What breaks if entity resolution fails, using the wheel_210 example?"
+  answer_prose: "'wheel_210' in session 3 vs 'the mod-210 wheel' in session 9 must resolve to one concept; if not, the registry forks and compression dies from duplicate entries. It needs embedding candidates plus adjudication, and it is the second gating experiment after extraction."
+- id: P5
+  probe: "Does CCC replace RAG on the read path at scale? Why or why not?"
+  answer_prose: "No. You cannot inject 10K concepts, so retrieval must select a relevant subgraph, and CCC becomes the transport for whatever is materialized — the 2.2x applies to the retrieved slice. CCC meets RAG rather than replacing it: RAG finds it, CCC carries it densely and verifiably."
+- id: P6
+  probe: "Why is the integrity story called 'the differentiator'? Which realistic corruptions are handled, and what do vector stores / Postgres-backed memories offer on their interchange paths?"
+  answer_prose: "Per-line checksums, header checksums binding headers to bodies, registry fingerprints, order-independent reassembly, and fountain erasure recovery compose into tamper-evident memory across trust boundaries. Realistic corruptions handled: truncation in transit, a model 'helpfully' editing the wire, duplicated lines from retried sends, reordered chunks from parallel delivery — the prototype already detects or corrects all of these. Vector stores and Postgres-backed memories offer none of this on their interchange paths. For multi-agent systems where memory crosses subagent hops, that is a selling point independent of the 2.2x."
+- id: P7
+  probe: "What temporal capability does v5 lack that Zep has, and what is the proposed path toward it?"
+  answer_prose: "v5 has no temporal validity; Zep's key insight is recording when a fact became untrue rather than overwriting. Statuses give a hook (st_verified -> st_superseded), but real temporal edges would be a v6 consideration. Same for cross-session contradictions: a resolution policy is needed, not just a codec."
+- id: P8
+  probe: "What are the components of the proposed memory_harness.py MVP build?"
+  answer_prose: "SQLite-backed registry as store; an LLM extractor with the strict schema plus deterministic verifier; snapshot/restore through the v5 wire; grouped injection on read; and the two gating experiments instrumented from day one (extraction probe-parity + entity-resolution accuracy)."
+- id: P9
+  probe: "Why is LongMemEval/LoCoMo brought in as an external yardstick?"
+  answer_prose: "So the harness is comparable to the surveyed systems (Letta/Zep/Mem0) instead of self-graded."
+- id: P10
+  probe: "Why does the user insist on keeping a decision tree during explorations like this?"
+  answer_prose: "It documents the path of decisions reached and the forks taken, so there is a reference to go back to — knowing where to return to when revisiting the exploration."

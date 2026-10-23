@@ -1,0 +1,767 @@
+\` 0 0 is the “normalized” functional v , where \` v
+
+\[
+
+\|+ \chi v\| 2 0\| 2 = on \pi v so that\|+
+
+\]
+
+v \|Lv\| 2 . It enjoys the following properties:
+
+\[
+
+1. For any place for which \varphi v \otimes \chi v is spherical,\|+ 0 (\varphi v)\| 2 = h\varphi v, \varphi vi = S \pi v (\varphi v) 2 0 .
+
+\]
+
+2. There exists A, d0 so that, for any v, the operator norm of \` 0 w.r.t.
+
+1−2θ
+
+S πv is_6 A\|Lv\| −1discv(Y g) −
+
+32 .
+
+d0
+
+3. There exists an absolute constant C so that, for nonarchimedean
+
+v, \|Lv\| −1 6 C.
+
+\[
+
+Thus property \tag{S1d}
+
+\]
+
+\[
+
+applied to + 0 + 0 shows that, for \varphi \in \pi,
+
+\]
+
+:= Q
+
+v v
+
+\|\` 0 (ϕ)\| 2 1−2θ \|Lv\| − 16 +εY −2 S π_2 ε disc(Y g) , d_0(ϕ) v\|∞
+
+for some d > 0. Applying trivial or convexity bounds for all local factors or L-functions, we arrive at:
+
+\|\` χ (ϕ)\| 2
+
+1−2θ − 16 ,
+
+Sπ(ϕ) 2 π,χ,ε disc(Y g)
+
+as required.  ut
+
+This Lemma admits the following mild refinement where we improve
+
+the χ-dependence at the implicit cost of weakening the π-dependence:
+
+#### 76 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+4.2.3. Lemma. — Notation as in the prior Lemma, for any N > 0,
+
+there is d = d(N) so that
+
+\|\` (g.ϕ)\| π (Cond(χ))−N disc(Y g) 1−2θ (ϕ), χ − π
+
+32 S
+
+d
+
+\[
+
+Proof. — By \tag{2.7}
+
+\]
+
+\[
+
+, it suffices to prove such an assertion for \varphi \in \pi [m]. (One also verifies that the implicit dependence of A_0 on A in (2.7) is independent of \pi).
+
+The assertion for \varphi \in \pi [m] follows by integration by parts.
+
+\]
+
+ut
+
+4.3. Regularization
+
+In this section, we define a regularization process to define integrals of
+
+non-necessarily decaying functions on XPGL2 = PGL2(F)\\PGL2(A). Such a regularization was given by Zagier \[72\]; for our purposes, an alternate way of defining
+
+it using convolution will be of use.
+
+4.3.1. For motivational purposes, we consider first a toy example, namely,
+
+the corresponding situation on R>0 (one could even consider the case of the integers). We shall regard R>0 as a multiplicative group in what follows. A finite
+
+function on R>0 is one whose translates, under the action of
+
+the multiplicative translations:
+
+τyf(x) = f(xy)
+
+span a finite dimensional representation; equivalently, it is a linear combination of functions x
+
+α (log x) b , for α ∈ C and b ∈ N. We call a finite function admissible if the exponent α = 0 never occurs. A more intrinsic and useful way of formulating this
+
+is: f is admissible if the span hτyfi of all multiplicative translates does not contain the trivial representation of R>0. Let V+ be the space of continuous
+
+functions on R>0 of rapid decay as x → ∞ (i.e. \|f(x)\| N \|x\| −N for all N); let V− be the space of rapid decay as x → 0; and let V0 = V+ ∩ V−. Let V be the
+
+space of all continuous functions f on R>0 so that there exists admissible finite functions f1, f2 so that f − f1 ∈ V+, f − f2 ∈ V−. Clearly V0 ⊂ V . The
+
+following Lemma is well-known:
+
+4.3.2. Lemma. — There exists a unique functional (the “regularized integral”) on V which extends integration f 7→
+
+R f(x) dx
+
+on V0, and is invariant
+
+x
+
+under multiplicative translation.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 77
+
+This functional may be defined in multiple ways:
+
+\[
+
+1. Given f \in V, we may find finite collections yi \in R>0, ci \in C so that f_0 f \in V_0, and so that Pci_6= 0. We then define the regularized := Pci\tau yi
+
+\]
+
+R f 0 (x) dx
+
+integral of f to be
+
+P  x .
+
+ci
+
+2. Consider R T dx
+
+; this has the form g(T) + h(T), where g(T) is
+
+1/T f(x) x
+
+\[
+
+an admissible finite function, and h(T) has a limit as T \to \infty . We define the integral to be limT\to \infty h(T). 3. Consider F+(w) = R \infty f(x)x w dx
+
+; define similarly F-(w). The functions F\pm (w) are convergent for ∓<(w) 1; they extend to meromorphic
+
+\]
+
+1 x
+
+\[
+
+functions on the plane, and are holomorphic at w = 0. We define the integral to be F+ \tag{0}
+
+\]
+
+\[
+
++ F-(0).
+
+\]
+
+The regularized integral of any admissible finite function is zero. This
+
+follows, without computation, because of invariance under multiplicative translation. Thus, if there exists finite function f0 so that f − f0 ∈ V0, then the
+
+(f − f0)(x) dx
+
+regularized integral of f equals R
+
+x .
+
+The remarks of this section adapt without change to define a regularized
+
+integral on A×/F ×.
+
+4.3.3. Given a function Φ on GL2(F)\\ GL2(A), with unitary central character χ (i.e. which transform by χ under translation by Z(A)), we say that Φ is of
+
+controlled increase if there exists a function
+
+#### f : N(A)A(F)\\ GL2(A) → C,
+
+spanning a finite-dimensional space under the translation action of GL2(A), and with central character χ, so that, for every N > 0
+
+1 x y1 0
+
+\[
+
+\Phi_k k + \mathcal{O}(\|y1\|-N) as\|y1\| \to \infty \tag{4.18}
+
+\]
+
+\[
+
+0 1 y_1 0 0 1 = f_0 1 In other terms, the difference is of rapid decay. In more explicit terms, there must exist a finite collection of functions \chi_i :
+
+A\times /F \times \to C (i \in I), each finite under the left translation action of A\times /F \times, as well as a corresponding collection of K-finite
+
+functions Ki : K \to C, so that the left-hand side is well-approximated by P\chi i \tag{y1}
+
+\]
+
+\[
+
+Ki(k).
+
+\]
+
+A basic example to bear in mind is any sum or product of Eisenstein
+
+series.
+
+The expression f is uniquely determined. We denote it by Φ ∗
+
+N ; it need
+
+not coincide with the true constant term of Φ. The set of exponents of Φ (or of Φ ∗
+
+N ) – denoted SΦ – is the set of characters of A×/F × which are
+
+#### 78 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+(generalized) eigenvalues for the translation action of A×/F × on the space
+
+spanned by Φ ∗ ∗
+
+\[
+
+N and its translates. Of course if \Phi N = 0 (\Phi is of rapid decay) we set S\Phi = ∅. 4.3.4. Example. — If \chi + 6= \chi -, the exponents of a (non-zero)
+
+Eisenstein series E \in Eis(I(\chi +,\chi -)) are {\chi +\|.\| \frac{1}{2} \frac{1}{2}}. If \chi + = \chi - = \chi the, \chi -\|.\| (I(\chi,\chi)); the exponent
+
+\chi\|.\| \frac{1}{2} is now a generalized
+
+\]
+
+same is true for E ∈ Eis∗ eigenvalue, i.e., has multiplicity. If Es denote the Eisenstein series on the
+
+2 is the set
+
+modular group with eigenvalue 1/4−s
+
+, the exponents of Es1Es2Es3
+
+of characters \| · \|3/2+s
+
+\[
+
+, where s = \pm s_1 \pm s_2 \pm s_3.
+
+\]
+
+\\In the sequel, we will identify the complex numbers C with a subset of A×/F × via z 7→ \|.\| z
+
+. For instance, given S ⊂ A\\×/F ×, we say that “1 ∈ S” when S contains the character x_7→ \|x\|. We will also use an additive notation: given two such subsets
+
+S1, S2 we denote by S1 + S2 the set of pairwise products of the characters of S1 and S2. Of course S1 + ∅ = ∅. The operation Φ_7→ Φ ∗ N is multiplicative: given
+
+two functions \Phi_1, \Phi_2 with exponents S1, S2, (Φ1Φ2) ∗ = Φ ∗ ∗ 1,N Φ_2,N and \Phi_1 \Phi_2 has exponents in S1 + S2. Finally, the complex conjugate Φ has
+
+exponents in S¯ (i.e. the set of conjugates
+
+of those characters in S).
+
+The set of characters whose real part is 1/2 (the real part being defined
+
+\[
+
+by\|\chi(.)\| = \|.\| <(\chi)
+
+\]
+
+A ) will be called the unitary axis: this is the set of exponents
+
+of the automorphic Eisenstein series.
+
+4.3.5. Regularized integral and regularized innerproduct. — Let VS be
+
+the vector space of smooth functions that are of controlled increase with trivial central character and whose exponents belong to S; and V the union of VS,
+
+where S is taken through all finite subsets of characters that do not
+
+(i.e., any quadratic twist of \| · \|).
+
+contain any character of square \| · \|2
+
+Lemma. — There’s a unique PGL2(A)-invariant functional on V extending integration on L
+
+#### 1 (XPGL2 ).
+
+Proof. — One definition, due to Zagier, is given as follows: let E =
+
+Eis(Φ ∗
+
+N ) be the Eisenstein series induced from all exponents of Φ that are of
+
+real part > 1/2 (or suitable derivatives thereof) and define
+
+Z reg Z
+
+\[
+
+\Phi := (\Phi - E).
+
+\]
+
+### XPGL2 XPGL2
+
+The right hand side makes sense, for Φ − E lies in L_1
+
+. Since it is clear on
+
+representation-theoretic grounds that the regularized integral of E must be
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 79
+
+zero (because the exponents of Φ do not contain 1), the uniqueness follows.
+
+ut
+
+As a corollary of the previous Lemma, we can define the regularized
+
+\[
+
+inner product for \Phi_1, \Phi_2 of controlled increase with the same central character and such that_1 \in / S_1 + S_2:
+
+\]
+
+Z reg
+
+\[
+
+h\Phi 1, \Phi 2ireg = \Phi_1 \Phi_2.
+
+\]
+
+### XPGL2
+
+4.3.6. Regularization via convolution with measures. — Here is an alternate definition that will be, in fact, more suited for our purposes. (It also
+
+works better in higher rank.)
+
+\[
+
+For every place v, we may choose a compactly supported measure \mu v on PGL2(Fv) with the property that, for \Phi \in VS, \Phi ? \mu v \in L \mu v_6= 0,
+
+\]
+
+. If R
+
+R (Φ?µv) then Φ_7→ defines a functional such as in the Lemma: this functional is independent of v or µv, as we see by choosing a different place w
+
+R µv
+
+and measure µ 0
+
+\[
+
+w, and noting that ?\mu v and ?\mu 0 Q w commute. This functional is v 06=v PGL2(Fv)-invariant; since v is arbitrary, it is PGL2(A)-invariant. Other definitions
+
+utilize truncation or related ideas; the disadvantage of these is that the PGL2(A)-invariance is less clear.
+
+\]
+
+4.3.7. Explicit choice of a regularizing measure. — The following special case will occur:
+
+\[
+
+Let v be a finite place with a residue field of size qv. Suppose that \Phi is of controlled increase and unramified at v, and all \chi \in S\Phi have real part
+
+1. Suppose that \varphi is a cusp form unramified at v.
+
+\]
+
+Then one may choose a Kv-bi-invariant (signed) measure µv so that
+
+Φ ? µv has rapid decay, so that the total mass of \|µv\| is at most_4\|SΦ\|
+
+, and
+
+\[
+
+2q \theta\|S\Phi\| so that \varphi ? \mu v = \lambda \varphi,\|\lambda\| > (1 - v
+
+\]
+
+qv+1 ) . In other words, we may “kill the
+
+\[
+
+growth of \Phi whilst only wounding \varphi ;” it should be noted that here the set\|S\Phi\| is counted =with multiplicity.” Indeed, there exists a finite
+
+function f = P f\chi on N(A)A(F)\\ GL2(A) \chi \in S\Phi so that \Phi -f is rapidly decaying, as in \tag{4.18}
+
+\]
+
+\[
+
+. The standard Hecke operator Tv := 1Kva($v)Kv acts on each f\chi by a (generalized) eigenvalue \lambda v(\chi), satisfying qv + 1 >\|\lambda v\| > qv - 1 in
+
+absolute value; on the other hand, Tv acts on \varphi by an eigenvalue that is at most 2q \theta
+
+\]
+
+v .
+
+The measure (1 − Tv ) therefore annihilates fχ, and has total mass
+
+\[
+
+\lambda v(\chi) 2q \theta(1 + qv+1) \in [2, 4]. It acts on \varphi by an eigenvalue that is > 1 -
+
+\]
+
+v
+
+\[
+
+\|\lambda v(\chi)\| qv+1 . Take \mu v to be the convolution of these measures, for all \chi \in S\Phi .
+
+\]
+
+#### 80 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+4.3.8. Regularized IP formula. — A simple form of the Plancherel formula is the following: if \Phi_1, \Phi_2 are functions on XPGL2 with rapid decay then
+
+Z
+
+\[
+
+h\Phi 1, \Phi 2i = h\Pi \pi \Phi 1, \Pi \pi \Phi 2id\mu P (\pi)
+
+\]
+
+Aut
+
+π∈PGL \\2 where Ππ denote the orthogonal projection on the space of π. We describe now a version of that formula for functions \Phi_1, \Phi_2 on XPGL2 of
+
+controlled increase. Let π be a standard automorphic representation of PGL2, and Φ ∈ VS. If S does not intersect the unitary axis and π is generic (i.e. not
+
+equal to a quadratic character) then, for B(π) an orthonormal basis of π, we set ΠπΦ = X hΦ, ϕiregϕ ∈ π. (4.19) ϕ∈B(π) Likewise, we define similarly ΠπΦ for any
+
+π which is nongeneric (i.e. onedimensional), so long as S does not contain any exponent whose square is
+
+\|.\| 2 .
+
+\[
+
+Proposition. — Given \Phi_1 and \Phi_2 of controlled increase with exponents of real part > \frac{1}{2}. Let S_1, S_2 denote the respective sets of exponents .
+
+Suppose that S_1, S_2 are disjoint and that S_1 ∪ S_2 ∪ S_1 + S_2 does not contain any
+
+\]
+
+character whose square is \|.\|
+
+, then:
+
+Z
+
+\[
+
+h\Phi 1, \Phi 2ireg = h\Pi \pi \Phi 1, \Pi \pi \Phi 2id\mu P (\pi) + h\Phi 1, E2ireg + hE1, \Phi 2ireg \tag{4.20}
+
+\]
+
+\[
+
+\pi where \Pi \pi is the regularized projection onto the space of automorphic \pi, and Ei = Eis((\Phi i)^*
+
+\]
+
+N )
+
+We will call the additional contribution, hΦ1, E2ireg + hE1, Φ2ireg , in the regularized Plancherel formula the degenerate contribution.
+
+Remark. — If Φ1 is of rapid decay, the formula continues to hold with
+
+hE1, Φ2ireg = 0
+
+Proof. — Firstly our assumptions insure that all the terms of (4.20) are
+
+\[
+
+well defined. Moreover since the exponents of \Phi_1 and \Phi_2 are > \frac{1}{2} and not of the form \chi .\|.\| with \chi quadratic, the representations
+
+underlying Ei have no subquotient isomorphic to a standard automorphic representation, and thus \Pi \pi Ei = 0 for_i = 1, 2 and all \pi . Similarly hE1, E2ireg
+
+= 0 by our assumption
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 81
+
+\[
+
+that S_1, S_2 are disjoint and have real parts larger than_1/2. So it is enough to check, with \bar{\Phi} i = \Phi_i - Ei, that
+
+\]
+
+Z
+
+\[
+
+h\Phi ¯ h\Pi \pi \bar{\Phi} 1, \bar{\Phi} 2ireg = 1, \Pi \pi \bar{\Phi} 2id\mu P (\pi)
+
+\]
+
+π
+
+but then Φ¯ 2 (XPGL2 ).  ut
+
+i belongs to L
+
+4.4. (Regularized) triple products.
+
+In this section we establish the following: Suppose that πi are generic
+
+standard automorphic representations, at least one of which is Eisenstein.
+
+\[
+
+Then, for each factorizable vector \varphi_i = \otimes v\varphi i,v, we have:
+
+\]
+
+R 2
+
+\[
+
+1 \zeta v \tag{1}
+
+\]
+
+\[
+
+\|LW (\varphi 1,v,\varphi 2,v,\varphi 3,v)\| 2 \varphi 1\varphi 2\varphi 3(g)dg Y^* X \tag{4.21}
+
+\]
+
+\[
+
+k\varphi 1k =
+
+\]
+
+2 2 2 8(discF) ζv(2)3 Q3
+
+\[
+
+cank\varphi 2k cank\varphi 3k can_i=1h\varphi i,v, \varphi i,vi
+
+\]
+
+v
+
+where the local factors are equal at almost all places, to
+
+ζv(1) L( 1
+
+\[
+
+Lv := 2, \pi_1 \otimes \pi_2 \otimes \pi_3) \zeta v \tag{2}
+
+\]
+
+\[
+
+Q_3 . i=1 L(1,Ad,\pi_i)
+
+\]
+
+If all πi are Eisenstein, the integration on the left-hand side is to be understood by regularization.
+
+Remark. — Let us compare this result with that in \[32\]. Recall first
+
+\[
+
+the relation dg = (discF) -1 \xi F \tag{2}
+
+\]
+
+\[
+
+d \tau g between our measure and Tamagawa measure. It follows that, if we replace dg by d \tau g, then (4.21) holds with
+
+\]
+
+Q ζv(1)a factor 1
+
+\[
+
+8 v \zeta v \tag{2}
+
+\]
+
+\[
+
+4 . In the work of [32], the \zeta v(1)/\zeta v(2)4 does not occur.
+
+\]
+
+From this, we deduce – by summation through an orthogonal basis of
+
+π1, with respect to the canonical norm – the following:
+
+\[
+
+k\Pi \pi 1 (\varphi 2\varphi 3)k_2 1 \zeta v \tag{1}
+
+\]
+
+\[
+
+kI\pi 1,v (\varphi 2,v \otimes \varphi 3,v)k_2
+
+\]
+
+(discF) −1Y∗
+
+\[
+
+k\varphi 2k =, \tag{4.22}
+
+\]
+
+\[
+
+2 2 8 \zeta v(2)3 h\varphi 2,v, \varphi 2,vi h\varphi 3,v, \varphi 3,vi
+
+\]
+
+cankϕ3k can
+
+v
+
+with a.e. local factor equal to Lv above.
+
+Before we embark on the proof, we note that it is sufficient – by a
+
+\[
+
+continuity argument - to treat the case where no \pi_i is a singular Eisenstein series (i.e. of the form \chi \chi .) For instance, let us consider the case
+
+when \pi_1, \pi_2 are cuspidal, \pi_3 = 1 1 and let us take a family \varphi 3(t) \in \pi 3(t), where \pi 3(t) = \| ·\|t\| ·\|-t deforming \varphi_3
+
+(i.e.,\varphi 3(t) \to \varphi_3 \tag{0}
+
+\]
+
+\[
+
+pointwise as_t \to 0).
+
+\]
+
+Then the left-hand side and right-hand side of (4.21), denoted L(t) and R(t)
+
+#### 82 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+respectively, do not necessarily depend continuously on_t when_t = 0. However, both L^* (1,Ad,\pi 3(t))L(t) and L^* (1,Ad,\pi 3(t))R(t) extend to continuous
+
+functions around_t = 0, and are equal for_t 6= 0. If we denote by LR their
+
+\]
+
+∗ (1, Ad, π3)LR, and
+
+common limit, then L(0) and R(0) are both given by L are therefore equal.
+
+4.4.1. Upper bounds. — Unfortunately, we shall use the beautiful formula (4.21) only for upper bounds. We now explicate the bounds that are
+
+derived from it.
+
+L( 1
+
+\[
+
+The local factors of \tag{4.22}
+
+\]
+
+\[
+
+are equal, to Lv := \zeta v \tag{1}
+
+\]
+
+\[
+
+2,\pi 1\otimes \pi 2\otimes \pi 3) \zeta v \tag{2}
+
+\]
+
+\[
+
+3 Q_3, at i=1 L(1,Ad,\pi i)
+
+\]
+
+almost all places. Observe that – taking into account bounds towards the Ramanujan conjecture – Lv is absolutely bounded above and below at nonarchimedean v.
+
+Let S be the set of places where the local factor is not equal
+
+to Lv, together with all archimedean places, and suppose we are supplied with the estimate
+
+S π3,v (Iπ3,v (x1 \otimes x2))2
+
+−d 6 Bv
+
+hx1, x1ihx2, x2i
+
+\[
+
+for v \in S. We conclude - inserting \Delta -d
+
+\]
+
+### A and applying the uniqueness of
+
+trilinear functionals –
+
+k\Delta (ϕ2ϕ3)k_2 1 )
+
+−d
+
+\[
+
+A \Pi \pi 1 2 Y Bv, \tag{4.23}
+
+\]
+
+\[
+
+-\|S\|L(\pi 1 \otimes \pi_2 \otimes \pi_3,k\varphi 2k_2 2 A Q_3 (Ad,\pi_i cank\varphi 3k can_i=1 L^*,1) v\in S
+
+\]
+
+where A is an absolute constant.
+
+Let us note that: given d, there exists d 0 so that:
+
+Z
+
+\[
+
+Sd(\Pi \pi(\varphi 2\varphi 3))d\mu P (\pi) Sd 0(\varphi 2)Sd_0(\varphi 3) \tag{4.24}
+
+\]
+
+\[

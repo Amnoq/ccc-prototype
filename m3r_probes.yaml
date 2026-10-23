@@ -1,0 +1,35 @@
+# M3R probes — written 2026-10-03 from chunk1 source prose, BEFORE any revised extraction.
+# Prose answers locked now. Structure answers to be filled after re-run extraction.
+# Same scoring: parity = same correct answer from both; omission vs hallucination recorded.
+
+probes:
+- id: P1
+  probe: "The efficiency ledger shows ~11x on a repeat session but only ~1.16x cumulatively over three sessions. Why the gap, and what is the projection?"
+  answer_prose: "The registry sync costs 274 tokens once, which dominates at toy scale. Repeat session: wire 17 vs 192 raw (~11x). Two-novel-concept session: 77 vs 236 (~3x). Cumulative over three sessions: 368 vs 428 (~1.16x). Projection: ~4.3x by ten sessions as the one-time cost amortizes."
+- id: P2
+  probe: "What are the two hard boundaries on what CCC's compression can achieve?"
+  answer_prose: "It saves application-layer prompt cost only — it cannot bypass a transformer's hard context window without model-side changes. And the primes contribute shared computability, not entropy reduction — the compression comes from the registry plus not re-transmitting predictable framing."
+- id: P3
+  probe: "Why is model-side decoding called 'the big untested one' and picked as the next move?"
+  answer_prose: "No live model has ever read the wire. The open question is whether an LLM given the registry, schema, and lines can rehydrate faithfully under shuffle, corruption, and missing lines, and what the decoding instructions themselves cost in tokens. Until measured, the compression numbers are serialization results, not usable savings. It is the experiment that validates or kills the concept; everything else is engineering."
+- id: P4
+  probe: "What is a synchronizing word, and how does the magician's trick map onto CCC's architecture?"
+  answer_prose: "A synchronizing (reset) word drags a deterministic automaton to a single state no matter the start state; the Cerny conjecture concerns the shortest length. Mapping: the TV grid is the shared codebook (synced once, out of band); the 'left three, right two' patter is the wire (tiny, cheap, content-free alone); everyone landing on the same symbol is deterministic reconstruction; the sealed prediction envelope is the checksum. Weak versions already built: the shuffled-lines test (any arrival order converges to one reconstruction) and the telomere scanner (entry-point independent)."
+- id: P5
+  probe: "State the 'encoder does the searching, the decoder does the walking' principle and how the cursor layer implements it."
+  answer_prose: "Asymmetric work: compression is allowed to be expensive, decompression must be trivial. The cursor layer implements it by transmitting graph walks ('3rd edge, 1st edge' from a shared cursor) instead of absolute concept indices — the encoder searches for short paths and walk-covers (traveling salesman over strand sets) at compression time; the decoder just follows hops."
+- id: P6
+  probe: "Why does the cursor layer's compression ratio measure 'semantic coherence'?"
+  answer_prose: "Tightly related context lives near the cursor on the shared graph, so coherent sessions need shorter walks. The compression ratio therefore reflects how semantically coherent the session is — the desired behavior for a context codec."
+- id: P7
+  probe: "Why doesn't zipping a zip work, and what second stage would work on the cursor layer's output?"
+  answer_prose: "Compressed output is high-entropy (near-random), so a second generic pass finds no patterns and just adds container overhead — a verified, boring fact. What works is exploiting residual structure the first stage left behind: the cursor output stream of small integers has a skewed distribution (entropy coding — Huffman/arithmetic, typically 20-30%) and repeated reasoning-chain motifs (LZ-style dictionary over recurring walk motifs). Each layer removes a different kind of redundancy: a proper protocol stack."
+- id: P8
+  probe: "What is the load-bearing ordering constraint between source coding and channel coding, and why?"
+  answer_prose: "Source coding goes before channel coding: any new compression stage must sit upstream of the parity line. Compressing after parity would destroy the digit-level structure the error correction depends on. Standard separation; the existing stack already respects it."
+- id: P9
+  probe: "Why would sentence types belong in the registry's prime structural layer as a grammar codebook?"
+  answer_prose: "If sentence types form a small closed inventory (Quirk's 7 clause patterns against 7 diatonic notes), syntactic structure becomes a handful of prime-indexed tokens instead of re-derived parse information every session — the shape of a sentence compressed to a single symbol, with the content hanging off it."
+- id: P10
+  probe: "What are the two caveats on the cursor layer's efficiency math?"
+  answer_prose: "First, the navigation graph must be shared: the registry alone has no edges, so the accumulated graph of all previous sessions serves (both sides hold it by construction); the grid gets richer over time and paths get shorter, so compression improves with shared history — first session falls back to absolute indices. Second, at toy scale (B=8) it loses to direct indices; it only pays off once the registry is realistically large and the graph is sparse (degree much smaller than registry size)."

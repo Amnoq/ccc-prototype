@@ -1,0 +1,56 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Gaussian detector bump h(r), Fourier partner g(u)
+18: Zero-window bound N+(B+)≤e^{1/2}W(h), prime-side
+19: Prime-side/zero-side agreement 4e-16, 80 zeros
+20: Prime-sum negativity resonance at zero frequency
+21: Uncertainty-principle Pareto frontier, no finite optimum
+22: Unproved gamma-real assumption; loose edge bound
+23: D10b Li-criterion-through-D1-face-sum investigation
+24: Keiper-Taylor exact lambda_n≥0, n=1..40
+25: Zero-side reconciliation via high-zero tail estimate
+26: S_1 archimedean; no convergent prime-sum presentation
+27: Divergent A_k sums need renormalized finite parts
+28: Weil face-sum-native, Li Dirichlet-series-native verdict
+29: Li as inadmissible sharp limit of Weil (heuristic)
+30: Face-native Selberg Q(lam), PD sum of squares
+31: Möbius optimizer; Qmin = Mertens product δ(z)
+32: Full-face optimum 0.1710 beats truncated 0.2348
+33: Parity barrier blocks Selberg form; template, not zero-detecting
+34: 10d: independent Gram/intersection positivity source
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21 22
+S23:23 24 25 26 27 28 29
+S30:30 31 32 33
+S34:34
+E17:5 18
+E19:1 18
+E20:1 18
+E21:3 18
+E22:3 18
+E25:1 24
+E26:1 28
+E27:1 28
+E29:11 28
+E31:6 30
+E32:1 31
+E33:3 30,11 34
+A:17 14,18 14,19 14,20 14,21 14,22 16,23 14,24 14,25 14,26 14,27 14,28 13,29 13,30 14,31 14,32 14,33 13,34 16
+L:22 34

@@ -1,0 +1,531 @@
+essential part of Witten’s proposal \[3\] relating S-duality in four-dimensional gauge theories and the Langlands
+
+correspondence that was mentioned in the Introduction. Examples of “non-commutative” D-branes related to D-modules have also been considered in \[79\], and in
+
+fact they are
+
+52These dual Hitchin fibrations (restricted to the open subsets of stable Higgs pairs in T ∗ Bun◦
+
+### G and
+
+### T ∗ Bun◦
+
+LG) have been shown by T. Hausel and M. Thaddeus \[77\] to be an example of the Strominger-YauZaslow duality.
+
+### 72  EDWARD FRENKEL
+
+closely related to the deformed Fourier-Mukai equivalence in the abelian case that we mentioned above.
+
+We close this section with the following remark. We have looked above at the cotangent
+
+### bundle T ∗ Bun◦
+
+G to Bun◦ G and the twisted cotangent bundle to BunG viewed as moduli
+
+space LocG of flat holomorphic bundles on X. Both are algebraic stacks. But they contain large open dense subsets which are algebraic varieties. For example, in
+
+the case when G = GLn, these are the moduli space of stable Higgs pairs of rank_n and degree_0 and the moduli space of irreducible rank flat vector bundles of
+
+rank_n. Both are smooth (quasi-projective) algebraic varieties. Though they are different as algebraic (or complex) varieties, the underlying real manifolds are
+
+diffeomorphic to each other. This is the socalled non-abelian Hodge theory diffeomorphism \[80\]. In fact, the underlying real manifold
+
+is hyperk¨ahler, and the above two incarnations correspond to two particular choices of the complex structure. It is natural to ask what, if anything, this
+
+hyperk¨ahler structure has to do with the Langlands correspondence, in which both of these algebraic varieties play such a prominent role. The answer to this
+
+question is presently unknown.
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 73
+
+### Part III. Conformal field theory approach
+
+We have now come to point where we can relate the geometric Langlands correspondence to two-dimensional conformal field theory and reveal some of the secrets of
+
+the Langlands correspondence. The reason why conformal field theory is useful in our enterprise is actually very simple: the problem that we are trying to
+
+solve is how to attach to a flat LG-bundle E on X a D-module AutE on the moduli stack BunG of G-bundles on X, which is a Hecke eigensheaf with the eigenvalue E.
+
+Setting the Hecke condition aside for a moment, we ask: how can we possibly construct D-modules on BunG? The point is that conformal field theories with affine
+
+Lie algebra (or Kac-Moody) symmetry corresponding to the group G give us precisely what we need - D-modules on BunG (more precisely, twisted D-modules, as
+
+explained below). These D-modules encode chiral correlation functions of the model and it turns out that Hecke eigensheaves may be obtained this way.
+
+In this part of the survey I will recall this formalism and then apply it to a particular class of conformal field theories: namely, those where the affine
+
+Kac-Moody algebra has critical level. As the result we will obtain the Beilinson-Drinfeld construction \[15\] of Hecke eigensheaves on BunG associated to
+
+special LG-local systems on X called opers. Moreover, we will see that the Hecke operators may be interpreted in terms of the insertion of certain vertex
+
+operators in the correlation functions of this conformal field theory.
+
+7. Conformal field theory with Kac-Moody symmetry
+
+The D-modules on BunG arise in conformal field theories as the sheaves of conformal blocks, or the sheaves of coinvariants (the dual spaces to the spaces of
+
+conformal blocks), as I will now explain. Throughout Part III of these notes, unless specified otherwise, G will denote a connected simply-connected simple Lie
+
+group over C.
+
+7.1. Conformal blocks. The construction of the sheaves of conformal blocks (or coinvariants) is well-known in conformal field theory. For example, consider the
+
+WZW model \[10\] corresponding to a connected and simply-connected simple compact Lie group U and a positive integral level_k. Let G be the corresponding
+
+complex Lie group and G its Lie algebra. The affine Kac-Moody algebra corresponding to g is defined as the central extension (7.1) 0 → C1 → bg → g \otimes
+
+C((t)) → 0 with the commutation relations
+
+Z
+
+\[
+
+[A \otimes f(t),B \otimes g(t)] = [A,B] \otimes fg - \kappa 0(A,B) fdg · 1.Here \kappa_0 denotes a non-degenerate invariant inner product on g. It is unique up
+
+to a non-zero scalar, and we normalize it in the standard way so that the square of length of the maximal root is equal to_2 [100]. So, for instance, if g =
+
+slN, we have \kappa 0(A,B) =
+
+\]
+
+### 74  EDWARD FRENKEL
+
+\[
+
+TrCN (AB). We will say that a representation M of bg has level_k \in C if_1 acts on M by multiplication by_k.
+
+\]
+
+The Hilbert space of the WZW theory of level k is the direct sum \[81\]
+
+M
+
+\[
+
+Hk = L\lambda \otimes L\lambda, \lambda \in Pbk
+
+\]
+
++
+
+Here Lλ and Lλ are two copies of the irreducible integrable representation of the corresponding affine Lie algebra bg of level_k and highest weight λ, and the
+
+set Pbk
+
+### + labels the
+
+highest weights of level_k (see \[100\]). Thus, Hk is a representation of the direct sum of two copies of bg, corresponding to the chiral and anti-chiral
+
+symmetries of the theory.
+
+\[
+
+Let X be a smooth projective curve X over C and x_1,...,xn an ntuple of points of X with local coordinates t_1,...,tn. We attach to this points integrable
+
+representations L\lambda 1 of bg of level_k. The diagonal central extension of the direct sum Ln,...,L\lambda n_i=1 g \otimes
+
+\]
+
+C((ti)) acts on the tensor product Nn
+
+i=1 Lλi . Consider the Lie algebra gout = g \otimes C[X\\{x1,... ,xn}]
+
+of g-valued meromorphic functions on X with poles allowed only at the points x1,... ,xn.
+
+We have an embedding
+
+### Mn
+
+gout ֒→ g \otimes C((ti)).
+
+### i=1
+
+It follows from the above commutation relations in bg and the residue theorem that this embedding lifts to the diagonal central extension of Ln i=1 g\otimes
+
+C((ti)). Hence the Lie algebra
+
+### gout acts on Nn
+
+i=1 Lλi .
+
+By definition, the corresponding space of conformal blocks is the space Cg(Lλ1
+
+### ,... ,λn)
+
+of linear functionals
+
+### On
+
+ϕ : Lλi → C
+
+### i=1
+
+invariant under gout, i.e., such that
+
+\[
+
+\varphi(\eta · v) = 0, ∀v \in On
+
+\]
+
+### Lλi
+
+\[
+
+, \eta \in g \otimes C[X\\{x_1,...,xn}].
+
+\]
+
+### i=1
+
+Its dual space
+
+(7.4)  Hg(Lλ1 /gout · On
+
+\[
+
+L\lambda i L\lambda i,...,\lambda n) = On i=1 i=1
+
+\]
+
+is called the space of coinvariants.
+
+The relevance of the space of conformal blocks to the WZW model is well-known.
+
+Consider the states \Phi_i = vi \otimes vi ∈ Lλi \otimes Lλi ⊂ H, and let Φi(xi) be the corresponding operator of the WZW model inserted at the point xi ∈ X.
+
+The correlation function hΦ1(x1)... Φ(xn)i satisfies the equations (7.3) with respect to the action of gout on the left factors; these are precisely the chiral
+
+Ward identities. It also satisfies the anti-chiral Ward identities with respect to the action of gout on the right factors. The same property holds for other
+
+conformal field theories with chiral and anti-chiral symmetries of bg level_k.
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 75
+
+\[
+
+Thus, we see that a possible strategy to find the correlation functions in the WZW model, or a more general model with Kac-Moody symmetry [9], is to consider
+
+the vector space of all functionals on H\otimes n which satisfy the identities \tag{7.3}
+
+\]
+
+\[
+
+and their anti-chiral analogues. If we further restrict ourselves to the insertion of operators corresponding to L\lambda i \otimes L\lambda i at the point xi
+
+\]
+
+, then we find that this space is just the tensor product of
+
+### Cg(Lλ1
+
+,... ,λn) and its complex conjugate space.
+
+\[
+
+A collection of states \Phi_i \in L\lambda i \otimes L\lambda i then determines a vector \varphi in the dual vector space, which is the tensor product of the
+
+space of coinvariants Hg(L\lambda 1
+
+### ,... ,λn) and its
+
+\[
+
+complex conjugate space. The corresponding correlation function h\Phi 1 \tag{x1}
+
+\]
+
+\[
+
+... \Phi(xn)i may be expressed as the square\|\|\varphi\|\|2 of length of \varphi with respect to a particular hermitean inner product on Hg(L\lambda 1
+
+,... ,λn). Once we determine this inner product on the space of
+
+coinvariants, we find all correlation functions. In a rational conformal field theory, such as the WZW model, the spaces of conformal blocks are
+
+finite-dimensional, and so this really looks like a good strategy.
+
+7.2. Sheaves of conformal blocks as D-modules on the moduli spaces of curves.
+
+In the above definition of conformal blocks the curve X as well as the points x1,... ,xn appear as parameters. The correlation functions of the model depend on
+
+these parameters. Hence we wish to consider the spaces of conformal blocks as these parameters vary
+
+along the appropriate moduli space Mg,n, the moduli space of n-pointed complex curves
+
+53 This way we obtain the holomorphic vector bundles of conformal blocks
+
+of genus g.
+
+) and \Delta g(Lλ1 ),
+
+and coinvariants on Mg,n, which we denote by Cg(Lλ1
+
+,... ,Lλn ,... ,Lλn
+
+respectively.
+
+\[
+
+A collection of states \Phi_i \in L\lambda i \otimes L\lambda i now determines a holomorphic section \varphi(X,(xi))). The correlation function h\Phi 1 \tag{x1}
+
+\]
+
+\[
+
+... \Phi(xn)i with of the vector bundle \Delta g(L\lambda 1
+
+\]
+
+### ,... ,Lλn
+
+\[
+
+varying complex structure on X and varying points is the square\|\|\varphi(X,(xi))\|\|2 of length of \varphi(X,(xi)) with respect to a =natural” hermitean inner
+
+product which is constructed in [82, 83] (see also [84]).54 There is a unique unitary connection compatible with the holomorphic
+
+\]
+
+) and this hermitean metric. This connection is projectively
+
+structure on \Delta g(Lλ1
+
+### ,... ,Lλn
+
+flat.55 It follows from the construction that the correlation functions, considered as sections
+
+) \otimes Cg(Lλ1 ), are horizontal with respect to the dual
+
+of the bundle Cg(Lλ1
+
+,... ,Lλn ,... ,Lλn
+
+connection acting along the first factor (and its complex conjugate acting along the second factor).
+
+For a more general rational conformal field theory, we also have a holomorphic bundle of conformal blocks on Mg,n (for each choice of an n-tuple of
+
+representations of the corresponding chiral algebra, assuming that the theory is “diagonal”), and it is expected to
+
+carry a hermitean metric, such that the corresponding unitary connection is projectively flat. As was first shown by D. Friedan and S. Shenker \[7\], the
+
+holomorphic part of this projectively flat connection comes from the insertion in the correlation functions of the stress
+
+53and even more generally, its Deligne-Mumford compactification Mg,n 54for a given curve X, this inner product depends on the choice of a metric in the
+
+conformal class determined by the complex structure on X, and this is the source of the conformal anomaly of the correlation
+
+functions 55i.e., its curvature is proportional to the identity operator on the vector bundle; this curvature is due to the conformal anomaly
+
+### 76  EDWARD FRENKEL
+
+\[
+
+tensor T(z). Concretely, an infinitesimal deformation of the pointed curve (X,(xi)) represented by a Beltrami differential \mu, which is a (-1,1)-form on X with
+
+zeroes at the points of insertion. The variation of the (unnormalized) correlation function h\Phi 1 \tag{x1}
+
+\]
+
+... \Phi(xn)i under this deformation is given by the formula
+
+Z
+
+\[
+
+\delta \mu h\Phi 1 \tag{x1}
+
+\]
+
+... \Phi(xn)i = \mu hT(z)\Phi 1 \tag{x1}
+
+\]
+
+... \Phi(xn)i.
+
+X
+
+The way it is written, this formula seems to define a holomorphic connection on the bundle of conformal blocks and at the same time it states that the
+
+correlation functions are horizontal sections with respect to this connection. However, there is a small caveat here: the right hand side of this formula is not
+
+well-defined, because T(z) transforms not as a quadratic differential, but as a projective connection (with the Schwarzian derivative term proportional to the
+
+central change c of the model). Because of that, formula (7.5) only defines a projectively flat connection on the bundle of conformal blocks. The curvature of
+
+this connection is proportional to the curvature of the determinant line bundle on Mg,n, with the coefficient of proportionality being the central change c.
+
+This is, of course, just the usual statement of conformal anomaly.
+
+\[
+
+Another way to define this connection is to use the =Virasoro uniformization” of the moduli space Mg,n (see [20],Sect. 17.3,and references therein). Namely, we
+
+identify the tangent space to a point (X,(xi) of Mg,n with the quotient T(X,(xi))Mg,n = \Gamma(X\\{x_1,...,xn},\Theta X)\\ Mn C((ti))\partial ti / Mn
+
+C[[ti]]\partial ti
+
+,
+
+\[
+
+i=1 i=1 where \Theta X is the tangent sheaf of X. Let \xi_i = fi(ti)\partial ti \in C((ti))\partial ti be a vector field on the punctured disc near xi
+
+\]
+
+, and µi be the corresponding element of T(X,(xi))Mg,n, viewed as
+
+an infinitesimal deformation of (X,(xi)). Then the variation of the correlation function under this deformation is given by the formula
+
+\[
+
+\delta \mu i h\Phi 1 \tag{x1}
+
+\]
+
+... \Phi(xn)i = \Phi_1 \tag{x1}
+
+\]
+
+... Z fi(ti)T(ti)dti · \Phi i(xi)... \Phi(xn),
+
+\]
+
+where the contour of integration is a small loop around the point xi
+
+.
+
+Here it is important to note that the invariance of the correlation function under g P
+
+### out
+
+\[
+
+(see formula \tag{7.3}
+
+\]
+
+\]
+
+) implies its invariance under \Gamma(X\\{x_1,...,xn},\Theta X), and so the above formula gives rise to a well-defined connection. This guarantees that the
+
+right hand side of formula (7.6) depends only on \mu i and not on \xi_i
+
+. Since T(z) transforms as a projective
+
+connection on X, this connection is projectively flat (see \[20\], Ch. 17, for more details).
+
+This is the same connection as the one given by formula (7.5).
+
+The projectively flat connection on the bundle of conformal blocks of the WZW theory has been constructed by various methods in \[85, 86, 87, 88, 89\].
+
+For a general conformal field theory the notion of conformal blocks is spelled out in \[20\], Sect. 9.2. Consider the case of a rational conformal field theory.
+
+Then the chiral algebra A has finitely many isomorphism classes of irreducible modules (and the corresponding category is semi-simple). Given a collection
+
+M1,... ,Mn of irreducible modules over the chiral algebra, the corresponding space of conformal blocks CA(M1,... ,Mn) is defined as the space of linear
+
+functionals on the tensor product Nn
+
+### i=1 Mi which are invariant under
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 77
+
+the analogue of the Lie algebra gout corresponding to all chiral fields in the chiral algebra A (in the sense of \[20\]).56 This invariance condition
+
+corresponds to the Ward identities of the theory.
+
+If A is generated by some fields J a (z) (as is the case in the WZW model), then it is sufficient to impose the Ward identities corresponding to those fields
+
+only. That is why in the case of WZW model we defined the space of conformal blocks as the space of goutinvariant functionals. These functionals automatically
+
+satisfy the Ward identities with
+
+respect to all other fields from the chiral algebra. For example, they satisfy the Ward identities for the stress tensor T(z) (given by the Segal-Sugawara
+
+formula (8.3)), which we have used above in verifying that the connection defined by formula (7.6) is well-defined.
+
+In a rational conformal field theory the spaces CA(M1,... ,Mn) are expected to be finite-dimensional (see, e.g., \[90\]), and as we vary (X,(xi)), they glue
+
+into a vector bundle CA(M1,... ,Mn) on the moduli space Mg,n. It is equipped with a projectively flat connection defined as above (see \[20\] for more details).
+
+So the structure is very similar to that
+
+of the WZW models.
+
+Let us summarize: the correlation functions in a rational conformal field theory are interpreted as the squares of holomorphic sections of a vector bundle (of
+
+coinvariants) on Mg,n, equipped with a projectively flat connection. The sheaf of sections of this bundle
+
+### 57
+
+may be viewed as the simplest example of a twisted D-module on Mg,n.
+
+If our conformal field theory is not rational, we can still define the spaces of conformal blocks CA(M1,... ,Mn) and coinvariants HA(M1,... ,Mn), but they may
+
+not be finitedimensional. In the general case it is better to work with the spaces of coinvariants
+
+### HA(M1,... ,Mn), because the quotient of Nn
+
+### i=1 Mi (see formula (7.4)), it has discrete
+
+topology even if it is infinite-dimensional, unlike its dual space of conformal blocks. These spaces form a sheaf of coinvariants on Mg,n, which has the
+
+structure of a twisted D-module, even though in general it is not a vector bundle. This is explained in detail in \[20\].
+
+Thus, the chiral sector of conformal field theory may be viewed as a factory for producing twisted D-modules on the moduli spaces of pointed curves. These are
+
+the D-modules that physicists are usually concerned with.
+
+But the point is that a very similar construction also gives us D-modules on the moduli spaces of bundles BunG for conformal field theories with Kac-Moody
+
+symmetry corresponding to the group G.
+
+58 So from this point of view, the chiral sector of conformal
+
+field theory with Kac-Moody symmetry is a factory for producing twisted D-modules on the moduli spaces of G-bundles. Since our goal is to find some way to
+
+construct Hecke eigensheaves, which are D-modules on BunG, it is natural to try to utilize the output of this factory.
+
+7.3. Sheaves of conformal blocks on BunG. The construction of twisted D-modules on BunG is completely analogous to the corresponding construction on Mg,n
+
+outlined above.
+
+We now briefly recall it (see \[9, 91, 93, 94, 95, 83, 20\]).
+
+56the spaces CA(M1, . . . , Mn) give rise to what is known as the modular functor of conformal field theory \[8\] 57it is a twisted D-module because the
+
+connection is not flat, but only projectively flat 58and more generally, one can construct twisted D-modules on the combined moduli spaces of curves and bundles
+
+### 78  EDWARD FRENKEL
+
+Consider first the case of WZW model. Suppose we are given a G-bundle P on X. Let gP = P × g be the associated vector bundle of Lie algebras on X. Define the
+
+Lie algebra
+
+G
+
+(7.7)  g P
+
+out = Γ(X\\{x1,... ,xn}, gP).
+
+Choosing local trivializations of P near the points xi P
+
+, we obtain an embedding of g out
+
+into Ln
+
+i=1 g \otimes C((ti)) which, by residue theorem, lifts to its diagonal central extension. Therefore we can define the space C P (Lλ1
+
+### g ,... ,λn) of P-twisted conformal blocks as the
+
+P
+
+space of g
+
+\[
+
+out-invariant functionals on Nn_i=1 L\lambda i .
+
+\]

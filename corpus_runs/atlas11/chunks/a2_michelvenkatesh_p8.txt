@@ -1,0 +1,837 @@
+J = J\pi 2,\pi 3 : (W,f) \in W(\pi 2) \times I_3 7\to W f. defines an isometry from \pi_2 \otimes \pi_3 into L_2 (N\\G; \chi_2 \chi_3).
+
+\]
+
+Proof. — It suffices to check that it preserves inner products of pure
+
+tensors. Take (W, f),(W0 ), and observe that – using the Iwasawa decomposition –
+
+, f0
+
+Z Z
+
+\[
+
+hJ(W,f), J(W_0)iN\\G = W(a(y)k)W0 (a(y)k)f(k)f_0 (k)d \times y \tag{3.20}
+
+\]
+
+\[
+
+, f_0 y\in k\times k\in K
+
+\]
+
+Since the integral R (a(y)k) equals the inner product hW, W0 i
+
+y∈k× W(a(y)k)W0
+
+\[
+
+for any_k \in K, the right-hand side factors as a product hW, W_0 i\pi 2 hf, f_0 i\pi 3
+
+\]
+
+.
+
+We are done.  ut
+
+3.2.8. Lemma. — Suppose k non-archimedean. Let
+
++ +
+
+\[
+
+\pi_2 = \chi - - 2 \chi_2, \pi_3 = \chi_3 \chi_3 be unramified principal series representations with \pi_3 tempered (i.e. the characters \chi
+
+\]
+
+±
+
+3 are unitary). We assume moreover that the additive character ψ is
+
+unramified.
+
+Let W be a spherical vector, in the Whittaker model of \pi_2 and f spherical in the induced model of \pi_3. Let π2(s), π3(t) and Ws ∈ π2(s), ft ∈ π3(t) be
+
+deformations of respectively W, f parameterized by complex parameters s and_t. Here Ws is obtained, as before, by applying the intertwiner (3.10) to the f2(s),
+
+where f2 ∈ \pi_2 is the preimage of W under the intertwiner (3.10). We denote the map Jπ2,π3 by J and Jπ2(s),π3(t) by Js,t. For_0 6 δ < 1/10, \|s\|, \|t\| 6
+
+δ/2, and u ∈ G one has
+
+hu.J(W \otimes f), Js,t(Ws \otimes ft)iN\\G
+
+θ+δ−1 kWk 2kfk_2 kAd(u)k . (3.21) Proof. — We may assume that W(1) = f(1) = 1.We shall reduce the bound (3.21) to a bound where the representation \pi_2, \pi_3
+
+are unitary, although \pi_2 is not tempered. In fact, we claim that: \|hu.J(W \otimes f), Js,t(Ws \otimes ft)iN\\G\| 6 2hu.J(W0 0 ), J(W0 0 )iN\\G; (3.22) θ+δ
+
+\otimes f θ+δ \otimes f θ+δ \|.\| −θ−δ with parameter where \pi_2 replaced by the complementary series \|.\| θ + δ and \pi_3 replaced by_1 1; W0 0 denote the
+
+spherical vectors in the θ+δ , f
+
+#### 52 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+corresponding models of the respective representations, normalized as above.
+
+Then by Lemma 3.2.7, the latter integral factors as
+
+hu.J(W0 0 ), J(W0 0 )iN\\G = hu.W0 ihu.f 0 i
+
+θ+δ \otimes f θ+δ \otimes f θ+δ , W0 θ+δ , f_0 θ+δ−1 kW0 2 kf_0 k_2 kAd(u)k θ+δ−1 kWk_2 kfk_2 kAd(u)k θ+δk
+
+as follows from bounds for matrix coefficients and a computation of the norm in the Whittaker model.
+
+\[
+
+As for the claim: we note that by the Cartan decomposition and Kinvariance, we may assume that u is of the form a \tag{t0}
+
+\]
+
+\[
+
+with_0 <\|t0\| 6 1;
+
+\]
+
+again by the Cartan decomposition
+
+Z Z
+
+hu.J(W \otimes f), Js,t(Ws \otimes ft)iN\\G = −1 dkd×y.
+
+u.(W f)(a(y)k)Wsft(a(y))\|y\|
+
+k× K
+
+\[
+
+Fix a unitary character \chi, and consider the space of functions F on G satisfying F(z(t)n(x)gk) = \chi(t)\psi(x)F(g), k \in K. This space is equipped with a
+
+\]
+
+2 (N\\G¯). This inner product is a Hermitian form in the values (F(a($α
+
+natural inner product, namely, that arising from L
+
+\[
+
+)))\alpha \in Z. In particular, the matrix coefficient huF1, F2i may be expressed:
+
+\]
+
+Z Z
+
+hu.F1, F2i = −1 dkd×y
+
+u.F1(a(y)k)F2(a(y))\|y\|
+
+k× K
+
+X ))F2(a($β)).
+
+c u α
+
+=
+
+\[
+
+\alpha,\beta,\chi F_1(a($ \alpha,\beta \in Z
+
+\]
+
+Moreover the c u u u
+
+\[
+
+\alpha,\beta,\chi satisfy\|c . It follows that if \bar{F} i (i = 1,2) as \alpha,\beta,\chi\| 6 c \alpha,\beta,1 \alpha))\| 6 \bar{F} \alpha)) for above, are
+
+invariant under the center and satisfy\|Fi(a(\varphi_i(a(\varphi every \alpha,then also\|hF1,F2iN\\G\| 6 hF1,F2iN\\G. We claim that\|Js,t(Ws \otimes
+
+ft)a($\alpha)\| and\|J(W \otimes f)(a($\alpha)\| are both bounded by 2J\theta,\delta(W_0 0 (a($\alpha),the latter quantity being non-negative. \theta +\delta
+
+\otimes f
+
+\]
+
+This will complete the proof of the claim (3.22).
+
+\[
+
+By choice of data, all quantities vanish when \alpha < 0. When \alpha > 0, they
+
+\]
+
+may be explicitly evaluated. Our assertion amounts to the following:
+
+\[
+
+X_k(\theta +\delta /2) X_k(\theta +\delta) q q n\delta /2 6 2 q, n > 0, q > 2 and \delta, \theta > 0 \tag{3.23}
+
+\]
+
+\[
+
+k\in [-n,n] k\in [-n,n]
+
+\]
+
+2\|(k−n) 2\|(k−n)
+
+ut
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 53
+
+3.3. Bounds for the normalized Hecke functionals.
+
+\[
+
+Let \chi be a character of_k \times, and \pi an irreducible unitary representation of G with central character \omega . It is known that the space of
+
+functionals + \chi on \pi satisfying a_0 (d) + (v) \tag{3.24}
+
+\]
+
+\[
+
++ \chi v \chi 0 d = \chi(a).\omega \chi -1 is at most one-dimensional. Our goal is to normalize an element in this space (using the unitary structure on \pi) up
+
+to a scalar of absolute value_1. Once this is done, we shall study the analytic properties of the resulting =normalized” functional.
+
+\]
+
+3.3.1. The normalized Hecke functional. — As before, we fix once and
+
+\[
+
+for all an identification of \pi with K (\pi,\psi) which carries the unitary structure on \pi to the unitary structure on K (\pi,\psi) given by \tag{3.8}
+
+\]
+
+\[
+
+. This being understood, define a functional + \chi on the Kirillov model K (\pi,\psi) - and therefore on \pi - via the rule of \tag{3.12}
+
+\]
+
+\[
+
+(interpreted by meromorphic continuation in general). In the case \chi is the trivial character, we denote + \chi simply as +; thus +(W) = R \times y. The
+
+resulting functional satisfies \tag{3.24}
+
+\]
+
+\[
+
+k\times W(y)d
+
+\]
+
+We have thus normalized a functional in the one-dimensional space of
+
+\[
+
+solutions to \tag{3.24}
+
+\]
+
+\[
+
+, up to a scalar of absolute value_1; this ambiguity arises from the ambiguity in choosing the isometry between \pi and its Kirillov model.
+
+\]
+
+Equivalently, the functional may be expressed in terms of matrix coefficients: one has
+
+Z
+
+\[
+
++ \chi(v)+ (v) = ha(y)v, vi\chi(y)d \times y,
+
+\]
+
+χ−1
+
+k×
+
+\[
+
+as follows from \tag{3.8}
+
+\]
+
+\[
+
+. In particular, if \chi is unitary, the associated Hermitian form w \chi \chi\| 2 depends only on the unitary structure on \pi - i.e., there is := \|+
+
+\]
+
+not even an ambiguity of absolute value 1 – and can be expressed thus:
+
+Z
+
+\[
+
+h \chi(v) = ha(y)v, vi\chi(y)d \times y, v \in \pi \tag{3.25}
+
+\]
+
+\[
+
+k\times
+
+\]
+
+3.3.2. Lemma (\[67\], Lemma 11.7). — Suppose k non-archimedean; let
+
+\[
+
+v the new vector, and let_r be the conductor of \chi . Then: (L(\pi \otimes \chi,1/2) r = 0 + \chi(n($ -r)v) = \eta_r > 0
+
+\]
+
+(1 − q ).
+
+where η has absolute value q −r/2 −1
+
+#### 54 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+3.3.3. Lemma. — Suppose_k archimedean. There is v \in \pi, with the \pi(v) d C(\pi) 2d for every d, and so that, for any \epsilon > 0 there
+
+\]
+
+property that S
+
+d
+
+\[
+
+is T \in k with \log\|T\| \in [1 - \epsilon, 1 + \epsilon] so that, \log C(\chi)\|+ \chi(n(T)v)\| \epsilon C(\chi) -1/2-\epsilon
+
+\]
+
+.
+
+\[
+
+Moreover, + \chi s (n(T)v) C(\chi) -\frac{1}{2}+ for any s, the implicit constant uniform when <(s) remains in a compact set. Proof. — We take v = W to be
+
+(considered in the Kirillov model of \pi) a smooth bump function supported in the ball of radius_1/10 centered at y = 1. (For concreteness,fix once and for all
+
+such a function both in the case of R and C. The implicit constants in the result will depend on this choice.)
+
+\]
+
+The bounds on Sobolev norms are a consequence of the comments in
+
+§3.2.5. Noting that,
+
+Z
+
+\[
+
++ \chi(n(T)v) = W(y)\psi(T y)\chi(y)d \times y,
+
+\]
+
+k
+
+the assertions concerning upper and lower bounds for \` χ follow from Lemma 3.1.14.  ut
+
+3.4. Normalized trilinear functionals.
+
+Let πi
+
+, for 1 6 i 6 3, be three unitary irreducible generic representations
+
+of G, the product of whose central characters (χi
+
+, i = 1, 2, 3) is 1. In the
+
+sequel, we denote by ω the product \chi_1 \chi_2. It is known (\[59\], \[57\], \[45\]) that the space of trilinear invariant functionals \pi_1 \otimes \pi_2
+
+\otimes \pi_3 → C
+
+is at most dimension 1. Again, we wish to normalize one up to scalars of absolute value 1, and study the analytic properties of the resulting “normalized”
+
+functional.
+
+3.4.1. Integration of matrix coefficients. — We take the following normalization (cf. \[69\], \[32\], \[62\]).
+
+Z
+
+\[
+
+\|LW (x_1,x_2,x_3)\| 2 = hgx1, x1ihgx2, x2ihgx3, x3idg \tag{3.26}
+
+\]
+
+\[
+
+g\in \bar{G} By \tag{2.8}
+
+\]
+
+\[
+
+together with the convention §3.1.7, the integral is convergent, and, indeed, bounded by a constant multiple of Q_3 \pi_i (xi). It is true, although i=1 S
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 55
+
+not obvious, that the right-hand side is positive. By direct computation (see \[32\]),
+
+\|LW \| 2 1 )
+
+\[
+
+2 \tag{3.27}
+
+\]
+
+\[
+
+Q kxik = \zeta_k \tag{2}
+
+\]
+
+\[
+
+2L(\pi 1 \otimes \pi_2 \otimes \pi_3,
+
+\]
+
+2 Q3
+
+\[
+
+i_i=1 L(\pi i,Ad,1) if_k is nonarchimedean and all vectors are unramified. Another functional arises naturally from Rankin-Selberg integrals. Suppose that \pi_3
+
+' \chi
+
+\]
+
++ +
+
+− −
+
+\[
+
+3 \chi_3, is a principal series representation (\chi_3 \chi_3 = \chi_3) realized in the model I_3, and that \pi i_i = 1, 2 are realized in the respective
+
+Whittaker models W(\pi 1,\psi) and W(\pi 2,\psi). (More precisely,we follow the convention of fixing once and for all an equivariant isometry between \pi_i and
+
+their respective Whittaker models,equipped with the inner product \tag{3.8}
+
+\]
+
+\[
+
+; thus, for instance, we will regard a linear functional on the Whittaker model W(\pi i) as a linear functional on \pi_i
+
+\]
+
+. )
+
+\[
+
+Then, for Wi \in W(\pi i), f_3 \in I_3, we put
+
+\]
+
+Z
+
+\[
+
+LRS(W_1,W_2,f_3) = \zeta_k \tag{1}
+
+\]
+
+\[
+
+\frac{1}{2} W1W2f3, (3.28) N\\G¯
+
+\]
+
+Z Z
+
+W1(a(y)k)W2(a(y)k)f3(a(y)k)\|y\| −1 d ×ydk
+
+\[
+
+= \zeta_k \tag{1}
+
+\]
+
+\[
+
+\frac{1}{2}
+
+\]
+
+K k×
+
+If Wi
+
+, f3 are spherical, and k nonarchimedean, then
+
+#### LRS(W1, W2, f3) +
+
+\[
+
+3, \frac{1}{2}) W_1 \tag{1}
+
+\]
+
+\[
+
+W_2 \tag{1}
+
+\]
+
+\[
+
+f_3 \tag{1}
+
+\]
+
+\[
+
+= \zeta_k \tag{1}
+
+\]
+
+\[
+
+1/2L(\pi 1 \otimes \pi_2 \otimes \chi L(\chi + /\chi - 3 3,1) \tag{3.29}
+
+\]
+
+\[
+
+If we specialize to \chi \pm 2 R f(k)dk, 3 = \|·\|\pm \frac{1}{2}, W_2 = W_1 then LRS = \zeta_k \tag{1}
+
+\]
+
+\[
+
+1/2kW1k K
+
+\]
+
+giving in particular for spherical vectors
+
+kWik 2
+
+\[
+
+, Ad, 1)\|Wi \tag{1}
+
+\]
+
+\[
+
+\| = \zeta_k \tag{2}
+
+\]
+
+\[
+
+-1L(\pi 1 \times \pi_i,1) = L(\pi i 2 \zeta_k \tag{2}
+
+\]
+
+\[
+
+\zeta k(1).
+
+\]
+
+We conclude that, in the unramified case,
+
+#### \|LRS\| 2 1 )
+
+\[
+
+= \zeta_k \tag{2}
+
+\]
+
+\[
+
+2L(\pi 1 \otimes \pi_2 \otimes \pi_3,. Q_3 2 Q_3 i=1 kxik_i=1 L(\pi i,Ad,1) 3.4.2. Lemma. — Let L = LRS or LW be defined as in either \tag{3.26}
+
+\]
+
+\[
+
+or (3.28). Then for x_1 \in \pi_1, x_3 \in \pi_3:
+
+\]
+
+Z
+
+\[
+
+kx1k_2 kx3k_2 = d\mu P (\pi 2) X\|L(x_1,x_2,x_3)\| 2
+
+\]
+
+,  (3.30) π2
+
+\[
+
+kx1k_2 kx3k_2 = d\mu P (\pi 2) X\|L(x_1,x_2,x_3)\| 2
+
+\]
+
+| 56 PHILIPPE MICHEL, AKSHAY VENKATESH |  |
+
+| --- | --- |
+
+|  | The proof that follows is inspired by joint work of one of the authors |
+
+| (A.V.) with Y. Sakellaridis. |  |
+
+|  | Proof. — The validity of (3.30) for L = LW is an immediate consequence of the Plancherel formula. |
+
+|  | The validity of (3.30), where L = LRS (3.28) follows from the first |
+
+| Lemma of §3.2.6 together with the following: it is known (the WhittakerPlancherel theorem) that for F ∈ L | |
+
+2 (N\\G¯),
+
+Z
+
+\[
+
+kFk_2 d\mu P (\pi) X\|hF, Wxi\|2 L_2(N\\G¯) = \zeta_k \tag{1}
+
+\]
+
+\[
+
+. (3.31) \pi x\in B(\pi) where, for each \pi, we choose an orthonormal basis B\pi and a unitary intertwiner from \pi to its Whittaker model W(\pi). In fact, the
+
+key point in the validity
+
+\]
+
+ψ(x)hn(x)W1, W2i
+
+\[
+
+of \tag{3.31}
+
+\]
+
+\[
+
+is the equality, for Wi \in W(\pi) between R x\in k and \zeta k(1)W1(1)W2(1). This follows from the usual Fourier inversion formula, taking into account that
+
+the Haar measure on_k was chosen to be self-dual w.r.t. k.
+
+\]
+
+The second assertion (the coincidence of the two definitions of \|L\| 2 when
+
+\pi_2 is tempered) follows from uniqueness of unitary decomposition, applied to \pi_1 \otimes \pi_3, together with the fact that the support of the Plancherel
+
+measure is the full tempered spectrum, and from a continuity argument. ut
+
+Remark. — It may also be deduced that \|LRS\| 2 and \|LW \| 2
+
+coincide
+
+even when not all \pi_i are tempered. To do this, write Π = \otimes 3 i=1πi . Both \|LW \| 2 and \|LRS\| 2 are Hermitian forms on Π and can be polarized to maps
+
+Π \otimes \tilde{\Pi} → C. These polarized maps vary holomorphically in parameters, and therefore their coincidence may be extended from tempered
+
+representations by analytic continuation. Remark. — To give a trilinear functional on π1\otimes π2\otimes \pi_3 is equivalent to describing an equivariant
+
+intertwiner \pi_1 \otimes \pi_3 → πe2. Dualizing, we denote by Iπ2 the functional Iπ2 : \pi_1 \otimes \pi_3 → \pi_2 that arises from the normalized trilinear
+
+functional on \pi_1 \otimes πe2 \otimes \pi_3. In explicit terms, L(x1 \otimes x2 \otimes x3) = hIπ2 (x1 \otimes x3), x2i,
+
+and one has
+
+\[
+
+kI\pi 2 (x_1 \otimes x_3)k_2 = X\|L(x_1 \otimes x_2 \otimes x_3)\| 2 \tag{3.32}
+
+\]
+
+\[
+
+x_2\in B(\pi 2) It is often convenient to think or phrase arguments in terms of I\pi 2
+
+\]
+
+, instead
+
+of L. In the sequel, the notation Iπ will designate the intertwiner associated with LRS(?, π, ?) or LW (?, π, ?).
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 57
+
+It should also be noted that Bernstein and Reznikov made extensive
+
+use of a local study of such trilinear functionals in their beautiful papers.
+
+3.5. Bounds for trilinear functionals, I: soft methods
+
+In this section we present some “soft” upper bounds on the normalized
+
+trilinear functionals. In fact, the entire section is not strictly necessary for the present paper, since we reprove the bounds by brute force in later
+
+sections.
+
+However, under the Ramanujan conjecture, one does not need the brute-force computations, so the reader may prefer to focus on this section at first.
+
+Our main result is Lemma 3.5.3. It bounds the Sobolev norms of Iπ3 (x1\otimes
+
+x2) in terms of a certain norm_k · kU on the space of \pi_1 and \pi_2, assuming that all three representations are tempered.
+
+For the rest of this section, we will assume that the local field k is
+
+non-archimedean; the proof in the archimedean case is similar.
+
+3.5.1. Suppose V is any unitary G-representation. We define24
+
+Z 1/4
+
+kxkU = \|hkx, xi\|2
+
+,
+
+k∈K
+
+where K is endowed with Haar probability measure.
+
+Lemma. — kxkU is a norm.
+
+Proof. — Let v 7→ v K be the averaging operator over K. Then kxk 2
+
+U =
+
+k(x \otimes x) KkV \otimes V . Now, Cauchy-Schwarz demonstrates that
+
+k(x \otimes y) Kk 2 KkV \otimes V k(y \otimes y) KkV \otimes V .  (3.33) V \otimes V 6 k(x \otimes x)
+
+Since (x + y) \otimes (x + y) = x \otimes x + x \otimes y + y \otimes x + y \otimes y, we conclude. ut Lemma. — There exists d < d0 < 0 so that
+
+#### S V V
+
+d 6 k · kU 6 S d 0
+
+on any unitary representation.
+
+We omit the proof, for this is never used in the present paper.
+
+\[
+
+Lemma. — Suppose g \in G; then kgxkU_6 C(g)kxkU, where C(g) is a
+
+\]
+
+1/4
+
+continuous function of g; we may take C = [KgK : K]
+
+.
+
+24 If K were a compact abelian group and x ∈ L2 (K), this coincides with the Gowers U4
+
+-norm.
+
+#### 58 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Proof. — Write U = gKg−1 ∩ K; we equip it with the restriction of the
+
+\|hugx, gxi\|2 6 kxk 4
+
+measure from K. Then R U . Thus
+
+U
+
+k(gx \otimes gx) U k 2 6 [K : U]kxk 4
+
+U ,  (3.34) U denotes the projection onto U-invariants. Clearly,
+
+\[
+
+where, once again, w_7\to w_k(gx \otimes gx) Kk_6 k(gx \otimes gx) U_k (averaging decreases norms!) and we are done since [K : U] = [KgK : K]. ut 3.5.2. Lemma.
+
+— For x_1, x_2 \in \pi_1, \pi_2 and for any d > 0 we have: S \pi_3 (I\pi 3 (x_1 \otimes x_2)) d S \pi_1 \pi_2
+
+\]
+
+d d 0 (x1)S d 0 (x2).  (3.35) 0 depend on d only.
+
+where d
+
+Proof. — We have seen after (3.26) that there exists an absolute d0 so
+
+that
+
+\[
+
+hI\pi 3 (x_1 \otimes x_2), x3i Y S \pi_i (xi), \tag{3.36}
+
+\]
+
+\[
+
+d_0
+
+\]
+
+i=1
+
+\pi_3 (Iπ3 ) is bounded by a quantity as in
+
+which shows, in particular, that S
+
+−d0
+
+the right-hand side of (3.35). However, we wish the same result where −d0 is replaced by an arbitrary positive quantity. To establish this, observe first that,
+
+by equivariance, that xi ∈ \pi_i [m] =⇒ Iπ3 (x1 \otimes x2) ∈ π3[m]. It follows, then, that a bound of the form (3.35) is true when x1 ∈ π1[j], x2 ∈ π2[k] for
+
+any_j, k. Now apply (2.7) (twice: first fix x1, and then fix x2) to conclude the same result for arbitrary x1, x2. ut 3.5.3. Lemma. — Suppose \pi_i are all
+
+tempered. For any η > 0, set Bη = {g ∈ G : \|Ξ(g)\| > η}. Then there exists an absolute constant d0 > 0 (independent of_k) so that: S \pi_3 (Iπ3 (x1 \otimes
+
+x2)) ε (volBη) ε kx1kU kx2kU + η_1−εS \pi_1 (x1)S \pi_2 (x2) −d0
+
+The reader should ignore the second term at a first reading; the content
+
+\[
+
+is that I\pi 3 (x_1 \otimes x_2) is bounded =up to s” by kx1kU\|kx2kU . Proof. — It is sufficient to show that there exists_n > 0 so that, whenever x_3 is
+
+invariant under an open compact subgroup U \subset K,\|L(x_1,x_2,x_3)\| 6
+
+\]
+
+[K : U] n
+
+· RHS, where RHS is the right-hand side of the stated bound.
+
+We endow both U and K with Haar probability measure. By a modification of (3.33), k(x1 \otimes x2) U k 2 6 [K : U]kx1k 2 2 hgxi
+
+U kx2k U . Writing Q i , xii
+
+as
+
+hg(x1 \otimes x2) U U ihgx3, x3i,
+
+,(x1 \otimes x2)
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 59
+
+we deduce from bounds on matrix coefficients (see §2.5.1, esp. footnote):

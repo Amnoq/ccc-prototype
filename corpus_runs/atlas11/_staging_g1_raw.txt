@@ -1,0 +1,2127 @@
+L0: ### HITCHIN INTEGRABLE SYSTEMS, DEFORMATIONS OF SPECTRAL
+L1:
+L2:
+L3: ### CURVES, AND KP-TYPE EQUATIONS
+L4:
+L5:
+L6: ### ANDREW R. HODGE1 AND MOTOHICO MULASE2
+L7:
+L8:
+L9: |  | Abstract. An effective family of spectral curves appearing in Hitchin fibrations is determined. |
+L10:
+L11: | --- | --- |
+L12:
+L13: |  | Using this family the moduli spaces of stable Higgs bundles on an algebraic curve are embedded |
+L14:
+L15: | 008 | into the Sato Grassmannian. We show that the Hitchin integrable system, the natural algebraically |
+L16:
+L17: |  | completely integrable Hamiltonian system defined on the Higgs moduli space, coincides with the |
+L18:
+L19: |  | KP equations. It is shown that the Serre duality on these moduli spaces corresponds to the |
+L20:
+L21: | an 2 | formal adjoint of pseudo-differential operators acting on the Grassmannian. From this fact we |
+L22:
+L23: |  | then identify the Hitchin integrable system on the moduli space of Sp2m-Higgs bundles in terms |
+L24:
+L25: |  | of a reduction of the KP equations. We also show that the dual Abelian fibration (the SYZ mirror |
+L26:
+L27: | 14 J | dual) to the Sp2m-Higgs moduli space is constructed by taking the symplectic quotient of a Lie |
+L28:
+L29: |  | algebra action on the moduli space of GL-Higgs bundles. |
+L30:
+L31: | AG] |  |
+L32:
+L33:
+L34: Contents
+L35:
+L36:
+L37: | math. | 1. Introduction  1 |
+L38:
+L39: | --- | --- |
+L40:
+L41: |  | 2. Hitchin integrable systems  4 |
+L42:
+L43: |  | 3. Deformations of spectral curves  10 |
+L44:
+L45: |  | 4. Symplectic quotient of the Higgs moduli space and Prym fibrations 15 |
+L46:
+L47: | v2 [ | 5. Hitchin’s integrable systems and the KP equations 20 |
+L48:
+L49: |  | 6. Serre duality and formal adjoint of pseodo-differential operators 25 |
+L50:
+L51: | 015 | 7. The Hitchin integrable system for Sp2m  30 |
+L52:
+L53: |  | References  32 |
+L54:
+L55: | 01.0 |  |
+L56:
+L57: | v:08 | 1. Introduction |
+L58:
+L59: |  | The purpose of this paper is to determine the relation between the KP-type equations |
+L60:
+L61: defined on the Sato Grassmannians and the Hitchin integrable systems defined on the moduli
+L62:
+L63:
+L64: # arXi
+L65:
+L66:
+L67: spaces of stable Higgs bundles. The results established are the following:
+L68:
+L69:
+L70: | (1) We determine the effective family of spectral curves appearing in the Hitchin fibration of the moduli spaces of stable Higgs bundles. |  |
+L71:
+L72: | --- | --- |
+L73:
+L75: | (2) We embed the effective family of Jacobian varieties of the spectral curves into the |
+L77: |  | Sato Grassmannian and show that the KP flows are tangent to each fiber of the |
+L79: |  | Hitchin fibration. |
+L81: | (3) The moduli space of Higgs bundles of rank n and degree n(g − 1) on an algebraic |
+L83: |  | curve of genus g ≥ 2 is embedded into the relative Grassmannian of [2, 20]. Using |
+L85: |  | this embedding we show that the Hitchin integrable system is exactly the restriction |
+L87: |  | of the KP equations on the Grassmannian to the image of this embedding. |
+L89: | 1Research supported by NSF grants DMS-0135345 (VIGRE) and DMS-0406077. |  |
+L91: | 2Research supported by NSF grant DMS-0406077 and UC Davis. |  |
+L93:
+L94: ### 2  ANDREW HODGE AND MOTOHICO MULASE
+L95:
+L97: (4) It is shown that the Krichever construction transforms the Serre duality of the geometric data consisting of algebraic curves and vector bundles on them to
+L98: the formal adjoint of pseudo-differential operators acting on the Grassmannian. By identifying the fixed-point-set of the Serre duality and the formal adjoint
+L99: operation we determine the KP-type equations that are equivalent to the Hitchin integrable system defined on the moduli space of Sp2m-Higgs bundles.
+L101: (5) There are two ways to reduce an algebraically completely integrable Hamiltonian system: one by restriction and the other by taking a quotient of a Lie
+L102: algebra action that is similar to the symplectic quotient. When applied to the moduli spaces of Higgs bundles, these constructions yield SYZ-mirror pairs. We
+L103: interpret the SLP GL and Sp2m-SO2m+1 dualities in this way.
+L106: Let GC be the category of complex Lie groups, and CY the category of Calabi-Yau spaces.
+L108: For a compact oriented surface Σ of genus g ≥ 2, the functor Hom(ˆπ1(Σ), · )// · : GC −→ CY //G, where ˆπ1(Σ) assigns to each complex Lie group G its character
+L109: variety Hom πˆ1(Σ), G is the central extension of the fundamental group of Σ. The quotient by conjugation is the geometric invariant theory quotient of Mumford
+L110: \[19\]. An amazing discovery of Hausel and Thaddeus \[7\], and its generalizations by \[4, 12\] and others, is that the character variety functor transforms the
+L111:  Langlands duality in GC to the mirror symmetry of Calabi-Yau spaces
+L114: ### in the sense of Strominger-Yau-Zaslow \[25\]:
+L117: Hom(ˆπ1(Σ), · )// ·
+L120: ### GC
+L123: ### −−−−−−−−−−−→ CY
+L126: |  |  |
+L128: | --- | --- |
+L130: | Langlands Dual  |  Mirror Dual |
+L132: | y | y |
+L135: ### GC −−−−−−−−−−−→ CY
+L138: Hom(ˆπ1(Σ), · )// ·
+L141: The character variety Hom //G has many distinct complex structures \[7, 12\]. To
+L144: πˆ1(Σ), G
+L147: understand the SYZ mirror symmetry among the character varieties, it is most convenient to realize them as Hitchin integrable systems. In his seminal papers
+L148: \[8, 9\], Hitchin identifies the character variety with the moduli space of stable G-Higgs bundles, which has the structure of an algebraically completely
+L149: integrable Hamiltonian system.
+L151: An algebraically completely integrable Hamiltonian system \[28\] is a holomorphic symplectic manifold (X, ω) of dimension 2N together with a holomorphic map H :
+L152:  X → g
+L155: ### ∗
+L158: ### such that
+L161: \[
+L163: a general fiber H-1 (s), s \in g^*
+L166: \]
+L168: ### , is an Abelian variety of dimension N,
+L171: \[
+L173: g^* is the dual Lie algebra of a general fiber H-1 (s) considered as a Lie group, and (3) the coordinate components of the map H are Poisson commutative with
+L174: respect to the symplectic structure \omega .
+L176: \]
+L179: The notion corresponding to an algebraically completely integrable Hamiltonian system in real symplectic geometry is the cotangent bundle of a torus. The
+L180: procedure of symplectic quotient is to remove the effect of this cotangent bundle from a given symplectic manifold.
+L182: In the holomorphic context, it is often useful to take the quotient by a family of groups that have the same Lie algebra. Suppose we have a Lie algebra direct
+L183: sum decomposition g = g1 \oplus g2. If g1-action on X is integrable to a group G1,s-action in each fiber H−1 (s) for s ∈ g ∗ (s)/G1,s over
+L186: 2 , then we can define a quotient X//g1 as the family of quotients H−1
+L189: ### g ∗ ∗ and
+L192: 2 . We can also construct a reduction of (X, ω, H) by restricting the fibration to g_2
+L195: ### (s), if the g2-action is integrated to a group action
+L198: ### considering the family of g2-orbits in H−1
+L201: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 3
+L204: ### over g ∗
+L207: 2 . When applied to the moduli space of Higgs bundles, these two constructions yield
+L210: Abelian fibrations that are dual to one another, producing an SYZ mirror pair. We examine these constructions for the SL-P GL and Sp2m-SO2m+1 dualities.
+L212: From the results established in \[14, 15, 17\], we know that linear integrable evolution equations on the Jacobians or Prym varieties are realized as the
+L213: restriction of KP-type equations defined on the Sato Grassmannians through a generalization of Krichever construction. Since the Hitchin integrable systems are
+L214: defined on a family of Jacobian varieties
+L217: or Prym varieties, we need to embed the whole family into the Sato Grassmannian to compare the Hitchin systems and the KP equations. To deal with families, we
+L220:
+L221: approaches in this article. One approach is to utilize the theory of Sato Grassmannians defined over an arbitrary scheme developed by Quandt \[20\]. In this way
+L222:  we can directly compare the integrable Hamiltonian systems on the Higgs moduli spaces and the KP equations. The other approach is to examine the deformations
+L223: of spectral curves that appear in
+L226: the Hitchin Hamiltonian systems. Once we identify the effective family of spectral curves, we can embed the whole family into a single Sato Grassmannian over C,
+L227:  using the method developed in \[14\].
+L229: The second approach has an unexpected application: we can identify the effect of Serre duality operation on the algebro-geometric data in terms of the language
+L230: of Grassmannians.
+L232: Note that Sato Grassmannians are constructed from pseudo-differential operators \[21, 22\].
+L234: We will show, using Abel’s theorem, that the Serre duality is simply the formal adjoint operation on the pseudo-differential operators. Since the Sp-Hitchin
+L235: system is the fixedpoint-set of the Serre duality on the GL-Hitchin system, we can determine the integrable
+L238: equations corresponding to the Sp case as a reduction of the KP equations on the fixedpoint-set of the formal adjoint action on pseudo-differential operators.
+L241:
+L242: adjoint is slightly different from what has been studied in the literature \[11, 24, 26\], the equations coming up for the symplectic groups are not BKP or CKP
+L243: equations. Let
+L246: ### ∂
+L249: ### P = Xai(x)
+L252: ### \partial_x i
+L255: be a formal pseudo-differential operator, where ai(x) is a matrix valued functions. We define
+L258: ### the formal adjoint by
+L261: ### ∂
+L264: ### P ∗ = X_t
+L267: ### \partial_x i · ai(−x) .
+L270: The reduction of the KP equations that corresponds to the Sp-Hitchin system is the 2mcomponent KP equations that preserve the algebraic condition
+L273: ### Im Im
+L276: ### (1.1)  L ∗ =
+L279: ### Im · L · Im
+L282: for a 2m × 2m matrix Lax operator L with the leading term I2m · ∂/∂x. Several authors have proposed integrable systems with Sp2m-symmetry (cf. \[27\]). It would
+L283:  be interesting to study our reduction (1.1) from the point of view of integrable systems and to investigate the relation with the other Sp integrable systems.
+L284: The paper is organized as follows. The first section is devoted to reviewing the Hitchin integrable systems of \[3, 9\]. We then determine an effective family
+L285: of spectral curves in Section_3. Section_4 is devoted to giving two constructions of reduced integrable systems from a Hitchin system: one is a straightforward
+L286: specialization, and the other is a kind of symplectic reduction by a Lie subalgebra. These two constructions give rise to an Abelian fibration and its dual
+L287: Abelian fibration. We show that the GL-Hitchin integrable system is
+L290: ### 4  ANDREW HODGE AND MOTOHICO MULASE
+L293: equivalent to the KP equations in Section 5. The identification of the Serre duality in terms of Grassmannians and pseudo-differential operators is carried out
+L294: in Section 6. Finally we determine the KP-type equations for the Sp Hitchin system.
+L296: The relation between the Hitchin integrable systems and the KP equations was first studied in \[13\]. The treatment there was limited to the study of the
+L297: Hitchin system on a single fiber. The present article extend the result therein.
+L300: ### 2. Hitchin integrable systems
+L303: In this section we review the algebraically completely integrable Hamiltonian systems defined on the moduli spaces of Higgs bundles, following \[3, 8, 9\].
+L305: \[
+L307: Throughout the paper we denote by C a non-singular algebraic curve of genus g \ge 2. The moduli space of semistable algebraic vector bundles on C of rank_n and
+L308: degree d is denoted by UC(n,d). When_n and d are relatively prime, a semistable bundle is automatically stable,
+L310: \]
+L313: 2 (g−1)+1.
+L315: and the moduli space is a non-singular projective algebraic variety of dimension n
+L318: ### We denote by
+L321: \[
+L323: UC(n) = a UC(n,d)
+L325: \]
+L328: ### d∈Z
+L331: the space of all stable vector bundles. A Higgs bundle is a pair (E, φ) consisting of an
+L334: ### algebraic vector bundle E on C and a global section
+L337: \[
+L339: \varphi \in H_0 (C,End(E) \otimes KC)
+L341: \]
+L344: of the endomorphism sheaf of E twisted by the canonical sheaf KC of C. A Higgs bundle is
+L347: deg E for every φ-invariant proper holomorphic vector subbundle F. An
+L350: ### stable if deg F
+L353: \[
+L355: rank F < rank E endomorphism of a Higgs bundle (E,\varphi) is an endomorphism \psi of E that commutes with \varphi :
+L357: \]
+L360: ### ψ
+L363: E
+L366: ### −−−−→  E
+L369: ###
+L372: ### φ
+L375: ### y yφ
+L378: ### E \otimes KC −−−−→ E \otimes KC
+L381: ### ψ\otimes 1
+L384: It is known that H0 (C,End(E, φ)) = C for a stable Higgs bundle, and one can define the moduli space of stable objects. We denote by HC(n, d) the moduli space
+L385: of stable Higgs
+L388: ### bundles of rank n and degree d on C, and
+L391: \[
+L393: HC(n) = a HC(n,d).
+L395: \]
+L398: ### d∈Z
+L401: \[
+L403: Note that the Serre duality induces an involution on HC(n) defined by \tag{2.4}
+L405: \]
+L408: \[
+L409: HC(n,d) ∋ (E,\varphi) 7-\to (E^* \otimes KC,-\varphi^*) \in HC(n,-d + 2n(g - 1)). The dual of the Higgs field \varphi : E \to E \otimes KC is a homomorphism
+L410: \varphi^*
+L412: \]
+L415: ### : E∗ \otimes K−1
+L418: ### C → E∗ . We
+L421: use the same notation for the homomorphism E∗ \otimes KC → E∗ \otimes K\otimes 2 induced by φ ∗
+L424: C .
+L427: \[
+L429: If E is stable, then (E,\varphi) is stable for any \varphi of \tag{2.2}
+L431: \]
+L434: \[
+L435: . And if \varphi = 0, then the stability of (E,\varphi) simply means E is stable. Therefore, the Higgs moduli space contains the total
+L440: ### space of the holomorphic cotangent bundle
+L443: ### (2.5)  T ∗UC(n, d) ⊂ HC(n, d),
+L446: ### since
+L449: \[
+L451: H_0 (C,End(E) \otimes KC) ∼= H_1 (C,End(E))^* ∼= T^*
+L453: \]
+L456: E UC(n, d).
+L459: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 5
+L462: Note that p ∗Λ_1 (UC(n, d)) ⊂ Λ_1 (T ∗UC(n, d)) has a tautological section (2.6) η ∈ H_0 (T ∗UC(n, d), p∗Λ_1 (UC(n, d))), where p : T ∗UC(n, d) → UC(n, d) is
+L463: the projection, and \Lambda_r denotes the sheaf of holomorphic_r-forms. The differential ω = −dη of the tautological section defines the canonical holomorphic
+L464: symplectic form on T ∗UC(n, d). The restriction of ω on UC(n, d), which is the_0-section of the cotangent bundle, is identically_0. Therefore the_0-section is a
+L465:  Lagrangian submanifold of this holomorphic symplectic space.
+L468: ### Let us denote by
+L471: (2.7)  V ∗ ∗ Mn H 0 (C, K\otimes i ).
+L474: GL = V GLn(C) = C
+L477: ### i=1
+L480: ### As a vector space V ∗ (C,End(E) \otimes KC). The Higgs field
+L483: ### GL has the same dimension of H0
+L486: \[
+L488: \varphi : E \to E \otimes KC induces a homomorphism of the_i-th anti-symmetric tensor product spaces i (\varphi) : ∧ i (E) -\to ∧i (E \otimes KC) = ∧ i (E)
+L489: \otimes K \otimes i
+L494: ### ∧
+L497: ### C ,
+L500: \[
+L502: i (\varphi) \in H_0 (C,End(∧ i (E)) \otimes K\otimes i). Taking its natural trace, we obtain
+L504: \]
+L507: ### or equivalently ∧
+L510: C
+L513: \[
+L515: tr ∧ i (\varphi) \in H_0 (C,K\otimes i).
+L517: \]
+L520: C
+L523: This is exactly the i-th characteristic coefficient of the twisted endomorphism φ:
+L526: \[
+L528: det(x - \varphi) = x_n + Xn (-1)i_i (\varphi) · x_n-i
+L530: \]
+L533: ### tr ∧
+L536: .
+L539: ### i=1
+L542: By assigning the coefficients of (2.8), Hitchin \[9\] defines a holomorphic map, now known as
+L545: ### the Hitchin fibration or Hitchin map,
+L548: \[
+L550: H : HC(n,d) ∋ (E,\varphi) 7-\to det(x - \varphi) \in Mn H_0 (C,K\otimes i) = V^*
+L552: \]
+L555: #### C GL.
+L558: ### i=1
+L561: The map H to the vector space V ∗ 2 (g − 1) + 1 globally defined
+L564: GL is a collection of N = n
+L567: holomorphic functions on HC(n, d). The 0-fiber of the Hitchin fibration is the moduli space UC(n, d).
+L569: To determine the generic fiber of H, the notion of spectral curves is introduced in \[9\].
+L571: \[
+L573: The total space of the canonical sheaf KC = \Lambda_1 (C) on C is the cotangent bundle T^*C. Let \tag{2.10}
+L575: \]
+L578: \[
+L579: \pi : T^*C -\to C
+L581: \]
+L584: ### be the projection, and
+L587: \[
+L589: (T^*C,\pi^*KC) \subset H_0 (T^*C,\Lambda_1 (T^*C)) \tau \in H_0 be the tautological section of \pi^*KC on T^*C. Here again \omega T^*C = -d\tau is the
+L590: holomorphic symplectic form on T^*C. The tautological section \tau satisfies that \sigma^* \tau = \sigma for every section (C,KC) viewed as a holomorphic map
+L591: \sigma : C \to T^*C. The characteristic coefficients \sigma \in H_0 \tag{2.8}
+L593: \]
+L596: \[
+L597: of \varphi give a section \tag{2.11}
+L599: \]
+L601: \[
+L603: s = det(\tau - \varphi) = \tau \otimes n + Xn (-1)i_i (\varphi) · \tau \otimes n-1 \in H_0 (T^*C,\pi^*K\otimes n).
+L605: \]
+L608: ### tr ∧
+L611: C
+L614: ### i=1
+L617: \[
+L619: We define the spectral curve Cs associated with a Higgs pair (E,\varphi) as the divisor of_0-points of the section s = det(\tau - \varphi) of the line bundle
+L620: \pi^*K\otimes n :
+L622: \]
+L625: C
+L628: \[
+L630: Cs = (s)0 \subset T^*C.
+L632: \]
+L635: ### 6  ANDREW HODGE AND MOTOHICO MULASE
+L638: \[
+L640: The projection \pi of \tag{2.10}
+L642: \]
+L644: \[
+L646: defines a ramified covering map \pi : Cs \to C of degree_n. There is yet another construction of the spectral curve Cs. Since the section s = det(\tau -\varphi)
+L647:  is determined by the characteristic coefficients of \varphi, by abuse of notation we identify s as
+L649: \]
+L652: ### an element of V ∗
+L655: ### GL:
+L658: \[
+L660: 2 (\varphi), . . .,(-1)n_n (\varphi)) \in Mn H_0 (C,K\otimes i). s = (s_1,s_2,. . .,sn) = (-tr \varphi,tr ∧ tr ∧
+L662: \]
+L665: C
+L668: ### i=1
+L671: It defines an OC-module (s1 + s2 + · · · + sn) · K\otimes−n
+L674: ### C . Let Is denote the ideal generated by
+L677: this module in the symmetric tensor algebra Sym(K−1 ). Since K−1 is the sheaf of linear
+L680: ### C C
+L683: functions on T ∗C, the scheme associated to this tensor algebra is Spec Sym(K−1 ) ∗C.
+L686: C = T
+L689: The spectral curve as the divisor of 0-points of s is then defined by
+L692: ### ) !
+L695: ### Sym(K−1
+L698: \[
+L700: Cs = Spec C Sym(K-1)^*C.
+L702: \]
+L705: ### ⊂ Spec = T
+L708: ### Is C
+L711: We denote by Ureg the set consisting of points s for which Cs is non-singular. It is an
+L714: ### open dense subset of V ∗
+L717: GL \[3\]. We note that since deg(KC) = 2g − 2 > 0, every divisor of
+L720: T ∗C intersects with the 0-section C. Therefore, if Cs is non-singular, then it has only one
+L723: ### 2 (g − 1) + 1, which
+L726: component, and is therefore irreducible. The genus of Cs is g(Cs) = n
+L729: ### follows from an isomorphism
+L732: ### )/Is Mn−1
+L735: π∗OCs = Sym(K−1 ∼= K\otimes−i
+L738: ### C C
+L741: ### i=0
+L744: as an OC-module.
+L746: \[
+L748: The Higgs field \varphi \in H_0 (C,End(E) \otimes KC) gives a homomorphism \varphi : K-1 C -\to End(E),
+L750: \]
+L753: which induces an algebra homomorphism, still denoted by the same letter,
+L756: ) −→ End(E).
+L759: ### ϕ : Sym(K−1
+L762: C
+L765: Since s ∈ V ∗
+L768: GL is the characteristic coefficients of ϕ, by the Cayley-Hamilton theorem, the
+L771: ### homomorphism ϕ factors through
+L774: Sym(K −1 ) −→ Sym(K −1 )/Is −→ End(E).
+L777: ### C C
+L780: Hence E is a module over Sym(K−1 )/Is of rank 1. The rank is 1 because the ranks of
+L783: C
+L786: E and Sym(K−1 )/Is are the same as OC-modules. In this way a Higgs pair (E, φ) gives
+L789: C
+L792: rise to a line bundle LE on the spectral curve Cs, if it is non-singluar. Since LE being an
+L795: ### OCs )/Is-module, we recover E from LE simply
+L798: ### -module is equivalent to E being a Sym(K−1 C
+L801: \[
+L803: by E = \pi^*LE, which has rank_n because \pi is a covering of degree_n. From the equality \chi(C,E) = \chi(Cs,LE) and Riemann-Roch, we find that deg LE = d +
+L804: n(n - 1)(g - 1). To
+L806: \]
+L809: ### summarize, the above construction defines an inclusion map
+L812: H−1 (s) ⊂ Picd+n(n−1)(g−1)(Cs) ∼= Jac(Cs),
+L815: if Cs is non-singular.
+L817: \[
+L819: Conversely, suppose we have a line bundle L of degree d + n(n - 1)(g - 1) on a nonsingular spectral curve Cs. Then \pi^*L is a module over \pi^*OCs = Sym(K-1
+L821: \]
+L824: ### )/Is, which
+L827: C
+L830: ### defines a homomorphism K−1
+L833: \[
+L835: C \to End(\pi^*L), or equivalently, \psi : \pi^*L \to \pi^*L \otimes KC. It is easy to see that the Higgs pair (\pi^*L,\psi) is stable. Suppose we had a \psi
+L836: -invariant subbundle F \subset \pi^*L of rank_k < n. Since (F,\psi\|F) is a Higgs pair, it gives rise to a spectral curve Cs
+L838: \]
+L841: ### ′
+L844: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 7
+L847: \[
+L849: that is a degree_k covering of C. Note that the characteristic polynomial s ′ = det(x - \psi) is a factor of the full characteristic polynomial s = det(x -
+L850: \varphi). Therefore, Cs ′ is a component of Cs, which contradicts to our assumption that Cs is irreducible. Therefore, \pi^*L has no
+L852: \]
+L855: ### ψ-invariant proper subbundle. Thus we have established that
+L858: \[
+L860: H-1 (s) = Picd+n(n-1)(g-1)(Cs) ∼= Jac(Cs), s \in Ureg \subset V^*
+L862: \]
+L865: GL.
+L868: The vector bundle π∗L itself is not necessarily stable. It is proved in \[3\] that the locus of L in Picd+n(n−1)(g−1)(Cs) that gives unstable π∗L has
+L869: codimension two or more. Recall that the tautological section η ∈ H0 (T ∗UC(n, d), p∗Λ_1 (UC(n, d))) is a holomorphic_1-form on T ∗UC(n, d) ⊂ HC(n, d). Its
+L870: restriction to the fiber H−1 (s) of s ∈ Ureg for which Cs is non-singular extends to a holomorphic_1-form on the whole fiber H−1 (s) ∼= Jac(Cs) since η is
+L871: undefined only on a codimension_2 subset. Hence η extends as a holomorphic_1-form on H−1 (Ureg). Thus η is well defined on T ∗UC(n, d)∪H−1 (Ureg). The
+L872: complement of this open subset in HC(n, d) consists of such Higgs pairs (E, φ) that E is unstable and Cs is singular. Since the stability of E and the
+L873: non-singular condition for Cs are both open conditions, this complement has codimension at least two. Consequently, both the tautological section η and the
+L874: holomorphic symplectic form ω = −dη extend holomorphically to the whole Higgs moduli space HC(n, d).
+L876: We note that there are no holomorphic 1-forms other than constants on a Jacobian variety
+L879: ### since its cotangent bundle is trivial. It implies that
+L882: ### ) ≡ 0
+L885: \[
+L887: \omega\|H-1(s) = -d(\eta\|H-1(s) for s \in Ureg. Therefore,a generic fiber of the Hitchin fibration is a Lagrangian subvariety of the holomorphic symplectic
+L888: variety (HC(n,d),\omega). The Poisson structure on
+L890: \]
+L893: ### H0 (HC(n, d), OHC (n,d) ) is defined by
+L896: \[
+L898: {f, g} = \omega(Xf,Xg), f, g \in H_0 (HC(n,d),OHC (n,d)), where Xf denotes the Hamiltonian vector field defined by the relation df = \omega(Xf,·). Since \omega
+L899: vanishes on a generic fiber of H, the holomorphic functions on HC(n,d) coming from the coordinates of the Hitchin fibration are Poisson commutative with respect
+L900:  to the holomorphic symplectic structure \omega . Therefore, (HC(n,d),\omega,H) is an algebraically completely
+L902: \]
+L905: integrable Hamiltonian system \[28\], called the Hitchin integrable system.
+L908: ### Theorem 2.1 (Hitchin \[9\]). The Hitchin fibration
+L911: ### H : HC(n, d) −→ V ∗
+L914: ### GL
+L917: is a generically Lagrangian Jacobian fibration that defines an algebraically completely integrable Hamiltonian system (HC(n, d), ω, H). A generic fiber H−1
+L918:
+L920: ### (s) is a Lagrangian with
+L923: respect to the holomorphic symplectic structure ω and is isomorphic to the Jacobian variety of a spectral curve Cs.
+L926: ### The Hitchin map H restricted to T ∗
+L929: ### E UC(n, d) for a stable E is a polynomial map
+L932: \[
+L934: T^* 0 (C,End(E) \otimes KC) ∋ \varphi_7-\to det(x - \varphi) \in Mn H_0 (C,K\otimes i) E UC(n,d) = H C
+L936: \]
+L939: ### i=1
+L942: consisting of g linear components, 3g − 3 quadratic components, 5g − 5 cubic components, etc., and (2n − 1)(g − 1) components of degree n. Thus the inverse
+L943: image
+L946: ### H −1 (s) ∩ T ∗
+L949: ### E UC(n, d)
+L952: ### 8  ANDREW HODGE AND MOTOHICO MULASE
+L955: \[
+L957: for a generic (E,\varphi) consists of \tag{2.15}
+L959: \]
+L961: \[
+L963: \delta = Yn_i (2i-1)(g-1)
+L965: \]
+L967: ### i=1
+L970: ### points \[3\]. Consequently, the map
+L973: \[
+L975: p : Jac(Cs) ∼= H -1 (s) -\to H -1 \tag{0}
+L977: \]
+L980: \[
+L981: = UC(n,d) is a covering morphism of degree \delta .
+L983: \]
+L985: Let us now determine the Hamiltonian vector field associated to each coordinate function
+L988: \[
+L990: |^*UC(n,d)∩H-1 of H. Take a point (E,\varphi) \in T | (Ureg). The tangent space of the Higgs moduli |
+L994: | --- | --- |
+L996: | space at this point is given by |
+L998: \[
+L1000: | \tag{2.17}
+L1002: \]
+L1004: \[
+L1006: T(E,\varphi)HC(n,d) = H_1 (C,End(E)) \oplus H_0 | (C,End(E) \otimes KC). | | Since the symplectic form \omega = -d\eta is the exterior derivative of the
+L1007: tautological_1-form \eta of | | | \tag{2.6}
+L1013: \]
+L1016: \[
+L1018: on T^*UC(n,d), the evaluation of \omega at (E,\varphi) is given by | | | \tag{2.18}
+L1019: \]
+L1023: ### h·, ·i : H 1 (C,End(E)) \oplus H 0 (C,End(E) \otimes KC) −→ C
+L1027: is the Serre duality pairing. This expression is the standard Darboux form of the symplectic form ω. Choose an open neighborhood Y1 of E in UC(n, d) on which
+L1028: the cotangent bundle
+L1031: ### T ∗UC(n, d) is trivial. Then H is a polynomial map
+L1034: ### 0 (C,End(E) \otimes KC) ∋ (E ′ Mn H 0 (C, K\otimes i )
+L1037: ### H : Y1 × H
+L1040: \[
+L1042: , \varphi) 7-\to s = det(x - \varphi) \in C
+L1044: \]
+L1047: ### i=1
+L1050: that depends only on the second factor. The differential dH(E,φ) at the point (E, φ) gives a
+L1053: ### linear isomorphism
+L1056: \[
+L1058: dH(E,\varphi) (C,End(E) \otimes KC) ∼-\to Mn H_0 (C,K\otimes i).
+L1060: \]
+L1063: ### : H0
+L1066: C
+L1069: ### i=1
+L1072: As to the first factor of the tangent space of (2.17), we use the differential of the covering
+L1075: ### map p of (2.16):
+L1078: ### (2.20)  dp(E,φ) 1 (Cs, OCs ) ∼−→ H 1 (C,End(E)),
+L1081: ### : H
+L1084: \[
+L1086: where s = H(E,\varphi). The dual of \tag{2.19}
+L1088: \]
+L1091: \[
+L1093: , together with (2.20), gives an isomorphism
+L1096: ### def = Mn−1 1 1 ∼−→ H 1 1
+L1101: \[
+L1102: VGL H (C,K-\otimes i) = H (C,\pi^*OCs) (C,End(E)) ∼= H (Cs,OCs).
+L1104: \]
+L1107: C
+L1110: ### i=0
+L1113: From (2.19) and (2.21), we see that the tangent space to the Higgs moduli is given by
+L1116: \[
+L1118: T(E,\varphi)HC(n,d) ∼= Mn (C,K-\otimes (i-1)) \oplus Mn (C,K\otimes i) = VGL \oplus V^*
+L1120: \]
+L1123: ### H1 H0
+L1126: #### C C GL.
+L1129: \[
+L1131: i=1 i=1 Therefore, the symplectic form has a decomposition into_n pieces \omega = \omega_1 + \omega_2 + · · · + \omega_n, (C,K-\otimes (i-1)) \oplus H_0
+L1132: (C,K\otimes i), \omega_i takes the standard Darboux form
+L1134: \]
+L1137: ### and in each factor H1
+L1140: ### C C
+L1143: \[
+L1145: \omega_i (a_i),(a_i) i ii - ha_i ii
+L1147: \]
+L1150: ### 1 , bi 1 2 , bi 2 = ha 1 , bi 2 2 , bi 1 ,
+L1153: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 9
+L1156: \[
+L1158: i),(a_i) \in H_1 (C,K-\otimes (i-1)) \oplus H_0 (C,K\otimes i), and h·, ·ii is the duality pairing of
+L1160: \]
+L1163: ### where (a
+L1166: ### 1 , bi 1 2 , bi 2 C C
+L1169: H1 (C, K−\otimes(i−1) ) and H0 (C, K\otimes i ).
+L1172: ### C C
+L1175: \[
+L1177: Since s = H(E,\varphi) \in Ureg is a regular value of H, there is an open subset Y_2 \subset Ureg \subset V^*
+L1182: ### GL
+L1185: (Y2) is locally the product of the fiber H−1 (s) and Y2. By taking
+L1188: ### around s such that H−1
+L1191: Y1 smaller if necessary, we thus obtain a local product neighborhood
+L1194: \[
+L1196: -1 \tag{Y1}
+L1198: \]
+L1201: \[
+L1202: ∩ H-1 \tag{Y2}
+L1204: \]
+L1206: \[
+L1208: ∼= Y_1 \times Y_2 = Y
+L1210: \]
+L1213: p
+L1216: of (E, φ) in HC(n, d). By construction, the projections to the first and the second factors coincide with the projection p : T ∗UC(n, d) → UC(n, d) and the
+L1217: Hitchin map H:
+L1220: Y ~ A p ~ A A H ~ A ~ A ~ A ~ A ~ A Y1  Y2.
+L1222: \[
+L1224: The neighborhood Y and these projections provide the Darboux coordinate system for \omega, and its expression (2.18,2.23) globally holds on Y . In particular,
+L1225: the Hamiltonian vector fields corresponding to the components of H on Y are constant vector fields that are determined by elements of H_1 (C,K-\otimes (i-1))
+L1226: for each_i = 1, . . ., n. Llet (h_1,. . .,hN) be a
+L1228: \]
+L1231: C
+L1234: linear coordinate system of V ∗ 2 (g − 1) + 1. Since V ∗ Ln (C, K\otimes i ),
+L1237: GL, where N = n GL = i=1 H0 C
+L1240: ### each coordinate function is an element of VGL:
+L1243: \[
+L1245: h_1, . . ., hN \in VGL = Mn-1 H_1 (C,K-\otimes i).
+L1247: \]
+L1250: C
+L1253: ### i=0
+L1256: Since H0 (Cs, OCs ) = C, the Hitchin map H : HC(n, d) → V ∗
+L1259: ### GL is actually the pull back of
+L1262: the coordinate functions H−1 (h1), . . . , H−1 (hN ) on H−1 (Ureg) ⊂ HC(n, d). The identification of VGL as the first factor of the tangent space in (2.22)
+L1263: gives the Hamiltonian vector
+L1266: fields corresponding to the coordinate components of the Hitchin map. We have therefore established that the Hamiltonian vector fields are linear flows with
+L1267: respect to the linear coordinate of the Jacobian Jac(Cs) determined by (2.21). Of course each of these linear flows extends globally on Jac(Cs) since the
+L1268: tangent bundle of a Jacobian is trivial and a local linear function extends globally as a linear function.
+L1271: \[
+L1273: Theorem_2.2 (Hitchin [9]). The Hamiltonian vector fields corresponding to the Hitchin fibration are linear Jacobian flows on a generic fiber H-1 (s) ∼= Jac(Cs).
+L1274:  How does the construction of the spectral data (LE,Cs) from a Higgs pair (E,\varphi) change
+L1277: \]
+L1279: ### ∗ )? To answer this question, first we note
+L1282: \[
+L1284: when we consider the Serre dual (E^* \otimes KC,-\varphi \tag{2.25}
+L1286: \]
+L1289: \[
+L1290: tr ∧ i (\varphi) = tr ∧ i (\varphi^*) \in H_0 (C,End(∧ iE) \otimes Ki_0 (C,End(∧ i (E^* \otimes KC)) \otimes Ki C) = H C). For s = (s_1,s_2,. . .,sn) \in V^*^*
+L1291: = (-s_1,s_2,. . .,(-1)n sn). By definition, the
+L1293: \]
+L1296: ### GL, we write s
+L1299: ### spectral curves Cs and Cs ∗C, their isomorphism Cs ∼=
+L1302: ### ∗ are isomorphic. As divisors of T
+L1305: ### ǫ(Cs ∗C
+L1308: ### ∗ ) is induced by the involution of T
+L1311: \[
+L1313: ǫ : T^*C ∋ (p,x) 7-\to (p,-x) \in T^*C, where p \in C and x \in T^*
+L1315: \]
+L1318: p C.
+L1321: ### 10  ANDREW HODGE AND MOTOHICO MULASE
+L1324: Proposition 2.3 (Hitchin \[10\]). The spectral data (LE∗\otimes KC
+L1327: ### , Cs ∗ ) corresponding to the Serre
+L1330: dual (E∗ \otimes KC, −φ ∗ ) of the Higgs pair (E, φ) is given by
+L1333: (
+L1336: LE∗\otimes KC = ǫ ∗ (L ∗ )
+L1339: ### E \otimes KCs
+L1342: ### Cs
+L1345: ∗ = ǫ(Cs).
+L1348: The degree of these isomorphic line bundles is − deg(E) + (n 2 + n)(g − 1).
+L1351: Proof. We use the exact sequence of \[3, 10\] that characterizes LE:
+L1354: 0 −→ LE \otimes K−1 \otimes π ∗KC −→ π ∗E −→ π ∗ (E \otimes KC) −→ LE \otimes π ∗KC −→ 0.
+L1357: ### Cs
+L1360: ### The dual of this sequence is then
+L1363: 0 −→ L∗ ∗KC −→ π ∗ (E ∗ \otimes KC) −→ π ∗ (E ∗ \otimes K\otimes 2 ) −→ L∗ ∗KC −→ 0. E \otimes π C E \otimes KCs \otimes π Thus the spectral data of the Higgs
+L1364: pair (E∗ \otimes KC, φ∗ ) is (L ∗
+L1367: ### E \otimes KCs , Cs). The involution
+L1370: ∗ ).
+L1373: ǫ comes in here when we consider the Higgs pair (E∗ \otimes KC, −φ Proposition_2.4. Hitchin’s integrable system for the group Sp2m(C) is realized as the
+L1374: fixedpoint-set of the Serre duality involution (E, φ) 7→ (E∗\otimes KC, −φ
+L1377: ### ∗ ) defined on the Higgs moduli
+L1380: space HC(2m, 2m(g − 1)).
+L1383: \[
+L1385: Proof. The fixed-point-set consists of Higgs pairs (E,\varphi) such that E ∼= E^* \otimes KC and \varphi = -\varphi^* -\frac{1}{2}^* . Choose a square root of
+L1386: KC and define F = E \otimes K C . The Higgs field \varphi = -\varphi naturally acts on this bundle, and the pair (F,\varphi) forms the moduli space of
+L1387: Sp2m-Higgs bundles [10]. The characteristic coefficients satisfy the relation s = s^*
+L1389: \]
+L1392: ### , hence
+L1395: ### def = Mm
+L1398: \[
+L1400: s \in V^* H_0 (C,K\otimes 2i).
+L1402: \]
+L1405: ### Sp C
+L1408: ### i=1
+L1411: The spectral curve Cs has a non-trivial involution ǫ : Cs → Cs. From the exact sequence
+L1414: \[
+L1416: \frac{1}{2} (E \otimes K) -\to \pi(E \otimes K_1/2) -\to LE \otimes \pi_1/2 0 -\to LE \otimes K-1 \otimes \pi^*K^* -\frac{1}{2}^*^*K Cs C -\to \pi C C C -\to 0,
+L1417:  we see that LF ∼= LE \otimes \pi^*K -\frac{1}{2} and LF^* ∼= ǫ^*L^*^*K -\frac{1}{2} C F \otimes KCs \otimes \pi C . If we define L_0 = LF \otimes \pi^*K -m+1/2
+L1418:  following [10], then L^* ∼= ǫ^*L_0.
+L1420: \]
+L1423: ### C 0
+L1426: ### 3. Deformations of spectral curves
+L1429: The Hitchin fibration (2.9) is a family of deformations of Jacobians, but it is not effective. In this section we determine the natural effective family
+L1430: associated with the Hitchin
+L1433: fibration.
+L1435: \[
+L1437: An obvious action on HC(n,d) that preserves the spectral curves is the scalar multiplication of Higgs fields \varphi_7\to \lambda · \varphi by \lambda \in C
+L1439: \]
+L1442: ### ∗ ∗
+L1445: ### . Although this C -action is not symplectomorphic
+L1448: because it changes the symplectic form ω_7→ λ · ω, from the point of view of constructing an effective family of Jacobians, we need to quotient it out. We note
+L1449: that the C ∗
+L1452: ### -action on
+L1455: ### V ∗
+L1458: ### GL defined by
+L1461: \[
+L1463: V^* Mn H_0 (C,K\otimes i) ∋ s = (s_1,s_2,. . .,sn) 7-\to \lambda · s = (\lambda s_1,\lambda_2^* GL = s_2,. . .,\lambda_n sn) \in V GL
+L1465: \]
+L1468: C
+L1471: ### i=1
+L1474: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 11
+L1477: ### makes the Hitchin fibration C ∗
+L1480: ### -equivariant:
+L1483: λ −−−−−−−−→ HC(n, d)
+L1486: ### HC(n, d)
+L1489: ###
+L1492: \[
+L1494: H H \lambda \in C^*
+L1496: \]
+L1499: y y .
+L1502: ### Ln (C, K\otimes i ) −−−−−−−−→ Ln (C, K\otimes i ),
+L1505: \[
+L1507: i=1 H_0 C_i=1 H_0 C diag(\lambda,...,\lambda n)
+L1509: \]
+L1512: Since Cs is defined by the equation (2.11), the natural C ∗
+L1515: ### -action on the cotangent bundle
+L1518: T ∗C gives the isomorphism λ : Cs → Cλ·s that commutes with the projetion π : T ∗C → C. The line bundles L(E,φ) on Cs and L(E,λφ) on Cλ·s corresponding to E are
+L1519:  related by this
+L1522: ### isomorphism by
+L1525: λ ∗L(E,λφ) ∼−→ L(E,φ)
+L1528: .
+L1531: \[
+L1533: Another group action on the Higgs moduli space that leads to trivial deformations of the spectral curves is the Jacobian action. The Jac(C)-action on HC(n,d) is
+L1534:  defined by (E,\varphi) 7-\to (E \otimes L,\varphi), where L \in Jac(C) = Pic0 (C) is a line bundle on C of degree_0. The Higgs field is preserved in this
+L1535: action because (E \otimes L)^* \otimes (E \otimes L) = E^* \otimes E is unchanged,
+L1537: \]
+L1540: ### hence
+L1543: \[
+L1545: \varphi \in H_0 (C,End(E) \otimes KC) = H_0 (C,End(E \otimes L) \otimes KC).
+L1547: \]
+L1550: Thus the cotangent bundle T ∗UC(n, d) is trivial along every orbit of the Jac(C)-action on UC(n, d), and each Jac(C)-orbit in HC(n, d) lies in the same fiber of
+L1551:  the Hitchin fibration.
+L1553: \[
+L1555: Let us identify the Jac(C)-action on a generic fiber H-1 (s) ∼= Jac(Cs). The covering map \pi : Cs \to C induces an injective homomorphism \pi^* : Jac(C) ∋
+L1556: L_7-\to \pi^*L \in Jac(Cs). This is injective because if \pi^*L ∼= OCs
+L1558: \]
+L1561: ### , then by the projection formula we have
+L1564: \[
+L1566: ^*L) ∼= \pi^*OCs \otimes L ∼= Mn-1 \pi^*(\pi L \otimes K\otimes -i
+L1568: \]
+L1571: ### C ,
+L1574: ### i=0
+L1577: ### (s) and
+L1580: \[
+L1582: which has a nowhere vanishing section. Hence L ∼= OC. Take a point (E,\varphi) \in H-1 let LE be the corresponding line bundle on Cs. Since \pi^*(LE \otimes
+L1583: \pi^*L) ∼= E \otimes L, the action of Jac(C) on H-1 (s) ∼= Jac(Cs) is through the canonical action of the subgroup Jac(C) ∼= \pi^* Jac(C) \subset Jac(Cs)
+L1585: \]
+L1588: on Jac(Cs).
+L1590: On the open subset T ∗UC(n, d) of HC(n, d), the Jac(C)-action is symplectomorphic because it is induced by the action on the base space UC(n, d). On the other
+L1591: open subset
+L1594: \[
+L1596: H-1 (Ureg) the action is also symplectomorphic because it preserves each fiber which is a Lagrangian. Since the symplectic form \omega is defined by extending
+L1597: the canonical form \omega = -d\eta to HC(n,d), the Jac(C)-action is globally holomorphic symplectomorphic on HC(n,d). This action is actually a Hamiltonian
+L1598: action and the first component of the Hitchin map \tag{3.3}
+L1600: \]
+L1603: \[
+L1604: H_1 : HC(n,d) ∋ (E,\varphi) 7-\to tr(\varphi) \in H_0 (C,KC)
+L1606: \]
+L1609: is the moment map. Note that H1 (C, OC ) is the Lie algebra of the Abelian group Jac(C),
+L1612: ### and H0
+L1615: (C, KC ) is its dual Lie algebra. Since the infinitesimal action of H1 (C, OC ) on the
+L1618: Higgs moduli space defines a vector field which is obtained by identifying H1 (C, OC) with the first component of (2.21), the symplectic dual to this vector
+L1619: field is the map to the first component of second factor in (2.22), i.e, H1.We can therefore construct the symplectic quotient HC(n, d)//Jac(C), which we will
+L1620: do in Section 4. Here our interest is to determine an effective family of spectral curves. The
+L1623: ### 12  ANDREW HODGE AND MOTOHICO MULASE
+L1626: \[
+L1628: moment map H_1 of \tag{3.3}
+L1630: \]
+L1633: \[
+L1635: being the trace of \varphi, it is natural to define
+L1639: ### (3.4)  V ∗ ∗ Mn H 0 (C, K\otimes i ) ⊂ V ∗
+L1642: SL = V SLn(C) = C GL.
+L1645: ### i=2
+L1648: This is a vector space of dimension (n 2 − 1)(g − 1). Now consider a partial projective space
+L1651: ### (3.5)  P(HSL H −1 (V ∗ −1 (0)C ∗
+L1654: C (n, d)) = SL) \\ H .
+L1657: This is no longer a holomorphic symplectic manifold, yet the Hitchin fibration naturally
+L1660: ### descends to a generically Jacobian fibration
+L1663: ### (3.6)  P H : P(HSL ∗
+L1666: ### C (n, d)) −→ Pw(V SL)
+L1669: ### over the weighted projective space of V ∗ ∗
+L1672: ### SL defined by the restriction of (3.1) on V SL. We
+L1675: ### now claim
+L1678: Theorem 3.1 (Effective Jacobian fibration). The Jacobian fibration
+L1681: ### P H : P(HSL ∗
+L1684: ### C (n, d)) −→ Pw(V SL)
+L1687: is generically effective.
+L1690: The rest of this section is devoted to the proof of this theorem. The statement is equivalent to the claim that the family of deformations of spectral curves
+L1691: parametrized by Pw(V
+L1694: ### ∗
+L1697: ### SL)
+L1700: is effective. Let s ∈ V ∗
+L1703: SL be a point for which the spectral curve Cs is non-singular, and ¯s
+L1706: ### the corresponding point of Pw(V ∗
+L1709: ### SL). We wish to show that the Kodaira-Spencer map
+L1712: ### Ts¯Pw(V ∗ (Cs, T Cs)
+L1715: ### SL) −→ H1
+L1718: is injective, where T X denotes the tangent sheaf of X.
+L1720: The spectral curve Cs of (2.11) is the divisor of T ∗C defined by the section
+L1723: \[
+L1725: det(\tau - \varphi) \in H_0 (T^*C,\pi^*K\otimes n),
+L1727: \]
+L1730: C
+L1733: \[
+L1735: where \tau is the tautological section of \pi^*KC on T^*C. Let Ns denote the normal sheaf of Cs in T^*C. Since KT^*C = \Lambda_2 (T^*C) ∼= OT^*C by the
+L1736: holomorphic symplectic form \omega C = -d\tau,
+L1738: \]
+L1741: ### we have
+L1744: Ns ∼= KCs ∼= π ∗K\otimes n
+L1747: C .
+L1750: ### From
+L1753: 0 −−−−→ T Cs −−−−→ T T ∗C\|Cs −−−−→ Ns −−−−→ 0,
+L1756: ### we obtain
+L1759: 0 −−−−→ H0 (Cs, T T ∗C) ι −−−−→ H0 (Cs, Ns) κ −−−−→ H1 (Cs, T Cs)
+L1762: ### (3.7) (Cs, T T ∗C) −−−−→ H1 (Cs, Ns).
+L1765: ### −−−−→ H1
+L1768: ### Since
+L1771: (Cs, Ns) ∼= H0 (C, π∗KCs ) ∼= Mn (C, K\otimes i ) = V ∗
+L1774: ### H0 H0
+L1777: ### C GL,
+L1780: ### i=1
+L1783: the homomorphism κ is the Kodaira-Spencer map for the deformations of spectral curves
+L1786: ### on V ∗
+L1789: GL. We thus need to identify the image of ι. We note that the tangent sheaf and
+L1791: 
+L1792: the cotangent sheaf are isomorphic on the total space of the cotangent bundle T ∗C, i.e.,
+L1795: \[
+L1797: T T^*C ∼= \Lambda_1 (T^*C).
+L1799: \]
+L1802: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 13
+L1805: ### Proposition 3.2. We have the following isomorphisms:
+L1808: \[
+L1810: H_0 (T^*C,\Lambda_0 (T^*C)) ∼= C \tag{3.8}
+L1812: \]
+L1814: \[
+L1816: H_0 (T^*C,\Lambda_1 (T^*C)) ∼= H_0 (C,KC) \oplus C · \tau H_0 (T^*C,\Lambda_2 (T^*C)) ∼= C.
+L1818: \]
+L1821: Proof. The first isomorphism of (3.8) asserts that every globally defined holomorphic function f on T
+L1824: ∗C is a constant. A section σ ∈ H0 (C, KC) is a map σ : C → T ∗C. Take an arbitrary pair of points (x, y) in T ∗C. If they are not on the same fiber, then there
+L1825:  is a section σ such that both x and y are on the image σ(C). Since f is constant on σ(C), f(x) = f(y). If they are on the same fiber, then choose a point z ∈ T
+L1826:  ∗C not on this fiber and use the same argument. Since \Lambda_2 (T ∗C) ∼= OT ∗C, the third isomorphism follows from the first one. The second isomorphism of
+L1827: (3.8) asserts that every holomorphic_1-form α on T ∗C is either the pull-back of a holomorphic_1-form on C via π : T ∗C → C, the tautological_1-form τ , or a
+L1828: linear combination of them. Let σ : C → T ∗C be an arbitrary section. Since the normal sheaf of σ(C) in T ∗C is Kσ(C)
+L1831: ### , we have on σ(C)
+L1834: \[
+L1836: 0 ----\to K-1 1 (T^*C) \otimes O\sigma(C) ----\to K\sigma(C) ----\to 0. \sigma(C) ----\to \Lambda Therefore, identifying C ∼= \sigma(C), we obtain 0 ----\to H_0
+L1837:  (C,\Lambda_1 (T^*C) \otimes OC) ----\to H_0 (C,KC) \kappa_0 ----\to H_1 (C,K-1)
+L1842: C
+L1845: (C,Λ_1 (T ∗C) \otimes OC) −−−−→ H1 (C, KC ) −−−−→ 0.
+L1848: ### −−−−→ H1
+L1851: \[
+L1853: Here \kappa_0 is the Kodaira-Spencer map assigning a deformation of C to a displacement of C in T^*C through a section of KC. But since \sigma(C) is always
+L1854: isomorphic to C, we do not obtain any deformation of C in this way. Hence \kappa_0 is the_0-map. Therefore, \tag{3.9}
+L1856: \]
+L1859: \[
+L1860: H_0 (\sigma(C),\Lambda_1 (T^*C) \otimes O\sigma(C)) ∼= H_0 (\sigma(C),K\sigma(C)) ∼= H_0 (C,KC).
+L1862: \]
+L1865: ### Now consider an exact sequence on T ∗C
+L1868: 0 −−−−→ Λ_1 (T ∗C) \otimes OT ∗C(−σ(C)) −−−−→ Λ_1 (T ∗C) −−−−→ Λ_1 (T ∗C) \otimes Oσ(C) −−−−→ 0,
+L1871: ### which produces
+L1874: 0 −−−−→ H0 (T ∗C,Λ_1 (T ∗C) \otimes OT ∗C(−σ(C))) −−−−→ H0 (T ∗C,Λ_1 (T ∗C)) r −−−−→ H0 (σ(C),Λ_1 (T ∗C) \otimes Oσ(C) ).
+L1877: Because of (3.9), the homomorphism r is equal to the pull-back
+L1880: \[
+L1882: ^* 0 (T^*C,\Lambda_1 (T^*C)) -\to H_0 (C,KC) r = \sigma : H by the section \sigma : C \to T^*C. It is surjective because \sigma^* ◦ \pi^* = idH0(C,KC)
+L1884: \]
+L1887: ### . Therefore, we
+L1890: ### have a splitting exact sequence
+L1893: ### (3.10)
+L1895: ### 0 1 0 1 ∗ 0
+L1898: 0 −→ H (T ∗C,Λ (T ∗C) \otimes O(−σ(C))) −→ H (T ∗C,Λ (T ∗C)) σ (C, KC ) −→ 0.
+L1901: ### −→ H
+L1904: \[
+L1906: The tautological_1-form \tau \in H_0 (T^*C,\pi^*KC) defines 1 (T ∧\tau ----\to \Lambda_2 (T 0 ----\to \pi^*KC ----\to \Lambda^*C)^*C) \otimes OT^*C(-C) ----\to
+L1907: 0, noting that \tau vanishes along the divisor C \subset T^*C. Since H_0 (T^*C,\Lambda_2 (T^*C) \otimes OT^*C(-C)) ∼= H_0 (T^*C,OT^*C(-C)) = 0,
+L1909: \]
+L1912: ### 14  ANDREW HODGE AND MOTOHICO MULASE
+L1915: ### we obtain
+L1918: \[
+L1920: H_0 (T^*C,\pi^*KC) ∼= H_0 (T^*C,\Lambda_1 (T^*C)). Take \alpha \in H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-C)) ∼= H_0 (T^*C,\pi^*KC(-C)). Then
+L1921: (T^*C,\pi^*KC(-C)) \otimes K-1 (C)) ∼= H_0 (T^*C,OT^*C) ∼= C. \alpha /\tau \in H_0
+L1923: \]
+L1926: C
+L1929: \[
+L1931: Therefore, \alpha is a constant multiple of \tau, and we have obtained \tag{3.11}
+L1933: \]
+L1936: \[
+L1937: H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-C)) ∼= C.
+L1939: \]
+L1942: ### From (3.10) and (3.11), we conclude that
+L1945: \[
+L1947: H_0 (T^*C,\Lambda_1 (T^*C)) ∼= H_0 (C,KC) \oplus C · \tau . Lemma_3.3. Let s \in V^*
+L1949: \]
+L1952: GL be a point such that the spectral curve Cs is non-singluar. Then
+L1955: ### we have an isomorphism
+L1958: \[
+L1960: H_0 (Cs,T T^*C) ∼= H_0 (Cs,\Lambda_1 (T^*C)) ∼= H_0 (T^*C,\Lambda_1 (T^*C)). Proof. The line bundle on T^*C that corresponds to the divisor Cs \subset T^*C is
+L1961: \pi^*K\otimes n
+L1963: \]
+L1966: ### C . Thus
+L1969: OT ∗C(−Cs) ∼= π ∗K \otimes(−n)
+L1972: ∼= OT ∗C(−nC).
+L1975: C
+L1978: ### As above, let us consider an exact sequence
+L1981: 0 −−−−→ Λ_1 (T ∗C) \otimes O(−nC) −−−−→ Λ_1 (T ∗C) −−−−→ Λ_1 (T ∗C) \otimes OCs −−−−→ 0
+L1984: ### and its cohomology sequence
+L1987: 0 −→ H0 (T ∗C,Λ_1 (T ∗C) \otimes O(−nC)) −→ H0 (T ∗C,Λ_1 (T ∗C)) q (Cs,Λ_1 (T ∗C) \otimes OCs ).
+L1990: ### −→ H0
+L1993: ### From (3.11), we have
+L1996: \[
+L1998: H_0 (T^*C,\Lambda_1 (T^*C) \otimes OT^*C(-nC)) = 0 for_n \ge 2, hence q is injective. Take \beta \in H_0 (Cs,\Lambda_1 (T^*C)\otimes OCs), and extend it as a
+L1999: meromorphic_1-form on T^*C. Since deg KC = 2g - 2 > 0, every divisor of T^*C intersects with the_0-section C, and since Cs ∼ nC as a divisor, it also intersects
+L2000:  with Cs. If D \subset T^*C is the pole divisor of \beta, then it cannot intersect with Cs, hence D = ∅. Therefore, q is surjective.
+L2002: \]
+L2005: Let us go back to the Kodaira-Spencer map (3.7). We now know from (3.8) and (3.12)
+L2007: ### that
+L2010: (3.13) 0 −−−−→ H0 (C, KC ) \oplus C · τ ι −−−−→ Ln (C, K\otimes i ) κ −−−−→ H1 (Cs, K−1 ). i=1 H0 C Cs The H0 (C, KC)-factor of the second term of (3.13) maps
+L2011: to the first component of the third term via the injective homomorphism ι. The tautological_1-form τ on T ∗C that appears as the second factor of the second
+L2012: term is mapped to a diagonal ray in the third term. To see this fact, we recall that the tangent and cotangent sheaves are isomorphic on T ∗C through the
+L2013: symplectic form ωC = −dτ . Let v be the vector field on T ∗C corresponding to τ through this isomorphism, i.e., τ = ωC(·, v). This vector field v represents the
+L2014:  C ∗
+L2017: ### -action
+L2020: on T ∗C along fiber. In terms of a local coordinate system, these correspondences are clearly described. Choose a local coordinate z on the algebraic curve C
+L2021: around a point p ∈ C, and
+L2024: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 15
+L2027: ### denote by x the linear coordinate on T ∗
+L2030: ### p C with respect to the basis dzp. Then at the point
+L2033: (p, xdzp) ∈ T ∗C we have the following expressions:
+L2036: ###
+L2039: τ = x dz
+L2042: ###
+L2045: ωC = dz ∧ dx
+L2048: ###  ∂
+L2051: v = x
+L2054: ∂x .
+L2057: \[
+L2059: The \lambda \in C^* action on T^*C generated by the vector fields v produces a displacement of Cs \subset T^*C to C\lambda ·s, which corresponds to the
+L2060: equivariant action of \lambda on HC(n,d) as described in \tag{3.2}
+L2062: \]
+L2064: \[
+L2066: . In terms of the holomorphic_1-form \tau, its restriction on Cs gives an element (Cs,KCs) ∼= H_0 (C,\pi^*OCs \otimes K\otimes n) ∼= H_0 (C,\oplus n) = Mn H_0
+L2067: (C,K\otimes i). \tau\|Cs \in H_0 i=1K\otimes i
+L2069: \]
+L2072: ### C C C
+L2075: ### i=1
+L2078: \[
+L2080: This is the image \iota(\tau) of \tag{3.13}
+L2082: \]
+L2085: \[
+L2086: .
+L2091: ### Summing up, we have constructed an injective homomorphism
+L2094: \[
+L2096: V^* Ln (C,K\otimes i) H_0 (C,KC) \oplus C · \tau \bar{\kappa} ----\to H_1 (Cs,K-1). SL/C ∼= \iota i=1 H_0 C Cs The image of \bar{\kappa} represents the generic
+L2097: Kodaira-Spencer class of the Hitchin fibration P H of \tag{3.6}
+L2099: \]
+L2102: \[
+L2103: . This completes the proof of Theorem_3.1.
+L2105: \]
+L2108: 4. Symplectic quotient of the Higgs moduli space and Prym fibrations
+L2111: The Hamiltonian vector fields corresponding to the coordinate components of the Hitchin
+L2114: ### map HC(n, d) → V ∗
+L2117: GL are constant Jacobian flows along each fiber of the map. Suppose we
+L2120: have a direct sum decomposition of VGL into two Lie subalgebras
+L2123: ### def = Mn−1 1
+L2126: VGL H (C, K\otimes−i ) = g1 \oplus g2.
+L2128: C
+L2131: ### i=0
+L2134: Then there are two possible ways to construct new algebraically completely integrable Hamiltonian systems. If the g1-action on HC(n, d) is integrated to a group
+L2135:  action, then it is Hamiltonian by definition and we can construct the symplectic quotient. Or if the g2-action is integrated to a group action instead, then we
+L2136:  may find a family of g2-orbits in
+L2139: ### HC(n, d) fibered over the dual Lie algebra g ∗
+L2142: 2 . An important difference between real symplectic geometry and holomorphic symplectic geometry is that in the latter case integrations
+L2145: of the same Lie algebra may generate different (non-isomorphic) Lie groups. Consequently, the idea of symplectic quotient has to be generalized so that we can
+L2146: allow a family of groups acting on a symplectic manifold. The discovery of Hausel and Thaddeus in \[7\] is that the above two constructions lead to mirror
+L2147: symmetric pairs of Calabi-Yau spaces in the sense of Strominger-Yau-Zaslow \[25\]. In this section we consider two cases, the SL-P GL duality and the
+L2148: Sp2m-SO2m+1 duality.
+L2151: ### The SL-P GL duality comes from the decomposition
+L2154: !
+L2157: ### 1 (C, OC) \oplus Mn−1 H 1 (C, K\otimes−i )
+L2160: ### VGL = H
+L2163: C .
+L2166: ### i=i
+L2169: Obviously, the vector fields generated by the H1 (C, OC)-action are integrable to the Jac(C)- action everywhere on HC(n, d). Therefore, we do have the usual
+L2170: symplectic quotient mod
+L2173: ### 16  ANDREW HODGE AND MOTOHICO MULASE
+L2176: Jac(C). On the other hand, the integration of the other Lie algebra
+L2179: ### def = Mn−1 1
+L2182: ### VSL H (C, K\otimes−i )
+L2185: C
+L2188: ### i=i
+L2191: produces different Lie groups, called Prym varieties, along each fiber of the Hitchin fibration.
+L2193: The spectral covering π : Cs → C induces two group homomorphisms dual to one another, the pull-back π ∗ and the norm map Nmπ defined by
+L2196: ### ∗ ∗L ∈ Jac(Cs)
+L2199: \[
+L2201: \pi : Jac(C) ∋ L_7-\to \pi \tag{4.1}
+L2203: \]
+L2206: \[
+L2207: Nm\pi : Jac(Cs) ∋ L_7-\to det(\pi^*L) \otimes det(\pi^*OCs) -1 \in Jac(C).
+L2209: \]
+L2212: In terms of divisors the norm map can be defined alternatively by
+L2215: ### Pic(Cs) ∋ X
+L2218: \[
+L2220: m(p) · p_7-\to X_m(p) · \pi(p) \in Jac(C). p\in Cs p\in Cs
+L2222: \]
+L2225: ### The Prym variety and the dual Prym variety
+L2228: def = Ker(Nmπ)
+L2231: ### Prym(Cs/C)
+L2234: ### (4.2)
+L2236: def = Jac(Cs)/π∗
+L2239: ### Prym∗ (Cs/C) Jac(C)
+L2242: constructed by using these homomorphisms are Abelian varieties of dimension g(Cs)−g(C) and are dual to one another. The algebraically completely integrable
+L2243: Hamiltonian systems with these Abelian fibrations, that are naturally constructed from HC(n, d), then become SYZ-mirror symmetric.
+L2245: We have shown in Section 3 that the Jac(C)-action on HC(n, d) is Hamiltonian. So we
+L2248: ### can define the symplectic quotient
+L2251: def = HC(n, d)//Jac(C) = H
+L2254: (4.3)  PHC(n, d) −1 (0)/Jac(C).
+L2257: This is a symplectic space of dimension_2(n_2 − 1)(g − 1) modeled by the moduli space of stable principal P GLn(C)-bundles on C \[8, 9, 18\]. Since the
+L2258: Jac(C)-action on HC(n, d) preserves the Hitchin fibration, we have an induced Lagrangian fibration
+L2261: (4.4)  HP GL : PHC(n, d) −→ V ∗ Mn (C, K\otimes i ).
+L2264: ### H0
+L2267: ### SL = C
+L2270: ### i=2
+L2273: ### It’s 0-fiber is H −1
+L2276: \[
+L2278: P GL \tag{0}
+L2280: \]
+L2283: \[
+L2284: = UC(n,d)/Jac(C). Following [19] we denote by SUC(n,d) the
+L2286: \]
+L2289: moduli space of stable vector bundles with a fixed determinant line bundle. This is a fiber
+L2292: ### of the determinant map
+L2295: \[
+L2297: UC(n,d) ∋ E_7-\to det E \in Picd (C),
+L2299: \]
+L2302: and is independent of the choice of the value of the determinant. Note that (4.5) is a non-trivial fiber bundle. The equivariant Jac(C)-action on (4.5) is given
+L2303:  by
+L2306: ### \otimes L −−−−→ UC(n, d)
+L2309: ### UC(n, d)
+L2312: ###
+L2315: (4.6) det  det L ∈ Jac(C).
+L2318: ### y y
+L2321: ### Picd (C) −−−−→ Picd (C)
+L2324: ### \otimes L\otimes n
+L2327: The isotropy subgroup of the Jac(C)-action on UC(n, d) is the group of n-torsion points
+L2330: \[
+L2332: def = {L \in Jac(C)\|L_1 \tag{4.7}
+L2334: \]
+L2337: \[
+L2338: Jn(C) \otimes n = OC} ∼= H (C,Z/nZ),
+L2340: \]
+L2343: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 17
+L2346: \otimes n ∼= det(E). Choose a reference line bundle L0 ∈ since E \otimes L ∼= E implies det(E) \otimes L
+L2349: ### Picd (C) and consider a degree n covering
+L2352: \[
+L2354: (C) ∋ L \otimes L_0 7-\to L \otimes n \otimes L_0 \in Picd (C), L \in Jac(C).
+L2356: \]
+L2358: ### ν : Picd
+L2361: \[
+L2364: Then the pull-back bundle \nu^*UC(n,d) on Picd (C) becomes trivial:^*UC(n,d) = Picd (C) \times SUC(n,d).
+L2366: \]
+L2369: ### ν
+L2372: \[
+L2374: The quotient of this product by the diagonal action of Jn(C) is the original moduli space: \tag{4.8}
+L2376: \]
+L2378: \[
+L2380: Picd (C) \times SUC(n,d) Jn(C) ∼= UC(n,d).
+L2382: \]
+L2385: ### It is now clear that
+L2388: UC(n, d)/Jac(C) ∼= SUC(n, d)/Jn(C).
+L2391: \[
+L2392: 
+L2393: What are the other fibers of \tag{4.4}
+L2395: \]
+L2397: \[
+L2399: ? Let s \in V^* SL ∩ Ureg be a point such that Cs is nonsingular. We have already noted that the covering map \pi : Cs \to C induces an injective homomorphism
+L2400: \pi^* : Jac(C) ∋ L_7-\to \pi^*L \in Jac(Cs). Therefore, the fiber H -1
+L2402: \]
+L2405: ### P GL(s) is
+L2408: isomorphic to the dual Prym variety Prym∗ (Cs/C). Similarly to the equivariant action
+L2411: ### (4.6), we have
+L2414: ### \otimes L
+L2417: ### Jac(Cs)
+L2420: ### −−−−→ Jac(Cs)
+L2423: ###
+L2426: (4.9) Nm  Nm L ∈ Jac(C).
+L2429: ### y y
+L2432: ### Jac(C) −−−−→ Jac(C)
+L2435: ### \otimes L\otimes n
+L2438: ### By the same argument of (4.8), we obtain
+L2441: (4.10) Prym(Cs/C) × Jac(C) Jn(C) ∼= Jac(Cs).
+L2443: From (4.2) and (4.10), it follows that Prym∗ (Cs/C) = Prym(Cs/C)/Jn(C). We have thus
+L2446: ### established
+L2449: ### Theorem 4.1 (\[9, 10\]). The natural fibration
+L2452: ### HP GL : PHC(n, d) −→ V ∗ Mn H 0 (C, K\otimes i )
+L2455: ### SL = C
+L2458: ### i=2
+L2461: of (4.4) is a Lagrangian dual Prym fibraion with respect to the canonical holomorphic symplectic form ω¯ on PHC(n, d). We recall that the Higgs moduli space
+L2462: HC(n, d) contains the cotangent bundle T ∗UC(n, d) as an open dense subspace, and that the holomorphic symplectic form ω is the canonical symplectic form on
+L2463: this cotangent bundle. Similarly, we can show the following Proposition_4.2. The symplectic form ω¯ on PHC(n, d) given by the symplectic quotient is the
+L2464: canonical cotangent symplectic form on the cotangent bundle
+L2467: T ∗ SUC(n, d)/Jn(C) ⊂ PHC(n, d).
+L2470: Proof. Let E be a stable vector bundle on C. The exact sequence
+L2473: 0 −−−−→ OC −−−−→ End(E) −−−−→ Q = End(E)/OC −−−−→ 0
+L2476: ### induces a cohomology sequence
+L2479: 0 −−−−→ H1 (C, OC ) −−−−→ H1 (C,End(E)).
+L2482: ### 18  ANDREW HODGE AND MOTOHICO MULASE
+L2485: ### Therefore,
+L2488: TE SUC(n, d)/Jn(C) ∼= H_1 (C,End(E))/H1 (C, OC ).
+L2491: ### Dualizing the situation, we have
+L2494: ### tr
+L2497: 0 −−−−→ End0(E) \otimes KC −−−−→ End(E) \otimes KC
+L2500: ### −−−−→ KC −−−−→ 0,
+L2503: where End0(E) is the sheaf of traceless endomorphisms of E. We then have
+L2506: 0 (C,End0(E) \otimes KC) −→ H 0 (C,End(E) \otimes KC) tr 0 (C, KC) −→ 0.
+L2509: ### 0 −→ H
+L2512: ### −→ H
+L2515: The trace homomorphism is globally surjective because OC is contained in End(E). Hence
+L2518: T ∗ SUC(n, d)/Jn(C) ∼= H0 (C,End0(E) \otimes KC).
+L2521: E
+L2524: \[
+L2526: Since the moment map H_1 of \tag{3.3}
+L2528: \]
+L2531: \[
+L2532: is the trace map, we conclude that the symplectic form \bar{\omega} on the symplectic quotient PHC(n,d) is the canonical cotangent symplectic form on the
+L2537: ### cotangent bundle T ∗ SUC(n, d)/Jn(C)
+L2540: .
+L2543: \[
+L2545: The other reduction of HC(n,d) consisting of the VSL-orbits is the moduli space SHC(n,d) of stable Higgs bundles (E,\varphi) with a fixed determinant det(E) ∼= L and traceless Higgs fields \varphi \in H_0 (C,End0(E) \otimes KC). This moduli space is modeled by the moduli space of stable principal SLn(C)-bundles on C
+L2546: and has dimension_2(n_2 -1)(g -1). The cotangent bundle T^*SUC(n,d) is an open dense subspace of SHC(n,d). Since tr(\varphi) = 0, the Hitchin fibration H of
+L2547: \tag{2.9}
+L2550: \]
+L2553: \[
+L2555: naturally restricts
+L2558: \]
+L2561: ### to
+L2562: (4.11)  HSL : SHC(n, d) −→ V ∗ Mn (C, K\otimes i ).
+L2565: ### H0
+L2568: ### SL = C
+L2571: ### i=2
+L2574: ### The 0-fiber is H −1 ∗
+L2577: \[
+L2579: SL \tag{0}
+L2581: \]
+L2583: \[
+L2585: = SHC(n,d). For a generic s \in V SL such that Cs is non-singular, the fiber H -1 (s) ∼= Jac(Cs) consisting of Higgs bundles (E,\varphi) such
+L2590: ### SL(s) is the subset of H−1
+L2593: that det(E) = L is fixed and det(x − φ) = s. Therefore, H −1
+L2596: SL(s) ∼= Prym(Cs/C).
+L2599: ### By comparing PHC(n, d) and SHC(n, d), we find that
+L2602: \[
+L2604: SHC(n,d) Jn(C) ∼= PHC(n,d), where the Jn(C)-action on SHC(n,d) is defined by E_7\to E \otimes L for L \in Jn(C). Since Jn(C) is a finite group and PHC(n,d) is a
+L2605:  holomorphic symplectic variety, we can define a holomorphic symplectic form \hat{\omega} on SHC(n,d) via the pull-back of the projection
+L2610: SHC(n, d) −→ SHC(n, d) Jn(C).
+L2613: Obviously ˆω agrees with the canonical cotangent symplectic form on T ∗SUC(n, d). Therefore,
+L2616: ### Theorem 4.3 (\[9, 10\]). The fibration
+L2619: ### HSL : SHC(n, d) −→ V ∗ Mn (C, K\otimes i )
+L2622: ### H0
+L2625: ### SL = C
+L2628: ### i=2
+L2631: is a Lagrangian Prym fibration with respect to the canonical holomorphic symplectic form ωˆ on SHC(n, d).
+L2634: ### Hausel and Thaddeus \[7\] shows that
+L2637: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 19
+L2640: ### Theorem 4.4 (\[7\]). The two fibrations
+L2643: ### SHC(n, d) PHC(n, d)
+L2646: JJ
+L2649: ### J HSL HP GL ss
+L2652: JJ sss J JJ ss JJ %
+L2655: ysss
+L2658: ### V ∗
+L2661: ### SL
+L2664: are mirror symmetric in the sense of Strominger-Yau-Zaslow \[25\].
+L2667: The effectiveness of the family of Prym and dual Prym varieties can be established by the same method of Section 3. Let us define partial projective moduli
+L2668: spaces
+L2671: P(PHC(n, d)) def = PHC(n, d) \\ H −1 ∗
+L2674: ### P GL(0)C
+L2677: ### and
+L2680: P(SHC(n, d)) def = SHC(n, d) \\ H −1 ∗
+L2683: #### SL(0)C .
+L2686: ### The induced Hitichin maps are denoted by
+L2689: ### P HP GL : P(PHC(n, d)) −→ Pw(V ∗
+L2692: ### SL)
+L2695: ### (4.13)
+L2697: ### P HSL : P(SHC(n, d)) −→ Pw(V ∗
+L2700: SL).
+L2703: ### We have the following
+L2706: ### Theorem 4.5. The Prym and dual Prym fibrations
+L2709: ### P HSL : P(SHC(n, d)) −→ Pw(V ∗
+L2712: ### SL)
+L2715: ### P HP GL : P(PHC(n, d)) −→ Pw(V ∗
+L2718: ### SL)
+L2721: are generically effective.
+L2724: For the case of Sp2m(C)-Hitchin systems, we consider Lie subalgebras
+L2727: ### mM−1
+L2730: ### H 1 C, K\otimes−2i
+L2733: g =
+L2736: C
+L2739: ### (4.14) i=0
+L2742: ### mM−1
+L2745: ### H 1 C, K\otimes−2i−1
+L2748: ### VSp =
+L2751: ### C ,
+L2754: ### i=0
+L2757: ### and a direct sum decomposition
+L2760: (4.15)  VGL2m = g \oplus VSp.
+L2763: This time the Hamiltonian flows on HC(n, d) generated by elements of g do not form a group action. However, if we restrict our attention to points of Ureg ∩ V ∗
+L2766: ### Sp as in (2.27), then
+L2769: the integral of the Lie algebra action becomes a group action. Recall that the spectral curve
+L2772: ### Cs has an involution induced by ǫ of (2.26). We denote by
+L2775: ### (4.16)  r : Cs → C ′
+L2778: ### s = Cs/hǫi
+L2781: the natural projection. It is ramified at the intersection of Cs with the 0-section of T ∗C,
+L2784: ∗KC on Cs of degree 4m(g − 1). Therefore, we find the genus of C ′
+L2787: ### which is the divisor of π
+L2790: s
+L2793: ### by the Riemann-Hurwitz formula:
+L2796: \[
+L2798: g(C ′) = m(2m - 1)(g - 1) + 1 = dim g.
+L2800: \]
+L2803: s
+L2806: ### Since H0 (C ′ ) has a nowhere vanishing section, we have
+L2809: ### s , r∗OCs
+L2812: ### (4.18)  0 −−−−→ OC′
+L2815: s −−−−→ r∗OCs −−−−→ N −1 −−−−→ 0
+L2818: ### 20  ANDREW HODGE AND MOTOHICO MULASE
+L2821: ### ′
+L2824: ### with a line bundle N on C
+L2827: ### s of degree 2m(g − 1). Note that
+L2830: \[
+L2832: N \otimes 2 = det(r^*OCs) \otimes -2 ∼= Nmr(\pi^*KC), hence N is a square root of the branch divisor Nmr(\pi^*KC) of the covering_r. The exact
+L2834: \]
+L2837: ### sequence (4.18) gives
+L2840: \[
+L2842: H_1 (Cs,OCs) ∼= H_1 (C ′) \oplus H_1 (C ′),
+L2844: \]
+L2847: ### s , OC′ s , N −1
+L2850: s
+L2853: and the projection to the first factor is the differential of the norm map
+L2856: Nmr : Jac(Cs) ∋ L 7−→ det(r∗L) \otimes det(r∗OCs ) −1 ∈ Jac(C ′ ).
+L2859: s
+L2862: The construction of the Sp-Hitchin system of Proposition 2.4 is to reduce the GL-Hitchin system HC(2m, 2m(g − 1)) by finding the right fibration of groups.
+L2863: Along the fixed-pointset of the Serre duality on this Higgs moduli space, the action of VSp generates the Prym
+L2866: \[
+L2868: fibration {Prym(Cs/C′)}s\in V^* ∼= ǫ^*L_0 on Cs is the same as L_0 \in
+L2873: ### ∗ since the condition L
+L2876: ### s 0
+L2879: ### Sp
+L2882: ### Prym(Cs/C′ ). Comparing (4.15) and (4.19), we have
+L2885: s
+L2888: H1 (C ′ ) ∼= g and H1 (C ′ ) ∼= VSp.
+L2891: ### s , OC′ s , N −1
+L2894: s
+L2897: The dual fibration is the result of a kind of symplectic quotient of HC(2m, 2m(g − 1)) by g. In this quotient we restrict the Hitchin fibration to the 0-fiber
+L2898: of
+L2901: ### ∗ = Mm
+L2904: ### g H0 C, K\otimes 2i−1
+L2907: ### C ,
+L2910: ### i=1
+L2913: ### ′ ) of g. The result is the
+L2916: and then take the quotient of each fiber by the Lie group Jac(C
+L2919: s
+L2922: ### dual Prym fibration with a fiber
+L2925: Prym∗ (Cs/C′ ) = Jac(Cs)/Jac(C ′ ) = Prym(Cs/C′ )/J2(C ′ )
+L2928: ### s s s s
+L2931: ∗ ′ ) denotes the group of 2-torsion points of Jac(C ′ ).
+L2934: over each s ∈ V Sp, where J2(C
+L2937: ### s s
+L2940: ### 5. Hitchin’s integrable systems and the KP equations
+L2943: The partial projective Hitchin fibration P H : P(HSL (n, d)) → Pw(V ∗
+L2946: ### C SL) is a generically
+L2949: ### (n, d)) into a quotient of the
+L2952: ### effective Jacobian fibration. In this section we embed P(HSL
+L2955: C
+L2958: Sato Grassmannian. There is also a natural embedding of HC(n, n(g − 1)) into a relative Grassmannian of Quandt \[20\]. We show that the linear Jacobian flows on
+L2959:  the Hitchin integrable system (HC(n, n(g−1)), ω, H) are exactly the KP equations on the Grassmannian via this second embedding.
+L2962: ### Following \[20\], we define
+L2965: Definition 5.1 (Sato Grassmannian). Let n be a positive integer. The Sato Grassmannian Grn is a functor from the category of schemes to the small category of
+L2966: sets. It assigns to every scheme S a set Grn(S) consisting of quasi-coherent OS-submodules W of OS((z))\oplus n such that both the kernel and the cokernel of
+L2967: the natural homomorphism
+L2970: ### (5.1)
+L2972: ### γW −−−−→ OS((z))\oplus n
+L2975: 0 −−−−→ Ker(γW ) −−−−→ W OS[\[z]\]\oplus n −−−−→ Coker(γW ) −−−−→ 0
+L2978: are coherent OS modules. We refer to this condition simply the Fredholm condition.
+L2981: Remark 5.2. The Grassmannian Grn(C) defined over the point scheme Spec(C) has the structure of an infinite-dimensional pro-ind scheme over C. If S is
+L2982: irreducible, then Grn(S)
+L2985: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 21
+L2988: is a disjoint union of an infinite number of components indexed by the Grothendieck group
+L2991: ### K(S):
+L2994: \[
+L2996: def = Ker(\gamma W) - Coker(\gamma W) \in K(S).
+L2998: \]
+L3001: ### (5.2) index : Grn(S) ∋ W 7−→ index(γW )
+L3004: Remark 5.3. The big cell is the open subscheme of the index 0 piece of the Grassmannian Gr0 (S) consisting of W’s such that γW is an isomorphism. This is the
+L3008: n
+L3011: and Zakharov-Shabat formalisms of integrable nonlinear partial differential equations, such as KP, KdV, and many other equations, are interpreted as
+L3012: infinite-dimensional dynamical systems \[21, 22\]. The fundamental result is the identification (6.17) of the big cell with the group of 0-th order monic
+L3013: pseudo-differential operators \[14, 20, 21, 22\].
+L3015: Remark 5.4. The above W is a closed subset of OS((z))\oplus n with respect to the topology
+L3018: ### defined by the filtration
+L3021: ν−1 ν ν+1 · OS[\[z]\]\oplus n ⊂ · · · . · · · ⊂ z · OS[\[z]\]\oplus n ⊂ z · OS[\[z]\]\oplus n ⊂ z
+L3024: ### One of the consequences of the Fredhold condition is that
+L3027: \[
+L3029: W ∩ z \nu · OS[[z]]\oplus n = 0 for \nu >> 0.
+L3031: \]
+L3034: ### Consider the group
+L3037: ###  1  OS\[\[z\]\]
+L3040: ### 1 OS\[\[z\]\]
+L3043: |  |  |  |  |
+L3045: | --- | --- | --- | --- |
+L3047: \[
+L3049: | \times \tag{5.4}
+L3051: \]
+L3053: \[
+L3055: \Gamma n(S) = O | + z · | | |
+L3057: \]
+L3059: | · S  |  |  |  |
+L3062: . . . .
+L3065: ###  .  .
+L3068: ### 1 OS\[\[z\]\]
+L3071: \[
+L3073: consisting of_n\times n invertible diagonal matrices with entries in the ring of formal power series whose constant term is scalar diagonal. It acts on Grn(S) by left-multiplication without fixed points. Indeed, let W \in Grn(S) and c + \gamma \in O\times satisfy that S · In + z · OS[[z]]\oplus n W = (c + \gamma) · W.
+L3074:  This means that \gamma · w \in W for every w \in W since W is an OS-module. Since \gamma \in z·OS[[z]]\oplus n, it then contradicts to \tag{5.3}
+L3076: \]
+L3078: \[
+L3081: unless \gamma = 0. The quotient Grassmannian def = Grn/\Gamma n
+L3083: \]
+L3086: ### (5.5)  Zn
+L3088: 
+L3089: is a smooth infinite-dimensional scheme. We denote by W the point of Zn corresponding to W ∈ Grn. The tangent space TW Grn of the Sato Grassmannian at W is
+L3090: given by the
+L3093: ### space of continuous OS-homomorphisms
+L3096: TW Grn = HomOS W, OS((z))\oplus n /W
+L3099: .
+L3102: ### The tangent space to Zn is then given by
+L3105: \[
+L3107: TW Zn ∼= HomOS W, OS((z))\oplus n (\Gamma n · W)
+L3109: \]
+L3112: .
+L3115: \[
+L3117: This expression does not depend on the choice of the lift W \in Grn of W \in Zn. Every element a \in OS((z))\oplus n defines a homomorphism KP(a)W : W ∋ w_7-\to
+L3118:  a · w \in OS((z))\oplus n (\Gamma n · W)
+L3120: \]
+L3123: through the left multiplication as a diagonal matrix, which in turn determines a global
+L3126: ### vector field
+L3129: \[
+L3131: OS((z))\oplus n ∋ a_7-\to KP(a) \in H_0 (Zn,T Zn).
+L3133: \]
+L3136: | We call KP(a) the n-component KP flow associated with a. As explained in [14, 15, 17, 20], |  |
+L3138: | --- | --- |
+L3140: | the quotient of the index zero Grassmannian Z | 0 is naturally identified with the set of Lax |  |
+L3142: |  | n |  |
+L3144: | operators (6.18), and the action of OS((z))\oplus n on a Lax operator is written as an infinite |  |
+L3147: ### 22  ANDREW HODGE AND MOTOHICO MULASE
+L3150: system of nonlinear partial differential equations called Lax equations. This system for the case of S = Spec(C) is the_n-component Kadomtsev-Petviashvili
+L3151: hierarchy \[14\].
+L3154: ### Associated to the Hitchin fibration H : HC(n, d) → V ∗
+L3157: ### GL we have a family of spectral
+L3160: ### curves:
+L3163: ### (5.7)  CV (n, d) inclusion  / T
+L3166: ### ∗C × V ∗
+L3169: ### ∗ GL
+L3172: ### GL
+L3175: LL LL LL
+L3178: ### F  & LL p2
+L3181: LL
+L3184: xqqqqqqqqqqq
+L3187: ### V ∗
+L3190: ### GL
+L3193: \[
+L3195: Here the fiber F -1 (s) of s \in V^*^*C \times {s}, and p_2 is the
+L3197: \]
+L3200: ### GL is the spectral curve Cs ⊂ T
+L3203: \[
+L3205: projection to the second factor. We note that the ramification points of the covering \pi : Cs \to C are determined by the resultant of the defining equation
+L3206: \tag{5.8}
+L3208: \]
+L3210: \[
+L3212: x_n + s1x_n-1 + · · · + sn = 0
+L3214: \]
+L3217: ### of Cs and its derivative
+L3220: \[
+L3222: nxn-1 + (n - 1)s1x_n-1 + · · · + sn-1 = 0. For every s \in V^*
+L3224: \]
+L3227: GL, we denote by Res(s) this resultant. The Sylvester matrix of these
+L3230: ### polynomials (5.8) and (5.9) show that
+L3233: Res(s) ∈ H0 (C, K\otimes n(n−1) ).
+L3236: C
+L3239: \[
+L3241: Since the linear system\|KC\| is base-point-free, for every choice of p \in C, the subset \tag{5.10}
+L3243: \]
+L3246: \[
+L3247: Up = {s \in V^* GL\| Cs is non-singular and \pi : Cs \to C is unramified at p}
+L3249: \]
+L3252: ### is Zariski open in V ∗
+L3255: GL.
+L3258: ### Theorem 5.5. There is a rational map
+L3261: ### d−n(g−1) (C)
+L3264: µ : P(HSL C (n, d)) −→ Z
+L3267: n
+L3270: of the partial projective moduli space of Higgs bundles into the quotient Grassmannian of index d − n(g − 1). This map is generically injective. At a general
+L3271: point of the image of the embedding the n-component KP flows defined on Zn(C) are tangent to the Hitchin fibration
+L3274: ### P H : P(HSL (n, d)) −→ Pw(V ∗
+L3277: #### C SL).
+L3280: Proof. A point of the partial projective Higgs moduli space represents an isomorphism class
+L3283: 2−n)(g−1).
+L3286: \[
+L3288: of spectral data (\pi : Cs \to C,L), where L is a line bundle on Cs of degree d+ (n Choose a point p \in C,a coordinate z of the formal completion \hat{C}^* p
+L3289: of C at p,and s \in Up∩V SL so that Cs is non-singular and \pi is unramified over p. The formal coordinate z defines an
+L3294: ### identification OCˆp −1 (p), i.e.,
+L3297: = C[\[z]\]. We also choose a local trivialization of L around π
+L3300: ### an isomorphism
+L3303: \[
+L3305: \beta : L\|Cˆ ∼-\to \hat{OC} = C[[z]]\oplus n . s,\pi -1(p) s,\pi -1(p)
+L3307: \]
+L3310: Since the formal completion Cˆ is the disjoint union of n copies of Cˆ
+L3313: ### s,π−1(p) p, the formal
+L3316: coordinate z also defines an identification OCˆ = C[\[z]\]\oplus n
+L3319: .
+L3322: ### s,π−1(p)
+L3325: ### Now define
+L3328: \[
+L3330: W = \beta(H_0 (Cs \\ \pi(p),L)) \subset C((z))\oplus n
+L3332: \]
+L3335: ### −1
+L3338: ,
+L3341: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 23
+L3344: ### −1 (p) and have
+L3347: which is the set of meromorphic sections of L that are holomorphic on Cs \\π finite poles at π −1 (p). Since we have
+L3350: (
+L3353: \[
+L3355: Ker(\gamma W) ∼= H_0 (Cs,L) Coker(\gamma W) ∼= H_1 (Cs,L),
+L3357: \]
+L3360: ### W is a point of the Grassmannian Grd−n(g−1)
+L3362: ### n  of index d − n(g − 1). The different choice of
+L3365: \[
+L3367: the local trivialization \beta ′ in \tag{5.11}
+L3369: \]
+L3371: \[
+L3373: leads to an element \beta ′ ◦ \beta -1 \in \Gamma_n. Therefore, the point
+L3377: ###
+L3380: \[
+L3382: W \in Z n (C) is uniquely determined by (\pi : Cs \to C,p,z,L). Conversely this set of geometric data is uniquely determined by W (see Section_5 of [14]). Thus
+L3383: the rational map \mu is generically one-to-one. Notice that the \Gamma_n action on the Grassmannian is inessential from the geometric point of view because it
+L3384: simply changes the local trivialization of \tag{5.11}
+L3386: \]
+L3388: \[
+L3390: .
+L3394: The tangent space at a general point of P(HSL (n, d)) is H1 (Cs, OCs ) \oplus V ∗
+L3397: ### C SL/C. Since the
+L3400: Kodaira-Spencer map (3.14) is injective, it suffices to show the injectivity of the natural
+L3403: ### map
+L3406: \[
+L3408: d\mu : H_1 (Cs,OCs) \oplus H_1 (Cs,K-1) -\to Hom(W,C((z))\oplus n /W) = TW Grn(C),
+L3410: \]
+L3413: ### Cs
+L3416: which is induced by the local trivializations of OCs and KC coming from the choice of the
+L3419: ### local coordinate z. Using z, we define
+L3422: \[
+L3424: AW = H_0 (Cs \\ \pi(p),OCs) \subset C((z))\oplus n
+L3426: \]
+L3429: ### −1
+L3432: ,
+L3435: ### which is a point of the Grassmannian satisfying
+L3438: (
+L3441: \[
+L3443: Ker(\gamma AW) ∼= H_0 (Cs,OCs) Coker(\gamma AW) ∼= H_1 (Cs,OCs).
+L3445: \]
+L3448: ### We note that AW is a ring and W is an AW -module. Since
+L3451: Coker(γAW ) = C((z))\oplus n
+L3454: ### AW + C\[\[z\]\]\oplus n ,
+L3457: H1 (Cs, OCs ) is injectively mapped to Hom(W, C((z))\oplus n/W).
+L3459: The local coordinate z determines a local trivialization of KC
+L3462: ### KC\|Cˆp ∼−→ OCˆp
+L3465: ### · dz ∼= OCˆp ,
+L3468: ### and hence that of K−1
+L3471: ### Cs
+L3474: \[
+L3476: \oplus n \frac{\partial K}{\partial \partial}-1 ∼-\to OCˆp ∼= C[[z]]\oplus n Cs \hat{C} · \partial z · \partial z .
+L3478: \]
+L3481: ### s,π−1(p)
+L3484: ### This trivialization gives
+L3487: \[
+L3489: C((z))\oplus n · \partial /\partial z H_1 (Cs,K-1) ∼= Cs DW + C[[z]]\oplus n · \partial /\partial z,
+L3491: \]
+L3494: ### where
+L3497: \[
+L3499: DW = H_0 (Cs \\ \pi(p),K-1) \subset C((z))\oplus n
+L3501: \]
+L3504: ### −1
+L3507: \[
+L3509: Cs · \partial /\partial z. Note that s \in V^* (Cs,KCs) because
+L3511: \]
+L3514: ### GL determines an element of H0
+L3517: \[
+L3519: ^* Mn H_0 (C,K\otimes i) ∼= H_0 (C,\pi^*\pi^*K \otimes n) ∼= H_0 (Cs,KCs). s \in V GL =
+L3521: \]
+L3524: ### C C
+L3527: ### i=1
+L3530: This holomorphic 1-form on Cs induces a homomorphism L → L \otimes KCs
+L3533: ### , or equivalently,
+L3536: #### K−1 \otimes L −→ L.
+L3539: ### Cs
+L3542: ### 24  ANDREW HODGE AND MOTOHICO MULASE
+L3545: In terms of the local coordinate z, this homomorphism gives an action of DW on W. Since DW · W ⊂ W, we conclude that H1 (Cs, K−1 ) is injectively mapped to TW
+L3546: Grn(C). In this
+L3549: ### Cs
+L3552: (Cs, OCs ) and H1 (Cs, K−1 ) have no common element in TW Grn(C) except
+L3555: ### construction H1
+L3558: ### Cs
+L3561: for 0. This establishes the injectivity of dµ.
+L3563: In \[14\], it is proved that the orbit of the n-component KP flows starting from W is
+L3566: 2−n)(g−1)(Cs) (Theorem 5.8, \[14\]), which is the fiber of the Hitchin
+L3569: ### isomorphic to Picd+(n
+L3572: map P H. This completes the proof of the theorem.
+L3575: The above theorem does not say anything about the Hitchin integrable system, because
+L3578: the partial projective moduli space is not a symplectic manifold and we do not have any integrable systems on it. To directly compare the Jacobian flows of the
+L3579: Hitchin systems
+L3582: \[
+L3584: and the KP flows, we need the relative Grassmannian of [20] defined on the scheme Up of \tag{5.10}
+L3586: \]
+L3588: \]
+L3590: . So let \pi -1 (p) = {p_1, . . ., pn}, and denote by zi = \pi^* (z) the formal coordinate of
+L3592: \]
+L3595: ### Cˆ ∗
+L3598: s,pi . Choose a linear coordinate system (h1, . . . , hN ) for V GL as in (2.24). Recall that
+L3601: ### ∼= \oplus n−1
+L3604: ### π∗OCs
+L3607: \[
+L3609: i=0 K\otimes -i C, and from \tag{2.21}
+L3611: \]
+L3613: \[
+L3615: we have H_1 (Cs,OCs) ∼= Mn-1 H_1 (C,K\otimes -i) = VGL.
+L3617: \]
+L3620: C
+L3623: ### i=0
+L3626: Using the Cech cohomology computation based on the covering ˇ C = (C \\ {p}) ∪ Cˆ
+L3629: ### p, we
+L3632: ### expand each hk ∈ VGL as
+L3635: ### (5.12)  hk = Xn X
+L3638: ### tijkz −j
+L3641: \[
+L3643: i, tijk \in C. i=1 j\ge 1
+L3645: \]
+L3648: The n-component KP flows on the Grassmannian Grn(Up) is defined by a formal action of
+L3651: ###
+L3654: N
+L3657: ### (5.13) exp Xn X X
+L3660: ### tijkz −j
+L3663:  i  .
+L3666: i=1 j≥1 k=1
+L3669: ### For degree d = n(g − 1), we have the following:
+L3672: \[
+L3674: Theorem_5.6. Let us choose a point p \in C, a formal coordinate z of \hat{C}
+L3676: \]
+L3679: ### p, and a square root
+L3682: ### 1/2
+L3685: ### of the canonical sheaf K
+L3688: ### C . Then the fibration
+L3691: CV (n, n(g − 1)) π / C × V ∗
+L3694: ### ∗ GL
+L3697: ### GL
+L3700: O t OO tt OO t OO tt
+L3703: ### F  O' OO tt p2
+L3706: OO
+L3709: ztt
+L3712: ### V ∗
+L3715: ### GL
+L3718: determines a point W ∈ Gr0 (Up). There is a birational map from HC(n, n(g − 1)) to the
+L3721: n
+L3724: 0 (Up) starting from W.
+L3727: orbit of the n-component KP flows on the quotient Grassmannian Z
+L3730: n
+L3733: The Hitchin integrable system on the Higgs moduli space HC(n, n(g − 1)) is the pull-back of
+L3736: the n-component KP equations via this birational map.
+L3739: ### 1/2
+L3742: Proof. We regard C, p, z, and K being defined over the trivial family C × V ∗
+L3745: ### C GL. There
+L3748: ### 1/2
+L3751: ### is a natural choice of a local trivialization of K on Cˆ
+L3754: C p determined by the coordinate z.
+L3757: ### Note that
+L3760: \[
+L3762: K_1/2 def = \pi^* (K_n/2)
+L3764: \]
+L3767: C
+L3770: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 25
+L3773: is a square root of the relative dualizing sheaf K = π ∗ (Kn ) on CV (n, n(g − 1)). Take an
+L3776: ### C ∗
+L3779: ### GL
+L3782: \[
+L3784: arbitrary point s \in Up. Since p \in C is a point of C at which \pi is unramified, the formal
+L3786: \]
+L3789: −1 (p) ⊂ CV (n, n(g − 1)).
+L3792: coordinate z determines a local trivialization of K1/2 along π ∗
+L3795: ### GL
+L3798: ### Define
+L3801: \[
+L3803: W = H_0 (CV (n,n(g - 1)) \\ \pi(p),K_1/2) \subset OUp ((z))\oplus n
+L3805: \]
+L3808: ### −1
+L3811: ### ∗ ,
+L3814: ### GL
+L3817: ### using this local trivialization. Since
+L3820: (
+L3823: Ker(γWs ) ∼= H0 (Cs, K1/2 )
+L3826: ### Cs
+L3829: Coker(γWs ) ∼= H1 (Cs, K1/2 )
+L3832: ### Cs
+L3835: \[
+L3837: for each s \in Up, we have W \in Gr0 (Up). Let us analyze the action of \tag{5.13}
+L3839: \]
+L3841: \[
+L3843: at W. On each
+L3845: \]
+L3848: n
+L3851: \[
+L3853: Cs, hk = Ptijkz -j defines an element of H_1 (Cs,OCs). The exponential of \tag{5.13}
+L3855: \]
+L3857: \[
+L3859: is the Lie
+L3861: \]
+L3864: i
+L3867: ### integration map
+L3870: \[
+L3872: VGL ∼= H_1 (Cs,OCs) exp_1 (Cs,OCs) H_1 (Cs,Z) = Jac(Cs).
+L3874: \]
+L3877: ### −→ H
+L3880: Therefore, the action of (5.13) at the point W produces simultaneous deformations of the
+L3883: ### line bundle
+L3886: ###
+L3889: N
+L3892: ### (5.17)  K 1/2 Xn X X
+L3895: ### 7−→ K1/2 \otimes exp tijkz −j
+L3898: ###  i
+L3901: i=1 j≥1 k=1
+L3904: (n, n(g − 1)). Consequently, the orbit of the n-component KP flows on Z 0 (Up)
+L3907: ### on CV ∗
+L3910: ### GL n
+L3913: ### 2 (g−1)(Cs) on Up. Since the
+L3916: starting at W is naturally identified with the family of Picn
+L3919: ### 2 (g−1)(Cs) on V
+L3922: ### Hitchin fibration H : HC(n, n(g − 1)) → V ∗ ∗
+L3925: ### GL is also a family of Picn GL, we
+L3928: have a rational map from H : HC(n, n(g−1)) to the n-component KP orbit of W in Z 0 (Up).
+L3931: n
+L3934: Recall that the Hitchin integrable system on H : HC(n, n(g − 1)) is the linear Jacobian flows defined by the coordinate functions (h1, . . . , hN ). We note
+L3935: that this is exactly what (5.17) gives.
+L3938: Remark 5.7. So far we have assumed that Cs is non-singular. Although it will not be
+L3941: an Abelian variety, we can still define the Jacobian Jac(Cs) using (5.16) when the spectral
+L3944: ### −1 (p) avoids the singular locus of
+L3947: \[
+L3949: curve Cs is singular. As long as we choose p \in C so that \pi Cs, the KP flows are well defined. Moreover, the theory of Heisenberg KP flows introduced in [1,
+L3950: 14] allows us to consider the covering \pi : Cs \to C right at a ramification point. It is more desirable to define the Grassmmanian over the whole V^*
+L3952: \]
+L3955: ### GL and to deal with the
+L3958: ### entire family F : CV ∗
+L3961: ∗ GL together with the moduli stack of Higgs bundles instead of
+L3964: ### GL → V
+L3967: the stable moduli we have considered here, since the framework of the Sato Grassmannian
+L3970: allows us to consider all vector bundles on C and degenerated spectral curves.
+L3973: 6. Serre duality and formal adjoint of pseodo-differential operators
+L3976: In this section we analyze the Serre duality of Higgs bundles in terms of the language of the Sato Grassmannian, and identify the involution on the
+L3977: corresponding pseudo-differential
+L3980: operators.
+L3982: \[
+L3984: The Krichever construction ([15,17,22]) assigns a point W of the Sato Grassmannian, \tag{6.1}
+L3986: \]
+L3988: \[
+L3990: Grn(C) ∋ W = \beta(H_0 (C \\ {p},F)) \subset C((z))\oplus n
+L3992: \]
+L3995: ,
+L3998: \[
+L4000: to a set of geometric data (C,p,z,F,\beta), where C is an irreducible algebraic curve, p \in C is
+L4002: \]
+L4005: a non-singular point, z is a formal parameter of the completion Cˆ p, F is a torsion-free sheaf
+L4008: ### 26  ANDREW HODGE AND MOTOHICO MULASE
+L4011: ### of rank n on C, and
+L4014: \[
+L4016: \beta : F\|Cˆp ∼-\to O\oplus n = C[[z]]\oplus n
+L4018: \]
+L4021: ### Cˆp
+L4024: is a local trivialization of F around p. We continue to assume that C is non-singular, hence F is locally-free on C. As noted in Section 5, the choice of a
+L4025: local coordinate z automatically
+L4028: ### determines a local trivialization of KC:
+L4031: \[
+L4033: \alpha : KC\|Cˆp ∼-\to OCˆp
+L4036: \]
+L4038: · dz ∼= OCˆp .
+L4041: \[
+L4043: For every homomorphism \xi : F \to KC, we have an element def = \alpha ◦ \xi ◦ \beta^* \beta^* (\xi) O \oplus n \oplus n -1 \in = O
+L4045: \]
+L4048: ### Cˆp Cˆp
+L4051: ### that is determined by the commutative diagram
+L4054: ### ξ
+L4057: ### F\|Cˆp
+L4060: ### −−−−→ KC\|Cˆp
+L4063: ###
+L4066: ### (6.3) β  ≀ ≀
+L4069: ### y yα
+L4072: β ∗ (ξ)
+L4075: ### O \oplus n
+L4078: −−−−→ OCˆp .
+L4081: ### Cˆp
+L4084: Thus we have the canonical choice of the local trivialization
+L4087: β ∗ ∗ \otimes KC\|Cˆp ∼−→ O\oplus n
+L4090: ### : F
+L4093: Cˆp .
+L4096: Definition_6.1 (Serre Dual). The Serre dual of the geometric date (C, p, z, F, β) is the set
+L4099: ).
+L4102: of data (C, p, z, F∗ \otimes KC, β∗
+L4105: To identify the counterpart of the Serre duality on the Sato Grassmannian, we introduce
+L4108: ### a non-degenerate symetric paring in C((z)) by
+L4111: ### (6.4)  ha(z), b(z)i = −1 in a(z)b(z),
+L4114: ### a(z)b(z)dz = the coefficient of z
+L4117: ### 2πi I
+L4120: ### and define
+L4123: \[
+L4125: hf(z), g(z)in = Xn hfi(z), gi(z)i, f(z), g(z) \in C((z))\oplus n
+L4127: \]
+L4130: .
+L4133: ### i=1
+L4136: \[
+L4138: Lemma_6.2. Let W \in Grn(C) be a point of the Sato Grassmannian of index d. Then W⊥ = {f \in C((z))\oplus n\| hf, win = 0 for all w \in W}
+L4140: \]
+L4143: ### is a point of Grn(C) of index −d. Moreover, we have
+L4146: (
+L4149: \[
+L4151: Ker(\gamma W)^* ∼= Coker(\gamma W⊥)
+L4153: \]
+L4156: ### (6.6)
+L4158: \[
+L4160: Coker(\gamma W)^* ∼= Ker(\gamma W⊥),
+L4162: \]
+L4165: ### where γW is defined by the exact sequence
+L4168: γW −−−−→ C((z))\oplus n/C[\[z]\]\oplus n −−−−→ Coker(γW ) −−−−→ 0.
+L4171: ### 0 −−−−→ Ker(γW ) −−−−→ W
+L4174: Proof. Take an element f ∈ W⊥ ∩ C[\[z]\]\oplus n in = 0. Thus it induces
+L4177: ### . Then hf, W + C\[\[z\]\]\oplus n
+L4180: ### a linear map
+L4183: \[
+L4185: f : C((z)) (W + C[[z]]\oplus n) ∋ g_7-\to hf, gin \in C,
+L4187: \]
+L4190: ### defining a natural inclusion
+L4193: \[
+L4195: Ker(\gamma W⊥) \subset Coker(\gamma W)^*
+L4197: \]
+L4200: .
+L4203: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 27
+L4206: \[
+L4208: Now let h^* \in Coker(\gamma W)^* be an arbitrary element. Choose a sequence {g_i 1, gi_2, gi_3 . . . }i=1,...,n
+L4210: \]
+L4213: ### of elements of C((z))\oplus n such that
+L4216: ### (1) g i i Pn P \ell
+L4219: ### z −j + g\ell jke z −j+k ;
+L4222: \[
+L4224: j = e \ell =1 k\ge 1 \tag{2}
+L4226: \]
+L4228: \[
+L4230: if W has an element whose leading term is e_i for_j > 0, then g_i
+L4232: \]
+L4235: ### z −j
+L4238: \[
+L4240: j \in W. Here e_i = (0,. . .,0,1,0,. . .,0)T is the_i-th standard basis vector for C_n i
+L4242: \]
+L4245: ### . We denote by ¯g j
+L4248: the projection image of g_i in C((z))\oplus n (W + C[\[z]\]\oplus n ). Consider the set of equations
+L4251: j
+L4254: \[
+L4256: hf, gi in = h^* (¯g_i), i = 1, . . ., n; j = 1, 2, 3, . . .
+L4258: \]
+L4261: ### j j
+L4264: \[
+L4266: for f \in C[[z]]\oplus n P_i j
+L4268: \]
+L4271: ### aije z
+L4274: \[
+L4276: . If we write f(z) = Pn_i=1 j\ge 0, then \tag{6.8}
+L4278: \]
+L4281: \[
+L4282: is equivalent to
+L4284: \]
+L4287: ### ∗ (g i )
+L4290: ### ai0 = h 1
+L4293: ### ∗ (g i ) − Xn
+L4296: ### ai1 = h 2 a\ell 0g\ell 21
+L4299: ### \ell=1
+L4302: !
+L4305: ### ∗ (g i ) − Xn
+L4308: ### ai2 = h 3 a\ell 1g\ell 31 + a\ell 0g\ell 32
+L4311: ### \ell=1
+L4314: !
+L4317: ### ∗ (g i ) − Xn
+L4320: ### ai3 = h 4 a\ell 2g\ell 41 + a\ell 1g\ell 42 + a\ell 0g\ell 43
+L4323: ### \ell=1
+L4326: .
+L4328: .
+L4330: .
+L4333: \[
+L4335: It is obvious that \tag{6.8}
+L4337: \]
+L4340: \[
+L4341: has a unique solution. By construction we have hf, Win = 0, hence f \in Ker(\gamma W⊥). Therefore, the inclusion \tag{6.7}
+L4343: \]
+L4346: \[
+L4347: is indeed a surjective map.
+L4349: \]
+L4351: The application of the same argument to W ∩ C\[\[z\]\]\oplus n establishes that
+L4354: \[
+L4356: Ker(\gamma W) ∼= Coker(\gamma W⊥)^*
+L4358: \]
+L4361: .
+L4364: \[
+L4366: Remark_6.3. We note that W⊥⊥ = W. It is obvious that W \subset W⊥⊥. The relation \tag{6.6}
+L4368: \]
+L4371: \[
+L4372: then makes the inclusion relation actually the equality. Theorem_6.4. Let W \in Grn(C) be the point of the Grassmannian corresponding to a set of gemeteric data
+L4373:  (C,p,z,F,\beta). Then the point corresponding to its Serre dual (C,p,z,F^* \otimes KC,\beta^*) is W⊥. Proof. Let W′ be the point of the Grassmannian
+L4374: corresponding to (C,p,z,F^* \otimes KC,\beta^*).
+L4376: \]
+L4379: ### Note that
+L4382: \[
+L4384: index(\gamma W) = dim H_0 (C,F) - dim H_1 (C,F) = -index(\gamma W′). Take an arbitrary f \in H_0 (C \\ {p},F) and g \in H_0 (C \\ {p},F^* \otimes KC). Then (C
+L4385: \\ {p},KC). g · f \in H_0 From \tag{6.3}
+L4387: \]
+L4390: \[
+L4391: we see that \beta^* (g) · \beta(f) = \alpha(g · f). Abel’s theorem tells us that the sum of the residues of the meromorphic_1-form g · f on C is_0. Since g · f
+L4392: is holomorphic everywhere
+L4395: \]
+L4397: ### on C except for p, we have
+L4400: \[
+L4402: 0 = resp(g · f) = h\beta^* (g), \beta(f)in. Therefore, W′ \subset W⊥. Since \gamma W′ and \gamma W⊥ have the isomorphic kernels and cokernels, we conclude that
+L4403: W′ = W⊥.
+L4405: \]
+L4408: ### 28  ANDREW HODGE AND MOTOHICO MULASE
+L4411: ### The ring of ordinary differential operators is defined as
+L4414: d
+L4417: \[
+L4419: D = C[[x]]
+L4421: \]
+L4424: dx .
+L4427: Extending the powers of the differentiation to negative integers, we define the ring of pseudodifferential operators by
+L4430: "" ## .
+L4433: d
+L4436: \[
+L4438: E = D + C[[x]]
+L4440: \]
+L4443: ### dx −1
+L4446: Let Ex be the left maximal ideal of E generated by x. Then E/Ex is a left E-module. Let
+L4449: \[
+L4451: us denote \partial = d/dx. As a C-vector space we identify \tag{6.11}
+L4453: \]
+L4456: \[
+L4457: E/Ex = C((\partial -1)).
+L4459: \]
+L4462: Two useful formulas for calculating pseudo-differential operators are
+L4465: ### n (i)
+L4468: \[
+L4470: \partial n (x)\partial n-i · a(x) = X a
+L4472: \]
+L4475: ### i ,
+L4478: ### i≥0
+L4481: ### (i) (x) is the i-th derivative of a(x), and
+L4484: ### where a
+L4487: ### X n (i)
+L4490: \[
+L4492: a(x) · \partial n = (-1)i \partial n-i (x).
+L4494: \]
+L4497: ### · a
+L4500: i
+L4503: ### i≥0
+L4506: ### A pseudo-differential operator has thus two expressions
+L4509: ### X X X n (i) X m + i (i)
+L4512: \[
+L4514: P = n = (-1)i \partial n-i (x) = X (-1)i \partial m · a (x).
+L4516: \]
+L4519: ### an(x)∂ · a
+L4522: ### i n i m+i
+L4525: \[
+L4527: n\in Z_n\in Z_i\ge 0 m\in Z_i\ge 0
+L4529: \]
+L4532: ### The natural projection E → E/Ex is given by
+L4535: ### X X m + i (i)
+L4538: \[
+L4540: \rho : E ∋ P = n (-1)i \tag{0}
+L4542: \]
+L4545: \[
+L4546: \partial m \in C((\partial -1)). an(x)\partial 7-\to X a
+L4548: \]
+L4551: ### i m+i
+L4554: \[
+L4556: n_m i\ge 0
+L4558: \]
+L4561: The relation to the Grassmannian comes from the identification
+L4564: \[
+L4566: C((z)) ∋ f(z) 7-\to f(\partial -1) · \partial -1 \in C((\partial -1)). Then C((z)) becomes an E-module. The action of P \in E on f(z) \in C((z)) is given by the
+L4568: \]
+L4571: ### formula
+L4574: \[
+L4576: P · f(z) = \rho(P · f(\partial -1)\partial -1) \in C((z)). Definition_6.5 (Adoint). The adjoint of P = P \ell is defined by
+L4578: \]
+L4581: ### a\ell(x)∂
+L4584: ### \ell
+L4587: P ∗ = X ∂ \ell
+L4590: · a\ell(−x).
+L4593: ### \ell
+L4596: Remark 6.6. Our adjoint is slightly different from the formal adjoint of \[11, 26\], which is
+L4599: defined to be P (−∂) \ell
+L4602: \ell · a\ell(x). This is due to the fact that we are considering the action of
+L4605: pseudo-differential operators on the function space C((z)) through Fourier transform. Thus
+L4608: ### ∂ acts as the multiplication of z −1
+L4611: , and x acts as the differentiation.
+L4614: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 29
+L4617: ### Let us compute the (m, n)-matrix entry of P. We find
+L4620: ### \* !+
+L4623: \[
+L4625: hz_m, P · z_n i = m, \rho X \ell -n-1
+L4627: \]
+L4630: ### z a\ell(x)∂
+L4633: ### \ell
+L4636: ### \* !+
+L4639: ### \ell − n − 1
+L4642: ### X X \ell−n−1−i (i)
+L4645: \[
+L4647: m, \rho(-1)i \partial (x) = z · a
+L4649: \]
+L4652: ### i \ell
+L4655: ### \ell i
+L4658: ### \* +
+L4661: ### \ell − n − 1
+L4664: ### X X (i)
+L4667: ### m, (−1)i (0) · z −\ell+n+i
+L4670: = z a
+L4673: ### i \ell
+L4676: ### \ell i
+L4679: ### X m + i (i)
+L4682: ### (−1)i
+L4685: ### = a
+L4688: i m+n+i+1(0).
+L4691: i
+L4694: ### Similarly, we find
+L4697: ### \* !+
+L4700: \[
+L4702: hz_n mi = n X \frac{\partial z}{\partial \ell} a\ell (-x) · \partial -m-1, P^* · z, \rho
+L4704: \]
+L4707: ### \ell
+L4710: ### \* !+
+L4713: ### X X −m − 1 \ell−m−1−i (i)
+L4716: \[
+L4718: n (-1)i (-1)i \partial (-x) = z · a, \rho_i \ell
+L4720: \]
+L4723: ### \ell i
+L4726: ### \* +
+L4729: ### X X −m − 1 (i)
+L4732: ### n (0) · z −\ell+m+i
+L4735: = z a
+L4738: ### , i \ell
+L4741: ### \ell i
+L4744: ### X −m − 1 (i)
+L4747: ### = a
+L4750: i m+n+i+1(0).
+L4753: i
+L4756: Following \[14\], we introduce the ring of differential and pseudo-differential operators
+L4758: 
+L4759: with matrix coefficients by gln(D) and gln(E). The adjoint of a matrix pseudo-differential
+L4762: ### operator is defined in an obvious way:
+L4765: \[
+L4767: P = [Pij]i,j=1,...,n =\Rightarrow P^* def = [P^*
+L4769: \]
+L4772: ji\]i,j=1,...,n.
+L4775: \[
+L4777: Proposition_6.7. For arbitrary f(z), g(z) \in C((z))\oplus n and P \in gln(E) we have the adjoint
+L4782: ### formula
+L4785: ### hf(z), P · g(z)in = hP ∗
+L4788: · f(z), g(z)in.
+L4791: Proof. The statement follows from the above computations, noting the identity
+L4794: ### m + i −m − 1
+L4797: ### (−1)i
+L4800: ### = ,
+L4803: ### i i
+L4806: and the usual matrix transposition.
+L4809: A more direct relation between pseudo-differential operators and the Sato Grassmannian is that the identification of the big cell of Grn(C) with the group
+L4812: \[
+L4814: G = In + gln(C[[x]])[[\partial -1]] · \partial -1
+L4816: \]
+L4819: of monic pseudo-differential operators of order 0 (\[14\], Theorem 6.5).
+L4822: \[
+L4824: Theorem_6.8. Let W \in Grn(C) be in the big cell, and correspond to a pseudo-differential
+L4828: \]
+L4829: ∗ ) −1 ∈ G.
+L4832: operator S ∈ G. Then W⊥ corresponds to (S
+L4835: ### 30  ANDREW HODGE AND MOTOHICO MULASE
+L4838: Proof. The correspondence of S ∈ G and W in the big cell is the equation W = S \] \oplus n
+L4841: ### −1 −1 −1
+L4844: · C\[z · z .
+L4847: ### For f(z), g(z) ∈ C\[z \] \oplus n
+L4850: ### −1 · z −1
+L4853: ### , we have
+L4856: ### hS ∗
+L4859: · f(z), S−1 · g(z)in = hf(z), SS−1 · g(z)in = 0.
+L4862: ### The Lax operator is defined by
+L4865: \[
+L4867: L = S · In · \partial · S -1
+L4869: \]
+L4872: .
+L4875: Lax operators bijectively correspond to points of the big cell of the quotient Grassmannian
+L4878: ### ⊥
+L4881: ### Zn(C). If W corresponds to L, then W corresponds to L ∗
+L4884: ### . Therefore, the Serre duality
+L4887: indeed corresponds to these adjoint action of the pseudo-differential operators.
+L4890: ### 7. The Hitchin integrable system for Sp2m
+L4893: In this section we identify the KP-type equations that are equivalent to the Hitchin integrable system for Sp2m. Since the moduli space of the Sp2m-Higgs
+L4894: bundles is identified
+L4897: as the fixed-point-set of the Serre duality involution on HC(2m, 2m(g −1)) (Proposition 2.4), we will see that the evolution equations are the KP equations
+L4898: restricted to a certain type of self-adjoint Lax operators.
+L4900: Let (E, φ) = (E∗ \otimes KC, −φ ∗ ) be a fixed point of the Serre duality operation on the Higgs moduli space HC(2m, 2m(g −1)), and (LE, Cs) the corresponding
+L4901: spectral data. We choose a point p ∈ C and a local coordinate z as in Section_5. We assume that the spectral cover π : Cs → C is unramified at p. This time we
+L4902: choose a local trivialization β : LE\|Cˆ ∼−→ OCˆ ∼= C[\[z]\]\oplus 2m. s,π−1(p) s,π−1(p) Then the Serre dual of the data (πs : Cs → C, p, z,LE, φ, β) is (πs (L
+L4903: ∗ ), −φ ∗ ∗ ). ∗ : Cs ∗ → C, p, z, ǫ∗ E \otimes KCs , ǫ∗β
+L4906: ### In general the dual trivialization is defined by
+L4909: ### ξ
+L4912: ### LE\|Cˆ \|Cˆ
+L4915: ### −−−−→ KCs
+L4918: ### −1 −1
+L4921: s,π s (p) s,π s (p)
+L4924: ###
+L4927: ### β  ≀ ≀
+L4930: ### y yα
+L4933: β ∗(ξ)
+L4936: ### OCˆ
+L4939: ### −−−−→ OCˆ
+L4942: ### −1 −1
+L4945: s,π s (p) s,π s (p)
+L4948: ###
+L4951: ### ǫ  ≀ ≀
+L4954: ### y yǫ
+L4957: ∗β ∗ (ξ)
+L4960: ### ǫ
+L4963: ### OCˆ
+L4966: −−−−→ OCˆ .
+L4969: ### −1 (p) −1 (p)
+L4972: s∗,π s∗,π
+L4975: ### s∗ s∗
+L4978: \[
+L4980: Note that in the current case we have s = s^* and ǫ : Cs \to Cs is a non-trivial involution. Since ǫ commutes with \pi, it induces an involution of the set \pi
+L4981: -1 (p) = {p_1, . . ., p2m}. Let
+L4983: \]
+L4986: ### us number the 2m distinct points so that
+L4989: ǫ(p1, . . . , p2m) = (p1, . . . , p2m) · A,
+L4992: ### where
+L4995: ### 0 Im
+L4998: ### (7.1)  A =
+L5001: Im  0 .
+L5004: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 31
+L5007: ### By the same argument we used in Theorem 6.4, if we define
+L5010: \[
+L5012: W = \beta(H_0 (Cs \\ \pi -1 (p),LE)) \subset C((z))\oplus 2m,
+L5014: \]
+L5017: ### then we have
+L5020: \[
+L5022: AW⊥ = ǫ^*\beta^* (H_0 (Cs (p),ǫ^* (L^*))) \subset C((z))\oplus 2m.
+L5024: \]
+L5027: ### −1
+L5030: \[
+L5032: ^* \\ \pi E \otimes KCs Let us assume that E is not on the theta divisor of [3] so that H_0 (C,E) = H_1 (C,E) = 0.Then W \in Gr2m(C) is on the big cell, and
+L5033: hence corresponds to a monic_0-th order pseudodifferential operator S \in G. Since W = AW⊥, we have \tag{7.3}
+L5035: \]
+L5038: \[
+L5039: S = A · (S^*) -1
+L5041: \]
+L5044: · A.
+L5047: ### The Lax operator
+L5050: ### L1 L2
+L5053: L = S · I2m · ∂ · S −1 =
+L5056: ### L3 L4
+L5059: ### then satisfies that
+L5062: \[
+L5064: L^* = A · L · A,
+L5066: \]
+L5069: ### or equivalently
+L5072: ### L ∗ ∗ ∗
+L5075: \[
+L5077: 1 = L_4, L_2 = L_2, L_3 = L_3. The time evolution of S and the Lax operator L is given by the formula established in Section_6 of [14]. Let S(t) be the solution
+L5078:  of the_n-component KP equations with the initial data S \tag{0}
+L5080: \]
+L5082: \[
+L5084: = S. Then S(t) is given by the generalized Birkhoff decomposition of [14, 16]
+L5086: \]
+L5089: · S(0)−1 = S(t)
+L5092: ### (7.5) exp  D1 −1
+L5095: ### D2 · Y (t),
+L5098: ### where D1 and D2 are diagonal matrices of the shape
+L5101: ###  P j
+L5104: ### tij1∂
+L5107: ### j≥1
+L5110: ### Di =
+L5113: ###  . . P
+L5116: j
+L5119: ### tijm∂
+L5122: ### j≥1
+L5125: \[
+L5127: corresponding to \tag{5.13}
+L5129: \]
+L5132: \[
+L5133: , and Y (t) is an invertible infinite order differential operator introduced in [16]. We impose that the time evolution S(t) satisfies the same twisted
+L5134: self-adjoint
+L5136: \]
+L5139: condition (7.3). Applying the adjoint-inverse operation and conjugation by A of (7.1) to
+L5142: ### (7.5), we obtain
+L5145: ### A −D1 A ∗ )
+L5148: exp −1 −1A).
+L5151: \[
+L5153: · S \tag{0}
+L5155: \]
+L5158: \[
+L5159: -1 = S(t) · (A(Y (t)
+L5161: \]
+L5164: ### −D2
+L5167: \[
+L5169: Therefore, the time evolution \tag{7.5}
+L5171: \]
+L5174: \[
+L5175: with the condition D_2 = -D_1 preserves the twisted
+L5177: \]
+L5180: ### self-adjointness (7.3). We have thus established
+L5183: Theorem 7.1. The KP-type equations that generate the Hitchin integrable systems on the moduli spaces of Sp2m-Higgs bundles are the reduction of the 2m-component
+L5184:  KP equations that preserve the twisted self-adjointness (7.3) for the operator S, or (7.4) for the Lax operator L. The time evolution S 7−→ S(t) preserving the
+L5185:  condition is given by the generalized
+L5188: ### Birkhoff decomposition
+L5191: · S(0)−1 = S(t)
+L5194: ### (7.6) exp  D −1
+L5197: ### · Y (t),
+L5200: ### −D
+L5203: ### 32  ANDREW HODGE AND MOTOHICO MULASE
+L5206: # where
+L5209: P tj1∂ j
+L5212: ### j≥1
+L5215: # D =
+L5218: #  . . P
+L5221: .
+L5224: ### tjm∂ j
+L5227: ### j≥1
+L5230: # Remark 7.2. Since the time evolution of (7.6) is given by a traceless matrix diag(D, −D),
+L5233: # every finite-dimsntional orbit of this system is a Prym variety by the general theory of \[14\],
+L5236: # which is expected from the Sp Hitchin fibrartion.
+L5239: # References
+L5242: \[1\] Malcolm R. Adams and Maarten J. Bergvelt, The Krichever map, vector bundles over algebraic curves, and Heisenberg algebras, Commun. Math. Phys. 154
+L5243: (1993), 265–305.\[2\] A. Alvarez V´azquez, J. M. Mu˜noz Porras, and F. J. Plaza Mart´ı ´ n, The algebraic formalism of soliton equations over arbitrary base
+L5244: elds, in “Workshop on Abelian Varieties and Theta Functions,” Aportaciones Mat. Investig. 13 (1998), 3–40.\[3\] Arnaud Beauville, M. S. Narasimhan, and S.
+L5245: Ramanan, Spectral curves and the generalized theta divisor, J. reine angew. Math. 398 (1989), 169–179.\[4\] Ron Donagi and Tony Pantev, Langlands duality for
+L5246: Hitchin systems, arXiv:math/0604617v2 (2006).
+L5248: \[5\] Edward Frenkel, Lectures on the Langlands program and conformal field theory, arXiv:hep-th/0512172 (2005).
+L5250: \[6\] Robin Hartshorne, Algebraic geometry, Graduate Texts in Mathematics 52, Springer-Verlag, 1977.\[7\] Tam´as Hausel and Michael Thaddeus, Mirror symmetry,
+L5255: Langlands duality, and the Hitchin system, Inventiones Math. 153 (2003), 197–229.\[8\] Nigel J. Hitchin, The self-duality equations on a Riemann surface, Proc.
+L5256: London Math. Soc. (Ser. 3) 55 (1987), 59–126.\[9\] Nigel J. Hitchin, Stable bundles and integrable systems, Duke Math. J. 54 (1987), 91–114.\[10\] Nigel J.
+L5257: Hitchin, Langlands duality and G2 spectral curves, arXiv:math.AG/0611524 (2006).
+L5260: \[13\] Yingchen Li and Motohico Mulase, Hitchin systems and KP equations, Intern. J. Math. 7 \tag{1996}
+L5262: \]
+L5265: \]
+L5266: , 277-244.\[14\] Yingchen Li and Motohico Mulase, Prym varieties and integrable systems, Commun. Analysis and Geom. 5 (1997), 279-332.\[15\] Motohico Mulase,
+L5267: Cohomological structure in soliton equations and Jacobian varieties, J. Diff. Geom. 19 (1984), 403-430.\[16\] Motohico Mulase, Solvability of the super KP
+L5268: equation and a generalization of the Birkhoff decomposition,
+L5273: ### Inventiones Math. 92 (1988), 1–46
+L5276: \[17\] Motohico Mulase, Category of vector bundles on algebraic curves and infinite dimensional Grassmannians, Intern. J. Math. 1 (1990), 293–342.\[18\]
+L5277: Motohico Mulase, Geometry of character varieties of surface groups, to appear in RIMS Kˆokyˆuroku, RIMS, Kyoto University, 2008.\[19\] David Mumford, John
+L5278: Fogarty, and Frances Kirwan, Geometric invariant theory, Third Edition, Springer-Verlag, 1994.\[20\] Ines Quandt, On a relative version of the Krichever
+L5279: correspondence, Bayreuther Mathematische Schriften 52 (1997), 1–74.\[21\] Mikio Sato and Yasuko Sato, Soliton equations as dynamical systems on
+L5280: infinite-dimensional Grassmann manifold, in “Nonlinear partial differential equations in applied science,” North-Holland Math. Stud. 81 (1983), 259–271.\[22\]
+L5281: Graeme Segal and George Wilson, Loop groups and equations of KdV type, Inst. Hautes Etudes Sci. Publ. Math. ´ 61 (1985), 5–65.\[23\] Takahiro Shiota,
+L5282: Characterization of Jacobian varieties in terms of soliton equations, Inventiones Math. 83 (1986), 333–382.\[24\] Takahiro Shiota, Prym varieties and soliton
+L5283: equations, in “Infinite-dimensional Lie algebras and groups,” Adv.
+L5285: Ser. Math. Phys. 7 (1989), 407–448.\[25\] Andrew Strominger, Shing-Tung Yau, and Eric Zaslow, Mirror symmetry is T-duality, Nuclear Phys. B 479 (1996),
+L5286: 243–259.\[26\] Kanehisa Takasahi, The world of integrable systems–the fellowship of the Toda lattice (in Japanese), Kyoritsu Shuppan Publ. Co., 2001.
+L5289: ### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 33
+L5292: | \[27\] Takayuki Tsuchida, New reductions of integrable matrix PDEs–Sp(2m)-invariant systems, arXiv:0712.4373 |  |
+L5294: | --- | --- |
+L5296: |  | [nlin.SI] (2008). |  |
+L5298: |  | 1638, Springer-Verlag, 1996. |  |
+L5300: |  | Department of Mathematics, University of California, Davis, CA 95616–8633 |  |
+L5302: |  | E-mail address: hodge@math.ucdavis.edu |  |
+L5303: |  | Department of Mathematics, University of California, Davis, CA 95616–8633 |  |
+L5306: |  | E-mail address: mulase@math.ucdavis.edu |  |
+L5308: 

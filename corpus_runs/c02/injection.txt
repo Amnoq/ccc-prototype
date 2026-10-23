@@ -1,0 +1,60 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Figueiredo's four-step geometric recipe
+18: Δ_x sieve incidence complex
+19: link({p}) equals Δ_{⌊x/p⌋} minus p recursion
+20: ψ(x) as signed face-sum over Δ_x
+21: Möbius inversion Λ(n) identity
+22: Euler-characteristic face-dimension signs
+23: Lehmer φ(x,a) recursion as link recursion
+24: cone bijection S ↦ S ∪ {p_a}
+25: binary sieve rule 1_prime + 1_shared = 1
+26: F(n) zero locus: composites vanish, primes live
+27: empty face anchoring the alternating sum
+28: canonical face-weights w(S) = (−1)^{|S|+1} log(∏S)/∏S
+29: total face weight 1 equals PNT ψ(x) ~ x
+30: bare limit Δ_∞ contractible infinite simplex
+31: zeta zeros regulate face-sum error rate
+32: Dirichlet generating function −ζ'(s)/ζ(s)²
+33: missing positive region and canonical form
+34: positive parametrization with territory-incidence boundary strata
+35: territory removal as exact soft-limit split
+36: never put the answer in by hand
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 20 23 25 26 31 35
+S18:18 19 22 24 27 28
+S29:21 28 29 30 31 32
+S0:33 34 36
+E19:1 23
+E20:1 29,6 18,10 17
+E21:1 20
+E22:1 20
+E23:10 17
+E24:1 23
+E26:11 25
+E27:1 20
+E28:1 29
+E30:1 28,1 33
+E31:10 17,11 29
+E32:1 31
+E35:10 17,11 23
+E36:1 35
+A:17 13,18 13,19 14,20 14,21 14,22 13,23 14,24 14,25 13,26 14,27 13,28 13,29 14,30 14,31 13,32 14,33 16,34 16,35 13,36 13
+L:33 34

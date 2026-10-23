@@ -1,0 +1,7 @@
+K9-1: earnings-window elevation (23 verified earnings dates, 3 names)
+  AAPL: n_earn_days=16 mean|r| 0.0168 vs 0.0119 (x1.41); volume x1.66
+  MSFT: n_earn_days=16 mean|r| 0.0372 vs 0.0112 (x3.34); volume x2.04
+  NVDA: n_earn_days=16 mean|r| 0.0270 vs 0.0200 (x1.35); volume x1.51
+  ALL: n=48 mean|r| 0.0270 vs 0.0143 (x1.88)
+  top-decile share on earnings windows: 0.27 (baseline 0.10)
+VERDICT: VERIFIED

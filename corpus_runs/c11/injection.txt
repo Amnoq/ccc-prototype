@@ -1,0 +1,56 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: k-tuple deformation predictive sweep at x=10^6
+18: exact survivor-set match on all 9 admissible tuples
+19: finite-z densities and renormalized weights match references
+20: non-admissible {0,2,4} dies: single survivor n=3
+21: deformation is a general generative machine, not twin fluke
+22: D6 sweep confirmatory and retrodictive, produced no new mathematics
+23: prior-art literature search (2026-09-30)
+24: simplicial-sieve Δ_z framing appears new; Iosif unrelated
+25: PNT-as-total-weight-1 statement appears new
+26: generative R_p deformation move appears new
+27: independent fermionic Fock-space prior art exists
+28: 14a exact obstruction: no ordinary positive geometry carries w(S)
+29: 14b derivative identity: face-weight sum via d/du product
+30: 14c deformed geometric home with differentiated residues
+31: Node 14 CLOSED; D4 fully closed
+32: independent Python/mpmath reimplementation of D_log matrix
+33: first zeta zero recovered from prime Euler products alone
+34: controls and failure modes: mechanism needs exact prime arithmetic
+35: exact theorem Λ = μ∗log under Dirichlet convolution
+36: Node 11 operator hunt stays open; 11f is live candidate
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21 22
+S23:23 24 25 26 27
+S31:28 29 30 31
+S32:32 33 34 35 36
+E18:1 21
+E19:1 21
+E20:1 21
+E22:3 21
+E28:1 31
+E29:1 30
+E30:1 21,1 31
+E33:1 36
+E34:3 33
+E35:1 36
+A:18 14,19 14,20 14,21 13,22 13,23 13,24 13,25 13,26 13,27 14,28 14,29 14,30 14,31 13,33 14,34 14,35 14,36 16
+L:36

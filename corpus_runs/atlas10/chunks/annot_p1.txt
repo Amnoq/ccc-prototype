@@ -1,0 +1,1158 @@
+[Event "Blindfold Exhibition"]
+[Site "Paris, FRA"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Morphy"]
+[Black "Boucher"]
+[Result "1-0"]
+[ECO "C62"]
+[Annotator "The Blue Book of Chess, Game I., p. 57."]
+[PlyCount "53"]
+
+1. {Mr. Morphy plays without seeing the Chess board or men, against M.
+Boucher, at Paris.} e4 e5 2. Nf3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Bb5 Bd7 6.
+Bxc6 Bxc6 7. Bg5 f6 8. Bh4 Nh6 9. Nc3 Be7 10. O-O O-O 11. Qc4+ Kh8 12.
+Nd4 Qd7 13. Rad1 Rf7 14. f4 a5 15. f5 Rff8 16. Ne6 Rg8 17. a4 Ng4 18.
+Qe2 Ne5 19. Bg3 Qc8 {To enable him to capture the Bishop, which is about
+to take the Kt., with the Q's Pawn.} 20. Bxe5 dxe5 21. Rf3 {The attack
+looks already irresistible, but the actual finish is charmingly
+accomplished.} Bd7 {By this move Black may be said to lose a Piece. His
+best course--but that a bad one--was possibly to retreat his Bishop to
+K's square.} 22. Rh3 {Threatening mate in two moves.} h6 23. Qd2 Kh7 {To
+avert the promised mate, by Rxh6+, etc.} 24. Qxd7 Bd6 25. Rxh6+ {The
+termination is very pretty--quite an elegant little problem.} Kxh6 26.
+Rd3 {And Black has no possible means of escape; for, if he play Qe8,
+White simply captures the Queen for nothing; if Bc5+, then follows Kf1,
+etc.} Kh5 27. Qf7+ {And wins; the battle having lasted about seven
+hours.} 1-0
+
+
+
+
+                                {PGN 02}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Morphy"]
+[Black "Harrwitz"]
+[Result "0-1"]
+[ECO "C62"]
+[Annotator "The Blue Book of Chess, Game II., p. 58."]
+[PlyCount "69"]
+
+1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Bb5 Bd7 6. Bxc6 Bxc6 7. Bg5
+f6 8. Bh4 Nh6 9. Nc3 Be7 10. O-O Qd7 11. Rad1 O-O 12. Qc4+ Rf7 13. Nd4
+Ng4 14. h3 Ne5 15. Qe2 g5 {Very imprudent in such a position and against
+such an opponent. It must be admitted, however, that Black has no good
+move at this crisis.} 16. Bg3 Rg7 17. Nf5 Rg6 18. f4 gxf4 19. Rxf4 Kh8
+20. Rh4 Bf8 21. Bxe5 fxe5 22. Rf1 Qe6 23. Nb5 Qg8 24. Rf2 a6 25. Nxc7
+{Perfectly sound, as the sequel shows.} Rc8 26. Nd5 Bxd5 27. exd5 Rc7
+({Taking the Pawn would have been injudicious; for example,} 27... Qxd5
+28. Rxh7+ Kxh7 {best} 29. Qh5+ Bh6 30. Nxh6 Rxh6 31. Qf5+ Kg7
+{Anything.} 32. Qxc8) 28. c4 Be7 29. Rh5 Qe8 30. c5 {The first step in a
+combination of admirable daring and ingenuity.} Rxc5 31. Rxh7+ Kxh7 32.
+Qh5+ Kg8 33. Nxe7+ Kg7 {Had he taken the Knight it would have cost him
+his Queen.} 34. Nf5+ Kg8 35. Nxd6 {And Black cannot possibly save the
+game.} 0-1
+
+
+
+
+                                {PGN 03}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Morphy"]
+[Black "Harrwitz"]
+[Result "0-1"]
+[ECO "C62"]
+[Annotator "The Blue Book of Chess, Game III., p. 59."]
+[PlyCount "80"]
+
+1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Bb5 Bd7 6. Bxc6 Bxc6 7. Bg5
+Nf6 8. Nc3 Be7 9. O-O-O O-O 10. Rhe1 h6 11. Bh4 Ne8 12. Bxe7 Qxe7 13. e5
+Bxf3 14. gxf3 Qg5+ 15. Kb1 dxe5 16. Rxe5 Qg2 17. Nd5 Qxh2 18. Ree1 Qd6
+19. Rg1 Kh7 20. Qe3 f5 21. Nf4 Qb6 22. Qe2 Rf7 23. Qc4 Qf6 24. Nh5 {This
+looks promising, but does not turn out well. He had better, perhaps,
+have played Rg6.} Qe7 25. Rde1 Qd7 26. a3 Nd6 27. Qd4 Rg8 28. Rg2 b6 29.
+Reg1 Ne8 30. Qc3 f4 {Well played. White must now beware, for his Kt. is
+in sore peril.} 31. Rh1 {This will not save the Kt. The best move was
+Rg4.} g6 32. Rhg1 Qd5 33. Qe1 gxh5 34. Rg5 {Merely desperate.} Qxf3 35.
+Qe5 Rf6 36. Qe7+ Rg7 37. Qxe8 hxg5 38. Qe1 Qc6 39. f3 Re6 40. Qf2 Rge7
+0-1
+
+
+
+
+                                {PGN 04}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Bird"]
+[Black "Morphy"]
+[Result "0-1"]
+[ECO "C41"]
+[Annotator "The Blue Book of Chess, Game IV., p. 60."]
+[PlyCount "58"]
+
+1. e4 e5 2. Nf3 d6 3. d4 f5 4. Nc3 fxe4 5. Nxe4 d5 6. Ng3 e4 7. Ne5 Nf6
+8. Bg5 Bd6 9. Nh5 O-O 10. Qd2 Qe8 11. g4 Nxg4 12. Nxg4 Qxh5 13. Ne5 Nc6
+14. Be2 Qh3 15. Nxc6 bxc6 16. Be3 Rb8 17. O-O-O Rxf2 18. Bxf2 Qa3 19. c3
+Qxa2 20. b4 Qa1+ 21. Kc2 Qa4+ 22. Kb2 Bxb4 23. cxb4 Rxb4+ 24. Qxb4 Qxb4+
+25. Kc2 e3 26. Bxe3 Bf5+ 27. Rd3 Qc4+ 28. Kd2 Qa2+ 29. Kd1 Qb1+ 0-1
+
+
+
+
+                                {PGN 05}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "0-1"]
+[ECO "C41"]
+[Annotator "The Blue Book of Chess, Game V., p. 60."]
+[PlyCount "56"]
+
+1. e4 e5 2. Nf3 d6 3. d4 f5 4. dxe5 fxe4 5. Ng5 d5 6. f4 {This is not
+the proper move; he should play e6.} Bc5 7. c4 c6 8. Nc3 Ne7 9. h4 h6
+10. Nh3 O-O 11. Na4 Bb4+ 12. Bd2 Bxd2+ 13. Qxd2 d4 14. c5 b5 15. cxb6
+axb6 16. b3 Be6 17. Be2 Nf5 18. Ng1 Ng3 19. Rh2 e3 20. Qb2 d3 21. Bf3
+Rxf4 22. O-O-O Rfxa4 23. bxa4 Rxa4 24. a3 Rc4+ 25. Kb1 Rc2 26. Qb4 Na6
+27. Qf4 Nc5 28. Qxg3 {And Black mates in two moves.} -- 0-1
+
+
+
+
+                                {PGN 06}
+
+[Event "Blindfold Exhibition"]
+[Site "Paris, FRA"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Morphy"]
+[Black "Potier"]
+[Result "1-0"]
+[ECO "C42"]
+[Annotator "The Blue Book of Chess, Game I., p. 65."]
+[PlyCount "49"]
+
+1. {Mr. Morphy plays without seeing the Chess-board or men, against M.
+Potier, at Paris.} e4 e5 2. Nf3 Nf6 3. Bc4 Nxe4 4. Nc3 Nf6 {It is to be
+regretted that Mr. Potier did not take the Kt. rather than retreat, as
+many amateurs would have been pleased to see Mr. Morphy carrying out the
+attack of this interesting and comparatively novel debut.} 5. Nxe5 d5 6.
+Bb3 Be7 7. d4 c6 8. O-O Nbd7 9. f4 Nb6 10. Qf3 h5 11. f5 Qc7 12. Bf4 Bd6
+13. Rae1 Kf8 14. Qg3 h4 15. Ng6+ {Finely played.} Kg8 16. Bxd6 hxg3 17.
+Bxc7 fxg6 18. fxg6 gxh2+ 19. Kh1 Bg4 20. Re7 Nbd7 21. Be5 Kf8 22. Rf7+
+{The termination of this partie is remarkably elegant and finished.} Kg8
+23. Nxd5 cxd5 24. Bxd5 Nb6 25. Bb3 1-0
+
+
+
+
+                                {PGN 07}
+
+[Event "?"]
+[Site "?"]
+[Date "1837.??.??"]
+[Round "?"]
+[White "Petroff"]
+[Black "3 Russian Amateurs"]
+[Result "0-1"]
+[ECO "C43"]
+[Annotator "The Blue Book of Chess, Game II., p. 66."]
+[PlyCount "53"]
+
+1. e4 e5 2. Nf3 Nf6 3. d4 Nxe4 4. Bd3 d5 5. Nxe5 Bd6 6. O-O O-O 7. c4 f5
+8. f4 c6 9. Be3 Be6 10. cxd5 cxd5 11. Nc3 Nc6 12. Rc1 Rf6 {This
+unfortunate counter attack is admirably taken advantage of by M.
+Petroff.} 13. Bxe4 fxe4 14. Nb5 Ne7 15. Nxd6 Qxd6 16. g4 g6 {They do
+not appear to have had a better move.} 17. f5 {Well played.} gxf5 18.
+Bg5 Rff8 19. Bh6 Rfc8 {It would have been better to leave the Rook en
+prise, and advance f4.} 20. Qd2 Qd8 21. Rxc8 Rxc8 22. gxf5 Nxf5 23. Qg2+
+Kh8 24. Rxf5 Qg8 25. Rf6 Bh3 26. Qg3 Qxg3+ 27. hxg3 0-1
+
+
+
+
+                                {PGN 08}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Tchigorin"]
+[Black "Pillsbury, H. N."]
+[Result "0-1"]
+[ECO "C49"]
+[Annotator "The Blue Book of Chess, Game III., p. 67."]
+[PlyCount "52"]
+
+1. {Notes by Jas. Mason.} e4 e5 2. Nf3 Nf6 3. Nc3 Nc6 4. Bb5 Bb4 5. O-O
+O-O 6. d3 d6 7. Bg5 {In this familiar 'double Lopez' predicament, Bxc6
+is highly recommended, if a dull but durable kind of game is desired.}
+Bxc3 8. bxc3 Ne7 {... Something like a leap in the dark. If the doubled
+Pawn can be 'dissolved' betimes, or the open file well used in attack, a
+safe landing may be confidently expected.} 9. Bxf6 gxf6 10. Qd2 Ng6 11.
+Kh1 {More or less necessary, sooner or later. Black does not attempt to
+dissolve, just here; for then Qh6, threatening Ng5, might be
+uncomfortable.} Kh8 12. d4 Rg8 13. Bd3 Qe7 14. Rab1 {Routine--indirectly
+including the questionable 16. d5?. At once Ng1, to be speedily
+followed by g3 and f4, would have given the matter another and
+perhaps very different complexion.} b6 15. Ng1 Be6 $1 16. d5 $2
+Bd7 17. g3 Rg7 18. Rbe1 Rag8 {... The difference is in favor of
+the young American representative, who presses it fully.} 19. f3
+{Manifestly weakening. The Russian champion feels himself on the
+defensive, and at a loss how to continue. Thus the text move may
+be as good as any other.} h5 $1 20. Re2 Nf8 21. f4 exf4 22. Qxf4
+Nh7 23. Nf3 Bg4 24. Nd4 {Nh4 would be much stronger, the
+importance of halting the advancing Rook Pawn duly considered.
+Going from bad to worse, the downright blunder two moves later
+caps the climax--and more need not be said.} h4 $1 25. Re3 Qe5
+26. gxh4 $2 Bf3+ 0-1
+
+
+
+
+                                {PGN 09}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Cochrane"]
+[Black "Staunton"]
+[Result "1-0"]
+[ECO "C40"]
+[Annotator "The Blue Book of Chess, Game I., p. 72."]
+[PlyCount "39"]
+
+1. e4 e5 2. Nf3 d5 3. Nxe5 Qe7 4. d4 f6 5. Nc3 fxe5 6. Nxd5 Qf7 7. Bc4
+Be6 8. O-O c6 9. f4 cxd5 10. fxe5 Qd7 11. exd5 Bxd5 12. e6 Qc6 13. Qh5+
+g6 14. Qxd5 Ne7 15. Qe5 Qxc4 16. Qxh8 Nf5 17. Bh6 Qb4 18. Qxf8+ Qxf8 19.
+Bxf8 Kxf8 20. g4 1-0
+
+
+
+
+                                {PGN 10}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Jaenisch"]
+[Black "Petroff"]
+[Result "1-0"]
+[ECO "C40"]
+[Annotator "The Blue Book of Chess, Game II., p. 73."]
+[PlyCount "73"]
+
+1. e4 e5 2. Nf3 d5 3. Nxe5 Qe7 4. d4 f6 5. Nf3 dxe4 6. Nfd2 f5 7. Be2
+Nc6 8. Nb3 Nf6 9. O-O Qf7 10. c4 Bd7 11. Bf4 O-O-O 12. Nc3 h6 13. a3 g5
+14. Bd2 f4 15. d5 Ne5 16. Nd4 Bc5 17. Be1 Rhg8 18. b4 Be7 19. f3 e3 20.
+Qb3 g4 21. c5 gxf3 22. Nxf3 Nxf3+ 23. Bxf3 Ng4 24. Qc4 Kb8 25. Qe4 Rde8
+26. d6 Bc6 27. Qd4 Bxf3 28. Rxf3 Bg5 29. Nb5 c6 30. d7 Re6 31. Bg3 cxb5
+{If Black had taken fxg3 at this point, the following moves show that he
+would have equally lost:--} (31... fxg3 32. Qxg4 gxh2+ 33. Kh1 Qxd7 34.
+Qg3+ {and wins.}) 32. Bxf4+ Ne5 33. Bxe5+ Rxe5 34. Qxe5+ Ka8 35. Rxf7 e2
+36. Qe8+ Rxe8 37. dxe8=Q+ {and wins.} 1-0
+
+
+
+
+                                {PGN 11}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Capdebo"]
+[Black "Harrwitz, D."]
+[Result "0-1"]
+[ECO "C54"]
+[Annotator "The Blue Book of Chess, Game I., p. 79."]
+[PlyCount "42"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Bd2
+Bxd2+ 8. Nbxd2 d5 9. exd5 Nxd5 10. Qe2+ Be6 11. Bb5 O-O 12. Bxc6 bxc6
+13. O-O Rb8 14. b3 Nf4 15. Qa6 Re8 16. Rfe1 Qd7 17. Ne5 Qxd4 18. Ndf3
+Qb6 19. Qxb6 Rxb6 20. Rac1 f6 21. Nc4 Ra6 {And Black ultimately won.}
+0-1
+
+
+
+
+                                {PGN 12}
+
+[Event "?"]
+[Site "Philadelphia Athenaeum, PA, USA"]
+[Date "????.??.??"]
+[Round "?"]
+[White "McCabe"]
+[Black "Montgomery, H. P."]
+[Result "0-1"]
+[ECO "C53"]
+[Annotator "The Blue Book of Chess, Game II. p. 80"]
+[PlyCount "46"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 f5 5. d3 Nf6 6. exf5 d5 7. Bb5 Qd6
+8. O-O O-O 9. b4 Bb6 10. h3 Bxf5 11. Bxc6 bxc6 12. d4 e4 13. Ne5 a5 14.
+Ba3 axb4 15. Bxb4 c5 16. dxc5 Bxc5 17. Bxc5 Qxc5 18. Qd4 Qd6 19. Ng4
+Bxg4 20. hxg4 Nxg4 21. g3 Qh6 22. Rd1 Qh2+ 23. Kf1 Rxf2+ {and wins.} 0-1
+
+
+
+
+                                {PGN 13}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Staunton, Howard"]
+[Black "Horwitz"]
+[Result "1-0"]
+[ECO "C53"]
+[Annotator "The Blue Book of Chess, Game III., p. 80"]
+[PlyCount "143"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 d6 5. d4 exd4 6. cxd4 Bb6 7. Nc3
+Bg4 8. Be3 Nf6 9. a3 O-O 10. Be2 Re8 11. d5 Ne5 12. Nxe5 Bxe2 13. Qxe2
+Rxe5 14. Bxb6 axb6 15. O-O Nxe4 16. Nxe4 f5 17. f3 fxe4 18. fxe4 Qe7 19.
+Rae1 Re8 20. Rf4 h6 {Black would have gained no advantage by Rxd5 at
+this juncture, or by advancing g5 to attack the Rook. The move in the
+text was not made without due deliberation, and we believe it the best
+on the board.} 21. Qf3 {White designedly gives up the Queen's Pawn, to
+get a counter attack with his combined forces.} Rxd5 22. Rf1 {Qb3 would
+have been worse than useless.} Re5 23. Rf7 Qe6 ({Had he gone Qd8, to
+protect his threatened Pawn, White would have won the g7 Pawn. e.g.}
+23... Qd8 24. Rxg7+ Kxg7 25. Qf7+ Kh8 26. Rf6 Rh5 27. Qxh5 Qxf6 28.
+Qxe8+) 24. Rxc7 Rxe4 25. Rxb7 d5 26. h3 {A most important move. Black
+dare not now advance d4 on account of Qf7+, which would enable White to
+double his Rooks on the adversary's g7, and thus win easily.} Re1 27.
+Rxe1 Qxe1+ 28. Qf1 (28. Kh2 {would have been very bad play, because}
+Qe5+ 29. Qg3 Qxg3+ 30. Kxg3 Re3+ 31. Kh2 Rb3) 28... Qe3+ 29. Qf2 Qc1+
+30. Kh2 Rf8 31. Qd4 Rf6 {He could not save all the Pawns attacked.} 32.
+Qxd5+ Kh7 33. Qe5 Rg6 {Threatening Rxg2, and then Qc6+.} 34. Re7 Qd2
+35. Qe4 Qd6+ 36. Re5 Kg8 37. Qd5+ Qxd5 38. Rxd5 Kf7 39. Rb5 Ke7 40. g4
+Kd7 41. Kg3 Kc6 42. Re5 Rd6 43. Re3 Kc5 44. h4 g6 45. Kf4 Kd4 46. Re4+
+Kd5 47. Re8 Rf6+ 48. Ke3 Kc4 49. Re4+ Kd5 50. Rf4 Rc6 51. Rb4 Re6+ 52.
+Kd3 Rf6 53. Rb5+ {Ke3 would have been better.} Kc6 54. Re5 Kd6 55. Rb5
+Kc6 56. Rb4 Rf3+ 57. Ke2 Rh3 58. Rf4 Rxh4 59. Rf6+ Kb5 60. Rxg6 Rh2+ 61.
+Kf3 Rxb2 62. Rxh6 Rb3+ 63. Kf4 Rxa3 64. g5 Ra1 65. Rh4 Kc5 66. g6 Ra7
+67. Kf5 b5 68. Rg4 b4 {This was ill-judged. He should have played Rg7,
+or Ra8.} 69. g7 Rxg7 70. Rxg7 b3 71. Ke4 Kb4 72. Kd3 1-0
+
+
+
+
+                                {PGN 14}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Horwitz"]
+[Black "Staunton, Howard"]
+[Result "0-1"]
+[ECO "C54"]
+[Annotator "The Blue Book of Chess, Game IV., p. 83."]
+[PlyCount "64"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3 d6 6. Ng5 O-O 7. f4 d5 8.
+exd5 Nxd5 9. Bxd5 Qxd5 10. Qf3 Rd8 {From this point we look upon the
+game as virtually lost for White.} 11. Qxd5 Rxd5 12. Ke2 ({Probably his
+best move. Had he played} 12. b4 Nxb4 13. cxb4 Bd4 {winning the
+exchange.}) 12... Bg4+ 13. Nf3 Rad8 14. d4 {As good a move, perhaps, as
+he had on the board. By playing Rd1, he would evidently have lost a
+Piece.} exd4 15. c4 Re8+ 16. Kf2 {Well conceived. Tempting Black to open
+the discovered check, which would cost him 'the exchange.'} Rd7 17. Nbd2
+d3+ 18. Kg3 Bxf3 19. Nxf3 Re2 20. Bd2 Rd6 21. Rad1 Rg6+ 22. Kh3
+{Interposing Ng5, and then pushing f5 on the Rook afterwards, would have
+been unwise, on account of Bd6+, etc.} Rh6+ 23. Nh4 Be7 24. g3 Nd4 25.
+Bc3 Ne6 {Threatening, if White took at d3, to win a Piece.} 26. Kg4
+Bxh4 27. gxh4 Re4 28. Rhf1 Rg6+ 29. Kf5 Re3 30. h5 Rg2 31. h4 Nc5 32.
+Rfe1 g6+ {And then Black mates in two moves.} 0-1
+
+
+
+
+                                {PGN 15}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Staunton, Howard"]
+[Black "St. Amant"]
+[Result "1-0"]
+[ECO "C53"]
+[Annotator "The Blue Book of Chess, Game V. p. 84."]
+[PlyCount "59"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Qe7 5. d4 exd4 {The proper move is
+Bb6. Taking the Pawn gives an immediate advantage to White.} 6. O-O Ne5
+7. Nxe5 Qxe5 8. f4 dxc3+ 9. Kh1 Qd4 10. Qb3 Nh6 11. Nxc3 O-O 12. h3 {If
+White play f5 at this point, his opponent may move Ng4, threatening to
+play afterwards Qg1+, and then mate with Nf2+.} c6 13. f5 Qf6 14. e5
+{From this move the attack is very lively and interesting.} Qh4 15. Bxh6
+Qxh6 16. Ne4 Bd4 17. Nd6 Qh5 18. Bxf7+ Rxf7 19. g4 Bxe5 {There appears
+to be nothing better, bad as this is.} 20. Rae1 Qxh3+ 21. Qxh3 Bxd6 22.
+Re8+ Bf8 23. Rfe1 d5 24. Rd8 Rd7 25. Ree8 Rxd8 26. Rxd8 b6 27. Qe3 Bb7
+28. Rxa8 Bxa8 29. Qe6+ Kh8 30. Qf7 1-0
+
+
+
+
+                                {PGN 16}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "2 Amateurs of Utica, NY"]
+[Black "Cheney, of Syracuse, NY"]
+[Result "0-1"]
+[ECO "C54"]
+[Annotator "The Blue Book of Chess, Game VI., p. 85."]
+[Mode "PM"]
+[PlyCount "58"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. e5 d5 7. Bb5 Ne4
+8. Bxc6+ bxc6 9. cxd4 Bb6 10. O-O Bg4 11. Be3 O-O 12. h3 Bh5 13. g4 Bg6
+14. Nh2 f5 15. f3 Ng3 16. Re1 f4 17. Bf2 Qe7 18. Nc3 h5 19. Qa4 Be8 20.
+b4 Qe6 21. Qb3 Bd7 22. Ne2 h4 23. Nf1 a5 24. Nfxg3 hxg3 25. Bxg3 fxg3
+26. a3 Qh6 27. Kg2 Bxg4 28. fxg4 Bxd4 29. Rad1 -- {Black announced mate
+in four moves.} 0-1
+
+
+
+
+                                {PGN 17}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Popert"]
+[Black "A Fine Player of London"]
+[Result "1-0"]
+[ECO "C54"]
+[Annotator "The Blue Book of Chess, Game VII., p. 85"]
+[PlyCount "57"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. O-O {O-O before c3, and
+before the adverse Nf6, appears safer play} Nxe4 6. d4 d5 7. Bb5 exd4 8.
+cxd4 Bd6 9. Ne5 Bxe5 10. dxe5 O-O 11. f4 f5 12. Nc3 Be6 13. Be3 a6 14.
+Bxc6 bxc6 15. Rc1 {Threatening Nxe4, and then Rxc6.} Qe8 16. Qc2
+{Intending again Nxe4, and thus win a Pawn.} Rb8 17. Nxe4 fxe4 18. Qxc6
+Rxb2 19. Qxe8 Rxe8 20. f5 {Well played, the advance of this Pawn
+secures to him an irresistible attack.} Bc8 21. Rxc7 Re2 22. Bd4 Rd2
+{Note: This move was given as the impossible 'Rd3'.} 23. Bc3 Rd1 24. f6
+gxf6 25. exf6 Be6 26. Rg7+ Kh8 27. Be5 Bg8 28. Re7 Bf7 29. -- {White
+now checkmates in two more moves.} 1-0
+
+
+
+
+                                {PGN 18}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Buckle"]
+[Black "Harrwitz"]
+[Result "1-0"]
+[ECO "C50"]
+[Annotator "The Blue Book of Chess, Game VIII., p. 86."]
+[PlyCount "95"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O Nf6 5. Nc3 d6 6. h3 O-O 7. d3 Be6
+8. Bb3 Ne7 9. Ne2 Ng6 10. Ng3 c6 11. c3 d5 12. d4 dxe4 13. dxc5 exf3 14.
+Qxf3 Bxb3 15. axb3 Nd5 16. Nf5 {This is a very attacking position for
+the Kt., and generally occasions great embarrassment to an adversary.}
+b6 17. cxb6 Qxb6 18. c4 Ndf4 19. Bxf4 Nxf4 20. Rfd1 {Prudently taking
+possession of an 'open file.'} Qc7 21. Qxc6 Rfc8 22. Qxc7 Rxc7 23. Nd6
+Ne2+ 24. Kf1 Nd4 25. b4 f5 26. c5 Rb8 27. Ra4 g6 28. Rda1 Nc2 29. Rxa7
+Rxa7 30. Rxa7 Nxb4 31. Rb7 {White plays with remarkable care and
+judgment here.} Rxb7 32. Nxb7 Kf7 33. Ke2 Ke7 34. Kd2 Kd7 35. Na5 Na6
+36. Nb3 Kc6 37. Kc3 Nxc5 38. Nxc5 Kxc5 39. h4 h6 40. f3 g5 41. h5 e4 42.
+fxe4 fxe4 43. g4 Kd5 44. b4 Ke5 45. b5 Kf4 46. b6 e3 47. b7 Kf3 48. b8=Q
+{And wins. The termination of this game is an improving lesson in Pawn
+play.} 1-0
+
+
+
+
+                                {PGN 19}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Morphy"]
+[Black "Anderssen"]
+[Result "0-1"]
+[ECO "C52"]
+[Annotator "The Blue Book of Chess, Game  I., p. 91."]
+[PlyCount "144"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O
+Nf6 8. e5 d5 9. Bb5 Ne4 10. cxd4 O-O 11. Bxc6 bxc6 12. Qa4 Bb6 13. Qxc6
+Bg4 14. Bb2 Bxf3 15. gxf3 Ng5 16. Nd2 Re8 17. Kh1 Nh3 18. f4 Qh4 19.
+Qxd5 Nxf2+ 20. Kg1 Nd3 21. Bc3 Nxf4 22. Qf3 Nh3+ 23. Kh1 Ng5 24. Qg2
+Rad8 25. Rg1 h6 26. Raf1 Qh3 27. Qc6 Qd7 28. Qg2 Bxd4 29. Bxd4 Qxd4 30.
+Nf3 Qd5 31. h4 Ne6 32. Qg4 Qc6 33. Rg2 Rd3 34. Qf5 Red8 35. Qf6 Qd5 36.
+Qf5 Rd1 37. Rxd1 Qxd1+ 38. Kh2 Rd3 39. Rf2 Re3 40. Nd2 Re2 41. Qxf7+ Kh8
+42. Ne4 Rxf2+ 43. Nxf2 Qd5 44. Ng4 Qxa2+ 45. Kg3 Qb3+ 46. Kh2 Qc2+ 47.
+Kg3 Qc3+ 48. Kh2 Qc6 49. h5 a5 50. Nf6 gxf6 51. Qxf6+ Kg8 52. Qg6+ Kf8
+53. Qxh6+ Ke8 54. Qg6+ Kd7 55. h6 Qd5 56. h7 Qxe5+ 57. Kg1 Ng5 58. h8=Q
+Qxh8 59. Qxg5 Qd4+ 60. Kf1 a4 61. Qf5+ Kc6 62. Qc8 Kb5 63. Ke1 c5 64.
+Qb7+ Kc4 65. Qf7+ Kc3 66. Qf3+ Qd3 67. Qf6+ Kb3 68. Qb6+ Kc2 69. Qa7
+Qc3+ 70. Ke2 a3 71. Qa4+ Kb2 72. Qb5+ Qb3 0-1
+
+
+
+
+                                {PGN 20}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "Mead of NY, USA"]
+[Result "0-1"]
+[ECO "C52"]
+[Annotator "The Blue Book of Chess, Game  II., p. 92."]
+[PlyCount "74"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. O-O Nge7 7. d4
+exd4 8. Ng5 Ne5 9. Bb3 d5 10. exd5 h6 11. f4 Bg4 12. Qe1 hxg5 13. fxe5
+Nxd5 14. Qg3 Be2 15. Ba4+ c6 16. Bxg5 Qb6 17. c4 d3+ 18. Rf2 Qb2 19.
+cxd5 Qxa1 20. a3 Bb6 21. dxc6 Bxf2+ 22. Kxf2 Qd4+ 23. Be3 Qxa4 24. cxb7
+Rb8 25. Qxg7 Qh4+ 26. Kg1 Rxb7 27. Nd2 Qh7 28. Qf6 O-O 29. Qc6 Re7 30.
+Ne4 Qg6 31. Nf6+ Kh8 32. Qd6 Rg8 33. Nxg8 Qxd6 34. exd6 Rxe3 35. d7 d2
+36. d8=Q d1=Q+ 37. Qxd1 Bxd1 0-1
+
+
+
+
+                                {PGN 21}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Anderssen"]
+[Black "Hillel"]
+[Result "1-0"]
+[ECO "C51"]
+[Annotator "The Blue Book of Chess, Game  III., p. 93."]
+[PlyCount "73"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O
+Bb6 8. cxd4 d6 9. h3 Qf6 10. Bb2 Nh6 11. Nbd2 O-O 12. e5 dxe5 13. dxe5
+Qe7 14. Ne4 Be6 15. Bd3 Bf5 16. Nf6+ gxf6 17. exf6 Qe8 18. Qd2 Be3 19.
+fxe3 Bxd3 20. Qxd3 Rd8 21. Qa3 Nf5 22. Rae1 Qe4 23. Ng5 Qh4 24. e4 Nfd4
+25. Nf3 Nxf3+ 26. Qxf3 Rd2 27. Bc3 Rxa2 28. e5 Nd4 29. Bxd4 Qxd4+ 30.
+Kh1 Kh8 31. Re4 Qb2 32. Rh4 Qxe5 33. Qd3 h5 34. Qf5 Qxf5 35. Rxf5 Kh7
+36. Rg5 Kh6 37. Rhxh5# 1-0
+
+
+
+
+                                {PGN 22}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Marache"]
+[Black "Morphy"]
+[Result "0-1"]
+[ECO "C52"]
+[Annotator "The Blue Book of Chess, Game  IV., p. 94."]
+[PlyCount "40"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. e5 d5
+8. exd6 Qxd6 9. O-O Nge7 10. Ng5 O-O 11. Bd3 Bf5 12. Bxf5 Nxf5 13. Ba3
+Qg6 14. Bxf8 Qxg5 15. Ba3 dxc3 16. Bc1 Qg6 17. Bf4 Rd8 18. Qc2 Ncd4 19.
+Qe4 Ng3 20. Qxg6 Nde2# 0-1
+
+
+
+
+                                {PGN 23}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "der Laza, Von H."]
+[Black "M"]
+[Result "1-0"]
+[ECO "C57"]
+[Annotator "The Blue Book of Chess, Game  I., p. 96."]
+[PlyCount "47"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nxd5 6. Nxf7 Kxf7 7.
+Qf3+ Ke6 8. Nc3 Nce7 9. d4 b5 10. Nxb5 c6 11. Nc3 Qb6 12. dxe5 Bb7 13.
+Ne4 Qb4+ 14. Bd2 Qxc4 15. Qg4+ Kxe5 16. f4+ Kd4 17. c3+ Nxc3 18. Bxc3+
+Kxe4 19. f5+ Kd5 20. O-O-O+ Kc5 21. b4+ Kb5 22. a4+ Kxa4 23. Qxc4 Nd5
+24. Kb2 1-0
+
+
+
+
+                                {PGN 24}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "M, Berlin Chess Club"]
+[Black "H, Berlin Chess Club"]
+[Result "1-0"]
+[ECO "C57"]
+[Annotator "The Blue Book of Chess, Game  II., p. 96."]
+[PlyCount "49"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 Nxd5 6. Nxf7 Kxf7 7.
+Qf3+ Ke6 8. Nc3 Nce7 9. d4 c6 10. dxe5 Ng6 11. O-O Bb4 12. Nxd5 cxd5 13.
+Rd1 Ne7 {Better dxc4, and give up the Queen.} 14. Bg5 Rf8 15. Bxe7 Kxe7
+16. Qg3 Bc5 17. Rxd5 Bxf2+ 18. Kh1 Qb6 19. Qa3+ Ke8 20. Qa4+ Ke7 21.
+Rad1 Rf5 22. Rd7+ Kf8 23. Rd8+ Ke7 24. R1d7+ {He might have mated the
+King on the move Qe8#.} Bxd7 25. Qxd7# 1-0
+
+
+
+
+                                {PGN 25}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Anderssen"]
+[Black "Morphy"]
+[Result "1/2-1/2"]
+[ECO "C77"]
+[Annotator "The Blue Book of Chess, Game  I., p. 98."]
+[PlyCount "88"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 Bc5 6. c3 b5 7. Bc2 d5 8.
+exd5 Nxd5 9. h3 O-O 10. O-O h6 11. d4 exd4 12. cxd4 Bb6 13. Nc3 Ndb4 14.
+Bb1 Be6 15. a3 Nd5 16. Ne2 Nf6 17. Be3 Re8 18. Ng3 Bc4 19. Nf5 Bxf1 20.
+Qxf1 Ne7 21. N3h4 Nxf5 22. Nxf5 Qd7 23. Bxh6 gxh6 24. Qc1 Bxd4 25. Qxh6
+Re1+ 26. Kh2 Ne4 27. Bxe4 Rxe4 28. Qg5+ Kf8 29. Qh6+ Ke8 30. Nxd4 Qd6+
+31. Qxd6 cxd6 32. Rd1 Kf8 33. Rd2 Rae8 34. g4 R8e5 35. f3 Re1 36. h4 Rd5
+37. Kg3 a5 38. h5 Kg8 39. Kf2 Re8 40. Kg3 Kh7 41. Kf4 Re7 42. Kg3 f6 43.
+Kf4 Re8 44. Kg3 Re7 1/2-1/2
+
+
+
+
+                                {PGN 26}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Lasker, E."]
+[Black "Steinitz, Wm."]
+[Result "1-0"]
+[ECO "C62"]
+[Annotator "The Blue Book of Chess, Game  II., p. 99."]
+[PlyCount "91"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 d6 4. d4 Bd7 5. Nc3 Nge7 6. Be3 {White in
+this instance had probably made up his mind to adopt the plan frequently
+employed by Gunsberg in the Giuoco Piano, namely, playing Qd2 and O-O-O
+rapidly. --Gunsberg.} Ng6 {Black's difficulty is how to dispose of the
+Kt. Now g6 in this instance, although perhaps preferable, is not a good
+place either, subject as it must be to an early attack from the h
+pawn--Hoffer.} 7. Qd2 Be7 8. O-O-O a6 9. Be2 exd4 10. Nxd4 Nxd4 11. Qxd4
+{If Bxd4, Nf4; and the Kt. cannot be captured on account of Bg5 winning
+the Queen.--Leeds Mercury.} Bf6 12. Qd2 Bc6 {There seems little use in
+this move. Either he can O-O now; if not, then it is proof positive that
+his defence is bad.--Gunsberg.} 13. Nd5 O-O 14. g4 {This premature
+advance is admirably taken advantage of by Steinitz. --Leeds Mercury.}
+Re8 {Although this looks like a defensive move, to make room for the
+Kt., it is a subtle design which was entirely overlooked by Lasker.
+--Hoffer.} 15. g5 $2 Bxd5 16. Qxd5 {But here is a great mistake, which
+ought to lose the game. exd5 would have averted the loss of a Pawn, but
+at the expense of position and attack; he was outplayed by Steinitz up
+to this point.} Re5 $1 17. Qd2 Bxg5 18. f4 Rxe4 19. fxg5 Qe7 20. Rdf1
+{From this move to the end Lasker exhibits most marvellous power of
+resource. With Rdf1 he commenced one of the most ingenious attacks.}
+Rxe3 21. Bc4 Nh8 22. h4 c6 23. g6 $1 {One of the moves which will make
+this game memorable. The object is, if hxg6 to open up the Rook's file
+by h5. Allowance must of course be made for the fact that, being two
+Pawns behind, White has nothing to lose and everything to gain by
+desperate tactics.--Gunsberg.} d5 24. gxh7+ Kxh7 25. Bd3+ Kg8 26. h5 Re8
+27. h6 g6 28. h7+ Kg7 29. Kb1 Qe5 30. a3 {Exhibiting consummate
+coolness in a 'do or die' predicament.--Pollock.} c5 31. Qf2 c4 $1 32.
+Qh4 f6 33. Bf5 $1 {Bf5 is evidence with what perfect lucidity Lasker
+detects the weak spots, and how immediately he takes advantage of his
+opponent's slightest omission or commission.--Hoffer.} Kf7 34. Rhg1 gxf5
+35. Qh5+ Ke7 36. Rg8 Kd6 $2 37. Rxf5 Qe6 38. Rxe8 Qxe8 39. Rxf6+ Kc5
+{Imprudent. The King should make for safety in the corner, via
+c7.--Mason.} 40. Qh6 {Threatening Rf8.--Gunsberg.} Re7 41. Qh2 $1 Qd7
+{Qd7 is a final blunder. Rd7 should have been played, or Re6. The game
+is now over. It will be readily admitted that it is a well-earned
+victory which none will grudge the plucky young player.--Hoffer We
+really cannot see a satisfactory move, for if Re6, then follows Qf2+,
+and Rf8. Or if Qd8 then likewise Qf2+ should gain some advantage, as, on
+Kb5, White could continue with a4+ and Qc5, etc.--Gunsberg.} 42. Qg1+ d4
+43. Qg5+ Qd5 44. Rf5 Qxf5 45. Qxf5+ Kd6 46. Qf6+ 1-0
+
+
+
+
+                                {PGN 27}
+
+[Event "?"]
+[Site "?"]
+[Date "1858.??.??"]
+[Round "?"]
+[White "Philadelphia"]
+[Black "New York"]
+[Result "1-0"]
+[ECO "C54"]
+[Annotator "The Blue Book of Chess, Game I., p. 108."]
+[Mode "TC"]
+[PlyCount "77"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Bc5 5. c3 Nf6 {The best move.} 6.
+e5 d5 7. Bb5 Ne4 8. cxd4 Bb6 9. Nbd2 {Preparatory to the move of Qc2.}
+O-O 10. Bxc6 bxc6 11. Qc2 {Threatening to win pawn at c6 or Nxe4,
+winning the d5 pawn.} Nxd2 12. Bxd2 Bg4 {If Black had played Ba6, to
+prevent White O-O, White would have won a piece by a4.} 13. Ng5 {A
+premature move.} g6 14. Qc3 f6 {The best move.} 15. h3 Bf5 {Better than
+fxg5, as White would then have opened the Rook's file.} 16. Nf3 Be4
+{Better than fxe5.} 17. Bf4 {The best move.} fxe5 18. Bxe5 Qe7
+{Intending to advance c6 Pawn. A strong move.} 19. O-O-O {An impudent
+move, in the face of such an attack.} c5 20. Rhe1 {A strong move.} cxd4
+{c4 perhaps stronger.} 21. Bxd4 c5 22. Be5 Rae8 {Weak. We cannot see
+its object. Why not Rad8?} 23. Bg3 Qb7 {The best move.} 24. Ne5
+{Preparatory to Ng4, and then Be5.} d4 25. Qc4+ Bd5 26. Qa4 {Preventing
+Black's contemplated move with the Q.} Re6 {With a view of withdrawing
+the B. and playing the Ra6.} 27. Ng4 h5 28. Rxe6 Bxe6 29. Qc2 Kh7 30.
+Re1 {The first move of a combination, which gave the victory to
+Philadelphia.} Bf5 {Insures the winning of the Kt.} 31. Qd2 {A powerful
+move, as it compels Black to take the Kt., and thereby opens White's R's
+file.} hxg4 32. hxg4 Qd5 {If Bxg4, White would have played Qg5,
+threatening to check K. and Q. with R., or win the R.} 33. Rh1+ ({An all
+important check before gxf5, as it prevented} 33. gxf5 Rxf5 34. Rh1+
+Rh5) 33... Kg8 34. gxf5 Qxf5 35. Qh6 g5 36. Bd6 {A very attacking move.
+Much better than Be5.} Rf6 37. Qh5 {A better move than checking, as it
+prevented Black's K. escaping to f7, and then to e6. White also
+threatened g4.} Qg6 ({Black would have lost the Rook, if} 37... Rxd6 38.
+Qe8+ Kg7 39. Qe7+) 38. Qh8+ Kf7 39. Re1 {The coup de grace.} 1-0
+
+
+
+
+                                {PGN 28}
+
+[Event "?"]
+[Site "?"]
+[Date "1857.??.??"]
+[Round "?"]
+[White "Philadelphia"]
+[Black "New York"]
+[Result "1-0"]
+[ECO "C44"]
+[Annotator "The Blue Book of Chess, Game II., p. 109."]
+[Mode "PM"]
+[PlyCount "63"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 Nxd4 4. Nxd4 exd4 5. Bc4 Qf6 6. O-O Bc5 7. e5
+Qf5 8. c3 dxc3 9. Nxc3 Ne7 10. Bd3 Qe6 11. Ne4 Bd4 12. Ng5 Qb6 13. Qh5
+g6 14. Qh6 Bxe5 15. Re1 Qf6 16. Nf3 d6 17. Bg5 Qe6 18. Nxe5 dxe5 19.
+Rac1 Rf8 20. Bc4 Qf5 21. Bxe7 Kxe7 22. f4 e4 23. Bd3 Be6 24. Bxe4 Qa5
+25. Qh4+ Kd7 26. Red1+ Ke8 27. Kh1 c6 28. Rxc6 Rd8 29. Rcc1 Rxd1+ 30.
+Rxd1 h5 31. Qf6 Bc8 32. Bxb7 {And New York resigns, as they must lose
+their Q., or be mated in a few moves.} 1-0
+
+
+
+
+                                {PGN 29}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Marache"]
+[Black "Meek, A. B."]
+[Result "1-0"]
+[ECO "C44"]
+[Annotator "The Blue Book of Chess, Game III., p. 110."]
+[PlyCount "37"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Bc5 5. c3 d3 6. b4 Bb6 7. a4 a5 8.
+b5 Nce7 9. Qb3 d5 10. exd5 Qd6 11. Ba3 Qf6 12. Nbd2 Nh6 13. Ne4 d2+ 14.
+Nfxd2 Qe5 15. d6 cxd6 16. Bxd6 Qf5 17. Bxe7 Kxe7 18. Qa3+ Kd8 19. Qd6+
+1-0
+
+
+
+
+                                {PGN 30}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Cochrane"]
+[Black "Deschapelles"]
+[Result "1-0"]
+[ECO "C44"]
+[Annotator "The Blue Book of Chess, Game IV., p. 111"]
+[PlyCount "61"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Bc5 5. Ng5 Ne5 {This is not the
+correct move, he should have played Nh6.} 6. Bxf7+ Nxf7 7. Nxf7 Bb4+ 8.
+c3 dxc3 9. bxc3 Bxc3+ 10. Nxc3 Kxf7 11. Qd5+ Kf8 12. Ba3+ d6 13. e5 Qg5
+14. exd6 Qxd5 15. dxc7+ Kf7 16. Nxd5 Bd7 17. O-O Rc8 18. Bd6 Ke6 19. Bg3
+Bc6 20. Rad1 Bxd5 21. Rfe1+ Kf6 22. Rxd5 Nh6 23. Ra5 Nf5 24. Rc5 Nxg3
+25. hxg3 Kf7 26. Rd1 Rhe8 27. Rd3 Re7 28. Rf5+ Ke8 {Ke6 would have saved
+the game.} 29. Rd8+ Rxd8 30. Rf8+ Kxf8 31. cxd8=Q+ $18 1-0
+
+
+
+
+                                {PGN 31}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Staunton"]
+[Black "Harrwitz"]
+[Result "1-0"]
+[Annotator "The Blue Book of Chess, Game I., p. 113."]
+[PlyCount "47"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 f5 4. d4 fxe4 5. Nxe5 Nf6 6. Bb5 a6 7. Bxc6
+bxc6 8. Bg5 Rb8 9. b4 Bb7 10. Qa4 d5 11. O-O ({The following moves will
+show the probable result of Nxc6:} 11. Nxc6 Qd7 12. b5 {His best move;
+if axb5, then Qa7.} Ra8 13. Qd1 axb5 {Or Bxc6. And White has little if
+any advantage.}) 11... h6 12. Bh4 Qd6 13. Bg3 Rg8 14. Nd2 Rc8 15. Nb3
+Nd7 16. Na5 Nb6 17. Qc2 Ba8 18. f3 exf3 19. Rxf3 Qe6 20. Re1 Be7 21.
+Nexc6 Qxe1+ 22. Bxe1 Bxc6 23. Qg6+ Kd8 24. Nxc6+ 1-0
+
+
+
+
+                                {PGN 32}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Evans, Captain"]
+[Black "Horwitz"]
+[Result "1-0"]
+[ECO "C44"]
+[Annotator "The Blue Book of Chess, Game II., p. 114."]
+[PlyCount "51"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 f5 4. d4 exd4 5. e5 dxc3 6. Nxc3 Bb4 7. Bg5
+Nge7 8. Bc4 d5 9. exd6 Qxd6 10. Qe2 Nd4 11. Nxd4 Qxd4 12. O-O Bd7 13.
+Nd5 O-O-O 14. Bxe7 Bxe7 15. Nxe7+ Kb8 16. Rfd1 Qh4 17. Bb3 Qh6 18. Rd2
+f4 19. Rad1 f3 20. Qxf3 a6 21. Rxd7 Rxd7 22. Rxd7 Qc1+ 23. Qd1 Qxb2 24.
+Rd8+ Rxd8 25. Qxd8+ Ka7 26. Nc6+ {And White mates in four moves.} 1-0
+
+
+
+
+                                {PGN 33}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Evans, Captain"]
+[Black "Henderson"]
+[Result "0-1"]
+[ECO "C44"]
+[Annotator "The Blue Book of Chess, Game III., p. 114."]
+[PlyCount "112"]
+
+1. e4 e5 2. Nf3 Nc6 3. c3 d5 4. Bb5 Bg4 5. Qa4 Qd6 6. Nxe5 Qxe5 7. Bxc6+
+bxc6 8. Qxc6+ Ke7 9. f3 Rd8 10. d4 Qe6 11. Qxc7+ Rd7 12. Qc5+ Ke8 13.
+Qc8+ Rd8 14. Qxe6+ Bxe6 15. e5 f5 16. Nd2 Nh6 17. Nb3 Nf7 18. f4 Be7 19.
+h4 Nh6 20. Ke2 Bd7 21. Kf3 Bb5 22. g3 Bd3 23. Nd2 Ng4 24. Re1 h6 25. b3
+Rc8 26. Bb2 g5 27. h5 gxf4 28. gxf4 Rg8 29. Rh1 Kf7 30. Rh3 Ke6 31. Rc1
+Rg7 32. c4 dxc4 33. Nxc4 Be4+ 34. Ke2 Bg2 35. Rg3 Be4 36. a3 Rcg8 37.
+Rcg1 Bh4 38. Rh3 Bf2 39. Rc1 Bg2 40. Rd3 Bh4 41. Nd6 Nf2 42. Rdc3 Ne4
+43. d5+ Kxd5 44. Rd3+ Ke6 45. Nxe4 fxe4 46. Rd6+ Kf5 47. e6 Bf3+ 48. Ke3
+Rg2 49. Rc5+ Kg4 50. Rd2 Rxd2 51. Kxd2 Kxf4 52. Be5+ Kg4 53. Ke3 Bg5+
+54. Kd4 e3 55. Rc1 Rd8+ 56. Kc3 Rc8+ {And Black wins.} 0-1
+
+
+
+
+                                {PGN 34}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Staunton"]
+[Black "Popert"]
+[Result "1-0"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game I., p. 122."]
+[PlyCount "77"]
+
+1. e4 e5 2. Bc4 Bc5 3. c3 d6 {Not so good a move as Nf6, or Qg5.} 4. Nf3
+{d4 would perhaps have been stronger play.} Nf6 5. d4 exd4 6. cxd4 Bb4+
+7. Bd2 Bxd2+ 8. Nbxd2 O-O {d5 is a better move at this point.} 9. Bd3
+Nc6 10. a3 Bg4 11. Qc2 h6 12. Rc1 d5 13. e5 Bxf3 14. Nxf3 Nh5 15. g3 g6
+16. b4 Qd7 {Intending, if b5, to move Qg4.} 17. Qd2 Kh7 18. O-O Rae8
+19. Rc3 Nd8 20. Nh4 c6 21. f4 f5 22. g4 Ng7 23. gxf5 Nxf5 24. Nxf5 gxf5
+25. Kh1 Rg8 26. Rcc1 Qf7 27. Qc2 Ref8 28. Rg1 Ne6 29. Rxg8 Kxg8 30. Rg1+
+Kh8 31. Qf2 Qh5 {A lost move.} 32. Be2 Qf7 33. Qh4 Qh7 34. Bh5 Nxd4 35.
+Rg3 b6 36. Bg6 {It would have been more decisive if Bf7 at once.} Qg7
+37. Bf7 Rxf7 {If Qxf7, mate follows in three moves.} 38. Rxg7 Kxg7 39.
+Kg2 {and wins.} 1-0
+
+
+
+
+                                {PGN 35}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Amateur 1"]
+[Black "Amateur 2"]
+[Result "1-0"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game II., p. 123."]
+[PlyCount "37"]
+
+1. e4 e5 2. Bc4 Bc5 3. c3 Qg5 4. Qf3 Qg6 5. Ne2 d6 6. d4 exd4 7. cxd4
+Bb6 8. e5 Ne7 9. e6 f6 10. Nbc3 O-O 11. Nf4 Qe8 12. Be3 Nbc6 13. Rd1 Kh8
+14. h4 Nd8 15. h5 f5 16. Ncd5 Bxe6 17. Nxe7 Qxe7 18. Ng6+ hxg6 19. hxg6+
+{And White gives checkmate in three moves.} 1-0
+
+
+
+
+                                {PGN 36}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "De la Bourdonnais"]
+[Black "McDonnell"]
+[Result "0-1"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game III., p. 124."]
+[PlyCount "76"]
+
+1. e4 e5 2. Bc4 Bc5 3. Qe2 Nf6 4. d3 Nc6 5. c3 Ne7 6. f4 exf4 {In this
+opening it is not advisable for the second player to take the gambit P.
+with his e5} 7. d4 Bb6 8. Bxf4 d6 9. Bd3 Ng6 10. Be3 O-O 11. h3 Re8 12.
+Nd2 Qe7 13. O-O-O c5 14. Kb1 cxd4 15. cxd4 a5 16. Ngf3 Bd7 17. g4 h6 18.
+Rdg1 a4 19. g5 hxg5 20. Bxg5 a3 21. b3 Bc6 22. Rg4 Ba5 23. h4 Bxd2 24.
+Nxd2 Ra5 25. h5 Rxg5 26. Rxg5 Nf4 27. Qf3 Nxd3 28. d5 Nxd5 29. Rhg1
+{This portion of the game is full of interest and instruction, and is
+remarkably well played.} Nc3+ 30. Ka1 Bxe4 31. Rxg7+ Kh8 32. Qg3 Bg6 33.
+hxg6 Qe1+ 34. Rxe1 {White loses the game by this move.} Rxe1+ 35. Qxe1
+Nxe1 36. Rh7+ Kg8 37. gxf7+ Kxh7 38. f8=Q Nc2# 0-1
+
+
+
+
+                                {PGN 37}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "0-1"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game IV., p. 125."]
+[PlyCount "44"]
+
+1. e4 e5 2. Bc4 Bc5 3. Qe2 Nc6 4. Bxf7+ Kxf7 5. Qc4+ d5 6. Qxc5 dxe4 7.
+Qc4+ Be6 8. Qxe4 Nf6 9. Qh4 Nd4 10. Na3 e4 11. c3 g5 {The game from
+this point forward is admirably conducted by Black.} 12. Qxg5 Rg8 13.
+Qe3 Nf5 14. Qe2 Rxg2 15. Nc2 Qd6 16. Ne3 Nxe3 17. dxe3 Rag8 18. Qf1 Rd8
+19. Qe2 Ng4 20. Nh3 Ne5 21. Nf4 Nf3+ 22. Kf1 {And Black can checkmate in
+six moves.} -- 0-1
+
+
+
+
+                                {PGN 38}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Staunton"]
+[Black "Cochrane"]
+[Result "1-0"]
+[ECO "C52"]
+[Annotator "The Blue Book of Chess, Game V., p. 125."]
+[PlyCount "51"]
+
+1. e4 e5 2. Bc4 Bc5 3. Nf3 Nc6 4. b4 {We have now the same position
+brought about which occurs in the Evans Gambit.} Bxb4 5. c3 Ba5 6. O-O
+Bb6 7. d4 exd4 8. Nxd4 Nxd4 9. cxd4 d6 10. a4 c6 11. a5 Bc7 ({If he had
+taken:} 11... Bxa5 12. Bxf7+ Kxf7 13. Qh5+ {White would have gained a
+more valuable P. in return, and have deprived his opponent of the
+privilege of castling.}) 12. Qb3 Qe7 13. Ba3 Qf6 14. Nc3 Qg6 15. Ne2 Nh6
+16. e5 d5 17. Bd3 Nf5 18. Qb4 Bd8 19. Qb1 Qh5 20. Ng3 Nxg3 21. fxg3 Bxa5
+22. Bf5 Bb6 23. Qb4 Qg5 24. Bxc8 Rxc8 25. e6 fxe6 {And White announced
+mate in eight moves.} 26. -- 1-0
+
+
+
+
+                                {PGN 39}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Walker"]
+[Black "Daniels"]
+[Result "1-0"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game VI., p. 126."]
+[PlyCount "57"]
+
+1. e4 e5 2. Bc4 Bc5 3. c3 d5 4. Bxd5 Nf6 5. Qb3 O-O 6. Nf3 c6 {This is
+not advisable. It would be better to Nxd5.} 7. Bxf7+ {The notion of this
+sacrifice originated with Messrs. Henderson and Williams, of Bristol,
+during an examination of the present opening.} Rxf7 8. Nxe5 Qe7 9. Qxf7+
+Qxf7 10. Nxf7 Kxf7 11. d4 Bb6 12. f3 Be6 13. Be3 Na6 14. Kf2 Nc7 15. Nd2
+g6 16. g4 Kg7 17. h4 Re8 18. h5 Bf7 19. hxg6 Bxg6 20. Rag1 Ne6 21. Nc4
+Bc7 22. e5 Nd5 23. Bh6+ Kf7 24. Kg3 b5 25. Ne3 Nxe3 26. Bxe3 c5 27. f4
+cxd4 28. cxd4 Bd3 29. f5 1-0
+
+
+
+
+                                {PGN 40}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stanley"]
+[Black "Rousseau"]
+[Result "1-0"]
+[ECO "C26"]
+[Annotator "The Blue Book of Chess, Game I., p. 131."]
+[PlyCount "39"]
+
+1. e4 e5 2. Bc4 Nf6 3. Nc3 Bc5 4. Nf3 d6 5. h3 O-O 6. d3 Be6 7. Bb3 Nc6
+8. Ne2 Qe7 9. Ng3 Nd4 10. Nxd4 Bxd4 11. c3 {White gains a move by this
+exchange of Pieces.} Bb6 12. O-O d5 {h6 would have been better play.}
+13. Bg5 c6 14. Nh5 dxe4 15. dxe4 Bxb3 16. Qf3 {This is very finely
+played, and is an example to young players of the importance of gaining
+time at chess. Had White paused in his attack to recover the lost
+Bishop, the adversary might have succeeded in dislodging one or other of
+the Pieces by which he is beleaguered, or in bringing his own forces to
+the rescue, and then have ultimately retrieved the game.} Bc4 17. Bxf6
+Qe6 18. Nxg7 Be2 19. Nxe6 Bxf3 20. Nxf8 1-0
+
+
+
+
+                                {PGN 41}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Schulten"]
+[Black "Horwitz"]
+[Result "0-1"]
+[ECO "C26"]
+[Annotator "The Blue Book of Chess, Game II., p. 132."]
+[PlyCount "29"]
+
+1. e4 e5 2. Bc4 Nf6 3. Nc3 b5 4. Bxb5 Bc5 5. d3 c6 6. Bc4 Qb6 7. Qe2 d5
+8. exd5 O-O 9. Ne4 Nxe4 10. dxe4 Bxf2+ {Black plays capitally now to the
+end.} 11. Qxf2 Qb4+ 12. Bd2 Qxc4 13. Qf3 f5 14. exf5 Bxf5 15. Qg3 $19
+{And Black mated by force in three moves. It is rarely in actual play
+one sees so pretty a mate.} 0-1
+
+
+
+
+                                {PGN 42}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Bledow, Dr."]
+[Black "Von Bilguer"]
+[Result "1-0"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game III., p. 132."]
+[PlyCount "65"]
+
+1. e4 e5 2. Bc4 f5 3. d3 Nf6 4. Nf3 fxe4 5. dxe4 Nxe4 6. Qd5 Nd6 7. Nxe5
+c6 8. Qf7+ Nxf7 9. Bxf7+ Ke7 10. Bg5+ Kd6 11. Bxd8 Kxe5 12. f4+ Kf5 13.
+Bg5 Bb4+ 14. c3 Bc5 15. Bb3 h6 16. Bc2+ Kg4 17. Bd1+ Kf5 18. g4+ Kg6 19.
+Bc2+ Kf7 20. Bh4 Be7 21. Bg3 d5 22. f5 Nd7 23. Nd2 Bf6 24. Nf3 Re8+ 25.
+Kf2 Nc5 26. Rhe1 Bd7 27. b4 Ne4+ 28. Rxe4 {The terminating moves are
+admirably played by Dr. Bledow.} dxe4 29. Bb3+ Kf8 30. Bd6+ Be7 31. Ne5
+g5 {It is quite evident that on taking the B., mate would have followed
+next move.} 32. f6 {Beautifully played.} e3+ 33. Kg1 1-0
+
+
+
+
+                                {PGN 43}
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Amateur"]
+[Black "Amateur"]
+[Result "1-0"]
+[ECO "C23"]
+[Annotator "The Blue Book of Chess, Game IV., p. 133."]
+[PlyCount "53"]
+
+1. e4 e5 2. Bc4 c6 3. Qe2 Qc7 4. c3 Nf6 5. f4 d6 6. f5 d5 7. exd5 cxd5
+8. Bb5+ Bd7 9. Bxd7+ Nbxd7 10. d4 e4 11. Nh3 O-O-O 12. O-O Bd6 13. Nf4
+h6 14. Qf2 Ng4 15. Qe2 h5 16. Nxd5 Bxh2+ 17. Kh1 Qd6 18. Qxe4 Rhe8 19.
+Qf3 g6 20. Bg5 f6 21. Bd2 g5 22. Na3 a5 23. Nc4 Qc6 24. Nxa5 Qb5 25. c4
+Qa4 26. Nb6+ Nxb6 27. Qxb7# 1-0
+
+
+
+
+                                {PGN 44}
+

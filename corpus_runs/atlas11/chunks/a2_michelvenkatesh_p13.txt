@@ -1,0 +1,837 @@
+) F C(χ) 1/4−δ
+
+as in §4.1.5. In particular, L(χ, 1
+
+2 .
+
+The proof follows the description of §1.2; we try below to give a “translation” of the adelic steps to the steps in §1.2.
+
+Let us recall that over Q, the first result in the direction of Theorem
+
+5.1 are due to Good \[27\] (in the t-aspect) and to Duke-Friedlander-Iwaniec in the conductor aspect \[17\]. Over general number fields the conductor aspect was
+
+obtained by the second author \[67\] and Diaconu-Garrett for the t
+
+aspect \[16\]. The various methods used in these papers, although superficially rather different and having different strengths and weaknesses, nonetheless are
+
+closely linked; they are all, in various ways, related to versions of the identity described in §4.5.3. In particular, it is possible to redo the proof below in
+
+a way that is much closer to the proof of Theorem 1.1, i.e. removing
+
+the ergodic theory and substituting explicit spectral expansions.
+
+\[
+
+5.1.1. Notation. — Let H \tag{1}
+
+\]
+
+\[
+
+= {a(y) :\|y\| = 1}. Given \chi a character as in the Theorem, we define the following signed measure \mu \chi supported on a closed orbit of H \tag{1}
+
+\]
+
+\[
+
+on X:
+
+\]
+
+Z
+
+\[
+
+\times y, \mu = \mu 1 \tag{5.1}
+
+\]
+
+\[
+
+\mu \chi(\varphi) = \varphi(a(y))\chi(y)d
+
+\]
+
+F ×\\A(1)Let us note that (5.1) makes sense for any function on B(F)\\PGL2(A),
+
+\[
+
+i.e. \mu \chi has a canonical lifting \tilde{\mu} \chi to that space. Given g \in GL2(A), we denote by \mu g the translate of \mu \chi by g (i.e. \mu g
+
+(\varphi) = \mu \chi(g.\varphi)), and similarly define \chi \chi g\|A = t. \tilde{\mu} \chi . For_t \in R>0, we pick yt \in A\times such that\|yt We shall be
+
+primarily interested in the translates \mu g \chi when g is of the form a(y)n(T), for T \in A.
+
+\]
+
+In trying to get some geometric intuition for these measures, we suggest
+
+that the reader bear in mind the following simple example: F = Q, T =
+
+)n(T)
+
+\[
+
+=p \in Qp,\to A”, the projection of supp(\mu a(q-1) to the space of lattices is the set {\Lambda x : x \in (Z/qZ) \times }. Here \Lambda x are as in §1.2;
+
+recall in particular that \Lambda x = n(x)\Lambda 1. Therefore,in classical terms,the measures \mu a(y)n(T)
+
+\]
+
+χ  will
+
+correspond to certain orbits of the discrete horocycle flow; however, the signs of the measure µχ encode arithmetic information (e.g., whether or not x is a
+
+quadratic residue).
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 91
+
+5.1.2. A sketch of the proof in the simplest case: F_6= Q and π cuspidal. — Unfortunately, there are two cases which introduce extra notation and small
+
+complexities: F = Q, and π Eisenstein. Thus we advise the reader to read carefully the present subsection, where we sketch the proof in the case when neither of
+
+these complications exist. The reasoning has the following three stages. Fix ε > 0 and κ ∈ (0, 1) and write, for typographical simplicity, Q = C(χ). Step_1.
+
+Theorem_5.1 ⇐= equidistribution result for µ g
+
+χ , for suitable
+
+\[
+
+g: Claim_1: There’s \varphi \in \pi, T = (Tv)v \in A with\|T\| Q_1-\epsilon and_t \in
+
+\]
+
+\[Q−1−κ \]:
+
+, Q−1+κ
+
+Q −1/2−ε \|L(π \otimes χ, 1/2)\| ε,κ,π \|µ a(yt)n(T) (ϕ)\| + Q −κ/2
+
+χ .
+
+\[
+
+Step_2. §4.2.2 proves equidistribution of translates of \mu \chi in the case \chi = 1.Claim_2: For some absolute \delta > 0, and_t as above
+
+\]
+
+(f)  SX(f)(\|t\| 1/2 2
+
+a(yt)n(T) −δ (XPGL2 ) and smooth
+
+µ
+
+\[
+
+A +\|T\| A), f \in L_0
+
+\]
+
+Step 3. An application of §1.3 allows us to bound µ a(yt)n(T)
+
+χ  starting
+
+from Claim 2.
+
+\[
+
+Claim_3:\|\mu a(yt)n(T) 0 S X(\varphi). \chi(\varphi)\| \pi Q-\delta The utility of F_6= Q comes in here: we take advantage of the fact that we can find many
+
+pairs of distinct prime ideals with the same norm. We use this to construct a suitable measure \sigma with which to apply §2.5.3, with \sigma supported entirely
+
+on the group H \tag{1}
+
+\]
+
+\[
+
+and commuting with_n(T)
+
+\]
+
+.
+
+\[
+
+When F = Q one can only make such a measure supported =near” H \tag{1}
+
+\]
+
+\[
+
+.
+
+\]
+
+In terms of the discussion in §1.2, and in particular §1.2.4, Step 1
+
+\[
+
+amounts to the remark that (C) or \tag{C2}
+
+\]
+
+\[
+
+implies subconvexity and Step_2 amounts to the implication (B) =\Rightarrow (C). 5.1.3. The general proof. — For T \in A and h a smooth compactly
+
+\]
+
+supported function on R>0 we define the measure
+
+Z
+
+\[
+
+n(T) h(t)\chi(yt)\mu a(yt)n(T) (\varphi)d \times t. \mu \chi,h (\varphi) := \chi
+
+\]
+
+### R>0
+
+28 Let K be a parameter to be chosen as a fixed positive power of Q. Consider all finite primes of Q
+
+that are contained in [K, 2K], are split in F and above which χ is unramified. The number of such primes p is then F K/ log K. Above each such prime p, let
+
+v1(p), v2(p) be two distinct places. Let σ be the
+
+−1 ) for all such
+
+probability measure on H(1) which is the average of the Dirac measures at the a($
+
+v1(p)$v2(p)
+
+primes p ∈ [K, 2K].
+
+#### 92 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+5.1.4. Lemma. — (variant of Claim 1) Notation as in the theorem, set
+
+\[
+
+Q := C(\chi). For any \epsilon > 0, \kappa \in]0, 1[, there exists a smooth vector \varphi \in \pi, T = (Tv)v \in A and a smooth, non-negative, bounded by_1,
+
+function on R>0, h = hQ,\kappa say, supported in the interval [Q-1-\kappa] such that
+
+\]
+
+, Q−1+κ
+
+\[
+
+Q\|L(\pi \otimes \chi,1/2)\| \epsilon,\kappa,\pi\|\mu_n(T) \tag{5.2}
+
+\]
+
+\[
+
+-1/2-\epsilon -\kappa /2 \chi,h (\varphi)\| + Q (if \pi is not cuspidal,replace \mu \chi(\varphi) by \mu \tilde{\chi} (\varphi - \varphi N)) and moreover: 1. Tv
+
+= 0 unless v is archimedean or \chi is ramified at v; 2. \log\|T\|A \in [1 - \epsilon, 1 + \epsilon] if Q \epsilon_1;
+
+\]
+
+log Q
+
+3. S π (ϕ) d,π_1 for any d. In particular, if π is cuspidal, then, for
+
+d
+
+X (ϕ) d,π_1.
+
+any d, S
+
+d
+
+\[
+
+Proof. — For finite v, we take W\varphi,v \in W\pi v to be the new vector and
+
+\]
+
+Tv = $−r
+
+\[
+
+v, where_r is the conductor of \pi v, just as in Lemma_3.3.2. For archimedean v, we choose W\varphi,v and Tv \in Fv according to Lemma_3.3.3. Put T = (tv)v \in
+
+A and let \varphi \in \pi be the preimage of \otimes W\varphi,v under the canonical intertwiner from \pi to its Whittaker model. The third assertion S
+
+\pi(\varphi) d,\pi_1, follows since Sd(W\varphi,v) Cond(\pi v) N(d)
+
+\]
+
+d ,
+
+for some N(d) depending on d – noted in Lemma 12.3 in the archimedean case, and immediate in the nonarchimedean case – and from §2.2.2.
+
+It follows then from Lemma 3.3.2, Lemma 3.3.3, and the results of §4.2
+
+that
+
+Z
+
+\[
+
+L(\pi \otimes \chi,1/2) \epsilon(C(\pi)Q) \epsilon Q_1/2 \times y \tag{5.3}
+
+\]
+
+\[
+
+\varphi(a(y)n(T))\chi(y)d
+
+\]
+
+F ×\\A×
+
+We need to pass from this statement to the desired property (3) by truncating the range of the y-integral. That is carried out using similar reasoning
+
+\[
+
+to [67, Lemma 11.9] ; it can be considered the geometric form of the approximate functional equation. Let h be a fixed smooth function on R>0 with values in [0,
+
+1], which is_1 on (0,1],0 on [2,\infty). Take A = Q-\kappa -1 and hA : t \to h(t/A).
+
+\]
+
+Write as a shorthand,
+
+\[
+
+f(t) = \chi(yt)\mu a(yt)n(T) (\varphi)
+
+\]
+
+χ
+
+\[
+
+so that the integral on the right-hand side of \tag{5.3}
+
+\]
+
+\[
+
+is given by R \infty f(t)d \times t, and, more generally, the Mellin transform F(s) = R f(t)t sd \times t is given by F(s) = + \chi\|·\|s (n(T)\varphi). Given
+
+\epsilon > 0 small, we will need to bound F(s) for <s = -\frac{1}{2} - \epsilon . We
+
+\]
+
+claim that
+
+\[
+
+\|F(s)\| \pi,\epsilon(1 +\|s\|) 2Q_1/2+3\epsilon when <(s) = -\frac{1}{2} - \epsilon \tag{5.4}
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 93
+
+Crudely, the L-function in front contributes Q, whereas the ramified factors
+
+contribute Q−1/2
+
+, and the rest is of size 1.
+
+To be more precise, let S denote the (finite) set of places where either
+
+\[
+
+v is infinite or \varphi v is not spherical, or Tv_6= 0, or \psi is ramified. Then F(s) may be expressed as: + \chi v\|.\| s (S) Y Y v (n(Tv)Wv,\varphi) L (\pi
+
+\otimes \chi,1/2 + s) + \chi v\|.\| s
+
+\]
+
+v (n(Tv)Wv,ϕ)
+
+\[
+
+L(\pi v \otimes \chi v,1/2 + s) . v\in S v /\in S The product over v /\in S is equal to_1. For v \in S, each factor is bounded by
+
+\]
+
+−1/2+ε
+
+\[
+
+\pi,\epsilon Cond(\chi v), as follows from Lemma_3.3.2 and Lemma_3.3.3. Finally, by the convexity bound together with bounds towards Ramanujan29 L (S) (\pi
+
+\otimes \chi,s) \epsilon(1 +\|s\|) 2C(\pi \otimes \chi) 1/2+\epsilon(<s = -\epsilon). Noting that\|S\| = o(log(C(\pi \otimes \chi) + disc(F))) as C(\pi \otimes
+
+\chi) \to \infty, and since C(\pi \otimes \chi) C(\pi)C(\chi) 2
+
+\]
+
+, we get (5.4).
+
+By Mellin inversion (H being the Mellin transform of h),
+
+Z Z ds
+
+\[
+
+hA(t)f(t)d \times t = A_1/2+\epsilon H(-s)F(s) -\kappa
+
+\]
+
+2 +ε
+
+\[
+
+2\pi i \pi,\epsilon,h Q R>0 <(s)=-1/2-\epsilon The effective content of this statement is that the range_t . Q-\kappa -1 contributes very little to the integral
+
+R \infty
+
+\]
+
+f(t)d ×t. A corresponding analysis yields
+
+\[
+
+the same statement for the range_t > Q\kappa -1
+
+\]
+
+, namely:
+
+Z
+
+(1 − hQκ−1 (t))χ(yt)µ a(yt)n(T) (ϕ)d ×t π,ε,h Q −κ/2+ε
+
+χ .
+
+### R>0
+
+\[
+
+We take h = hQκ−1 - hQ-\kappa -1 to conclude.
+
+\]
+
+The following will be useful later: If we replace h by any translate
+
+\[
+
+y_7\to h(y\omega), where \omega remains within (say) the set [1/4, 4], then \tag{5.2}
+
+\]
+
+\[
+
+remains valid. This is evident from the above proof, replacing e.g. Q\kappa -1 by \omega Q\kappa -1
+
+\]
+
+.
+
+ut
+
+\[
+
+5.1.5. Proposition. — (variant of Claim_2). Take g = a(t)n(T) for_t \in R>0,\to A\times, T = (Tv)v \in A. For f \in L_2 (XPGL2) and smooth, one has
+
+\]
+
+(f)  SXPGL2 (f)(\|t\| 1/2
+
+µ g −δ
+
+### A + \|T\| A )
+
+\[
+
+for some absolute \delta > 0. 29 More precisely, it is necessary to bound each factor L(\pi v \otimes \chi v,1/2 + s)-1
+
+\]
+
+. Suppose v is finite and
+
+\[
+
+that \psi is unramified at v. If \pi v is tempered, this is bounded by (1 + q \epsilon) 2 v . If \pi v fails to be tempered, then \pi v is a twist of a
+
+spherical representation, as is \pi v \otimes \chi v. If the local L-factor is not identically_1, then necessarily \pi v \otimes \chi v is spherical. Since v
+
+\in S, it must be that \pi v was ramified at v; the claimed bound follows.
+
+\]
+
+#### 94 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Proof. — By property (3c) of Sobolev norms, it is sufficient to prove
+
+that for any automorphic representation π equipped with its canonical norm,
+
+\[
+
+and f \in \pi a smooth function, we have the inequality\|\mu(f)\| S\pi(f)(\|t\| \frac{1}{2} g -\delta A +\|T\| A) \tag{5.5}
+
+\]
+
+\[
+
+We may decompose \mu g (f) as \tilde{\mu} g (fN) + \tilde{\mu} g (f - fN).
+
+\]
+
+By (2.12) the first term is bounded by S (f)\|t\| 1/2
+
+π
+
+### A (and is even zero if
+
+R \` \|·\|s (g.f)ds, by inverse Mellin
+
+π is cuspidal). The second term equals  1
+
+2πi <s=0
+
+transform; here \` \|.\| s (f) is the linear functional given in (4.15) and associated
+
+with the character \|.\| s
+
+### A. Applying Lemma 4.2.3, together with (4.17), we see
+
+4 \` \|·\|s (f) is bounded above by S (f)\|T\|
+
+\[
+
+that (1 +\|s\|) \pi -\delta A, with \delta > 0 absolute,
+
+\]
+
+and our result follows.  ut
+
+5.1.6. The cuspidal case. — We now prove Claim 3 and conclude the
+
+\[
+
+proof of Theorem_5.1 for \pi cuspidal. We advise the reader to first consider §5.1.2 which gives a somewhat cleaner version of the proof in the case F_6= Q.
+
+Let_t, T, \varphi, h be as in Lemma_5.1.4. We need to show that\|\mu_n(T) \chi,h (\varphi)\| decays with Q. The basic idea is this: since \mu_n(T) \chi,h is
+
+\chi -equivariant under the subgroup of elements of H \tag{1}
+
+\]
+
+\[
+
+which commute with_n(T), we can reduce this to the corresponding fact for \chi = 1, already known by Proposition_5.1.5,
+
+\]
+
+using the ergodic principle (§1.3).
+
+Noting that µ a(yt)n(T) is orthogonal to all one-dimensional automorphic
+
+representations on PGL2 except the constants, Proposition 5.1.5 implies that for f non-negative on XPGL2
+
+,
+
+Z Z
+
+\[
+
+\|\mu_n(T) XPGL2 (f), with \epsilon Q (Q \kappa -1), \tag{5.6}
+
+\]
+
+\[
+
+h f + S \epsilon -\delta
+
+\]
+
+2 + Q
+
+1,h (f)\| 6
+
+### XPGL2
+
+\[
+
+for any \epsilon > 0. Here \kappa is as in the statement of Lemma_5.1.4.
+
+\]
+
+Let σ be the averaged sum of the Dirac measures which are supported
+
+at
+
+−1 )a($v
+
+\[
+
+a($ 0) \in a(Fv)a(Fv_0) \subset H
+
+\]
+
+v
+
+for (v, v0 ) ranging over pairs of distinct non-archimedean places at which χ is unramified and for which qv, qv_0 are contained in [K, 2K] (to be choose later;
+
+in any case K_6 Q.) The number of such pairs is K2/ log2 K; σ is not
+
+supported on H(1) but rather on
+
+\[
+
+H ([1/4,4]) = {a(y), y \in A\times,\|y\| \in [1/4, 4]}.
+
+\]
+
+Since kAd(a($−1 )a($v
+
+0))k  K2 , we see (notation of §2.5.3):
+
+v
+
+kσkd K2d_2 K−2 + K−1−2θ + K−4θ , kσ ? σˇkθ (log K) .
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 95
+
+\[
+
+The measure \mu \chi,h(\varphi) is not exactly invariant under the substitution \varphi_7\to \varphi ?\chi \sigma but almost: indeed since the support of \sigma
+
+commute with_n(T) one has \mu \chi,h(\varphi ?\chi \sigma) = \mu \chi,h?\eta(\varphi),
+
+\]
+
+)
+
+\[
+
+where \eta denote the average of the Dirac measures at qv/qv_0 on R>0 for (v,v_0 as above. Therefore,the reasoning of §2.5.3 shows that:\|\mu
+
+\chi,h?\eta(\varphi)\| 2 \epsilon,\pi Q (K4d (Q \kappa -1) + K-2 + K-1-2\theta + K-4\theta) \tag{5.7}
+
+\]
+
+\[
+
+\epsilon -\delta
+
+\]
+
+2 + Q
+
+Note that \|ϕ ?χ σ\| 2 descends to XPGL2
+
+, and so it was admissible to apply
+
+(5.6) to it.
+
+It follows from the (the last line of the) proof of Lemma 5.1.4 that
+
+(5.2) holds with h replaced by h?η (which is supported on \[ 1 \])
+
+4Q−1−κ , 4Q−1+κ
+
+:
+
+\[
+
+Q -1/2-\epsilon L(1/2,\pi \otimes \chi) \epsilon,\pi,\kappa\|\mu \chi,h?\eta(\varphi)\| + Q -\kappa /2 \tag{5.8}
+
+\]
+
+\[
+
+Taking K to be a suitable small power of Q and combining (5.7) and (5.8), we conclude. ut
+
+\]
+
+5.1.7. The Eisenstein case. — In this section, we prove Theorem 5.1
+
+for π noncuspidal by utilizing a simple regularization. By factorization, it suffices to consider the case where π = 1 1 is induced from two trivial characters.
+
+Let ϕ be as furnished by Lemma_5.1.4. Let_k be a fixed smooth compactly supported function on G(A) of integral_1. Fix a sufficiently large pa rameter X > 1 (to
+
+be a fixed power of Q), and split ϕ = \varphi_1 + \varphi_2, where Xϕ ? k, \varphi_2 = (ϕ − ∧Xϕ) ? k, ϕ1(g) := ∧ say. Thus \varphi_1 is of rapid decay high in
+
+the cusp, whereas \varphi_2 is supported high in the cusp. Let us observe, 1. \|ϕ2(x)\| Sπ (ϕ)ht(x) 1/2 log ht(x). 2. R (ϕ)X−1/4 i = 1, 2.
+
+\varphi_i Sπ
+
+X
+
+3. For every d, there exists N(d) so that S X (ϕ1) XN(d)S π (ϕ).
+
+d
+
+\[
+
+The first property follows from \tag{4.12}
+
+\]
+
+\[
+
+. The second property follows from the first, since \varphi_2 is supported in ht(x) X and R R \varphi_1 + \varphi_2 = 0. To verify the third property, it
+
+suffices to check that (for any \varphi \in \pi and any_m > 1) we have the bound\| ∧X \varphi(x)\| m X A(m) ht(x) \pi(\varphi).
+
+\]
+
+−mS
+
+\[
+
+By \tag{4.3}
+
+\]
+
+\[
+
+together with (4.12), it suffices to verify that for y \in A\times, X W\varphi(a(\alpha y)) m\|y\| -mS \pi(\varphi). \alpha \in F \times
+
+\]
+
+#### 96 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+This follows from Proposition 3.2.3, together with the definition of the norm
+
+on π given by (2.5). It is necessary only to observe that
+
+X Y 0
+
+max(\|αy\|v, 1)−n_n \|y\| −n
+
+.
+
+\[
+
+\alpha \in F \times v Now, let g = a(yt)n(T), where_t, T are as in Lemma_5.1.4. We need to
+
+\]
+
+bound
+
+\[
+
+g (\varphi - \varphi N) = A + B + C + D, where \tilde{\mu}
+
+\]
+
+χ
+
+g 1 R is bounded as in the prior argument by
+
+\[
+
+- A = \mu \varphi_1 - \varphi_1 \chi vol(X) X (K2d (Q \kappa -1) + K-1 + K-1/2-\theta + K-2\theta). Q \epsilon -\delta /2
+
+\]
+
+4 + Q
+
+\[
+
+g_1 R is bounded by S \pi(\varphi)X-1/4 - B = \mu \varphi_1 ;
+
+\]
+
+χ vol(X)
+
+\[
+
+g (\varphi N) is bounded, in view of \tag{4.12}
+
+\]
+
+\[
+
+, by\|t\| 1/2-\epsilon S \pi(\varphi) = - C = \tilde{\mu} \chi Q \kappa -1 (\varphi).
+
+\]
+
+π
+
+2 +εS
+
+\[
+
+g (\varphi 2). - D = \mu \chi Now let us bound D. Let \varphi ◦ be the spherical vector of norm_1 in the representation \pi . Decompose \varphi ◦ = \varphi ◦ ◦
+
+just as above. By \tag{4.13}
+
+\]
+
+\[
+
+, \varphi ◦ 1 + \varphi_2 2 > 0. By loc. cit., it is also true that - for X sufficiently large -\|\varphi 2\| S\pi(\varphi)\varphi ◦
+
+\]
+
+\[
+
+2 .
+
+Therefore,
+
+\[
+
+\|D\| 6 S (\varphi)(\|\mu(\varphi)\| +\|\mu(\varphi)\|) \epsilon S (\varphi) A (\|t\| \frac{1}{2} \tag{5.9}
+
+\]
+
+\[
+
+\pi g ◦ g ◦ \pi X -\frac{1}{4} + X -\delta
+
+\]
+
+### 1 A + \|T\| A )
+
+\[
+
+for some absolute constant A; we applied \tag{5.5}
+
+\]
+
+\[
+
+to the function \varphi ◦
+
+\]
+
+, and
+
+Proposition_5.1.5 to the function ϕ ◦ R ◦ R ◦ 1− ϕ ϕ
+
+XPGL2 1 , observing that XPGL2 1
+
+ε
+
+X−1/4
+
+. We conclude that:
+
+\[
+
+Q -1/2L(\chi,1/2)2 = Q -1/2L(\pi \otimes \chi,1/2) AK2d (Q \kappa -1) \epsilon Q - \kappa -\frac{1}{4} + K-\theta + X -\delta /2
+
+\]
+
+2 + X 4 + Q
+
+ε Q
+
+and we conclude by an appropriate choice of the parameters.  ut
+
+5.2. Subconvex bounds for Rankin/Selberg L-functions
+
+In this section we prove Theorem_1.2. Let \pi_1, \pi_2 be the two automorphic representations of GL2(A) considered there and let \chi_1, \chi_2 denote their
+
+respective central characters.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 97
+
+\[
+
+5.2.1. Fix a parameter z \in iR whose modulus will be a non-negative power of C(\pi 1) to be determined later. We shall prove our result on certain slight

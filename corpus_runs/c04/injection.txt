@@ -1,0 +1,58 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: D8 seed: deformations parametrize new positivity
+18: Twin-deformation zero-exclusion kill: Euler-product ζ_R zero-free for σ>1
+19: Heavier-pole kill: F(σ)~2/(σ−1) eases inequality
+20: Deformations repackage the pole; no new zero-detector
+21: Positivity blind left of Re(s)=1
+22: Hybrid division of labor: geometry inputs, analysis continuation/bounds
+23: Selberg parity barrier on pure sieve positivity
+24: Saturated trig-polynomial optimization: MTY 2022, BTY 2026 constants
+25: Sieve-produced positivity: charge patterns → autocorrelation squares |Q(e^{iθ})|²
+26: a₁>a₀ exclusion criterion for simple line zeros
+27: 9c′: do saturated degree-16 optimizers have small-support autocorrelation structure?
+28: 9c-as-'prove RH by stronger positivity' CLOSED
+29: Explicit formula ψ(x) verified against sieve-computed ψ (D1 face-sum)
+30: Zeros as regulators of infinite face-sum error
+31: Weil positivity as face-sum-error positivity constraint (heuristic thesis)
+32: Guinand–Weil formula prime-side verified at machine precision
+33: Prime-side positivity is cancellatory, not termwise
+34: Square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+35: Weil criterion ⟺ RH cited not derived; translation≠proof
+36: 10a-step3: optimize over square test functions H
+
+INJECTED STRUCTURE (grouped compact):
+
+S28:17 18 19 20 21 22 23 24 25 26 27 28
+S29:29 30 31
+S32:32 33 34 35 36
+E18:1 20,2 17
+E19:1 20,2 17
+E21:1 22,1 28
+E23:1 28
+E24:1 28
+E25:1 22
+E26:6 25
+E29:1 30
+E31:6 29
+E33:11 31
+E34:6 25
+E35:3 31
+E36:6 32
+A:17 15,18 14,19 14,20 14,21 14,22 13,23 13,24 13,25 14,26 14,27 16,28 13,29 14,30 13,31 13,32 14,33 14,34 14,35 13,36 16
+L:27 36

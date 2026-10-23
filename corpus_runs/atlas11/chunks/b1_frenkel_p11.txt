@@ -1,0 +1,375 @@
+and Drinfeld, in which instead of the moduli space of line bundles
+
+on X we consider the moduli space of G-bundles, where G is a simple Lie group. We will see that the role of a trivial line bundle on X with a flat connection
+
+will be played by a flat LG-bundle on X (where LG is the Langlands dual group to G introduced in the next section), with an additional structure of an oper. But
+
+first we need to understand how to formulate the geometric Langlands conjecture for general reductive algebraic groups.
+
+5. From GLn to other reductive groups
+
+One adds a new dimension to the Langlands Program by considering arbitrary reductive groups instead of the group GLn. This is when some of the most beautiful
+
+and mysterious aspects of the Program are revealed, such as the appearance of the Langlands dual group.
+
+In this section we will trace the appearance of the dual group in the classical context and then talk about its geometrization/categorification.
+
+5.1. The spherical Hecke algebra for an arbitrary reductive group. Suppose we want to find an analogue of the Langlands correspondence from Theorem 1 where
+
+instead of automorphic representations of GLn(A) we consider automorphic representations of G(A), where G is a connected reductive algebraic group over Fq. To
+
+simplify our discussion, we will assume in what follows that G is also split over Fq, which means that G contains a split torus T of maximal rank (isomorphic to
+
+the direct product of copies of the multiplicative group).42 We wish to relate those representations to some data corresponding to the Galois group Gal(F/F),
+
+the way we did for GLn. In the case of GLn this relation satisfies an important compatibility condition that the Hecke eigenvalues of an automorphic
+
+representation
+
+coincide with the Frobenius eigenvalues of the corresponding Galois representation. Now we need to find an analogue of this compatibility condition for general
+
+reductive groups.
+
+The first step is to understand the structure of the proper analogue of the spherical Hecke algebra Hx. For G = GLn we saw that this algebra is isomorphic to
+
+the algebra of symmetric Laurent polynomials in_n variables. Now we need to give a similar description of
+
+the analogue of this algebra Hx for a general reductive group G.
+
+So let G be a connected reductive group over a finite field k which is split over k, and T a split maximal torus in G. Then we attach to this torus two
+
+lattices, P and Pˇ, or
+
+42since Fq is not algebraically closed, this is not necessarily the case; for example, the Lie group SL2(R) is split over R, but SU2 is not
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 57
+
+characters and cocharacters, respectively. The elements of the former are homomorphisms µ : T(k) → k ×, and the elements of the latter are homomorphisms λˇ : k
+
+× → T(k). Both are free abelian groups (lattices), with respect to natural operations, of rank equal to the dimension of T. Note that T(k) ≃ k × \otimes Z Pˇ.
+
+We have a pairing h·, ·i : P × Pˇ → Z. The composition µ ◦ λˇ is a homomorphism_k × → k ×, which are classified by an integer (“winding number”), and hµ, λˇi is
+
+equal to this number. The sets P and Pˇ contain subsets \Delta and \Delta∨ of roots and coroots of G, respectively (see, e.g., \[68\] for more details). Let
+
+now X be a smooth projective curve over Fq and let us pick a point x ∈ X. Assume for simplicity that its residue field is Fq. To simplify notation we will omit
+
+the index x from our formulas in this section. Thus, we will write H,F, O for Hx,Fx, Ox, etc. We have F ≃ Fq((t)), O ≃ Fq[\[t]\], where_t is a uniformizer in O.
+
+The Hecke algebra H = H(G(F),G(O)) is by definition the space of C-valued compactly supported functions on G(F) which are bi-invariant with respect to the
+
+maximal compact subgroup G(O). It is equipped with the convolution product
+
+\[
+
+(f_1 ⋆ f_2)(g) = Z f_1(gh-1)f2(h) dh,
+
+\]
+
+### G(F)
+
+where dh is the Haar measure on G(F) normalized so that the volume of G(O) is equal to
+
+1.43
+
+\[
+
+What is this algebra equal to? The Hecke algebra H(T(F),T(O)) of the torus T is easy to describe. For each \lambda ˇ \in Pˇ we have an element \lambda ˇ(t) \in
+
+T(F). For instance, if G = GLn and T is the group of diagonal matrices, then P ≃ Pˇ ≃ Z_n n the element . For \lambda ˇ \in Z \lambda ˇ(t) = (\lambda ˇ \lambda
+
+ˇ
+
+### 1,... , λˇ 1
+
+\[
+
+n) \in T(F) is just the diagonal matrix diag(t,...,t\lambda ˇn). Thus, we have
+
+\]
+
+(for GLn and for a general group G)
+
+\[
+
+T(O)\\T(F)/T(O) = T(F)/T(O) = {\lambda ˇ(t)}\lambda \in Pˇ. The convolution product is given by \lambda ˇ(t)⋆\mu ˇ(t) = (\lambda ˇ+ ˇ\mu)(t). In other words,
+
+H(T(F),T(O)) is isomorphic to the group algebra C[Pˇ] of Pˇ. This isomorphism takes \lambda ˇ(t) to e \lambda ˇ
+
+\]
+
+∈ C\[Pˇ\].
+
+Note that the algebra C[Pˇ] is naturally the complexified representation ring Rep Tˇ of the dual torus Tˇ, which is defined in such a way that its lattice of
+
+characters is Pˇ and the lattice of cocharacters is P. Under the identification C[Pˇ] ≃ Rep Tˇ an element e λˇ
+
+### ∈ C\[Pˇ\]
+
+is interpreted as the class of the one-dimensional representation of Tˇ corresponding to
+
+### λˇ : Tˇ(Fq) → F ×
+
+q .
+
+5.2. Satake isomorphism. We would like to generalize this description to the case of an arbitrary split reductive group G. First of all, let Pˇ+ be the set of
+
+dominant integral weights of LG with respect to a Borel subgroup of LG that we fix once and for all. It is
+
+43Let K be a compact subgroup of G(F). Then one can define the Hecke algebra H(G(F), K) in a similar way. For example, H(G(F), I), where I is the Iwahori
+
+subgroup, is the famous affine Hecke algebra. The remarkable property of the spherical Hecke algebra H(G(F), G(O)) is that is is commutative, and so its
+
+irreducible representations are one-dimensional. This enables us to parameterize irreducible unramified representations by the characters of H(G(F), G(O)) (see
+
+Sect. 5.3). In general, the Hecke algebra H(G(F), K) is commutative if and only if K is a maximal compact subgroup of G(F), such as G(O). For more on this, see
+
+Sect. 9.7.
+
+### 58  EDWARD FRENKEL
+
+\[
+
+easy to see that the elements \lambda ˇ(t), where \lambda ˇ \in Pˇ+, are representatives of the double cosets of G(F) with respect to G(O). In other words,
+
+#### G(O)\\G(F)/G(O) ≃ Pˇ+.
+
+\[
+
+Therefore H has a basis {c\lambda ˇ}\lambda ˇ\in P+
+
+, where cλˇ is the characteristic function of the double
+
+coset G(O)λˇ(t)G(O) ⊂ G(F).
+
+An element of H(G(F),G(O)) is a G(O) bi-invariant function on G(F) and it can be restricted to T(F), which is automatically T(O) bi-invariant. Thus, we obtain a
+
+linear map H(G(F),G(O)) → H(T(F),T(O)) which can be shown to be injective. Unfortunately, this restriction map is not compatible with the convolution product,
+
+and hence is not an algebra homomorphism.
+
+However, I. Satake \[67\] has constructed a different map
+
+### H(G(F),G(O)) → H(T(F),T(O)) ≃ C\[Pˇ\]
+
+\[
+
+which is an algebra homomorphism. Let N be a unipotent subgroup of G. For example, if G = GLn we may take as N the group of upper triangular matrices with_1’s
+
+on the diagonal. Satake’s homomorphism takes f \in H(G(F),G(O)) to
+
+!
+
+Z
+
+\[
+
+fb= X h\rho,\lambda ˇi f(n · \lambda ˇ(t))dn \lambda ˇ q e \in C[Pˇ].
+
+\]
+
+### N(F)
+
+λˇ∈Pˇ Here and below we denote by ρ the half-sum of positive roots of G, and dn is the Haar measure on N(F) normalized so that the volume of N(O) is equal to_1.
+
+The fact that f is compactly supported implies that the sum in the right hand side is finite. From this formula it is not at all obvious why this map should be
+
+a homomorphism of algebras. The proof is based on the usage of matrix elements of a particular class of induced representations of G(F), called the principal
+
+series (see \[67\]).
+
+The following result is referred to as the Satake isomorphism.
+
+Theorem 4. The algebra homomorphism H → C[Pˇ] is injective and its image is equal to the subalgebra C[Pˇ]W of W-invariants, where W is the Weyl group of G.
+
+A crucial observation of R. Langlands \[1\] was that C[Pˇ]W is nothing but the representation ring of a complex reductive group. But this group is not G(C)! The
+
+representation ring of G(C) is C[P]W , not C[Pˇ]W . Rather, it is the representation ring of the so-called Langlands dual group of G, which is usually denoted
+
+by LG(C). By definition, LG(C) is the reductive group over C with a maximal torus LT(C) that is dual to T, so that the lattices of characters and cocharacters
+
+of LT(C) are those of T interchanged. The sets of roots and coroots of LG(C) are by definition those of G, but also interchanged. By the general classification
+
+of reductive groups over an algebraically closed field, this defines LG(C) uniquely up to an isomorphism (see \[68\]). For instance, the dual group of GLn is
+
+again GLn, SLn is dual to PGLn, SO2n+1 is dual to Spn, and SO2n is self-dual.
+
+At the level of Lie algebras, the Langlands duality changes the types of the simple factors of the Lie algebra of G by taking the transpose of the corresponding
+
+Cartan matrices.
+
+Thus, only the simple factors of types B and C are affected (they get interchanged). But the duality is more subtle at the level of Lie groups, as there is
+
+usually more than one Lie group attached to a given Lie algebra. For instance, if G is a connected simply-connected
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 59
+
+simple Lie group, such as SLn, its Langlands dual group is a connected Lie group with the same Lie algebra, but it is of adjoint type (in this case, PGLn).
+
+Let Rep LG be the Grothendieck ring of the category of finite-dimensional representations of LG(C). The lattice of characters of LG is Pˇ, and so we have the
+
+character
+
+homomorphism Rep LG → C\[Pˇ\]. It is injective and its image is equal to C\[Pˇ\]W . Therefore Theorem 4 may be interpreted as saying that H ≃ Rep LG(C). It
+
+follows then that the
+
+homomorphisms H → C are nothing but the semi-simple conjugacy classes of LG(C). Indeed, if γ is a semi-simple conjugacy class in LG(C), then we attach to it a
+
+one-dimensional representation of Rep LG ≃ H by the formula [V ] 7→ Tr(γ,V ). This is the key step towards formulating the Langlands correspondence for
+
+arbitrary reductive groups. Let us
+
+summarize: Theorem 5. The spherical Hecke algebra H(G(F),G(O)) is isomorphic to the complexified representation ring Rep LG(C) where LG(C) is the Langlands dual
+
+group to G. There is a bijection between Spec H(G(F),G(O)), i.e., the set of homomorphisms H(G(F),G(O)) → C, and the set of semi-simple conjugacy classes in
+
+LG(C).
+
+\[
+
+5.3. The Langlands correspondence for an arbitrary reductive group. Now we can formulate for an arbitrary reductive group G an analogue of the compatibility
+
+stateN ment in the Langlands correspondence Theorem_1 for GLn. Namely, suppose that \pi =
+
+### ′
+
+x∈X πx is a cuspidal automorphic representation of G(A). For all but finitely many x ∈ X the representation πx of G(Fx) is unramified, i.e., the space of
+
+G(Ox)-invariants in πx is non-zero. One shows that in this case the space of G(Ox)-invariants is onedimensional, generated by a non-zero vector vx, and Hx acts
+
+on it by the formula fx · vx = φ(fx)vx, fx ∈ Hx, where φ is a homomorphism Hx → C. By Theorem_5, φ corresponds to a semi-simple conjugacy class γx in LG(C).
+
+Thus, we attach to an automorphic representation a collection {γx} of semi-simple conjugacy classes in LG(C) for almost all points of X. For example, if G =
+
+GLn, then a semi-simple conjugacy class γx in LGLn(C) = GLn(C) is the same as an unordered_n-tuple of non-zero complex numbers. In Sect. 2.3 we saw that such a
+
+collection (z1(πx),... ,zn(πx)) indeed encoded the eigenvalues of the Hecke operators. Now we see that for a general group G the eigenvalues of the Hecke
+
+algebra Hx are encoded by a semi-simple conjugacy class γx in the Langlands dual group LG(C).
+
+Therefore on the other side of the Langlands correspondence we need some sort of Galois data which would also involve such conjugacy classes. Up to now we have
+
+worked with complex valued functions on G(F), but when trying to formulate the global Langlands correspondence, we should replace C by Q\ell
+
+, and in particular, consider the Langlands dual
+
+group over Q\ell
+
+, just as we did before for GLn (see the discussion after Theorem 1).
+
+One candidate for the Galois parameters of automorphic representations that immediately comes to mind is a homomorphism
+
+### σ : Gal(F/F) → LG(Q\ell),
+
+\[
+
+which is almost everywhere unramified. Then we may attach to \sigma a collection of conjugacy classes {\sigma(Frx)} of LG(Q\ell) at almost all points x \in X,
+
+and those are precisely the parameters of the irreducible unramified representations of the local factors G(Fx) of
+
+\]
+
+### 60  EDWARD FRENKEL
+
+\[
+
+G(A), by the Satake isomorphism. Thus, if \sigma is everywhere unramified, we obtain for each x \in X an irreducible representation \pi x of G(Fx), and their
+
+restricted tensor product is an irreducible representation of G(A) attached to \sigma, which we hope to be automorphic, in the appropriate sense.
+
+\]
+
+So in the first approximation we may formulate the Langlands correspondence for general reductive groups as a correspondence between automorphic representations
+
+of G(A)
+
+and Galois homomorphisms Gal(F/F) → LG(Q\ell) which satisfies the following compatibility condition: if π corresponds to σ, then the LG-conjugacy classes
+
+attached to π through
+
+the action of the Hecke algebra are the same as the Frobenius LG-conjugacy classes attached to σ.
+
+Unfortunately, the situation is not as clear-cut as in the case of GLn because many of the results which facilitate the Langlands correspondence for GLn are no
+
+longer true in general. For instance, it is not true in general that the collection of the Hecke conjugacy classes determines the automorphic representation
+
+uniquely or that the collection of
+
+the Frobenius conjugacy classes determines the Galois representation uniquely. For this reason one expects that to a Galois representation corresponds not a
+
+single automorphic representation but a finite set of those (an “L-packet” or an “A-packet”). Moreover, the multiplicities of automorphic representations in the
+
+space of functions on G(F)\\G(A) can now be greater than_1, unlike the case of GLn. Therefore even the statement of the Langlands conjecture becomes a much
+
+more subtle issue for a general reductive group (see \[63\]).
+
+However, the main idea appears to be correct: we expect that there is a relationship, still very mysterious, between automorphic representations of G(A) and
+
+homomorphisms from the Galois group Gal(F/F) to the Langlands dual group LG.
+
+We are not going to explore in this survey the subtle issues related to a more precise formulation of this relationship.44 Rather, in the hope of gaining some
+
+insight into this mystery, we would like to formulate a geometric analogue of this relationship. The first step is to develop a geometric version of the Satake
+
+isomorphism.
+
+5.4. Categorification of the spherical Hecke algebra. Let us look at the isomorphism of Theorem_4 more closely. It is useful to change our notation at this
+
+point and denote the weight lattice of LG by P (that used to be Pˇ before) and the coweight lattice of LG by Pˇ (that used to be P before). Accordingly, we will
+
+denote the weights of LG by λ, etc., and not λˇ, etc., as before. We will again suppress the subscript x in our notation. As we saw in the previous section,
+
+the spherical Hecke algebra H has a basis {cλ}λ∈P+
+
+,
+
+where cλ is the characteristic function of the double coset G(O)λ(t)G(O) ⊂ G. On the other hand, Rep LG also has a basis labeled by the set P+ of dominant
+
+weights of LG. It consists of the classes [Vλ], where Vλ is the irreducible representation with highest weight λ. However, under the Satake isomorphism these
+
+bases do not coincide! Instead, we have
+
+44An even more general functoriality principle of R. Langlands asserts the existence of a relationship between automorphic representations of two ad\`elic
+
+groups H(A) and G(A), where G is split, but H is not
+
+### L H → LG (see the second reference
+
+necessarily split over F, for any given homomorphism Gal(F /F) ⋉ in \[21\] for more details). The Langlands correspondence that we discuss in this survey is the
+
+special case of the functoriality principle, corresponding to H = {1}; in this case the above homomorphism becomes Gal(F /F) → LG
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 61
+
+\[
+
+the following formula \tag{5.2}
+
+\]
+
+\[
+
+H\lambda = q X -h\rho,\lambda ˇ_i c\lambda + a\lambda \mu c\mu, a\lambda \mu \in Z+[q], \mu \in P+;\mu <\lambda where H\lambda is the image of [V\lambda] in H
+
+under the Satake isomorphism.45 This formula, which looks perplexing at first glance, actually has a remarkable geometric explanation.
+
+\]
+
+Let us consider H as the algebra of functions on the quotient G(F)/G(O) which are left invariant with respect to G(O). We have learned in Sect. 3.3 that
+
+“interesting” functions often have an interpretation as sheaves, via the Grothendieck fonctions-faisceaux dictionary. So it is natural to ask whether G(F)/G(O)
+
+is the set of Fq-points of an algebraic
+
+variety, and if so, whether Hλ is the function corresponding to a perverse sheaf on this variety. It turns out that this is indeed the case.
+
+The quotient G(F)/G(O) is the set of points of an ind-scheme Gr over Fq called the affine Grassmannian associated to G. Let PG(O) be the category of
+
+G(O)-equivariant perverse sheaves on Gr. This means that the restriction of an objects of PG(O) to each G(O)-orbit in Gr is locally constant. Because these
+
+orbits are actually simply-connected, these restrictions will then necessarily be constant. For each λ ∈ P+ we have a finitedimensional G(O)-orbit Grλ = G(O) ·
+
+λ(t)G(O) in Gr. Let Grλ be its closure in Gr. This is a finite-dimensional algebraic variety, usually singular, and it is easy to see that it is stratified by
+
+the orbits Grµ, where µ ∈ P+ are such that µ ≤ λ with respect to the usual ordering on the set of weights. As we mentioned in Sect. 3.3, an irreducible perverse

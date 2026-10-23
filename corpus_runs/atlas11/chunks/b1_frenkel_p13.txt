@@ -1,0 +1,559 @@
+As in the case of GLn discussed in Sect. 3.8, the non-triviality of cohomological grading fits nicely with the concept of Arthur’s SL2 (see \[63\]).
+
+6.2. Non-abelian Fourier-Mukai transform? In Sect. 4.4 we explained the connection between the geometric Langlands correspondence for the abelian group GL1 and
+
+the
+
+Fourier-Mukai transform (4.6) (in the context of D-modules, as proposed by Laumon and
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 67
+
+Rothstein). In fact, the Fourier-Mukai transform may be viewed as a stronger version of the geometric Langlands correspondence in the abelian case in that it
+
+assigns D-modules (more precisely, objects of the corresponding derived category) not just to individual rank one local systems on X (viewed as skyscraper
+
+sheaves on the moduli space Loc1 of such local systems), but also to more arbitrary O-modules on Loc1. Moreover, this assignment is an equivalence of derived
+
+categories, which may be viewed as a “spectral decomposition” of the derived category of D-modules on Jac. It is therefore natural to look for a similar
+
+stronger version of the geometric Langlands correspondence for other reductive groups - a kind of non-abelian Fourier-Mukai transform. The discussion below
+
+follows the ideas of Beilinson and Drinfeld.
+
+Naively, we expect a non-abelian Fourier-Mukai transform to be an equivalence of derived categories
+
+derived category of
+
+(6.3)  derived category of
+
+### ←→ D-modules on Bun◦
+
+### O-modules on LocLG
+
+G
+
+where LocLG is the moduli stack of LG-local systems on X and Bun◦ G is the connected component of BunG. This equivalence should send the skyscraper sheaf on
+
+LocLG supported at the local system E to the restriction to Bun◦
+
+G of the Hecke eigensheaf AutE.
+
+If this were true, it would mean that Hecke eigensheaves provide a good “basis” in the category of D-modules on Bun◦ G, just as flat line bundles provide a good
+
+“basis” in the category of D-modules on Jac.
+
+Unfortunately, a precise formulation of such a correspondence, even as a conjecture, is not so clear because of various subtleties involved. One difficulty is
+
+the structure of LocLG. Unlike the case of LG = GL1, when all local systems have the same groups of automorphisms (namely, C ×), for a general group LG the
+
+groups of automorphisms are different for different local systems, and so LocLG is a complicated stack. For example, if LG is a simple Lie group of adjoint
+
+type, then a generic local system has no automorphisms, while the group of automorphisms of the trivial local system E0 is isomorphic to LG. This has to be
+
+reflected somehow in the structure of the corresponding Hecke eigensheaves. For a generic local system E we expect that there is only one, up to an isomorphism,
+
+irreducible Hecke eigensheaf with the eigenvalue E, and the category AutE of Hecke eigensheaves with this eigenvalue is equivalent to the category of vector
+
+spaces. But the category AutE0 of Hecke eigensheaves with the eigenvalue E0 is non-trivial, and it carries an action of the group LG of symmetries of E0. Some
+
+examples of Hecke eigensheaves with eigenvalue E0 that have been constructed are unbounded complexes of perverse sheaves (i.e., their cohomological degrees are
+
+unbounded). The non-abelian Fourier-Mukai transform has to reflect both the stack structure of LocLG and the complicated structure of the categories of Hecke
+
+eigensheaves such as these. In particular, it should presumably involve unbounded complexes and so the precise definition of the categories appearing in (6.3)
+
+is unclear \[62\].
+
+We may choose a slightly different perspective on the equivalence of categories (6.3)and ask about the existence of an analogue of the Poincar´e line bundle P
+
+(see Sect. 4.4) in the non-abelian case. This would be a “universal” Hecke eigensheaf PG on LocLG × BunG which comprises the Hecke eigensheaves for individual
+
+local systems. One can use such a sheaf as the “kernel” of the “integral transform” functors between the two categories
+
+### 68  EDWARD FRENKEL
+
+(6.3), the way P was used in the abelian case. If Conjecture 1 were true, then it probably would not be difficult to construct such a sheaf on Locirr is the
+
+### LG × BunG, where Locirr LG
+
+locus of irreducible LG-local systems. The main problem is how to extend it to the entire LocLG × BunG \[62\].
+
+While it is not known whether a non-abelian Fourier-Mukai transform exists, A. Beilinson and V. Drinfeld have constructed an important special case of this
+
+transform. Let us
+
+assume that G is a connected and simply-connected simple Lie group. Then this transform may be viewed as a generalization of the construction in the abelian
+
+case that was presented in Sect. 4.5. Namely, it is a functor from the category of O-modules supported on a certain affine subvariety i : OpLG(X) ֒→ LocLG,
+
+called the space of Lg-opers on X, to the category
+
+(X) may
+
+of D-modules on BunG (in this case it has only one component). Actually, OpLg be identified with the fiber p−1(FLG) of the forgetful map p : LocLG → BunLG over
+
+a particular LG-bundle described in Sect. 8.3, which plays the role that the trivial line bundle
+
+plays in the abelian case. The locus of Lg-opers in LocLG is particularly nice because local systems underlying opers are irreducible and their groups of
+
+automorphisms are trivial.
+
+We will review the Beilinson-Drinfeld construction within the framework of two-dimensional conformal field theory in Sect. 9. Their results may be interpreted
+
+as saying that
+
+the non-abelian Fourier-Mukai transform sends the O-module i∗(OOpLg ) on LocLG to
+
+### (X)
+
+the sheaf D of differential operators on BunG, considered as a left D-module (see the end of Sect. 9.5).
+
+Additional evidence for the existence of the non-abelian Fourier transform comes from certain orthogonality relations between natural sheaves on both moduli
+
+spaces that have been established in \[72, 73\].
+
+In the next section we speculate about a possible two-parameter deformation of the naive non-abelian Fourier-Mukai transform, loosely viewed as an equivalence
+
+between the derived categories of D-modules on BunG and O-modules on LocLG.
+
+6.3. A two-parameter deformation. This deformation is made possible by the realization that the above two categories are actually not that far away from each
+
+other. Indeed,
+
+first of all, observe that LocLG is the twisted cotangent bundle to Bun◦
+
+LG , a point that we
+
+already noted in the abelian case in Sect. 4.4. Indeed, a LG-local system on X is a pair (F, \nabla), where F is a (holomorphic) LG-bundle on X and \nabla is a
+
+(holomorphic) connection on F. Thus, we have a forgetful map LocLG → Bun◦ taking (F, \nabla) to F. The fiber of
+
+### LG
+
+this map over F is the space of all connections on F, which is either empty or an affine
+
+\[
+
+(X,LgF \otimes \Omega), where gF = F \times Lg. Indeed, we can
+
+\]
+
+space modeled on the vector space H0
+
+G
+
+\[
+
+(X,LgF \otimes \Omega) to any given connection on F, and all connections on add a one-form \omega \in H_0
+
+\]
+
+### F can be obtained this way.50
+
+But now observe that H0 (X, LgF \otimes Ω) is isomorphic to the cotangent space to F in Bun◦
+
+LG . Indeed, the tangent space to F is the space of infinitesimal deformations of F,
+
+(X, LgF). Therefore, by the Serre duality, the cotangent space is isomorphic to
+
+which is H1 H0 (X, Lg ∗ ∗ with g using a non-degenerate inner product on g, and
+
+### F\otimes Ω). We may identify g
+
+50These fibers could be empty; this is the case for GLn bundles which are direct sums of subbundles of non-zero degrees, for example. Nevertheless, one can
+
+still view LocLG as a twisted cotangent bundle to Bun◦ LG in the appropriate sense. I thank D. Ben-Zvi for a discussion of this point.
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 69
+
+therefore identify H0 (X, Lg ∗ (X, LgF \otimes Ω). Thus, we find that LocLG is an F \otimes Ω) with H0
+
+affine bundle over Bun◦ ∗ Bun◦
+
+LG which is modeled on the cotangent bundle T LG . Thus, if we
+
+denote the projections T ∗ Bun◦ by ˇp and ˇp ′
+
+LG → Bun◦ and LocLG → Bun◦
+
+LG LG , respectively,
+
+then we see that the sheaf ˇp ′ (OLocLG ) on Bun◦ locally looks like ˇp∗(OT ∗ Bun◦ ). Since
+
+### ∗ LG
+
+### LG
+
+the fibers of ˇp ′
+
+∗ are affine spaces, a sheaf of OLocLG -modules on LocLG is the same as a
+
+′ (OLocLG )-modules on Bun◦
+
+sheaf of ˇp
+
+∗ LG .
+
+On the other hand, consider the corresponding map for the group G, p : T ∗ Bun◦
+
+### G →
+
+Bun◦ ) is the sheaf of symbols of differential operators on Bun◦
+
+G. The corresponding sheaf p∗(OT ∗ Bun◦
+
+G
+
+\[
+
+G. This means the following. The sheaf DBun◦ carries a filtration D\le i G,i \ge 0,
+
+\]
+
+by the subsheaves of differential operators of order less than or equal to i. The corresponding associated graded sheaf L
+
+is the sheaf of symbols of differential
+
+\[
+
+i\ge 0 D\le (i+1)/D\le i
+
+\]
+
+).
+
+operators on Bun◦ G, and it is canonically isomorphic to p∗(OT ∗ Bun◦
+
+G
+
+Thus, ˇp ′ (OLocLG ) is a commutative deformation of ˇp∗(OT ∗ Bun◦ ), while DBun◦ is a
+
+### ∗ LG G
+
+). Moreover, one can include DBun◦
+
+non-commutative deformation of p∗(OT ∗ Bun◦ and
+
+### G G
+
+′ (OLocG ), where p ′
+
+p : LocG → Bun◦ G, into a two-parameter family of sheaves of associative
+
+### ∗
+
+algebras. This will enable us to speculate about a deformation of the non-abelian FourierMukai transform which will make it look more “symmetric”.
+
+The construction of this two-parameter deformation is explained in \[75\] and is in fact
+
+applicable in a rather general situation. Here we will only consider the specific case of Bun��� following \[74\].
+
+### G and Bun◦ LG
+
+Recall that we have used a non-degenerate invariant inner product ˇκ0 on Lg in order to identify Lg with Lg ∗
+
+. This inner product automatically induces a non-degenerate invariant
+
+inner product \kappa_0 on g. This is because we can identify a Cartan subalgebra of g with
+
+the dual of the Cartan subalgebra of Lg, and the invariant inner products are completely determined by their restrictions to the Cartan subalgebras. We will fix
+
+these inner products
+
+once and for all. Now, a suitable multiple kκ0 of the inner product \kappa_0 induces, in the standard way, which will be recalled in Sect. 7.5, a line bundle on
+
+Bun◦ G which we will denote by L \otimes k
+
+. The meaning of this notation is that we would like to think of L as the
+
+line bundle corresponding to κ0, even though it may not actually exist. But this will not be important to us, because we will not be interested in the line
+
+bundle itself, but in the
+
+sheaf of differential operators acting on the sections of this line bundle. The point is that if L ′ is an honest line bundle, one can make sense of the sheaf
+
+of differential operators acting
+
+′\otimes s for any complex number s (see \[75\] and Sect. 7.4 below). This is an example of
+
+on L the sheaf of twisted differential operators on Bun◦
+
+G.
+
+So we denote the sheaf of differential operators acting on L \otimes k \otimes k ).
+
+\[
+
+, where_k \in C, by D(L
+
+\]
+
+Thus, we now have a one-parameter family of sheaves of associative algebras depending
+
+\otimes k ) of differential operators
+
+\[
+
+on_k \in C. These sheaves are filtered by the subsheaves D\le i(L
+
+\]
+
+\otimes k ) is a Lie algebra
+
+\[
+
+of order less than or equal to_i. The first term of the filtration, D\le 1(L (and a Lie algebroid),which is an extension
+
+\]
+
+0 → OBun◦ \otimes k ) → ΘBun◦
+
+\[
+
+G \to D\le 1(L G \to 0,
+
+\]
+
+### 70  EDWARD FRENKEL
+
+is the tangent sheaf on Bun◦ \otimes k ) itself is nothing but the
+
+### where ΘBun◦ G. The sheaf D(L
+
+G
+
+\otimes k ) by
+
+\[
+
+quotient of the universal enveloping algebra sheaf of the Lie algebra sheaf D\le 1(L the relation identifying the unit with_1 \in OBun◦
+
+\]
+
+G .
+
+\[
+
+We now introduce a second deformation parameter \lambda \in C as follows: let D\lambda(L \otimes k)
+
+\]
+
+### ≤1
+
+\[
+
+be the Lie algebra D\le 1(L \otimes k) in which the Lie bracket is equal to the Lie bracket on D\le 1(L \otimes k) multiplied by \lambda . Then D\lambda(L
+
+\otimes k) is defined as the quotient of the universal (L \otimes k) by the relation identifying the unit with_1 \in OBun◦
+
+\]
+
+enveloping algebra of Dλ
+
+≤1 . This
+
+G
+
+\[
+
+\otimes k) for \lambda_6= 0, and D_0 (L \otimes k) is isomorphic to the
+
+\]
+
+sheaf of algebras is isomorphic to D(L
+
+).
+
+sheaf of symbols ˇp∗(OT ∗ Bun◦
+
+### LG
+
+Thus, we obtain a family of algebras parameterized by C × C. We now further extend it to CP1 × C by defining the limit as_k → ∞. In order to do this, we need to
+
+rescale the λ_i
+
+operators of order less than or equal to i by
+
+k , so that the relations are well-defined in
+
+the limit k → ∞. So we set
+
+\[
+
+\lambda_i D_k,\lambda = M \lambda(L \otimes k). k · D \le i
+
+\]
+
+### i≥0
+
+Then by definition
+
+\[
+
+D\infty,\lambda = Dk,\lambda /k-1
+
+\]
+
+· Dk,λ .
+
+Therefore we obtain a family of sheaves of algebras parameterized by CP1 × C.
+
+\[
+
+Moreover, when_k = \infty the algebra becomes commutative, and we can actually identify it with p ′ (OLoc\lambda). Here Loc\lambda^* G is by definition the
+
+moduli space of pairs (F,\nabla \lambda), where
+
+\]
+
+G
+
+\[
+
+F is a holomorphic G-bundle on X and \nabla \lambda is a holomorphic \lambda -connection on F. A \lambda connection is defined in the same way as a connection,
+
+except that locally it looks like \nabla \lambda = \lambda d + \omega . Thus, if \lambda_6= 0 a \lambda -connection is the same thing as a connection, and so
+
+Loc\lambda G ≃ LocG, whereas for \lambda_6= 0 a \lambda -connection is the same as a gF-valued one-form, and
+
+\]
+
+### so Loc0 ∗ Bun◦
+
+#### G ≃ T G.
+
+Let us summarize: we have a nice family of sheaves Dk,λ of associative algebras on Bun◦
+
+G
+
+\[
+
+parameterized by (k,\lambda) \in CP1 \times C. For \lambda_6= 0 and_k 6= \infty this is the sheaf of differential \otimes k ′ (OLocG), and for \lambda = 0 and
+
+\]
+
+operators acting on L
+
+\[
+
+. For \lambda_6= 0 and_k = \infty this is p^*
+
+\]
+
+). Thus, Dk,λ “smoothly” interpolates between these three
+
+arbitrary k this is p∗(OT ∗ Bun◦
+
+G
+
+kinds of sheaves on Bun◦
+
+G.
+
+Likewise, we have a sheaf of differential operators acting on the “line bundle” Lˇ \otimes kˇ (where Lˇ corresponds to the inner product ˇκ0) on Bun◦
+
+LG , and we define in the same way
+
+\[
+
+the family of sheaves Dˇ_k, ˇ \lambda ˇ of algebras on Bun◦ parameterized by (ˇk,\lambda ˇ) \in CP1 \times C.
+
+### LG
+
+Now, as we explained above, the naive non-abelian Fourier-Mukai transform should be
+
+viewed as an equivalence between the derived categories of D0,1 -modules on Bun◦ G and
+
+### Dˇ ∞,1
+
+-modules on Bun◦ LG . It is tempting to speculate that such an equivalence (if exists)
+
+may be extended to an equivalence51
+
+51as we will see in Sect. 8.6, there is a “quantum correction” to this equivalence: namely, k and kˇ should
+
+be shifted by the dual Coxeter numbers of G and LG
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 71
+
+derived category of
+
+(6.4)  derived category of k = ˇk −1
+
+### ←→
+
+Dˇ_k,λ ˇ Dk,λ-modules on Bun◦
+
+-modules on Bun◦ LG G
+
+In fact, in the abelian case, where the Fourier-Mukai transform exists, such a deformation also exists and has been constructed in \[76\].
+
+While the original Langlands correspondence (6.3) looks quite asymmetric: it relates flat LG-bundles on X and D-modules on Bun◦
+
+### G, the Fourier-Mukai perspective allows us
+
+to think of it as a special case of a much more symmetric picture.
+
+\[
+
+Another special case of this picture is \lambda = 0. In this case Dk,\lambda = p^*(OT^* Bun◦) and
+
+G
+
+Dˇ k −1 ), so we are talking about the equivalence between the derived
+
+,λ = ˇp∗(OT ∗ Bun◦
+
+### LG
+
+categories of O-modules on the cotangent bundles T ∗ Bun◦ ∗ Bun◦
+
+G and T LG . If G is abelian,
+
+\[
+
+this equivalence follows from the original Fourier-Mukai transform. For example, if G = LG = GL1, we have T^* Bun◦^* Bun◦ (X,\Omega), and we just apply the G =
+
+T LG = Jac \times H_0
+
+\]
+
+Fourier-Mukai transform along the first factor Jac.
+
+The above decomposition of T ∗ Bun◦
+
+G in the abelian case has an analogue in the nonabelian case as well: this is the Hitchin fibration T
+
+### ∗ Bun◦
+
+### G → HG, where HG is a vector
+
+space (see Sect. 9.5). The generic fibers of this map are abelian varieties (generalized Prym varieties of the so-called spectral curves of X). We will discuss
+
+it in more detail in Sect. 9.5 below. The point is that there is an isomorphism of vector space HG ≃ HLG. Roughly speaking, the corresponding equivalence of the
+
+categories of O-modules on T ∗ Bun◦
+
+### G and
+
+T ∗ Bun◦ should be achieved by applying a fiberwise Fourier-Mukai transform along the
+
+### LG
+
+fibers of the Hitchin fibration. However, the singular fibers complicate matters (not to mention the “empty fibers”), and as far as we know, such an equivalence
+
+has not yet been established.52 In \[78\] some results concerning this equivalence in the formal neighborhood of the point λ = 0 are obtained.
+
+6.4. D-modules are D-branes? Derived categories of coherent O-modules on algebraic varieties have recently become staples of string theory, where objects of
+
+these categories are viewed as examples of “D-branes”. Moreover, various equivalences involving these categories have been interpreted by physicists in terms of
+
+some sort of dualities of quantum field theories. For example, homological mirror symmetry proposed by Kontsevich has been interpreted as an equivalence of the
+
+categories of D-branes in two topological string theories, type A and type B, associated to a pair of mirror dual Calabi-Yau manifolds.
+
+However, in the Langlands correspondence, and in particular in the Fourier-Mukai picture outlined in the previous section, we see the appearance of the
+
+categories of D-modules
+
+instead of (or alongside) categories of O-modules. Could D-modules also be interpreted as D-branes of some kind? An affirmative answer to this question is an

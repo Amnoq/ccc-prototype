@@ -1,0 +1,105 @@
+Small gaps between primes
+
+Small gaps between primes
+
+James Maynard
+
+Address: Centre de recherches mathématiques,
+Université de Montréal,
+Pavillon André-Aisenstadt,
+2920 Chemin de la tour, Room 5357,
+Montréal (Québec) H3T 1J4
+
+Email address: maynardj@dms.umontreal.ca
+
+Abstract.
+ 
+
+We introduce a refinement of the GPY sieve method for studying prime kk-tuples and small gaps between primes. This refinement avoids previous limitations of the method, and allows us to show that for each kk, the prime kk-tuples conjecture holds for a positive proportion of admissible kk-tuples. In particular, lim infn(pn+m−pn)<∞\liminf_{n}(p_{n+m}-p_{n})<\infty for every integer mm. We also show that lim inf(pn+1−pn)≤600\liminf(p_{n+1}-p_{n})\leq 600, and, if we assume the Elliott-Halberstam conjecture, that lim infn(pn+1−pn)≤12\liminf_{n}(p_{n+1}-p_{n})\leq 12 and lim infn(pn+2−pn)≤600\liminf_{n}(p_{n+2}-p_{n})\leq 600.
+
+ 
+
+1. Introduction
+
+We say that a set ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dotsc,h_{k}\} of distinct non-negative integers is ‘admissible’ if, for every prime pp, there is an integer apa_{p} such that ap≢h(modp)a_{p}\nequiv h\pmod{p} for all h∈ℋh\in\mathcal{H}. We are interested in the following conjecture.
+
+Conjecture (Prime kk-tuples conjecture).
+
+Let ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dots,h_{k}\} be admissible. Then there are infinitely many integers nn such that all of n+h1n+h_{1}, …\dotsc, n+hkn+h_{k} are prime.
+
+When k>1k>1 no case of the prime kk-tuples conjecture is currently known. Work on approximations to the prime kk-tuples conjecture has been very successful in showing the existence of small gaps between primes, however. In their celebrated paper [5], Goldston, Pintz and Yıldırım introduced a new method for counting tuples of primes, and this allowed them to show that
+
+(1.1)
+
+lim infnpn+1−pnlog⁡pn=0.\liminf_{n}\frac{p_{n+1}-p_{n}}{\log{p_{n}}}=0.
+
+The recent breakthrough of Zhang [9] managed to extend this work to prove
+
+(1.2)
+
+lim infn(pn+1−pn)≤70 000 000,\liminf_{n}(p_{n+1}-p_{n})\leq$70\,000\,000$,
+
+thereby establishing for the first time the existence of infinitely many bounded gaps between primes. Moreover, it follows from Zhang’s theorem the that number of admissible sets of size 2 contained in [1,x]2[1,x]^{2} which satisfy the prime 22-tuples conjecture is ≫x2\gg x^{2} for large xx. Thus, in this sense, a positive proportion of admissible sets of size 2 satisfy the prime 2-tuples conjecture. The recent polymath project [7] has succeeded in reducing the bound (1.2) to 4680, by optimizing Zhang’s arguments and introducing several new refinements.
+
+The above results have used the ‘GPY method’ to study prime tuples and small gaps between primes, and this method relies heavily on the distribution of primes in arithmetic progressions. Given θ>0\theta>0, we say the primes have ‘level of distribution θ\theta’11
+ 1
+ 
+ 
+ 
+ We note that different authors have given slightly different names or definitions to this concept. For the purposes of this paper, (1.3) will be our definition of the primes having level of distribution θ\theta. if, for every A>0A>0, we have
+
+(1.3)
+
+∑q≤xθmax(a,q)=1|π(x;q,a)−π⁡(x)φ⁡(q)|≪Ax(log⁡x)A.\sum_{q\leq x^{\theta}}\max_{(a,q)=1}\Bigl|\pi(x;q,a)-\frac{\pi(x)}{\varphi(q)}\Bigr|\ll_{A}\frac{x}{(\log{x})^{A}}.
+
+The Bombieri-Vinogradov theorem establishes that the primes have level of distribution θ\theta for every θ<1/2\theta<1/2, and Elliott and Halberstam [1] conjectured that this could be extended to every θ<1\theta<1. Friedlander and Granville [2] have shown that (1.3) cannot hold with xθx^{\theta} replaced with x/(log⁡x)Bx/(\log{x})^{B} for any fixed BB, and so the Elliott-Halberstam conjecture is essentially the strongest possible result of this type.
+
+The original work of Goldston, Pintz and Yıldırım showed the existence of bounded gaps between primes if (1.3) holds for some θ>1/2\theta>1/2. Moreover, under the Elliott-Halberstam conjecture one had lim infn(pn+1−pn)≤16\liminf_{n}(p_{n+1}-p_{n})\leq 16. The key breakthrough of Zhang’s work was in establishing that a slightly weakened form of (1.3) holds for some θ>1/2\theta>1/2.
+
+If one looks for bounded length intervals containing two or more primes, then the GPY method fails to prove such strong results. Unconditionally we are only able to improve upon the trivial bound from the prime number theorem by a constant factor [4], and even assuming the Elliott-Halberstam conjecture, the best available result [5] is
+
+(1.4)
+
+lim infnpn+2−pnlog⁡pn=0.\liminf_{n}\frac{p_{n+2}-p_{n}}{\log{p_{n}}}=0.
+
+The aim of this paper is to introduce a refinement of the GPY method which removes the barrier of θ=1/2\theta=1/2 to establishing bounded gaps between primes, and allows us to show the existence of arbitrarily many primes in bounded length intervals. This answers the second and third questions posed in [5] on extensions of the GPY method (the first having been answered by Zhang’s result). Our new method also has the benefit that it produces numerically superior results to previous approaches.
+
+Theorem 1.1.
+
+Let m∈ℕm\in\mathbb{N}. We have
+
+lim infn(pn+m−pn)≪m3​e4​m.\liminf_{n}(p_{n+m}-p_{n})\ll m^{3}e^{4m}.
+
+Terence Tao (private communication) has independently proven Theorem 1.1 (with a slightly weaker bound) at much the same time. He uses a similar method; the steps are more-or-less the same but the calculations are done differently. We will indicate some of the differences in our proofs as we go along.
+
+We see that the bound in Theorem 1.1 is quite far from the conjectural bound of approximately m​log⁡mm\log{m} predicted by the prime mm-tuples conjecture.
+
+Our proof naturally generalizes (but with a weaker upper bound) to many subsequences of the primes which have a level of distribution θ>0\theta>0. For example, we can show corresponding results where the primes are contained in short intervals [N,N+N7/12+ϵ][N,N+N^{7/12+\epsilon}] for any ϵ>0\epsilon>0 or in an arithmetic progression modulo q≪(log⁡N)Aq\ll(\log{N})^{A}. In particular, our method gives results for simultaneously prime values of linear functions, which might have specific interest. Given kk distinct linear functions Li​(n)=ai​n+biL_{i}(n)=a_{i}n+b_{i} (1≤i≤k1\leq i\leq k) with positive integer coefficients such that the product function Π⁡(n)=∏i=1kLi​(n)\Pi(n)=\prod_{i=1}^{k}L_{i}(n) has no fixed prime divisor, the method presented here shows that there are infinitely many integers nn such that at least (1/4+ok→∞​(1))​log⁡k(1/4+o_{k\rightarrow\infty}(1))\log{k} of the Li​(n)L_{i}(n) are prime.
+
+Theorem 1.2.
+
+Let m∈ℕm\in\mathbb{N}. Let r∈ℕr\in\mathbb{N} be sufficiently large depending on mm, and let 𝒜={a1,a2,…,ar}\mathcal{A}=\{a_{1},a_{2},\dotsc,a_{r}\} be a set of rr distinct integers. Then we have
+
+#⁡{{h1,…,hm}⊆𝒜:for infinitely many n all of n+h1, …, n+hm are prime}#{{h1,…,hm}⊆𝒜}≫m1.\frac{\#\{\{h_{1},\dotsc,h_{m}\}\subseteq\mathcal{A}:\text{for infinitely many $n$ all of $n+h_{1}$, $\dotsc$, $n+h_{m}$ are prime}\}}{\#\{\{h_{1},\dotsc,h_{m}\}\subseteq\mathcal{A}\}}\gg_{m}1.
+
+Thus a positive proportion of admissible mm-tuples satisfy the prime mm-tuples conjecture for every mm, in an appropriate sense.
+
+Theorem 1.3.
+
+We have
+
+lim infn(pn+1−pn)≤600.\liminf_{n}(p_{n+1}-p_{n})\leq 600.
+
+We emphasize that the above result does not incorporate any of the technology used by Zhang to establish the existence of bounded gaps between primes. The proof is essentially elementary, relying only on the Bombieri-Vinogradov theorem. Naturally, if we assume that the primes have a higher level of distribution, then we can obtain stronger results.
+
+Theorem 1.4.
+
+Assume that the primes have level of distribution θ\theta for every θ<1\theta<1. Then
+
+lim infn(pn+1−pn)\displaystyle\liminf_{n}(p_{n+1}-p_{n})
+≤12,\displaystyle\leq 12,
+
+lim infn(pn+2−pn)\displaystyle\liminf_{n}(p_{n+2}-p_{n})
+≤600.\displaystyle\leq 600.
+
+Although the constant 1212 of Theorem 1.4 appears to be optimal with our method in its current form, the constant 600600 appearing in Theorem 1.3 and Theorem 1.4 is certainly not optimal. By performing further numerical calculations our method could produce a better bound, and also most of the ideas of Zhang’s work (and the refinements produced by the polymath project) should be able to be combined with this method to reduce the constant further. We comment that the assumption of the Elliott-Halberstam conjecture allows us to improve the bound on Theorem 1.1 to O⁡(m3​e2​m)O(m^{3}e^{2m}).

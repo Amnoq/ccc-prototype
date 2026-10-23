@@ -1,0 +1,282 @@
+## Node 11h — log-lattice xp: CLOSED BY ANALYSIS (2026-10-05)
+Sequential follow-up to 11g's cause of death (uniform lattice breaks
+dilation symmetry). The faithful repair is the log-uniform lattice
+x_j=x0·q^j — uniform in u_j=log x_j, where dilations act as
+translations — with H=(xp+px)/2 discretized in u.
+- KEY ANALYTIC FACT: (xp+px)/2 = -i(x∂_x+1/2), and the unitary
+  (Uψ)(u)=e^{u/2}ψ(e^u) : L²(ℝ⁺,dx)→L²(ℝ,du) satisfies
+  U[(xp+px)/2]U⁻¹ = -i∂_u exactly. The bare operator IS free momentum
+  in log coordinates — unitarily trivial.
+- Hence the faithful discretization (uniform u-lattice, Fourier p_u,
+  periodic/toroidal u — the letter's toroidal requirement) has EXACT
+  ladder spectrum {2πn/Δu} by construction: the Fourier derivative's
+  eigenvalues are exactly the k_n, no diagonalization needed. No
+  fluctuations, no tones — analytically, not numerically.
+- This sharpens 11g: not merely "wrong lattice" — every
+  dilation-faithful discretization of bare xp is (approximately) ring
+  momentum, hence (approximately) ladder. 11g's chirped ladder is the
+  uniform lattice's broken version of this exact ladder.
+- MORAL (in the literature; now earned here): the prime content of
+  the BK story was never in the bare operator's spectrum. It lives
+  entirely in the regularization — the cutoff boundary conditions /
+  self-adjoint-extension choice. The periodic-u regulator gives an
+  integrable ladder; a Sierra-style scattering-cutoff regulator is a
+  different spectral problem and a different node.
+- VERDICT: Node 11h CLOSED by analysis. If the hunt continues on xp,
+  the next sequential node is the regularization node (cutoff + BCs
+  as the operator) — new design choices, user's call. [exact theorem:
+  unitary equivalence and ladder; heuristic: which regulator, if any,
+  carries prime content]
+
+## Node 11i — Sierra deformed-xp regularization: SMOOTH PASS, TONES ABSENT (2026-10-05)
+The regularization node, implemented FAITHFULLY from the primary
+source (Sierra & Rodriguez-Laguna, arXiv:1102.5356, PRL 106, 200201
+(2011)) — equations extracted from the PDF via the arXiv HTML
+rendering, not from paraphrase.
+- Operator: Hh = x^{1/2}(ph + l_p^2/ph^{-1})x^{1/2} on x>=l_x,
+  nonlocal BC (eq.11), U(1) self-adjoint-extension family (angle th);
+  spectrum = roots E_n of (eq.14)
+  Xh(E) = e^{-ith/2}K_{1/2+iE/2}(2pi) + e^{+ith/2}K_{1/2-iE/2}(2pi) = 0,
+  with h = l_x*l_p = 2pi, hbar = 1, th = pi/4 (the paper's
+  Riemann-matching choice; half-integer rule). K-Bessel via mpmath
+  (complex order; scipy kv has no complex-order ufunc). Xh(E) is real
+  (2 Re[...]); roots in +/- pairs. 1516 positive roots below E=2000,
+  first at 19.1504 (cf. first zero 14.1347 — average match, not
+  positional).
+- FINDING (a) smooth counting: N(E) matches Riemann-von Mangoldt
+  (E/2pi)(log(E/2pi)-1)+7/8 to 0.07% —
+  E=100: 28 vs 29.0; 500: 269 vs 269.6; 1000: 648 vs 648.6;
+  2000: 1516 vs 1517.0. The PRL's Fig.3 claim is computationally
+  CONFIRMED. (Does not match my algebraic reading of the paper's
+  eq.(16) as transcribed — the roots are ground truth; the
+  transcription discrepancy is noted, not resolved.)
+- FINDING (b) tones: ABSENT. Mean z=-0.66 at the 23 prime-power
+  freqs, max z=-0.42; all 7 letter tones at z=-0.68 (periodogram
+  floor — the residual carries no power at any prime frequency).
+  Below the shuffled control (-0.02). Analytic reason: the
+  quantization condition contains only the K-Bessel function — no
+  prime content can enter — and the computation confirms it.
+- VERDICT: the best published xp-regularization has the RIGHT smooth
+  counting but NO tones. With 11g (naive discretization dead) and
+  11h (bare operator unitarily trivial), the xp FAMILY is exhausted:
+  no xp variant carries the tones. This matches Berry and Keating's
+  own 2011 conclusion ("this absence of connection with the primes
+  is shared by all variants of xp," Sierra slides). The operator
+  hunt must leave xp; the live candidate remains 11f (CCM).
+  [computationally verified]
+- Scripts: node11i_sierra.py; outputs node11i_sierra.json/png.
+
+## Node 11j — CCM prime-load mapping: hierarchy measured (2026-10-05)
+Sequential follow-up to 11f's failure-modes pilot (which dropped only
+p=2,3,5). Question: which prime powers in W_p are load-bearing for zero
+recovery, and does the measured hierarchy match the explicit-formula
+weights w(k)=Lambda(k)/sqrt(k)?
+- Method: c=13, N=20, dps=80 (11f pilot scale). W_p is LINEAR in prime-
+  power contributions: precomputed prime-free base (W02-WR) and each
+  Q^{(k)} once (even-projected), then 15 ablations as fast matrix sums
+  + inverse iteration. Baseline: eps=1.57e-39, root err 1.8e-15.
+  Re-run bit-identical.
+- FINDING 1 (hierarchy): load is monotone DECREASING in k, NOT
+  proportional to Lambda(k)/sqrt(k) — in fact anti-correlated.
+  Single-power drops (root err): k=2: 13.3 DESTROYED; k=3: 11.2
+  DESTROYED; k=4: 4.62 DAMAGED; k=5: 0.072 survives; k=7: 4e-11;
+  k=8,9,11,13: ~1e-15 unaffected. By w(k) the ranking would be
+  7,11,5,13,3,2,9,4,8 — the measured order is nearly the reverse.
+  The smallest prime powers carry the load; k>=7 are dispensable
+  for the first zero. Prime-power effect: within p=2, it is 2 and 4
+  that matter, not 8.
+- FINDING 2 (decoupling): zero recovery is MORE robust than the tiny-
+  eigenvalue positivity. Dropping k=5,7,11 drives eps NEGATIVE
+  (-4e-4, -3e-14, -3e-32) — breaking the variational positivity —
+  while the root survives (err 0.072, 4e-11, 1e-15). Refines 11f's
+  "zeros AND positivity both require precise prime arithmetic":
+  they decouple; the zero position is sturdier than the positivity.
+- Interpretation: the fragility is STRUCTURED (hierarchical by k),
+  not random. The machine's prime-sensitivity follows the
+  small-prime-power dominance of the explicit formula's low-zero
+  regime — but via k-ordering, not the naive per-term weight.
+  [computationally verified]
+- Scripts: node11j_loadmap.py; output node11j_loadmap.json.
+
+## Node 11k — prime-load hierarchy vs zero index: HIERARCHICAL (2026-10-05)
+Sequential follow-up to 11j (load map for zero 1 only). Question: does
+the monotone-in-k hierarchy hold for higher zeros, or shift with zero
+index?
+- Method: c=13, N=20, dps=80; first 5 xihat roots per ablation
+  (baseline errs <4e-11, validated vs true zeros 1-5); same 15
+  ablations as 11j. Script node11k_zeroload.py; output
+  node11k_zeroload.json.
+- FINDING: the hierarchy SHIFTS — the machine resolves zeros
+  hierarchically from prime data. k=2,3 destroy ALL five zeros
+  (universal, err 11-19). k=4 damages zero 1 most (4.6) but higher
+  zeros less (0.1-0.2). k=5: err grows 0.072 (z1) -> 2.2 (z5).
+  k=7: err grows 4e-11 (z1) -> 8.6e-05 (z5) — dispensable for zero 1,
+  load-bearing for zero 5. k=8,9,11,13: tiny but monotonically
+  growing with zero index. The "load frontier" moves right as zero
+  index rises: low zeros need small prime powers; higher zeros
+  additionally need larger ones (finer log-k sampling for
+  higher-frequency structure).
+- Interpretation: mirrors the explicit formula's architecture —
+  now measured, not assumed. The machine does not just report zeros;
+  it resolves them hierarchically from the prime data.
+  [computationally verified]
+
+## Node 11l — prime-orbit quantum graph: MECHANISM CONFIRMED (2026-10-05)
+Tests Berry-Keating's epitaph for xp ("a single primitive periodic
+orbit for each energy E" vs "a family of primitive orbits labelled by
+primes p, with periods log p"): does the prime-orbit mechanism itself
+produce tones?
+- Construction: Kirchhoff rose graph, R=8 loops of lengths
+  L_j=log p_j (p=2..19). Primes enter ONLY as geometry (D12-style
+  audit); spectrum computed independently via secular equation.
+  Spectrum: vertex sector (1015 roots of smooth G(k)=0) + Dirichlet
+  sector (1020 exact levels k=2 pi m/L_j). 2035 levels, k<=400.
+- FINDING (full spectrum): tones at loop primes (mean z=2.35),
+  NOT at non-loop primes 23..47 (mean z=-0.30, built-in negative
+  controls); GUE/shuffled controls flat (<=0.6). Max z=9.14.
+- FINDING (sectors separated): vertex sector ALONE shows tones
+  (loop 4.02 vs non-loop -0.37, max 10.84) — genuine trace-formula
+  orbit interference, no picket fences. Dirichlet sector ALONE shows
+  even stronger tones (13.50 vs -0.62, max 24.82) — exact ladders
+  with spacing 2 pi/log p give sawtooth harmonics at n log p/2 pi.
+  Two distinct routes, same prime imprint.
+- Interpretation: the prime-orbit mechanism WORKS. xp failed (11g/h/i)
+  because it has no prime orbits; endow a system with prime-labeled
+  closed orbits and the spectrum carries prime tones. This is also
+  the POSITIVE control for the tone probe — validating that the
+  11g/11i negatives are real absences, not probe blindness.
+- Honest boundary: primes are input as geometry; this tests the
+  orbit->tone mechanism, not the origin of primes. The operator hunt
+  still needs the actual operator — but now knows what structure it
+  must have (prime-labeled closed orbits).
+  [computationally verified]
+- Scripts: node11l_graph.py; outputs node11l_graph.json/png.
+
+## Node 11m — Deninger program, primary-source assessment: STRUCTURE REAL, OPERATOR CONJECTURAL (2026-10-05)
+Theory node (no computation), opened on the user's "Let's do it" after
+11l. Question: what does Deninger's program actually contain — theorem
+vs conjecture — and how does it relate to 11l's verified mechanism?
+Sources read directly: arXiv:1807.06400 (2018; publ. Indag. Math. 2026,
+37(1), 25-136) and expository arXiv:2301.11643 (2023).
+- EXISTS [exact theorem]: Deninger CONSTRUCTED the dynamical system
+  (X_0, phi^t) via rational Witt vectors and suspension. Thm 6.1:
+  closed points of X_0 <-> compact packets Gamma_{x_0} of periodic
+  orbits, all of length log N(x_0). For Spec Z: orbits gamma_p <->
+  primes p, l(gamma_p) = log p. The "primes as closed orbits" picture
+  is a theorem (2026), not a metaphor. One-codimensional foliation F
+  from the suspension; the 3D Riemann-surface-lamination subsystem
+  Y_0 for Spec Z is OPEN (v4 section 6 asks for it explicitly).
+- TRACE FORMULA [exact theorem, foliation setting]: the transversal
+  index theorem (Kop06/11): 1 - sum_rho e^{t rho} + e^{alpha t} =
+  sum_gamma l(gamma) sum_{k>=1} +- delta_{k l(gamma)}, the exact
+  analogue of Weil's explicit formula 1 - sum_rho e^{t rho} + e^t =
+  sum_p log p sum_{k>=1} delta_{k log p} + (1-e^{-2t})^{-1}.
+- OPERATOR Theta [conjectural]: infinitesimal generator of the
+  R-action on leafwise harmonic L^2-forms (foliation cohomology).
+  Conjectured eigenvalues = zeta zeros/poles; RH analogue = Re rho =
+  1/2 (needs conformal factor alpha=1; smooth compact manifolds force
+  alpha=0). Still open: Ruelle zeta = Hasse-Weil zeta (needs all
+  Fuller indices = 1); the cohomology itself; the 3D subsystem.
+- 11l RELATION [heuristic, structurally grounded]: 11l and Deninger
+  are the same structural hypothesis at two levels. 11l: prime orbits
+  -> trace formula -> spectral TONES [computationally verified].
+  Deninger: prime orbits [theorem] -> transversal index [theorem] ->
+  (conjecturally) ZEROS as spectrum of Theta. 11l is the computable
+  proof of concept for Deninger's hypothesis: the orbit->spectrum
+  machinery works when prime-orbit geometry is present.
+- Honest boundaries: (i) 11l tests orbit->tone (fluctuations), not
+  orbit->zero (eigenvalues) — Deninger's claim is strictly stronger;
+  11l validates the mechanism, not the conjecture. (ii) This node
+  yields NO computable operator: Theta acts on a cohomology that does
+  not exist yet. Per D8, no toy "Deninger-like" operator is built.
+- Verdict: the path forward stays computational via finite analogues
+  (11l-style) and the function-field template (Weil, complete). The
+  operator hunt now knows the structure it needs (prime-labeled
+  closed orbits) AND that the structure is real arithmetic geometry,
+  not analogy. Full assessment: node11m_deninger.md.
+
+## Node 11n — geometry control (random loop lengths): MECHANISM IS GEOMETRIC, with interference refinement (2026-10-05)
+Control for 11l's confound (loops were prime-labeled). Same Kirchhoff
+rose (R=8), same probe, but loop lengths RANDOM IRRATIONAL in
+[4.2,6.0] (seed 7) -- fundamentals in the virgin band [0.67,0.95],
+all prime-power freqs <=0.62, min separation 0.0506. No arithmetic
+enters. Prediction: tones at loop freqs, silence at primes.
+- Merged spectrum (5190 levels): loop mean z=0.24 (max 1.02), prime
+  mean z=-0.08. NAIVE verdict would be negative -- but sector
+  decomposition decides otherwise.
+- Dirichlet sector ALONE (2654 levels): loop mean z=26.06, max 61.13;
+  prime mean z=-0.42. The mechanism is PURELY GEOMETRIC: exact
+  picket-fence ladders put tones at whatever the loop lengths are,
+  prime or random. Raw P~0.078 at loop freqs, consistent across all 8.
+- Vertex sector ALONE (2536 roots): loop mean z=0.15 (max 1.01) --
+  silent, unlike 11l's vertex (4.02). The vertex (trace-formula)
+  route is LENGTH-DEPENDENT: sings for short prime-log loops, silent
+  for long random loops.
+- Merged raw P at loop freqs ~0.002 -- BELOW both Dirichlet (~0.078)
+  and vertex (~0.007) alone: DESTRUCTIVE vertex-Dirichlet
+  interference at the loop frequencies (vertex-scattered orbit
+  amplitude has opposite sign to the Dirichlet-confined contribution
+  at the same length). Tone observability in a merged spectrum is
+  controlled by this interference, not just by the mechanism.
+- Verdict: 11n PASSES its discriminating test -- the tone mechanism
+  is geometric, not prime-specific (Dirichlet route, z=26, primes
+  silent). Refinement: 11l's vertex tones and merged tones came from
+  the short-loop regime; the vertex route's length dependence is now
+  a precise open question. Does NOT retroactively falsify 11l (its
+  spectrum sang in all sectors); it bounds the regime.
+  [computationally verified]
+- Scripts: node11n_control.py; outputs node11n_control.json/png
+  (json includes sector_decomposition).
+
+## Node 11o -- vertex length dependence: LENGTH, not arithmetic (2026-10-05)
+Follow-up to 11n's puzzle (vertex sang for short prime-log loops,
+silent for long random loops). Design: scale 11l's lengths by
+c in {0.5,1,2,4} -- ratios (arithmetic structure) preserved, absolute
+length alone varied. H1: vertex tone z decays with c. H2: flat with c.
+- Vertex sector loop mean z: c=0.5 -> 5.54 (max 18.5); c=1 -> 2.57
+  (max 9.9); c=2 -> 0.66 (max 3.1); c=4 -> -0.03 (max 0.10, silent).
+  MONOTONIC DECAY. H1 confirmed; H2 dead. It is length, pure.
+- Dirichlet control (positive): 7.40 -> 13.31 -> 22.73 -> 33.56 --
+  sings at every scale (probe honest). GUE at c=1 flat (-0.03).
+  Non-loop primes silent at every scale (all <= -0.08).
+- 11n explained: its loops ([4.2,6.0]) sit at ~2.5-3.5x 11l scale,
+  where the decay curve gives z~0.3 -- consistent with measured 0.15.
+- Physical reading: the vertex fundamental tone has fixed absolute
+  amplitude (set by the vertex scattering amplitude sigma); the
+  background fluctuation variance grows with scale (more levels and
+  resolved orbits in the window), so normalized detectability decays.
+  The vertex (trace-formula) route is a SHORT-orbit phenomenon.
+- Consequence for the hunt: the physical regime we care about --
+  loops of length log p (short) -- is exactly where the vertex route
+  sings loudest. 11l's regime, not 11n's, is the zeta-relevant one.
+  [computationally verified]
+- Scripts: node11o_scale.py; outputs node11o_scale.json/png.
+
+## CORRECTION to Nodes 11n and 11o (2026-10-05) -- numerical artifact found and fixed
+The user's question ("what sets the vertex route's length dependence?")
+prompted a stress test that overturned both verdicts. Root cause: the
+vertex root-finder used a FIXED scan step (0.05) while spectral density
+grew with scale/length. At dense scales it missed closely-spaced root
+pairs (11n: 2536 found vs 2650 true; 11o c=4 similarly corrupted).
+Missing ~4.5% of roots -- specifically close pairs -- collapsed tone
+z-scores catastrophically (0.15 vs 9.58). The "length dependence" and
+the "destructive vertex-Dirichlet interference" were both artifacts of
+corrupted spectra, not physics.
+- 11n CORRECTED (fine scan 0.01; 5304/5315 Weyl = 99.8% complete):
+  vertex alone loop z=9.58 (max 30.38); Dirichlet alone 26.06;
+  MERGED loop z=13.82 (max 39.63); primes silent (-0.17) throughout.
+  FULL PASS, no interference: random irrational loops sing in every
+  sector. The mechanism is purely geometric and robust.
+- 11o CORRECTED (exact roots via G(k;cL)=G(ck;L), so k_n(c)=k_n(1)/c
+  -- no root-finding at all): vertex loop z = 5.95 (c=0.5), 2.57
+  (c=1), 1.87 (c=2), 2.06 (c=4), 2.17 (c=8). FLAT -- the vertex route
+  is SCALE-INVARIANT. There is no length dependence.
+- Answer to the user's question: nothing sets it -- there is no
+  vertex length dependence. The vertex (trace-formula) route is
+  scale-invariant and geometry-independent (prime-log and random
+  lengths alike). The Dirichlet route was never in doubt.
+- Standing lesson (AGENTS.md-worthy): root-finder scan step must
+  scale with spectral density; a "clean" total count (97%+) can still
+  hide tone-killing defects when the missing roots are close pairs.
+  11l unaffected (c=1 roots sparse vs scan step; exact-scaling test
+  independently confirms the mechanism). [computationally verified]

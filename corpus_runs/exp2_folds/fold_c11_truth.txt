@@ -1,0 +1,932 @@
+=== V11_000 sim=0.511
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E009 c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    aliases: c06/c15: Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    ent_notes: |w({2})|=(log2)/2≈0.347 ≠ ±1; residues quantized; 0-dim residue ∈ {±1,0}
+
+=== V11_001 sim=0.455
+  HELD [c8] PNT as total weight 1: no prior art
+    held_note: reframes PNT, does not reprove
+  ENT [F11E015 c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    aliases: c02/c9: Σw(S) → 1 as X→∞, equivalent to PNT; c07/c10: weighted infinite simplex total weight 1 = PNT
+    ent_notes: 0.999922 at 5·10⁵; PNT as total weight 1; S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+
+=== V11_002 sim=0.438
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E090 c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    ent_notes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+
+=== V11_003 sim=0.424
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E002 c01/c11] Node 11 operator hunt OPEN, CCM live candidate
+    ent_notes: Berry–Keating conjectural; Möbius-band claim withdrawn
+
+=== V11_004 sim=0.379
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E008 c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c06/c20: K-theoretic home: face-weights as F_z'(1) differentiated residues
+    ent_notes: face-weights = differentiated residues; closes D4↔D6 loop; primes-only input as Chern roots −u log p
+
+=== V11_005 sim=0.355
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E088 c06/c16] Ordinary AHBL positive geometry, residues ±1
+    ent_notes: killed by theorem; signs OK, magnitudes impossible
+
+=== V11_006 sim=0.323
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E004 c01/c13] Λ=μ∗log exact fuel dictionary
+    ent_notes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ
+
+=== V11_007 sim=0.289
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E144 c10/c7] Heisenberg probe negative on three panels; 65,401 eigenvalues
+    ent_notes: 65,401 eigenvalues; negative on three panels
+
+=== V11_008 sim=0.265
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E091 c06/c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    ent_notes: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+
+=== V11_009 sim=0.240
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E109 c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    ent_notes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V11_010 sim=0.239
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E009 c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    aliases: c06/c15: Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    ent_notes: |w({2})|=(log2)/2≈0.347 ≠ ±1; residues quantized; 0-dim residue ∈ {±1,0}
+
+=== V11_011 sim=0.223
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E043 c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    ent_notes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V11_012 sim=0.216
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E088 c06/c16] Ordinary AHBL positive geometry, residues ±1
+    ent_notes: killed by theorem; signs OK, magnitudes impossible
+
+=== V11_013 sim=0.209
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_014 sim=0.201
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E032 c02/c7] no known positive region for the sieve
+    aliases: c07/c5: no positive region in finite complex; cutoff-N dependent
+    ent_notes: no known positive region; gap stands; Betti [74,101,26,0] at N=1000; killed naive hope
+
+=== V11_015 sim=0.195
+  HELD [c11] spectral program 13d/13e: no prior art
+    held_note: interacting Hamiltonians + GUE/Poisson probes
+  ENT [F11E134 c10/c13] H_int spacings Poisson: <r> 0.459-0.400, not GUE
+    ent_notes: z<=29 dim<=1024; <r> 0.459-0.419 vs Poisson 0.386
+
+=== V11_016 sim=0.187
+  HELD [c10] fermionic prime Fock: independent prior art exists
+    held_note: goldenphysicsproject 2026 GitHub; Lean CAR formalized
+  ENT [F11E132 c10/c11] sieve faces Delta_z = fermionic Fock basis over primes <=z
+    ent_notes: exact identification; native, not imported
+
+=== V11_017 sim=0.186
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E114 c09/c13] Top target: reimplement CCM from prime Euler products alone
+    ent_notes: queued: verify spectral coincidence, audit zero-fitting
+
+=== V11_018 sim=0.178
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E004 c01/c13] Λ=μ∗log exact fuel dictionary
+    ent_notes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ
+
+=== V11_019 sim=0.172
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E043 c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    ent_notes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V11_020 sim=0.169
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E065 c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    ent_notes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V11_021 sim=0.169
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E033 c03/c1] Sieve deformation R_p={0},{0,-2}
+    ent_notes: deformation marks R_p={0},{0,-2} residue families
+
+=== V11_022 sim=0.167
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E029 c02/c4] binary geometry rule: 1_prime + 1_shared = 1
+    ent_notes: reformulation, not new prime information
+
+=== V11_023 sim=0.166
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E080 c05/c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    ent_notes: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+
+=== V11_024 sim=0.165
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E022 c02/c12] positive region with these weights as stratum residues
+    ent_notes: sharpest question of the program (text)
+
+=== V11_025 sim=0.161
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_026 sim=0.154
+  HELD [c19] mechanism fragile: requires exact prime arithmetic
+    held_note: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+  ENT [F11E093 c06/c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    ent_notes: Figueiredo deformations move (D6) as mechanism
+
+=== V11_027 sim=0.153
+  HELD [c17] even-subspace single tiny eigenvalue eps_N=2.83e-26
+    held_note: odd block 581x larger; 8771x at N=120
+  ENT [F11E003 c01/c12] CCM recovers zeros 1–8 from primes alone
+    ent_notes: ε_even=3.48e-59 at N=120; separation 8771×
+
+=== V11_028 sim=0.149
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E017 c01/c6] Deformation → twin constant 2C₂=1.32032
+    aliases: c03/c7: Twin constant S(z)->2C_2=1.32032 derived from deformation; c07/c14: deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+    ent_notes: 2160 twin lowers verified ≤200000; conjecture itself unproven; S(z)=1.367187,1.344116,1.330277,1.322754 at z=7,13,30,100
+
+=== V11_029 sim=0.145
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E112 c09/c11] CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam²
+    ent_notes: arXiv:2511.22755; primary-source abstract verified
+
+=== V11_030 sim=0.143
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E110 c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    ent_notes: node 11 scoring template; refines 10d ledger
+
+=== V11_031 sim=0.143
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E125 c09/c5] |xi(1-sbar)|²=|xi(s)|² verified to 3.8e-16, 6 points
+    ent_notes: 3.8e-16 agreement, 6 points; exact theorem numerically confirmed
+
+=== V11_032 sim=0.141
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E043 c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    ent_notes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V11_033 sim=0.138
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E033 c03/c1] Sieve deformation R_p={0},{0,-2}
+    ent_notes: deformation marks R_p={0},{0,-2} residue families
+
+=== V11_034 sim=0.138
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V11_035 sim=0.135
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E074 c05/c19] independent Gram/intersection positivity source (10d home)
+    ent_notes: 10d natural home; no independent source yet
+
+=== V11_036 sim=0.135
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E106 c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    ent_notes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V11_037 sim=0.135
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E014 c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    aliases: c02/c11: weights signed, alternate with face dimension; c02/c8: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; c06/c14: Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S); c07/c9: D4: face-weights w(S)=(-1)^{|S|+1}log(prod S)/prod S
+    ent_notes: Σw(S)→1; Dirichlet GF = −ζ′/ζ²; weights signed, alternate with face dimension
+
+=== V11_038 sim=0.135
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E031 c02/c6] Figueiredo recipe steps 2–4 without positive region
+    ent_notes: steps 2–4 analogues; cf. arXiv:2309.15913
+
+=== V11_039 sim=0.134
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E082 c05/c9] honesty weak point: certificate numeric only, gamma real unproved
+    ent_notes: agreement 1e-15 is certificate; not proved generally
+
+=== V11_040 sim=0.133
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E146 c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    ent_notes: multi-torus via Laplacian dead; dynamics live
+
+=== V11_041 sim=0.133
+  HELD [c5] non-admissible {0,2,4} dies: single survivor n=3
+    held_note: nu3=3 kills product; S_H(z)=0 for z>=3
+  ENT [F11E060 c04/c3] Euler product ζ_R zero-free for Re(s)>1
+    ent_notes: exact; |R_p|p^{-σ}<1 so no factor vanishes
+
+=== V11_042 sim=0.131
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E017 c01/c6] Deformation → twin constant 2C₂=1.32032
+    aliases: c03/c7: Twin constant S(z)->2C_2=1.32032 derived from deformation; c07/c14: deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+    ent_notes: 2160 twin lowers verified ≤200000; conjecture itself unproven; S(z)=1.367187,1.344116,1.330277,1.322754 at z=7,13,30,100
+
+=== V11_043 sim=0.130
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E128 c09/c8] Three live fragments: positivity/operator-shape/trace split apart
+    ent_notes: three live fragments, none closes R1^R4
+
+=== V11_044 sim=0.123
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E012 c01/c20] Open: Node 8 bridge heuristic, paper approval, build
+    ent_notes: paper outline drafted; fabrication files not created
+
+=== V11_045 sim=0.123
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E089 c06/c17] Weighted positive geometries + stringy deformation as home
+    ent_notes: deformation parameter u; exponents are prime logs
+
+=== V11_046 sim=0.120
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V11_047 sim=0.119
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E141 c10/c4] Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3
+    ent_notes: exact theorem; d=2 too slow by log, d>=3 too fast
+
+=== V11_048 sim=0.118
+  HELD [c18] controls: shuffled or zeroed input destroys zeros
+    held_note: A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+  ENT [F11E159 c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    ent_notes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V11_049 sim=0.117
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E057 c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    ent_notes: exact translation; same generative move
+
+=== V11_050 sim=0.117
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E053 c04/c17] Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+    ent_notes: corrected run; first run silently dropped p≥3
+
+=== V11_051 sim=0.116
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E001 c01/c10] Three verified positivity kinds, none zero-detecting
+    aliases: c08/c20: Three verified positivity kinds; none detects zeros independently
+    ent_notes: none of the three kinds zero-detecting; bridge program complete; 10a–10e closed 2026-09-30
+
+=== V11_052 sim=0.116
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V11_053 sim=0.115
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E040 c03/c18] 9b verdict: bridge carries traffic, no new theorem
+    ent_notes: same traffic, new bridge; no new theorem
+
+=== V11_054 sim=0.114
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E035 c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    ent_notes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V11_055 sim=0.114
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V11_056 sim=0.113
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E120 c09/c2] Berry-Keating xp spectral candidate
+    ent_notes: semiclassical; no rigorous operator, R4 absent
+
+=== V11_057 sim=0.113
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E020 c02/c1] ψ(x) as signed face-sum over Δ_x
+    aliases: c07/c6: D1: Chebyshev psi(x) as signed face-sum
+    ent_notes: exact at x=30,100,500; Moebius reframed; classical theorems in new clothes
+
+=== V11_058 sim=0.113
+  HELD [c17] even-subspace single tiny eigenvalue eps_N=2.83e-26
+    held_note: odd block 581x larger; 8771x at N=120
+  ENT [F11E069 c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    ent_notes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V11_059 sim=0.111
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E068 c05/c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    ent_notes: functional equation proof; prime series diverges at s=1
+
+=== V11_060 sim=0.111
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E042 c03/c3] Deformed survivors = twin lowers: 2160 <=200000
+    ent_notes: 2160 twin lowers <=200000, exact match independent sieve
+
+=== V11_061 sim=0.110
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E065 c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    ent_notes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V11_062 sim=0.109
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E018 c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights as the fundamental object; c07/c16: positivity located: primitive objects positive, signs from Moebius
+    ent_notes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V11_063 sim=0.108
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E069 c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    ent_notes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V11_064 sim=0.107
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E008 c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c06/c20: K-theoretic home: face-weights as F_z'(1) differentiated residues
+    ent_notes: face-weights = differentiated residues; closes D4↔D6 loop; primes-only input as Chern roots −u log p
+
+=== V11_065 sim=0.107
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E034 c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    ent_notes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V11_066 sim=0.107
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_067 sim=0.106
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E040 c03/c18] 9b verdict: bridge carries traffic, no new theorem
+    ent_notes: same traffic, new bridge; no new theorem
+
+=== V11_068 sim=0.105
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E093 c06/c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    ent_notes: Figueiredo deformations move (D6) as mechanism
+
+=== V11_069 sim=0.105
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E032 c02/c7] no known positive region for the sieve
+    aliases: c07/c5: no positive region in finite complex; cutoff-N dependent
+    ent_notes: no known positive region; gap stands; Betti [74,101,26,0] at N=1000; killed naive hope
+
+=== V11_070 sim=0.105
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E003 c01/c12] CCM recovers zeros 1–8 from primes alone
+    ent_notes: ε_even=3.48e-59 at N=120; separation 8771×
+
+=== V11_071 sim=0.104
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E128 c09/c8] Three live fragments: positivity/operator-shape/trace split apart
+    ent_notes: three live fragments, none closes R1^R4
+
+=== V11_072 sim=0.104
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E040 c03/c18] 9b verdict: bridge carries traffic, no new theorem
+    ent_notes: same traffic, new bridge; no new theorem
+
+=== V11_073 sim=0.103
+  HELD [c11] spectral program 13d/13e: no prior art
+    held_note: interacting Hamiltonians + GUE/Poisson probes
+  ENT [F11E007 c01/c16] 13e negative: operator deaf to primes
+    aliases: c10/c19: prime-frequency probe negative: no prime lines; hump f~0.67
+    ent_notes: 13e prime-frequency probe negative; z-score -0.35 arith vs -0.36 shuffled at 10 lines
+
+=== V11_074 sim=0.102
+  HELD [c10] fermionic prime Fock: independent prior art exists
+    held_note: goldenphysicsproject 2026 GitHub; Lean CAR formalized
+  ENT [F11E074 c05/c19] independent Gram/intersection positivity source (10d home)
+    ent_notes: 10d natural home; no independent source yet
+
+=== V11_075 sim=0.101
+  HELD [c5] non-admissible {0,2,4} dies: single survivor n=3
+    held_note: nu3=3 kills product; S_H(z)=0 for z>=3
+  ENT [F11E143 c10/c6] Deninger-type foliated 3D system with closed orbits as primes
+    ent_notes: conjectural; non-probable per D8, formulate only
+
+=== V11_076 sim=0.101
+  HELD [c8] PNT as total weight 1: no prior art
+    held_note: reframes PNT, does not reprove
+  ENT [F11E045 c03/c6] Total weight delta(z)=prod(1-|R_p|/p), S/x->delta(z)
+    aliases: c05/c16: optimizer is Mobius: lam*_S=mu(S), Qmin=delta(z)=prod_{p<=z}(1-1/p)
+    ent_notes: 0.071430 vs 0.071429 at z=7,x=200000; Qmin/delta=1 to 12 digits; max|lam*-mu|<5e-14
+
+=== V11_077 sim=0.101
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E089 c06/c17] Weighted positive geometries + stringy deformation as home
+    ent_notes: deformation parameter u; exponents are prime logs
+
+=== V11_078 sim=0.100
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E159 c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    ent_notes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V11_079 sim=0.100
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E034 c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    ent_notes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V11_080 sim=0.100
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E052 c04/c16] Guinand–Weil symmetric formula, normalization numerically confirmed
+    ent_notes: normalization confirmed by own numerics
+
+=== V11_081 sim=0.099
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E159 c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    ent_notes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V11_082 sim=0.098
+  HELD [c18] controls: shuffled or zeroed input destroys zeros
+    held_note: A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+  ENT [F11E151 c12/c13] Wu-Sprung inverse potential killed: zeros are the input
+    ent_notes: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+
+=== V11_083 sim=0.098
+  HELD [c8] PNT as total weight 1: no prior art
+    held_note: reframes PNT, does not reprove
+  ENT [F11E039 c03/c17] Pole at sigma=1 is infinite total prime energy
+    ent_notes: pole expected, not pathological
+
+=== V11_084 sim=0.098
+  HELD [c19] mechanism fragile: requires exact prime arithmetic
+    held_note: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+  ENT [F11E080 c05/c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    ent_notes: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+
+=== V11_085 sim=0.097
+  HELD [c11] spectral program 13d/13e: no prior art
+    held_note: interacting Hamiltonians + GUE/Poisson probes
+  ENT [F11E006 c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    aliases: c10/c16: pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda; c10/c17: shuffled weights also GUE (0.524): TBRE-class generic chaos; c10/c18: robustness: <r>~0.528-0.535 at dim 2048-8192; Delta_3 inconclusive
+    ent_notes: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE; <r> 0.52-0.55, z>=17 all lambda; level repulsion
+
+=== V11_086 sim=0.096
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E022 c02/c12] positive region with these weights as stratum residues
+    ent_notes: sharpest question of the program (text)
+
+=== V11_087 sim=0.096
+  HELD [c15] CCM D_log reimplemented from prime Euler products
+    held_note: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+  ENT [F11E060 c04/c3] Euler product ζ_R zero-free for Re(s)>1
+    ent_notes: exact; |R_p|p^{-σ}<1 so no factor vanishes
+
+=== V11_088 sim=0.095
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E089 c06/c17] Weighted positive geometries + stringy deformation as home
+    ent_notes: deformation parameter u; exponents are prime logs
+
+=== V11_089 sim=0.095
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E066 c05/c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    ent_notes: cited Li 1997; sum over rho
+
+=== V11_090 sim=0.095
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E076 c05/c20] classical level-truncated bound 1/G(z)
+    ent_notes: constraint; worse bound 0.2348 vs 0.1710
+
+=== V11_091 sim=0.094
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E029 c02/c4] binary geometry rule: 1_prime + 1_shared = 1
+    ent_notes: reformulation, not new prime information
+
+=== V11_092 sim=0.094
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E057 c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    ent_notes: exact translation; same generative move
+
+=== V11_093 sim=0.094
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E141 c10/c4] Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3
+    ent_notes: exact theorem; d=2 too slow by log, d>=3 too fast
+
+=== V11_094 sim=0.093
+  HELD [c7] simplicial sieve D_z: no prior art found
+    held_note: Iosif arXiv:1112.5796 focal lines, unrelated
+  ENT [F11E000 c01/c1] Sieve is simplicial complex Δ_z
+    aliases: c02/c2: Δ_x incidence complex of sieve to x; c07/c4: finite incidence complex: vertices primes <=N, faces products <=N
+    ent_notes: finite prime subsets = faces; face-sum Möbius inversion; link-face counts match; integer bijection exact
+
+=== V11_095 sim=0.093
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_096 sim=0.093
+  HELD [c18] controls: shuffled or zeroed input destroys zeros
+    held_note: A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+  ENT [F11E006 c01/c15] 13d pair hopping GUE-like, ⟨r⟩=0.528
+    aliases: c10/c16: pair-hopping GUE-like: <r>->0.52-0.55 for z>=17, all lambda; c10/c17: shuffled weights also GUE (0.524): TBRE-class generic chaos; c10/c18: robustness: <r>~0.528-0.535 at dim 2048-8192; Delta_3 inconclusive
+    ent_notes: ⟨r⟩=0.528 at z=41, dim 8192; shuffled weights also GUE; <r> 0.52-0.55, z>=17 all lambda; level repulsion
+
+=== V11_097 sim=0.093
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E050 c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    ent_notes: exact translation of D1
+
+=== V11_098 sim=0.092
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E069 c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    ent_notes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V11_099 sim=0.092
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E035 c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    ent_notes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V11_100 sim=0.091
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E057 c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    ent_notes: exact translation; same generative move
+
+=== V11_101 sim=0.091
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E153 c12/c15] ranked shortlist: B computes, D heuristic, rest killed
+    ent_notes: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+
+=== V11_102 sim=0.091
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E034 c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    ent_notes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V11_103 sim=0.090
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E066 c05/c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    ent_notes: cited Li 1997; sum over rho
+
+=== V11_104 sim=0.090
+  HELD [c19] mechanism fragile: requires exact prime arithmetic
+    held_note: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+  ENT [F11E119 c09/c18] Operator must see arithmetic prime/weight data, not geometry
+    ent_notes: heuristic reflection; next fork: weighted face filtration
+
+=== V11_105 sim=0.090
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E021 c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    ent_notes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V11_106 sim=0.089
+  HELD [c17] even-subspace single tiny eigenvalue eps_N=2.83e-26
+    held_note: odd block 581x larger; 8771x at N=120
+  ENT [F11E035 c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    ent_notes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V11_107 sim=0.089
+  HELD [c3] density ratios 0.998-1.015 across tuples
+    held_note: worst sext, fewest samples
+  ENT [F11E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V11_108 sim=0.088
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E105 c08/c10] Li's criterion λ_n ≥ 0 natively on the face-sum
+    ent_notes: killed 2026-09-30: face-sum carries smoothed positivity only
+
+=== V11_109 sim=0.088
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E015 c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    aliases: c02/c9: Σw(S) → 1 as X→∞, equivalent to PNT; c07/c10: weighted infinite simplex total weight 1 = PNT
+    ent_notes: 0.999922 at 5·10⁵; PNT as total weight 1; S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+
+=== V11_110 sim=0.088
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E103 c07/c3] sieve as relational machine: composites to primes, primes to zero
+    ent_notes: user's framing, root node decision
+
+=== V11_111 sim=0.088
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E015 c01/c4] PNT reframed: Σw(S)→1, 0.999922 at 5·10⁵
+    aliases: c02/c9: Σw(S) → 1 as X→∞, equivalent to PNT; c07/c10: weighted infinite simplex total weight 1 = PNT
+    ent_notes: 0.999922 at 5·10⁵; PNT as total weight 1; S(X)=0.969931…1.001658 at X=10³…2·10⁶, converging to 1
+
+=== V11_112 sim=0.088
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E114 c09/c13] Top target: reimplement CCM from prime Euler products alone
+    ent_notes: queued: verify spectral coincidence, audit zero-fitting
+
+=== V11_113 sim=0.088
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E088 c06/c16] Ordinary AHBL positive geometry, residues ±1
+    ent_notes: killed by theorem; signs OK, magnitudes impossible
+
+=== V11_114 sim=0.087
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E034 c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    ent_notes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V11_115 sim=0.087
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E049 c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    ent_notes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V11_116 sim=0.087
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E054 c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    ent_notes: a=0.5 cancellation to 15 digits
+
+=== V11_117 sim=0.087
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E022 c02/c12] positive region with these weights as stratum residues
+    ent_notes: sharpest question of the program (text)
+
+=== V11_118 sim=0.086
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E069 c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    ent_notes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V11_119 sim=0.085
+  HELD [c5] non-admissible {0,2,4} dies: single survivor n=3
+    held_note: nu3=3 kills product; S_H(z)=0 for z>=3
+  ENT [F11E141 c10/c4] Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3
+    ent_notes: exact theorem; d=2 too slow by log, d>=3 too fast
+
+=== V11_120 sim=0.085
+  HELD [c3] density ratios 0.998-1.015 across tuples
+    held_note: worst sext, fewest samples
+  ENT [F11E084 c06/c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    aliases: c08/c19: Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008
+    ent_notes: H=200,1000,5000,20000; mean-square amplifier real; MV ratio 0.995→1.007; large-sieve ratios 0.004, 0.008
+
+=== V11_121 sim=0.085
+  HELD [c3] density ratios 0.998-1.015 across tuples
+    held_note: worst sext, fewest samples
+  ENT [F11E085 c06/c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    ent_notes: δ=1 and 0.5; bound crude as expected
+
+=== V11_122 sim=0.085
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E040 c03/c18] 9b verdict: bridge carries traffic, no new theorem
+    ent_notes: same traffic, new bridge; no new theorem
+
+=== V11_123 sim=0.084
+  HELD [c21] Node 11 operator hunt open; 11f live candidate
+    held_note: face-sum dictionary entry Lambda=mu*log explicit
+  ENT [F11E105 c08/c10] Li's criterion λ_n ≥ 0 natively on the face-sum
+    ent_notes: killed 2026-09-30: face-sum carries smoothed positivity only
+
+=== V11_124 sim=0.084
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E148 c12/c10] Selberg/Mayer control: dream works in hyperbolic world
+    ent_notes: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+
+=== V11_125 sim=0.084
+  HELD [c22] ordinary positive region carrying w(S) exists
+    held_note: superseded by 14a theorem
+  ENT [F11E093 c06/c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    ent_notes: Figueiredo deformations move (D6) as mechanism
+
+=== V11_126 sim=0.084
+  HELD [c7] simplicial sieve D_z: no prior art found
+    held_note: Iosif arXiv:1112.5796 focal lines, unrelated
+  ENT [F11E007 c01/c16] 13e negative: operator deaf to primes
+    aliases: c10/c19: prime-frequency probe negative: no prime lines; hump f~0.67
+    ent_notes: 13e prime-frequency probe negative; z-score -0.35 arith vs -0.36 shuffled at 10 lines
+
+=== V11_127 sim=0.083
+  HELD [c9] deforming-marking-rule move new; 2C2 classical
+    held_note: constant classical Hardy-Littlewood 1923
+  ENT [F11E116 c09/c15] 1/3 cut gives two linked bands (thin Mobius, 2-twist)
+    ent_notes: classical result, previously known
+
+=== V11_128 sim=0.083
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E016 c01/c5] Figueiredo steer: generative process, not implementation
+    aliases: c07/c1: Figueiredo method transferred as process, not implementation
+    ent_notes: take generative process; never copy implementation; 8 papers 2309.15913-2603.03425, none touch primes
+
+=== V11_129 sim=0.083
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E020 c02/c1] ψ(x) as signed face-sum over Δ_x
+    aliases: c07/c6: D1: Chebyshev psi(x) as signed face-sum
+    ent_notes: exact at x=30,100,500; Moebius reframed; classical theorems in new clothes
+
+=== V11_130 sim=0.083
+  HELD [c13] derivative identity for sum_S w(S), 10-digit verified
+    held_note: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_131 sim=0.082
+  HELD [c7] simplicial sieve D_z: no prior art found
+    held_note: Iosif arXiv:1112.5796 focal lines, unrelated
+  ENT [F11E112 c09/c11] CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam²
+    ent_notes: arXiv:2511.22755; primary-source abstract verified
+
+=== V11_132 sim=0.082
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E018 c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights as the fundamental object; c07/c16: positivity located: primitive objects positive, signs from Moebius
+    ent_notes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V11_133 sim=0.082
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E103 c07/c3] sieve as relational machine: composites to primes, primes to zero
+    ent_notes: user's framing, root node decision
+
+=== V11_134 sim=0.081
+  HELD [c5] non-admissible {0,2,4} dies: single survivor n=3
+    held_note: nu3=3 kills product; S_H(z)=0 for z>=3
+  ENT [F11E005 c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    ent_notes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+
+=== V11_135 sim=0.081
+  HELD [c14] refined home E_z with differentiated residues
+    held_note: numerics hygiene; constructions exact
+  ENT [F11E091 c06/c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    ent_notes: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+
+=== V11_136 sim=0.081
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E091 c06/c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    ent_notes: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+
+=== V11_137 sim=0.080
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E053 c04/c17] Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+    ent_notes: corrected run; first run silently dropped p≥3
+
+=== V11_138 sim=0.080
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E054 c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    ent_notes: a=0.5 cancellation to 15 digits
+
+=== V11_139 sim=0.080
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E030 c02/c5] composites as zero locus of F(n), primes as support
+    aliases: c07/c8: D3: composites as zero locus of F(n)=prod dist(n,pZ)
+    ent_notes: F(n) zero-locus verified to 60; primes as support of F(n)
+
+=== V11_140 sim=0.080
+  HELD [c16] first zeta zero recovered from primes alone
+    held_note: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+  ENT [F11E153 c12/c15] ranked shortlist: B computes, D heuristic, rest killed
+    ent_notes: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+
+=== V11_141 sim=0.079
+  HELD [c19] mechanism fragile: requires exact prime arithmetic
+    held_note: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+  ENT [F11E005 c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    ent_notes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+
+=== V11_142 sim=0.079
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E067 c05/c11] Keiper-Taylor check: n=1..40 all lambda_n>=0, min 0.0230957 at n=1
+    ent_notes: n=1..40; lambda_1=0.0230957090, lambda_2=0.0923457352
+
+=== V11_143 sim=0.078
+  HELD [c1] k-tuple deformation sweep at x=10^6
+    held_note: 9 tuples + control; three panels (a)(b)(c)
+  ENT [F11E090 c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    ent_notes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+
+=== V11_144 sim=0.078
+  HELD [c11] spectral program 13d/13e: no prior art
+    held_note: interacting Hamiltonians + GUE/Poisson probes
+  ENT [F11E022 c02/c12] positive region with these weights as stratum residues
+    ent_notes: sharpest question of the program (text)
+
+=== V11_145 sim=0.078
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V11_146 sim=0.077
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E089 c06/c17] Weighted positive geometries + stringy deformation as home
+    ent_notes: deformation parameter u; exponents are prime logs
+
+=== V11_147 sim=0.077
+  HELD [c20] Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    held_note: numerically verified 3.6e-15 for n<5000
+  ENT [F11E090 c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    ent_notes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+
+=== V11_148 sim=0.077
+  HELD [c12] no ordinary positive geometry: obstruction theorem
+    held_note: |w({2})|=(log 2)/2=0.3466 not in {0,1}
+  ENT [F11E119 c09/c18] Operator must see arithmetic prime/weight data, not geometry
+    ent_notes: heuristic reflection; next fork: weighted face filtration
+
+=== V11_149 sim=0.077
+  HELD [c6] deformation is general generative machine, not twin fluke
+    held_note: closed as confirmation sweep; no new mathematics
+  ENT [F11E019 c01/c8] 9c closed negative: positivity blind left of Re(s)=1
+    aliases: c03/c19: 9c: stronger geometric positivity RH-ward; deformations->trig polynomia; c04/c1: sieve deformations parametrize new positivity for constraining zeros; c04/c5: positivity blind left of Re(s)=1; c04/c8: 9c-as-prove-RH-by-stronger-positivity closed
+    ent_notes: positivity blind left of Re(s)=1; deformations may parametrize admissible trig polynomials

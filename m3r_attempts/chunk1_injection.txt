@@ -1,0 +1,62 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: six-layer CCC prototype built and tested
+18: measured efficiency: 11× repeat wire, 3× novel session
+19: registry cost dominates toy scale; ~4.3× projected at ten
+20: 500/500 single-digit corruptions corrected
+21: app-layer cost only; primes give computability not entropy
+22: model-side decoding untested; decides if savings usable
+23: equal-budget benchmark vs transcript, summary, retrieval
+24: fragments, scale realism, framing hardening, DNA vision remain
+25: seven sentence types ≈ seven diatonic notes
+26: sentence shapes as prime-indexed registry tokens
+27: synchronizing word resets machine from any start
+28: shuffled-line reassembly and telomere scan already synchronize
+29: every CCC decode procedure should be synchronizing
+30: encoder searches at compression; decoder walks
+31: cursor layer transmits graph walks not indices
+32: ~4× strand-layer gain projected at B=1000 degree 8
+33: coherent sessions compress better than incoherent
+34: navigation graph shared via accumulated session history
+35: zipped-zip fails; residual structure exploitable via arithmetic+LZ
+36: compress before parity: source coding precedes channel coding
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21
+S22:22 23 24
+S25:25 26
+S27:27 28 29
+S31:30 31 32 33 34
+S35:35 36
+E18:1 17
+E19:11 18
+E20:1 17
+E21:3 17
+E22:3 18
+E25:1 26
+E27:1 29
+E28:10 27
+E30:1 31
+E31:6 34
+E32:1 31
+E33:1 31
+E35:6 31
+E36:3 35
+A:17 13,18 13,19 13,20 13,21 13,22 16,23 16,24 16,25 13,26 13,27 13,28 13,29 13,30 13,31 13,32 13,33 13,34 13,35 13,36 13
+L:22 23 24

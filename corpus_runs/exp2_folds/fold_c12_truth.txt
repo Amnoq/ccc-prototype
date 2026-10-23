@@ -1,0 +1,929 @@
+=== V12_000 sim=0.874
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E122 c09/c22] Deninger program: 2024 theorem proves template dynamically only
+    ent_notes: missing space is the whole problem
+
+=== V12_001 sim=0.359
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E103 c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    ent_notes: Weil 1952: RH is positivity; source must be geometric
+
+=== V12_002 sim=0.268
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E100 c07/c21] RH bridge: dictionary not bridge; attaches at positivity
+    ent_notes: Weil-shaped heuristic, precedent not result
+
+=== V12_003 sim=0.254
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E110 c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    ent_notes: cited, not re-derived; R1 as missing spectrum
+
+=== V12_004 sim=0.211
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E110 c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    ent_notes: cited, not re-derived; R1 as missing spectrum
+
+=== V12_005 sim=0.206
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E058 c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language
+    ent_notes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V12_006 sim=0.205
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E049 c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    ent_notes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V12_007 sim=0.201
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E105 c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    ent_notes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V12_008 sim=0.199
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_009 sim=0.191
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V12_010 sim=0.185
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E122 c09/c22] Deninger program: 2024 theorem proves template dynamically only
+    ent_notes: missing space is the whole problem
+
+=== V12_011 sim=0.184
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E143 c10/c6] Deninger-type foliated 3D system with closed orbits as primes
+    ent_notes: conjectural; non-probable per D8, formulate only
+
+=== V12_012 sim=0.182
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E132 c10/c11] sieve faces Delta_z = fermionic Fock basis over primes <=z
+    ent_notes: exact identification; native, not imported
+
+=== V12_013 sim=0.179
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V12_014 sim=0.175
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E108 c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    ent_notes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V12_015 sim=0.173
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_016 sim=0.173
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E050 c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    ent_notes: exact translation of D1
+
+=== V12_017 sim=0.172
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E051 c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    ent_notes: programmatic/heuristic
+
+=== V12_018 sim=0.170
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E049 c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    ent_notes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V12_019 sim=0.165
+  HELD [c12] Bender-Brody-Muller killed: answer inserted by hand
+    held_note: psi_z(x)=-zeta(z,x+1) inserted; reality unproved (Bellissard)
+  ENT [F12E024 c02/c14] never put the answer in by hand; primality emerges
+    aliases: c07/c2: never put the answer in by hand
+    ent_notes: deepest insight applied throughout D1–D5; standing methodology, sieve tests no predicate
+
+=== V12_020 sim=0.165
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E145 c10/c8] arithmetic flavor != zero spectrum; Laplacian+theta fails
+    ent_notes: moral drawn from Heisenberg probe
+
+=== V12_021 sim=0.162
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V12_022 sim=0.157
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E057 c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    ent_notes: exact translation; same generative move
+
+=== V12_023 sim=0.152
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E109 c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    ent_notes: node 11 scoring template; refines 10d ledger
+
+=== V12_024 sim=0.149
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E005 c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    ent_notes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+
+=== V12_025 sim=0.144
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E110 c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    ent_notes: cited, not re-derived; R1 as missing spectrum
+
+=== V12_026 sim=0.144
+  HELD [c8] bounded heuristic: prime-orbit flow, numerical Ruelle zeta
+    held_note: orbit lengths approx {log p}; numerical Ruelle zeta; model-of-template only
+  ENT [F12E126 c09/c6] Zero-orbit collapse 4→2 on M, not 4→1
+    ent_notes: CORRECTION of earlier message: collapse is 4→2
+
+=== V12_027 sim=0.143
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E146 c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    ent_notes: multi-torus via Laplacian dead; dynamics live
+
+=== V12_028 sim=0.141
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E083 c06/c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    aliases: c08/c14: 10d: function-field template from intersection pairing on C×C
+    ent_notes: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p; F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V12_029 sim=0.140
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E110 c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    ent_notes: cited, not re-derived; R1 as missing spectrum
+
+=== V12_030 sim=0.139
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E107 c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    ent_notes: verified on our objects; estimates cited not derived
+
+=== V12_031 sim=0.139
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E039 c03/c17] Pole at sigma=1 is infinite total prime energy
+    ent_notes: pole expected, not pathological
+
+=== V12_032 sim=0.136
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V12_033 sim=0.129
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E130 c10/c1] 2-torus linked to 3-torus by self-adjoint operator
+    ent_notes: user's original idea, never written down
+
+=== V12_034 sim=0.129
+  HELD [c11] Sierra xp models killed: smooth-count ceiling only
+    held_note: smooth Nbar(E) only; higher levels heuristic; BK/Connes unification background
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_035 sim=0.127
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E056 c04/c2] hybrid bridge: geometry owns positivity inputs, analysis owns continuation
+    ent_notes: hybrid shape replaces 9c-as-RH-proof
+
+=== V12_036 sim=0.126
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V12_037 sim=0.126
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E146 c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    ent_notes: multi-torus via Laplacian dead; dynamics live
+
+=== V12_038 sim=0.125
+  HELD [c15] ranked shortlist: B computes, D heuristic, rest killed
+    held_note: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+  ENT [F12E062 c04/c6] Selberg parity barrier: ω(n) parity unresolvable
+    ent_notes: Selberg; cited literature
+
+=== V12_039 sim=0.125
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E019 c01/c8] 9c closed negative: positivity blind left of Re(s)=1
+    aliases: c03/c19: 9c: stronger geometric positivity RH-ward; deformations->trig polynomia; c04/c1: sieve deformations parametrize new positivity for constraining zeros; c04/c5: positivity blind left of Re(s)=1; c04/c8: 9c-as-prove-RH-by-stronger-positivity closed
+    ent_notes: positivity blind left of Re(s)=1; deformations may parametrize admissible trig polynomials
+
+=== V12_040 sim=0.123
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E095 c06/c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    aliases: c06/c6: Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator,; c08/c15: Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    ent_notes: 10a infinite needs window n~e^{7.4/w}; Δ∞ contractible (D4); object must live in weights/operators
+
+=== V12_041 sim=0.123
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V12_042 sim=0.122
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V12_043 sim=0.121
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V12_044 sim=0.121
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E128 c09/c8] Three live fragments: positivity/operator-shape/trace split apart
+    ent_notes: three live fragments, none closes R1^R4
+
+=== V12_045 sim=0.119
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E082 c05/c9] honesty weak point: certificate numeric only, gamma real unproved
+    ent_notes: agreement 1e-15 is certificate; not proved generally
+
+=== V12_046 sim=0.118
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E116 c09/c16] Bare Mobius Laplacian spectrum λ=(πm)²+(nπ/2T)², m+n odd
+    ent_notes: derived not cited; sqrt-spectrum 0.031,0.094,0.157 vs zeros
+
+=== V12_047 sim=0.117
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E153 c11/c18] controls: shuffled or zeroed input destroys zeros
+    ent_notes: A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+
+=== V12_048 sim=0.116
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E071 c05/c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    aliases: c08/c12: 10c: Selberg λ² sieve on the complex, optimized weights
+    ent_notes: z<=19; Cholesky all eigenvalues>0, min 1.1e-8; 10c executed: Selberg quadratic form on complex, small cases
+
+=== V12_049 sim=0.116
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E143 c10/c6] Deninger-type foliated 3D system with closed orbits as primes
+    ent_notes: conjectural; non-probable per D8, formulate only
+
+=== V12_050 sim=0.116
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E062 c04/c6] Selberg parity barrier: ω(n) parity unresolvable
+    ent_notes: Selberg; cited literature
+
+=== V12_051 sim=0.115
+  HELD [c19] D_log convergence as N,lambda->inf unproved
+    held_note: unproved; 'strategy toward a proof'; quantify D2 bars
+  ENT [F12E082 c05/c9] honesty weak point: certificate numeric only, gamma real unproved
+    ent_notes: agreement 1e-15 is certificate; not proved generally
+
+=== V12_052 sim=0.112
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E056 c04/c2] hybrid bridge: geometry owns positivity inputs, analysis owns continuation
+    ent_notes: hybrid shape replaces 9c-as-RH-proof
+
+=== V12_053 sim=0.112
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E077 c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    ent_notes: from h>=0 + Weil formula; table checks
+
+=== V12_054 sim=0.111
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_055 sim=0.110
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_056 sim=0.109
+  HELD [c12] Bender-Brody-Muller killed: answer inserted by hand
+    held_note: psi_z(x)=-zeta(z,x+1) inserted; reality unproved (Bellissard)
+  ENT [F12E096 c06/c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    ent_notes: Jacobian J(C) is the complex torus
+
+=== V12_057 sim=0.107
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E021 c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    ent_notes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V12_058 sim=0.105
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E117 c09/c17] Bare geometric operators on M do not see zeros (exact)
+    ent_notes: VERDICT negative exact; |σ−1/2| spectrum [0,1/2] continuous
+
+=== V12_059 sim=0.105
+  HELD [c14] guardrail shorthand: D10, D12, D2, D8
+    held_note: D10 imported bridge; D12 spectrum deletion; D2 error bars; D8 compute limits
+  ENT [F12E131 c10/c10] new guardrails D10-D13 from archive archaeology
+    ent_notes: five April-2026 docs mined as archaeology
+
+=== V12_060 sim=0.105
+  HELD [c14] guardrail shorthand: D10, D12, D2, D8
+    held_note: D10 imported bridge; D12 spectrum deletion; D2 error bars; D8 compute limits
+  ENT [F12E099 c07/c18] D8: 3-4-1 restated in sieve language, nonnegative stratum energies
+    ent_notes: e_{p,k}>=0 termwise 6 digits; residue -m analytic
+
+=== V12_061 sim=0.104
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E040 c03/c18] 9b verdict: bridge carries traffic, no new theorem
+    ent_notes: same traffic, new bridge; no new theorem
+
+=== V12_062 sim=0.104
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E082 c05/c9] honesty weak point: certificate numeric only, gamma real unproved
+    ent_notes: agreement 1e-15 is certificate; not proved generally
+
+=== V12_063 sim=0.103
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E077 c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    ent_notes: from h>=0 + Weil formula; table checks
+
+=== V12_064 sim=0.102
+  HELD [c18] gold standard: future operators must reproduce trace formula
+    held_note: any future operator must reproduce Connes trace formula
+  ENT [F12E128 c09/c8] Three live fragments: positivity/operator-shape/trace split apart
+    ent_notes: three live fragments, none closes R1^R4
+
+=== V12_065 sim=0.101
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E116 c09/c16] Bare Mobius Laplacian spectrum λ=(πm)²+(nπ/2T)², m+n odd
+    ent_notes: derived not cited; sqrt-spectrum 0.031,0.094,0.157 vs zeros
+
+=== V12_066 sim=0.101
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E087 c06/c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    ent_notes: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+
+=== V12_067 sim=0.101
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E025 c02/c15] link({p}) = Δ_{⌊x/p⌋} minus p, exact recursion
+    aliases: c02/c3: Lehmer φ(x,a) as link recursion of Δ_x; c07/c7: D2: Lehmer phi-recursion is the link recursion
+    ent_notes: link({p})=Δ_{⌊x/p⌋} minus p, exact recursion; face counts match; bijection holds exactly
+
+=== V12_068 sim=0.100
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E116 c09/c16] Bare Mobius Laplacian spectrum λ=(πm)²+(nπ/2T)², m+n odd
+    ent_notes: derived not cited; sqrt-spectrum 0.031,0.094,0.157 vs zeros
+
+=== V12_069 sim=0.099
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E151 c11/c16] first zeta zero recovered from primes alone
+    ent_notes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V12_070 sim=0.099
+  HELD [c8] bounded heuristic: prime-orbit flow, numerical Ruelle zeta
+    held_note: orbit lengths approx {log p}; numerical Ruelle zeta; model-of-template only
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_071 sim=0.098
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E077 c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    ent_notes: from h>=0 + Weil formula; table checks
+
+=== V12_072 sim=0.097
+  HELD [c18] gold standard: future operators must reproduce trace formula
+    held_note: any future operator must reproduce Connes trace formula
+  ENT [F12E095 c06/c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    aliases: c06/c6: Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator,; c08/c15: Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    ent_notes: 10a infinite needs window n~e^{7.4/w}; Δ∞ contractible (D4); object must live in weights/operators
+
+=== V12_073 sim=0.097
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E153 c11/c18] controls: shuffled or zeroed input destroys zeros
+    ent_notes: A -0.17 err 11.3; B -0.087 err 8.4; C 0.0175 err 13.0
+
+=== V12_074 sim=0.097
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E081 c05/c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    ent_notes: exact algebra; window buys sigma=1/2 convergence
+
+=== V12_075 sim=0.097
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E111 c09/c11] CCM zeta spectral triples arXiv:2511.22755, Euler products p≤lam²
+    ent_notes: arXiv:2511.22755; primary-source abstract verified
+
+=== V12_076 sim=0.096
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E145 c10/c8] arithmetic flavor != zero spectrum; Laplacian+theta fails
+    ent_notes: moral drawn from Heisenberg probe
+
+=== V12_077 sim=0.096
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E091 c06/c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    ent_notes: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+
+=== V12_078 sim=0.095
+  HELD [c11] Sierra xp models killed: smooth-count ceiling only
+    held_note: smooth Nbar(E) only; higher levels heuristic; BK/Connes unification background
+  ENT [F12E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V12_079 sim=0.095
+  HELD [c19] D_log convergence as N,lambda->inf unproved
+    held_note: unproved; 'strategy toward a proof'; quantify D2 bars
+  ENT [F12E021 c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    ent_notes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V12_080 sim=0.095
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E095 c06/c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    aliases: c06/c6: Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator,; c08/c15: Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    ent_notes: 10a infinite needs window n~e^{7.4/w}; Δ∞ contractible (D4); object must live in weights/operators
+
+=== V12_081 sim=0.095
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E066 c05/c10] Li criterion: RH <=> lambda_n>=0, lambda_n=sum[1-(1-1/rho)^n] (Li 1997)
+    ent_notes: cited Li 1997; sum over rho
+
+=== V12_082 sim=0.095
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E097 c06/c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    ent_notes: 'Frobenius for Δ' named; 10a–10e pass closed
+
+=== V12_083 sim=0.093
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E113 c09/c13] Top target: reimplement CCM from prime Euler products alone
+    ent_notes: queued: verify spectral coincidence, audit zero-fitting
+
+=== V12_084 sim=0.093
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E097 c06/c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    ent_notes: 'Frobenius for Δ' named; 10a–10e pass closed
+
+=== V12_085 sim=0.093
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E055 c04/c19] pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0
+    aliases: c08/c6: Prime-side positivity cancellatory: pole+arch+drain≈0 at a=0.5
+    ent_notes: not termwise: negative archimedean nearly cancels pole; pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0, a=0.5
+
+=== V12_086 sim=0.093
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E065 c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    ent_notes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V12_087 sim=0.093
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E068 c05/c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    ent_notes: functional equation proof; prime series diverges at s=1
+
+=== V12_088 sim=0.092
+  HELD [c14] guardrail shorthand: D10, D12, D2, D8
+    held_note: D10 imported bridge; D12 spectrum deletion; D2 error bars; D8 compute limits
+  ENT [F12E143 c10/c6] Deninger-type foliated 3D system with closed orbits as primes
+    ent_notes: conjectural; non-probable per D8, formulate only
+
+=== V12_089 sim=0.092
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E064 c04/c9] sieve produces positivity geometrically via autocorrelation
+    ent_notes: exact identities; a₀−a₁m≥0 forces m<1
+
+=== V12_090 sim=0.091
+  HELD [c15] ranked shortlist: B computes, D heuristic, rest killed
+    held_note: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+  ENT [F12E147 c11/c1] k-tuple deformation sweep at x=10^6
+    ent_notes: 9 tuples + control; three panels (a)(b)(c)
+
+=== V12_091 sim=0.090
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V12_092 sim=0.090
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E059 c04/c22] step3: optimize square H — Weil analogue of degree-16 optimization
+    ent_notes: forward pointer from D10a-step2
+
+=== V12_093 sim=0.090
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E082 c05/c9] honesty weak point: certificate numeric only, gamma real unproved
+    ent_notes: agreement 1e-15 is certificate; not proved generally
+
+=== V12_094 sim=0.089
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E120 c09/c20] Killed candidates: Bost-Connes, Ruelle, Sierra, BBM, Wu-Sprung
+    ent_notes: 8-candidate survey; D1–D13 filter
+
+=== V12_095 sim=0.089
+  HELD [c5] forward-direction test: primes in, spectrum out
+    held_note: primes in, spectrum out; H fails it; B must pass it
+  ENT [F12E102 c07/c3] sieve as relational machine: composites to primes, primes to zero
+    ent_notes: user's framing, root node decision
+
+=== V12_096 sim=0.089
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E077 c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    ent_notes: from h>=0 + Weil formula; table checks
+
+=== V12_097 sim=0.088
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E094 c06/c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    aliases: c09/c19: FF Jacobian: R1–R6 all satisfied, the template itself
+    ent_notes: five-part anatomy derived from curve case; reference template cited
+
+=== V12_098 sim=0.088
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E038 c03/c16] Zero-free line as energy contradiction
+    ent_notes: analytic residue -m housed, not derived
+
+=== V12_099 sim=0.088
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E005 c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    ent_notes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+
+=== V12_100 sim=0.087
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E005 c01/c14] Node 12 closed: Weyl kills L1–L3, Deninger survives
+    ent_notes: Heisenberg probe negative at 65,401 eigenvalues; Deninger unformulated
+
+=== V12_101 sim=0.087
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E107 c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    ent_notes: verified on our objects; estimates cited not derived
+
+=== V12_102 sim=0.087
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E127 c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    ent_notes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V12_103 sim=0.085
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E007 c01/c16] 13e negative: operator deaf to primes
+    aliases: c10/c19: prime-frequency probe negative: no prime lines; hump f~0.67
+    ent_notes: 13e prime-frequency probe negative; z-score -0.35 arith vs -0.36 shuffled at 10 lines
+
+=== V12_104 sim=0.085
+  HELD [c19] D_log convergence as N,lambda->inf unproved
+    held_note: unproved; 'strategy toward a proof'; quantify D2 bars
+  ENT [F12E068 c05/c12] S_1 archimedean: sum 1/rho=1+gamma/2-(1/2)log(4pi), no convergent prime sum
+    ent_notes: functional equation proof; prime series diverges at s=1
+
+=== V12_105 sim=0.085
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E070 c05/c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    aliases: c08/c11: Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    ent_notes: Weil face-sum-native; Li Dirichlet-series-native; λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V12_106 sim=0.085
+  HELD [c15] ranked shortlist: B computes, D heuristic, rest killed
+    held_note: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+  ENT [F12E071 c05/c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    aliases: c08/c12: 10c: Selberg λ² sieve on the complex, optimized weights
+    ent_notes: z<=19; Cholesky all eigenvalues>0, min 1.1e-8; 10c executed: Selberg quadratic form on complex, small cases
+
+=== V12_107 sim=0.084
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E094 c06/c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    aliases: c09/c19: FF Jacobian: R1–R6 all satisfied, the template itself
+    ent_notes: five-part anatomy derived from curve case; reference template cited
+
+=== V12_108 sim=0.084
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E052 c04/c16] Guinand–Weil symmetric formula, normalization numerically confirmed
+    ent_notes: normalization confirmed by own numerics
+
+=== V12_109 sim=0.084
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E147 c11/c1] k-tuple deformation sweep at x=10^6
+    ent_notes: 9 tuples + control; three panels (a)(b)(c)
+
+=== V12_110 sim=0.083
+  HELD [c10] Selberg/Mayer control: dream works in hyperbolic world
+    held_note: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+  ENT [F12E144 c10/c7] Heisenberg probe negative on three panels; 65,401 eigenvalues
+    ent_notes: 65,401 eigenvalues; negative on three panels
+
+=== V12_111 sim=0.083
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E004 c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    ent_notes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V12_112 sim=0.082
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E141 c10/c4] Weyl's law N(Lambda)~CdVolLambda^{d/2} kills L1-L3
+    ent_notes: exact theorem; d=2 too slow by log, d>=3 too fast
+
+=== V12_113 sim=0.082
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E107 c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    ent_notes: verified on our objects; estimates cited not derived
+
+=== V12_114 sim=0.082
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E059 c04/c22] step3: optimize square H — Weil analogue of degree-16 optimization
+    ent_notes: forward pointer from D10a-step2
+
+=== V12_115 sim=0.082
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E050 c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    ent_notes: exact translation of D1
+
+=== V12_116 sim=0.081
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E050 c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    ent_notes: exact translation of D1
+
+=== V12_117 sim=0.081
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E116 c09/c16] Bare Mobius Laplacian spectrum λ=(πm)²+(nπ/2T)², m+n odd
+    ent_notes: derived not cited; sqrt-spectrum 0.031,0.094,0.157 vs zeros
+
+=== V12_118 sim=0.081
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E049 c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    ent_notes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V12_119 sim=0.081
+  HELD [c11] Sierra xp models killed: smooth-count ceiling only
+    held_note: smooth Nbar(E) only; higher levels heuristic; BK/Connes unification background
+  ENT [F12E119 c09/c2] Berry-Keating xp spectral candidate
+    ent_notes: semiclassical; no rigorous operator, R4 absent
+
+=== V12_120 sim=0.080
+  HELD [c18] gold standard: future operators must reproduce trace formula
+    held_note: any future operator must reproduce Connes trace formula
+  ENT [F12E048 c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    ent_notes: Davenport; classical exact theorem
+
+=== V12_121 sim=0.080
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E079 c05/c6] resonance: negative prime sum adds to W when zero inside
+    aliases: c08/c8: Resonance: oscillatory prime sum negative exactly when zero in window
+    ent_notes: w=1: prime-sum -0.5925, W=2.2472; T0=50: −0.59/−0.98; empty window T0=100: +0.36
+
+=== V12_122 sim=0.080
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E051 c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    ent_notes: programmatic/heuristic
+
+=== V12_123 sim=0.080
+  HELD [c9] Ruelle transfer operator killed, reduces to Deninger
+    held_note: no dynamics without Deninger's space; type-error firewall
+  ENT [F12E137 c10/c2] five linkages L1-L5: product, mapping torus, UT bundle, Deninger, Heisenberg
+    ent_notes: foundation rebuilt in multi_torus_framework.md
+
+=== V12_124 sim=0.079
+  HELD [c15] ranked shortlist: B computes, D heuristic, rest killed
+    held_note: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+  ENT [F12E151 c11/c16] first zeta zero recovered from primes alone
+    ent_notes: zero1 err 7.1e-15; zeros1-5 <4e-11, 6-8 <1e-6
+
+=== V12_125 sim=0.079
+  HELD [c18] gold standard: future operators must reproduce trace formula
+    held_note: any future operator must reproduce Connes trace formula
+  ENT [F12E077 c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    ent_notes: from h>=0 + Weil formula; table checks
+
+=== V12_126 sim=0.079
+  HELD [c6] Bost-Connes: zeta from counting, killed as zero-operator
+    held_note: spectrum {log n}; phase transition at beta=1; pole reproduced
+  ENT [F12E129 c09/c9] Face-complex Delta operators: R4 counting-born, R1–R3 absent
+    ent_notes: R4 from Lambda>=0 counting; 10c PD forms
+
+=== V12_127 sim=0.079
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E078 c05/c5] leakage 0.6827->0.2977->0.0007 as w=2->1->0.5 (T0=50)
+    aliases: c08/c9: Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+    ent_notes: T0=50: 0.6827 -> 0.2977 -> 0.0007; leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+
+=== V12_128 sim=0.079
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E080 c05/c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    ent_notes: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+
+=== V12_129 sim=0.079
+  HELD [c19] D_log convergence as N,lambda->inf unproved
+    held_note: unproved; 'strategy toward a proof'; quantify D2 bars
+  ENT [F12E035 c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    ent_notes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V12_130 sim=0.078
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E004 c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    ent_notes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V12_131 sim=0.078
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E146 c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    ent_notes: multi-torus via Laplacian dead; dynamics live
+
+=== V12_132 sim=0.077
+  HELD [c1] 8-point operator audit checklist
+    held_note: 8 criteria applied to candidates A-H
+  ENT [F12E024 c02/c14] never put the answer in by hand; primality emerges
+    aliases: c07/c2: never put the answer in by hand
+    ent_notes: deepest insight applied throughout D1–D5; standing methodology, sieve tests no predicate
+
+=== V12_133 sim=0.077
+  HELD [c11] Sierra xp models killed: smooth-count ceiling only
+    held_note: smooth Nbar(E) only; higher levels heuristic; BK/Connes unification background
+  ENT [F12E142 c10/c5] zeros-as-subset of higher-d spectrum not closed by Weyl
+    ent_notes: honest loophole recorded in framework doc
+
+=== V12_134 sim=0.077
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E050 c04/c14] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+    ent_notes: exact translation of D1
+
+=== V12_135 sim=0.077
+  HELD [c15] ranked shortlist: B computes, D heuristic, rest killed
+    held_note: B first; D bounded; A,D conjectural-only; C,E,F,G,H killed; Selberg control
+  ENT [F12E133 c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    ent_notes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V12_136 sim=0.077
+  HELD [c17] self-adjointness buys real spectrum, not identification
+    held_note: real spectrum != zero identification; conjectural
+  ENT [F12E130 c10/c1] 2-torus linked to 3-torus by self-adjoint operator
+    ent_notes: user's original idea, never written down
+
+=== V12_137 sim=0.077
+  HELD [c14] guardrail shorthand: D10, D12, D2, D8
+    held_note: D10 imported bridge; D12 spectrum deletion; D2 error bars; D8 compute limits
+  ENT [F12E132 c10/c11] sieve faces Delta_z = fermionic Fock basis over primes <=z
+    ent_notes: exact identification; native, not imported
+
+=== V12_138 sim=0.076
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E150 c11/c15] CCM D_log reimplemented from prime Euler products
+    ent_notes: eq.(4.2), (weinfty) to 2e-16, (bomp); k=13 bug fixed
+
+=== V12_139 sim=0.076
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E051 c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    ent_notes: programmatic/heuristic
+
+=== V12_140 sim=0.076
+  HELD [c16] Connes absorption spectrum: zeros as missing lines
+    held_note: exact, conditional on trace formula; explains explicit-formula minus sign
+  ENT [F12E160 c11/c7] simplicial sieve D_z: no prior art found
+    ent_notes: Iosif arXiv:1112.5796 focal lines, unrelated
+
+=== V12_141 sim=0.076
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E125 c09/c5] |xi(1-sbar)|²=|xi(s)|² verified to 3.8e-16, 6 points
+    ent_notes: 3.8e-16 agreement, 6 points; exact theorem numerically confirmed
+
+=== V12_142 sim=0.075
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E065 c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    ent_notes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V12_143 sim=0.075
+  HELD [c7] Deninger program: conjectural, missing space is whole problem
+    held_note: space missing; 2024 theorem proves template only
+  ENT [F12E073 c05/c18] verdict: template only; upper-bound machine; parity barrier stands
+    ent_notes: template not source; parity barrier stands
+
+=== V12_144 sim=0.075
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E035 c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    ent_notes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V12_145 sim=0.075
+  HELD [c3] Weil positivity of W(h) equivalent to RH
+    held_note: Weil proved RH <=> W(h) >= 0; exact theorem
+  ENT [F12E089 c06/c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    aliases: c11/c13: derivative identity for sum_S w(S), 10-digit verified
+    ent_notes: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}; z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V12_146 sim=0.075
+  HELD [c18] gold standard: future operators must reproduce trace formula
+    held_note: any future operator must reproduce Connes trace formula
+  ENT [F12E049 c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    ent_notes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V12_147 sim=0.074
+  HELD [c13] Wu-Sprung inverse potential killed: zeros are the input
+    held_note: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+  ENT [F12E020 c02/c1] ψ(x) as signed face-sum over Δ_x
+    aliases: c07/c6: D1: Chebyshev psi(x) as signed face-sum
+    ent_notes: exact at x=30,100,500; Moebius reframed; classical theorems in new clothes
+
+=== V12_148 sim=0.074
+  HELD [c2] Connes 1999 adele trace formula, live framework killed proof
+    held_note: semilocal derived, exact; full statement RH-equivalent; killed as proof
+  ENT [F12E142 c10/c5] zeros-as-subset of higher-d spectrum not closed by Weyl
+    ent_notes: honest loophole recorded in framework doc
+
+=== V12_149 sim=0.073
+  HELD [c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    held_note: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+  ENT [F12E069 c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    ent_notes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)

@@ -1,0 +1,203 @@
+We briefly sketch here the modifications needed to obtain bounds for moments of Lfunctions in families. Throughout we assume the Generalized Riemann Hypothesis for
+
+### MOMENTS OF THE RIEMANN ZETA-FUNCTION 9
+
+the appropriate L-functions under consideration. If q is a large prime, then Rudnick and Soundararajan \[16\] showed that, for positive rational numbers_k,
+
+### X∗ \|L( 1 2k ≫k q(log q) k 2
+
+2 , χ)\| , χ (mod q)
+
+where the sum is over primitive characters χ. The argument given here carries over to
+
+### k 2+ǫ for all positive real k. The only difference is
+
+### obtain the upper bound ≪k,ǫ q(log q)
+
+that one uses the orthogonality relations of the characters (mod q) to treat non-diagonal terms in the analog of Lemma 3.More interesting is the case of quadratic Dirichlet L-functions. In \[17\] Rudnick and
+
+Soundararajan showed that for rational numbers k ≥ 1
+
+### X♭ L( 1 k ≫k X(log X) k(k+1)/2
+
+### 2 , χd) ,
+
+\|d\|≤X
+
+where the sum is over fundamental discriminants d, and χd denotes the associated primitive quadratic character. To obtain an upper bound, we seek to bound the frequency of large
+
+values of L(
+
+\[
+
+2, \chi d). Analogously to our Proposition we find that1, for any x \ge 2 and with
+
+### λ0 as in our Proposition,
+
+Λ(n)χd(n) log(x/n) (1 + \lambda_0) log \|d\|
+
+X 1
+
+### log L( 1 + + O
+
+\[
+
+2, \chi d) \le 1 \lambda_0 \log x_2 \log x \log x .
+
+n 2 + log x log n
+
+2\le n\le x Notice that, in contrast to Lemma_2, the contribution of the prime squares in our sum is_1 \log \log x, since \chi d(p_2) = 1 for all p ∤ d. Taking this key difference into account, we
+
+### ∼
+
+may argue as in §4, using now quadratic reciprocity and the P-olya-Vinogradov inequality to develop the analog of Lemma_3. Thus we obtain that the number of d with\|d\| \le X
+
+### 1 1 log log X is
+
+and log L(
+
+\[
+
+2, \chi d) \ge V + 2
+
+### V 2
+
+### ≪ X exp (1 + o(1))
+
+### − 2 log log X
+
+when \sqrt{log} \log X \le V = o((log \log X) log3 X), and when V \ge (log \log X) log3 X this number is ≪ X exp(-cV \log V) for some positive constant c. From these estimates we deduce
+
+### that
+
+### X♭ L( 1 k ≪k,ǫ X(log X) k(k+1)/2+ǫ
+
+2 , χd) .
+
+\|d\|≤X
+
+As a last example consider the family of quadratic twists of a given elliptic curve E. We write the L-function for E as L(E, s) = P∞ −s where the a(n) are normalized
+
+### n=1 a(n)n
+
+1Since we are assuming GRH we know that L( 1 1 1
+
+\[
+
+2, \chi d) \ge 0. If L(2,\chi d) = 0 we interpret \log L(2,\chi d) as
+
+−∞ so that the claimed inequality is still valid.
+
+### 10 K. SOUNDARARAJAN
+
+to satisfy\|a(n)\| \le d(n) (the number of divisors of_n). The methods of [16] and [17] can be
+
+used to show that for rational numbers k ≥ 1
+
+X♭ L(E \otimes χd, 1 ) k ≫k X(log X) k(k−1)/2
+
+2 .
+
+\|d\|\le X Writing a(p) = \alpha p + \beta p with \alpha p\beta p = 1 we obtain analogously to our Proposition that, for x \ge 2 and \lambda_0 as before, \ell)(\alpha \ell \ell) log(x/p\ell) \log\|d\|
+
+### X χd(p 1
+
+\log L(E \otimes \chi d,1) \le p + \beta p + (1 + \lambda_0) + O 2 1 \lambda_0 \log x \log x \log x .
+
+### \ell n
+
+\ell≤x 2 + log x
+
+### n=p
+
+### \ell≥1
+
+The contribution of the terms \ell \ge 3 above is O \tag{1}
+
+, and the contribution of \ell = 2 (the
+
+### prime squares) is
+
+### 2 ) − 1 log(x/p2 ) 1
+
+### X a(p
+
+log log x.
+
+### ∼ −
+
+1+2 \lambda_0 log x_2
+
+2p log x
+
+### √
+
+p≤ x
+
+### p∤d
+
+After taking this feature into account, we may develop the analogous argument of §4.Thus, the number of d with\|d\| \le X and \log L(E \otimes \chi d,1) \ge V - 1 \log \log X is
+
+### 2 2
+
+### V 2
+
+### ≪ X exp (1 + o(1))
+
+### − 2 log log X
+
+when \sqrt{log} \log X \le V = o((log \log X) log3 X) and when V \ge (log \log X) log3 X this number is ≪ X exp(-cV \log V) for some positive constant c. This leads to the upper bound X♭ L(E \otimes \chi d,1) k ≪ X(log X) k(k-1)/2+ǫ
+
+2 .
+
+\|d\|\le X Our work above is in keeping with conjectures of Keating and Snaith [11] (see \tag{51}
+
+and (79) there) that an analog of Selberg’s result holds in families of L-functions. Thus in the unitary family of \chi(mod q), we expect that the distribution of \log\|L(1 2,\chi)\| is
+
+Gaussian with mean 0, and variance ∼ 1 log log q. In the symplectic family of quadratic
+
+Dirichlet characters, we expect that the distribution of log L( 1
+
+### 2 , χd) is Gaussian with mean
+
+1 log log \|d\| and variance ∼ log log \|d\|. Thus most values of L( 1
+
+### ∼
+
+2 2 , χd) are quite large.
+
+In the orthogonal family of quadratic twists of an elliptic curve, first we must restrict to those twists with positive sign of the functional equation, else the L-value is 0. In this restricted class, we expect that the distribution of log L(E \otimes χd, 1 ) is Gaussian with
+
+1 log log \|d\| and variance ∼ log log \|d\|. Thus the values in an orthogonal family
+
+### mean ∼ −
+
+tend to be small. With a little more work, the ideas in this paper would show (assuming GRH) that the frequency with which log \|L\| exceeds Mean + λ · Var is bounded above by_1 R ∞ 2/2dx for any fixed real number λ. If in addition to GRH we assume that most
+
+### e −x
+
+\sqrt{2\pi} λ
+
+of the L-functions under consideration do not have a zero very near2 1
+
+### 2 , then Selberg’s
+
+techniques would yield these Keating-Snaith analogs.
+
+2This is implied by the one level density conjectures of Katz and Sarnak \[9\].
+
+### MOMENTS OF THE RIEMANN ZETA-FUNCTION 11
+
+# References
+
+| [1] J.B. Conrey and A. Ghosh, On mean values of the Zeta-function, Mathematika 31 (1984), 159–161. |  | | [2] J.B. Conrey, D. Farmer, J. Keating, M. Rubinstein, and N. Snaith, Integral moments of L-functions, |  | Proc. London Math. Soc. 91 (2005), 33–104. | | [3] H. Davenport, Multiplicative Number Theory, vol. 74, Springer-Verlag (GTM), 2000. | | [4] A. Diaconu, D. Goldfeld, and J. Hoffstein, Multiple Dirichlet series and moments of zeta and Lfunctions, Compositio Math. 139 (2003), 297–360. | | [5] D.A. Goldston and S.M. Gonek, A note on S(t) and the zeros of the Riemann zeta-function, Bull. |  | London Math. Soc. 39 (2007), 482-486. | | [6] D.R. Heath-Brown, Fractional moments of the Riemann zeta-function, J. London Math. Soc. 24 |  | (1981), 65-78. | | [7] D.R. Heath-Brown, Fractional moments of the Riemann zeta-function, II, Quart. J. of Math. 44 |  | (1993), 185–197. | | [8] M. Jutila, On the value distribution of the zeta-function on the critical line, Bull. London Math. Soc. |  | 15 (1983), 513–518. | | [9] N.M. Katz and P. Sarnak, Random Matrices, Frobenius Eigenvalues, and Monodromy, vol. 45, Amer. |  | Math. Soc. Colloq. Publ., 1998. | | [10] J.P. Keating and N.C. Snaith, Random matrix theory and ζ( | 1 |
+
+2 + it), Comm. in Math. Phys. 214
+
+|  | (2000), 57–89. | | [11] J.P. Keating and N.C. Snaith, Random matrix theory and L-functions at s = 1/2, Comm. in Math. |  | Phys. 214 (2000), 91–110. | | [12] K. Ramachandra, Some remarks on the mean value of the Riemann zeta-function and other Dirichlet |  | series, I, Hardy-Ramanujan J. 1 (1978), 1–15. | | [13] K. Ramachandra, Some remarks on the mean value of the Riemann zeta-function and other Dirichlet |  | series, II, Hardy-Ramanujan J. 3 (1980), 1–25. | | [14] K. Ramachandra, Some remarks on the mean value of the Riemann zeta-function and other Dirichlet |  | series, III, Ann. Acad. Sci. Fenn. 5 (1980), 145–180. | | [15] K. Ramachandra and A. Sankaranarayanan, On some theorems of Littlewood and Selberg. I., J. |  | Number Theory 44 (1993), 281–291. | | [16] Z. Rudnick and K. Soundararajan, Lower bounds for moments of L-functions, Proc. Natl. Sci. Acad. |  | USA 102 (2005), 6837-6838. | | [17] Z. Rudnick and K. Soundararajan, Lower bounds for moments of L-functions: symplectic and orthogonal examples, Multiple Dirichlet Series, Automorphic Forms, and Analytic Number Theory (Editors: |  | Friedberg, Bump, Goldfeld, and Hoffstein), Proc. Symp. Pure Math., vol. 75, Amer. Math. Soc., 2006. | | [18] A. Selberg, Contributions to the theory of the Riemann zeta-function, Archiv Math. Naturvid. 48 |  | (1946), 89–155. | | [19] A. Selberg, Old and new conjectures and results about a class of Dirichlet series, Proceedings of the |  | Amalfi Conference on Number Theory, Collected Papers (Vol. II), pp. 47–63. | | [20] K. Soundararajan, Mean values of the Riemann zeta-function, Mathematika 42 (1995), 158–174. | | [21] K. Soundararajan, Extreme values of zeta and L-functions, 16 pp., to appear, e-print available at |  | http://arxiv.org/abs/0708.3990. | | [22] E.C. Titchmarsh, The theory of the Riemann zeta-function, Oxford University Press, New York, 1986. | |
+
+Department of Mathematics, 450 Serra Mall, Bldg. 380, Stanford University, Stanford,
+
+#### CA 94305, USA
+
+E-mail address: ksound@math.stanford.edu

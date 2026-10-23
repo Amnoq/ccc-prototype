@@ -1,0 +1,505 @@
+story even for GL2. For instance, the “approximate functional equation” gives a way to numerically compute any given L-function at the central point, in
+
+time C_1/2+ε
+
+, where C is the analytic conductor. An interesting question is
+
+whether some of the ideas that enter into the proof of subconvexity can be interpreted to give faster algorithms. There is some suggestion of this in existing
+
+fast algorithms for computation of ζ(1/2 + it).
+
+1.1.1. An outline of the proof. — To conclude this section we outline
+
+the proof of the main theorem_1.2; a more elementary discussion is in §1.2 and §1.4. Consider two (generic) automorphic representations \pi_1, \pi_2; for
+
+simplicity we assume that both are cuspidal4 and that \pi_2 is fixed. We aim for
+
+a subconvex bound for the Rankin/Selberg L-function central value of the form
+
+\[
+
+L(\pi 1 \otimes \pi_2,1/2) -\delta C(\pi 1 \otimes \pi_2) \frac{1}{4} \pi_2 C(\pi 1), \delta > 0. By Rankin/Selberg theory we may realize the left-hand side
+
+above as a triple product period R \varphi 1\varphi 2E(g)dg = h\varphi 1, \varphi_2 E_i for suitable
+
+\]
+
+#### PGL2(Q)\\PGL2(A)
+
+\[
+
+\varphi_i \in \pi_i (i = 1,2) and E belonging to the Eisenstein series of type =1 \chi,” where \chi is the inverse of the product of the central characters of
+
+\pi_1 and \pi 2.Now\|h\varphi 1, \varphi 2Ei\|2 is bounded by h\varphi 2E, \varphi_2 E_i = h\varphi 2\varphi 2, EEi, \tag{1.2}
+
+\]
+
+\[
+
+4 However, we devote some time and effort to handling the necessary regularizations in the general
+
+\]
+
+case; to our surprise, these modifications are not ugly but rather beautiful.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 5
+
+and it suffices to show this is at most C(π1) −δ
+
+. Now, EE is not square
+
+integrable and one needs a regularized version of the above inner product; this is described in §4.3 and §4.4. This being done, we obtain by spectral expansion
+
+(see§4.3.8) Z
+
+hϕ2ϕ2, EEireg = hϕ2ϕ2, Φireg + X hϕ2ϕ2, ϕireghϕ, EEiregdµP (π) (1.3) π B(π) where the subscript reg denotes regularized inner products (one has of course hϕ2ϕ2,
+
+EEi = hϕ2ϕ2, EEireg) and Φ is a certain non-unitary Eisenstein series, which is an artifact of the integral regularization; on the other hand, π varies over
+
+the automorphic dual of PGL2, dµP is a “Plancherel measure,” and ϕ varies over an orthonormal basis, B(π), of factorizable vectors in π. Now: 1. The term hϕ2ϕ2,
+
+Φireg is handled via the amplification method (§5.18). 2. The terms hϕ, EEireg are bounded by some negative power of C(π1)(§5.2.8). Rankin/Selberg theory
+
+implies that hϕ, EEireg factor into a product of local integrals to which bounds for matrix coefficient can be applied (see below) times the central value L(π,
+
+1/2)L(π × χ, 1/2); we eventually need only bounds for L(π × χ, 1/2), where π is essentially fixed5 and χ varying.
+
+The phenomenon of reduction to another case of subconvexity was noted
+
+by the first-named author in \[48\]. We establish this case in Theorem 5.1 (again, in all aspects); the proof generalizes \[67\], and we refer to the
+
+introduction of \[67\] and to §1.2 for intuition about it.
+
+1.1.2. Local computations. — Let us be more precise about the local integrals that occur in, e.g., the Rankin-Selberg method. For our purpose
+
+they must be examined carefully; we are particularly interested in their analytic properties, i.e., how large or small they can be. This is the purpose of
+
+Part III of the paper; we deal also with the local Hecke integrals.
+
+For example, the local integral occuring in the Rankin-Selberg method
+
+can be interpreted as a linear functional \` on the tensor product \pi_1 \otimes \pi_2 \otimes \pi_3 of three representations \pi_j of GL2(k). The space of such
+
+functionals is at
+
+2 is therefore proportional to the Hermitian form
+
+most one dimensional; \|\`\|
+
+Z
+
+hx1, g.x1ihx2, g.x2ihx3, g.x3idg,
+
+x1 \otimes x2 \otimes x3 7→
+
+#### PGL2
+
+\[
+
+5 As it turns out, the vector \varphi_2 \in \pi_2 depends only on \pi_2 (up to archimedean components,this is just the new vector), as the latter is fixed, the
+
+quantities h\varphi 2\varphi 2, \varphi ireg decay very rapidly as the eigenvalue or level of \varphi increases. So, we may regard \varphi as essentially fixed.
+
+\]
+
+#### 6 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+and this is of tremendous utility for the analytic theory. Similarly, when studying the Hecke integral, it is most convenient to study the Hermitian form
+
+defined by x 7→ R ha.x, xida where A the group of diagonal matrices
+
+A(k)
+
+(modulo the center).
+
+It is a wonderful observation of Waldspurger (see also \[33\]) that global
+
+period formulas become very simple when expressed using such canonically normalized local functionals.
+
+1.1.3. Spectral identities of L-functions. — The identity (1.2), although
+
+evident, is the keystone of our argument. Its usage in the “period” form presented above seems to have been noticed independently by the present authors
+
+in their attempt to geometrize \[48\], and by Bernstein and Reznikov in
+
+their work on the subconvexity problem for triple product L-functions \[5\].
+
+However (1.2) also manifests itself at the level of L-functions, and looks
+
+\[
+
+rather striking in this guise: indeed \tag{1.3}
+
+\]
+
+\[
+
+may be recognized as an identity between (weighted) sums of central values of triple product L-functions and (weighted) sums of =canonical” square roots of
+
+similar central values: Z w(\pi 1)L(\pi 1 \otimes \pi_2 \otimes \pi_3,1/2)d\mu P (\pi 1) \pi_1
+
+\]
+
+\[
+
+Z
+
+\[
+
+p L(\pi 2 \otimes \pi \tilde{2} \otimes \pi,1/2). p L(\pi 3 \otimes \pi \tilde{3} \otimes \pi,1/2)d\mu P (\pi) = \tilde{w}(\pi)
+
+\]
+
+\]
+
+π
+
+In this form, this identity was discovered already by N. Kuznetsov \[43\] (with \pi_2, \pi_3 Eisenstein series see also \[53\]) and an interesting application
+
+of this result was made by M. Jutila \[40\]. This period identity has – implicitly or explicitly – played an important role in the analytic theory of GL2 forms.
+
+We refer to §4.5 for some more discussion of how to convert (1.2) to an identity of L-functions.
+
+In fact, it was shown by A. Reznikov (in the archimedean setting at
+
+least), that such phenomena is not isolated, and may be systematically described through the formalism of strong Gelfand configurations: that is com
+
+mutative diagrams of algebraic groups
+
+G
+
+| ✲ | ✛ |  |
+
+| --- | --- | --- |
+
+| ⊂ |  | ⊃ |
+
+| H1 |  | H2 |
+
+| ✛ |  | ✲ |
+
+| ⊃ | ⊂ |  |
+
+F
+
+in which the pairs (F, Hi) and (Hi
+
+, G) are strong Gelfand pairs. The
+
+present paper corresponds to the configuration G = GL2 × GL2 × GL2 × GL2,
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 7
+
+\[
+
+Hi = \Delta GL2 \times \Delta GL2 with two different diagonal embeddings and F = \Delta GL2 (diagonally embedded). As is explained in [61], such strong Gelfand
+
+configurations yield naturally to spectral identities between periods and then between L-functions. We refer to loc. cit. for more interesting examples of that
+
+sort.
+
+\]
+
+1.1.4. Structure of the paper; reading suggestions. — The paper splits
+
+into five parts; the first four parts are largely independent of each other, and contain various results of independent interest. The fifth part brings together
+
+these results to prove the main theorem.
+
+The reader may wish to skip directly to Parts IV and V of the paper; the results of Parts II and III are largely technical and not particularly
+
+surprising.
+
+- In the remainder of Part I, §1.2, §1.4 we consider two corollaries to our main theorem – which can both be phrased without L-functions – and we explain how
+
+the proofs work in these instances. Indeed, the general proof is obtained by adelizing and combining these two particular cases.
+
+The corollaries we consider are:
+
+1. In §1.2, we discuss the “Burgess bound,” which relates to the issue of the smallest quadratic non-residue modulo a prime q.
+
+2. In §1.4, we discuss a problem in analysis on a negatively curved
+
+|  | surface, viz.: how large can the Fourier coefficients of an eigenfunction |
+
+| --- | --- |
+
+|  | along a closed geodesic be ? |
+
+|  | - Part II (viz. §2.2 to §2.6) is of more general nature: we discuss a |
+
+| system of Sobolev norms on adelic quotients, inspired largely by work of |  |
+
+| Bernstein and Reznikov. This section exists to give a suitable language |  |
+
+| for talking about adelic equidistribution, and the norms are a somewhat |  |
+
+| cleaner version of those appearing in [67]. Some of the remarks here are |  |
+
+| of independent interest, although they are of technical nature. |  |
+
+|  | - Part III discusses some of the analytic theory of torus-invariant functionals on a representation of GL2(k) (where k is a local field), and of |
+
+| trilinear functionals on representations of GL2(k). |  |
+
+|  | - Part IV discusses the global theory of torus periods on GL2 and the |
+
+| diagonal period on GL2 × GL2 × GL2. |  |
+
+|  | - Part V gives the proof of Theorem 1.2 along with the important intermediary result Theorem 5.1 (a subconvex bound of L-function of character |
+
+| twist uniform in the character aspect). |  |
+
+#### 8 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Acknowledgement
+
+The present work started during a visit of the first author at the Courant
+
+Institute (New York) and ended basically during the workshop “Analytic Theory of GL(3) Automorphic Forms and Applications” at the AIM (Palo Alto); parts of it
+
+were written during visits at the RIMS, at the IHES and at Caltech for the first author and visits at the IAS and the IHES for the second. Both authors would
+
+like to thank these institutions for their support and the very nice accommodations provided.
+
+We would like to express our thanks to J. Bernstein, E. Lapid for many
+
+helpful discussions related to regularization, and to Y. Sakellaridis for discussions related to normalization of functionals. In addition, we have learned
+
+greatly from the work of J. Bernstein and A. Reznikov. We thank them both for sharing their knowledge generously; the reader will find many techniques inspired
+
+by their work in this paper. We would also like to aknowledge the influence of the series of papers of Duke, Friedlander, Iwaniec; besides the use of the, by
+
+now standard, amplification method, the reader will recognize, in a disguised form, many of the techniques invented in their work. Finally, we would like to
+
+thank D. Ramakrishnan and W. T. Gan for useful discussions related to this work, F. Brumley, E. Fouvry and N. Templier for their
+
+comments and corrections and we wish to address special thanks to Peter Sarnak for his continuous encouragements and advices.
+
+This project has been stretched over several years and we would like
+
+to apologize for the long delay between the announcement (e.g. in \[50\]) of some of the results of this paper and its appearance. By way of excuse, the results
+
+here are now substantially stronger. Perhaps more importantly, the present proofs are far more streamlined than our original proofs; although the general
+
+outline is as in \[50\], the use of regularization and canonical inner product formula made many of the details far more manageable.
+
+1.2. The Burgess bound and the geometry of SL2(Z)\H
+
+In this section and also in §1.4 we present some of the ideas of the
+
+general proof in the most down-to-earth setting as we could manage. In both these sections, we have by and large eschewed mention of L-functions.
+
+1.2.1. The Burgess bound. — Let χ be a Dirichlet character to the modulus q. It is well-known that subconvexity for the Dirichlet L-function L(χ, 1/2), in the
+
+q-aspect, is substantively equivalent to a bound of the na- #### THE SUBCONVEXITY PROBLEM FOR GL2. 9
+
+ture:
+
+M
+
+X
+
+χ(m) 6 Mq−δ
+
+,  (1.4) i=1
+
+\[
+
+\frac{1}{2} and some absolute constant \delta > 0. with M \approx q In this question, q_1/2 is a =threshold”: indeed it is rather easy to establish \tag{1.4}
+
+\]
+
+\[
+
+when M = q
+
+\]
+
+0.51 (the Polya-Vinogradov inequality). The bound
+
+\[
+
+, for M in the range M \approx q_1/2 was proven (in a wider range) by Burgess [12].
+
+\]
+
+In the present section (see also \[68\]) – which, we hope, will make sense
+
+to the reader without any knowledge of L-functions – we explain how (1.4)is related to an equidistribution equation on the space of lattices, and then discuss
+
+how to prove the uniform distribution statement. A key part of the paper – §5.1 – will implement the discussion of this section in a more general context.
+
+To simplify that discussion, we assume for the rest of this section that
+
+q is prime and that χ is the Legendre symbol.
+
+1.2.2. The space of lattices. — Put X = SL2(Z)\ SL2(R), the space of
+
+unimodular lattices in R2
+
+.
+
+\[
+
+We say a sequence of finite subsets Si \subset X is becoming uniformly distributed if, for any f \in Cc(X), we have
+
+\]
+
+1 Z X f → f, \|Si \|
+
+X
+
+Si
+
+the latter integral being taken with respect to the unique SL2(R)-invariant probability measure on X.
+
+\[
+
+1.2.3. Burgess bound and lattices. — For x \in R consider the lattice \Lambda x = Z.(1,x) + Z.(0,q) \in X.
+
+\]
+
+\sqrt{q}
+
+As x varies, Λx moves on a horocycle in X – an orbit of the group of
+
+upper triangular, unipotent matrices. This horocycle is in fact closed, since
+
+\[
+
+\Lambda x+q = \Lambda x. Given_0 < \eta < 1, let F : X \to R be defined by F(L) = \|L ∩ [0, \eta] 2\| - 1,
+
+\]
+
+i.e. F counts the number of non-trivial lattice points in a small square box.
+
+\[
+
+A simple computation shows that for x \in Z, F(\Lambda x) equals the number of
+
+\]
+
+2 ∩ Z 2 to the equation
+
+\[
+
+nonzero solutions (\alpha,\beta) \in [0, \eta \sqrt{q}] \beta ≡ \alpha x mod q.
+
+\]
+
+#### 10 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+It follows that
+
+X X 2
+
+\[
+
+F(\Lambda x)\chi(x) = 1 \chi(\beta)
+
+\]
+
+q q
+
+\[
+
+x mod q \beta \in [1,\eta \sqrt{q}]
+
+\]
+
+Now, the Burgess bound would follow if we knew that the right-hand
+
+side was small. The above identity therefore relates the Burgess bound to a type of equidistribution statement: we must show that the sets
+
+\[
+
+{\Lambda x : x \in Z/qZ is a quadratic residue}, \tag{1.5}
+
+\]
+
+\[
+
+and the similar set for quadratic nonresidues, are uniformly distributed6 on X.
+
+\]
+
+Remark. — This connection between the bound (1.4), and a uniform
+
+distribution statement on the space of lattices, is not an accident: it is a special case of the connection between L-functions and automorphic forms.
+
+Indeed, the uniform distribution (1.5) encodes much more than (1.4): it encodes, at once, subconvex bounds for twists L(
+
+2 , f × χ) where f is a fixed
+
+SL2(Z)-modular form (of any weight); the latter specializes to the former when f is an Eisenstein series. Our point above, however, is that the connection
+
+between (1.4) and the space of lattices can be made in an elementary
+
+way.
+
+It is possible to visualize the desired uniform distribution statement by
+
+projecting from the space of lattices to Y := SL2(Z)\H (at the price of losing the group actions). The lattice Λx projects to the class of zx = i
+
+q + x.
+
+1.2.4. Equidistribution statements. — We shall try to establish (1.5) by first proving uniform distribution of a “bigger” set, and then refining that statement.
+
+Consider, then, the following three equidistribution statements, as q → ∞: (A) The closed horocycle {Λx : x ∈ [0, q]} becomes uniformly distributed on X; (B)
+
+{Λx : x ∈ Z ∩ [0, q]} becomes uniformly distributed on X; (C) {Λx : x ∈ Z ∩ [0, q]} becomes u.d. on X, when each point Λx is weighted by χ(x). For χ the
+
+quadratic character modulo q, we might rewrite (C) as: (C2) {Λx : x ∈ Z ∩ [0, q], x a quadratic residue mod q} becomes u.d. on X.
+
+6 Strictly speaking, the function F is not of compact support on X; in fact, it grows at the cusps.
+
+We shall ignore this technical detail for the purpose of explanation.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 11
+
+FIG. 1.1. — The horocycle x
+
+\[
+
+173 + i 173 . Gray dots: x \in R, plain (resp. empty) square x \in Z a quadratic (resp.
+
+\]
+
+non-quadratic) residue mod 173.
+
+We have already discussed informally, and it is true in a very precise
+
+sense, that (C) and (C2) have substantively the same content as the subconvexity result that we are aiming for. Note that (C) and (C2) seem “unnatural”
+
+at first; it seems like zx is parameterized by an additive structure,
+
+i.e. Z/qZ; thus it is odd to restrict attention to a “multiplicatively” defined set. But in truth the examples of (C) and (C2) have – as we shall see – an
+
+underlying “multiplicative” symmetry; the fact that it appears additive is a reflection of the degeneration of a torus in GL2 to a unipotent group.
+
+Observe that (A), (B), (C2) are asserting the equidistribution of smaller
+
+and smaller sets. So what we need, besides a proof of (A) – which happens to be an old result of Peter Sarnak – is a method to pass from the equidistribution of
+
+a large set, to the equidistribution of a smaller subset. It is provided by the following easy principle (cf. \[68\] for a further discussion of its
+
+applicability in this type of context):
+
+#### 12 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+1.3. Ergodic principle. — Suppose a group H acts ergodically on a probability space (X, µ), and ν is an H-invariant measure which is dominated by some positive
+
+multiple of µ. Then ν is a scalar multiple of µ. By “ν is dominated by some positive multiple of µ” (written ν µ) we mean that there is a constant A such that
+
+for any measurable set S ⊂ X, \|ν\|(S) 6 Aµ(S). Indeed, if this is so, ν is absolutely continuous with respect to µ, and thus may be expressed as fµ for some f
+
+∈ L_1 (µ); then f must be a H-invariant function, necessarily constant by ergodicity. The principle is therefore trivial; on the other hand, its consequences in
+
+the number-theoretic context are surprising.
+
+Using the principle, we can pass from the equidistribution of µ to the
+
+\[
+
+equidistribution of \nu . (Of course,one needs a more quantitative form of this principle; we enunciate such a form in the context we need in §2.5.3.) By

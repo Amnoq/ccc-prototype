@@ -1,0 +1,938 @@
+=== V06_000 sim=0.544
+  H [c12] Uncertainty wall: n=e^{7.433/w}; w=0.25 needs 8.2e12 primes
+    hnote: w=2→41; w=1→1.7e3; w=0.5→2.9e6; w=0.1→1.9e32; w=1→0.44, w=0.5→0.22 spacings
+  E [F06E094/c08/c18] Uncertainty wall: w=0.5 needs 2.9e6 primes; w=0.25 infeasible
+    enotes: w=0.5→2.9e6 primes; w=0.25→8.2e12 infeasible
+
+=== V06_001 sim=0.540
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E008/c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c11/c14: refined home E_z with differentiated residues
+    enotes: face-weights = differentiated residues; closes D4↔D6 loop; numerics hygiene; constructions exact
+
+=== V06_002 sim=0.484
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E090/c08/c14] 10d: function-field template from intersection pairing on C×C
+    enotes: F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V06_003 sim=0.439
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E138/c11/c13] derivative identity for sum_S w(S), 10-digit verified
+    enotes: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V06_004 sim=0.339
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E009/c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    aliases: c11/c12: no ordinary positive geometry: obstruction theorem; c11/c22: ordinary positive region carrying w(S) exists
+    enotes: |w({2})|=(log2)/2≈0.347 ≠ ±1; |w({2})|=(log 2)/2=0.3466 not in {0,1}
+
+=== V06_005 sim=0.304
+  H [c16] Ordinary AHBL positive geometry, residues ±1
+    hnote: killed by theorem; signs OK, magnitudes impossible
+  E [F06E009/c01/c18] 14a obstruction: no ordinary positive geometry carries w(S)
+    aliases: c11/c12: no ordinary positive geometry: obstruction theorem; c11/c22: ordinary positive region carrying w(S) exists
+    enotes: |w({2})|=(log2)/2≈0.347 ≠ ±1; |w({2})|=(log 2)/2=0.3466 not in {0,1}
+
+=== V06_006 sim=0.293
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E014/c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    aliases: c02/c11: weights signed, alternate with face dimension; c02/c8: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; c07/c9: D4: face-weights w(S)=(
+    enotes: Σw(S)→1; Dirichlet GF = −ζ′/ζ²; weights signed, alternate with face dimension
+
+=== V06_007 sim=0.269
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E092/c08/c16] Frobenius-like operator for Δ∞ (refines D4)
+    enotes: refines D4's; belongs to bridge program's 10d
+
+=== V06_008 sim=0.265
+  H [c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    hnote: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+  E [F06E138/c11/c13] derivative identity for sum_S w(S), 10-digit verified
+    enotes: z<=29 ten digits; 0.5333 at z=1e5 to e^-gamma
+
+=== V06_009 sim=0.238
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E033/c03/c1] Sieve deformation R_p={0},{0,-2}
+    enotes: deformation marks R_p={0},{0,-2} residue families
+
+=== V06_010 sim=0.219
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E092/c08/c16] Frobenius-like operator for Δ∞ (refines D4)
+    enotes: refines D4's; belongs to bridge program's 10d
+
+=== V06_011 sim=0.215
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E091/c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    aliases: c09/c22: Deninger program: 2024 theorem proves template dynamically only; c12/c7: Deninger program: conjectural, missing space is whole problem
+    enotes: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3; missing space is the whole problem
+
+=== V06_012 sim=0.215
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E049/c04/c13] explicit formula verified: T=400→1.36, T=50→4.55
+    aliases: c08/c4: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+    enotes: explicit_formula.py; 400 zeros, γ≤679.7; error 4.55→1.36 as T=50→400; explicit_formula.py
+
+=== V06_013 sim=0.209
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V06_014 sim=0.208
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E090/c08/c14] 10d: function-field template from intersection pairing on C×C
+    enotes: F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V06_015 sim=0.206
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E118/c10/c1] 2-torus linked to 3-torus by self-adjoint operator
+    enotes: user's original idea, never written down
+
+=== V06_016 sim=0.206
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E000/c01/c1] Sieve is simplicial complex Δ_z
+    aliases: c02/c2: Δ_x incidence complex of sieve to x; c07/c4: finite incidence complex: vertices primes <=N, faces products <=N
+    enotes: finite prime subsets = faces; face-sum Möbius inversion; link-face counts match; integer bijection exact
+
+=== V06_017 sim=0.199
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E008/c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c11/c14: refined home E_z with differentiated residues
+    enotes: face-weights = differentiated residues; closes D4↔D6 loop; numerics hygiene; constructions exact
+
+=== V06_018 sim=0.198
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E008/c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c11/c14: refined home E_z with differentiated residues
+    enotes: face-weights = differentiated residues; closes D4↔D6 loop; numerics hygiene; constructions exact
+
+=== V06_019 sim=0.185
+  H [c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    hnote: 10a infinite needs window n~e^{7.4/w}
+  E [F06E091/c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    aliases: c09/c22: Deninger program: 2024 theorem proves template dynamically only; c12/c7: Deninger program: conjectural, missing space is whole problem
+    enotes: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3; missing space is the whole problem
+
+=== V06_020 sim=0.180
+  H [c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    hnote: δ=1 and 0.5; bound crude as expected
+  E [F06E095/c08/c19] Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008
+    enotes: MV ratio 0.995→1.007; large-sieve ratios 0.004, 0.008
+
+=== V06_021 sim=0.176
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E004/c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    enotes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V06_022 sim=0.172
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E125/c10/c2] five linkages L1-L5: product, mapping torus, UT bundle, Deninger, Heisenberg
+    enotes: foundation rebuilt in multi_torus_framework.md
+
+=== V06_023 sim=0.166
+  H [c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    hnote: δ=1 and 0.5; bound crude as expected
+  E [F06E093/c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    enotes: verified on our objects; estimates cited not derived
+
+=== V06_024 sim=0.159
+  H [c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    hnote: 10a infinite needs window n~e^{7.4/w}
+  E [F06E081/c05/c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    enotes: exact algebra; window buys sigma=1/2 convergence
+
+=== V06_025 sim=0.159
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E107/c09/c19] FF Jacobian: R1–R6 all satisfied, the template itself
+    enotes: reference template cited
+
+=== V06_026 sim=0.158
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E065/c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V06_027 sim=0.157
+  H [c3] Counting-born positivity, same kind as Λ≥0
+    hnote: same kind as deg≥0 (D7/D9 Λ≥0)
+  E [F06E117/c09/c9] Face-complex Delta operators: R4 counting-born, R1–R3 absent
+    enotes: R4 from Lambda>=0 counting; 10c PD forms
+
+=== V06_028 sim=0.156
+  H [c16] Ordinary AHBL positive geometry, residues ±1
+    hnote: killed by theorem; signs OK, magnitudes impossible
+  E [F06E018/c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights
+    enotes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V06_029 sim=0.154
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E143/c11/c19] mechanism fragile: requires exact prime arithmetic
+    enotes: noise 1e-6 gives err 2.1; drop p=2,3 destroys; p=5 survives
+
+=== V06_030 sim=0.153
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V06_031 sim=0.152
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_032 sim=0.150
+  H [c16] Ordinary AHBL positive geometry, residues ±1
+    hnote: killed by theorem; signs OK, magnitudes impossible
+  E [F06E022/c02/c12] positive region with these weights as stratum residues
+    enotes: sharpest question of the program (text)
+
+=== V06_033 sim=0.148
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E022/c02/c12] positive region with these weights as stratum residues
+    enotes: sharpest question of the program (text)
+
+=== V06_034 sim=0.144
+  H [c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    hnote: 10a infinite needs window n~e^{7.4/w}
+  E [F06E117/c09/c9] Face-complex Delta operators: R4 counting-born, R1–R3 absent
+    enotes: R4 from Lambda>=0 counting; 10c PD forms
+
+=== V06_035 sim=0.143
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E048/c04/c12] Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+    enotes: Davenport; classical exact theorem
+
+=== V06_036 sim=0.143
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E089/c08/c13] Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+    enotes: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+
+=== V06_037 sim=0.142
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E014/c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    aliases: c02/c11: weights signed, alternate with face dimension; c02/c8: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; c07/c9: D4: face-weights w(S)=(
+    enotes: Σw(S)→1; Dirichlet GF = −ζ′/ζ²; weights signed, alternate with face dimension
+
+=== V06_038 sim=0.139
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E080/c05/c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    enotes: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+
+=== V06_039 sim=0.138
+  H [c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    hnote: H=200,1000,5000,20000; mean-square amplifier real
+  E [F06E095/c08/c19] Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008
+    enotes: MV ratio 0.995→1.007; large-sieve ratios 0.004, 0.008
+
+=== V06_040 sim=0.138
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E043/c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    enotes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V06_041 sim=0.138
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E092/c08/c16] Frobenius-like operator for Δ∞ (refines D4)
+    enotes: refines D4's; belongs to bridge program's 10d
+
+=== V06_042 sim=0.136
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E031/c02/c6] Figueiredo recipe steps 2–4 without positive region
+    enotes: steps 2–4 analogues; cf. arXiv:2309.15913
+
+=== V06_043 sim=0.135
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E097/c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    enotes: node 11 scoring template; refines 10d ledger
+
+=== V06_044 sim=0.135
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E091/c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    aliases: c09/c22: Deninger program: 2024 theorem proves template dynamically only; c12/c7: Deninger program: conjectural, missing space is whole problem
+    enotes: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3; missing space is the whole problem
+
+=== V06_045 sim=0.134
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E091/c08/c15] Ledger: missing Jacobian-role space, Frobenius operator, pairing
+    aliases: c09/c22: Deninger program: 2024 theorem proves template dynamically only; c12/c7: Deninger program: conjectural, missing space is whole problem
+    enotes: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3; missing space is the whole problem
+
+=== V06_046 sim=0.134
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E054/c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    enotes: a=0.5 cancellation to 15 digits
+
+=== V06_047 sim=0.133
+  H [c3] Counting-born positivity, same kind as Λ≥0
+    hnote: same kind as deg≥0 (D7/D9 Λ≥0)
+  E [F06E098/c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    enotes: cited, not re-derived; R1 as missing spectrum
+
+=== V06_048 sim=0.132
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E093/c08/c17] 10e: large sieve and explicit-formula uncertainty tools
+    enotes: verified on our objects; estimates cited not derived
+
+=== V06_049 sim=0.130
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E074/c05/c19] independent Gram/intersection positivity source (10d home)
+    enotes: 10d natural home; no independent source yet
+
+=== V06_050 sim=0.130
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_051 sim=0.129
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E158/c12/c16] Connes absorption spectrum: zeros as missing lines
+    enotes: exact, conditional on trace formula; explains explicit-formula minus sign
+
+=== V06_052 sim=0.129
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E087/c08/c1] Bridge span: geometric positivity must connect to Weil positivity
+    enotes: Weil 1952: RH is positivity; source must be geometric
+
+=== V06_053 sim=0.127
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E022/c02/c12] positive region with these weights as stratum residues
+    enotes: sharpest question of the program (text)
+
+=== V06_054 sim=0.126
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E097/c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    enotes: node 11 scoring template; refines 10d ledger
+
+=== V06_055 sim=0.125
+  H [c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    hnote: δ=1 and 0.5; bound crude as expected
+  E [F06E076/c05/c20] classical level-truncated bound 1/G(z)
+    enotes: constraint; worse bound 0.2348 vs 0.1710
+
+=== V06_056 sim=0.124
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E043/c03/c4] Exact mu-identity S(x,z)=sum mu(d)E_d(x)
+    enotes: exact at (z,x)=(13,50000) and (30,200000)
+
+=== V06_057 sim=0.123
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E152/c12/c10] Selberg/Mayer control: dream works in hyperbolic world
+    enotes: trace formula derived; zeros = Laplacian eigenvalues; D10d closed
+
+=== V06_058 sim=0.123
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E028/c02/c18] weighted infinite complex as the limit object
+    aliases: c07/c12: geometry lives in the weights, not the bare complex
+    enotes: limit object = weighted complex, not bare; zeta zeros regulate the face-sum
+
+=== V06_059 sim=0.123
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E135/c11/c1] k-tuple deformation sweep at x=10^6
+    enotes: 9 tuples + control; three panels (a)(b)(c)
+
+=== V06_060 sim=0.122
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E038/c03/c16] Zero-free line as energy contradiction
+    enotes: analytic residue -m housed, not derived
+
+=== V06_061 sim=0.122
+  H [c3] Counting-born positivity, same kind as Λ≥0
+    hnote: same kind as deg≥0 (D7/D9 Λ≥0)
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_062 sim=0.121
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E054/c04/c18] W(h_a)≥0 computed prime-side only, no zeros used
+    enotes: a=0.5 cancellation to 15 digits
+
+=== V06_063 sim=0.121
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E117/c09/c9] Face-complex Delta operators: R4 counting-born, R1–R3 absent
+    enotes: R4 from Lambda>=0 counting; 10c PD forms
+
+=== V06_064 sim=0.119
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E163/c12/c4] D_log spectral triples: self-adjoint, prime-input, 50 zeros matched
+    enotes: primes <=13 on critical line; 50 zeros match 2.6e-55..1e-3; secondary, unverified
+
+=== V06_065 sim=0.118
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E027/c02/c17] bare Δ_∞ is contractible infinite simplex, no topology
+    aliases: c07/c11: naive hope: geometry lived in the bare incidence complex
+    enotes: bare Δ_∞ infinite simplex, contractible, no topology; Delta_infty contractible; replaced by c12
+
+=== V06_066 sim=0.118
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E107/c09/c19] FF Jacobian: R1–R6 all satisfied, the template itself
+    enotes: reference template cited
+
+=== V06_067 sim=0.118
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E028/c02/c18] weighted infinite complex as the limit object
+    aliases: c07/c12: geometry lives in the weights, not the bare complex
+    enotes: limit object = weighted complex, not bare; zeta zeros regulate the face-sum
+
+=== V06_068 sim=0.116
+  H [c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    hnote: δ=1 and 0.5; bound crude as expected
+  E [F06E039/c03/c17] Pole at sigma=1 is infinite total prime energy
+    enotes: pole expected, not pathological
+
+=== V06_069 sim=0.116
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E001/c01/c10] Three verified positivity kinds, none zero-detecting
+    aliases: c08/c20: Three verified positivity kinds; none detects zeros independently
+    enotes: none of the three kinds zero-detecting; bridge program complete; 10a–10e closed 2026-09-30
+
+=== V06_070 sim=0.115
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E134/c10/c9] Node 12 closed: Laplacian path dead, dynamics live
+    enotes: multi-torus via Laplacian dead; dynamics live
+
+=== V06_071 sim=0.114
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E047/c04/c10] residue catalog: q=(1,2,1) excludes; q=(1,3,3,1) 3/2 stronger
+    enotes: q=(1,2,1) 3-4-1; q=(1,3,3,1) a₁/a₀=3/2
+
+=== V06_072 sim=0.114
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E074/c05/c19] independent Gram/intersection positivity source (10d home)
+    enotes: 10d natural home; no independent source yet
+
+=== V06_073 sim=0.112
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E036/c03/c14] Energy translation: E_0,E_1,E_2 over vertex towers
+    enotes: translation over vertex towers (prime powers)
+
+=== V06_074 sim=0.112
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E076/c05/c20] classical level-truncated bound 1/G(z)
+    enotes: constraint; worse bound 0.2348 vs 0.1710
+
+=== V06_075 sim=0.112
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E065/c05/c1] Weil prime-side zero detector (D10a step-3)
+    aliases: c05/c4: verification: 80 zeros vs 1.27M prime powers to 2e7; c08/c7: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+    enotes: weil_detector.py; primes alone count zeros in window; agreement 4e-16; 8e-13 at w=0.5
+
+=== V06_076 sim=0.111
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E154/c12/c12] Bender-Brody-Muller killed: answer inserted by hand
+    enotes: psi_z(x)=-zeta(z,x+1) inserted; reality unproved (Bellissard)
+
+=== V06_077 sim=0.111
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E004/c01/c13] Λ=μ∗log exact fuel dictionary
+    aliases: c11/c20: Lambda = mu*log exact theorem: CCM fuel near face-sum weights
+    enotes: Λ=μ∗log; fuel one Dirichlet convolution from face-sum μ; numerically verified 3.6e-15 for n<5000
+
+=== V06_078 sim=0.111
+  H [c16] Ordinary AHBL positive geometry, residues ±1
+    hnote: killed by theorem; signs OK, magnitudes impossible
+  E [F06E032/c02/c7] no known positive region for the sieve
+    aliases: c07/c5: no positive region in finite complex; cutoff-N dependent
+    enotes: no known positive region; gap stands; Betti [74,101,26,0] at N=1000; killed naive hope
+
+=== V06_079 sim=0.110
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E121/c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    enotes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V06_080 sim=0.109
+  H [c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    hnote: H=200,1000,5000,20000; mean-square amplifier real
+  E [F06E159/c12/c17] self-adjointness buys real spectrum, not identification
+    enotes: real spectrum != zero identification; conjectural
+
+=== V06_081 sim=0.108
+  H [c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    hnote: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+  E [F06E034/c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    enotes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V06_082 sim=0.106
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E021/c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    enotes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V06_083 sim=0.105
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E077/c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    enotes: from h>=0 + Weil formula; table checks
+
+=== V06_084 sim=0.105
+  H [c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    hnote: 10a infinite needs window n~e^{7.4/w}
+  E [F06E090/c08/c14] 10d: function-field template from intersection pairing on C×C
+    enotes: F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V06_085 sim=0.105
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E034/c03/c12] A(X)=sum mu(d)/d oscillates; delta(X)>0 monotone; same limit 0
+    enotes: +0.0311,+0.0044,-0.0021,-0.0005 at X=10^2..10^5
+
+=== V06_086 sim=0.104
+  H [c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    hnote: H=200,1000,5000,20000; mean-square amplifier real
+  E [F06E077/c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    enotes: from h>=0 + Weil formula; table checks
+
+=== V06_087 sim=0.103
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E057/c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    enotes: exact translation; same generative move
+
+=== V06_088 sim=0.103
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E097/c09/c1] Frobenius checklist R1–R6: operator requirements for sieve setting
+    enotes: node 11 scoring template; refines 10d ledger
+
+=== V06_089 sim=0.102
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E098/c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    enotes: cited, not re-derived; R1 as missing spectrum
+
+=== V06_090 sim=0.102
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E033/c03/c1] Sieve deformation R_p={0},{0,-2}
+    enotes: deformation marks R_p={0},{0,-2} residue families
+
+=== V06_091 sim=0.102
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E028/c02/c18] weighted infinite complex as the limit object
+    aliases: c07/c12: geometry lives in the weights, not the bare complex
+    enotes: limit object = weighted complex, not bare; zeta zeros regulate the face-sum
+
+=== V06_092 sim=0.101
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E116/c09/c8] Three live fragments: positivity/operator-shape/trace split apart
+    enotes: three live fragments, none closes R1^R4
+
+=== V06_093 sim=0.101
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E148/c11/c6] deformation is general generative machine, not twin fluke
+    enotes: closed as confirmation sweep; no new mathematics
+
+=== V06_094 sim=0.100
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E081/c05/c8] tight dictionary: prime side = 2*Cg*Re[windowed E_1(1/2,T0)]
+    enotes: exact algebra; window buys sigma=1/2 convergence
+
+=== V06_095 sim=0.099
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_096 sim=0.099
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E028/c02/c18] weighted infinite complex as the limit object
+    aliases: c07/c12: geometry lives in the weights, not the bare complex
+    enotes: limit object = weighted complex, not bare; zeta zeros regulate the face-sum
+
+=== V06_097 sim=0.098
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E058/c04/c21] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+    aliases: c08/c2: Weil's criterion: W(f∗f̃) ≥ 0 for all test f; c08/c3: 10a: Weil's criterion in the energy language; c12/c3: Weil positivity of W(h) equivalent
+    enotes: Weil 1952; Bombieri 2000 exposition; Weil 1952; Bombieri 2000; Connes–Consani 2020
+
+=== V06_098 sim=0.098
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E073/c05/c18] verdict: template only; upper-bound machine; parity barrier stands
+    enotes: template not source; parity barrier stands
+
+=== V06_099 sim=0.098
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E086/c07/c3] sieve as relational machine: composites to primes, primes to zero
+    enotes: user's framing, root node decision
+
+=== V06_100 sim=0.097
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E053/c04/c17] Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+    enotes: corrected run; first run silently dropped p≥3
+
+=== V06_101 sim=0.097
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E106/c09/c18] Operator must see arithmetic prime/weight data, not geometry
+    enotes: heuristic reflection; next fork: weighted face filtration
+
+=== V06_102 sim=0.097
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E017/c01/c6] Deformation → twin constant 2C₂=1.32032
+    aliases: c03/c7: Twin constant S(z)->2C_2=1.32032 derived from deformation; c07/c14: deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+    enotes: 2160 twin lowers verified ≤200000; conjecture itself unproven; S(z)=1.367187,1.344116,1.330277,1.322754 at z=7,13,30,100
+
+=== V06_103 sim=0.096
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E041/c03/c2] Deformation separates markers from survivors
+    enotes: markers are primes; survivors a different set
+
+=== V06_104 sim=0.096
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E032/c02/c7] no known positive region for the sieve
+    aliases: c07/c5: no positive region in finite complex; cutoff-N dependent
+    enotes: no known positive region; gap stands; Betti [74,101,26,0] at N=1000; killed naive hope
+
+=== V06_105 sim=0.095
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E164/c12/c5] forward-direction test: primes in, spectrum out
+    enotes: primes in, spectrum out; H fails it; B must pass it
+
+=== V06_106 sim=0.095
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E037/c03/c15] E(sigma,t)=3E_0+4ReE_1+ReE_2>=0 termwise
+    enotes: two forms agree 6 digits on (sigma,t) grid
+
+=== V06_107 sim=0.095
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E028/c02/c18] weighted infinite complex as the limit object
+    aliases: c07/c12: geometry lives in the weights, not the bare complex
+    enotes: limit object = weighted complex, not bare; zeta zeros regulate the face-sum
+
+=== V06_108 sim=0.095
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E044/c03/c5] Face multiplicities m(S)=prod|R_p|
+    enotes: forbidden CRT class counts per face
+
+=== V06_109 sim=0.094
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_110 sim=0.093
+  H [c7] Toroidal answer: plane for zeta, torus Jacobian for explainer
+    hnote: Jacobian J(C) is the complex torus
+  E [F06E024/c02/c14] never put the answer in by hand; primality emerges
+    aliases: c07/c2: never put the answer in by hand
+    enotes: deepest insight applied throughout D1–D5; standing methodology, sieve tests no predicate
+
+=== V06_111 sim=0.093
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E164/c12/c5] forward-direction test: primes in, spectrum out
+    enotes: primes in, spectrum out; H fails it; B must pass it
+
+=== V06_112 sim=0.093
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E090/c08/c14] 10d: function-field template from intersection pairing on C×C
+    enotes: F5, F7 elliptic curves; finite exact explicit formula by counting
+
+=== V06_113 sim=0.093
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E098/c09/c10] Connes adele-class space: R2 full, R4 not counting-born
+    enotes: cited, not re-derived; R1 as missing spectrum
+
+=== V06_114 sim=0.093
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E027/c02/c17] bare Δ_∞ is contractible infinite simplex, no topology
+    aliases: c07/c11: naive hope: geometry lived in the bare incidence complex
+    enotes: bare Δ_∞ infinite simplex, contractible, no topology; Delta_infty contractible; replaced by c12
+
+=== V06_115 sim=0.093
+  H [c19] Asymptotic W(z)→e^{−γ}=0.56146, numerics 0.4780→0.5333 climbing
+    hnote: z=29→0.4780; z=10³→0.5153; z=10⁵→0.5333; →0.5615; Mertens
+  E [F06E069/c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    enotes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V06_116 sim=0.092
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E121/c10/c12] H_2 killed by inspection: integrable, spectrum {Sum +- (log p)/p}
+    enotes: spectrum {Sum +-(log p)/p}; verified to 2.4e-15 at z=13
+
+=== V06_117 sim=0.092
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E070/c05/c14] verdict: Weil face-sum-native, Li Dirichlet-series-native
+    aliases: c08/c11: Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+    enotes: Weil face-sum-native; Li Dirichlet-series-native; λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+
+=== V06_118 sim=0.091
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E103/c09/c15] 1/3 cut gives two linked bands (thin Mobius, 2-twist)
+    enotes: classical result, previously known
+
+=== V06_119 sim=0.090
+  H [c1] Finite exact function-field explicit formula, #E(F5)=6,36,126, #E(F7)=12,48
+    hnote: |π|=√5 verified to 6 digits; zeta roots |t|=1/√p
+  E [F06E080/c05/c7] uncertainty prices sharpening: n=e^{7.4/w} for envelope 1e-12
+    enotes: envelope 1e-12 at n=e^{7.4/w}; w=0.5 -> 2.8e6
+
+=== V06_120 sim=0.090
+  H [c18] Identity: F_z'(1)=Σw(S)=δ(z)Σ(log p)/(p−1), 10-digit verified
+    hnote: proved two ways; z=2..29; O(π(z)) vs 2^{π(z)}
+  E [F06E069/c05/c13] Lambda-sum obstruction: A_k grows as k!/eps^{k+1}, finite parts needed
+    enotes: k=0: 7.45->10.50; k=1: 30.7->47.7 (eps 0.10->0.05)
+
+=== V06_121 sim=0.090
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E096/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V06_122 sim=0.089
+  H [c11] Large sieve verified: ratios 0.0041, 0.0080, holds with headroom
+    hnote: δ=1 and 0.5; bound crude as expected
+  E [F06E077/c05/c3] derived bound N+(B+) <= e^{1/2}*W(h), B+=[T0-w,T0+w]
+    enotes: from h>=0 + Weil formula; table checks
+
+=== V06_123 sim=0.089
+  H [c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    hnote: H=200,1000,5000,20000; mean-square amplifier real
+  E [F06E057/c04/c20] square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+    enotes: exact translation; same generative move
+
+=== V06_124 sim=0.089
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E132/c10/c7] Heisenberg probe negative on three panels; 65,401 eigenvalues
+    enotes: 65,401 eigenvalues; negative on three panels
+
+=== V06_125 sim=0.089
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E018/c01/c7] Positivity located in primitives (−ζ′/ζ, δ(z)>0)
+    aliases: c03/c10: Positive primitives: Lambda>=0, log zeta>0, delta(z)>0; c03/c11: Alternating signs come only from Moebius factor; c03/c9: Signed face-weights
+    enotes: −ζ′/ζ=ΣΛ(n)n^{−s}, Λ≥0; δ(z)>0; 3-4-1; delta(1000)=0.080965; 6 digits at z=10,30,100,1000
+
+=== V06_126 sim=0.088
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E051/c04/c15] Weil thesis: W(f∗f̃) positivity constrains face-sum error
+    enotes: programmatic/heuristic
+
+=== V06_127 sim=0.088
+  H [c17] Weighted positive geometries + stringy deformation as home
+    hnote: deformation parameter u; exponents are prime logs
+  E [F06E008/c01/c17] 14c refined home: Chern roots −u·log p
+    aliases: c11/c14: refined home E_z with differentiated residues
+    enotes: face-weights = differentiated residues; closes D4↔D6 loop; numerics hygiene; constructions exact
+
+=== V06_128 sim=0.088
+  H [c14] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/(∏S)
+    hnote: subsets S of primes ≤z (D4)
+  E [F06E022/c02/c12] positive region with these weights as stratum residues
+    enotes: sharpest question of the program (text)
+
+=== V06_129 sim=0.088
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E071/c05/c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    aliases: c08/c12: 10c: Selberg λ² sieve on the complex, optimized weights
+    enotes: z<=19; Cholesky all eigenvalues>0, min 1.1e-8; 10c executed: Selberg quadratic form on complex, small cases
+
+=== V06_130 sim=0.086
+  H [c10] Mean value verified: ratios 0.9948→1.0073 at T0=20000
+    hnote: H=200,1000,5000,20000; mean-square amplifier real
+  E [F06E111/c09/c3] BK N(T) vs 400 zeros: |S(T)|≤1.164, mean 0.502, drift 5.5e-6
+    enotes: 400 zeros; drift slope 5.5e-6, no drift
+
+=== V06_131 sim=0.086
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E161/c12/c19] D_log convergence as N,lambda->inf unproved
+    enotes: unproved; 'strategy toward a proof'; quantify D2 bars
+
+=== V06_132 sim=0.086
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E021/c02/c10] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+    enotes: −ζ′/ζ² match ~4 digits at s=1.01–1.20
+
+=== V06_133 sim=0.086
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E115/c09/c7] Missing piece: R1+R4 together — counting-born spectrum operator
+    enotes: audit across BK, M, Connes, face-complex, FF Jacobian
+
+=== V06_134 sim=0.086
+  H [c5] Number-field ledger HAVE: Λ≥0, 10c forms, 10a windowed formula
+    hnote: 10a infinite needs window n~e^{7.4/w}
+  E [F06E071/c05/c15] Selberg lambda^2 quadratic form on Delta_z, PD sum of squares
+    aliases: c08/c12: 10c: Selberg λ² sieve on the complex, optimized weights
+    enotes: z<=19; Cholesky all eigenvalues>0, min 1.1e-8; 10c executed: Selberg quadratic form on complex, small cases
+
+=== V06_135 sim=0.085
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E123/c10/c14] Fock-diagonal interaction shifts energies, causes no transitions
+    enotes: the valuable part of the 13c understanding
+
+=== V06_136 sim=0.085
+  H [c4] Weil-positivity template: Jacobian, Frobenius, counting-PSD, zeros-as-eigenvalues
+    hnote: five-part anatomy derived from curve case
+  E [F06E096/c08/c5] Guinand-Weil verified zero vs prime side to 2e-16
+    enotes: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+
+=== V06_137 sim=0.085
+  H [c21] Refined region: stringy-deformed simplex, arithmetic in weights
+    hnote: Figueiredo deformations move (D6) as mechanism
+  E [F06E042/c03/c3] Deformed survivors = twin lowers: 2160 <=200000
+    enotes: 2160 twin lowers <=200000, exact match independent sieve
+
+=== V06_138 sim=0.084
+  H [c13] 10e verdict: analytic amplifiers only, zero-density plug-in role
+    hnote: detector bound N_+≤e^{1/2}W(h) used RH; N(σ,T) bounds stray
+  E [F06E075/c05/c2] exact Gaussian detector pair h(r), g(u)
+    enotes: exact Fourier pair; h>=0 even, peak 1
+
+=== V06_139 sim=0.084
+  H [c20] K-theoretic home: face-weights as F_z'(1) differentiated residues
+    hnote: primes-only input as Chern roots −u log p
+  E [F06E155/c12/c13] Wu-Sprung inverse potential killed: zeros are the input
+    enotes: V from 500 zeros; D~1.5 = error artifact (Jaksch 2025)
+
+=== V06_140 sim=0.084
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E038/c03/c16] Zero-free line as energy contradiction
+    enotes: analytic residue -m housed, not derived
+
+=== V06_141 sim=0.084
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E035/c03/c13] Classical 3-4-1 proof zeta(1+it)!=0
+    aliases: c07/c17: 3-4-1 template re-verified from Lambda-sieve
+    enotes: classical; re-verified 2.26->8.30->20.62 as sigma->1+; sum 2.26->8.30->20.62 as sigma->1+
+
+=== V06_142 sim=0.083
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E014/c01/c3] Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+    aliases: c02/c11: weights signed, alternate with face dimension; c02/c8: canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S; c07/c9: D4: face-weights w(S)=(
+    enotes: Σw(S)→1; Dirichlet GF = −ζ′/ζ²; weights signed, alternate with face dimension
+
+=== V06_143 sim=0.083
+  H [c3] Counting-born positivity, same kind as Λ≥0
+    hnote: same kind as deg≥0 (D7/D9 Λ≥0)
+  E [F06E110/c09/c21] Archive dead-end guardrails D1–D9, closed archaeology
+    enotes: live descendants: Circle CEIVE, honesty practice
+
+=== V06_144 sim=0.083
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E059/c04/c22] step3: optimize square H — Weil analogue of degree-16 optimization
+    enotes: forward pointer from D10a-step2
+
+=== V06_145 sim=0.083
+  H [c15] Obstruction: |w({2})|=(log2)/2=0.3466 ∉ {0,1} bars ordinary geometries
+    hnote: residues quantized; 0-dim residue ∈ {±1,0}
+  E [F06E022/c02/c12] positive region with these weights as stratum residues
+    enotes: sharpest question of the program (text)
+
+=== V06_146 sim=0.083
+  H [c2] RH as discriminant a_p²−4p≤0 of counting-born PSD form Q(m,n)=deg(mφ+n)
+    hnote: discriminants −20,−12; Q≥0 on grid; deg(1∓φ)=6,12;6,4=p+1+a_p
+  E [F06E037/c03/c15] E(sigma,t)=3E_0+4ReE_1+ReE_2>=0 termwise
+    enotes: two forms agree 6 digits on (sigma,t) grid
+
+=== V06_147 sim=0.083
+  H [c9] Prime-side polynomial P(t): N0=50000, 5217 prime powers, S2=56.99
+    hnote: a_n=Λ(n)/√n
+  E [F06E063/c04/c7] MTY 2022 degree-16 optimization saturates polynomial method
+    enotes: arXiv:2212.06867; BTY 2026 1/(4.896 log|t|)
+
+=== V06_148 sim=0.083
+  H [c6] Number-field ledger MISSING: Jacobian-analogue, Frobenius-like operator, intersection pairing
+    hnote: Δ∞ contractible (D4); object must live in weights/operators
+  E [F06E002/c01/c11] Node 11 operator hunt OPEN, CCM live candidate
+    aliases: c11/c21: Node 11 operator hunt open; 11f live candidate
+    enotes: Berry–Keating conjectural; Möbius-band claim withdrawn; face-sum dictionary entry Lambda=mu*log explicit
+
+=== V06_149 sim=0.083
+  H [c8] Structural verdict: missing object is operator-theoretic 'Frobenius for Δ'
+    hnote: 'Frobenius for Δ' named; 10a–10e pass closed
+  E [F06E126/c10/c20] operator GUE-chaotic but does not hear primes; universality only
+    enotes: verdict: universality result, not bridge plank

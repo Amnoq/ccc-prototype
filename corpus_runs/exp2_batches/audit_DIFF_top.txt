@@ -1,0 +1,90 @@
+=== H013 sim=0.513
+  A [c01] Deformation → twin constant 2C₂=1.32032
+  B [c03] Deformed survivors = twin lowers: 2160 <=200000
+  judge: a = twin-constant derivation from deformation; b = deformed survivors are twin lowers - two distinct results, same program.
+
+=== H015 sim=0.512
+  A [c03] Deformed survivors = twin lowers: 2160 <=200000
+  B [c07] deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+  judge: a = survivor identification (2160 twin lowers); b = constant derivation (2C2=1.32032) - distinct claims.
+
+=== H020 sim=0.468
+  A [c01] Node 12 closed: Weyl kills L1–L3, Deninger survives
+  B [c10] Heisenberg probe negative on three panels; 65,401 eigenvalues
+  judge: a = Node-12 closure verdict; b = Heisenberg probe result (evidence for it) - verdict vs data.
+
+=== H021 sim=0.454
+  A [c01] Open: Node 8 bridge heuristic, paper approval, build
+  B [c07] expository paper arc on D1-D6, outline drafted
+  judge: a bundles three open items (Node 8, paper, build); b is only the paper arc - bundle vs component.
+
+=== H031 sim=0.379
+  A [c04] Selberg parity barrier: ω(n) parity unresolvable
+  B [c05] verdict: template only; upper-bound machine; parity barrier stands
+  judge: a = Selberg parity barrier (theorem); b = template verdict citing it - barrier vs verdict.
+
+=== H033 sim=0.371
+  A [c02] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+  B [c07] geometry lives in the weights, not the bare complex
+  judge: a = -zeta'/zeta^2 regulation mechanism; b = weights-not-complex thesis - mechanism vs interpretation.
+
+=== H035 sim=0.367
+  A [c04] hybrid bridge: geometry owns positivity inputs, analysis owns continuation
+  B [c07] D9 negative: positivity blind left of Re(s)=1
+  judge: a = hybrid bridge replacement; b = D9 kill verdict - replacement and kill are distinct entities.
+
+=== H038 sim=0.356
+  A [c06] Ordinary AHBL positive geometry, residues ±1
+  B [c11] no ordinary positive geometry: obstruction theorem
+  judge: a = killed AHBL candidate geometry; b = obstruction theorem that killed it - candidate vs theorem.
+
+=== H039 sim=0.354
+  A [c08] Bridge span: geometric positivity must connect to Weil positivity
+  B [c12] Weil positivity of W(h) equivalent to RH
+  judge: a = bridge program goal (span); b = Weil's theorem (target) - goal vs theorem.
+
+=== H042 sim=0.349
+  A [c01] Deformation → twin constant 2C₂=1.32032
+  B [c07] unproven twin conjecture pi_2(x)~S x/(log x)^2
+  judge: a = derived twin constant (algebra); b = unproven pi_2 asymptotic (conjecture) - must stay separate.
+
+=== H044 sim=0.344
+  A [c04] Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+  B [c08] Bridge span: geometric positivity must connect to Weil positivity
+  judge: a = Weil criterion (cited); b = bridge span goal - criterion vs program goal.
+
+=== H049 sim=0.330
+  A [c02] canonical face-weights w(S) = (−1)^{|S|+1} log∏S / ∏S
+  B [c10] canonical p<q, r<s sectors; ordered quadruples give zero
+  judge: a = canonical face-weight formula; b = canonical fermionic sectors - different 'canonical' claims.
+
+=== H051 sim=0.329
+  A [c04] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+  B [c07] geometry lives in the weights, not the bare complex
+  judge: a = E(x)-made-of-zeros mechanism; b = weights-not-complex thesis - mechanism vs interpretation.
+
+=== H057 sim=0.322
+  A [c08] Frobenius-like operator for Δ∞ (refines D4)
+  B [c09] Frobenius checklist R1–R6: operator requirements for sieve setting
+  judge: a = Frobenius-like operator proposal; b = R1-R6 requirements checklist - proposal vs requirements.
+
+=== H060 sim=0.314
+  A [c02] zeta zeros regulate face-sum convergence via −ζ′/ζ²
+  B [c04] error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+  judge: a = -zeta'/zeta^2 regulation route; b = explicit-formula E(x) route - two different mechanisms, same moral.
+
+=== H063 sim=0.309
+  A [c04] Selberg parity barrier: ω(n) parity unresolvable
+  B [c07] D9 negative: positivity blind left of Re(s)=1
+  judge: a = Selberg parity barrier; b = D9 verdict citing it - barrier vs verdict.
+
+=== H065 sim=0.306
+  A [c02] bare Δ_∞ is contractible infinite simplex, no topology
+  B [c07] weighted infinite simplex total weight 1 = PNT
+  judge: a = bare Delta_infty contractible (negative); b = weighted simplex = PNT - bare vs weighted contrasted.
+
+=== H068 sim=0.296
+  A [c01] Node 11 operator hunt OPEN, CCM live candidate
+  B [c09] Berry-Keating xp spectral candidate
+  judge: a = Node-11 hunt status (CCM live); b = Berry-Keating xp candidate - status vs candidate.
+

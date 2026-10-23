@@ -1,0 +1,310 @@
+# Derivations: the circle sieve read through Figueiredo's recipe
+
+Date: 2026-09-29. Code: `sieve_complex.py`. All identities below were verified
+numerically (see transcript in this file's history); proofs are sketched.
+
+Her recipe, for reference: (1) find a positive geometric region; (2) take its
+canonical form; (3) read off the observable; (4) derive zeros/factorizations
+from the geometry. The sieve has no known positive region — that gap stands.
+What follows is what *can* be derived: the sieve's output expressed in the
+shape of her steps 2–4.
+
+Setup: Δ_x = incidence complex of the sieve to x — vertices are primes ≤ x,
+faces are prime sets co-dividing some integer ≤ x (the nerve of the prime
+territories). Verified: link({p}) in Δ_x = Δ_{⌊x/p⌋} minus p (exact recursion).
+
+---
+
+## D1. The observable as a signed sum over the complex (her step 3)
+
+**Statement.** With ψ(x) = Σ_{n≤x} Λ(n) the Chebyshev prime-power counter,
+
+    ψ(x) = Σ_{∅≠S face of Δ_x} (−1)^{|S|+1} · log(∏S) · ⌊x / ∏S⌋.
+
+Verified exact at x = 30, 100, 500.
+
+**Proof sketch.** ⌊x/d⌋ counts the integers ≤ x divisible by d. Grouping by n:
+inner sum over squarefree d|n of (−1)^{ω(d)+1} log d = −Σ_{d|n} μ(d) log d = Λ(n),
+the classical Möbius inversion. Summing over n ≤ x gives ψ(x). The signs
+(−1)^{|S|} are the face-dimension signs — the Euler-characteristic weighting
+of the complex (classically: μ(1,n) is the reduced Euler characteristic of the
+divisor lattice's order complex).
+
+**Honest label.** Classical theorem (Möbius inversion), reframed. What the
+reframing buys: the prime-counting observable is read *directly off the
+sieve's incidence complex*, with alternating signs from face dimension —
+the structural analogue of her "read the amplitude off the geometry."
+
+## D2. Lehmer's recursion is the link recursion (her step 4)
+
+**Statement.** Let φ(x,a) = #{n ≤ x : n unshared by the first a prime
+territories} (i.e., coprime to p_1…p_a). Then
+
+    φ(x,a) = φ(x,a−1) − φ(x/p_a, a−1),
+
+and π(x) = φ(x,a) + a − 1 − P₂(x,a). The two terms are the complex's
+deletion and link: the integers newly shared when territory p_a is added are
+exactly {p_a·m : m ≤ x/p_a unshared by the first a−1 territories}, in bijection
+with the cone S ↦ S ∪ {p_a} over link({p_a}) = Δ_{⌊x/p_a⌋}. Verified: link-face
+counts match Δ_{⌊x/p_a⌋} face counts; the integer bijection holds exactly.
+
+**Honest label.** Classical (Lehmer 1959 prime-counting), reframed. This is
+her "recursive facet residues" step in sieve language: the fast prime-counting
+algorithm was the link recursion all along.
+
+## D3. The sieve as a binary geometry (her binary equations)
+
+Her binary geometries are governed by u_C + ∏_D u_D^{n(C,D)} = 1: complementary
+on/off relations among facets. The sieve's rule has the same logical shape:
+
+    1_{prime}(n) + 1_{shared}(n) = 1,    shared(n) = ∨_{p<n} (p | n).
+
+**Zero-locus formulation.** Define F(n) = ∏_{p<n} dist(n, pℤ) ≥ 0. Then
+
+    n composite ⟺ F(n) = 0,      n prime ⟺ F(n) > 0
+
+(verified to 60). The composites are the *zero locus* of F; the primes are its
+support. This inverts her "hidden zeros" picture: there the amplitude vanishes
+at special kinematics; here the background (composites) is the zero locus and
+the primes are where the function lives.
+
+**The relation to zero.** In D1, the empty face (d = 1, log 1 = 0) contributes
+no weight yet anchors the whole alternating sum — the multiplicative identity
+structuring every term, the formal shadow of "every prime relates back to zero"
+via its spanning circle.
+
+**Honest label.** Reformulation and analogy, not new prime information. Its
+value is architectural: it states the sieve in the *language* of binary
+geometries — the prerequisite for asking whether her algebraic machinery
+(positive parametrizations of u-variables) can be ported at all.
+
+---
+
+## What this buys, and what it doesn't
+
+**Have:** the sieve's output (ψ, π) expressed as (i) a signed face-sum over Δ_x
+and (ii) a link-recursive computation — her recipe's steps 2–4 with exact
+analogues, minus the positive region and canonical form. The sieve is already
+a "counting problem" of her kind (cf. *All Loop Scattering as a Counting
+Problem*, arXiv:2309.15913).
+
+**Don't have:** the positive region, the canonical form, or any new
+consequence for prime densities. D1–D3 are classical results in new clothes;
+they prove the *shape* fits, not that the *machinery* transfers.
+
+**Precisely posed next questions.** (a) Is there a positive parametrization
+whose boundary strata are the territory incidences of Δ_x? (b) *Partially
+answered by D4 below:* the bare N → ∞ limit trivializes (contractible infinite
+simplex) — the limit object must be the *weighted* complex, and the weights'
+generating function drags in the zeta zeros as regulators. (c) Do the sieve's
+binary relations admit positive variables with her exponent structure whose
+zero locus is the composites?
+
+## D4. The weighted infinite complex: PNT as total weight 1 (the N → ∞ limit)
+
+**The bare limit is trivial.** As x → ∞, every finite set of primes eventually
+satisfies ∏S ≤ x, so Δ_∞ is the infinite simplex on the primes — contractible,
+no topology. The growing Betti numbers of Δ_x are a *filtration* phenomenon,
+not a limit phenomenon. Consequence for the program: a positive-geometry
+analogue cannot live in the bare complex; the geometry must be in the weights.
+(Her objects are fixed polytopes; the sieve's object is a *process* — the
+filtration itself.)
+
+**Canonical face-weights.** Give each nonempty face S the x-independent weight
+
+    w(S) = (−1)^{|S|+1} · log(∏S) / ∏S.
+
+Then D1 reads ψ(x)/x = Σ_{∏S≤x} w(S)·(⌊x/∏S⌋/(x/∏S)) — the floor function is a
+cutoff that tends to 1 — and:
+
+**Statement (classical, reframed).** Σ_{∏S≤X} w(S) → 1 as X → ∞: the weighted
+infinite simplex has total weight 1. This identity is equivalent to the Prime
+Number Theorem ψ(x) ~ x.
+
+Verified numerically (Möbius sieve to 2·10⁶):
+S(X) = Σ_{∏S≤X} w(S): 0.969931, 1.019210, 1.005585, 0.999922, 0.997215,
+1.001658 at X = 10³, 10⁴, 10⁵, 5·10⁵, 10⁶, 2·10⁶ — converging cleanly to 1.
+
+**The zeros enter as regulators.** The Dirichlet generating function of the
+weights is
+
+    Σ_S w(S) / ∏S^{s−1}  =  −ζ'(s)/ζ(s)²,
+
+verified numerically against ζ'/ζ² to ~4 digits at s = 1.01…1.20. The *rate*
+at which S(X) → 1 — the error in the face-sum — is governed by the zeros of ζ
+(the explicit formula). So the architecture is now complete in her shape:
+the observable (total weight 1, i.e. PNT) is read off the weighted complex
+(her step 3), and the zeros are what regulate the infinite sum (her step 4,
+inverted — here the zeros are *needed* as regulators; deriving them from the
+geometry remains the open problem, i.e. beachhead #2).
+
+**Resonance and gap.** The weights are *signed*, alternating with face
+dimension — not positive. This resonates with how a canonical form's residues
+alternate across boundary strata, but it is not positivity, and the gap stands:
+is there a positive region whose canonical form has these weights as its
+stratum residues? That is now the single sharpest question of the program.
+
+## D5. Territory removal as soft limit / splitting (her "all-order splits")
+
+Her *All-order splits and multi-soft limits* (arXiv:2405.09608): taking one
+particle soft makes the amplitude split exactly — a soft factor times a
+lower-point amplitude. Removing one generator yields a two-term relation to a
+smaller instance of the same object.
+
+Sieve version: "take prime p_a soft" = remove its territory (stop sieving by
+p_a). The unshared-count splits exactly:
+
+    φ(x,a) = φ(x,a−1) − φ(x/p_a, a−1),
+
+i.e. (full count) = (count with p_a removed) − (the removed stratum). The
+removed stratum φ(x/p_a, a−1) plays the role of her "soft factor × lower-point
+amplitude": it is the *same kind of object* at a smaller scale, just as her
+split pieces are smaller amplitudes. Iterating the removal over all a recovers
+the full inclusion–exclusion — the face-sum of D1 — which is her "all-order"
+in sieve language.
+
+**Honest label.** A conceptual identification, not a new theorem: it is D2's
+recursion read through her lens (numerics already verified under D2). Its
+value is methodological, and it is the point the requester made on 2026-09-29:
+we are not copying her implementation — the sieve was *already doing splits*
+before we knew her name for them. Her generative insight (remove one
+generator, read the exact split, iterate to all orders) is the sieve's native
+operation. The deepest such insight, applied throughout D1–D5: *never put the
+answer in by hand* — primality is never tested by a primality predicate, it
+emerges from the shared/unshared rule, and everything downstream is derived.
+
+## D6. Deformation: the singular series as renormalized total weight
+
+Her deformations preserve a shared zero locus while changing the geometry.
+The sieve's deformation: prime p now marks residues R_p = {0} (p = 2),
+{0, −2} (p odd) — i.e. n is marked if p | n or p | (n+2). Code:
+`deformed_sieve.py`; picture: `deformed_sieve_twins.svg` (red family marks
+multiples of p, blue family marks n ≡ −2 mod p with circles spanning
+[kp−2, (k+1)p−2]).
+
+**The deformation separates markers from survivors.** In the classic sieve the
+markers and the survivors coincide (primes). Here the markers are the primes
+but the survivors are a different set — verified: the generative deformed
+sieve's survivors ≤ 200000 are *exactly* the twin prime lowers (2160 of
+them), checked against an independent primality sieve.
+
+**Exact deformed identities (verified).**
+- Static z-sieve S(x,z) = #{n ≤ x : ∀p ≤ z, n mod p ∉ R_p} satisfies the exact
+  μ-identity S(x,z) = Σ_{d|P(z)} μ(d)·E_d(x) with E_d the exact CRT
+  residue-class counts — verified exact at (z,x) = (13, 50000) and (30, 200000).
+- Faces of the deformed complex carry multiplicities m(S) = ∏_{p∈S}|R_p|
+  (the number of forbidden CRT classes); the finite total weight is exactly
+  δ(z) = ∏_{p≤z}(1 − |R_p|/p), and S(x,z)/x → δ(z) — verified: 0.071430 vs
+  0.071429 at z = 7, x = 200000.
+
+**The singular series, derived.** Renormalize the total weight by the prime
+baseline:
+
+    δ(z) = [∏_{p≤z}(1 − 1/p)²] · 𝔖(z),   𝔖(z) = ∏_{p≤z} (1 − |R_p|/p)/(1 − 1/p)².
+
+The first factor → 0 (Mertens); the second converges: 𝔖(z) → 2C₂ = 1.32032… —
+verified: 1.367187, 1.344116, 1.330277, 1.322754 at z = 7, 13, 30, 100.
+The Hardy–Littlewood twin-prime constant is *derived* as the renormalized
+total weight of the deformed incidence complex — it comes out of the sieve's
+deformation, never inserted.
+
+**Honest boundary.** The passage from 𝔖(z) to the asymptotic
+π₂(x) ~ 𝔖·x/(log x)² is the *unproven* twin prime conjecture. Numerically
+π₂(200000)·(log 200000)²/200000 = 1.6091 vs conjectured 1.3203 — slow
+convergence, as expected; we verify the algebra (local factors assemble to
+𝔖), not the conjecture. What D6 establishes: her deformation move, executed
+on the sieve, *generates* the singular series. The open analytic step is
+exactly where her program would need its canonical form.
+
+## D7. Positivity lives in the primitive (node 9, first half resolved)
+
+**The finding.** The signed face-weights were never the fundamental object.
+The primitive analytic objects are positive:
+
+- −ζ′/ζ(s) = Σ_{n≥1} Λ(n)n^{−s}, Λ ≥ 0 (von Mangoldt), Re(s) > 1.
+- log ζ(s) = Σ_{p,k} 1/(kp^{ks}) > 0 for real s > 1.
+- Finite-z density δ(z) = ∏_{p≤z}(1 − 1/p) > 0, with
+  −log δ(z) = Σ_{p≤z}Σ_{k≥1} 1/(kp^k) — a manifestly positive sum
+  (verified to 6 digits at z = 10, 30, 100, 1000; δ(1000) = 0.080965).
+
+The face-weights' generating function factors:
+
+    −ζ′/ζ² = (−ζ′/ζ)·(1/ζ) = (positive series)·(Σ_m μ(m)m^{−s}).
+
+The signs come *entirely* from the Möbius factor — i.e. from
+inclusion-exclusion. Geometrically: the positive "volume" δ(z) is
+primary; its inclusion–exclusion expansion Σ_{d|P(z)} μ(d)/d is where the
+alternating signs appear. Verified side by side: δ(X) > 0 monotone
+decreasing → 0, while A(X) = Σ_{d≤X} μ(d)/d oscillates in sign
+(+0.0311, +0.0044, −0.0021, −0.0005 at X = 10²…10⁵) toward the same
+limit 0. Same limit, two presentations — the signs live only in the
+additive one.
+
+**The mechanism exists — classically.** "Positivity constrains zeros" is
+not a hope; it is the 3-4-1 proof that ζ(1+it) ≠ 0. Since
+3 + 4cosθ + cos2θ = 2(1+cosθ)² ≥ 0 and −ζ′/ζ = ΣΛ(n)n^{−s} has positive
+coefficients,
+
+    3(−ζ′/ζ)(σ) + 4Re(−ζ′/ζ)(σ+it) + Re(−ζ′/ζ)(σ+2it) ≥ 0,
+
+which a zero on Re(s) = 1 would violate as σ → 1⁺ (the 3/(σ−1) pole
+cannot be canceled). Verified numerically from the Λ-sieve: the sum stays
+positive on a t-grid and grows 2.26 → 8.30 → 20.62 as σ → 1⁺. So:
+
+    positivity of the primitive (Λ ≥ 0)  ⟹  a zero-free region.
+
+This is the Weil-shaped mechanism in miniature — positivity telling zeros
+where they cannot stand.
+
+**The bridge program, concretely.** Node 9 splits:
+- **9a (closed):** where positivity lives — the primitive (Λ, Euler
+  products, δ(z)); the signs are an expansion artifact of Möbius
+  inversion, not a property of the geometry's volume.
+- **9b (open):** stepping stone #2 — translate the 3-4-1 argument into the
+  incidence-complex language. Can the sieve's geometry *carry* the
+  classical zero-free line? If yes, the bridge carries traffic.
+- **9c (open):** what *stronger* geometric positivity is available that
+  could push left of Re(s) = 1 — the RH-ward question.
+
+Honest labels: the positivity location is exact (identities) +
+computationally verified; 3-4-1 is classical (cited, re-verified here);
+9b/9c are open research, not results.
+
+## D8. The zero-free line in the energy language (9b: the bridge carries traffic)
+
+**The translation.** Write −ζ′/ζ as a sum over the complex's vertex
+towers (prime powers). For σ > 1:
+
+    E₀(σ)    = Σ_p Σ_{k≥1} (log p) p^{−kσ}            = −ζ′/ζ(σ),
+    E₁(σ,t)  = Σ_p Σ_{k≥1} (log p) p^{−kσ} e^{−ikt log p} = −ζ′/ζ(σ+it),
+    E₂(σ,t)  = Σ_p Σ_{k≥1} (log p) p^{−kσ} e^{−2ikt log p} = −ζ′/ζ(σ+2it).
+
+The 3-4-1 trigonometric polynomial is a fourth power of a modulus:
+
+    3 + 4cosθ + cos2θ = ½|1 + e^{iθ}|⁴ ≥ 0.
+
+Hence the classical nonnegative combination is a sum of *stratum
+energies*, each manifestly nonnegative:
+
+    E(σ,t) = ½ Σ_p Σ_{k≥1} (log p) p^{−kσ} |1 + p^{ikt}|⁴
+           = 3E₀(σ) + 4ReE₁(σ,t) + ReE₂(σ,t)  ≥  0,
+
+with e_{p,k}(σ,t) = ½(log p)p^{−kσ}|1+p^{ikt}|⁴ ≥ 0 termwise.
+Verified numerically to 6 digits on a (σ,t) grid
+(`zero_free.py`): the two forms agree everywhere.
+
+**The proof, restated.** E(σ,t) ≥ 0 as a sum of nonnegative stratum
+energies. E₀(σ) ~ 1/(σ−1): the pole is *infinite total prime energy*
+at σ = 1 — expected, not pathological. If ζ(1+it₀) = 0 of order m ≥ 1,
+then −ζ′/ζ has residue −m there, so 4ReE₁(σ,t₀) ~ −4m/(σ−1) → −∞:
+the total energy would diverge *negatively*. A sum of nonnegative
+stratum energies cannot do that. (ReE₂ can only worsen it: a zero at
+1+2it₀ contributes −m₂/(σ−1).) Hence no zeros on Re(s) = 1. The
+contradiction is now physical: *negative infinite total energy built
+from nonnegative strata is impossible.*
+
+**Numerical illustration.** E₀ climbs toward the pole (0.57 → 4.02 as
+σ: 2 → 1.2) while ReE₁, ReE₂ stay bounded at generic t — e.g. at
+t = 14.1347 (first-zero height): ReE₁ = −1.06, ReE₂ = +0.47 at σ = 1.2,
+bounded, no −m/(σ−1) divergence. That boundedness is the numerical
+shadow of "no zero on the line there." E > 0 on the whole grid.

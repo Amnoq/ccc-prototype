@@ -1,0 +1,519 @@
+J −− u u 0Y∗ J −−
+
+s,t (\varphi_2,\varphi 2(s),Eis \tag{f3}
+
+\]
+
+\[
+
+, Eis(f_3(t))) = c v,
+
+\]
+
+v
+
+Z
+
+\|c_0 \| = \|c2c2c3,W c3,W (t)\|, J −− Wuv uv
+
+:=
+
+v 3,vW3,v(t)M¯ vf 2,vM¯ vf2,v(s);
+
+N(Fv)\\PGL2(Fv)
+
+\[
+
+let us remind the reader that f_2 = \otimes vf2,v is so that \varphi_2 = Eis \tag{f2}
+
+\]
+
+\[
+
+, \varphi 2(s) = Eis(f_2(s)) and that \bar{M} v is as defined in §4.1.8. Recall also that \bar{M} v is isometric for every v (at least up to a factor depending
+
+only on \psi v).
+
+\]
+
+The unramified evaluation is similar to the prior one.
+
+\[
+
+For v \in S, the vectors are spherical and the additive character \psi v is
+
+\]
+
+unramified; we apply Lemma 3.2.8 to conclude:
+
+\[
+
+\|J --\| kAd(uv)k -\gamma v, \gamma = 1 - \theta > \frac{1}{2} \tag{5.24}
+
+\]
+
+\[
+
+For v in T we have again by Lemma_3.2.7
+
+\]
+
+\|J −− \| 6 1,
+
+v
+
+\[
+
+We need, again, a bound on derivatives. For fixed_i, j > 0, v \in S ∪ T and any \epsilon > 0, we have also\|\partial i_j\| i,j,\epsilon(C(\pi 1,v)C(\pi
+
+2,v))\epsilon kAd(uv)k -- \epsilon -\gamma s\partial t J v \tag{5.25}
+
+\]
+
+\[
+
+For this, just as as before, we bound J -- for (s,t) in a small neighbourhood
+
+\]
+
+v
+
+\[
+
+of (0,0); assuming that\|<(s)\|+\|<(t)\| 6 \epsilon /2, we find, for v \in T, using CauchySchwarz and Lemma_3.2.7 that
+
+\]
+
+Z
+
+\|J \| 2 6 \|W3,v(a(y)k)\| 2 max(\|y\|, \|y\| ) ε \|M¯ 2 d ×ydk.
+
+−− −1 v vf2,v,s(k)\|
+
+F × v ×K
+
+The bound (5.25) follows the bounds for M¯
+
+v furnished in §4.1.8 and the
+
+\[
+
+same reasonning as at the end of §5.2.10. For v \in S the bound follows from Lemma_3.2.8.
+
+\]
+
+#### 106 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+5.2.12. Putting it all together. — The degenerate term
+
+\[
+
+h\Phi 2(s), E_3(t)ireg + hE2(s), \Phi 3(t)ireg (s,t) \in N
+
+\]
+
+| ±,± ±± is given by P | ±± |
+
+| --- | --- |
+
+| ±,± H s,t + J s,t and, although the individual terms H | s,t , J ±± s,t |
+
+\[
+
+may not be regular in a neighbourhood of (s,t) = (0,0), we have seen in the lemma preceding §5.2.8 that their sum is. In particular, t_7\to h\Phi 2(t/2),
+
+E_3(t)ireg + hE2(t/2), \Phi 3(t)ireg defines an antiholomorphic function in the complex disc\|t\| < 0.1.
+
+\]
+
+Each quantity H ±±
+
+t/2,t, J ±± t/2,t is the product of: a constant c as in (5.19);
+
+a partial L-function at places outside S ∪ T, given e.g. by (5.20); and local factors at S ∪ T.
+
+ε by (5.13) and (5.14).
+
+\[
+
+- The constant c satisfies c \pi 2,\epsilon C(\pi 1)- The local factors at S ∪ T, for_t \in iR,\|t\| < 0.1, are bounded, along
+
+\]
+
+with their derivatives by (5.21), (5.22) and (5.23) and the corresponding bounds for J. In particular, the product of such factors is bounded by
+
+QεkAd(u)k ε−γ
+
+.
+
+- The partial L-functions in question extend to meromorphic functions
+
+\[
+
+of the_t-variable with a pole at_t = 0 of order at most_4. For_t \in iR bounded away from_0 these L-functions are bounded by -4C(\pi 2) \epsilon C(\pi 3)
+
+\epsilon \epsilon\|z\| for any \epsilon > 0, and at_t = 0 the terms of bounded order in their Laurent expansion satisfies the same bound. It follows that for
+
+(s,t) \in N, the degenerate contribution is bounded
+
+\]
+
+by
+
+\[
+
+\epsilon\|z\| -4 kAd(u)k -\gamma \epsilon Q, \gamma > \frac{1}{2},
+
+\]
+
+as required.  ut
+
+This lemma together with the lemma of §5.2.8 conclude the proof of
+
+Proposition 5.2.4, hence of Theorem 1.2.
+
+#### REFERENCES
+
+1. ARTHUR, J., Eisenstein series and the trace formula, Automorphic forms, representations and Lfunctions (Proc. Sympos. Pure Math., Oregon State Univ.,
+
+Corvallis, Ore., 1977), Part 1, , Proc.
+
+Sympos. Pure Math., XXXIII, Amer. Math. Soc., Providence, R.I., , 1979, 253–274.2. ARTHUR, J., A trace formula for reductive groups. II. Applications of a
+
+truncation operator, Compositio Math., 40, (1980) no. 1, 87–121.3. BERNSTE˘ıN, I. N. ˇ  , All reductive p-adic groups are of type I, Funkcional. Anal. i
+
+Priloˇzen., 8, (1974) no.
+
+2, 3–6.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 107
+
+| 4. BERNSTEIN, J., REZNIKOV, A., Sobolev norms of automorphic functionals, Int. Math. Res. Not., (2002) |  |
+
+| --- | --- |
+
+|  | no. 40, 2155–2174. |  |
+
+| 5. BERNSTEIN, J., REZNIKOV, A., Subconvexity bounds for triple L-functions and representation theory, |  |
+
+|  | arXiv:math/0608555v1, 2006. |  |
+
+| 6. BLOMER, V., Rankin-Selberg L-functions on the critical line, Manuscripta Math., 117, (2005) no. 2, |  |
+
+|  | 111–133. |  |
+
+| 7. BLOMER, V., HARCOS, G, The spectral decomposition of shifted convolution sums, Duke Math. J., 144 |  |
+
+|  | (2008), no. 2, 321–339. |  |
+
+| 8. BLOMER, VALENTIN, HARCOS, GERGELY, Hybrid bounds for twisted L-functions, J. Reine Angew. |  |
+
+|  | Math., 621 (2008), 53–79. |  |
+
+| 9. BLOMER, V., HARCOS, G., MICHEL, PH., Bounds for modular L-functions in the level aspect, Ann. Sci. |  |
+
+|  | Ecole Norm. Sup. (4) ´  , 40, (2007) no. 5, 697–740. |  |
+
+| 10. BUSHNELL, C. J., HENNIART, G., An upper bound on conductors for pairs, J. Number Theory, 65, |  |
+
+|  | (1997) no. 2, 183–196. |  |
+
+| 11. BURQ, N., GERARD, P. ´  , TZVETKOV, N., Restrictions of the Laplace-Beltrami eigenfunctions to submanifolds, Duke Math. J., 138, (2007) no. 3, 445–486. |
+
+|
+
+| 12. BURGESS, D. A., On character sums and L-series. II, Proc. London Math. Soc. (3), 13 (1963), 524–536. |  |
+
+|  | no. 40, 2155–2174. |  |
+
+| 13. COWLING, M., HAAGERUP, U., HOWE, R., Almost L2 matrix coefficients, J. Reine Angew. Math., 387 |  |
+
+|  | (1988), 97–110. |  |
+
+\[
+
+| 14. CLOZEL, L., D-emonstration de la conjecture \tau, Invent. Math., 151, \tag{2003}
+
+\]
+
+\[
+
+no. 2, 297-328. | |
+
+\]
+
+| 15. CLOZEL, L., ULLMO, E., Equidistribution de mesures alg´ebriques, ´  Compos. Math., 141, (2005) no. 5, |  |
+
+|  | 1255–1309. |  |
+
+| 16. DIACONU, A., GARRETT, P., Subconvexity bounds for automorphic L-functions for GL(2) over number |  |
+
+|  | fields, Preprint, 2008. |  |
+
+| 17. DUKE, W., FRIEDLANDER, J., IWANIEC, H., Bounds for automorphic L-functions, Invent. Math., 112, |  |
+
+|  | (1993) no. 1, 1–8. |  |
+
+| 18. DUKE, W., FRIEDLANDER, J., IWANIEC, H., Bounds for automorphic L-functions. II, Invent. Math., 115, |  |
+
+|  | (1994) no. 2, 219– 239. |  |
+
+| 19. DUKE, W., FRIEDLANDER, J. B., IWANIEC, H., The subconvexity problem for Artin L-functions, Invent. |  |
+
+|  | Math., 149, (2002) no. 3, 489– 577. |  |
+
+| 20. EINSIEDLER, M., LINDENSTRAUSS, E., MICHEL, PH., VENKATESH, A., Distribution of periodic torus |  |
+
+|  | orbits on homogeneous spaces I., Duke Math. Journal, 148, (2009) no. 1, 119–174. |  |
+
+| 21. EINSIEDLER, M., LINDENSTRAUSS, E., MICHEL, PH., VENKATESH, A., The distribution of periodic |  |
+
+|  | torus orbits on homogeneous spaces : Duke’s theorem for cubic fields , Ann. of Math. (to appear), |  |
+
+|  | arXiv:0903.3591, 2007. |  |
+
+| 22. FOUVRY, E. ´ , IWANIEC, H., A subconvexity bound for Hecke L-functions, Ann. Sci. Ecole Norm. Sup. ´ |  |
+
+|  | (1994) no. 2, 219– 239. |  |
+
+|  | (4), 34, (2001) no. 5, 669–683. |  |
+
+| 23. FRIEDLANDER, J., IWANIEC, H., A mean-value theorem for character sums, Michigan Math. J., 39, |  |
+
+|  | (1992) no. 1, 153–159. |  |
+
+| 24. HOFFSTEIN, J., LOCKHART, P., Coefficients of Maass forms and the Siegel zero, With an appendix by |  |
+
+|  | Dorian Goldfeld, Hoffstein and Daniel Lieman, Ann. of Math. (2), 140, (1994) no. 1, 161– 181. |  |
+
+| 25. GELBART, S., JACQUET, H., A relation between automorphic representations of GL(2) and GL(3), Ann. |  |
+
+|  | Sci. Ecole Norm. Sup. (4) ´  , 11, (1978) no. 4, 471–542. |  |
+
+| 26. GELBART, S., JACQUET, H., Forms of GL(2) from the analytic point of view, Automorphic forms, |  |
+
+|  | representations and L-functions (Proc. Sympos. Pure Math., Oregon State Univ., Corvallis, Ore., 1977), |  |
+
+|  | Part 1, , Proc. Sympos. Pure Math., XXXIII, Amer. Math. Soc., Providence, R.I., , 1979, 213–251. |  |
+
+| 27. GOOD, A., The square mean of Dirichlet series associated with cusp forms, Mathematika, 29, (1982) |  |
+
+|  | no. 2, 278–295. |  |
+
+| 28. Gorodnik, A., Maucourant, F., Oh, H. Manin’s and Peyre’s conjectures on rational points and adelic |  |
+
+|  | mixing Ann. Sci. Ecole Norm. Sup. (4), 41, (2008) no. 3, 383–435. |  |
+
+| 29. HEATH-BROWN, D. R., Hybrid bounds for Dirichlet L-functions, Invent. Math., 47, (1978), no. 2, |  |
+
+|  | 149–170. |  |
+
+| 30. HEATH-BROWN, D. R., Convexity bounds for L-function, Preprint, 2008, arXiv:0809.1752. |  |
+
+| 108 PHILIPPE MICHEL, AKSHAY VENKATESH |  |
+
+| --- | --- |
+
+|  | no. 40, 2155–2174. |  |
+
+| 31. HARCOS, G., MICHEL, PH., The subconvexity problem for Rankin-Selberg L-functions and equidistribution of Heegner points. II, Invent. Math., 163, (2006) |  |
+
+no. 3, 581–655. |  |
+
+| 32. ICHINO, A., Trilinear forms and the central values of triple product L-functions , Duke Math. J., 145, |  |
+
+|  | (2008) no. 2, 281–307. |  |
+
+| 33. ICHINO, A., IKEDA, T., On the periods of automorphic forms on special orthogonal groups and the |  |
+
+|  | Gross-Prasad conjecture , Geom. Funct. Anal.,19 (2010), 1378–1425. |  |
+
+| 34. IVIC, A. ´  , On sums of Hecke series in short intervals, J. Th´eor. Nombres Bordeaux, 13, (2001) no. 2, |  |
+
+|  | 453–468. |  |
+
+| 35. IWANIEC, H., The spectral growth of automorphic L-functions, J. Reine Angew. Math., 428 (1992), |  |
+
+|  | 139–159. |  |
+
+| 36. IWANIEC, H., Harmonic analysis in number theory, Prospects in mathematics, Princeton, NJ, (1996, , |  |
+
+|  | Amer. Math. Soc., Providence, RI, , 1999, 51–68. |  |
+
+| 37. IWANIEC, H., SARNAK, P., Perspectives on the analytic theory of L-functions, GAFA 2000 (Tel Aviv, |  |
+
+|  | 1999), 199, 51–68. |  |
+
+| 38. JACQUET, H., LANGLANDS, R. P., Automorphic forms on GL(2), Lecture Notes in Mathematics, Vol. |  |
+
+|  | 114, Springer-Verlag, 1970. |  |
+
+| 39. JACQUET, H., PIATETSKI-SHAPIRO, I. I., SHALIKA, J., Conducteur des repr´esentations du groupe lin´eaire, |  |
+
+|  | Math. Ann., 256, (1981) no. 2, 199–214. |  |
+
+| 40. JUTILA, M., The twelfth moment of central values of Hecke series, J. Number Theory, 108, (2004) no. |  |
+
+|  | 1, 157–168. |  |
+
+| 41. KIM, H., Functoriality for the exterior square of GL4 and the symmetric fourth of GL2, With appendix |  |
+
+|  | 1 by Dinakar Ramakrishnan and appendix 2 by Kim and Peter Sarnak, J. Amer. Math. Soc., 16, |  |
+
+|  | (2003) no. 1, 139–183 . |  |
+
+| 42. KOWALSKI, E., MICHEL, PH., VANDERKAM, J., Rankin-Selberg L-functions in the level aspect, Duke |  |
+
+|  | Math. J., 114, (2002) no. 1, 123–191. |  |
+
+| 43. KUZNETSOV, N. V., Sums of Kloosterman sums and the eighth power moment of the Riemann zetafunction, Number theory and related topics, Bombay, (1988, , |  |
+
+Tata Inst. Fund. Res. Stud. Math., 12, |  |
+
+|  | Tata Inst. Fund. Res., Bombay, , 1989, 57–117. |  |
+
+| 44. LIU, J., YE, Y., Subconvexity for Rankin-Selberg L-functions of Maass forms, Geom. Funct. Anal., 12, |  |
+
+|  | (2002) no. 6, 1296–1323. |  |
+
+| 45. LOKE, H. Y., Trilinear forms of gl2 |  |
+
+, Pacific J. Math., 197, (2001) no. 1, 119–144.
+
+| 46. LUO, W., RUDNICK, Z., SARNAK, P., On the generalized Ramanujan conjecture for GL(n), Automorphic |  |
+
+| --- | --- |
+
+|  | forms, automorphic representations, and arithmetic (Fort Worth, TX, 1996), , Proc. Sympos. Pure |  |
+
+|  | Math., 66, Amer. Math. Soc., Providence, RI, , 1999, 301–310. |  |
+
+| 47. MEURMAN, T., On the order of the Maass L-function on the critical line, Number theory, Vol. I, |  |
+
+|  | Budapest, (1987), Colloq. Math. Soc. J´anos Bolyai, 51, North-Holland, Amsterdam, 1990, 325–354. |  |
+
+| 48. MICHEL, PH., The subconvexity problem for Rankin-Selberg L-functions and equidistribution of Heegner |  |
+
+|  | points, Ann. of Math. (2), 160, no. 1 (2004), 185– 236. |  |
+
+| 49. MICHEL, PH., Analytic number theory and families of automorphic L-functions,, Automorphic forms |  |
+
+|  | and applications, Park City, UT, (2002, , IAS/Park City Math. Ser., 12, Amer. Math. Soc., Providence, |  |
+
+|  | RI, , 2007, 179-296. |  |
+
+| 50. MICHEL, PH., VENKATESH, A., Equidistribution, L-functions and ergodic theory: on some problems of |  |
+
+|  | Yu. Linnik, International Congress of Mathematicians. Vol. II, , Eur. Math. Soc., Z¨urich, , 2006, |  |
+
+|  | 421–457. |  |
+
+| 51. MOEGLIN, C., WALDSPURGER, J.-L., Spectral decomposition and Eisenstein series, Cambridge Tracts |  |
+
+|  | in Mathematics, 113, Une paraphrase de l’Ecriture [A paraphrase of Scripture], Cambridge University ´ |  |
+
+|  | Press, Cambridge, 1995. |  |
+
+| 52. MOTOHASHI, Y., Spectral theory of the Riemann zeta-function, Cambridge Tracts in Mathematics, 127, |  |
+
+|  | Cambridge University Press, Cambridge, 1997. |  |
+
+| 53. MOTOHASHI, Y., A functional equation for the spectral fourth moment of modular Hecke L-functions, |  |
+
+|  | Proceedings of the Session in Analytic Number Theory and Diophantine Equations, , Bonner Math. |
+
+|  | Schriften, 360 (2003), 19. |
+
+| 54. JUTILA, M., MOTOHASHI, YOICHI, Uniform bound for Hecke L-functions, Acta Math., 195 (2005), |  |
+
+|  | 61–115. |
+
+| 55. MULLER, W. ¨  , The trace class conjecture in the theory of automorphic forms. II, Geom. Funct. Anal., |  |
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 109
+
+|  | 8, (1998) no. 2, 315–355. |  |
+
+| --- | --- |
+
+| 56. OH, H., Uniform pointwise bounds for matrix coefficients of unitary representations and applications to |  |
+
+|  | Kazhdan constants, Duke Math. J., 113, (2002) no. 1, 133–192. |  |
+
+| 57. OKSAK, A. I., Trilinear Lorentz invariant forms, Comm. Math. Phys., 29 (1973), 189–217. |  |
+
+| 58. ONO, T., On Tamagawa numbers, Algebraic Groups and Discontinuous Subgroups (Proc. Sympos. Pure |  |
+
+|  | Math., Boulder, Colo., 1965), , Amer. Math. Soc., Providence, R.I., 1966, 122–132. |  |
+
+| 59. PRASAD, D., Trilinear forms for representations of GL(2) and local -factors, Compositio Math., 75, |  |
+
+|  | no. 1 (1990), 1–46. |  |
+
+| 60. REZNIKOV, A., Norms of geodesic restrictions for eigenfunctions on hyperbolic surfaces and representation |  |
+
+|  | theory , Preprint, arXiv:math/0403437v2, 2004. |  |
+
+| 61. REZNIKOV, A., Rankin-Selberg without unfolding and bounds for spherical Fourier coefficients of Maass |  |
+
+|  | forms, J. Amer. Math. Soc., 21, no. 2 (2008), 439–477. |  |
+
+| 62. SAKELLARIDIS, Y. VENKATESH, A., Periods and harmonic analysis on spherical varieties., Preprint, |  |
+
+|  | 2010. |  |
+
+| 63. SARNAK, P., Fourth moments of Gr¨ossencharakteren zeta functions, Comm. Pure Appl. Math., 38, no. |  |
+
+|  | 2 (1985), 167–178. |  |
+
+| 64. SARNAK, P., Estimates for Rankin-Selberg L-functions and quantum unique ergodicity, J. Funct. Anal., |  |
+
+|  | 184, no. 2 (2001), |  |
+
+|  | 419– 453. |  |
+
+| 65. SARNAK, P., L-functions, Proceedings of the International Congress of Mathematicians, Vol. I (Berlin, |  |
+
+|  | 1998) Documenta Mathematica (Extra volume) 453–465. |  |
+
+| 66. VENKATESH, A., Large sieve inequalities for GL(n)-forms in the conductor aspect, Adv. Math., 200, no. |  |
+
+|  | 2 (2006), 336–356. |  |
+
+| 67. VENKATESH, A., Sparse equidistribution problems, period bounds, and subconvexity, Ann. of Math. (to |  |
+
+|  | appear), 2006. |  |
+
+| 68. VENKATESH, A., Notes on effective equidistribution, Pisa/CMI summer school 2007, unpublished, 2007. |  |
+
+| 69. WALDSPURGER, J.-L., Sur les valeurs de certaines fonctions L automorphes en leur centre de sym´etrie, |  |
+
+|  | Compositio Math., 54, |  |
+
+|  | no. 2 (1985), 173–242. |  |
+
+| 70. WEIL, A., Basic number theory, Classics in Mathematics, Reprint of the second (1973) edition, SpringerVerlag, 1995, xviii+315. |  |
+
+\[
+
+| 71. WEYL, H., Zur absch\cdot atzung von \zeta(1 + it), Math. Zeit., 10 \tag{1921}
+
+\]
+
+\[
+
+, 88-101. | |
+
+\]
+
+| 72. ZAGIER, D., The Rankin-Selberg method for automorphic functions which are not of rapid decay, J. |  |
+
+|  | Fac. Sci. Univ. Tokyo Sect. IA Math., 28, (1981), no. 3 (1982) 415–437. |
+
+Ph. M.
+
+Ecole Polytechnique F´ed´erale de Lausanne, philippe.michel@epfl.ch A. V.
+
+Stanford University, akshay@math.stanford.edu
+
+Manuscrit re¸cu le .

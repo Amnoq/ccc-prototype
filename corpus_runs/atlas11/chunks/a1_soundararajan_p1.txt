@@ -1,0 +1,641 @@
+### MOMENTS OF THE RIEMANN ZETA-FUNCTION
+
+K. Soundararajan
+
+In memoriam Atle Selberg
+
+1. Introduction
+
+An important problem in analytic number theory is to gain an understanding of the moments
+
+Mk(T) = \|ζ( 1 2k dt.
+
+### 2 + it)\|
+
+For positive real numbers_k, it is believed that Mk(T) ∼ CkT(log T) constant Ck. A precise value for Ck was conjectured by Keating and Snaith \[10\] based on considerations from random matrix theory. Subsequently, an alternative approach, based
+
+on multiple Dirichlet series and producing the same conjecture, was given by Diaconu, Goldfeld and Hoffstein \[4\]. Recent work by Conrey et al \[2\] gives a more precise conjecture,
+
+identifying lower order terms in an asymptotic expansion for Mk(T).
+
+Despite many attempts, asymptotic formulae for Mk(T) have been established only for_k = 1 (due to Hardy and Littlewood,see [22]) and_k = 2 (due to Ingham,see [22]). However
+
+we do have the lower bound Mk(T) ≫k T(log T) . This was established by Ramachandra | [13] for positive integers 2k, by Heath-Brown [6] for all positive rational numbers k, and | assuming the truth of the Riemann Hypothesis by Ramachandra [12] for all positive real | numbers k. See also the elegant note [1] giving such a bound assuming RH, and [20] for | the best known constants implicit in these lower bounds. Analogous conjectures exist (see | [2], [4], [11]) for moments of central values of L-functions in families, and in many cases | lower bounds of the conjectured order are known (see [16] and [17]). |
+
+Here we study the problem of obtaining upper bounds for Mk(T). When_0 \le k \le 2, Ramachandra ([13],[14]) and Heath-Brown ([6],[7]) showed, assuming RH, that Mk(T) ≪
+
+### k 2 1+ǫ for
+
+### T(log T)
+
+. The Lindel¨of Hypothesis is equivalent to the estimate Mk(T) ≪k,ǫ T all natural numbers k. Thus, for k larger than 2, it seems difficult to make unconditional progress on bounding Mk(T). If we assume RH, then a classical bound of Littlewood (see
+
+[22]) gives that (for_t \ge 10 and some positive constant C)
+
+### log t
+
+\|\zeta(1 C
+
+### 2 + it)\| ≪ exp log log t ,
+
+The author is partially supported by the National Science Foundation and the American Institute of Mathematics (AIM).
+
+### Typeset by AMS-TEX
+
+### 2 K. SOUNDARARAJAN
+
+and therefore Mk(T) ≪ T exp(2kC log T / log log T). We improve upon this, nearly obtaining an upper bound of the conjectured order of magnitude.
+
+Corollary A. Assume RH. For every positive real number_k, and every ǫ > 0 we have
+
+k 2 ≪k Mk(T) ≪k,ǫ T(log T) k 2+ǫ
+
+### T(log T)
+
+.
+
+Our proof suggests that the dominant contribution to the 2k-th moment comes from t
+
+### 1 k k 2
+
+such that \|ζ(
+
+2 + it)\| has size (log T) , and this set has measure about T /(log T) .
+
+Corollary B. Assume RH. Let_k \ge 0 be a fixed real number. For large T we have 1 k } = T(log T) 2+o \tag{1}
+
+### meas{t \in [0, T] :\|\zeta(-k 2 + it)\| \ge (log T) .
+
+We will deduce these corollaries by finding an upper bound on the frequency with which
+
+large values of \|ζ( 1
+
+### 2 + it)\| can occur. Throughout we define
+
+S(T,V) = {t \in [T, 2T] : \log\|\zeta(1 2 + it)\| \ge V },
+
+### and observe that
+
+Z 2T Z \infty Z \infty \tag{2}
+
+\|\zeta(1 2k dt = - 2kV dmeas(S(T,V)) = 2k 2kV meas(S(T,V))dV.
+
+### e e
+
+### 2 + it)\|
+
+T
+
+-\infty -\infty To prove Corollaries A and B, we desire estimates for the measure of S(T,V) for large T and all V \ge 3. To place our main theorem in context, let us recall the beautiful result of Selberg that as_t varies in [T, 2T] the distribution of \log\|\zeta(
+
+### 2 + it)\| is approximately
+
+Gaussian with mean 0 and variance 1 log log T. Precisely, Selberg’s theorem (see \[18\], \[19\])
+
+shows that for any fixed \lambda \in R, and as T \to \infty
+
+Z ∞
+
+1 2/2
+
+1 \log \log T)) = T dx + o \tag{1}
+
+### meas(S(T,\lambda q e -x 2 \sqrt{2}\pi .
+
+### λ
+
+Although Selberg’s result holds only for V of size \sqrt{log} log T, we may speculate that in a
+
+### much larger range for V a similar estimate holds:
+
+\sqrt{log} log T V_2
+
+### (3) meas(S(T, V )) ≪ T
+
+### exp −
+
+V log log T .
+
+k 2
+
+Such an estimate would lead, via (2), to the bound Mk(T) ≪k T(log T)
+
+. In our main Theorem we establish that a weaker form of \tag{3}
+
+holds in the range_3 \le V = o((log \log T) log3 T),
+
+where throughout we shall write log3 for log log log. In the application to moments, the crucial range is when V is of size about k log log T, and our Theorem shows that a version of (3) holds for such V . For larger values of V we obtain an upper bound of the
+
+form meas(S(T, V )) ≪ T exp(− 1 (log log T) log3 T < V ), and
+
+### 33V log V ) (at least when 1 2
+
+the shape of this estimate is in keeping with Littlewood’s bound (1).
+
+### MOMENTS OF THE RIEMANN ZETA-FUNCTION 3
+
+Theorem. Assume RH. Let T be large, and V \ge 3 be a real number, and let S(T,V) be as defined above. If 10\sqrt{log} \log T \le V \le \log \log T then we have
+
+### V V 2 4
+
+### meas(S(T, V )) ≪ T exp 1 − ;
+
+\sqrt{log} \log T - \log \log T log3 T if \log \log T < V \le 1 (log \log T) log3 T we have
+
+### V V 2 7V 2
+
+### meas(S(T, V )) ≪ T exp 1 − ;
+
+\sqrt{log} \log T - \log \log T_4(log \log T) log3 T (log \log T) log3 T < V we have
+
+and, finally, if 1
+
+### meas(S(T, V )) ≪ T exp V log V
+
+− 33 .
+
+In the limited range_0 \le V \le \log \log T, Jutila [8] had previously shown that
+
+### V 2
+
+V
+
+### meas(S(T, V )) ≪ T exp 1 + O
+
+− log log T log log T .
+
+I have shown recently in [21] that in the range_3 \le V \le 1 p \log T / \log \log T one has
+
+### T V 2
+
+### meas(S(T, V )) ≫ exp − 10
+
+(log T) 4 .
+
+### log  log T
+
+### 8V 2 log V
+
+In contrast to our Theorem above, these results are unconditional.
+
+As noted above, we build on Selberg’s work on the distribution of log ζ( 1
+
+### 2 + it). Selberg
+
+computed the moments of the real and imaginary parts of log ζ(
+
+### 2 +it). To achieve this he
+
+found an ingenious expression for log ζ( 1
+
+### 2 +it) in terms of primes. His ideas work very well
+
+for the imaginary part of the logarithm, but are more complicated for the real part of the logarithm owing to zeros of the zeta-function lying very close to 1
+
+### 2 +it. One novelty in our
+
+work is the realization that if we seek an upper bound for log \|ζ(
+
+### 2 + it)\| (which is what is
+
+needed for our Theorem) then the effect of the zeros very near 1
+
+2 + it is actually benign.
+
+This is our main Proposition given below, from which we will deduce our Theorem. We
+
+should comment that Selberg’s work is unconditional, and uses zero-density results which put most of the zeros near the critical line. It would be interesting to see how much of our work can be recovered unconditionally.
+
+Proposition. Assume RH. Let T be large, let_t \in [T, 2T], and let_2 \le x \le T_2
+
+. Let
+
+\lambda_0 = 0.4912 . . . denote the unique positive real number satisfying e_2 /2. For -\lambda 0 = \lambda_0 + \lambda all \lambda \ge \lambda_0 we have the estimate \Lambda(n) log(x/n) (1 + \lambda) \log T \log\|\zeta(1 + + O 2 + it)\| \le Re X_1 \log x_2 \log x \log x . n_2 + \lambda \log x +it log_n
+
+### n≤x
+
+Taking x = (log T) 2−ǫ in our Proposition, and estimating the sum over_n trivially,
+
+we obtain the following explicit form of Littlewood’s bound (1), which improves upon the previous estimate obtained by Ramachandra and Sankaranarayanan \[15\]. There is
+
+certainly some scope to improve our Corollary C below, and it may be instructive to understand what the limit of the method would be (analogously to the elegant treatment
+
+of Im log ζ(
+
+2 + it) given by Goldston and Gonek \[5\]).
+
+### 4 K. SOUNDARARAJAN
+
+Corollary C. Assume RH. For all large t we have
+
+### log t
+
+\|\zeta(1 + o \tag{1}
+
+log_t \le exp_3 2 + it)\| \le exp_1 + \lambda_0 4 \log log_t 8 \log log_t .
+
+The method developed here is robust and applies equally well to moments in families of L-functions; we discuss this briefly in section 4 below. We end the introduction by deriving Corollaries A and B.
+
+Proof of Corollaries A and B. As mentioned earlier, the lower bound for Mk(T) in Corollary A is due to Ramachandra \[12\]. The upper bound follows upon inserting the bounds
+
+of the Theorem into (2). In performing this computation, it is convenient to use our Theorem in the crude form meas(S(T, V )) ≪ T(log T)
+
+o \tag{1}
+
+exp(-V_2/ \log \log T) for_3 \le V \le 4k \log \log T, and meas(S(T,V)) ≪ T(log T) o(1) exp(-4kV) for V > 4k \log \log T. From the Theorem, we may see that the contribution to Mk(T) from_t \in [0, T] with\|\zeta(1 k+ǫ or\|\zeta(1 k-ǫ_k 2). Combining this with
+
+### is o(T(log T)
+
+2 + it)\| > (log T) 2 + it)\| < (log T)
+
+k 2
+
+the lower bound Mk(T) ≫k T(log T) we obtain the lower bound for the measure implicit in Corollary B. The upper bound implicit there follows from the Theorem.
+
+Acknowledgments. I am grateful to Mike Rubinstein for some helpful remarks, and to Brian Conrey for his encouragement.
+
+2. Proof of the main Proposition
+
+In proving the Proposition we may suppose that t does not coincide with the ordinate of
+
+a zero of \zeta(s). Letting \rho = 2 + i\gamma run over the non-trivial zeros of \zeta(s), we define
+
+### 1 σ − 1/2
+
+F(s) = Re X X
+
+= .
+
+(\sigma - 1/2)2 + (t - \gamma) 2 s - \rho \rho \rho Visibly F(s) is non-negative in the half-plane \sigma \ge \frac{1}{2}. Recall Hadamard’s factorization formula which gives (see \tag{8}
+
+and (11) of §12 of Davenport [3])
+
+### ′ 1 1 ′
+
+Re \zeta(s) = -Re_1 + \log \pi - Re \Gamma(1
+
+### s + 1) + F(s),
+
+ζ_2 2 Γ_2
+
+### s − 1
+
+so that for_t \in [T, 2T] an application of Stirling’s formula yields
+
+### ′
+
+-Re \zeta(s) = 1 \log T + O \tag{1}
+
+- F(s).
+
+### ζ 2
+
+Integrating \tag{4}
+
+as \sigma = Re(s) varies from_1 to \sigma_0(> 1) we obtain, setting s_0 = \sigma_0 + it,
+
+### 2 2
+
+\log T Z \sigma_0 \log\|\zeta(1 + O \tag{1}
+
+(\sigma 0 - 1) - F(\sigma + it)d\sigma 2 + it)\| - \log\|\zeta \tag{s0}
+
+\| = 2 2
+
+### 1/2
+
+log T_1 (σ0 − 1 ) 2 + (t − γ) 2
+
+### 1 ) X log 2
+
+= (\sigma 0 - + O \tag{1}
+
+2 2 - 2 (t - \gamma) 2 .
+
+### ρ
+
+Since log(1 + x_2) \ge x_2/(1 + x_2) we deduce that
+
+### log T F(s0)
+
+\log\|\zeta(1 1) + \mathcal{O}(1) - 2 + it)\| - \log\|\zeta(s_0)\| \le (\sigma 0 - 2 2 2 .
+
+### 6 K. SOUNDARARAJAN
+
+Adding the inequalities (5) and (6), we obtain that
+
+### Λ(n) log x/n log T 1 1
+
+log \|ζ( 1 + +
+
+### σ0 −
+
+2 + it)\| \le Re X \log x_2 2 \log x
+
+### ns0 log n
+
+### n≤x
+
+### 1 1 (σ0 − 1 )
+
+x_2 −σ0 1
+
+### (7)  . + F(s0) 2 + O
+
+### 1 − log x − 2 log x
+
+### (σ0 − ) log2
+
+x
+
+We choose \sigma_0 = 1 \lambda 2 + \log x, where \lambda \ge \lambda_0. This restriction on \lambda ensures that the term
+
+involving F(s0) in (7) makes a negative contribution, and may therefore be omitted. The Proposition follows.
+
+3. Proof of the Theorem
+
+Our proof of the Theorem rests upon our main Proposition. We begin by showing that the sum over prime powers appearing there may be restricted just to primes.
+
+Lemma_2. Assume RH. Let T \le t \le 2T, let_2 \le x \le T_2 1, and let \sigma \ge 2 . Then
+
+### Λ(n) log x/n
+
+X
+
+log x ≪ log log log T + O(1).
+
+### nσ+it log n
+
+### n≤x
+
+### n6=p
+
+Proof. The terms when_n = p_k for_k \ge 3 clearly contribute an amount ≪ 1, and it remains to handle the terms_n = p
+
+. By following closely the explicit formula proof of
+
+the prime number theorem (see §17 and 18 of Davenport \[3\]) we obtain that, on RH,
+
+### P (log p)p \sqrt{2}
+
+### −2it ≪ z/T + z(log zT)
+
+### p≤z . By partial summation, using this estimate when
+
+4 and the trivial ≪ z for smaller z, we deduce that for \sigma \ge 1 z \ge (log T)
+
+### 1 log(\sqrt{x}/p)
+
+X
+
+### ≪ log log log T,
+
+2σ+2it log √
+
+### p x
+
+### √
+
+p≤ x
+
+completing our proof.
+
+We also need a standard mean value estimate whose proof we include for completeness.
+
+Lemma_3. Let T be large, and let_2 \le x \le T. Let_k be a natural number such that k \le T / \log T. For any complex numbers a(p) we have
+
+x
+
+### Z 2T 2k \|a(p)\| 2 k
+
+### X a(p) X
+
+### dt ≪ T k!
+
+1 .
+
+T p 2 +it p
+
+p≤ x p≤ x
+
+Proof. Write
+
+### X a(p) X ak,x(n)
+
+=
+
+1 1 , p 2 +it k n 2 +it
+
+p\le x_n\le xk
+
+### MOMENTS OF THE RIEMANN ZETA-FUNCTION 7
+
+where ak,x(n) = 0 unless_n is the product of_k (not necessarily distinct) primes, all below Qr \alpha_i then ak,x(n) = x. In that case, if we write the prime factorization of_n as_n = i=1 p_i
+
+k Qr
+
+### αi
+
+\alpha_1,...,\alpha r_i=1 a(pi) . Now
+
+### Z 2T a(p) 2k ak,x(m)ak,x(n) Z 2T it
+
+### X X n
+
+### dt = dt
+
+### 1 √
+
+### T p 2 +it mn T m
+
+p\le x_m,n\le xk
+
+### \|ak,x(n)\| 2 \|ak,x(m)ak,x(n)\|
+
+### X X
+
+= T + O
+
+### √ ,
+
+### n mn\| log(m/n)\|
+
+k
+
+n\le xk_m,n\le x
+
+### m6=n
+
+upon separating the diagonal terms_m = n, and the off-diagonal terms_m 6= n. Since_2\|ak,x(m)ak,x(n)/ \sqrt{2}/m +\|ak,x(n)\| \frac{2}{n} we see that the off-diagonal terms mn\| \le\|ak,x(m)\|
+
+above contribute
+
+### \|ak,x(n)\| 2 1 \|ak,x(n)\| 2 \|ak,x(n)\| 2
+
+### X X k log(x k ) X X
+
+### ≪ ≪ x ≪ T
+
+### \| log(m/n)\| ,
+
+### n n n
+
+k
+
+n\le xk_m\le x_n\le xk_n\le xk
+
+### m6=n
+
+k ≤ T / log T. The Lemma follows upon noting that
+
+### recalling that x
+
+\|ak,x(n)\| 2 k_2\|a \tag{p1}
+
+\| 2\alpha 1 2\alpha r
+
+### X X X · · · \|a(pr)\|
+
+=
+
+\alpha_1 \alpha_r n \alpha_1, . . . , \alpha_r p · · · p
+
+### 1 r
+
+n\le xk p_1<...<pr\le x \alpha 1P,...,\alpha r\ge 1 \alpha i=k k\|a \tag{p1}
+
+\| 2\alpha 1 2\alpha r
+
+### X X · · · \|a(pr)\|
+
+### ≤ k!
+
+\alpha_1 \alpha_r \alpha_1, . . . , \alpha_r p · · · p
+
+### 1 r
+
+p_1<...<pr\le x \alpha 1P,...,\alpha r\ge 1 \alpha i=k
+
+### \|a(p)\| 2 k
+
+X
+
+= k! .
+
+p
+
+p≤x
+
+In proving our Theorem we may assume that 10\sqrt{log} \log T \le V \le 3 \log T / \log \log T. We also keep in mind that T is large. We define a parameter A by setting A = 1 log3 T \log \log T log3 T when \log \log T < V \le 1 (log \log T) log3 T, when V \le \log \log T, setting A =
+
+### 2V 2
+
+(log log T) log3 T. We further set x = T A/V and and finally setting A = 1 when V > 1
+
+### 1/ log log T
+
+z = x
+
+### . Using Lemma 2 and our Proposition, we find that
+
+\log\|\zeta(1 V + \mathcal{O}(log\log\logT),2 + it)\| \le S_1(t) + S_2(t) + 1 + \lambda_0 2A
+
+### where
+
+### 1 log(x/p)
+
+### S1(t) = X
+
+1 \lambda_0 log x ,
+
+p 2 + log x +it
+
+### p≤z
+
+### 8 K. SOUNDARARAJAN
+
+and
+
+### 1 log(x/p)
+
+### S2(t) = X
+
+1 \lambda_0 log x .
+
+p 2 + log x +it
+
+z<p\le x If_t \in S(T,V) then we must either have
+
+### V 7
+
+### S2(t) ≥ 1 −
+
+, or S1(t) ≥ V =: V1,
+
+### 8A 8A
+
+say.
+
+By Lemma_3 we see that for any natural number_k \le V /A - 1 we have
+
+### Z 2T 1 k
+
+### \|S2(t)\| 2k dt ≪ T k! X k(log log log T + O(1))k
+
+### ≪ T
+
+.
+
+### T p
+
+z<p\le x Choosing_k to be the largest integer below V /A-1, we obtain that the measure of_t \in [T, 2T] with S_2(t) \ge V / \tag{8A}
+
+is
+
+### 8A 2k V
+
+### (8)  ≪ T (2k log log log T) k ≪ T exp log V
+
+V − 2A .
+
+Next we consider the measure of the set of_t \in [T, 2T] with S_1(t) \ge V_1. By Lemma_3, we see that for any natural number_k \le log(T / \log T)/ \log z,
+
+### Z 2T 1 k k log log T k
+
+\|S1(t)\| 2k dt ≪ T_k! X \sqrt{k}
+
+### ≪ T
+
+,
+
+### T p e
+
+### p≤z
+
+so that the measure of_t \in [T, 2T] with S_1(t) \ge V_1 is
+
+### k log log T k
+
+### \sqrt{k}
+
+### ≪ T
+
+.
+
+### eV 2
+
+When V \le (log \log T) 2 we choose_k to be the greatest integer below V_2 / \log \log T, and 2 we choose_k = [10V]. It then follows that the measure of_t \in [T, 2T] when V > (log \log T)
+
+with S1(t) ≥ V1 is
+
+### V V 2
+
+### (9)  ≪ T 1
+
+exp + T exp(−4V log V ).
+
+\sqrt{log} log T − log log T
+
+Our Theorem follows upon combining the estimates (8) and (9).
+
+4. Moments of L-functions in families

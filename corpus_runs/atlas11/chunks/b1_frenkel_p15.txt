@@ -1,0 +1,403 @@
+These spaces now depend on P. As we vary the G-bundle P, these spaces combine into a vector bundle over BunG. We define a projectively flat connection on it in
+
+the same way as above. The idea is the same as in the case of the moduli space of curves: instead of T(z)
+
+a (z) of the chiral algebra associated to bg, corresponding
+
+we use the action of the currents J to a basis {J a} of g. Insertion of these currents into the correlation function gives us the variation of the correlation
+
+function under infinitesimal deformations of our bundles \[9, 91, 93\]. To implement this idea, we have to realize deformations of the G-bundle in terms of our
+
+theory. This can be done in several ways. One way is to consider the gauged WZW model, as explained in \[82, 83, 84\]. Then we couple the theory to a (0,
+
+1)-connection Azdz on the trivial bundle59 on X into the action and consider the correlation function as a holomorphic function of Az. The caveat is that it is
+
+not invariant under the gauge transformations, but rather defines a section of a line bundle on the quotient of the space of all (0, 1)-connections by the
+
+(complex group G-valued) gauge transformations. This space is precisely the moduli space of holomorphic structures on our (topologically trivial) G-bundle, and
+
+hence it is just our moduli space BunG. From this point of view, the projectively flat connection on the bundle of conformal blocks comes from the formula for
+
+the variation of the correlation function of the gauged WZW model under the action of infinitesimal gauge transformations on the space of anti-holomorphic
+
+connections. This is explained in detail in \[83, 84\].
+
+For us it will be more convenient to define this connection from a slightly different point of view. Just as the moduli space of curves is (infinitesimally)
+
+uniformized by the Virasoro algebra, the moduli space BunG of G-bundles on X is locally (or infinitesimally) uniformized by the affine Kac-Moody algebra. In
+
+fact, it is uniformized even globally by the corresponding Lie group, as we will see presently. Using this uniformization, we will write the connection
+
+operators as in formula (7.6), except that we will replace the
+
+a (z) of the affine Lie algebra. This derivation will
+
+stress tensor T(z) by the currents J be more convenient for us because it also works for general conformal field theories with Kac-Moody symmetry, not only for
+
+the WZW models.
+
+In what follows we will restrict ourselves to the simplest case when there is only one insertion point x ∈ X. The case of an arbitrary number of insertions may
+
+be analyzed similarly. We will follow closely the discussion of \[20\], Ch. 18.To explain the Kac-Moody uniformization of BunG, we recall the Weil realization
+
+of the set of C-points of Bunn (i.e., isomorphism classes of rank_n bundles on X) given in 59since we assumed our group G to be connected and simply-connected,
+
+any G-bundle on X is topologically trivial; for other groups one has to include non-trivial bundles as well, see \[95\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 79
+
+Lemma 2 of Sect. 3.2 as the double quotient GLn(F)\\GLn(A)/GLn(O). Likewise, for a general reductive group G the set of C-points of BunG is realized as the
+
+double quotient G(F)\\G(A)/G(O). The proof is the same as in Lemma 2: any G-bundle on X may be trivialized on the complement of finitely many points. It can
+
+also be trivialized on the formal discs around those points, and the corresponding transition functions give us an element of the ad\`elic group G(A) defined up
+
+to the right action of G(O) and left action of G(F).
+
+For a general reductive Lie group G and a general G-bundle P the restriction of P to the complement of a single point x in X may be non-trivial. But if G is a
+
+semi-simple Lie group, then it is trivial, according to a theorem of Harder. Hence we can trivialize P on X\\x and on the disc around x. Therefore our G-bundle
+
+P may be represented by a single transition function on the punctured disc Dx around x. This transition function is an element of the loop group G((t)), where,
+
+as before, t is a local coordinate at x. If we change our trivialization on Dx, this function will get multiplied on the right by an element of G[\[t]\], and if
+
+we change our trivialization on X\\x, it will get multiplied on the left by an element of Gout = {(X\\x) → G}. Thus, we find that the set of isomorphism
+
+classes of G-bundles on X is in bijection with the double quotient Gout\\G((t))/G[\[t]\]. This is a “one-point” version of the Weil type ad\`elic uniformization
+
+given in Lemma_2. Furthermore, it follows from the results of \[96, 97\] that this identification is not only an isomorphism of the sets of points, but we
+
+actually have an isomorphism of algebraic stacks
+
+(7.8) BunG ≃ Gout\\G((t))/G\[\[t\]\],
+
+### 60 This is what we mean by the
+
+where Gout is the group of algebraic maps X\\x → G.
+
+global Kac-Moody uniformization of BunG.
+
+The local (or infinitesimal) Kac-Moody uniformization of BunG is obtained from the global one. It is the statement that the tangent space TP BunG to the point
+
+of BunG
+
+P
+
+corresponding to a G-bundle P is isomorphic to the double quotient g
+
+### out\\g((t))/g\[\[t\]\]. Thus,
+
+\[
+
+any element \eta(t) = J a\eta a(t) of the loop algebra g((t)) gives rise to a tangent vector \nu in TP BunG. This is completely analogous to the Virasoro
+
+uniformization of the moduli spaces of curves considered above. The analogue of formula \tag{7.6}
+
+\]
+
+\[
+
+for the variation of the one-point correlation function of our theory with respect to the infinitesimal deformation of the G-bundle P corresponding to \nu is
+
+then
+
+\]
+
+Z
+
+\[
+
+\delta \nu h\Phi(x)i = a (t)dt · \Phi(x)
+
+\]
+
+### ηa(t)J
+
+,
+
+where the contour of integration is a small loop around the point x. The formula is welldefined because of the Ward identity expressing the invariance of the
+
+correlation function
+
+P
+
+under the action of the Lie algebra g
+
+### out. This formula also has an obvious multi-point
+
+generalization.
+
+60for this one needs to show that this uniformization is true for any family of G-bundles on X, and this is proved in \[96, 97\]
+
+### 80  EDWARD FRENKEL
+
+Thus, we obtain a connection on the bundle of conformal blocks over BunG, or, more generally, the structure of a D-module on the sheaf of conformal blocks,61
+
+and the correlation functions of our model are sections of this sheaf that are horizontal with respect to
+
+this connection. The conformal anomaly that we observed in the analysis of the sheaves of conformal blocks on the moduli spaces of curves has an analogue here
+
+as well: it is expressed in the fact that the above formulas do not define a flat connection on the sheaf of conformal blocks, but only a projectively flat
+
+connection (unless the level of bg is 0). In other words, we obtain the structure of a twisted D-module. The basic reason for this is that we consider the
+
+spaces of conformal blocks for projective representations of the loop algebra g((t)), i.e., representations of its central extension bg of non-zero level k, as
+
+we will see in the next section.
+
+In the rest of this section we describe this above construction of the D-modules on BunG in more detail from the point of view of the mathematical theory of
+
+“localization functors”.
+
+7.4. Construction of twisted D-modules. Let us consider a more general situation.
+
+Let_k ⊂ g be a pair consisting of a Lie algebra and its Lie subalgebra. Let K be the Lie group with the Lie algebra_k. The pair (g,K) is called a Harish-Chandra
+
+pair. 62 Let Z be a variety over C. A (g,K)-action on Z is the data of an action of g on Z (that is, a homomorphism α from g to the tangent sheaf ΘZ), together
+
+with an action of K on Z satisfying natural compatibility conditions. The homomorphism α gives rise to a homomorphism of OZ-modules a : g \otimes C OZ → ΘZ.
+
+This map makes g \otimes OZ into a Lie algebroid (see \[75\] and \[20\], Sect. A.3.2). The action is called transitive if the map a (the “anchor map”) is
+
+surjective. In this case ΘZ may be realized as the quotient g \otimes OZ/ Ker a.
+
+For instance, let Z be the quotient H\\G, where G is a Lie group with the Lie algebra g and H is a subgroup of G. Then G acts transitively on H\\G on the right,
+
+and hence we obtain a transitive (g,K)-action on H\\G. Now let V be a (g,K)-module, which means that it is a representation of the Lie algebra g and, moreover,
+
+the action of k may be exponentiated to an action of K. Then the Lie algebroid g \otimes OH\\G acts on the sheaf V \otimes C OH\\G of sections of the trivial
+
+vector bundle on H\\G with the fiber V .
+
+\[
+
+The sheaf V \otimes C OH\\G is naturally an OH\\G-module. Suppose we want to make V \otimes C OH\\G into a DH\\G-module. Then we need to learn how to act on it
+
+by \Theta H\\G. But we know that \Theta H\\G = g \otimes OH\\G Ker a. Therefore \Theta H\\G acts naturally on the quotient \Delta(e V) = (V \otimes C OH\\G)/
+
+Ker a · (V \otimes C OH\\G). Thus, \Delta(e V) is a DH\\G-module. The fiber of \Delta(e V) (considered as a OH\\G-module) at a point p \in H\\G is the quotient
+
+V/ Stabp ·V, where Stabp is the stabilizer of g at p.
+
+\]
+
+61as in the case of the moduli of curves, it is often more convenient to work with the sheaf of coinvariants instead 62note that we have already encountered a
+
+Harish-Chandra pair (gl2, O2) when discussing automorphic representations of GL2(AQ) in Sect. 1.6
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 81
+
+Thus, we may think of \Delta( e V ) as the sheaf of coinvariants: it glues together the spaces of coinvariants V/ Stabp ·V for all p ∈ H\\G. The DH\\G-module
+
+\Delta( e V ) is the sheaf of sections of a vector bundle with a flat connection if and only if the spaces of coinvariants have the same dimension for all p ∈
+
+H\\G. But different points have different stabilizers, and so the dimensions of these spaces may be different for different points p. So \Delta( e V ) can be a
+
+rather complicated D-module in general. By our assumption, the action of_k on V can be exponentiated to an action of the Lie group K. This means that the
+
+D-module \Delta( e V ) is K-equivariant, in other words, it is the pull-back of a D-module on the double quotient H\\G/K, which we denote by \Delta(V ). Thus,
+
+we have defined for any (g,K)-module V a D-module of coinvariants \Delta(V ) on H\\G/K. Now suppose that V is a projective representation of g, i.e., a
+
+representation of a central extension bg of g: (7.10) 0 → C1 → bg → g → 0 We will assume that it splits over_k and h. Then (bg,K) is also a Harish-Chandra pair
+
+which acts on H\\G via the projection bg → g. But since the central element_1 is mapped to the zero vector field on H\\G, we obtain that if_1 acts as a non-zero
+
+scalar on V , the corresponding D-module \Delta(V ) is equal to zero.
+
+It is clear that what we should do in this case is to replace G by its central extension corresponding to bg and take into account the C ×-bundle H\\Gb over
+
+H\\G.
+
+This can be phrased as follows. Consider the OH\\G-extension
+
+(7.11) 0 → OH\\G · 1 → bg \otimes OH\\G → g \otimes OH\\G → 0
+
+\[
+
+obtained by taking the tensor product of \tag{7.10}
+
+\]
+
+\[
+
+with OH\\G. By our assumption, the central extension (7.10) splits over the Lie algebra h. Therefore (7.11) splits over the kernel of the anchor map a : g
+
+\otimes OH\\G \to \Theta H\\G. Therefore we have a Lie algebra embedding Ker a ֒\to bg \otimes OH\\G. The quotient T of bg \otimes OH\\G by Ker a is now an
+
+extension
+
+#### 0 → OH\\G → T → ΘH\\G → 0,
+
+and it carries a natural Lie algebroid structure.
+
+We now modify the above construction as follows: we take the coinvariants of V \otimes OH\\G only with respect to Ker a ֒→ bg \otimes OH\\G. Thus we define the
+
+sheaf
+
+\Delta( e V ) = OH\\G \otimes V/ Ker a · (OH\\G \otimes V ). The sheaf \Delta( e V ) is an OH\\G-module whose fibers are the spaces of coinvariants as above.
+
+But it is no longer a DH\\G-module, since it carries an action of the Lie algebroid T, not of ΘH\\G. But suppose that the central element_1 acts on V as the
+
+identity. Then the quotient of the enveloping algebra U(T) of T by the relation identifying_1 ∈ OH\\G ⊂ T with the unit element of U(T) acts on \Delta( e V ).
+
+This quotient, which we denote by D′
+
+### H\\G
+
+is a sheaf of twisted differential operators on H\\G. Furthermore, the Lie algebroid T is identified with the subsheaf of differential operators of order less
+
+than or equal to 1 inside
+
+### D′
+
+H\\G .
+
+\[
+
+But what if_1 acts on V as_k ·Id, where_k \in C? Then on \Delta(e V) we have an action of the quotient of the enveloping algebra U(T) of T by the relation
+
+identifying_1 \in OH\\G \subset T with
+
+### 82  EDWARD FRENKEL
+
+k times the unit element of U(T). We denote this quotient by De′
+
+k . Suppose that the central
+
+extension (7.10) can be exponentiated to a central extension Gb of the corresponding Lie group G. Then we obtain a C ×-bundle H\\Gb over H\\G. Let Le be the
+
+corresponding line bundle. For integer values of k the sheaf De′
+
+### k may be identified with the sheaf of differential
+
+operators acting on Le\otimes k is also well-defined for an arbitrary complex value
+
+. However, De′ k
+
+\otimes k is not.
+
+\[
+
+of_k, whereas L Finally, suppose that the action of the Lie subalgebra_k \subset g on V (it acts on V because we have assumed the central extension \tag{7.10}
+
+\]
+
+\[
+
+to be split over it) exponentiates to an action of the corresponding Lie group K. Then the De′ -module \Delta(e V) is the pull-back of
+
+\]
+
+k
+
+a sheaf \Delta(V ) on H\\G/K. This sheaf is a module over the sheaf D′ of twisted differential
+
+k
+
+(for instance, for integer values of k, D′
+
+operators on H\\G/K that we can define using De′
+
+### k k
+
+is the sheaf of differential operators acting on L \otimes k
+
+, where L is the line bundle on H\\G/K
+
+which is the quotient of Le by K).
+
+As the result of this construction we obtain a localization functor
+
+\Delta : (bg,K)-modk  −→  D′
+
+k -mod
+
+sending a (bg,K)-module V of level_k to the sheaf of coinvariants \Delta(V ).63
+
+7.5. Twisted D-modules on BunG. Let us now return to the subject of our interest: D-modules on BunG obtained from conformal field theories with Kac-Moody
+
+symmetry.
+
+\[
+
+The point is that this is a special case of the above construction. Namely, we take the loop group G((t)) as G, Gout as H and G[[t]] as K. Then the double
+
+quotient H\\G/K is BunG according to the isomorphism \tag{7.8}
+
+\]
+
+\[
+
+.64 In this case we find that the localization functor \Delta sends a (bg,G[[t]])-module V to a D′ -module \Delta(V) on BunG.
+
+\]
+
+k
+
+The twisted D-module \Delta(V ) is precisely the sheaf of coinvariants arising from conformal field theory! Indeed, in this case the stabilizer subalgebra
+
+StabP, corresponding to a Gbundle P on X, is just the Lie algebra g
+
+P
+
+### out defined by formula (7.7). Therefore the fiber of
+
+\Delta(V ) is the space of coinvariants V/g P
+
+### out · V , i.e., the dual space to the space of conformal
+
+blocks on V . 65 Moreover, it is easy to see that the action of the Lie algebroid T is exactly the same as the one described in Sect. 7.3 (see formula (7.9)).
+
+The idea that the sheaves of coinvariants arising in conformal field theory may be obtained via a localization functor goes back to \[98, 99\].
+
+For integer values of k the sheaf D′ is the sheaf of differential operators on a line bundle
+
+k
+
+over BunG that is constructed in the following way. Note that the quotient G((t))/G[\[t]\] appearing in formula (7.8) is the affine Grassmannian Gr that we
+
+discussed in Sect. 5.4.The loop group G((t)) has a universal central extension, the affine Kac-Moody group Gb. It contains G[\[t]\] as a subgroup, and the
+
+quotient G/G b [\[t]\] is a C ×-bundle on the 63the reason for the terminology “localization functor” is explained in \[20\], Sect. 17.2.7 64BunG is not an
+
+algebraic variety, but an algebraic stack, but it was shown in \[15\], Sect. 1, that the localization functor can be applied in this case as well 65Strictly
+
+speaking, this quotient is the true space of coinvariants of our conformal field theory only if the chiral algebra of our conformal field theory is generated by
+
+the affine Kac-Moody algebra, as in the case of WZW model. In general, we need to modify this construction and also take the quotient by the additional Ward
+
+identities corresponding to other fields in the chiral algebra (see \[20\], Ch. 17, for details).
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 83
+
+Grassmannian Gr. Let Le be the corresponding line bundle on Gr. The group Gb acts on Le, and in particular any subgroup of bg((t)) on which the central
+
+extension is trivial also acts on Le. The subgroup Gout is such a subgroup, hence it acts on Le. Taking the quotient of Le by Gout, we obtain a line bundle L on
+
+BunG (see (7.8)). This is the non-abelian version
+
+### 66 Then D′ be the
+
+of the theta line bundle, the generator of the Picard group of BunG.
+
+k
+
+### \otimes k
+
+sheaf of differential operators acting on L
+
+. The above general construction gives us a
+
+description of the sheaf D′ in terms of the local Kac-Moody uniformization of BunG.
+
+k
+
+Again, we note that while L \otimes k
+
+exists as a line bundle only for integer values of k, the
+
+sheaf D′ is well-defined for an arbitrary complex k.
+
+k

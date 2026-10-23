@@ -1,0 +1,359 @@
+### LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL
+
+### FIELD THEORY
+
+#### EDWARD FRENKEL
+
+Contents
+
+| c 20 |  |
+
+| --- | --- |
+
+|  | Introduction  3 |
+
+| 5 De | Part I. The origins of the Langlands Program  9 |
+
+|  | 1. The Langlands correspondence over number fields 9 |
+
+|  | 1.1. Galois group  9 |
+
+| v1 1 | 1.2. Abelian class field theory  10 |
+
+|  | 1.3. Frobenius automorphisms  13 |
+
+| 172 | 1.4. Rigidifying ACFT  14 |
+
+|  | 1.5. Non-abelian generalization?  15 |
+
+|  | 1.6. Automorphic representations of GL2(AQ) and modular forms 18 |
+
+| 0512 | 1.7. Elliptic curves and Galois representations 22 |
+
+|  | 2. From number fields to function fields  24 |
+
+|  | 2.1. Function fields  24 |
+
+| p-th/ | 2.2. Galois representations  27 |
+
+|  | 2.3. Automorphic representations  28 |
+
+|  | 2.4. The Langlands correspondence  31 |
+
+| v:he |  |
+
+### Part II. The geometric Langlands Program  33
+
+3. The geometric Langlands conjecture  33
+
+##### arXi 3.1. Galois representations as local systems  33
+
+3.2. Ad\`eles and vector bundles  35 3.3. From functions to sheaves  37 3.4. From perverse sheaves to D-modules  40 3.5. Example: a D-module on the line  41
+
+3.6. More on D-modules  42 3.7. Hecke correspondences  43 3.8. Hecke eigensheaves and the geometric Langlands conjecture 45
+
+4. Geometric abelian class field theory  48 4.1. Deligne’s proof  49 4.2. Functions vs. sheaves  50
+
+Date: December, 2005. Based on the lectures given by the author at the Les Houches School “Number Theory and Physics” in March of 2003 and at the DARPA Workshop
+
+“Langlands Program and Physics” at the Institute for Advanced Study in March of 2004. To appear in Proceedings of the Les Houches School.
+
+Partially supported by the DARPA grant HR0011-04-1-0031 and by the NSF grant DMS-0303529.
+
+### 2  EDWARD FRENKEL
+
+4.3. Another take for curves over C  51 4.4. Connection to the Fourier-Mukai transform 52 4.5. A special case of the Fourier-Mukai transform 54
+
+5. From GLn to other reductive groups  56 5.1. The spherical Hecke algebra for an arbitrary reductive group 56 5.2. Satake isomorphism  57 5.3. The Langlands
+
+correspondence for an arbitrary reductive group 59 5.4. Categorification of the spherical Hecke algebra 60 5.5. Example: the affine Grassmannian of PGL2  62
+
+5.6. The geometric Satake equivalence  63
+
+6. The geometric Langlands conjecture over C  64 6.1. Hecke eigensheaves  64 6.2. Non-abelian Fourier-Mukai transform?  66 6.3. A two-parameter deformation  68
+
+6.4. D-modules are D-branes?  71
+
+### Part III. Conformal field theory approach  73
+
+7. Conformal field theory with Kac-Moody symmetry 73 7.1. Conformal blocks  73 7.2. Sheaves of conformal blocks as D-modules on the moduli spaces of curves 75
+
+7.3. Sheaves of conformal blocks on BunG  77 7.4. Construction of twisted D-modules  80 7.5. Twisted D-modules on BunG  82 7.6. Example: the WZW D-module  83
+
+8. Conformal field theory at the critical level  85 8.1. The chiral algebra  86 8.2. The center of the chiral algebra  88 8.3. Opers  90 8.4. Back to the center
+
+93 8.5. Free field realization  95 8.6. T-duality and the appearance of the dual group 98
+
+9. Constructing Hecke eigensheaves  100 9.1. Representations parameterized by opers  101 9.2. Twisted D-modules attached to opers  104 9.3. How do conformal
+
+blocks know about the global curve? 105 9.4. The Hecke property  108 9.5. Quantization of the Hitchin system  111 9.6. Generalization to other local systems
+
+113 9.7. Ramification and parabolic structures  116 9.8. Hecke eigensheaves for ramified local systems 119 Index  122 References  124
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 3
+
+Introduction
+
+These lecture notes give an overview of recent results in geometric Langlands correspondence which may yield applications to quantum field theory. It has long
+
+been suspected
+
+that the Langlands duality should somehow be related to various dualities observed in quantum field theory and string theory. Indeed, both the Langlands
+
+correspondence and the dualities in physics have emerged as some sort of non-abelian Fourier transforms.
+
+Moreover, the so-called Langlands dual group introduced by R. Langlands in \[1\] that is essential in the formulation of the Langlands correspondence also plays
+
+a prominent role in the study of S-dualities in physics and was in fact also introduced by the physicists P. Goddard, J. Nuyts and D. Olive in the framework of
+
+four-dimensional gauge theory \[2\]. In recent lectures \[3\] E. Witten outlined a possible scenario of how the two dualities – the Langlands duality and the
+
+S-duality – could be related to each other. It is based on a dimensional reduction of a four-dimensional gauge theory to two dimensions and the analysis of what
+
+this reduction does to “D-branes”. In particular, Witten argued that the_t’Hooft operators of the four-dimensional gauge theory recently introduced by A.
+
+Kapustin \[4\] become, after the dimensional reduction, the Hecke operators that are essential ingredients of the Langlands correspondence. Thus, a_t’Hooft
+
+“eigenbrane” of the gauge theory becomes after the reduction a Hecke “eigensheaf”, an object of interest in the geometric Langlands correspondence. The work of
+
+Kapustin and Witten shows that the Langlands duality is indeed closely related to the S-duality of quantum field theory, and this opens up exciting
+
+possibilities for both subjects.
+
+The goal of these notes is two-fold: first, it is to give a motivated introduction to the Langlands Program, including its geometric reformulation, addressed
+
+primarily to physicists. I have tried to make it as self-contained as possible, requiring very little mathematical
+
+background. The second goal is to describe the connections between the Langlands
+
+Program and two-dimensional conformal field theory that have been found in the last few years. These connections give us important insights into the physical
+
+implications of the Langlands duality.
+
+The classical Langlands correspondence manifests a deep connection between number theory and representation theory. In particular, it relates subtle number
+
+theoretic data (such as the numbers of points of a mod p reduction of an elliptic curve defined by a cubic equation with integer coefficients) to more easily
+
+discernable data related to automorphic forms (such as the coefficients in the Fourier series expansion of a modular form on the upper half-plane). We will
+
+consider explicit examples of this relationship (having to do with the Taniyama-Shimura conjecture and Fermat’s last theorem) in Part I of this survey.
+
+So the origin of the Langlands Program is in number theory. Establishing the Langlands correspondence in this context has proved to be extremely hard. But
+
+number fields have close relatives called function fields, the fields of functions on algebraic curves defined over a finite field. The Langlands correspondence
+
+has a counterpart for function fields, which is much better understood, and this will be the main subject of our interest in this survey.
+
+### 4  EDWARD FRENKEL
+
+Function fields are defined geometrically (via algebraic curves), so one can use geometric intuition and geometric technique to elucidate the meaning of the
+
+Langlands correspondence. This is actually the primary reason why the correspondence is easier to understand
+
+in the function field context than in the number field context. Even more ambitiously, one can now try to switch from curves defined over finite fields to
+
+curves defined over the complex field – that is to Riemann surfaces. This requires a reformulation, called the geometric Langlands correspondence. This
+
+reformulation effectively puts the Langlands correspondence in the realm of complex algebraic geometry.
+
+Roughly speaking, the geometric Langlands correspondence predicts that to each rank n holomorphic vector bundle E with a holomorphic connection on a complex
+
+algebraic curve X one can attach an object called Hecke eigensheaf on the moduli space Bunn of rank n holomorphic vector bundles on X:
+
+holomorphic rank n bundles
+
+### −→  Hecke eigensheaves on Bunn
+
+with connection on X
+
+A Hecke eigensheaf is a D-module on Bunn satisfying a certain property that is determined by E. More generally, if G is a complex reductive Lie group, and LG is
+
+the
+
+Langlands dual group, then to a holomorphic LG-bundle with a holomorphic connection on X we should attach a Hecke eigensheaf on the moduli space BunG of
+
+holomorphic
+
+### G-bundles on X:
+
+holomorphic LG-bundles
+
+### −→  Hecke eigensheaves on BunG
+
+with connection on X
+
+I will give precise definitions of these objects in Part II of this survey.
+
+The main point is that we can use methods of two-dimensional conformal field theory to construct Hecke eigensheaves. Actually, the analogy between conformal
+
+field theory and the theory of automorphic representations was already observed a long time ago by E. Witten \[5\]. However, at that time the geometric
+
+Langlands correspondence had not yet been developed. As we will see, the geometric reformulation of the classical theory of automorphic representations will
+
+allow us to make the connection to conformal field theory more precise. To explain how this works, let us recall that chiral correlation functions in a
+
+(rational) conformal field theory \[6\] may be interpreted as sections of a holomorphic vector bundle on the moduli space of curves, equipped with a
+
+projectively flat connection \[7\]. The connection comes from the Ward identities expressing the variation of correlation functions under deformations of the
+
+complex structure on the underlying Riemann surface via the insertion in the correlation function of the stress tensor, which generates the Virasoro algebra
+
+symmetry of the theory. These bundles with projectively flat connection have been studied in the framework of Segal’s axioms of conformal field theory \[8\].
+
+Likewise, if we have a rational conformal field theory with affine Lie algebra symmetry \[9\], such as a Wess-Zumino-Witten (WZW) model \[10\], then conformal
+
+blocks give rise to sections of a holomorphic vector bundle with a projectively flat connection on the moduli space of G-bundles on X. The projectively flat
+
+connection comes from the Ward identities corresponding to the affine Lie algebra symmetry, which are expressed via the insertions of the currents generating an
+
+affine Lie algebra, as I recall in Part III of this survey.
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 5
+
+Now observe that the sheaf of holomorphic sections of a holomorphic vector bundle E over a manifold M with a holomorphic flat connection \nabla is the simplest
+
+example of a holonomic D-module on M. Indeed, we can multiply a section φ of E over an open subset U ⊂ M by any holomorphic function on U, and we can
+
+differentiate φ with respect to a holomorphic vector field ξ defined on U by using the connection operators: φ_7→ \nabla ξφ. Therefore we obtain an action of
+
+the sheaf of holomorphic differential operators on the sheaf of holomorphic sections of our bundle E. If \nabla is only projectively flat, then we obtain
+
+instead of a D-module what is called a twisted D-module. However, apart from bundles with a projectively flat connection, there exist other holonomic twisted
+
+D-modules. For example, a (holonomic) system of differential equations on M defines a (holonomic) Dmodule on M. If these equations have singularities on some
+
+divisors in M, then the
+
+sections of these D-module will also have singularities along those divisors (and nontrivial monodromies around those divisors), unlike the sections of just a
+
+plain bundle with
+
+connection.
+
+Applying the conformal blocks construction to a general conformal field theory, one obtains (twisted) D-modules on the moduli spaces of curves and bundles. In
+
+some conformal
+
+field theories, such as the WZW models, these D-module are bundles with projectively flat connections. But in other theories we obtain D-modules that are more
+
+sophisticated: for example, they may correspond to differential equations with singularities along divisors, as we will see below. It turns out that the Hecke
+
+eigensheaves that we are looking for can be obtained this way. The fact that they do not correspond to bundles with projectively flat connection is perhaps the
+
+main reason why these D-modules have, until now, not caught the attention of physicists.
+
+There are in fact at least two known scenarios in which the construction of conformal blocks gives rise to D-modules on BunG that are (at least conjecturally)
+
+the Hecke eigensheaves whose existence is predicted by the geometric Langlands correspondence. Let us
+
+briefly describe these two scenarios.
+
+In the first scenario we consider an affine Lie algebra at the critical level, k = −h ∨,
+
+∨ is the dual Coxeter number. At the critical level the Segal-Sugawara current
+
+where h becomes commutative, and so we have a “conformal field theory” without a stress tensor. This may sound absurd to a physicist, but from the mathematical
+
+perspective this
+
+liability actually turns into an asset. Indeed, even though we do not have the Virasoro symmetry, we still have the affine Lie algebra symmetry, and so we can
+
+apply the conformal blocks construction to obtain a D-module on the moduli space of G-bundles on
+
+a Riemann surface X (though we cannot vary the complex structure on X). Moreover, because the Segal-Sugawara current is now commutative, we can force it to be
+
+equal to any numeric (or, as a physicist would say, “c-number”) projective connection on our curve X. So our “conformal field theory”, and hence the
+
+corresponding D-module, will depend on a continuous parameter: a projective connection on X.
+
+In the case of the affine Lie algebra bsl2 the Segal-Sugawara field generates the center of the chiral algebra of level_k = −2. For a general affine Lie algebra
+
+bg, the center of the chiral algebra has \ell = rank g generating fields, and turns out to be canonically isomorphic to a classical limit of the W-algebra
+
+asociated to the Langlands dual group LG, as shown in \[11, 12\]. This isomorphism is obtained as a limit of a certain isomorphism of W-algebras that naturally
+
+arises in the context of T-duality of free bosonic theories compactified on
+
+### 6  EDWARD FRENKEL
+
+tori. I will recall this construction below. So from this point of view the appearance of the Langlands dual group is directly linked to the T-duality of
+
+bosonic sigma models.
+
+The classical W-algebra of LG is the algebra of functions on the space of gauge equivalence classes of connections on the circle introduced originally by V.
+
+Drinfeld and V.
+
+Sokolov \[13\] in their study of the generalized KdV hierarchies. The Drinfeld-Sokolov construction has been recast in a more geometric way by A. Beilinson and
+
+V. Drinfeld, who called these gauge equivalence classes LG-opers \[14\]. For a general affine Lie algebra bg the procedure of equating the Segal-Sugawara
+
+current to a numeric projective connection becomes the procedure of equating the generating fields of the center to the components of a numeric LG-oper E on X.
+
+Thus, we obtain a family of “conformal field theories” depending on LG-opers on X, and we then take the corresponding D-modules of conformal
+
+blocks on the moduli space BunG of G-bundles on X.
+
+A marvelous result of A. Beilinson and V. Drinfeld \[15\] is that the D-module corresponding to a LG-oper E is nothing but the sought-after Hecke eigensheaf
+
+with “eigenvalue” E! Thus, “conformal field theory” of the critical level_k = −h ∨ solves the problem of constructing Hecke eigensheaves, at least for those
+
+LG-bundles with connection which admit
+
+the structure of a LG-oper (other flat LG-bundles can be dealt with similarly). This is explained in Part III of this survey.
+
+In the second scenario one considers a conformal field theory with affine Lie algebra
+
+### ∨, so it is in some sense opposite to the
+
+symmetry of integral level_k that is less than −h traditional WZW model, where the level is a positive integer. In fact, theories with such values of level have
+
+been considered by physicists in the framework of the WZW models corresponding to non-compact Lie groups, such as SL2(R) (they have many similarities to the
+
+Liouville theory, as was pointed out already in \[16\]). Beilinson and Drinfeld have defined explicitly an extended chiral algebra in such a theory, which they
+
+called the chiral Hecke algebra. In addition to the action of an affine Lie algebra bg, it carries an action of the Langlands dual group LG by symmetries. If G
+
+is abelian, then the chiral Hecke algebra is nothing but the chiral algebra of a free boson compactified on a torus. Using the LGsymmetry, we can “twist” this
+
+extended chiral algebra by any LG-bundle with connection E on our Riemann surface X, and so for each E we now obtain a particular chiral conformal field theory
+
+on X. Beilinson and Drinfeld have conjectured that the corresponding sheaf of conformal blocks on BunG is a Hecke eigensheaf with the “eigenvalue” E. I will not
+
+discuss this construction in detail in this survey referring the reader instead to \[17\], Sect.
+
+4.9, and \[18\] where the abelian case is considered and the reviews in \[19\] and \[20\], Sect.
+
+20.5.These two examples show that the methods of two-dimensional conformal field theory are powerful and flexible enough to give us important examples of the
+
+geometric Langlands correspondence. This is the main message of this survey.
+
+These notes are split into three parts: the classical Langlands Program, its geometric reformulation, and the conformal field theory approach to the geometric
+
+Langlands correspondence. They may be read independently from each other, so a reader who is primarily
+
+interested in the geometric side of the story may jump ahead to Part II, and a reader who wants to know what conformal field theory has to do with this subject
+
+may very well start with Part III and later go back to Parts I and II to read about the origins of the Langlands Program.
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 7
+
+Here is a more detailed description of the material presented in various parts.
+
+Part I gives an introduction to the classical Langlands correspondence. We start with some basic notions of number theory and then discuss the Langlands
+
+correspondence for number fields such as the field of rational numbers. I consider in detail a specific example which relates modular forms on the upper
+
+half-plane and two-dimensional representations of the Galois group coming from elliptic curves. This correspondence, known as the Taniyama-Shimura conjecture,
+
+is particularly important as it gives, among other things, the proof of Fermat’s last theorem. It is also a good illustration for the key ingredients of the
+
+Langlands correspondence. Next, we switch from number fields to function fields undescoring the similarities and differences between the two cases. I formulate
+
+more precisely the Langlands correspondence for function fields, which has been proved by V.
+
+Drinfeld and L. Lafforgue.
+
+Part II introduces the geometric reformulation of the Langlands correspondence. I tried to motivate every step of this reformulation and at the same time avoid
+
+the most difficult technical issues involved. In particular, I describe in detail the progression from functions to sheaves to perverse sheaves to D-modules, as

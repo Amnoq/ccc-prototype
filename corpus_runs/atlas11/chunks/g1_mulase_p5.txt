@@ -1,0 +1,1031 @@
+is a square root of the relative dualizing sheaf K = π ∗ (Kn ) on CV (n, n(g − 1)). Take an
+
+### C ∗
+
+### GL
+
+\[
+
+arbitrary point s \in Up. Since p \in C is a point of C at which \pi is unramified, the formal
+
+\]
+
+−1 (p) ⊂ CV (n, n(g − 1)).
+
+coordinate z determines a local trivialization of K1/2 along π ∗
+
+### GL
+
+### Define
+
+\[
+
+W = H_0 (CV (n,n(g - 1)) \\ \pi(p),K_1/2) \subset OUp ((z))\oplus n
+
+\]
+
+### −1
+
+### ∗ ,
+
+### GL
+
+### using this local trivialization. Since
+
+(
+
+Ker(γWs ) ∼= H0 (Cs, K1/2 )
+
+### Cs
+
+Coker(γWs ) ∼= H1 (Cs, K1/2 )
+
+### Cs
+
+\[
+
+for each s \in Up, we have W \in Gr0 (Up). Let us analyze the action of \tag{5.13}
+
+\]
+
+\[
+
+at W. On each
+
+\]
+
+n
+
+\[
+
+Cs, hk = Ptijkz -j defines an element of H_1 (Cs,OCs). The exponential of \tag{5.13}
+
+\]
+
+\[
+
+is the Lie
+
+\]
+
+i
+
+### integration map
+
+\[
+
+VGL ∼= H_1 (Cs,OCs) exp_1 (Cs,OCs) H_1 (Cs,Z) = Jac(Cs).
+
+\]
+
+### −→ H
+
+Therefore, the action of (5.13) at the point W produces simultaneous deformations of the
+
+### line bundle
+
+###
+
+N
+
+### (5.17)  K 1/2 Xn X X
+
+### 7−→ K1/2 \otimes exp tijkz −j
+
+###  i
+
+i=1 j≥1 k=1
+
+(n, n(g − 1)). Consequently, the orbit of the n-component KP flows on Z 0 (Up)
+
+### on CV ∗
+
+### GL n
+
+### 2 (g−1)(Cs) on Up. Since the
+
+starting at W is naturally identified with the family of Picn
+
+### 2 (g−1)(Cs) on V
+
+### Hitchin fibration H : HC(n, n(g − 1)) → V ∗ ∗
+
+### GL is also a family of Picn GL, we
+
+have a rational map from H : HC(n, n(g−1)) to the n-component KP orbit of W in Z 0 (Up).
+
+n
+
+Recall that the Hitchin integrable system on H : HC(n, n(g − 1)) is the linear Jacobian flows defined by the coordinate functions (h1, . . . , hN ). We note
+
+that this is exactly what (5.17) gives.
+
+Remark 5.7. So far we have assumed that Cs is non-singular. Although it will not be
+
+an Abelian variety, we can still define the Jacobian Jac(Cs) using (5.16) when the spectral
+
+### −1 (p) avoids the singular locus of
+
+\[
+
+curve Cs is singular. As long as we choose p \in C so that \pi Cs, the KP flows are well defined. Moreover, the theory of Heisenberg KP flows introduced in [1,
+
+14] allows us to consider the covering \pi : Cs \to C right at a ramification point. It is more desirable to define the Grassmmanian over the whole V^*
+
+\]
+
+### GL and to deal with the
+
+### entire family F : CV ∗
+
+∗ GL together with the moduli stack of Higgs bundles instead of
+
+### GL → V
+
+the stable moduli we have considered here, since the framework of the Sato Grassmannian
+
+allows us to consider all vector bundles on C and degenerated spectral curves.
+
+6. Serre duality and formal adjoint of pseodo-differential operators
+
+In this section we analyze the Serre duality of Higgs bundles in terms of the language of the Sato Grassmannian, and identify the involution on the
+
+corresponding pseudo-differential
+
+operators.
+
+\[
+
+The Krichever construction ([15,17,22]) assigns a point W of the Sato Grassmannian, \tag{6.1}
+
+\]
+
+\[
+
+Grn(C) ∋ W = \beta(H_0 (C \\ {p},F)) \subset C((z))\oplus n
+
+\]
+
+,
+
+\[
+
+to a set of geometric data (C,p,z,F,\beta), where C is an irreducible algebraic curve, p \in C is
+
+\]
+
+a non-singular point, z is a formal parameter of the completion Cˆ p, F is a torsion-free sheaf
+
+### 26  ANDREW HODGE AND MOTOHICO MULASE
+
+### of rank n on C, and
+
+\[
+
+\beta : F\|Cˆp ∼-\to O\oplus n = C[[z]]\oplus n
+
+\]
+
+### Cˆp
+
+is a local trivialization of F around p. We continue to assume that C is non-singular, hence F is locally-free on C. As noted in Section 5, the choice of a
+
+local coordinate z automatically
+
+### determines a local trivialization of KC:
+
+\[
+
+\alpha : KC\|Cˆp ∼-\to OCˆp
+
+\]
+
+· dz ∼= OCˆp .
+
+\[
+
+For every homomorphism \xi : F \to KC, we have an element def = \alpha ◦ \xi ◦ \beta^* \beta^* (\xi) O \oplus n \oplus n -1 \in = O
+
+\]
+
+### Cˆp Cˆp
+
+### that is determined by the commutative diagram
+
+### ξ
+
+### F\|Cˆp
+
+### −−−−→ KC\|Cˆp
+
+###
+
+### (6.3) β  ≀ ≀
+
+### y yα
+
+β ∗ (ξ)
+
+### O \oplus n
+
+−−−−→ OCˆp .
+
+### Cˆp
+
+Thus we have the canonical choice of the local trivialization
+
+β ∗ ∗ \otimes KC\|Cˆp ∼−→ O\oplus n
+
+### : F
+
+Cˆp .
+
+Definition_6.1 (Serre Dual). The Serre dual of the geometric date (C, p, z, F, β) is the set
+
+).
+
+of data (C, p, z, F∗ \otimes KC, β∗
+
+To identify the counterpart of the Serre duality on the Sato Grassmannian, we introduce
+
+### a non-degenerate symetric paring in C((z)) by
+
+### (6.4)  ha(z), b(z)i = −1 in a(z)b(z),
+
+### a(z)b(z)dz = the coefficient of z
+
+### 2πi I
+
+### and define
+
+\[
+
+hf(z), g(z)in = Xn hfi(z), gi(z)i, f(z), g(z) \in C((z))\oplus n
+
+\]
+
+.
+
+### i=1
+
+\[
+
+Lemma_6.2. Let W \in Grn(C) be a point of the Sato Grassmannian of index d. Then W⊥ = {f \in C((z))\oplus n\| hf, win = 0 for all w \in W}
+
+\]
+
+### is a point of Grn(C) of index −d. Moreover, we have
+
+(
+
+\[
+
+Ker(\gamma W)^* ∼= Coker(\gamma W⊥)
+
+\]
+
+### (6.6)
+
+\[
+
+Coker(\gamma W)^* ∼= Ker(\gamma W⊥),
+
+\]
+
+### where γW is defined by the exact sequence
+
+γW −−−−→ C((z))\oplus n/C[\[z]\]\oplus n −−−−→ Coker(γW ) −−−−→ 0.
+
+### 0 −−−−→ Ker(γW ) −−−−→ W
+
+Proof. Take an element f ∈ W⊥ ∩ C[\[z]\]\oplus n in = 0. Thus it induces
+
+### . Then hf, W + C\[\[z\]\]\oplus n
+
+### a linear map
+
+\[
+
+f : C((z)) (W + C[[z]]\oplus n) ∋ g_7-\to hf, gin \in C,
+
+\]
+
+### defining a natural inclusion
+
+\[
+
+Ker(\gamma W⊥) \subset Coker(\gamma W)^*
+
+\]
+
+.
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 27
+
+\[
+
+Now let h^* \in Coker(\gamma W)^* be an arbitrary element. Choose a sequence {g_i 1, gi_2, gi_3 . . . }i=1,...,n
+
+\]
+
+### of elements of C((z))\oplus n such that
+
+### (1) g i i Pn P \ell
+
+### z −j + g\ell jke z −j+k ;
+
+\[
+
+j = e \ell =1 k\ge 1 \tag{2}
+
+\]
+
+\[
+
+if W has an element whose leading term is e_i for_j > 0, then g_i
+
+\]
+
+### z −j
+
+\[
+
+j \in W. Here e_i = (0,. . .,0,1,0,. . .,0)T is the_i-th standard basis vector for C_n i
+
+\]
+
+### . We denote by ¯g j
+
+the projection image of g_i in C((z))\oplus n (W + C[\[z]\]\oplus n ). Consider the set of equations
+
+j
+
+\[
+
+hf, gi in = h^* (¯g_i), i = 1, . . ., n; j = 1, 2, 3, . . .
+
+\]
+
+### j j
+
+\[
+
+for f \in C[[z]]\oplus n P_i j
+
+\]
+
+### aije z
+
+\[
+
+. If we write f(z) = Pn_i=1 j\ge 0, then \tag{6.8}
+
+\]
+
+\[
+
+is equivalent to
+
+\]
+
+### ∗ (g i )
+
+### ai0 = h 1
+
+### ∗ (g i ) − Xn
+
+### ai1 = h 2 a\ell 0g\ell 21
+
+### \ell=1
+
+!
+
+### ∗ (g i ) − Xn
+
+### ai2 = h 3 a\ell 1g\ell 31 + a\ell 0g\ell 32
+
+### \ell=1
+
+!
+
+### ∗ (g i ) − Xn
+
+### ai3 = h 4 a\ell 2g\ell 41 + a\ell 1g\ell 42 + a\ell 0g\ell 43
+
+### \ell=1
+
+.
+
+.
+
+.
+
+\[
+
+It is obvious that \tag{6.8}
+
+\]
+
+\[
+
+has a unique solution. By construction we have hf, Win = 0, hence f \in Ker(\gamma W⊥). Therefore, the inclusion \tag{6.7}
+
+\]
+
+\[
+
+is indeed a surjective map.
+
+\]
+
+The application of the same argument to W ∩ C\[\[z\]\]\oplus n establishes that
+
+\[
+
+Ker(\gamma W) ∼= Coker(\gamma W⊥)^*
+
+\]
+
+.
+
+\[
+
+Remark_6.3. We note that W⊥⊥ = W. It is obvious that W \subset W⊥⊥. The relation \tag{6.6}
+
+\]
+
+\[
+
+then makes the inclusion relation actually the equality. Theorem_6.4. Let W \in Grn(C) be the point of the Grassmannian corresponding to a set of gemeteric data
+
+(C,p,z,F,\beta). Then the point corresponding to its Serre dual (C,p,z,F^* \otimes KC,\beta^*) is W⊥. Proof. Let W′ be the point of the Grassmannian
+
+corresponding to (C,p,z,F^* \otimes KC,\beta^*).
+
+\]
+
+### Note that
+
+\[
+
+index(\gamma W) = dim H_0 (C,F) - dim H_1 (C,F) = -index(\gamma W′). Take an arbitrary f \in H_0 (C \\ {p},F) and g \in H_0 (C \\ {p},F^* \otimes KC). Then (C
+
+\\ {p},KC). g · f \in H_0 From \tag{6.3}
+
+\]
+
+\[
+
+we see that \beta^* (g) · \beta(f) = \alpha(g · f). Abel’s theorem tells us that the sum of the residues of the meromorphic_1-form g · f on C is_0. Since g · f
+
+is holomorphic everywhere
+
+\]
+
+### on C except for p, we have
+
+\[
+
+0 = resp(g · f) = h\beta^* (g), \beta(f)in. Therefore, W′ \subset W⊥. Since \gamma W′ and \gamma W⊥ have the isomorphic kernels and cokernels, we conclude that
+
+W′ = W⊥.
+
+\]
+
+### 28  ANDREW HODGE AND MOTOHICO MULASE
+
+### The ring of ordinary differential operators is defined as
+
+d
+
+\[
+
+D = C[[x]]
+
+\]
+
+dx .
+
+Extending the powers of the differentiation to negative integers, we define the ring of pseudodifferential operators by
+
+"" ## .
+
+d
+
+\[
+
+E = D + C[[x]]
+
+\]
+
+### dx −1
+
+Let Ex be the left maximal ideal of E generated by x. Then E/Ex is a left E-module. Let
+
+\[
+
+us denote \partial = d/dx. As a C-vector space we identify \tag{6.11}
+
+\]
+
+\[
+
+E/Ex = C((\partial -1)).
+
+\]
+
+Two useful formulas for calculating pseudo-differential operators are
+
+### n (i)
+
+\[
+
+\partial n (x)\partial n-i · a(x) = X a
+
+\]
+
+### i ,
+
+### i≥0
+
+### (i) (x) is the i-th derivative of a(x), and
+
+### where a
+
+### X n (i)
+
+\[
+
+a(x) · \partial n = (-1)i \partial n-i (x).
+
+\]
+
+### · a
+
+i
+
+### i≥0
+
+### A pseudo-differential operator has thus two expressions
+
+### X X X n (i) X m + i (i)
+
+\[
+
+P = n = (-1)i \partial n-i (x) = X (-1)i \partial m · a (x).
+
+\]
+
+### an(x)∂ · a
+
+### i n i m+i
+
+\[
+
+n\in Z_n\in Z_i\ge 0 m\in Z_i\ge 0
+
+\]
+
+### The natural projection E → E/Ex is given by
+
+### X X m + i (i)
+
+\[
+
+\rho : E ∋ P = n (-1)i \tag{0}
+
+\]
+
+\[
+
+\partial m \in C((\partial -1)). an(x)\partial 7-\to X a
+
+\]
+
+### i m+i
+
+\[
+
+n_m i\ge 0
+
+\]
+
+The relation to the Grassmannian comes from the identification
+
+\[
+
+C((z)) ∋ f(z) 7-\to f(\partial -1) · \partial -1 \in C((\partial -1)). Then C((z)) becomes an E-module. The action of P \in E on f(z) \in C((z)) is given by the
+
+\]
+
+### formula
+
+\[
+
+P · f(z) = \rho(P · f(\partial -1)\partial -1) \in C((z)). Definition_6.5 (Adoint). The adjoint of P = P \ell is defined by
+
+\]
+
+### a\ell(x)∂
+
+### \ell
+
+P ∗ = X ∂ \ell
+
+· a\ell(−x).
+
+### \ell
+
+Remark 6.6. Our adjoint is slightly different from the formal adjoint of \[11, 26\], which is
+
+defined to be P (−∂) \ell
+
+\ell · a\ell(x). This is due to the fact that we are considering the action of
+
+pseudo-differential operators on the function space C((z)) through Fourier transform. Thus
+
+### ∂ acts as the multiplication of z −1
+
+, and x acts as the differentiation.
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 29
+
+### Let us compute the (m, n)-matrix entry of P. We find
+
+### \* !+
+
+\[
+
+hz_m, P · z_n i = m, \rho X \ell -n-1
+
+\]
+
+### z a\ell(x)∂
+
+### \ell
+
+### \* !+
+
+### \ell − n − 1
+
+### X X \ell−n−1−i (i)
+
+\[
+
+m, \rho(-1)i \partial (x) = z · a
+
+\]
+
+### i \ell
+
+### \ell i
+
+### \* +
+
+### \ell − n − 1
+
+### X X (i)
+
+### m, (−1)i (0) · z −\ell+n+i
+
+= z a
+
+### i \ell
+
+### \ell i
+
+### X m + i (i)
+
+### (−1)i
+
+### = a
+
+i m+n+i+1(0).
+
+i
+
+### Similarly, we find
+
+### \* !+
+
+\[
+
+hz_n mi = n X \frac{\partial z}{\partial \ell} a\ell (-x) · \partial -m-1, P^* · z, \rho
+
+\]
+
+### \ell
+
+### \* !+
+
+### X X −m − 1 \ell−m−1−i (i)
+
+\[
+
+n (-1)i (-1)i \partial (-x) = z · a, \rho_i \ell
+
+\]
+
+### \ell i
+
+### \* +
+
+### X X −m − 1 (i)
+
+### n (0) · z −\ell+m+i
+
+= z a
+
+### , i \ell
+
+### \ell i
+
+### X −m − 1 (i)
+
+### = a
+
+i m+n+i+1(0).
+
+i
+
+Following \[14\], we introduce the ring of differential and pseudo-differential operators
+
+with matrix coefficients by gln(D) and gln(E). The adjoint of a matrix pseudo-differential
+
+### operator is defined in an obvious way:
+
+\[
+
+P = [Pij]i,j=1,...,n =\Rightarrow P^* def = [P^*
+
+\]
+
+ji\]i,j=1,...,n.
+
+\[
+
+Proposition_6.7. For arbitrary f(z), g(z) \in C((z))\oplus n and P \in gln(E) we have the adjoint
+
+### formula
+
+### hf(z), P · g(z)in = hP ∗
+
+· f(z), g(z)in.
+
+Proof. The statement follows from the above computations, noting the identity
+
+### m + i −m − 1
+
+### (−1)i
+
+### = ,
+
+### i i
+
+and the usual matrix transposition.
+
+A more direct relation between pseudo-differential operators and the Sato Grassmannian is that the identification of the big cell of Grn(C) with the group
+
+\[
+
+G = In + gln(C[[x]])[[\partial -1]] · \partial -1
+
+\]
+
+of monic pseudo-differential operators of order 0 (\[14\], Theorem 6.5).
+
+\[
+
+Theorem_6.8. Let W \in Grn(C) be in the big cell, and correspond to a pseudo-differential
+
+\]
+
+∗ ) −1 ∈ G.
+
+operator S ∈ G. Then W⊥ corresponds to (S
+
+### 30  ANDREW HODGE AND MOTOHICO MULASE
+
+Proof. The correspondence of S ∈ G and W in the big cell is the equation W = S \] \oplus n
+
+### −1 −1 −1
+
+· C\[z · z .
+
+### For f(z), g(z) ∈ C\[z \] \oplus n
+
+### −1 · z −1
+
+### , we have
+
+### hS ∗
+
+· f(z), S−1 · g(z)in = hf(z), SS−1 · g(z)in = 0.
+
+### The Lax operator is defined by
+
+\[
+
+L = S · In · \partial · S -1
+
+\]
+
+.
+
+Lax operators bijectively correspond to points of the big cell of the quotient Grassmannian
+
+### ⊥
+
+### Zn(C). If W corresponds to L, then W corresponds to L ∗
+
+### . Therefore, the Serre duality
+
+indeed corresponds to these adjoint action of the pseudo-differential operators.
+
+### 7. The Hitchin integrable system for Sp2m
+
+In this section we identify the KP-type equations that are equivalent to the Hitchin integrable system for Sp2m. Since the moduli space of the Sp2m-Higgs
+
+bundles is identified
+
+as the fixed-point-set of the Serre duality involution on HC(2m, 2m(g −1)) (Proposition 2.4), we will see that the evolution equations are the KP equations
+
+restricted to a certain type of self-adjoint Lax operators.
+
+Let (E, φ) = (E∗ \otimes KC, −φ ∗ ) be a fixed point of the Serre duality operation on the Higgs moduli space HC(2m, 2m(g −1)), and (LE, Cs) the corresponding
+
+spectral data. We choose a point p ∈ C and a local coordinate z as in Section_5. We assume that the spectral cover π : Cs → C is unramified at p. This time we
+
+choose a local trivialization β : LE\|Cˆ ∼−→ OCˆ ∼= C[\[z]\]\oplus 2m. s,π−1(p) s,π−1(p) Then the Serre dual of the data (πs : Cs → C, p, z,LE, φ, β) is (πs (L
+
+∗ ), −φ ∗ ∗ ). ∗ : Cs ∗ → C, p, z, ǫ∗ E \otimes KCs , ǫ∗β
+
+### In general the dual trivialization is defined by
+
+### ξ
+
+### LE\|Cˆ \|Cˆ
+
+### −−−−→ KCs
+
+### −1 −1
+
+s,π s (p) s,π s (p)
+
+###
+
+### β  ≀ ≀
+
+### y yα
+
+β ∗(ξ)
+
+### OCˆ
+
+### −−−−→ OCˆ
+
+### −1 −1
+
+s,π s (p) s,π s (p)
+
+###
+
+### ǫ  ≀ ≀
+
+### y yǫ
+
+∗β ∗ (ξ)
+
+### ǫ
+
+### OCˆ
+
+−−−−→ OCˆ .
+
+### −1 (p) −1 (p)
+
+s∗,π s∗,π
+
+### s∗ s∗
+
+\[
+
+Note that in the current case we have s = s^* and ǫ : Cs \to Cs is a non-trivial involution. Since ǫ commutes with \pi, it induces an involution of the set \pi
+
+-1 (p) = {p_1, . . ., p2m}. Let
+
+\]
+
+### us number the 2m distinct points so that
+
+ǫ(p1, . . . , p2m) = (p1, . . . , p2m) · A,
+
+### where
+
+### 0 Im
+
+### (7.1)  A =
+
+Im  0 .
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 31
+
+### By the same argument we used in Theorem 6.4, if we define
+
+\[
+
+W = \beta(H_0 (Cs \\ \pi -1 (p),LE)) \subset C((z))\oplus 2m,
+
+\]
+
+### then we have
+
+\[
+
+AW⊥ = ǫ^*\beta^* (H_0 (Cs (p),ǫ^* (L^*))) \subset C((z))\oplus 2m.
+
+\]
+
+### −1
+
+\[
+
+^* \\ \pi E \otimes KCs Let us assume that E is not on the theta divisor of [3] so that H_0 (C,E) = H_1 (C,E) = 0.Then W \in Gr2m(C) is on the big cell, and
+
+hence corresponds to a monic_0-th order pseudodifferential operator S \in G. Since W = AW⊥, we have \tag{7.3}
+
+\]
+
+\[
+
+S = A · (S^*) -1
+
+\]
+
+· A.
+
+### The Lax operator
+
+### L1 L2
+
+L = S · I2m · ∂ · S −1 =
+
+### L3 L4
+
+### then satisfies that
+
+\[
+
+L^* = A · L · A,
+
+\]
+
+### or equivalently
+
+### L ∗ ∗ ∗
+
+\[
+
+1 = L_4, L_2 = L_2, L_3 = L_3. The time evolution of S and the Lax operator L is given by the formula established in Section_6 of [14]. Let S(t) be the solution
+
+of the_n-component KP equations with the initial data S \tag{0}
+
+\]
+
+\[
+
+= S. Then S(t) is given by the generalized Birkhoff decomposition of [14, 16]
+
+\]
+
+· S(0)−1 = S(t)
+
+### (7.5) exp  D1 −1
+
+### D2 · Y (t),
+
+### where D1 and D2 are diagonal matrices of the shape
+
+###  P j
+
+### tij1∂
+
+### j≥1
+
+### Di =
+
+###  . . P
+
+j
+
+### tijm∂
+
+### j≥1
+
+\[
+
+corresponding to \tag{5.13}
+
+\]
+
+\[

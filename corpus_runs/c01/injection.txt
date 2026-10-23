@@ -1,0 +1,59 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Simplicial-sieve framing Δ_z
+18: Relational reading of primality
+19: Decision tree + epistemic labels methodology
+20: PNT as weighted simplex total weight 1
+21: Face-weights w(S)=(−1)^{|S|+1}log(∏S)/∏S
+22: Deformation R_p→{0,−2} deriving twin constant 2C₂
+23: Positivity in primitive objects (9a)
+24: 9c: positivity blind left of Re(s)=1
+25: Bridge program: three positivities, none zero-detecting
+26: Node 11 operator hunt; Frobenius-like operator open
+27: CCM primes-only zeros, fragile exact-arithmetic reporter
+28: Fuel dictionary Λ=μ∗log, face-sum-native
+29: Multi-torus Node 12 closed by Weyl's law
+30: Fock-basis identification of Δ_z faces
+31: Pair-hopping GUE universality (13d)
+32: 13e: operator deaf to primes
+33: 14a obstruction: no positive geometry carries w(S)
+34: Failures ledger: 14 documented dead ends
+35: No public novelty claim without re-search
+36: Paper outline pending title/scope approval
+37: Tetrahedral sieve physical build pending
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21 22
+S23:23 24 25
+S26:26 27 28 29 30 31 32 33
+S19:19 34 35
+S0:26 36 37
+E21:9 20
+E22:11 17
+E23:1 25
+E24:3 25
+E27:10 26
+E28:1 27
+E30:1 31
+E32:3 31
+E33:2 20
+E34:5 19
+E35:3 36
+A:17 14,18 14,19 14,20 14,21 14,22 14,23 14,24 14,25 14,26 16,27 14,28 14,29 14,30 14,31 14,32 14,33 14,34 14,35 13,36 16,37 16
+L:26 36 37

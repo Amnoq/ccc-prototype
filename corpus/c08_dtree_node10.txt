@@ -1,0 +1,138 @@
+## Node 10 — Completing the bridge: candidate spans (OPEN, 2026-09-30)
+
+**Question:** granted the load limits (D9), what methodology / perspective /
+reference could construct the *rest* of the bridge — the hybrid span
+between geometric positivity (built, D1–D9) and the analysis that crosses
+Re(s) = 1?
+
+**Key orienting fact (literature):** Weil (1952) proved RH *is* a
+positivity — W(f∗f̃) ≥ 0 for all test f, where W is the explicit-formula
+distribution (Bombieri 2000 exposition; Connes–Consani 2020). And over
+function fields, RH was proved *by* a positivity with a known geometric
+source (intersection pairing on C×C). So: we know exactly what the
+missing span must be made of — a *source* of positivity — and we know
+such sources are geometric. Our program has been building a candidate
+source (stratum energies). The rest of the bridge = connecting our
+geometric positivity to Weil's positivity.
+
+**Options:**
+- **10a — Weil's criterion in the energy language.** The explicit
+  formula's arithmetic side is a prime-power sum (vertex towers, our
+  native objects) minus archimedean terms; the test functions f∗f̃ are
+  *squares* — same shape as our |Q|² autocorrelation family. Concrete
+  first step: implement W(f∗f̃) numerically via prime powers for simple
+  f, verify positivity on examples; then ask which test functions match
+  which residue patterns. *This is D8's move, but where the positivity
+  IS RH.* Circularity warning (literature): translating Weil ≠ proving
+  RH — the positivity must come from the geometry *independently*.
+- **10b — Li's criterion via the face-sum.** RH ⟺ λ_n ≥ 0 ∀n
+  (Li 1997), λ_n = Σ_ρ[1−(1−1/ρ)^n]; λ_n expand via power sums
+  Σ_ρρ^{−k}, which the explicit formula ties to ψ(x) — our D1
+  face-sum. Most *computable* of the positivity criteria.
+- **10c — Selberg's λ² sieve on the complex.** Selberg positivity is
+  already |Σ|²-shaped (same move as our autocorrelations) but with
+  *optimized* weights — an eigenvector problem. Our D6 used fixed
+  patterns; Selberg optimizes the charge distribution. Concrete:
+  formulate the Selberg quadratic form on the complex, solve small
+  cases numerically. Ref: Friedlander–Iwaniec, *Opera de Cribro*.
+- **10d — Function-field template (perspective).** The only known
+  *source* of RH-positivity is geometric (intersection theory). Ask:
+  what is the number-field analogue of the intersection pairing on the
+  incidence complex? Deepest, most speculative. Ref: Weil; Bombieri;
+  Connes–Consani.
+- **10e — Tools:** large sieve (positivity of quadratic forms;
+  Montgomery's zero-density engine) and the explicit formula's
+  z-vs-T cutoff trade-off as "geometric uncertainty." Ref: Montgomery;
+  Iwaniec–Kowalski.
+
+**Status:** 10a IN PROGRESS (user: systematic pass through all options, in order).
+- 10a-step1 DONE (2026-09-30): explicit formula grounded — truncated zero
+  sum reproduces sieve-psi's oscillations, error 4.55→1.36 as T=50→400
+  (`explicit_formula.py`, D10a-step1 in DERIVATIONS.md). Zeros regulate
+  the face-sum: E(x)=ψ(x)−x is *made of* zeros.
+- 10a-step2 DONE (2026-09-30): symmetric Guinand-Weil formula verified
+  zero-side vs prime-side to machine precision (2e-16) for Gaussian
+  squares h_a = |e^{-ar^2/2}|^2, a = 0.02/0.1/0.5 (`weil_positivity.py`;
+  caught+fixed a prime-power ordering bug en route). W(h) >= 0 exhibited
+  with NO zeros used — pure prime-side. DERIVED structural finding:
+  prime-side positivity is cancellatory, not termwise (pole 2.266297 +
+  arch -1.196347 - prime drain 1.069950 ~= 0 at a=0.5); the bridge IS
+  the formula equating termwise zero-side positivity with prime-side
+  balance. Dictionary: h=|H|^2 <-> P=|Q|^2. Weil's criterion itself
+  (positivity <=> RH) cited, not derived.
+- 10a-step3 DONE (2026-09-30): built the prime-side zero detector
+  h_{T0,w} (sum of squares, exact Fourier pair) -- W(h) from primes
+  alone agrees with the zero side to 4e-16 and counts zeros in a
+  window (N+(B+) <= e^{1/2}W(h)). DERIVED: resonance mechanism --
+  the oscillatory prime sum goes negative exactly when a zero is in
+  the window (T0=50: -0.59/-0.98; empty window T0=100: +0.36,
+  W all leakage); pole = 0 for detectors, archimedean = positive
+  background. TIGHTEST DICTIONARY (exact algebra): detector prime
+  side = 2Cg*Re[windowed E_1(1/2,T0)] -- our D8 energy, the window
+  buying convergence at sigma=1/2. OPTIMIZATION ANSWER: figure of
+  merit = concentration (leakage 0.68->0.30->0.0007); price =
+  uncertainty (1e-12 envelope at n=e^{7.4/w}: 41/1700/2.8e6) --
+  Pareto frontier, no finite optimum.
+- 10a COMPLETE (2026-09-30): translation done. Open span (independent
+  Gram/intersection source) belongs to the bridge program; 10d its
+  natural home.
+- 10b DONE/CLOSED (2026-09-30): Li's criterion does NOT live natively on
+  the face-sum. lambda_n >= 0 verified both ways (Keiper-Taylor exact,
+  n<=40; zero-side reconciled via density-integral tail to 3 s.f.;
+  caught+fixed own pairing bug). DERIVED: S_1 = 1+gamma/2-(1/2)log(4pi)
+  is archimedean (no convergent prime-sum presentation possible --
+  proof uses only the functional equation); the Lambda-sums that want
+  to be lambda_n's coefficients diverge as k!/eps^{k+1} (verified
+  7.45->156 across k,eps) -- lambda_n needs their finite parts.
+  VERDICT: Weil is face-sum-native, Li is Dirichlet-native; Li is the
+  sharp-cutoff (inadmissible) limit of Weil-type positivity. Lesson:
+  the face-sum carries smoothed/windowed positivity, not coefficient
+  positivity.
+- 10c DONE/CLOSED (2026-09-30): EXACT THEOREM -- on Delta_z,
+  min_{lam_empty=1} sum_{S,T} lam_S lam_T/prod(S union T) = delta(z),
+  uniquely attained at lam* = mu (proved via (1-1)^{|S|}; verified to
+  12 digits, z<=19). M is PD (sum-of-squares, Weil-shaped). The optimal
+  quadratic form IS inclusion-exclusion; the minimum recovers the
+  Mertens product exactly. Classical level-truncated 1/G(z) is the
+  constrained (worse) version. VERDICT: canonical template of an
+  optimized face-quadratic form, but an upper-bound machine -- PD by
+  construction, no continuation, no zeros; parity barrier intact. The
+  independent zero-detecting source is still open -> 10d.
+- 10d DONE/CLOSED (2026-09-30): function-field template exhibited on
+  concrete elliptic curves (F_5, F_7): finite EXACT explicit formula
+  #E(F_{p^n})=p^n+1-pi^n-pibar^n verified by direct counting;
+  RH=Hasse=discriminant<=0 of the degree form Q(m,n)=pm^2+a_p mn+n^2,
+  PSD *because degree counts* (deg(1-/+phi) exhibited as point counts).
+  TEMPLATE: (i) Jacobian torus, (ii) Frobenius operator, (iii)
+  counting-born PSD form, (iv) zeros as eigenvalues, (v) finite exact
+  formula. LEDGER: we HAVE counting positivity (Lambda>=0), finite PD
+  face forms (10c), a windowed explicit formula (10a); we MISS the
+  Jacobian-role space (Delta_infty contractible), a Frobenius-like
+  operator, and the pairing tying zeros to counting positivity. The
+  missing object is operator-theoretic, not another inequality.
+  Toroidal question answered: plane for zeta's domain, torus (Jacobian)
+  for the geometric explainer.
+- 10e DONE/CLOSED (2026-09-30): supporting tools verified on our
+  objects -- Montgomery-Vaughan mean value (1/2H)int|P|^2/S2 -> 1
+  (0.995->1.007); large sieve holds (ratios 0.004, 0.008); uncertainty
+  cost curve quantified (w=0.5 -> 2.9e6 primes, w=0.25 -> 8.2e12:
+  infeasible -- the prime-side detector's fundamental wall).
+  Zero-density audited as the unconditional-izer (plug-in point
+  precise; estimates cited). VERDICT: analytic amplifiers, not
+  independent positivity sources; 10d ledger unchanged.
+
+## Node 10 -- BRIDGE PROGRAM COMPLETE (2026-09-30)
+Systematic pass 10a-10e closed. Standing:
+- 10a: Weil positivity is face-sum-native (windowed/smoothed); detector
+  built; optimization = Pareto frontier (no finite optimum).
+- 10b: Li's criterion is NOT face-sum-native (Dirichlet-native).
+- 10c: Selberg lambda^2 = canonical optimized face-quadratic form;
+  exact optimizer mu, minimum delta(z). Template, not zero-detector.
+- 10d: function-field template + ledger. Missing object is
+  operator-theoretic (a "Frobenius for Delta"), not another inequality.
+- 10e: amplifiers verified; uncertainty wall quantified.
+The face-sum carries three verified positivity kinds (primitive
+counting Lambda>=0, Weil-type windowed, Selberg-type optimized); none
+detects zeros independently. Sharpest open question: the
+Frobenius-like operator (refines D4's).
+

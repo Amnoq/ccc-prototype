@@ -1,0 +1,411 @@
+2.1. Function fields. What do we mean by a function field? Let X be a smooth projective connected curve over a finite field Fq. The field Fq(X) of (Fq-valued)
+
+rational functions
+
+on X is called the function field of X. For example, suppose that X = P
+
+. Then Fq(X)
+
+\[
+
+is just the field of rational functions in one variable. Its elements are fractions P(t)/Q(t), where P(t) and Q(t) 6= 0 are polynomials over Fq without common
+
+factors, with their usual operations of addition and multiplication. Explicitly, P(t) = PN_n n=0 pnt,pn \in Fq,
+
+\]
+
+and similarly for Q(t).
+
+A general projective curve X over Fq is defined by a system of algebraic equations in the projective space P n over Fq. For example, we can define an elliptic
+
+curve over Fq by
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 25
+
+a cubic equation
+
+### (2.1)  y 2 3 + axz2 + bz3
+
+z = x
+
+### , a,b,c ∈ Fq,
+
+### 2 15 What are the points of such a
+
+written in homogeneous coordinates (x : y : z) of P
+
+.
+
+curve? Naively, these are the elements of the set X(Fq) of Fq-solutions of the equations defining this curve. For example, in the case of the elliptic curve
+
+defined by the equation (2.1), this is the set of triples (x,y,z) ∈ F 3
+
+satisfying (2.1), with two such triples identified
+
+q
+
+if they differ by an overall factor in F ×
+
+q .
+
+However, because the field Fq is not algebraically closed, we should also consider points
+
+with values in the algebraic extensions Fqn of Fq. The situation is similar to a more familiar situation of a curve defined over the field of real numbers R.
+
+For example, consider the
+
+2 + y_2 = −1. This equation has no solutions in R, curve over R defined by the equation x so naively we may think that this curve is empty. However, from the
+
+algebraic point of view, we should think in terms of the ring of functions on this curve, which in this case is R = R[x,y]/(x_2 + y_2 + 1). Points of our curve
+
+are maximal ideals of the ring R. The quotient R/I by such an ideal I is a field F called the residue field of this ideal. Thus, we have a surjective
+
+homomorphism R → F whose kernel is I. The field F is necessarily a finite extension of R, so it could be either R or C. If it is R, then we may think of the
+
+homomorphism R → F as sending a function f ∈ R on our curve to its value f(x) at some R-point x of our curve. That’s why maximal ideals of R with the residue
+
+field R are the same as R-points of our curve. More generally, we will say that a maximal ideal I in R with the residue field F = R/I corresponds to an F-point
+
+of our curve. In the case at hand it turns out that there are no R-points, but there are plenty of C-points, namely, all pairs
+
+### 2 2
+
+of complex numbers (x0,y0) satisfying x
+
+### 0 + y 0 = −1. The corresponding homomorphism
+
+\[
+
+R \to C sends the generators x and y of R to x_0 and y_0 \in C.
+
+\]
+
+If we have a curve defined over Fq, then it has F-points, where F is a finite extension
+
+of Fq, hence F ≃ Fqn,n > 0. An Fqn-point is defined as a maximal ideal of the ring of functions on an affine curve obtained by removing a point from our
+
+projective curve,
+
+with residue field Fqn. For example, in the case when the curve is P
+
+, we can choose
+
+the Fq-point ∞ as this point. Then we are left with the affine line A 1
+
+, whose ring of
+
+functions is the ring Fq\[t\] of polynomials in the variable t. The F-points of the affine line
+
+are the maximal ideals of Fq[t] with residue field F. These are the same as the irreducible monic polynomials A(t) with coefficients in Fq. The corresponding
+
+residue field is the field obtained by adjoining to Fq the roots of A(t). For instance, Fq-points correspond to the polynomials A(t) = t − a,a ∈ Fq. The set of
+
+points of the projective line is therefore the
+
+1 together with the Fq-point ∞ that has been removed.16
+
+set of all points of A
+
+15Elliptic curves over finite fields Fp have already made an appearance in the previous section. However, their role there was different: we had started with an
+
+elliptic curve E defined over Z and used it to define a representation of the Galois group Gal(Q/Q) in the first ´etale cohomology of E. We then related the
+
+trace of the Frobenius element Frp for a prime p on this representation to the number of Fp-points of the elliptic curve over Fp obtained by reduction of E mod
+
+p. In contrast, in this section we use an elliptic curve, or a more general smooth projective curve X, over a field Fq that is fixed once and for all. This
+
+curve defines a function field Fq(X) that, as we argue in this section, should be viewed as analogous to the field Q of rational numbers, or a more general
+
+number field.
+
+16In general, there is no preferred point in a given projective curve X, so it is useful instead to cover X by affine curves. Then the set of points of X is the
+
+union of the sets of points of those affine curves (each
+
+### 26  EDWARD FRENKEL
+
+It turns out that there are many similarities between function fields and number fields.
+
+To see that, let us look at the completions of a function field Fq(X). For example, suppose that X = P_1 1 ) is the field Fq((t)) of formal
+
+. An example of a completion of the field Fq(P
+
+Laurent power series in the variable t. An element of this completion is a series of the form
+
+### P n
+
+\[
+
+n\ge N ant, where N \in Z and each an is an element of Fq. We have natural operations of addition and multiplication on such series making Fq((t)) into a field.
+
+As we saw above,
+
+\]
+
+1 ) are rational functions P(t)/Q(t), and such a rational function can be
+
+elements of Fq(P expanded in an obvious way in a formal power series in t. This defines an embedding of fields Fq(P 1 ) ֒→ Fq((t)), which makes Fq((t)) into a
+
+completion of Fq(P 1 ) with respect to the following norm: write
+
+### P(t)
+
+### n P0(t)
+
+= t , n ∈ Z,
+
+### Q(t) Q0(t)
+
+where the polynomials P0(t) and Q0(t) have non-zero constant terms; then the norm of this fraction is equal to q −n
+
+.
+
+Now observe that the field Fp((t)) looks very much like the field Qp of p-adic numbers.
+
+There are important differences, of course: the addition and multiplication in Fp((t)) are defined termwise, i.e., “without carry”, whereas in Qp they are
+
+defined “with carry”. Thus, Fp((t)) has characteristic p, whereas Qp has characteristic_0. But there are also similarities: each has a ring of integers,
+
+Fp[\[t]\] ⊂ Fp((t)), the ring of formal Taylor series, and Zp ⊂ Qp, the ring of p-adic integers. These rings of integers are local (contain a unique maximal
+
+ideal) and the residue field (the quotient by the maximal ideal) is the finite field Fp. Likewise, the field Fq((t)), where q = p_n
+
+, looks like a degree n extension of Qp.
+
+The above completion corresponds to the maximal ideal generated by A(t) = t in the
+
+1 ) may be thought of as the analogue of Z ⊂ Q). Other
+
+ring Fq\[t\] (note that Fq\[t\] ⊂ Fq(P
+
+1 ) correspond to other maximal ideals in Fq\[t\], which, as we saw above,
+
+\[
+
+completions of Fq(P are generated by irreducible monic polynomials A(t) (those are the analogues of the ideals (p) generated by prime numbers p in Z).17 If the
+
+polynomial A(t) has degree_m,then the corresponding residue field is isomorphic to Fqm,and the corresponding completion is isomorphic to Fqm((et)),where et is
+
+the =uniformizer”,et = A(t). One can think of et as the local coordinate near the Fqm-point corresponding to A(t),just like_t - a is the local
+
+coordinate near the Fq-point a of A
+
+.
+
+For a general curve X, completions of Fq(X) are labeled by its points, and the completion corresponding to an Fqn-point x is isomorphic to Fqn((tx)), where tx
+
+is the “local
+
+coordinate” near x on X.
+
+Thus, completions of a function field are labeled by points of X. The essential difference with the number field case is that all of these completions are
+
+non-archimedian18; there are no analogues of the archimedian completions R or C that we have in the case of number fields.
+
+We are now ready to define for function fields the analogues of the objects involved in the Langlands correspondence: Galois representations and automorphic
+
+representations.
+
+of them is defined as the set of maximal ideals of the corresponding ring of functions), with each point on the overlap counted only once.
+
+17there is also a completion corresponding to the point ∞, which is isomorphic to Fq((t ))
+
+### −1
+
+18i.e., correspond to non-archimedian norms \| · \| such that \|x + y\| ≤ max(\|x\|, \|y\|)
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 27
+
+Before we get to that, we want to comment on why is it that we only consider curves and not higher dimensional varieties. The point is that while function
+
+fields of curves are very similar to number fields, the fields of functions on higher dimensional varieties have a very different structure. For example, if X
+
+is a smooth surface, then the completions of the field of rational functions on X are labeled by pairs: a point x of X and a germ of a curve passing through x.
+
+The corresponding complete field is isomorphic to the field of formal power series in two variables. At the moment no one knows how to formulate an analogue of
+
+the Langlands correspondence for the field of functions on an algebraic variety of dimension greater than one, and finding such a formulation is a very
+
+important open problem. There is an analogue of the abelian class field theory (see \[42\]), but not much is known beyond that. In Part III of this paper we
+
+will argue that the Langlands correspondence for the function fields of curves – transported to the realm of complex curves – is closely related to the
+
+two-dimensional conformal field theory. The hope is, of course, that there is a similar connection between a higher dimensional Langlands correspondence and
+
+quantum field theories in dimensions greater than two (see, e.g., \[43\] for a discussion of this analogy). 2.2. Galois representations. Let X be a smooth
+
+connected projective curve over_k = Fq and F = k(X) the field of rational functions on X. Consider the Galois group Gal(F/F). It is instructive to think of the
+
+Galois group of a function field as a kind of fundamental group of X. Indeed, if Y → X is a covering of X, then the field_k(Y ) of rational functions on Y is an
+
+extension of the field F = k(X) of rational functions on X, and the Galois group Gal(k(Y )/k(X)) may be viewed as the group of “deck transformations” of the
+
+cover. If our cover is unramified, then this group may be identified with a quotient of the fundamental group of X. Otherwise, this group is isomorphic to a
+
+quotient of the fundamental group of X without the ramification points. The Galois group Gal(F/F) itself may be viewed as the group of “deck transformations” of
+
+the maximal (ramified) cover of X.
+
+Let x be a point of X with a residue field kx ≃ Fqx deg x which is a finite extension
+
+### ,qx = q
+
+\[
+
+of_k. We want to define the Frobenius conjugacy class associated to x by analogy with the number field case. To this end, let us pick a point x of this cover
+
+lying over a fixed point x \in X. The subgroup of Gal(F/F) preserving x is the decomposition group of x.
+
+\]
+
+If we make a different choice of x, it gets conjugated in Gal(F/F). Therefore we obtain a subgroup of Gal(F/F) defined up to conjugation. We denote it by Dx.
+
+This group is in fact isomorphic to the Galois group Gal(Fx/Fx), and we have a natural homomorphism Dx → Gal(kx/kx), whose kernel is called the inertia subgroup
+
+and is denoted by Ix.
+
+As we saw in Sect. 1.3, the Galois group Gal(kx/kx) has a very simple description: it contains the geometric Frobenius element Frx, which is inverse to the
+
+automorphism
+
+\[
+
+y_7\to y qx of kx = Fqx
+
+\]
+
+. The group Gal(kx/kx) is the profinite completion of the group Z
+
+generated by this element.
+
+A homomorphism σ from GF to another group H is called unramified at x, if Ix lies in the kernel of σ (this condition is independent of the choice of x). In this
+
+case Frx gives rise to a well-defined conjugacy class in H, denoted by σ(Frx).
+
+On the one side of the Langlands correspondence for the function field F we will have ndimensional representations of the Galois group Gal(F/F). What kind of
+
+representations
+
+should we allow? The group Gal(F/F) is a profinite group, equipped with the Krull
+
+### 28  EDWARD FRENKEL
+
+topology in which the base of open neighborhoods of the identity is formed by normal subgroups of finite index. It is natural to consider representations which
+
+are continuous with respect to this topology. But a continuous finite-dimensional complex representation Gal(F/F) → GLn(C) of a profinite group like Gal(F/F)
+
+necessarily factors through a finite quotient of Gal(F/F). To obtain a larger class of Galois representations we replace the field C with the field Q\ell of
+
+\ell-adic numbers, where \ell is a prime that does not divide q.
+
+We have already seen in Sect. 1.7 that Galois representations arising from ´etale cohomology are realized in vector spaces over Q\ell rather than C, so this
+
+comes as no surprise
+
+to us. To see how replacing C with Q\ell helps we look at the following toy model.
+
+Consider the additive group Zp of p-adic integers. This is a profinite group, Zp = lim←− Z/pnZ, with the topology in which the open neighborhoods of the zero
+
+element are p nZ,n ≥ 0. Suppose that we have a one-dimensional continuous representation of Zp over C. This is the same as a continuous homomorphism σ : Zp → C
+
+×. We have σ(0) = 1.Therefore continuity requires that for any ǫ > 0, there exists_n ∈ Z+ such that \|σ(a)−1\| < ǫ for all a ∈ p nZp. In particular, taking a =
+
+p_n n , we find that σ(a) = σ(1)p . It is clear that the above continuity condition can be satisfied if and only if σ(1) is a root of unity of order N for some
+
+N ∈ Z+. But then σ factors through the finite group Zp/pN Zp = Z/pN Z. p Now let us look at a one-dimensional continuous representation σ of Zp over Q\ell where
+
+\ell is relatively prime to p. Given any \ell-adic number µ such that µ − 1 ∈ \ell Z\ell
+
+, we have
+
+### p n p n Z\ell p n
+
+\[
+
+\mu - 1 \in \ell - 1\|\ell \le p -n, and so\|\mu . This implies that for any such \mu there exists
+
+\]
+
+### ×
+
+\[
+
+a unique continuous homomorphism \sigma : Zp \to Q such that \sigma \tag{1}
+
+\]
+
+\[
+
+= \mu . Thus we obtain
+
+\]
+
+### \ell
+
+many representations that do not factor through a finite quotient of Zp. The conclusion is that the \ell-adic topology in Q ×
+
+\ell , and more generally, in GLn(Q\ell) is much better suited
+
+for the Krull topology on the Galois group Gal(F/F).
+
+So let us pick a prime \ell relatively prime to q. By an n-dimensional \ell-adic representation
+
+)
+
+of Gal(F/F) we will understand a continuous homomorphism σ : Gal(F/F) → GLn(Q\ell which satisfies the following conditions: • there exists a finite extension E
+
+⊂ Q\ell of Q\ell such that σ factors through a homomorphism GF → GLn(E), which is continuous with respect to the Krull topology
+
+on GF and the \ell-adic topology on GLn(E); • it is unramified at all but finitely many points of X.
+
+Let Gn be the set of equivalence classes of irreducible n-dimensional \ell-adic representations of GF such that the image of det(σ) is a finite group.
+
+Given such a representation, we consider the collection of the Frobenius conjugacy
+
+\[
+
+) and the collection of their eigenvalues (defined up to permutation), which we denote by {(z_1(\sigma x),...,zn(\sigma x))}, for all x \in X where \sigma is
+
+unramified. classes {\sigma(Frx)} in GLn(Q\ell
+
+\]
+
+Chebotarev’s density theorem implies the following remarkable result: if two \ell-adic representations are such that their collections of the Frobenius
+
+conjugacy classes coincide for
+
+all but finitely many points x ∈ X, then these representations are equivalent.
+
+2.3. Automorphic representations. On the other side of the Langlands correspondence we should consider automorphic representations of the ad\`elic group GLn(A).
+
+Here A = AF is the ring of ad\`eles of F, defined in the same way as in the number field case. For any closed point x of X, we denote by Fx the completion of F
+
+at x and by Ox its
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 29
+
+ring of integers. If we pick a rational function tx on X which vanishes at x to order one, then we obtain isomorphisms Fx ≃ kx((tx)) and Ox ≃ kx[\[tx]\], where
+
+kx is the residue field of x (the quotient of the local ring Ox by its maximal ideal). As already mentioned above, this field is a finite extension of the base
+
+field_k and hence is isomorphic to Fqx
+
+,
+
+### deg x
+
+### qx = q
+
+. The ring A of ad\`eles of F is by definition the restricted product of the fields
+
+\[
+
+Fx, where x runs over the set of all closed points of X. The word =restricted” means that we consider only the collections (fx)x\in X of elements of Fx in which
+
+fx \in Ox for all but finitely many x. The ring A contains the field F, which is embedded into A diagonally, by taking the expansions of rational functions on
+
+X at all points.
+
+\]
+
+We want to define cuspidal automorphic representations of GLn(A) by analogy with the number field case (see Sect. 1.6). For that we need to introduce some

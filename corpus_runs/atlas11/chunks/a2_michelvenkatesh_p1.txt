@@ -1,0 +1,269 @@
+# THE SUBCONVEXITY PROBLEM FOR GL2.
+
+## by PHILIPPE MICHEL? and AKSHAY VENKATESH??
+
+#### ABSTRACT
+
+Generalizing and unifying prior results, we solve the subconvexity problem for the L-functions of GL1
+
+|  | and GL2 automorphic representations over a fixed number field, uniformly in all aspects. A novel feature of the |  |
+
+| --- | --- | --- |
+
+|  | present method is the softness of our arguments; this is largely due to a consistent use of canonically normalized |  |
+
+|  | period relations, such as those supplied by the work of Waldspurger and Ichino–Ikeda. |  |
+
+| 010 |  | CONTENTS |
+
+|  | 1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . . 1 |  |
+
+|  |  | 1.1. The subconvexity problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. 1 |
+
+| ar 2 |  | 1.2. The Burgess bound and the geometry of SL2(Z)\H . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8 |
+
+|  |  | 1.4. Geodesic restriction problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+13 |
+
+|  |  | 2. Norms on adelic quotients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . 18 |  |
+
+|  |  | 2.1. Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . 19 |  |
+
+| 9 M |  | 2.2. Structure of adelic quotients and the Plancherel formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 |
+
+|  |  | 2.3. Norms on adelic quotients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. 26 |  |
+
+|  |  | 2.4. Properties of the Sobolev norms. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+|
+
+|  |  | 2.5. Examples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . 29 |  |
+
+| NT] |  | 2.6. Proofs concerning Sobolev norms. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+33 |  |
+
+|  |  | 3. Integral representations of L-functions: local computations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 |  |
+
+|  |  | 3.1. Notations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . 38 |  |
+
+|  |  | 3.2. Whittaker models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . 45 |  |
+
+|  |  | 3.3. Bounds for the normalized Hecke functionals. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53 |
+
+| math. |  | 3.4. Normalized trilinear functionals.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . 54 |  |
+
+|  |  | 3.5. Bounds for trilinear functionals, I: soft methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57 |
+
+|  |  | 3.6. Choice of test vectors in the trilinear form. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59 |
+
+|  |  | 3.7. Bounds for trilinear functionals, II: computations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64 |
+
+| v2 [ | 4. Integral representations of L-functions: global computations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67 |  |
+
+|  |  | 4.1. Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . . . 68 |  |
+
+|  |  | 4.2. Hecke integrals on PGL2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. 73 |  |
+
+|  |  | 4.3. Regularization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . . 76 |  |
+
+| 591 |  | 4.4. (Regularized) triple products. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . 81 |  |
+
+| | | 4.5. An example: F = Q at full level. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86 |
+
+|  |  | 5. Proof of the theorems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+. . . . . 89 |  |
+
+|  |  | 5.1. Subconvexity of character twists. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+89 |
+
+| 03.3 |  | 5.2. Subconvex bounds for Rankin/Selberg L-functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96 |
+
+| v:09 | 1. Introduction |  |
+
+| arXi | 1.1. The subconvexity problem |  |
+
+## We refer the reader who is not familiar with L-functions to §1.2 for an
+
+## introduction, in explicit terms, to some of the ideas of this paper.
+
+? Partially supported by the advanced research grant n. 228304 from the European Research Council
+
+and the SNF grant 200021-12529.
+
+?? Partially supported by the Sloan foundation, the Packard Foundation and by an NSF grant.
+
+#### 2 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Throughout this paper, F denotes a fixed number field and A its ring
+
+of ad\`eles. For π an automorphic representation of GLn(A) (with unitary central character, not necessarily of finite order), Iwaniec and Sarnak have attached
+
+\[
+
+an analytic conductor C(\pi) \in R>1; it is the product of the usual
+
+\]
+
+(integer) conductor with a parameter measuring how large the archimedean eigenvalues are. More intrinsically, the logarithm of the conductor is proportional to
+
+the density of zeros of the corresponding L-function. See §4.1.
+
+The subconvexity problem is concerned with the size of L(π, s) when
+
+\[
+
+<s = \frac{1}{2}: it consists in improving over the so-called convexity bound (see [37] for instance) L(\pi,1/2) n,F,\epsilon C(\pi) 1/4+\epsilon for any1
+
+\epsilon > 0. The main result of the present paper is the resolution of this problem for GL1 and GL2-automorphic representations: 1.1. Theorem. — There is an
+
+absolute constant \delta > 0 such that: for
+
+\]
+
+π an automorphic representation of GL1(A) or GL2(A) (with unitary central character), one has
+
+L(π, 1/2) F C(π) 1/4−δ
+
+.
+
+Remark. — Contrary to appearance, this also includes the question of
+
+growth along the critical line, i.e. what is called the t-aspect, because
+
+\[
+
+L(\pi,1/2 + it) = L(\pi \otimes\|.\| it
+
+\]
+
+A, 1/2).
+
+For example, an interesting corollary is a subconvex bound for the L-function
+
+2 at the point_t = 1/2 + iν. Another of a Maass form with eigenvalue_1/4 + ν corollary is a subconvex bound (in the discriminant) for the Dedekind Lfunction of
+
+a cubic extension of F (cf. \[21\] for an application of the latter). The above result is a specialization (by taking \pi_2 to be a suitable Eisenstein series)
+
+of the following more general result 1.2. Theorem. — There is an absolute2 constant δ > 0 such that: for \pi_1, \pi_2 automorphic representations on GL2(AF ) we
+
+have3 : L(π1 \otimes \pi_2, 1/2) F,π2 C(π1 \otimes \pi_2) 1/4−δ ; (1.1) more precisely, the constant implied depends polynomially on the discriminant of F (for
+
+F varying over fields of given degree) and on C(π2).
+
+1 Recently, Heath-Brown has established a general convexity bound \[30\], which together with the work
+
+1/4
+
+of Luo, Rudnick, Sarnak \[46\] implies the clean convexity bound L(π, 1/2) n,F C(π)
+
+.
+
+2 independent of the number field F.
+
+3 More precisely we prove the bound L(π1 \otimes \pi_2, 1/2) F,π2 C(π1) 1/2−2δ
+
+. That the latter implies the
+
+former is a consequence of the bounds in \[10\].
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 3
+
+The value of δ is easily computable. We have not attempted to optimize
+
+any exponent, our goal in this paper being of giving clean proofs in a general context.
+
+Remark. — The bound generalizes (up to the value of δ) a variety of subconvex bounds [71,12,29,27,47,17,18,64,22,34,19,42,44,48,6,54,31,9,8, 67,16]. Its main
+
+feature, however, is its uniformity in the various possible parameters (the so-called “conductor”, t-aspect, or “spectral” aspects): such bounds are sometimes
+
+called “hybrid”. The first such hybrid bound is that of Heath-Brown \[29\] for Dirichlet character L-functions; recent hybrid bounds are to be found in the work
+
+of Jutila and Motohashi \[54\] and in the work of Blomer and Harcos \[8\]. The present work generalizes these also, again, up to the value of δ.
+
+However, in saying this we have done an injustice to some of those papers; in some cases, the very point was to obtain the best exponent, whereas
+
+our emphasis is quite different. For example, let us compare the present result to that of \[54\]. This paper gives, in particular, the uniform bound for
+
+the value L(ϕλ, 1 1/3 where ϕλ is a Maass form. This bound 2 + it) (\|t\| + \|λ\|) is very strong – the same exponent as the classical Weyl bound; on the
+
+other hand, it fails to be subconvex when_t ∼ λ, where the conductor drops. The present work fills this lacuna and provides a subconvex bound for that “critical
+
+point”; as far as we are aware this subconvex bound is new even over Q. On the other hand, while our method presumably leads to a respectable δ, it would not be
+
+so strong as the result of \[54\], one reason being that we are using the amplification method. It is also worth observing that the phenomena of the conductor
+
+dropping often leads to major difficulties, both in
+
+our methods and other treatments.
+
+Remark. — It is reasonable to ask what one hopes by studying hybrid
+
+settings – especially given that many applications of subconvexity do not require them.
+
+It is generally believed that the analytic behavior of L-functions are
+
+\[
+
+=universal,” in that they are controlled by a single scaling parameter, the analytic conductor C. Taking C \to \infty in different ways can correspond to
+
+analysis of eigenfunctions of large eigenvalue; analysis of eigenfunctions on a surface of large volume; or sections of a highly ample holomorphic bundle, and
+
+the reasons why these should all have similar asymptotic behavior is not clear.
+
+\]
+
+We may hope to achieve some insight into this “universality” by studying hybrid phenomena. Indeed, at many points in the text, the reader will
+
+#### 4 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+note the close parallel between increasing the level at finite primes, and increasing the eigenvalue at archimedean primes.
+
+Our methods were outlined in our ICM announcement \[50\]. In particular
+
+we do not use trace formulas of any kind. An additional feature (originating in \[48\]), is that a special case of Theorem_1.2 (the case of \pi_1 a character)
+
+enters the proof of the full theorem. That special case is proven in Theorem_5.1, and is based (following \[67\]) on a study of the equidistribution of cycles
+
+on adelic quotients.
+
+We have also tried to make use of the following ideas to simplify the
+
+proof (both notationally and conceptually):
+
+- Sobolev norms (cf. \[4\]; in the adelic context \[67\]);
+
+- Canonically normalized period formulas (see \[69,33\]);
+
+- Regularization of integrals of automorphic forms (we give a self-contained treatment that avoids truncation).
+
+There remain many interesting questions related to the subconvexity

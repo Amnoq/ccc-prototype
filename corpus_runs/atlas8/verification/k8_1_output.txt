@@ -1,0 +1,5 @@
+K8-1: PNT as total weight 1 — sum_{faces} (-1)^{|S|+1} log(prod S)/prod S
+  X=  1000  sum=0.969931  |sum-1|=0.030069
+  X=  5000  sum=0.993342  |sum-1|=0.006658
+  X= 20000  sum=0.986125  |sum-1|=0.013875
+VERDICT: verified

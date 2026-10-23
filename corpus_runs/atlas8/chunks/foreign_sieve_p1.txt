@@ -1,0 +1,334 @@
+Math 229: Introduction to Analytic Number Theory
+              The Selberg (quadratic) sieve and some applications
+
+An elementary and indeed naı̈ve approach to the distribution of primes is the
+following argument:
+                 √      an integer n is prime if and only if it is not divisible by
+the primes ≤ n; but half the integers are odd, 2/3 are not multiples of 3,
+4/5 not multiples of 5, etc., and divisibility by any prime is independent of
+divisibility by finitely many other primes, so. . . Moreover, if n is restricted
+to an arithmetic progression a mod q with (a, q) = 1 then the same factors
+(p − 1)/p arise except those for which p|q, from which we recover the factor
+Q
+   p|q p/(p − 1) = q/φ(q) in the asymptotic formula for π(qx, a mod q).
+
+The problem with estimating π(x), π(qx, a mod q), and other such counts in this
+way is that the divisibilities aren’t quite independent. This is already implicit   √
+in our trial-division test for primality: if n is known to contain no primes √    ≤ n,
+the conditional probability that it be a multiple of some other prime p ∈ ( n, n)
+is not 1/p but zero. Already for small p, the number of n < x divisible by p
+is not quite x/p but x/p + O(1), and similarly for n divisible by a product of
+distinct primes; so if we try to use the principle of inclusion and exclusion to
+recover the number of primes n <         Qrx, or even of n not divisible by r primes
+p1 , . . . , pr , we get an estimate of x i=1 (1 − p1i ) as expected, but with an “error
+term” O(2r ) that swamps the estimate long before r can get usefully large.
+This quandary is prototypical of “sieve” situations, in which we have a set S of
+A integers such that #(S ∩ DZ)/A is approximated by a multiplicative Q      function
+α(D) of the squarefree integer D, and are interested in the number A( p∈P p)
+of n ∈ S not divisible by any of the primes p in a given set P . (For instance, if
+S is an interval then α(D) = 1/D; in general, α must be multiplicative for the
+divisibility of a random n ∈ S by a prime p to be approximately independent
+of its divisibility by any other primes.) Several methods are now known    Q     for
+deriving “sieve inequalities”, which are nontrivial upper bounds on A( p∈P p).
+These inequalities use a variety of methods, but curiously the resulting bounds
+are similar in many important contexts, and often exceed the expected number
+by a factor asymptotic to 2. We shall develop one of the most general such
+inequalities, due to Selberg, and give some typical examples of its use in analytic
+number theory. While we state Selberg’s sieve in the context of divisibility, in
+fact all that we are using is that each prime p sifts out a subset of S and that the
+events that a random n ∈ S survives these tests for different p are approximately
+independent. Thus Selberg’s sieve has a counterpart in the context of probability
+theory, for which see the final Exercise. Selberg’s and many other sieves are
+collected in [Selberg 1969]; nice applications of sieve inequalities to other kinds
+of problems in number theory are interspersed throughout [Serre 1992].
+                                                                         P
+Assume, then, that an (n ∈ Z) are nonnegative real numbers with n∈Z an =
+A < ∞, and that α is a multiplicative function from the positive squarefree
+
+                                           1
+integers to the interval [0, 1]. For each squarefree d > 0 let
+                                  X
+                         Ad :=        amd = A α(d) + r(d);
+                                       m∈Z
+
+in any application, the r(d) must be small
+                                        Q compared to A. Let P be a finite set
+of primes, and D the squarefree integer p∈P p. We are interested in
+                                        X
+                              A(D) :=        an ,
+                                                    (n,D)=1
+
+the sum of an over n ∈ A Q
+                         not divisible by any of the primes in P . We hope that
+A(D) is approximately A p|D (1 − α(p)), with an error that is usefully small if
+the r(d) are. What we can show is:
+Theorem (Selberg): For each z ≥ 1 we have
+                                               A
+                                A(D) ≤               + R(D, z),                             (1)
+                                             S(D, z)
+where S, R are defined by
+                        XY              α(p)                         X
+           S(D, z) :=                          ,        R(D, z) :=           3ω(d) |r(d)|
+                        d|D
+                                      1 − α(p)                        d|D
+                                p|d
+                        d≤z                                          d≤z 2
+
+              P
+and ω(d) :=     p|d 1, the number of distinct prime factors of d.
+
+Remark : Given D and α, the series S(D, z) and R(D, z) are increasing functions
+of z because they accumulate more positive terms as z grows. For z = 1 we have
+S(D, z) = 1 and R(D, z) = 0, so (1) is the trivial inequality A(D) ≤ A(1) = A.
+For z ≥ D we have
+                       X Y α(p)           Y           α(p)
+                                                               Y
+                                                                        1
+ S(D, z) = S(D, D) =                    =       1+             =             ,
+                             1 − α(p)                1 − α(p)       1 − α(p)
+                             d|D p|d                    p|D                          p|D
+                                                Q
+so 1/S(D, z) is the expected factor p|D (1 − α(p)), and (1) is implied by the
+                                      Q                     P
+inclusion-exclusion estimate A(D) − A p|D (1 − α(p)) ≤ d|D |r(d)|. Thus
+Selberg’s inequality may be regarded as an interpolation between inclusion-
+exclusion and the trivial A(D) ≤ A. Note that (1) is only an upper bound: we
+do not claim that |A(D) − A/S(D, z)|  R(D, z).
+Proof : Let λd (d|D) be arbitrary real parameters with λ1 = 1 (and eventually
+λd = 0 once d > z). Then
+                    X  X            2 XX               X
+            A(D) ≤      an         λd =          λd1 λd2      an ,
+                         n            d|(n,D)           d1 ,d2 |D      [d1 ,d2 ]|n
+
+where [d1 , d2 ] := lcm(d1 , d2 ). The inner sum is just A[d1 ,d2 ] , so we have
+                     XX                                            
+          A(D) ≤             λd1 λd2 Aα([d1 , d2 ]) + r([d1 , d2 ]) ≤ AQ + R,
+                    d1 ,d2 |D
+
+                                                    2
+where Q is the quadratic form
+                             XX
+                        Q :=    α([d1 , d2 ]) λd1 λd2
+                                        d1 ,d2 |D
+
+in the λd , and                         XX
+                                 R :=               λd1 λd2 r([d1 , d2 ]) .
+                                        d1 ,d2 |D
+
+Now for d|D the number of pairs d1 , d2 such that d = [d1 , d2 ] is 3ω(d) (why?);
+thus (1) will follow from the following
+Lemma: The minimum of the quadratic form Q subject to the conditions λ1 = 1
+and d > z ⇒ λd = 0 is 1/S(D, z), and is attained by λd with |λd | ≤ 1.
+Proof of Lemma: By continuity we may assume that 0 < α(p) < 1 for all
+p ∈ P . (In fact, for our purpose we can exclude from the start the possibilities
+α(p) = 0 or 1 — do you see why?) Since [d1 , d2 ] gcd(d1 , d2 ) = d1 d2 and α is
+multiplicative, we have
+                              XX α(d1 )λd · α(d2 )λd
+                                            1           2
+                         Q=                               .
+                                       α(gcd(d1 , d2 ))
+                                     d1 ,d2 |D
+
+Selberg’s key insight is that this quadratic form is diagonalized by introducing
+coefficients δ(e) for e|D, determined by
+                                   1     X
+                                      =      δ(e).
+                                 α(d)
+                                                       e|d
+
+Then                                                 hX       i2
+                                         X
+                                  Q=             δ(e)   α(d)λd .
+                                         e|D              e|d
+
+Let x(e), then, be defined by
+                                                    X
+                                        x(e) :=            α(d)λd ,
+                                                     e|d
+
+                              2
+              P
+so that Q =       e|D δ(e)x(e) . By Möbius inversion we find
+
+                           Y 1 − α(p)                            1 X
+                  δ(e) =                     ,        λd =           µ(e/d)x(e).
+                                   α(p)                         α(d)
+                           p|e                                        d|e
+
+Our conditions on the λd then become
+              X
+                 µ(e)x(e) = α(1)λ1 = 1,                          e > z ⇒ x(e) = 0.
+                  e|D
+
+By the Schwarz inequality, the minimum of Q subject to these conditions is
+                                    −1
+                       
+                           X      1   = 1/S(D, z),
+                                δ(e)
+                                  e|D, e≤z
+
+                                                      3
+                                          
+and is attained if and only if x(e) = µ(e) (δ(e)S(D, z)) for each e ≤ z. This
+yields
+                          µ(d) X 1            µ(d)      X       1
+             S(D, z)λd =                  =                         .
+                          α(d)       δ(e)   α(d)δ(d) f |(D/d) δ(f )
+                                    d|e≤z
+                                                                 f ≤z/d
+
+But we have
+                                    1       X 1
+                                          =       ,
+                                 α(d)δ(d)    δ(e)
+                                                 e|d
+
+because both sides of the equation are multiplicative functions of the squarefree
+integer d (since α, δ are both multiplicative), and the equation holds for prime d
+by our above formula for δ(e). Thus we have
+                                                 XX         1
+                           S(D, z)λd = µ(d)                      ,
+                                                          δ(ef )
+                                                   e,f
+
+with each ef ≤ z and no ef values repeated. Thus the sum has absolute value
+at most S(D, z), so |λd | ≤ 1 as claimed. This concludes the proof of the Lemma,
+and thus also of Selberg’s inequality (1). 
+Typically we will let D = D(y) = p≤y p. For instance, we show:1
+                                     Q
+
+Corollary. Fix q. For all a, x0 , A such that gcd(a, q) = 1, we have
+                                                    2q              log log A  A
+   π(x0 + Aq, a mod q) − π(x0 , a mod q) <                    + O(            )       .   (2)
+                                                       φ(q)            log A    log A
+
+Proof : Let an be the characteristic function of the arithmetic progression
+
+                        {n | n ≡ a mod q, 0 < n − x0 < Aq}.
+
+Then A(D(y)) is an upper bound on π(x0 +Aq, a mod q)−π(x0 , a mod q)−π(y).
+We take α(n) = 1/n if gcd(n, q) = 1 and α(n) = 0 otherwise. Then |r(d)| ≤ 1
+for each d, and so R(D, z) is bounded by the sum of the n−s coefficients of
+ζ 3 (s) for      2
+                   , so is  (z log z)2 . [An equivalent and more elementary way to
+          Pn ≤ z ω(n)
+handle n≤x 3           is to note that 3ω(n) is at most the number of representations
+n = n1 n2 n3 of n as a product of three positive integers.] As to S(D, z), we take
+z = y and expand α/(1 − α) in a geometric series to find
+                                    X 1     φ(q)
+                      S(D, z) >           =      log z + O(1).                            (3)
+                                    n≤z
+                                        n    q
+                                   (n,q)=1
+
+Thus Selberg’s bound (1) is (q/φ(q))A/ log z + O(z 2 log2 z). We choose y = z =
+A1/2 / log2 A, and deduce the upper bound (2), absorbing the correction π(y)
+into the error term since π(y) < y < A1/2 . 
+   1 This result in fact predates Selberg, because this choice of a is regular enough to be
+                                                                   n
+treated with earlier sieve inequalities.
+
+                                             4
+In particular, we may obtain an elementary upper bound on π(Aq, a mod q) by
+taking x0 = 0. The implied O-constant in (2) depends on q, but tractably and
+effectively so, without invoking zeros of L-functions and the like. The only issue
+is the dependence on q of the O(1) error in (3). We may write
+                         bz/dc
+        X 1     X         X 1       X µ(q/d)
+              =   µ(q/d)          =          (log z + O(1 + log d)).
+        n≤z
+            n             n=1
+                               dn       d
+                    d|q                         d|q
+       (n,q)=1
+
+Thus the error in (3) is bounded by
+                                X                1 + log d
+                                      |µ(q/d)|             .
+                                                    d
+                                d|q
+
+For instance, we readily deduce that for all  there exists an effective q0 () such
+that if q > q0 () then
+
+                                                                 q     A
+            π(x0 + Aq, a mod q) − π(x0 , a mod q) < (2 + )
+                                                                φ(q) log A
+
+for all A, x0 , a with A > q. If the coefficient 2 were any smaller, this upper
+bound would be enough to banish the Siegel-Landau zero!
+Exercises
+1. What are the λd if z ≥ D? Explain.
+2. Complete the two proofs outlined above that n≤x 3ω(n)  x(log x)2 (one
+                                                  P
+
+by comparison with the coefficients of ζ 3 ,Pthe other by counting solutions of
+                                                   ω(n)
+n1 n2 n3 ≤ x). Then prove that in fact        n≤x 3     ∼ Cx(log x)2 for some
+constant C > 0. How would you compute C numerically to high accuracy?
+3. Prove that for each integer n > 0 the number of primes p < x such that
+p + 2n is also prime is On (x/ log2 x). In particular, conclude that the sum
+       1 1 1 1  1   1   1   1   1   1   1   1
+        + + + +   +   +   +   +   +   +   +   + ···
+       3 5 5 7 11 13 17 19 29 31 41 43
+of the reciprocals of twin primes converges. (This result was first obtained by
+Brun [1919] using his less powerful sieve inequality. The sum may be considered
+“convergent” if it is finite, that is, if the twin-prime conjecture is false.)
+4. Prove that for all  > 0 there exists an effective constant x0 () such that, for
+each x > x0 (), there are at most ((8/π) + )x/ log x integers n < x such that
+n2 + 1 is a prime. Generalize.
+It is of course a famous open problem to find a similar lower bound on the number of
+such n, or even to prove that it is unbounded as x→∞ — that is, to prove that there
+are infinitely many primes of the form n2 + 1. More generally, one conjectures that for
+every irreducible polynomial P ∈ Z[X] there exist infinitely many integers n such that
+P (n) is prime, provided that for each prime p there exists at least one n ∈ Z such that
+P (n) 6≡ 0 mod p. This, in turn, is the special case k = 1 of “Hypothesis H” of Schinzel
+
+                                            5
+and Sierpiński, which asserts that for irreducible polynomials P1 , . . . , Pk ∈ Z[X] there
+are infinitely many n ∈ Z such that each Pi (n) is prime, provided that for each prime p
+there exists at least one n ∈ Z such that Pi (n) 6≡ 0 mod p for each i. Hypothesis H
+is also a generalization of a conjecture of Dickson on the simultaneous primality of
+ai n + bi , which itself generalizes the twin prime conjecture. In each case one expects
+that in fact the number of n < x such that each Pi (n) is prime is asymptotic to
+cx/(log x)k for some constant c given by an infinite product over p depending on the
+polynomials Pi (assuming that Pi 6= ±Pj for distinct i, j; this is the Bateman-Horn
+conjecture). For more information on these various conjectures, see Chapter 6 of
+[Ribenboim 1996], particularly pages 372, 391, and 409. The only case of any of these
+conjectures that has been proved is the case of a single linear polynomial, which is
+Dirichlet’s theorem. Sieve methods, including Selberg’s, yield an upper bound with
+the same asymptotic behavior but a larger c.
+As usual, one can formulate analogous problems over polynomial rings such as Fq [T ]
+in place of Z. For instance, fix P ∈ Fq [T, X], and ask whether there exist infinitely
+many polynomials n(T ) such that P (T, n(T )) is irreducible. A necessary condition is
+that P be irreducible as a polynomial of two variables and that for each nonconstant
+p ∈ Fq [T ] there exist n ∈ Fq [T ] such that P (T, n(T )) is not a multiple of p. One might
+be tempted to conjecture that again this necessary condition is also sufficient; but here
+this conjecture is false! Explicit families of counterexamples are given in [CCG 2008].
+In any event, one can use the same sieve inequalities to give an upper bound O(q d /d)
+on the number of n(T ) of degree at most d for which P (T, n(T )) is irreducible.
+5. Let pi (i ∈ [m] := {1, 2, . . . , m}) be probabilities, i.e., real numbers in
+[0, 1]; and let E1 , . . . , Em be events approximating independent events with those
+             Q i.e., such that for each I ⊆ [m] the probability that Ei occurs for
+probabilities,
+all i ∈ I is i∈I pi + r(I). Obtain upper bounds on the probability that none of
+the Ei occurs, bounds which correspond to and/or generalize Selberg’s (1). (See
+for instance [Chow 1998], where an even further generalization is proposed.)
+References
+[Brun 1919] Brun, V.: La série 1/5 + 1/7 + 1/11 + 1/13 + 1/17 + 1/19 + 1/29 +
+1/31 + 1/41 + 1/43 + 1/59 + 1/61 + . . ., où les dénominateurs sont nombres
+premiers jumeaux est convergente ou finie, Bull. des Sci. Math. 43 (1919), 100–
+104 and 124–128.
+[Chow 1998] Chow, T.: The Combinatorics behind Number-Theoretic Sieves,
+Adv. in Math. 138 (1998), 293–305.
+[CCG 2008] Conrad, B., Conrad, K., Gross, R.: Conrad, B., Conrad, K., and
+Gross, R.: Prime specialization in genus 0, Trans. Amer. Math. Soc. 360 (2008),
+2867–2908.
+[Ribenboim 1996] Ribenboim, P.: The New Book of Prime Number Records,
+New York: Springer 1996.
+[Selberg 1969] Selberg, A.: Lectures on Sieves, pages 66–247 of his Collected
+Papers II [O 9.89.2 (II)]
+[Serre 1992] Serre, J.-P.: Topics in Galois Theory. Boston: Jones and Bartlett
+1992. [BB 9.92.12 / QA214.S47]
+
+                                             6

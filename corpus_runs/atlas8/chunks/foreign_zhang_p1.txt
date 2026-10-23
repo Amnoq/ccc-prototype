@@ -1,0 +1,302 @@
+1. Introduction
+
+    Let pn denote the n-th prime. It is conjectured that
+
+                                 liminf(pn+i
+                                 n—too
+                                             - pn) = 2.
+
+While a proof of this conjecture seems to be out of reach by pr
+recently Goldston, Pintz and Yildirim [7] have made significant pro
+the weaker conjecture
+
+(1.1) liminf(pn+i - pn) < oo.    n—too
+
+In particular, they prove that if the primes have level of distrib
+1/2 + zu for an (arbitrarily small) zu > 0, then (1.1) will be v
+Th. 1]). Since the result ê = 1/2 is known (the Bombieri-Vinogrado
+the gap between their result and (1.1) would appear to be, as said i
+a hair's breadth. Until very recently, the best result on the small
+consecutive primes was due to Goldston, Pintz and Yildirim [8]. T
+gives that
+
+(1.2) lim inf —=J°—1——— < oo.
+                          n-> oo ylög pn (log log pn )
+
+One may ask whether the methods in [7], combined with the ideas in Fouvry
+and Iwaniec [5] and in Bombieri, Friedlander and Iwaniec [1], [2], [3] which
+are employed to derive some stronger versions of the Bombieri- Vinogradov
+theorem, would be good enough for proving (1.1) (see [7, Question 1, p. 822]).
+     In this paper we give an affirmative answer to the above question. We
+adopt the following notation of [7]. Let
+
+(1.3) H = {hi, /i2,..., hk0}
+be a set composed of distinct nonnegative integers. W
+if Vp(l-L) < p for every prime p, where denotes
+residue classes modulo p occupied by the ht.
+
+    Theorem 1. Suppose that TL is admissible with
+there are infinitely many positive integers n such that
+
+(1.4) {n + hi,n + h2,...,n + hko}
+contains at least two primes. Consequently, we have
+
+(1.5) liminf(pn+1 - pn) < 7 x 107.
+                             n—>oo
+
+     The bound (1.5) results from the fact that the set TL is admi
+ is composed of ko distinct primes, each of which is greater than
+inequality
+                    tt(7 x 107) - 7t(3.5 x 106) > 3.5 x 106.
+
+              128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                        All use subject to https://about.jstor.org/terms
+                           BOUNDED GAPS BETWEEN PRIMES 1123
+
+This result is, of course, not optimal. Th
+ crude, and there are certain ways to relax it
+ by a value as small as possible is an open pr
+in this paper.
+
+                     2. Notation and sketch of the proof
+    Notation.
+
+       p: a prime number.
+       a, b, c, h, k, I, m: integers.
+       d, n, q, r\ positive integers.
+       A(q): the von Mangoldt function.
+       Tj(q): the divisor function, r<2,{q) = r(q).
+       <p(q): the Euler function.
+       p(q): the Möbius function.
+       x: a large number.
+       C, — logo;.
+       y, z: real variables.
+       e(y) = exp{27riy}.
+       eq(y) = e{y/q).
+       ||y||: the distance from y to the nearest integer.
+       m = a(q): means m = a(mod q).
+       c/d means a/d(mod 1) where ac = l(modd).
+       q ~ Q means Q < q < 2Q.
+       e: any sufficiently small, positive constant, not necessarily the same in
+       each occurrence.
+
+       B: some positive constant, not necessarily the same in each occurrence.
+       A: any sufficiently large, positive constant, not necessarily the same in
+       each occurrence.
+
+       77 = 1 + C~2A.
+       hn: the characteristic function of [N. qN) fl Z.
+
+            l( mod q)' a suminat,i°n over reduced residue classes /(mod q).
+
+       Cq(a): the Ramanujan sum ^ ;(mocj ^eq^a)
+    We adopt the following conventions throughout our presentation. The set
+Ti given by (1.3) is assumed to be admissible and fixed. We write vp for vp{l~L)-.
+similar abbreviations will be used in the sequel. Every quantity depending on
+Ti alone is regarded as a constant. For example, the absolutely convergent
+product
+
+                             e = n( i-üVi-T"*
+                                     P J \ P
+                                     v \
+
+                128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                          All use subject to https://about.jstor.org/terms
+  1124       YITANG                  ZHANG
+
+      is a constant. A statement i
+      sufficiently large A wheneve
+      small" and "sufficiently larg
+      implied in O or <C, unless s
+         We       first                    recall                    the     underlyin
+      in    evaluating                                     and              comparing
+
+      (2.1) S, = £ A( ni2
+ and
+
+                                            ko
+
+(2-2)
+                           £2 = (n~x
+                                 Y1 °(n+h*)) A(n)2>
+                                       \ i=\ /
+
+ where A(n) is a real function depending on T-
+
+                                         log n if n is prime,
+                           6(n) =
+                                         0 otherwise.
+
+ The key point is to prove, with an appropriate ch
+
+ (2.3) S2 - (log3®)Si > 0.
+ This implies, for sufficiently large x, that ther
+ (1.4) contains at least two primes.
+    In [7] the function A(n) mainly takes the form
+
+                             i / T~)\ ^0+^0
+      (2.4) A(n) = 77—mT £ ( loS
+                       (k0 + 'o)! d\P[n) V dJ
+                                     d<D
+
+where D is a power of x and
+                                                  fco
+
+                                    p(n) = II(n + /li)
+                                                 3=1
+
+Let
+
+            A(7; d, n~x
+                    c) = rl^J
+                          12 T(n)
+                              n~x
+                                  for (d'c) = 1
+                          n=c(d) (n,d)=1
+and
+
+      Ci(d) = {c : 1 < c < d, (c, d) = 1, P(c — hi) = O(mod d)} for 1
+
+The evaluations of Si and S2 lead to a relation of the form
+
+            S2 " (log3x)Si = (fc0r2* - CT*)x + 0(xCko+2l°) + 0(£)
+
+               128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                         All use subject to https://about.jstor.org/terms
+                              BOUNDED GAPS BETWEEN PRIMES 1125
+
+ for D < x1/2 £, where T* and 7% are certain
+ below), and
+
+                 £= J2 S \^(d)\T^d)Tko-i(d) £
+                      l<î<fco d<D2 ceCi(d)
+Let w > 0 be a small constant. If
+
+  (2.5) D = x1/4+w
+ and fco is sufficiently large in terms of tu, the
+ Iq, one can prove that
+
+ (2.6) fc07~2* - CTi » Cko+2lo+1.
+In this situation the error £ can be efficiently bounded if the primes have lev
+of distribution d > 1/2 + 2tu, but one is unable to prove it by present method
+On the other hand, for D = x1//4~£, the Bombieri-Vinogradov theorem is
+enough for bounding £, but the relation (2.6) cannot be valid, even if a m
+general form of A(n) is considered (see Soundararajan [13]).
+   Our first observation is that, in the sums T{ and T/, the contributi
+from the terms with d having a large prime divisor are relatively small. T
+if we impose the constraint d\V in (2.4), where V is the product of the pr
+less than a small power of x, the resulting main term is still +> £ko+2lo+i
+D given by (2.5).
+    Our second observation, which is the most novel part of the proof,
+that with D given by (2.5) and with the constraint d\P imposed in (2.4),
+resulting error
+
+ (2-7) Y1 J2 r3(d)rfco_i(d) ]T \A{9;d,c)\
+                        l<i<ko d.<D2 ceCi(d)
+                                  d\V
+
+can be efficiently bounded. This is originally due to the simple fact that if d\P
+and d is not too small, say d > x1/2-5, then d can be factored as
+
+  (2.8)                d         —             rq
+  with                 the               range                        for       r   flexibly
+  ing, the characteristic funct
+  treated as a well-factorable f
+  is      crucial                       for                 bounding                 the   err
+        It       suffices                              to           prove           Theorem
+
+                                              k0             =       3.5        x   106,
+
+  which                       is         henceforth                                 assumed
+                                                        1
+                                              vj =
+                                                      1168
+
+                   128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                             All use subject to https://about.jstor.org/terms
+ 1126          YITANG                    ZHANG
+
+  Let             g        (y)              be             given                    by
+
+                             9(!,)                                       =          STw
+                                          g(y)                       =          0   if   y   >   D
+
+                                                   l0           =        180.
+
+                              Di = x™, V = II P
+                                                                      p<Di
+
+                              D0 = exp{Cl'k°}, V0= J! P
+                                                                      p<Do
+
+In the case d\P and d is not too small, the factor q in (2.8) may be chosen such
+that (q,Vo) — 1- This will considerably simplify the argument.
+      We choose
+
+ (2.11) A (n) = V{d)g{d).
+                                              d\(P(n),V)
+
+     In the proof of Theorem 1, the main terms are not difficult to handle,
+since we deal with a fixed FL. This is quite different from [7] and [8], in which
+various sets % are involved in the argument to derive results like (1.2).
+     By Cauchy's inequality, the error (2.7) is efficiently bounded via the fol
+lowing
+
+      Theorem 2. For 1 < i < ko we have
+                                                                         —A
+ (2.12) £ £ |A(M,c)|«*£
+                              d<D2 ceCi(d)
+                               d\V
+
+     The proof of Theorem 2 is described as follows. First, applying combina
+torial arguments (see Lemma 6 below), we reduce the proof to estimating the
+sum of I A(7; d, c)| with certain Dirichlet convolutions 7. There are three types
+of the convolutions involved in the argument. Write
+
+(2.13) xi = x3/8+8ro, x2 = x1/2"4-.
+In the first two types the function 7 is of the form 7 = 0* ß such that the
+following hold:
+
+   (Ai) a = (a(m)) is supported on [M, if1 M), j\ < 19, a(m) Tj1 (m)C.
+   (A2) ß = (ß(n)) is supported on [N, if2N), j2 < 19, ß(n) < rJ2(n)T,
+        xi < N < 2x4/2.
+
+                   128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                             All use subject to https://about.jstor.org/terms
+                                BOUNDED GAPS BETWEEN PRIMES 1127
+
+For any q, r and a satisfying (a, r) = 1, the fol
+tion is satisfied:
+
+                                                                                  -200A
+                      Y Y ß(n)
+                           ip(r)
+                                 ^T20(q)NC
+                 n=a(r) v ' (n,qr)=1
+                 («,<?)=1
+
+  (A3) il + 32 < 20, [MN, r]20MN) C [x, 2x).
+We say that 7 is of Type I if xi < N < X2] we say that 7 is of Type II if
+X2 < N < 2a;1/2.
+     In the Type I and II estimates we combine the dispersion method in [5]
+and [1] with the factorization (2.8). (Here r is close to N in the logarithmic
+scale.) Due to the fact that the modulo d is at most slightly greater than
+x1/2 in the logarithmic scale, after reducing the problem to estimating certain
+incomplete Kloosterman sums, we need only to save a small power of x from
+the trivial estimates; a variant of Weil's bound for Kloosterman sums (see
+Lemma 11) will fulfill it. Here the condition N > x\, which may be slightly
+relaxed, is essential.
+     We say that 7 is of Type III if it is of the form 7 = a * * x/v2 * >7v3
+such that a satisfies (Ai) with j\ < 17 and such that the following hold:
+   (A4) N3<N2< Ni, M Ni < xx.
+  (A5) [MN\N2N3, rj20MNiN2N3) C [x,2x).
+The Type III estimate essentially relies on the Birch-Bombieri result in the
+appendix to [6] (see Lemma 12), which is employed by Friedlander and Iwaniec
+[6] and by Heath-Brown [10] to study the distribution of 73(71) in arithmetic
+progressions. This result in turn relies on Deligne's proof of the Riemann
+Hypothesis for varieties over finite fields (the Weil Conjecture) [4], We estimate
+each A(7; d, c) directly. However, if one applies the method in [6] alone, efficient
+estimates will be valid only for MN\ <C x3/8-5ro/2-e Qur argUment js carried
+out by combining the method in [6] with the factorization (2.8) (here r is
+relatively small); the latter will allow us to save a factor r1/2.
+      In our presentation, all the a(m) and ß(n) are real numbers.

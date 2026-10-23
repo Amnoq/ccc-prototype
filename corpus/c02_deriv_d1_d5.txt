@@ -1,0 +1,175 @@
+# Derivations: the circle sieve read through Figueiredo's recipe
+
+Date: 2026-09-29. Code: `sieve_complex.py`. All identities below were verified
+numerically (see transcript in this file's history); proofs are sketched.
+
+Her recipe, for reference: (1) find a positive geometric region; (2) take its
+canonical form; (3) read off the observable; (4) derive zeros/factorizations
+from the geometry. The sieve has no known positive region — that gap stands.
+What follows is what *can* be derived: the sieve's output expressed in the
+shape of her steps 2–4.
+
+Setup: Δ_x = incidence complex of the sieve to x — vertices are primes ≤ x,
+faces are prime sets co-dividing some integer ≤ x (the nerve of the prime
+territories). Verified: link({p}) in Δ_x = Δ_{⌊x/p⌋} minus p (exact recursion).
+
+---
+
+## D1. The observable as a signed sum over the complex (her step 3)
+
+**Statement.** With ψ(x) = Σ_{n≤x} Λ(n) the Chebyshev prime-power counter,
+
+    ψ(x) = Σ_{∅≠S face of Δ_x} (−1)^{|S|+1} · log(∏S) · ⌊x / ∏S⌋.
+
+Verified exact at x = 30, 100, 500.
+
+**Proof sketch.** ⌊x/d⌋ counts the integers ≤ x divisible by d. Grouping by n:
+inner sum over squarefree d|n of (−1)^{ω(d)+1} log d = −Σ_{d|n} μ(d) log d = Λ(n),
+the classical Möbius inversion. Summing over n ≤ x gives ψ(x). The signs
+(−1)^{|S|} are the face-dimension signs — the Euler-characteristic weighting
+of the complex (classically: μ(1,n) is the reduced Euler characteristic of the
+divisor lattice's order complex).
+
+**Honest label.** Classical theorem (Möbius inversion), reframed. What the
+reframing buys: the prime-counting observable is read *directly off the
+sieve's incidence complex*, with alternating signs from face dimension —
+the structural analogue of her "read the amplitude off the geometry."
+
+## D2. Lehmer's recursion is the link recursion (her step 4)
+
+**Statement.** Let φ(x,a) = #{n ≤ x : n unshared by the first a prime
+territories} (i.e., coprime to p_1…p_a). Then
+
+    φ(x,a) = φ(x,a−1) − φ(x/p_a, a−1),
+
+and π(x) = φ(x,a) + a − 1 − P₂(x,a). The two terms are the complex's
+deletion and link: the integers newly shared when territory p_a is added are
+exactly {p_a·m : m ≤ x/p_a unshared by the first a−1 territories}, in bijection
+with the cone S ↦ S ∪ {p_a} over link({p_a}) = Δ_{⌊x/p_a⌋}. Verified: link-face
+counts match Δ_{⌊x/p_a⌋} face counts; the integer bijection holds exactly.
+
+**Honest label.** Classical (Lehmer 1959 prime-counting), reframed. This is
+her "recursive facet residues" step in sieve language: the fast prime-counting
+algorithm was the link recursion all along.
+
+## D3. The sieve as a binary geometry (her binary equations)
+
+Her binary geometries are governed by u_C + ∏_D u_D^{n(C,D)} = 1: complementary
+on/off relations among facets. The sieve's rule has the same logical shape:
+
+    1_{prime}(n) + 1_{shared}(n) = 1,    shared(n) = ∨_{p<n} (p | n).
+
+**Zero-locus formulation.** Define F(n) = ∏_{p<n} dist(n, pℤ) ≥ 0. Then
+
+    n composite ⟺ F(n) = 0,      n prime ⟺ F(n) > 0
+
+(verified to 60). The composites are the *zero locus* of F; the primes are its
+support. This inverts her "hidden zeros" picture: there the amplitude vanishes
+at special kinematics; here the background (composites) is the zero locus and
+the primes are where the function lives.
+
+**The relation to zero.** In D1, the empty face (d = 1, log 1 = 0) contributes
+no weight yet anchors the whole alternating sum — the multiplicative identity
+structuring every term, the formal shadow of "every prime relates back to zero"
+via its spanning circle.
+
+**Honest label.** Reformulation and analogy, not new prime information. Its
+value is architectural: it states the sieve in the *language* of binary
+geometries — the prerequisite for asking whether her algebraic machinery
+(positive parametrizations of u-variables) can be ported at all.
+
+---
+
+## What this buys, and what it doesn't
+
+**Have:** the sieve's output (ψ, π) expressed as (i) a signed face-sum over Δ_x
+and (ii) a link-recursive computation — her recipe's steps 2–4 with exact
+analogues, minus the positive region and canonical form. The sieve is already
+a "counting problem" of her kind (cf. *All Loop Scattering as a Counting
+Problem*, arXiv:2309.15913).
+
+**Don't have:** the positive region, the canonical form, or any new
+consequence for prime densities. D1–D3 are classical results in new clothes;
+they prove the *shape* fits, not that the *machinery* transfers.
+
+**Precisely posed next questions.** (a) Is there a positive parametrization
+whose boundary strata are the territory incidences of Δ_x? (b) *Partially
+answered by D4 below:* the bare N → ∞ limit trivializes (contractible infinite
+simplex) — the limit object must be the *weighted* complex, and the weights'
+generating function drags in the zeta zeros as regulators. (c) Do the sieve's
+binary relations admit positive variables with her exponent structure whose
+zero locus is the composites?
+
+## D4. The weighted infinite complex: PNT as total weight 1 (the N → ∞ limit)
+
+**The bare limit is trivial.** As x → ∞, every finite set of primes eventually
+satisfies ∏S ≤ x, so Δ_∞ is the infinite simplex on the primes — contractible,
+no topology. The growing Betti numbers of Δ_x are a *filtration* phenomenon,
+not a limit phenomenon. Consequence for the program: a positive-geometry
+analogue cannot live in the bare complex; the geometry must be in the weights.
+(Her objects are fixed polytopes; the sieve's object is a *process* — the
+filtration itself.)
+
+**Canonical face-weights.** Give each nonempty face S the x-independent weight
+
+    w(S) = (−1)^{|S|+1} · log(∏S) / ∏S.
+
+Then D1 reads ψ(x)/x = Σ_{∏S≤x} w(S)·(⌊x/∏S⌋/(x/∏S)) — the floor function is a
+cutoff that tends to 1 — and:
+
+**Statement (classical, reframed).** Σ_{∏S≤X} w(S) → 1 as X → ∞: the weighted
+infinite simplex has total weight 1. This identity is equivalent to the Prime
+Number Theorem ψ(x) ~ x.
+
+Verified numerically (Möbius sieve to 2·10⁶):
+S(X) = Σ_{∏S≤X} w(S): 0.969931, 1.019210, 1.005585, 0.999922, 0.997215,
+1.001658 at X = 10³, 10⁴, 10⁵, 5·10⁵, 10⁶, 2·10⁶ — converging cleanly to 1.
+
+**The zeros enter as regulators.** The Dirichlet generating function of the
+weights is
+
+    Σ_S w(S) / ∏S^{s−1}  =  −ζ'(s)/ζ(s)²,
+
+verified numerically against ζ'/ζ² to ~4 digits at s = 1.01…1.20. The *rate*
+at which S(X) → 1 — the error in the face-sum — is governed by the zeros of ζ
+(the explicit formula). So the architecture is now complete in her shape:
+the observable (total weight 1, i.e. PNT) is read off the weighted complex
+(her step 3), and the zeros are what regulate the infinite sum (her step 4,
+inverted — here the zeros are *needed* as regulators; deriving them from the
+geometry remains the open problem, i.e. beachhead #2).
+
+**Resonance and gap.** The weights are *signed*, alternating with face
+dimension — not positive. This resonates with how a canonical form's residues
+alternate across boundary strata, but it is not positivity, and the gap stands:
+is there a positive region whose canonical form has these weights as its
+stratum residues? That is now the single sharpest question of the program.
+
+## D5. Territory removal as soft limit / splitting (her "all-order splits")
+
+Her *All-order splits and multi-soft limits* (arXiv:2405.09608): taking one
+particle soft makes the amplitude split exactly — a soft factor times a
+lower-point amplitude. Removing one generator yields a two-term relation to a
+smaller instance of the same object.
+
+Sieve version: "take prime p_a soft" = remove its territory (stop sieving by
+p_a). The unshared-count splits exactly:
+
+    φ(x,a) = φ(x,a−1) − φ(x/p_a, a−1),
+
+i.e. (full count) = (count with p_a removed) − (the removed stratum). The
+removed stratum φ(x/p_a, a−1) plays the role of her "soft factor × lower-point
+amplitude": it is the *same kind of object* at a smaller scale, just as her
+split pieces are smaller amplitudes. Iterating the removal over all a recovers
+the full inclusion–exclusion — the face-sum of D1 — which is her "all-order"
+in sieve language.
+
+**Honest label.** A conceptual identification, not a new theorem: it is D2's
+recursion read through her lens (numerics already verified under D2). Its
+value is methodological, and it is the point the requester made on 2026-09-29:
+we are not copying her implementation — the sieve was *already doing splits*
+before we knew her name for them. Her generative insight (remove one
+generator, read the exact split, iterate to all orders) is the sieve's native
+operation. The deepest such insight, applied throughout D1–D5: *never put the
+answer in by hand* — primality is never tested by a primality predicate, it
+emerges from the shared/unshared rule, and everything downstream is derived.
+

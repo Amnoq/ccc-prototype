@@ -1,0 +1,344 @@
+5. Selberg sieve manipulations
+
+In this section we perform initial manipulations towards establishing Proposition 4.1. These arguments are multidimensional generalizations of the sieve arguments of [3]. In particular, our approach is based on the elementary combinatorial ideas of Selberg. The aim is to introduce a change of variables to rewrite our sums S1S_{1} and S2S_{2} in a simpler form.
+
+Throughout the rest of the paper we assume that the primes have a fixed level of distribution θ\theta, and R=Nθ/2−δR=N^{\theta/2-\delta}. We restrict the support of λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} to tuples for which the product d=∏i=1kdid=\prod_{i=1}^{k}d_{i} is less than RR and also satisfies (d,W)=1(d,W)=1 and μ​(d)2=1\mu(d)^{2}=1. We note that the condition μ​(d)2=1\mu(d)^{2}=1 implies that (di,dj)=1(d_{i},d_{j})=1 for all i≠ji\neq j.
+
+Lemma 5.1.
+
+Let
+
+yr1,…,rk=(∏i=1kμ⁡(ri)​φ​(ri))​∑d1,…,dkri|di​∀iλd1,…,dk∏i=1kdi.y_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})\varphi(r_{i})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+r_{i}|d_{i}\forall i\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}}{\prod_{i=1}^{k}d_{i}}.
+
+Let ym​a​x=supr1,…,rk|yr1,…,rk|y_{max}=\sup_{r_{1},\dotsc,r_{k}}|y_{r_{1},\dotsc,r_{k}}|. Then
+
+S1=NW​∑r1,…,rkyr1,…,rk2∏i=1kφ⁡(ri)+O⁡(ym​a​x2​φ​(W)k​N​(log⁡R)kWk+1​D0).S_{1}=\frac{N}{W}\sum_{r_{1},\dotsc,r_{k}}\frac{y_{r_{1},\dotsc,r_{k}}^{2}}{\prod_{i=1}^{k}\varphi(r_{i})}+O\Bigl(\frac{y_{max}^{2}\varphi(W)^{k}N(\log{R})^{k}}{W^{k+1}D_{0}}\Bigr).
+
+Proof.
+
+We expand out the square, and swap the order of summation to give
+
+(5.1)
+
+S1=∑N≤n<2​Nn≡v0(modW)(∑di|n+hi​∀iλd1,…,dk)2=∑d1,…,dke1,…,ekλd1,…,dk​λe1,…,ek​∑N≤n<2​Nn≡v0(modW)[di,ei]|n+hi​∀i1.S_{1}=\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\end{subarray}}\Bigl(\sum_{d_{i}|n+h_{i}\forall i}\lambda_{d_{1},\dotsc,d_{k}}\Bigr)^{2}=\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\end{subarray}}\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\\
+[d_{i},e_{i}]|n+h_{i}\forall i\end{subarray}}1.
+
+We recall that here, and throughout this section, we are using [a,b][a,b] to denote the least common multiple of aa and bb.
+
+By the Chinese remainder theorem, the inner sum can be written as a sum over a single residue class modulo q=W​∏i=1k[di,ei]q=W\prod_{i=1}^{k}[d_{i},e_{i}], provided that the integers W,[d1,e1],…,[dk,ek]W,[d_{1},e_{1}],\dotsc,[d_{k},e_{k}] are pairwise coprime. In this case the inner sum is N/q+O⁡(1)N/q+O(1). If the integers are not pairwise coprime then the inner sum is empty. This gives
+
+(5.2)
+
+S1=NW​∑′d1,…,dke1,…,ek′​λd1,…,dk​λe1,…,ek∏i=1k[di,ei]+O⁡(∑′d1,…,dke1,…,ek′​|λd1,…,dk​λe1,…,ek|),\displaystyle S_{1}=\frac{N}{W}\sideset{}{{}^{\prime}}{\sum}_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}}{\prod_{i=1}^{k}[d_{i},e_{i}]}+O\Bigl(\sideset{}{{}^{\prime}}{\sum}_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\end{subarray}}|\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}|\Bigr),
+
+where ∑′\sum^{\prime} is used to denote the restriction that we require W,[d1,e1],…,[dk,ek]W,[d_{1},e_{1}],\dotsc,[d_{k},e_{k}] to be pairwise coprime. To ease notation we will put λm​a​x=supd1,…,dk|λd1,…,dk|\lambda_{max}=\sup_{d_{1},\dotsc,d_{k}}|\lambda_{d_{1},\dotsc,d_{k}}|. We now see that since λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} is non-zero only when ∏i=1kdi<R\prod_{i=1}^{k}d_{i}<R, the error term contributes
+
+(5.3)
+
+≪λm​a​x2​(∑d<Rτk​(d))2≪λm​a​x2​R2​(log⁡R)2​k,\ll\lambda_{max}^{2}\Bigl(\sum_{d<R}\tau_{k}(d)\Bigr)^{2}\ll\lambda_{max}^{2}R^{2}(\log{R})^{2k},
+
+which will be negligible.
+
+In the main sum we wish to remove the dependencies between the did_{i} and the eje_{j} variables. We use the identity
+
+(5.4)
+
+1[di,ei]=1di​ei​∑ui|di,eiφ⁡(ui)\frac{1}{[d_{i},e_{i}]}=\frac{1}{d_{i}e_{i}}\sum_{u_{i}|d_{i},e_{i}}\varphi(u_{i})
+
+to rewrite the main term as
+
+(5.5)
+
+NW​∑u1,…,uk(∏i=1kφ⁡(ui))​∑′d1,…,dke1,…,ekui|di,ei​∀i′​λd1,…,dk​λe1,…,ek(∏i=1kdi)​(∏i=1kei).\frac{N}{W}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}\varphi(u_{i})\Bigr)\sideset{}{{}^{\prime}}{\sum}_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\\
+u_{i}|d_{i},e_{i}\forall i\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}}{(\prod_{i=1}^{k}d_{i})(\prod_{i=1}^{k}e_{i})}.
+
+We recall that λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} is supported on integers d1,…,dkd_{1},\dotsc,d_{k} with (di,W)=1(d_{i},W)=1 for each ii and (di,dj)=1(d_{i},d_{j})=1 for all i≠ji\neq j. Thus we may drop the requirement that WW is coprime to each of the [di,ei][d_{i},e_{i}] from the summation, since these terms have no contribution. Similarly, we may drop the requirement that the did_{i} variables are all pairwise coprime, and the requirement that the eie_{i} variables are all pairwise coprime. Thus the only remaining restriction coming from the pairwise coprimality of W,[d1,e1],…,[dk,ek]W,[d_{1},e_{1}],\dotsc,[d_{k},e_{k}] is that (di,ej)=1(d_{i},e_{j})=1 for all i≠ji\neq j.
+
+We can remove the requirement that (di,ej)=1(d_{i},e_{j})=1 by multiplying our expression by ∑si,j|di,ejμ⁡(si,j)\sum_{s_{i,j}|d_{i},e_{j}}\mu(s_{i,j}). We do this for all i,ji,j with i≠ji\neq j. This transforms the main term to
+
+(5.6)
+
+NW​∑u1,…,uk(∏i=1kφ⁡(ui))​∑s1,2,…,sk,k−1(∏1≤i,j≤ki≠jμ⁡(si,j))​∑d1,…,dke1,…,ekui|di,ei​∀isi,j|di,ej​∀i≠jλd1,…,dk​λe1,…,ek(∏i=1kdi)​(∏i=1kei).\frac{N}{W}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}\varphi(u_{i})\Bigr)\sum_{s_{1,2},\dotsc,s_{k,k-1}}\Bigl(\prod_{\begin{subarray}{c}1\leq i,j\leq k\\
+i\neq j\end{subarray}}\mu(s_{i,j})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\\
+u_{i}|d_{i},e_{i}\forall i\\
+s_{i,j}|d_{i},e_{j}\forall i\neq j\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}}{(\prod_{i=1}^{k}d_{i})(\prod_{i=1}^{k}e_{i})}.
+
+We can restrict the si,js_{i,j} to be coprime to uiu_{i} and uju_{j}, because terms with si,js_{i,j} not coprime to uiu_{i} or uju_{j} make no contribution to our sum. This is because λd1,…,dk=0\lambda_{d_{1},\dots,d_{k}}=0 unless (di,dj)=1(d_{i},d_{j})=1. Similarly we can further restrict our sum so that si,js_{i,j} is coprime to si,as_{i,a} and sb,js_{b,j} for all a≠ja\neq j and b≠ib\neq i. We denote the summation over s1,2,…,sk,k−1s_{1,2},\dotsc,s_{k,k-1} with these restrictions by ∑∗\sum^{*}.
+
+We now introduce a change of variables to make the estimation of the sum more straightforward. We let
+
+(5.7)
+
+yr1,…,rk=(∏i=1kμ⁡(ri)​φ​(ri))​∑d1,…,dkri|di​∀iλd1,…,dk∏i=1kdi.y_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})\varphi(r_{i})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+r_{i}|d_{i}\forall i\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}}{\prod_{i=1}^{k}d_{i}}.
+
+This change is invertible. For d1,…,dkd_{1},\dotsc,d_{k} with ∏i=1kdi\prod_{i=1}^{k}d_{i} square-free we find that
+
+∑r1,…,rkdi|ri​∀iyr1,…,rk∏i=1kφ⁡(ri)\displaystyle\sum_{\begin{subarray}{c}r_{1},\dotsc,r_{k}\\
+d_{i}|r_{i}\forall i\end{subarray}}\frac{y_{r_{1},\dotsc,r_{k}}}{\prod_{i=1}^{k}\varphi(r_{i})}
+=∑r1,…,rkdi|ri​∀i(∏i=1kμ⁡(ri))​∑e1,…,ekri|ei​∀iλe1,…,ek∏i=1kei\displaystyle=\sum_{\begin{subarray}{c}r_{1},\dotsc,r_{k}\\
+d_{i}|r_{i}\forall i\end{subarray}}\Bigl(\prod_{i=1}^{k}\mu(r_{i})\Bigr)\sum_{\begin{subarray}{c}e_{1},\dotsc,e_{k}\\
+r_{i}|e_{i}\forall i\end{subarray}}\frac{\lambda_{e_{1},\dotsc,e_{k}}}{\prod_{i=1}^{k}e_{i}}
+
+(5.8)
+
+=∑e1,…,ekλe1,…,ek∏i=1kei​∑r1,…,rkdi|ri​∀iri|ei​∀i∏i=1kμ⁡(ri)=λd1,…,dk∏i=1kμi​(di)​di.\displaystyle=\sum_{e_{1},\dotsc,e_{k}}\frac{\lambda_{e_{1},\dotsc,e_{k}}}{\prod_{i=1}^{k}e_{i}}\sum_{\begin{subarray}{c}r_{1},\dotsc,r_{k}\\
+d_{i}|r_{i}\forall i\\
+r_{i}|e_{i}\forall i\end{subarray}}\prod_{i=1}^{k}\mu(r_{i})=\frac{\lambda_{d_{1},\dotsc,d_{k}}}{\prod_{i=1}^{k}\mu_{i}(d_{i})d_{i}}.
+
+Thus any choice of yr1,…,rky_{r_{1},\dotsc,r_{k}} supported on r1,…,rkr_{1},\dotsc,r_{k}, with the product r=∏i=1krir=\prod_{i=1}^{k}r_{i} square-free and satisfying r<Rr<R and (r,W)=1(r,W)=1, will give a suitable choice of λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}}. We let ym​a​x=supr1,…,rk|yr1,…,rk|y_{max}=\sup_{r_{1},\dotsc,r_{k}}|y_{r_{1},\dotsc,r_{k}}|. Now, since d/φ⁡(d)=∑e|d1/φ⁡(e)d/\varphi(d)=\sum_{e|d}1/\varphi(e) for square-free dd, we find by taking r′=∏i=1kri/dir^{\prime}=\prod_{i=1}^{k}r_{i}/d_{i} that
+
+λm​a​x\displaystyle\lambda_{max}
+≤supd1,…,dk∏i=1kdi​ square-freeym​a​x​(∏i=1kdi)​∑r1,…,rkdi|ri​∀i∏i=1kri<R∏i=1kri​ square-free(∏i=1kμ​(ri)2φ⁡(ri))\displaystyle\leq\sup_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+\prod_{i=1}^{k}d_{i}\text{ square-free}\end{subarray}}y_{max}\Bigl(\prod_{i=1}^{k}d_{i}\Bigr)\sum_{\begin{subarray}{c}r_{1},\dotsc,r_{k}\\
+d_{i}|r_{i}\forall i\\
+\prod_{i=1}^{k}r_{i}<R\\
+\prod_{i=1}^{k}r_{i}\text{ square-free}\end{subarray}}\Bigl(\prod_{i=1}^{k}\frac{\mu(r_{i})^{2}}{\varphi(r_{i})}\Bigr)
+
+≤ym​a​x​supd1,…,dk∏i=1kdi​ square-free(∏i=1kdiφ⁡(di))​∑r′<R/∏i=1kdi(r′,∏i=1kdi)=1μ​(r′)2​τk​(r′)φ⁡(r′)\displaystyle\leq y_{max}\sup_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+\prod_{i=1}^{k}d_{i}\text{ square-free}\end{subarray}}\Bigl(\prod_{i=1}^{k}\frac{d_{i}}{\varphi(d_{i})}\Bigr)\sum_{\begin{subarray}{c}r^{\prime}<R/\prod_{i=1}^{k}d_{i}\\
+(r^{\prime},\prod_{i=1}^{k}d_{i})=1\end{subarray}}\frac{\mu(r^{\prime})^{2}\tau_{k}(r^{\prime})}{\varphi(r^{\prime})}
+
+≤ym​a​x​supd1,…,dk∑d|∏i=1kdiμ​(d)2φ⁡(d)​∑r′<R/∏i=1kdi(r′,∏i=1kdi)=1μ​(r′)2​τk​(r′)φ⁡(r′)\displaystyle\leq y_{max}\sup_{d_{1},\dotsc,d_{k}}\sum_{d|\prod_{i=1}^{k}d_{i}}\frac{\mu(d)^{2}}{\varphi(d)}\sum_{\begin{subarray}{c}r^{\prime}<R/\prod_{i=1}^{k}d_{i}\\
+(r^{\prime},\prod_{i=1}^{k}d_{i})=1\end{subarray}}\frac{\mu(r^{\prime})^{2}\tau_{k}(r^{\prime})}{\varphi(r^{\prime})}
+
+(5.9)
+
+≤ym​a​x​∑u<Rμ​(u)2​τk​(u)φ⁡(u)≪ym​a​x​(log⁡R)k.\displaystyle\leq y_{max}\sum_{u<R}\frac{\mu(u)^{2}\tau_{k}(u)}{\varphi(u)}\ll y_{max}(\log{R})^{k}.
+
+In the last line we have taken u=d​r′u=dr^{\prime}, and used the fact τk​(d​r′)≥τk​(r′)\tau_{k}(dr^{\prime})\geq\tau_{k}(r^{\prime}). Hence the error term O⁡(λm​a​x2​R2​(log⁡N)2​k)O(\lambda_{max}^{2}R^{2}(\log{N})^{2k}) is of size O⁡(ym​a​x2​R2​(log⁡N)4​k)O(y_{max}^{2}R^{2}(\log{N})^{4k}).
+
+Substituting our change of variables (5.7) into the main term (5.6), and using the above estimate for the error term, we obtain
+
+S1\displaystyle S_{1}
+=NW​∑u1,…,uk(∏i=1kφ⁡(ui))​∑∗s1,2,…,sk,k−1∗​(∏1≤i,j≤ki≠jμ⁡(si,j))​(∏i=1kμ⁡(ai)​μ​(bi)φ⁡(ai)​φ​(bi))​ya1,…,ak​yb1,…,bk\displaystyle=\frac{N}{W}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}\varphi(u_{i})\Bigr)\sideset{}{{}^{*}}{\sum}_{s_{1,2},\dotsc,s_{k,k-1}}\Bigl(\prod_{\begin{subarray}{c}1\leq i,j\leq k\\
+i\neq j\end{subarray}}\mu(s_{i,j})\Bigr)\Bigl(\prod_{i=1}^{k}\frac{\mu(a_{i})\mu(b_{i})}{\varphi(a_{i})\varphi(b_{i})}\Bigr)y_{a_{1},\dotsc,a_{k}}y_{b_{1},\dotsc,b_{k}}
+
+(5.10)
+
++O⁡(ym​a​x2​R2​(log⁡R)4​k),\displaystyle\qquad+O\Bigl(y_{max}^{2}R^{2}(\log{R})^{4k}\Bigr),
+
+where aj=uj​∏i≠jsj,ia_{j}=u_{j}\prod_{i\neq j}s_{j,i} and bj=uj​∏i≠jsi,jb_{j}=u_{j}\prod_{i\neq j}s_{i,j}. In these expressions we have used the fact that we have restricted si,js_{i,j} to be coprime to the other terms in the expression for aia_{i} and bjb_{j}. For the same reason we may rewrite μ⁡(aj)\mu(a_{j}) as μ⁡(uj)​∏i≠jμ⁡(si,j)\mu(u_{j})\prod_{i\neq j}\mu(s_{i,j}), and similarly for φ⁡(aj)\varphi(a_{j}), μ⁡(bj)\mu(b_{j}) and φ⁡(bj)\varphi(b_{j}). This gives us
+
+(5.11)
+
+S1\displaystyle S_{1}
+=NW​∑u1,…,uk(∏i=1kμ​(ui)2φ⁡(ui))​∑∗s1,2,…,sk,k−1∗​(∏1≤i,j≤ki≠jμ⁡(si,j)φ​(si,j)2)​ya1,…,ak​yb1,…,bk+O⁡(ym​a​x2​R2​(log⁡R)4​k).\displaystyle=\frac{N}{W}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}\frac{\mu(u_{i})^{2}}{\varphi(u_{i})}\Bigr)\sideset{}{{}^{*}}{\sum}_{s_{1,2},\dotsc,s_{k,k-1}}\Bigl(\prod_{\begin{subarray}{c}1\leq i,j\leq k\\
+i\neq j\end{subarray}}\frac{\mu(s_{i,j})}{\varphi(s_{i,j})^{2}}\Bigr)y_{a_{1},\dotsc,a_{k}}y_{b_{1},\dotsc,b_{k}}+O\Bigl(y_{max}^{2}R^{2}(\log{R})^{4k}\Bigr).
+
+We see that there is no contribution from si,js_{i,j} with (si,j,W)≠1(s_{i,j},W)\neq 1 because of the restricted support of yy. Thus we only need to consider si,j=1s_{i,j}=1 or si,j>D0s_{i,j}>D_{0}. The contribution when si,j>D0s_{i,j}>D_{0} is
+
+(5.12)
+
+≪ym​a​x2​NW​(∑u<R(u,W)=1μ​(u)2φ⁡(u))k​(∑si,j>D0μ​(si,j)2φ​(si,j)2)​(∑s≥1μ​(s)2φ​(s)2)k2−k−1≪ym​a​x2​φ​(W)k​N​(log⁡R)kWk+1​D0.\displaystyle\ll\frac{y_{max}^{2}N}{W}\Bigl(\sum_{\begin{subarray}{c}u<R\\
+(u,W)=1\end{subarray}}\frac{\mu(u)^{2}}{\varphi(u)}\Bigr)^{k}\Bigl(\sum_{s_{i,j}>D_{0}}\frac{\mu(s_{i,j})^{2}}{\varphi(s_{i,j})^{2}}\Bigr)\Bigl(\sum_{s\geq 1}\frac{\mu(s)^{2}}{\varphi(s)^{2}}\Bigr)^{k^{2}-k-1}\ll\frac{y_{max}^{2}\varphi(W)^{k}N(\log{R})^{k}}{W^{k+1}D_{0}}.
+
+Thus we may restrict our attention to the case when si,j=1s_{i,j}=1 ∀i≠j\forall i\neq j. This gives
+
+(5.13)
+
+S1=NW​∑u1,…,ukyu1,…,uk2∏i=1kφ⁡(ui)+O⁡(ym​a​x2​φ​(W)k​N​(log⁡R)kWk+1​D0+ym​a​x2​R2​(log⁡R)4​k).S_{1}=\frac{N}{W}\sum_{u_{1},\dotsc,u_{k}}\frac{y_{u_{1},\dotsc,u_{k}}^{2}}{\prod_{i=1}^{k}\varphi(u_{i})}+O\left(\frac{y_{max}^{2}\varphi(W)^{k}N(\log{R})^{k}}{W^{k+1}D_{0}}+y_{max}^{2}R^{2}(\log{R})^{4k}\right).
+
+We recall that R2=Nθ−2​δ≤N1−2​δR^{2}=N^{\theta-2\delta}\leq N^{1-2\delta} and W≪NδW\ll N^{\delta}, and so the first error term dominates. This gives the result.
+∎
+
+We now consider S2S_{2}. We write S2=∑m=1kS2(m)S_{2}=\sum_{m=1}^{k}S_{2}^{(m)}, where
+
+(5.14)
+
+S2(m)=∑N≤n<2​Nn≡v0(modW)χℙ​(n+hm)​(∑d1,…,dkdi|n+hi​∀iλd1,…,dk)2.S_{2}^{(m)}=\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\end{subarray}}\chi_{\mathbb{P}}(n+h_{m})\Bigl(\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+d_{i}|n+h_{i}\forall i\end{subarray}}\lambda_{d_{1},\dotsc,d_{k}}\Bigr)^{2}.
+
+We now estimate S2(m)S_{2}^{(m)} in a similar way to our treatment of S1S_{1}.
+
+Lemma 5.2.
+
+Let
+
+yr1,…,rk(m)=(∏i=1kμ⁡(ri)​g​(ri))​∑d1,…,dkri|di​∀idm=1λd1,…,dk∏i=1kφ⁡(di),y^{(m)}_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})g(r_{i})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+r_{i}|d_{i}\forall i\\
+d_{m}=1\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}}{\prod_{i=1}^{k}\varphi(d_{i})},
+
+where gg is the totally multiplicative function defined on primes by g⁡(p)=p−2g(p)=p-2. Let ym​a​x(m)=supr1,…,rk|yr1,…,rk(m)|y^{(m)}_{max}=\sup_{r_{1},\dotsc,r_{k}}|y^{(m)}_{r_{1},\dotsc,r_{k}}|. Then for any fixed A>0A>0 we have
+
+S2(m)=Nφ⁡(W)​log⁡N​∑r1,…,rk(yr1,…,rk(m))2∏i=1kg⁡(ri)+O⁡((ym​a​x(m))2​φ​(W)k−2​N​(log⁡N)k−2Wk−1​D0)+O⁡(ym​a​x2​N(log⁡N)A).S_{2}^{(m)}=\frac{N}{\varphi(W)\log{N}}\sum_{r_{1},\dotsc,r_{k}}\frac{(y^{(m)}_{r_{1},\dotsc,r_{k}})^{2}}{\prod_{i=1}^{k}g(r_{i})}+O\Bigl(\frac{(y^{(m)}_{max})^{2}\varphi(W)^{k-2}N(\log{N})^{k-2}}{W^{k-1}D_{0}}\Bigr)+O\Bigl(\frac{y_{max}^{2}N}{(\log{N})^{A}}\Bigr).
+
+Proof.
+
+We first expand out the square and swap the order of summation to give
+
+(5.15)
+
+S2(m)=∑d1,…,dke1,…,ekλd1,…,dk​λe1,…,ek​∑N≤n<2​Nn≡v0(modW)[di,ei]|n+hi​∀iχℙ​(n+hm).S_{2}^{(m)}=\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\end{subarray}}\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\\
+[d_{i},e_{i}]|n+h_{i}\forall i\end{subarray}}\chi_{\mathbb{P}}(n+h_{m}).
+
+As with S1S_{1}, the inner sum can be written as a sum over a single residue class modulo q=W​∏i=1k[di,ei]q=W\prod_{i=1}^{k}[d_{i},e_{i}], provided that W,[d1,e1],…,[dk,ek]W,[d_{1},e_{1}],\dotsc,[d_{k},e_{k}] are pairwise coprime. The integer n+hmn+h_{m} will lie in a residue class coprime to the modulus if and only if dm=em=1d_{m}=e_{m}=1. In this case the inner sum will contribute XN/φ⁡(q)+O⁡(E⁡(N,q))X_{N}/\varphi(q)+O(E(N,q)), where
+
+(5.16)
+
+E⁡(N,q)\displaystyle E(N,q)
+=1+sup(a,q)=1|∑N≤n<2​Nn≡a(modq)χℙ​(n)−1φ⁡(q)​∑N≤n<2​Nχℙ​(n)|,\displaystyle=1+\sup_{(a,q)=1}\Bigl|\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv a\pmod{q}\end{subarray}}\chi_{\mathbb{P}}(n)-\frac{1}{\varphi(q)}\sum_{N\leq n<2N}\chi_{\mathbb{P}}(n)\Bigr|,
+
+(5.17)
+
+XN\displaystyle X_{N}
+=∑N≤n<2​Nχℙ​(n).\displaystyle=\sum_{N\leq n<2N}\chi_{\mathbb{P}}(n).
+
+If either one pair of W,[d1,e1],…,[dk,ek]W,[d_{1},e_{1}],\dotsc,[d_{k},e_{k}] share a common factor, or if either dmd_{m} or eme_{m} are not 11, then the contribution of the inner sum is zero. Thus we obtain
+
+(5.18)
+
+S2(m)=XNφ⁡(W)​∑′d1,…,dke1,…,ekem=dm=1′​λd1,…,dk​λe1,…,ek∏i=1kφ⁡([di,ei])+O⁡(∑d1,…,dke1,…,ek|λd1,…,dk​λe1,…,ek|​E​(N,q)),S_{2}^{(m)}=\frac{X_{N}}{\varphi(W)}\sideset{}{{}^{\prime}}{\sum}_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\\
+e_{m}=d_{m}=1\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}}{\prod_{i=1}^{k}\varphi([d_{i},e_{i}])}+O\Bigl(\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\end{subarray}}|\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}|E(N,q)\Bigr),
+
+where we have written q=W​∏i=1k[di,ei]q=W\prod_{i=1}^{k}[d_{i},e_{i}].
+
+We first deal with the contribution from the error terms. From the support of λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}}, we see that we only need to consider square-free qq with q<R2​Wq<R^{2}W. Given a square-free integer rr, there are at most τ3​k​(r)\tau_{3k}(r) choices of d1,…,dk,e1,…,ekd_{1},\dotsc,d_{k},e_{1},\dotsc,e_{k} for which W​∏i=1k[di,ei]=rW\prod_{i=1}^{k}[d_{i},e_{i}]=r. We also recall from (5.9) that λm​a​x≪ym​a​x​(log⁡R)k\lambda_{max}\ll y_{max}(\log{R})^{k}. Thus the error term contributes
+
+(5.19)
+
+≪ym​a​x2​(log⁡R)2​k​∑r<R2​Wμ​(r)2​τ3​k​(r)​E​(N,r).\ll y_{max}^{2}(\log{R})^{2k}\sum_{r<R^{2}W}\mu(r)^{2}\tau_{3k}(r)E(N,r).
+
+By Cauchy-Schwarz, the trivial bound E⁡(N,q)≪N/φ⁡(q)E(N,q)\ll N/\varphi(q), and our hypothesis that the primes have level of distribution θ\theta, this contributes for any fixed A>0A>0
+
+(5.20)
+
+≪ym​a​x2​(log⁡R)2​k​(∑r<R2​Wμ​(r)2​τ3​k2​(r)​Nφ⁡(r))1/2​(∑r<R2​Wμ​(r)2​E​(N,r))1/2≪ym​a​x2​N(log⁡N)A.\ll y_{max}^{2}(\log{R})^{2k}\Bigl(\sum_{r<R^{2}W}\mu(r)^{2}\tau^{2}_{3k}(r)\frac{N}{\varphi(r)}\Bigr)^{1/2}\Bigl(\sum_{r<R^{2}W}\mu(r)^{2}E(N,r)\Bigr)^{1/2}\ll\frac{y_{max}^{2}N}{(\log{N})^{A}}.
+
+We now concentrate on the main sum. As in the treatment of S1S_{1} in the proof of Lemma 5.1, we rewrite the conditions (di,ej)=1(d_{i},e_{j})=1 by multiplying our expression by ∑si,j|di,ejμ⁡(si,j)\sum_{s_{i,j}|d_{i},e_{j}}\mu(s_{i,j}). Again we may restrict si,js_{i,j} to be coprime to uiu_{i}, uju_{j}, si,as_{i,a} and sb,js_{b,j} for all a≠ja\neq j and b≠ib\neq i. We denote the summation subject to these restrictions by ∑∗\sum^{*}. We also split the φ⁡([di,ei])\varphi([d_{i},e_{i}]) terms by using the equation (valid for square-free di,eid_{i},e_{i})
+
+(5.21)
+
+1φ⁡([di,ei])=1φ⁡(di)​φ​(ei)​∑ui|di,eig⁡(ui),\frac{1}{\varphi([d_{i},e_{i}])}=\frac{1}{\varphi(d_{i})\varphi(e_{i})}\sum_{u_{i}|d_{i},e_{i}}g(u_{i}),
+
+where gg is the totally multiplicative function defined on primes by g⁡(p)=p−2g(p)=p-2. This gives us
+a main term of
+
+(5.22)
+
+XNφ⁡(W)​∑u1,…,uk(∏i=1kg⁡(ui))​∑∗s1,2,…,sk,k−1∗​(∏1≤i,j≤ki≠jμ⁡(si,j))​∑d1,…,dke1,…,ekui|di,ei​∀isi,j|di,ej​∀i≠jdm=em=1λd1,…,dk​λe1,…,ek∏i=1kφ⁡(di)​φ​(ei).\frac{X_{N}}{\varphi(W)}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}g(u_{i})\Bigr)\sideset{}{{}^{*}}{\sum}_{s_{1,2},\dotsc,s_{k,k-1}}\Bigl(\prod_{\begin{subarray}{c}1\leq i,j\leq k\\
+i\neq j\end{subarray}}\mu(s_{i,j})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+e_{1},\dotsc,e_{k}\\
+u_{i}|d_{i},e_{i}\forall i\\
+s_{i,j}|d_{i},e_{j}\forall i\neq j\\
+d_{m}=e_{m}=1\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}\lambda_{e_{1},\dotsc,e_{k}}}{\prod_{i=1}^{k}\varphi(d_{i})\varphi(e_{i})}.
+
+We have now separated the dependencies between the ee and dd variables, so again we make a substitution. We let
+
+(5.23)
+
+yr1,…,rk(m)=(∏i=1kμ⁡(ri)​g​(ri))​∑d1,…,dkri|di​∀idm=1λd1,…,dk∏i=1kφ⁡(di).y^{(m)}_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})g(r_{i})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+r_{i}|d_{i}\forall i\\
+d_{m}=1\end{subarray}}\frac{\lambda_{d_{1},\dotsc,d_{k}}}{\prod_{i=1}^{k}\varphi(d_{i})}.
+
+We note yr1,…,rk(m)=0y^{(m)}_{r_{1},\dotsc,r_{k}}=0 unless rm=1r_{m}=1. Substituting this into (5.22), we obtain a main term of
+
+(5.24)
+
+XNφ⁡(W)​∑u1,…,uk(∏i=1kμ​(ui)2g⁡(ui))​∑∗s1,2,…,sk,k−1∗​(∏1≤i,j≤ki≠jμ⁡(si,j)g​(si,j)2)​ya1,…,ak(m)​yb1,…,bk(m),\frac{X_{N}}{\varphi(W)}\sum_{u_{1},\dotsc,u_{k}}\Bigl(\prod_{i=1}^{k}\frac{\mu(u_{i})^{2}}{g(u_{i})}\Bigr)\sideset{}{{}^{*}}{\sum}_{s_{1,2},\dotsc,s_{k,k-1}}\Bigl(\prod_{\begin{subarray}{c}1\leq i,j\leq k\\
+i\neq j\end{subarray}}\frac{\mu(s_{i,j})}{g(s_{i,j})^{2}}\Bigr)y^{(m)}_{a_{1},\dotsc,a_{k}}y^{(m)}_{b_{1},\dotsc,b_{k}},
+
+where aj=uj​∏i≠jsj,ia_{j}=u_{j}\prod_{i\neq j}s_{j,i} and bj=uj​∏i≠jsi,jb_{j}=u_{j}\prod_{i\neq j}s_{i,j} for each 1≤j≤k1\leq j\leq k. As before, we have replaced μ⁡(aj)\mu(a_{j}) with μ⁡(uj)​∏i≠jμ⁡(sj,i)\mu(u_{j})\prod_{i\neq j}\mu(s_{j,i}) (and similarly for g⁡(aj)g(a_{j}), μ⁡(bj)\mu(b_{j}) and g⁡(bj)g(b_{j})). This is valid since terms with aja_{j} or bjb_{j} not square-free make no contribution.
+
+We see the contribution from si,j≠1s_{i,j}\neq 1 is of size
+
+≪(ym​a​x(m))2​Nφ⁡(W)​log⁡N(∑u<R(u,W)=1μ​(u)2g⁡(u))k−1(∑sμ​(s)2g​(s)2)k⁡(k−1)−1∑si,j>D0μ​(si,j)2g​(si,j)2\displaystyle\ll\frac{(y^{(m)}_{max})^{2}N}{\varphi(W)\log{N}}\Bigr(\sum_{\begin{subarray}{c}u<R\\
+(u,W)=1\end{subarray}}\frac{\mu(u)^{2}}{g(u)}\Bigr)^{k-1}\Bigl(\sum_{s}\frac{\mu(s)^{2}}{g(s)^{2}}\Bigr)^{k(k-1)-1}\sum_{s_{i,j}>D_{0}}\frac{\mu(s_{i,j})^{2}}{g(s_{i,j})^{2}}
+
+(5.25)
+
+≪(ym​a​x(m))2​φ​(W)k−2​N​(log⁡R)k−1Wk−1​D0​log⁡N.\displaystyle\ll\frac{(y^{(m)}_{max})^{2}\varphi(W)^{k-2}N(\log{R})^{k-1}}{W^{k-1}D_{0}\log{N}}.
+
+Thus we find that
+
+(5.26)
+
+S2(m)=XNφ⁡(W)​∑u1,…,uk(yu1,…,uk(m))2∏i=1kg⁡(ui)+O⁡((ym​a​x(m))2​φ​(W)k−2​N​(log⁡R)k−2D0​Wk−1)+O⁡(ym​a​x2​N(log⁡N)A).S_{2}^{(m)}=\frac{X_{N}}{\varphi(W)}\sum_{u_{1},\dotsc,u_{k}}\frac{(y^{(m)}_{u_{1},\dotsc,u_{k}})^{2}}{\prod_{i=1}^{k}g(u_{i})}+O\Bigl(\frac{(y_{max}^{(m)})^{2}\varphi(W)^{k-2}N(\log{R})^{k-2}}{D_{0}W^{k-1}}\bigr)+O\Bigl(\frac{y_{max}^{2}N}{(\log{N})^{A}}\Bigr).
+
+Finally, by the prime number theorem, XN=N/log⁡N+O⁡(N/(log⁡N)2)X_{N}=N/\log{N}+O(N/(\log{N})^{2}). This error term contributes
+
+(5.27)
+
+≪(ym​a​x(m))2​Nφ⁡(W)​(log⁡N)2​(∑u<R(u,W)=1μ​(u)2g⁡(u))k−1≪(ym​a​x(m))2​φ​(W)k−2​N​(log⁡R)k−3Wk−1,\ll\frac{(y^{(m)}_{max})^{2}N}{\varphi(W)(\log{N})^{2}}\Bigl(\sum_{\begin{subarray}{c}u<R\\
+(u,W)=1\end{subarray}}\frac{\mu(u)^{2}}{g(u)}\Bigr)^{k-1}\ll\frac{(y^{(m)}_{max})^{2}\varphi(W)^{k-2}N(\log{R})^{k-3}}{W^{k-1}},
+
+which can be absorbed into the first error term of (5.26). This completes the proof.
+∎
+
+Remark.
+
+In our proof of Lemma 5.2 we only really require λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} to be supported on d1,…,dkd_{1},\dotsc,d_{k} satisfying ∏i≠jdi<R\prod_{i\neq j}d_{i}<R for all jj instead of ∏i=1kdi<R\prod_{i=1}^{k}d_{i}<R. For k≥3k\geq 3, the numerical benefit of this extension is small and so we do not consider it further.
+
+Remark.
+
+As our result relies on the Bombieri-Vinogradov theorem, the implied constant in the error term is not effectively computable. However, if we restrict the λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} to be supported on did_{i} which are coprime to the largest prime factor of a possible exceptional modulus of a primitive character then we can make this error term (and all others in this paper) effective at the cost of a negligible error.
+
+We now relate our new variables yr1,…,rk(m)y^{(m)}_{r_{1},\dotsc,r_{k}} to the yr1,…,rky_{r_{1},\dotsc,r_{k}} variables from S1S_{1}.
+
+Lemma 5.3.
+
+If rm=1r_{m}=1 then
+
+yr1,…,rk(m)=∑amyr1,…,rm−1,am,rm+1,…,rkφ⁡(am)+O⁡(ym​a​x​φ​(W)​log⁡RW​D0).y^{(m)}_{r_{1},\dotsc,r_{k}}=\sum_{a_{m}}\frac{y_{r_{1},\dotsc,r_{m-1},a_{m},r_{m+1},\dotsc,r_{k}}}{\varphi(a_{m})}+O\Bigl(\frac{y_{max}\varphi(W)\log{R}}{WD_{0}}\Bigr).
+
+Proof.
+
+We assume throughout the proof that rm=1r_{m}=1. We first substitute our expression (5.8) into the definition (5.23). This gives
+
+(5.28)
+
+yr1,…,rk(m)=(∏i=1kμ⁡(ri)​g​(ri))​∑d1,…,dkri|di​∀idm=1(∏i=1kμ⁡(di)​diφ⁡(di))​∑a1,…,akdi|ai​∀iya1,…,ak∏i=1kφ⁡(ai).y^{(m)}_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})g(r_{i})\Bigr)\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+r_{i}|d_{i}\forall i\\
+d_{m}=1\end{subarray}}\Bigl(\prod_{i=1}^{k}\frac{\mu(d_{i})d_{i}}{\varphi(d_{i})}\Bigr)\sum_{\begin{subarray}{c}a_{1},\dotsc,a_{k}\\
+d_{i}|a_{i}\forall i\end{subarray}}\frac{y_{a_{1},\dotsc,a_{k}}}{\prod_{i=1}^{k}\varphi(a_{i})}.
+
+We swap the summation of the dd and aa variables to give
+
+(5.29)
+
+yr1,…,rk(m)=(∏i=1kμ⁡(ri)​g​(ri))​∑a1,…,akri|ai​∀iya1,…,ak∏i=1kφ⁡(ai)​∑d1,…,dkdi|ai,ri|di​∀idm=1∏i=1kμ⁡(di)​diφ⁡(di).y^{(m)}_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\mu(r_{i})g(r_{i})\Bigr)\sum_{\begin{subarray}{c}a_{1},\dotsc,a_{k}\\
+r_{i}|a_{i}\forall i\end{subarray}}\frac{y_{a_{1},\dotsc,a_{k}}}{\prod_{i=1}^{k}\varphi(a_{i})}\sum_{\begin{subarray}{c}d_{1},\dotsc,d_{k}\\
+d_{i}|a_{i},r_{i}|d_{i}\forall i\\
+d_{m}=1\end{subarray}}\prod_{i=1}^{k}\frac{\mu(d_{i})d_{i}}{\varphi(d_{i})}.
+
+We can now evaluate the sum over d1,…,dkd_{1},\dotsc,d_{k} explicitly. This gives
+
+(5.30)
+
+yr1,…,rk(m)\displaystyle y^{(m)}_{r_{1},\dotsc,r_{k}}
+=(∏i=1kμ⁡(ri)​g​(ri))​∑a1,…,akri|ai​∀iya1,…,ak∏i=1kφ⁡(ai)​∏i≠mμ⁡(ai)​riφ⁡(ai).\displaystyle=\Bigl(\prod_{i=1}^{k}\mu(r_{i})g(r_{i})\Bigr)\sum_{\begin{subarray}{c}a_{1},\dotsc,a_{k}\\
+r_{i}|a_{i}\forall i\end{subarray}}\frac{y_{a_{1},\dotsc,a_{k}}}{\prod_{i=1}^{k}\varphi(a_{i})}\prod_{i\neq m}\frac{\mu(a_{i})r_{i}}{\varphi(a_{i})}.
+
+We see that from the support of ya1,…,aky_{a_{1},\dotsc,a_{k}} that we may restrict the summation over aja_{j} to (aj,W)=1(a_{j},W)=1. Thus either aj=rja_{j}=r_{j} or aj>D0​rja_{j}>D_{0}r_{j}. For j≠mj\neq m, the total contribution from aj≠rja_{j}\neq r_{j} is
+
+≪ym​a​x​(∏i=1kg⁡(ri)​ri)​(∑aj>D0​rjrj|ajμ​(aj)2φ​(aj)2)​(∑am<R(am,W)=1μ​(am)2φ⁡(am))​∏1≤i≤ki≠j,m(∑ri|aiμ​(ai)2φ​(ai)2)\displaystyle\ll y_{max}\Bigl(\prod_{i=1}^{k}g(r_{i})r_{i}\Bigr)\Bigl(\sum_{\begin{subarray}{c}a_{j}>D_{0}r_{j}\\
+r_{j}|a_{j}\end{subarray}}\frac{\mu(a_{j})^{2}}{\varphi(a_{j})^{2}}\Bigr)\Bigl(\sum_{\begin{subarray}{c}a_{m}<R\\
+(a_{m},W)=1\end{subarray}}\frac{\mu(a_{m})^{2}}{\varphi(a_{m})}\Bigr)\prod_{\begin{subarray}{c}1\leq i\leq k\\
+i\neq j,m\end{subarray}}\Bigl(\sum_{r_{i}|a_{i}}\frac{\mu(a_{i})^{2}}{\varphi(a_{i})^{2}}\Bigr)
+
+(5.31)
+
+≪(∏i=1kg⁡(ri)​riφ​(ri)2)​ym​a​x​φ​(W)​log⁡RW​D0≪ym​a​x​φ​(W)​log⁡RW​D0.\displaystyle\ll\Bigl(\prod_{i=1}^{k}\frac{g(r_{i})r_{i}}{\varphi(r_{i})^{2}}\Bigr)\frac{y_{max}\varphi(W)\log{R}}{WD_{0}}\ll\frac{y_{max}\varphi(W)\log{R}}{WD_{0}}.
+
+Thus we find that the main contribution is when aj=rja_{j}=r_{j} for all j≠mj\neq m. We have
+
+(5.32)
+
+yr1,…,rk(m)=(∏i=1kg⁡(ri)​riφ​(ri)2)​∑amyr1,…,rm−1,am,rm+1,…,rkφ⁡(am)+O⁡(ym​a​x​φ​(W)​log⁡RW​D0).\displaystyle y^{(m)}_{r_{1},\dotsc,r_{k}}=\Bigl(\prod_{i=1}^{k}\frac{g(r_{i})r_{i}}{\varphi(r_{i})^{2}}\Bigr)\sum_{a_{m}}\frac{y_{r_{1},\dotsc,r_{m-1},a_{m},r_{m+1},\dotsc,r_{k}}}{\varphi(a_{m})}+O\Bigl(\frac{y_{max}\varphi(W)\log{R}}{WD_{0}}\Bigr).
+
+We note that g⁡(p)​p/φ​(p)2=1+O⁡(p−2)g(p)p/\varphi(p)^{2}=1+O(p^{-2}). Thus, since the contribution is zero unless ∏i=1kri\prod_{i=1}^{k}r_{i} is coprime to WW, we see that the product in the above expression may be replaced by 1+O⁡(D0−1)1+O(D_{0}^{-1}). This gives the result.
+∎

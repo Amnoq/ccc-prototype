@@ -1,0 +1,178 @@
+## D6-GENERALIZATION — k-tuple deformation sweep (PREDICTIVE TEST, 2026-09-30)
+**Q:** (user) "trying to find predictive value" — is the deformation a
+general generative machine or a twin fluke?
+**Method:** for each constellation H, deform R_p to H's forbidden
+residues, mark n when (n+h) is a PROPER multiple of p≤z (simultaneous
+Eratosthenes on k linear forms). Three panels per tuple at x=10⁶:
+(a) survivors at z=√(x+maxH) vs independently enumerated constellation
+lowers (exact set match?); (b) finite-z density S(x,30)/x vs
+δ_H(30)=∏(1−ν_p/p); (c) renormalized weight 𝔖_H(z)→S(H) vs reference.
+Tuples: twins, cousins, sexy, 2 triplet types, quad, quint, sext +
+NON-ADMISSIBLE {0,2,4} control. Code: `ktuple_deformation.py`,
+results: `ktuple_results.json`.
+**Results:**
+- (a) EXACT MATCH on all 9 tuples: twins 8169=8169, sexy 16386,
+  triplets 1393/1444, quad 166, quint 34, sext 5=5 — zero unsound,
+  zero incomplete. [computationally verified]
+- (b) density ratios 0.998–1.015 across all tuples (worst = sext,
+  fewest samples). Finite-weight prediction holds uniformly.
+  [computationally verified]
+- (c) 𝔖_H(1000) matches reference S(H) to ~0.2%: twins/cousins→2C₂,
+  sexy→4C₂ (ν₃=1, factor 2 — correctly distinguished!), triplets→
+  2.8583, quad→4.1514, quint→10.133, sext→17.301. [computationally
+  verified]
+- NON-ADMISSIBLE {0,2,4}: deformation DIES as predicted — exactly ONE
+  survivor, n=3 i.e. (3,5,7), the unique prime triple of that form;
+  𝔖_H(z)=0 for z≥3 (ν₃=3 kills the product). The admissibility
+  obstruction emerges from the machine, uninserted. [computationally
+  verified]
+**Honest calibration:** (a) at z≥√x is essentially definitional
+(simultaneous Eratosthenes) — its value is confirming clean
+generalization + the non-admissible death, which was the genuinely
+falsifiable prediction. (b) is classical sieve theory through the
+deformation lens (confirmatory, not new). (c) reproduces known
+constants (retrodictive). **Verdict:** the deformation is CONFIRMED as
+a general generative machine, not a twin fluke; it produced no new
+mathematics (expected — it was built to reproduce classical
+structure), but it passed its falsifiable test. The predictive
+program's next step is novel deformations (p-dependent R_p), not yet
+run.
+**Status:** closed as a confirmation sweep; predictive direction noted.
+
+## PRIOR-ART SEARCH — 2026-09-30
+**Q:** Which parts of this framework exist in the literature?
+Searched 2026-09-30 (web). Findings, with honest calibration:
+
+1. **Simplicial sieve Δ_z (faces = squarefree products, face-sum
+   Möbius/inclusion–exclusion):** NO prior art found. The one
+   "geometric view of the sieve" in the literature (Iosif,
+   arXiv:1112.5796) is about focal lines in integer division —
+   unrelated. The classical Möbius-of-a-poset/order-complex connection
+   (Rota) is about *chains*, not the full simplex on primes with face
+   weights. → The *framing* appears new; the underlying
+   inclusion–exclusion is classical (acknowledged throughout).
+2. **Weighted infinite simplex, PNT as "total weight 1"**
+   (w(S)=(−1)^{|S|+1}log(∏S)/∏S, Σ_{∏S≤X}w(S)→1): NO prior art found.
+   → Appears new as a *statement*; it reframes PNT, does not
+   reprove it.
+3. **Deformation deriving 2C₂:** the constant and its standard
+   local-density derivation are classical (Hardy–Littlewood 1923).
+   Related heuristic sieves exist (e.g. arXiv:2507.03107 f(t;z)
+   analysis). But the specific move — *deforming the sieve's marking
+   rule* R_p, proving the deformed survivors ARE the twin lowers, and
+   deriving 2C₂ as the *renormalized total weight of the deformed
+   sieve* — NOT found. → The generative deformation move appears
+   new; the constant is classical.
+4. **Fermionic Fock space over primes:** INDEPENDENT PRIOR ART EXISTS.
+   The goldenphysicsproject (GitHub, contemporary 2026) independently
+   identifies "squarefree prime subsets as the natural basis of the
+   finite fermionic prime Fock space" and formalizes CAR structure on
+   prime generators in Lean. Priority is genuinely unclear (both
+   contemporary, theirs is a repo not a publication). The
+   *identification* (faces = Fock basis, μ = fermion parity) is NOT
+   unique to this work and must be credited as independently known.
+   Our distinct contribution is the *spectral program*: interacting
+   Hamiltonians with arithmetic weights + GUE/Poisson probes (13d/13e)
+   — no prior art found for that direction.
+**Status:** search complete 2026-09-30; novelty language in
+PAPER_OUTLINE.md must respect these boundaries. Re-search before any
+public claim.
+
+## Node 14 — D4's positive-region half: obstruction + refined home (2026-09-30)
+Question: a positive region whose canonical form has the face-weights
+w(S) = (-1)^{|S|+1} log(prod S)/(prod S) as stratum residues?
+- 14a OBSTRUCTION (exact): NO ordinary positive geometry can. AHBL
+  canonical forms have logarithmic poles with residues +-1 (0-dim
+  strata: +-1 or 0); |w({2})| = (log 2)/2 = 0.3466 not in {0,1}.
+  Signs are fine (residue alternation); magnitudes impossible.
+  D4's "no positive region found" explained by theorem, not luck.
+- 14b IDENTITY (exact): d/du[prod_{p<=z}(1-p^{-u})]_{u=1}
+  = sum_S w(S) = delta(z)*sum_{p<=z}(log p)/(p-1). Two proofs
+  (subset expansion; calculus) in DERIVATIONS.md; verified to 10
+  digits, z<=29; asymptotic -> e^{-gamma} (0.5333 at z=1e5).
+  Computes the 2^{pi(z)} subset sum in O(pi(z)).
+- 14c REFINED HOME: E_z = (+)L_p with equivariant Chern roots
+  -u*log p (real coeffs, legitimate); ch(lambda_{-1}(E_z)) =
+  prod(1-p^{-u}); face-weights = u-derivative at u=1 =
+  *differentiated residues*. Positive region = simplex
+  Delta^{m-1}; stringy deformation with prime-log exponents;
+  differentiation produces the weights. Only the primes are input;
+  combinatorics, signs, log-magnitudes computed. This is
+  Figueiredo's *deformations* (D6) as the mechanism -- closing the
+  D4<->D6 loop: the arithmetic lives in the deformation/weights,
+  exactly D4's conclusion, now with the obstruction explained.
+  [exact constructions; numerics = hygiene]
+- Node 14 CLOSED. D4 fully closed (bare complex trivial + weights
+  carry the arithmetic + ordinary positive region impossible +
+  deformed home constructed).
+
+## Node 11f — CCM independent reimplementation: FIRST ZERO RECOVERED (2026-09-30)
+Question: does D_log^{(lam,N)} built ONLY from prime Euler products
+spectrally recover zeta zeros, with zero input nowhere in the pipeline?
+- 11f IMPLEMENTATION (2026-09-30): independent Python/mpmath
+  reimplementation from primary source arXiv:2511.22755 (ccm/ccm_reimpl.py).
+  Matrix M = W_{0,2} - W_R - W_p assembled exactly as paper Sec.4:
+  W_{0,2} verbatim eq.(4.2) [rank 2, verified]; W_R diagonal via master
+  formula (weinfty) validated against direct quadrature to 2e-16;
+  W_R off-diagonal (J(m)-J(n))/(pi(n-m)); prime sum verbatim eq.(bomp)
+  over k=p^r<=lam^2 with von Mangoldt weights (D12 audit boundary:
+  primes ONLY enter here; all else is zero-independent analysis).
+  Fixed endpoint bug: lam=sqrt(13) float rounding excluded k=13;
+  now uses exact integer cutoff (9 prime powers at x=13).
+- 11f KEY FINDING: full matrix at small N shows multiple tiny
+  eigenvalues (NOT a bug — known-good connes-cvs CvS implementation
+  shows identical structure at N=8). Resolution: restrict to EVEN
+  subspace (dim N+1); even block has SINGLE tiny eigenvalue
+  eps_N=2.83e-26 at c=13,N=10,dps=60 (inverse iteration, residual
+  1.4e-47). Odd-block smallest is 581x larger (1.64e-23) — ground
+  state naturally even, as paper assumes.
+- 11f D2 VERIFICATION (computationally verified): xihat(z) zeros from
+  even-block ground state (delta_N(xi)=1 normalized, NO zero input):
+  At c=13,N=10,dps=60: zero 1 err 7.1e-15, zero 2 err 2.7e-12,
+  zero 3 err 4.9e-10. At c=13,N=20,dps=100: eps_N=1.57e-39;
+  zeros 1-5 err <4e-11 (zero 1 exact to float64); zeros 6-8 err <1e-6.
+  First zeta zero recovered from prime Euler products alone to
+  machine precision. Higher zeros (4+) require larger N (spurious
+  roots at N=10). Systematic N-convergence confirmed.
+- Status: D2 PILOT COMPLETE. The bridge plank EXISTS: primes -> (Weil
+  form) -> zeta zeros, with no zero-fitting in the pipeline.
+- 11f CONTROLS (2026-09-30, ccm/ccm_controls.py): all at c=13,N=20.
+  A (Wp=0): eps_N=-0.17 (not positive), first root 2.79 (err 11.3).
+  B (shuffled Lambda): eps_N=-0.087, root 5.78 (err 8.4).
+  C (shuffled log p positions): eps_N=0.0175 (not tiny), root 1.16
+  (err 13.0). Zeros AND positivity both require the precise prime
+  arithmetic input; the machinery does not produce zeros on its own.
+  [computationally verified]
+  11f LARGE-N (2026-09-30): c=13,N=40,dps=120: eps_even=9.46e-54,
+  even/odd separation 3744x (grew from 581x at N=10); zeros 1-5
+  err <1e-10, 6-10 err <2e-6. [computationally verified]
+  11f N=120 (2026-09-30, ccm_largeN.py, 24 min): eps_even=3.48e-59,
+  eps_odd=3.06e-55, separation 8771x (monotone growth: 581x -> 3744x
+  -> 8771x across N=10,40,120). Zeros 1-5 err <1e-10; zeros 6-10
+  err <2e-6. Paper scale matched. Convergence law + even-sector
+  isolation confirmed at the largest N tested. [computationally verified]
+  11f FAILURE MODES (2026-09-30, ccm_failure_modes.py): the mechanism
+  requires EXACT prime arithmetic -- it is fragile, not robust.
+  Multiplicative noise on Lambda: 1e-6 -> root err 2.1; 1e-4 -> err 9.2;
+  1e-2 -> err 11.5 (eps goes negative). Drop p=2 or p=3: destroyed
+  (err ~10.7). Drop p=5: SURVIVES (root 14.063, err 0.07). The small
+  primes carry the weight (explicit-formula hierarchy); the tiny
+  eigenvalue is a delicate exact-identity cancellation, not a stable
+  gap. Honest scope: true "RH false" mapping needs an actual
+  counterexample; what we show is the operator is an exact-arithmetic
+  reporter, not a robust statistical effect. [computationally verified]
+  Open: N=120 to match paper scale.
+- 11f CONCEPTUAL BRIDGE (2026-09-30): the "your bridge or borrowed?"
+  question gets a precise answer. CCM's input is Λ (von Mangoldt, on
+  prime powers); the face-sum's native weights are μ (on squarefree
+  subsets). EXACT THEOREM: Λ = μ ∗ log (Dirichlet convolution),
+  Λ(n) = −Σ_{d|n} μ(d) log d — verified numerically to 3.6e-15 for
+  n<5000. So CCM's fuel is exactly one convolution away from the
+  face-sum's native weights. The *machine* (D_log, even/odd blocks,
+  variational principle) is borrowed from CCM; the *fuel* refines to
+  face-sum-native μ. The bridge is neither fully yours nor fully
+  borrowed — it is a genuine connection: the borrowed machine runs on
+  fuel one convolution from your weights. [exact theorem]
+- 11f N=120 CLOSED (see above). Node 11 stays OPEN as the operator
+  hunt; 11f is the live candidate with a now-explicit face-sum
+  dictionary entry (Λ = μ∗log).

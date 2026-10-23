@@ -1,0 +1,84 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: sieve deformations parametrize new positivity for constraining zeros
+18: hybrid bridge: geometry owns positivity inputs, analysis owns continuation
+19: Euler product ζ_R zero-free for Re(s)>1
+20: pole heavier: F(σ)~2/(σ−1), inequality easier
+21: positivity blind left of Re(s)=1
+22: Selberg parity barrier: ω(n) parity unresolvable
+23: MTY 2022 degree-16 optimization saturates polynomial method
+24: 9c-as-prove-RH-by-stronger-positivity closed
+25: sieve produces positivity geometrically via autocorrelation
+26: residue catalog: q=(1,2,1) excludes; q=(1,3,3,1) 3/2 stronger
+27: 9c′: do degree-16 optimizers have small-support autocorrelation structure?
+28: Davenport explicit formula: ψ(x)=x−Σx^ρ/ρ−log(2π)−…
+29: explicit formula verified: T=400→1.36, T=50→4.55
+30: error E(x)=ψ(x)−x made of zeros; zeros regulate face-sum
+31: Weil thesis: W(f∗f̃) positivity constrains face-sum error
+32: Guinand–Weil symmetric formula, normalization numerically confirmed
+33: Weil verified: 60 zeros vs 26152 prime powers, diffs ≤5.3e-15
+34: W(h_a)≥0 computed prime-side only, no zeros used
+35: pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0
+36: square dictionary: Weil h=|H|² ⟷ autocorrelation P(θ)=|Q(e^{iθ})|²
+37: Weil criterion W≥0⟺RH cited not derived (Weil 1952)
+38: step3: optimize square H — Weil analogue of degree-16 optimization
+
+INJECTED STRUCTURE (grouped compact):
+
+S24:17 18 19 20 21 22 23 24 25 26 27
+S28:28 29 30 31
+S33:32 33 34 35 36 37 38
+E18:12 17
+E19:2 17
+E20:2 17
+E21:1 24
+E22:1 24
+E23:1 24
+E25:1 18
+E26:10 25
+E27:6 25
+E29:1 30
+E30:1 31
+E33:1 34
+E35:1 34,11 31
+E36:4 25
+E38:11 31
+A:17 15,18 13,19 14,20 14,21 14,22 13,23 13,24 13,25 14,26 14,27 16,28 13,29 14,30 13,31 13,32 13,33 14,34 14,35 14,36 13,37 13,38 16
+L:27 38
+N17: deformation_kill.py; exact zero-freeness, heavier pole
+N18: hybrid shape replaces 9c-as-RH-proof
+N19: exact; |R_p|p^{-σ}<1 so no factor vanishes
+N20: 19.33 vs 20.00 at σ=1.1, tail correction
+N21: series converges only for σ>1; structural
+N22: Selberg; cited literature
+N23: arXiv:2212.06867; BTY 2026 1/(4.896 log|t|)
+N24: closed by blindness + parity + saturation
+N25: exact identities; a₀−a₁m≥0 forces m<1
+N26: q=(1,2,1) 3-4-1; q=(1,3,3,1) a₁/a₀=3/2
+N27: literature optimizers are black-box SDP/annealing
+N28: Davenport; classical exact theorem
+N29: explicit_formula.py; 400 zeros, γ≤679.7
+N30: exact translation of D1
+N31: programmatic/heuristic
+N32: normalization confirmed by own numerics
+N33: corrected run; first run silently dropped p≥3
+N34: a=0.5 cancellation to 15 digits
+N35: not termwise: negative archimedean nearly cancels pole
+N36: exact translation; same generative move
+N37: Weil 1952; Bombieri 2000 exposition
+N38: forward pointer from D10a-step2

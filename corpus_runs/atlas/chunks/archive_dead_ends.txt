@@ -1,0 +1,159 @@
+# Dead ends from the April 2026 archive — guardrails, not history
+
+Extracted 2026-09-30 from `~/workspace/user/files/master_archive-1_0_jcc6.docx`
+("Vortex Structure, Circle CEIVE, and the k-Reduction Theorem", S. Watts).
+Each entry: what was tried, what the numbers said, why it failed, and the
+lesson transferred to the live prime-distribution program. Epistemic status:
+the factoring results are the archive's own verified claims (read as
+archaeology); the transfers are heuristic guardrails.
+
+## D1. DR9 pair affinity — endpoint artifact, not signal
+Tried: digit-root-9 pair affinity as a prime-specific structure.
+Result: tested and confirmed to be an endpoint artifact, not prime-specific
+(archive 8.2).
+Transfer: residue/digit patterns at boundaries fake signals. Always test
+against the null/endpoint model before claiming structure. (Our PETI-era
+verification at 1327 passed this bar: real contingent fact, not framing.)
+
+## D2. Rate-measured jump — real identity, useless error bars
+Tried: measure rate = 1+p2/p1 (CV < 0.005, verified), jump to p1 via the
+geometric formula.
+Result: ~10–20% measurement error; "converges near p1 but has large error
+from far away"; leaves O(sqrt n) candidates to scan (4.2, Sec 10).
+Transfer: a verified identity is not an algorithm if error bars exceed the
+target resolution. Same moral as our 10e uncertainty wall (n ~ e^{7.4/w}):
+do not push a window past what its error bars resolve.
+
+## D3. 3-adic waterfall — level count is not work
+Tried: O(log n) waterfall levels to reduce candidates to O(1).
+Result: each level costs O(modulus) to compute allowed residues (4.2).
+Transfer: a filtration argument must price each level. Relevant to the
+queued face-filtration probe: count the work per filtration step, not just
+the number of steps.
+
+## D4. GCD product tree — the trick hides the work
+Tried: O(log n) GCD calls instead of O(sqrt n) divisions.
+Result: each GCD costs O(product_size) arithmetic (4.2).
+Transfer: same as D3, sharper: any "one clever operation" step must be
+costed at the size of its inputs. Watch for this in trace-formula
+manipulations (a "single trace" is not a single operation).
+
+## D5. Parallel wave — faster clock, same complexity
+Tried: numpy-parallel evaluation of all circles simultaneously.
+Result: slope 0.470 vs 0.500 sequential — "same work, faster clock" (8.7).
+Transfer: parallelism does not move asymptotic walls. Do not expect
+parallel zero/prime computation to beat the 10e uncertainty wall.
+
+## D6. Binary zoom with oracle — no correctness guarantee, no algorithm
+Tried: oracle-assisted binary zoom to the factor.
+Result: 50–83% correct rate (2.1).
+Transfer: heuristic detection must ship with bounds. Our prime-side
+detector has one (N+ <= e^{1/2} W(h)); any future zero-detector needs its
+own before it counts.
+
+## D7. Sub-room uniformity — check the null before claiming structure
+Tried: hunting factor-pair bias across n mod 162 sub-rooms.
+Result: exactly 54 ordered factor pairs per residue, uniform (8.2).
+Transfer: uniformity kills bias-hunting. Any claimed prime/residue
+structure must first survive comparison against the uniform null.
+
+## D8. Simulating the wave — know what your medium can test
+Tried: computational simulation of the circle-wave factoring claim.
+Result: any simulation reproduces O(sqrt n); the claim needs a physical
+wave, not code (5.3).
+Transfer: some hypotheses are not testable in our medium. Deninger's
+3D space, a literal Frobenius for Spec Z — label these non-probable,
+do not burn compute simulating their shadows.
+
+## D9. The wall itself — name the hard core, stop shopping for methods
+Tried: everything (trial division, rho, waterfall, rate+jump, unified,
+GCD tree).
+Result: every classical method is a strategy for finding k = p2-p1, and k
+is uniformly distributed with no known classical shortcut (4.1).
+Transfer: when all approaches reduce to one hard core, name it and stop
+method-shopping. Our program already follows this: "R1^R4" (an operator
+with zeros as spectrum whose positivity is counting-born) is our wall
+with a name.
+
+## Standing note
+The archive's live descendants: Circle CEIVE -> the circle-sieve
+geometric language; the honesty practice (slopes measured, not hoped;
+walls named). The factoring program itself is closed archaeology; the
+prime-distribution / RH program is the live thread.
+
+## D10. Toroidal five-step "proof" — the identification was imported, not derived
+Source: toroidal_field_critical_line_proof_v2-1_5_f7tm.docx (April 2026).
+The move: Step 3's chain "D(0)=D(p)=0 => single zero on torus =>
+unique antipode at u=1/2 => ... => all zeros at sigma=1/2" proves a
+confinement theorem about the *model's* resonances. The bridge to zeta
+zeros (Theorem 2.3) "imports the explicit formula from classical
+analytic number theory rather than deriving it purely from within the
+framework" — the document's own "Points Requiring Further Scrutiny"
+admits this. The import is the entire content of RH.
+Transfer: a model-side theorem does not touch zeta's zeros until the
+identification is DERIVED, not imported. Our 10a is the derived
+version (explicit formula grounded in our own objects: sieve psi vs
+truncated zero sum). Guardrail: prove the bridge, don't import it.
+
+## D11. Prime Zipper Law — falsified as stated, by computation
+Source: same document, Step 5. Claim: for consecutive primes,
+C(p,q)=q-p-1 is always 1, 9, or prime — "verified across 5,000 primes
+with zero arbitrary exceptions."
+Killed: first counterexample at the ~190th pair — (1129,1151)->21;
+then (1327,1361)->33, (1831,1847)->15, (1933,1949)->15,
+(1951,1973)->21, ... out of 17,983 pairs checked to 2e5. (The
+degenerate (2,3)->0 already breaks the letter of the law.) The
+document's own text concedes 15, 21, 27 occur and patches them as
+"era interaction" — post-hoc. Note: one counterexample sits at
+(1327,1361), the PETI era primes — the archive talking to the live
+program.
+Transfer: "zero exceptions" claims get re-run before belief, not
+after. Gap quantization of this form is dead — prime gaps realize
+many even values (classical); no small alphabet governs them.
+
+## D12. rh_final's formal compactification — the answer, inserted by hand
+Source: rh_final__1__1_hn07.pdf (April 2026, v4, "twenty-step
+derivation"). The move: vortex energy E(q)~C ln q forces weight
+w(y)~2/ln y; Prop 1 + Sec. 8.2 exclude exceptional eigenfunctions
+(none known for SL(2,Z) anyway) and all Eisenstein series from the
+weighted space => "the weighted Laplacian has only discrete
+spectrum" => Poincare => lambda>=1/4 => line. Theorem 7: an off-line
+zero would make an "unbalanceable divergence" in the trace formula,
+witnessed by an admissible test function via Lemma 3 (test-function
+class identical to Selberg's).
+The gap: Lemma 3 shows S1-S3 functions satisfy the weighted S4 — but
+the *spectral side* is what changed. Selberg's formula on
+SL(2,Z)\H has an essential continuous-spectrum term (the
+(phi'/phi) integral); deleting the Eisenstein series from the space
+does not leave the same formula. The weighted spectral problem is a
+different spectral problem, and Theorem 7 needs the trace identity
+in the weighted setting — which is what's at issue. The argument
+assumes the identity it needs.
+The deeper negative, and the valuable one: the weight was engineered
+to exclude exactly the spectrum whose absence the conclusion
+requires — "never put the answer in by hand" in its most
+sophisticated form. It maps precisely where the genuine Lax-Phillips
+scattering approach gets stuck: the continuous spectrum is the whole
+difficulty, and weighting it away assumes what must be proved.
+Transfer: any future weighting/compactification move in our program
+must prove the trace (or explicit) formula SURVIVES the weighting.
+The formula is load-bearing, not decorative. (Our 10a keeps the
+standard explicit formula intact.)
+
+## D13. Coset-sum numerology is not a mechanism
+Source: The_Self_Begetting_Universe_Watts_2026_4_482c.docx (April
+2026). Its group-theoretic observations ((Z/9Z)* = Z/2Z x Z/3Z,
+QR={1,4,7}, |tau(chi_2)|^2=9) are standard facts, correctly stated —
+filed, not dead. But the "Chebyshev bias mechanism" via coset
+representative sums (12 vs 15) is a non-explanation: summing
+representatives has no bearing on prime races. The live mechanism is
+zeros of Dirichlet L-functions. Steps 8-10 toward RH are labeled
+"structural constraint argument" by the document itself — not
+theorems.
+Transfer: representative-sum coincidences != mechanisms. When a
+heuristic has a known analytic home (L-zeros), point at it, not at
+the numerology.
+Filed without extraction: s_watts_v2_final_2_9um3.docx (the vortex
+paper v2 — same factoring program as the master archive, no new
+dead ends); The_Universe_Writes_Itself_60sec-1_3_v6rc.docx
+(445-word popularization, no technical claims).

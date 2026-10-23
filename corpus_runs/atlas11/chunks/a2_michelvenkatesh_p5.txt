@@ -1,0 +1,771 @@
+d , to the Hilbert space
+
+V
+
+associated to S 0 , is trace-class.
+
+d
+
+\[
+
+S1d. (Linear functionals can be bounded place-by-place.) Let \pi = \otimes \pi v be a unitary representation of G(A); let + = Q +v, +v \in \pi^* v v be a
+
+factorizable functional with the property that\|+(xv)\| 6 1 when xv \in \pi v is spherical
+
+\]
+
+and of norm one.12 Then:
+
+\[
+
+\|+v\| 6 AS \pi v for all v =\Rightarrow\|+\| 6 A 0S \pi
+
+\]
+
+d d 0
+
+0 depends on d, and A0 depends on A, d.
+
+where d
+
+2.4.2. Properties of the X-Sobolev norms . —
+
+S2a. (Sobolev inequality) There exists d0 so that S X ∞- d0 majorizes L
+
+norms.
+
+\[
+
+S2b. (Distortion property) There exists a constant \kappa_2, depending only on (G,\rho), so that S X (gf) kAd(g)k \kappa 2dS X (f), f \in C \infty (X), g \in
+
+G(A).
+
+\]
+
+d d
+
+S2c. (Embedding) For each d, there exists d_0 > d so that the trace of
+
+### S X X
+
+d w.r.t. S d 0 is finite.
+
+2.4.3. Relationship between unitary Sobolev norms on L 2 (X) and XSobolev norms . —
+
+S3a. We have a majorization
+
+L2 (X)
+
+S
+
+d  SX d .
+
+S3b.
+
+X (f)  SL2 (X) 2
+
+S
+
+\[
+
+d d_0 (f), f \in L cusp
+
+\]
+
+0 depends on d, and L 2 2 (X). 13
+
+where d
+
+cusp is the cuspidal subspace of L
+
+\[
+
+11 If the representation \rho contains the adjoint representation, one may take \kappa = 1.12 If this condition is satisfied not for all v, but for all v /\in
+
+T, where T is some fixed finite set of
+
+\]
+
+places, then the constant has to be replaced by A1+\|T \|
+
+.
+
+13 A stronger and more natural statement is: the truncation operator ∧T of Arthur is continuous from
+
+the S L2(X)
+
+-topology to the SX topology. This statement is actually a quantitative form of \[2, Lemma 1.4\],
+
+which proves the same result but with the finite level fixed.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 29
+
+S3c. Let \` a linear form on C ∞(X). Suppose, for each standard automorphic representation π, we have \|\`\|π∞\| 6 S
+
+π
+
+d , where the unitary structure
+
+on π is the Eisenstein norm. Then
+
+\|\`(v)\|  SX
+
+d 0(v),
+
+0 depends only on d.
+
+whenever both sides are defined; d
+
+2.4.4. Other properties. — Suppose \` is a linear functional on either
+
+\[
+
+C \infty (X) or a unitary G(A)-representation, and let A(d) be the operator norm of + with respect to Sd. S4a \log A(d) is convex with respect to d. 14 S4b.
+
+Given d and_j > 1, there exists d_0 > d and common orthogonal
+
+\]
+
+bases e1, e2, . . . for Sd, Sd −j
+
+0 with the property that Sd(ei) Sd0 (ei) 6 (1 + \|i\|) .
+
+S4c. S V V
+
+and S are self-dual;
+
+d
+
+−d
+
+S4d. If \` : V → W is any linear functional from V to another normed
+
+\[
+
+vector space: +(v) 6 Ak\Delta d vkV (v a \Delta -eigenfunction) \tag{2.7}
+
+\]
+
+\[
+
+0S V_0 > d. =\Rightarrow\|+(v)\| 6 A d_0(v), all v \in V, some d
+
+\]
+
+S4e. S X (fg)  d S X (f)S X (g).
+
+d d d
+
+\[
+
+is a consequence of the fact that a suitable power of \Delta -1 is trace
+
+\]
+
+class.
+
+2.5. Examples.
+
+We shall now discuss a number of examples of using the Sobolev norms
+
+to quantify mixing or uniform distribution. The essence of all our examples is well-known. We simply want to make the point that the axioms of Sobolev norms
+
+make it simple to derive the results in great generality.
+
+In the sequel we will use the following notation: for S ? one of the
+
+?
+
+families of Sobolev norms discussed previously, we will write A 6 S ? (f)B to
+
+? (f)B.
+
+mean that there is a constant d > 0 so that A_6 S
+
+d
+
+2.5.1. Bounds for matrix coefficients and canonically normalized functionals: local bounds. — For any place v, we denote by Ξv(g) the HarishCh
+
+andra spherical function on Gv := G(Fv), i.e. Ξv(g) := hgv, vi where v is
+
+14 This will be helpful in bounding operator norms when d is not integral, for, like the case of Rn,
+
+the Sobolev norms are most accessible when d ∈ Z>0.
+
+#### 30 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+the Kv-invariant function in the representation of Gv unitarily induced from the trivial character of a minimal parabolic subgroup.
+
+It follows from \[13\] (as extended to reductive groups in \[56\]) that, if πv
+
+\[
+
+is a tempered representation of G(Fv) one has, for any x_1, x_2 \in \pi v, g \in Gv and some constant d > 0 depending on G only\|hgx1, x2i\| 6 AvS \pi v
+
+\tag{x1}
+
+\]
+
+\[
+
+S \pi v (x_2)\Xi v(g),
+
+\]
+
+d d
+
+\[
+
+where Av = [Kv : Kv[0]] is equal to_1 for almost all v. Indeed, [13] implies, in fact, that\|hgx1, x2i\| 6 [Kv : Kv[m]]\Xi v(g) for x_1, x_2 \in V [m]. Now
+
+\tag{2.1}
+
+\]
+
+\[
+
+and (2.7) establish the desired statement.
+
+\]
+
+In the case of non-tempered representations, one has a corresponding,
+
+\[
+
+but weaker, bound. In this paper we will only use the special case of G = GL2; and moreover, \pi v will always be a local constituent at v of a generic
+
+automorphic representation of G(A). In that case, one has\|hgx1, x2i\| 6 AvS \pi v \tag{x1}
+
+\]
+
+\[
+
+S \pi v \tag{x2}
+
+\]
+
+\[
+
+\Xi v(g) 1-2\theta d d, \tag{2.8}
+
+\]
+
+\[
+
+holds for \theta > \frac{3}{26}.
+
+\]
+
+\[
+
+holds for \theta > \frac{3}{26}.
+
+\]
+
+It will be convenient, for the purpose of this document, to allow θ to
+
+\[
+
+be any number in]3/26, \frac{1}{4}[. More precisely, any statement involving \theta will be valid for any choice of \theta in this interval. This notational
+
+convention will suppress s at a later point. The reader may safely substitute_3/26 + every time he/she sees the symbol \theta . 2.5.2. Bounds for matrix
+
+coefficients and canonically normalized functionals: global bounds. — Let \iota : \tilde{G} 7\to G be the simply connected covering of G. For f \in C \infty
+
+(X), set
+
+\]
+
+Z
+
+\[
+
+Pf(x) = f(\iota(g)x)dg \tag{2.9}
+
+\]
+
+\[
+
+g\in \tilde{G} (F)\\G˜ (A) for x \in X; here dg is the invariant probability measure on \tilde{G} (F)\\G˜ (A). The endomorphism P realizes the orthogonal
+
+projection onto locally constant functions on X, and is in particular L_2 \infty -bounded; note also that it
+
+\]
+
+- and L
+
+commutes with the G(A)-action (cf. \[67\]).
+
+\[
+
+Take g \in G(A) and f_1, f_2 \in C \infty (X). Then there exists \beta > 0 and d,
+
+\]
+
+both depending only on the isomorphism class of G over F, so that
+
+\[
+
+\|hg.f1, f2i - hg.Pf1,Pf2i\| kAd(g)k X \tag{f1}
+
+\]
+
+\[
+
+S X (f_2). (2.10) -\beta S d d 15 Indeed, if x_1, x_2 are both stabilized by a subgroup of Kv[0] of index ♥, the bound may be taken
+
+\]
+
+to be ♥kx1kkx2kΞv(g); we shall use this later.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 31
+
+\[
+
+This is a consequence of property (\tau), which has been established through the work of many people; the proof was completed (together with the most difficult
+
+case) by L. Clozel [14]. Property (\tau) was put in a quantitative form in [28], and the quoted statement16 follows from Lemma_3.3 and Theorem_3.10 of loc. cit.
+
+Here we will need \tag{2.10}
+
+\]
+
+\[
+
+only for the case of G = GL2: it follows from \tag{2.8}
+
+\]
+
+\[
+
+that the exponent \beta = \frac{1}{2} - \theta is admissible, any \theta as above.
+
+\]
+
+Remark. — Let us explain one of the reasons that (2.10) is so useful
+
+in the context of the present paper. It has been observed J.-L. Waldspurger \[69\] and greatly extended by Ichino-Ikeda \[32,33\] that a wide variety of period
+
+functionals can be expressed by integrating matrix coefficients; roughly
+
+speaking, there exists a variety of pairs (H ⊂ G) so that, with suitable choice of measure and suitable regularization,
+
+Z 2 Z
+
+\[
+
+hh.\varphi, \varphi idh \tag{2.11}
+
+\]
+
+\[
+
+\varphi dh =
+
+\]
+
+### H(F)\\H(A) H(A)
+
+The right-hand side is usually divergent, and is interpreted by a suitable regularization; in many situations, almost every local factor is equal to the local
+
+factor of a suitable L-function, which suggests a regularization involving a special value of that L-function.
+
+In any case, (2.11) was used in \[15\] and \[21\] in order to reduce equidistribution results for H(F)\\H(A) – or translates thereof – to bounds for mat
+
+rix coefficients. We shall use the same technique in §4.2.1 of the present paper.
+
+We note, however, that this technique is not universally applicable, and
+
+in many instances the correct formulation of a result analogous to (2.11)remains mysterious.
+
+2.5.3. A quantitative form of the Ergodic principle II. — Next, let us
+
+give a quantitative form of the Ergodic principle 1.3 from §1.2.
+
+Lemma. — Suppose H ⊂ G(A) is noncompact, and χ : H → C× a
+
+unitary character. Suppose that X has finite measure, i.e., that the center of G is anisotropic.17
+
+16 It should be noted that we could not follow the quantitative arguments of \[28\] in the case which
+
+relies on Clozel’s work; however, their argument certainly furnishes a bound.
+
+17 The lemma could be easily adapted to the general case by introducing a character; but we will only
+
+use it for G = PGL2.
+
+#### 32 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+Let \nu be a (possibly signed) \chi -equivariant measure on X, i.e. \nu h = \chi(h)\nu for h \in H. Let \mu be the G(A)-invariant (Haar) probability measure,
+
+and suppose that, for some d > 0, we have the majorization:\|\nu\|(f) \mu(f) + S X (f) (f > 0).
+
+\]
+
+d
+
+\[
+
+Let \sigma be any probability measure on H. Then, for any f with Pf = 0,\|\nu(f) - \delta \chi =1\mu(f)\| 2 k\sigma k_2 S X_2 d_0 + k\sigma ? \sigma ˇk-\beta
+
+d_0(f) . Here \delta \chi =1 is_1 if \chi is trivial and zero otherwise,
+
+\]
+
+Z
+
+\[
+
+k\sigma kd := kAd(h)k d d\sigma(h),
+
+\]
+
+h
+
+and similarly for kσ ? σˇk, σˇ denote the pullback of σ by g_7→ g −1
+
+, β is as in
+
+(2.10), and d 0 depends only on d.
+
+This is indeed a quantitative form of the Ergodic principle 1.3: if, e.g.,
+
+\[
+
+= 0, we see at once that that the left-hand side may be made arbitrarily small to choosing \sigma to have large support. Proof. — We may assume that \mu(f) = 0.
+
+For \sigma a probability measure
+
+\]
+
+on H we set
+
+Z
+
+\[
+
+f ?\chi \sigma := \chi(h)(h · f)d\sigma(h).
+
+\]
+
+H
+
+We see:
+
+\[
+
+\|\nu(f)\| 2 = \|\nu(f ?\chi \sigma)\| 2 6\|\nu\|(\|f ?\chi \sigma\| 2) 6 S X (\|f ?\chi \sigma\|) 2 + kf ?\chi \sigma k_2
+
+\]
+
+d 2 ,
+
+The required bound now follows from (S2b), (S4e) and from the bounds for matrix coefficients of §2.10.  ut
+
+Remark. — In the context of the subconvexity problem for L-functions,
+
+this amounts to the amplification method (\[36\]) and the measure σ play the role of the amplifier.
+
+2.5.4. Uniform distribution of horocycles. — As a final example, we
+
+discuss the uniform equidistribution of horospheres. A result of Peter Sarnak proves that a closed horocycle of length L on a hyperbolic surface be
+
+comes uniformly distributed as L approaches ∞. What we present below is an adelized version of the result for general groups, but only in the easiest version:
+
+where “closed horocycle” is replaced by (in more explicit language than what follows) “closed orbit of a maximal horospherical subgroup.”
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 33
+
+Let us fix N to be the unipotent radical of a minimal proper parabolic
+
+\[
+
+subgroup B of G; for f \in C \infty (X) let
+
+\]
+
+Z
+
+fN (g) := f(ng)dn,
+
+### N(F)\\N(A)
+
+\[
+
+denote the constant term. Then for f \in L_2 (X) ∩ C \infty (X), and b \in B(A)\|fN (b)\| \delta B(b) 1/2S X(f), \tag{2.12}
+
+\]
+
+\[
+
+here by L_2 (X), we mean the orthogonal complement of locally constant functions (i.e. the kernel of (2.9)), and \delta B : B(A) \to R>0 is the modular charact
+
+\]
+
+er (cf. §2.1.6).
+
+Proof. — By Property (3c) of Sobolev norms, it is enough to verify
+
+\[
+
+when f belongs to an standard automorphic representation \pi \subset L_2 (X). The constant term is zero unless (notation of §2.2) \pi = Eis(M,\sigma), where M
+
+is a minimal Levi subgroup. Let B be a parabolic subgroup with unipotent radical M. As an abstract unitary representation, \pi is isomorphic to the space V\pi
+
+of functions from G(A) to the representation space of \sigma, satisfying: f(bg) = \sigma(b)\delta B(b)f(g), b \in B(A),
+
+\]
+
+kfk 2
+
+equipped with the inner product R
+
+K . (Here K is the fixed maximal compact subgroup of G(A).)
+
+\[
+
+Let \omega be a smooth compactly supported bi-K-invariant function on G(A) so that \omega \tag{1}
+
+\]
+
+\[
+
+= 1. Consider res : V\pi \to L_2 (G(A)) defined by f_7\to \omega f. Apply \tag{S1a}
+
+\]
+
+\[
+
+to see\|f(1)\| SL2 (G(A))(\omega f). The map res is L_2
+
+\]
+
+-bounded, and
+
+commutes with the action of the finite part of K; moreover, if D is any
+
+P for
+
+element of the universal enveloping algebra U of g, then Dω =
+
+i \omega_i D_i
+
+\[
+
+various Di \in U and \omega_i smooth, compactly supported on G(A). It follows S L_2 (G(A))(\omega f) SV\pi(f). ut
+
+\]
+
+2.6. Proofs concerning Sobolev norms.
+
+In this section, which can be safely skipped in the course of reading
+
+the paper, we give the proofs that the Sobolev norms defined in §2.3 have the good properties indicated in that section.
+
+The proof of the distortion properties, (S1b), (S2b) are elementary, and
+
+we omit them. Similarly we omit the proof of properties (S4a) – (S4d).
+
+#### 34 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+2.6.1. We will establish (S1a), from which (S2a) follows easily. We will
+
+establish (S1a) in the adelic setting; the local setting is easier.
+
+\[
+
+Let \omega be as in \tag{S1a}
+
+\]
+
+\[
+
+. Take f \in L_2 (G)[m], where, as usual, m is a
+
+\]
+
+function from places of F to non-negative integers.
+
+The function f factors through the dim(G)\[F : Q\]-dimensional manifold
+
+G(A)/K\[m\]; this has around vol(K\[m\])−1 connected components. We can apply the usual Sobolev inequality (for real manifolds) to the connected component
+
+of the identity. It shows that f(1) is bounded by the L -norm, on the
+
+connected component of the identity, of (e.g.) the first dim(G) derivatives of fω.
+
+From this it follows that:
+
+\[
+
+\|f \tag{1}
+
+\]
+
+\[
+
+\| vol(K[m])-1Y kmvk [F:Q] dim Gkf\omega kL2 kmk d_0 kfkL2 v\|\infty where we take any d_0 > 2[F : Q] dim(G). This, in view of (2.7), implies (S1a). To deduce
+
+(S2a), take f \in L_2 (X). Fix x_0 \in X. By pull-back of functions,
+
+\]
+
+(X) (f). Now, by the
+
+we immediately deduce from (S1a) that \|f(x0)\|  SL2
+
+d0
+
+\[
+
+Lemma of §2.1.7, for any x \in X, there exists g \in G(A) with x0g = x and kgk_6 ht(x) ? . Therefore, the distortion properties imply that\|f(x)\| = \|f
+
+\tag{x0}
+
+\]
+
+\[
+
+\| SL2 (X) (f) ht(x) L_2 (X) (f). (2.13) g g ?S
+
+\]
+
+d0 d0
+
+Thus (S2a).
+
+2.6.2. We prove (S3b). It suffices to check that for any m > 1 there
+
+exists d so that
+
+\[
+
+\|f(x)\| m (htx) L_2 (X) (f), f \in L_2
+
+\]
+
+−mS
+
+\[
+
+d cusp \tag{2.14}
+
+\]
+
+\[
+
+It suffices, by (S4d), to establish this estimate for f \in L_2
+
+\]
+
+cusp\[m\].
+
+\[
+
+Let x \in X. Let T be as in §2.1.4. It is a consequence of reduction theory that there exists a compact subset \Omega \subset G(A) and R > 0 and a \in T(A) so
+
+that x = G(F).a\omega, where \omega \in \Omega, and a \in T(A) is so that there exists at least one simple root \alpha with\|\alpha(a)\|A > ht(x) ?
+
+\]
+
+. Let U be the unipotent
+
+radical of the maximal proper parabolic subgroup associated to α.
+
+\[
+
+We choose a sequence Z_0 = Z \subset Z_1 \subset Zj = U where Zj+1/Zj is central in U/Zj for_j > -1 (we interpret Z-1 to be trivial). Now expand f in a Fourier
+
+series along Z_0, i.e.
+
+\]
+
+Z
+
+\[
+
+f(x) = X f\psi(x), f\psi(x) := f(ux)\psi(u)du;
+
+\]
+
+### Z(F)\\Z(A)
+
+ψ
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 35
+
+the measure is the invariant probability measure, whereas the ψ sum extends on characters of Z(A) trivial on Z(F).
+
+Only those characters ψ which are trivial on Z(A) ∩ K\[m\] contribute
+
+\[
+
+to this summation, and the number of such characters is bounded by kmk dim Z. Let u be the Lie algebra of Z(F \otimes Q R). To any \psi as above, we may
+
+associate its differential d\psi \in u^*^*
+
+\]
+
+. Fix a norm on u . Integrating by parts,
+
+we conclude that for any n > 1,
+
+X \|Df(ux)\|, fψ(x) n \|α(a)\| −n ? sup
+
+### A kmk
+
+\[
+
+\psi 6=1 u\in U(A),D\in D
+
+\]
+
+where D is a finite set of G(A)-invariant differential operators. Applying (2.13), we deduce that the sum is  n ht(x) L2 (X) (f).
+
+−nkmk a(n)S
+
+d(n)
+
+\[
+
+It remains to estimate the term f\psi for \psi = 1. For this, we expand it in
+
+\]
+
+a Fourier series along Z1/Z0. Proceeding in this way, we arrive inductively at the conclusion.
+
+ut
+
+2.6.3. We prove (S1d). First of all,
+
+Lemma. — Let πv be an irreducible admissible representation of G(Fv).
+
+Then the image of ev\[m\] has dimension bounded above by A1q A2m
+
+v , where A2
+
+depends only on the isomorphism class of G.
+
+This follows (for v nonarchimedean) from Bernstein’s proof of uniform
+
+admissibility \[3\] and (for v archimedean) since any irreducible representation of a maximal compact subgroup occurs in πv with a multiplicity bounded by its
+
+dimension (a consequence of e.g. the subrepresentation theorem; recall we interpret qv = e = 2.71828 . . . for v archimedean). We give, for illustration,
+
+Bernstein’s proof for PGL2; this, and the mild variant of GL2 with a fixed central character, is the only case in which we shall use the result later in this
+
+paper. Proof. — (in the case of G = PGL2). Let C the characteristic function
+
+$v 0 \]
+
+\] K[$m ] ⊂ GL2(Fv). Then C acts on π K[$mv ]- of K\[$m
+
+v 0 1 v , the K\[$m v
+
+fixed vectors in π, as does the finite group G = K¯ \]. Let C[G] be the
+
+v/K¯ \[$m v
+
+K\[$mv \] generated by G. Let hCi be the algebra

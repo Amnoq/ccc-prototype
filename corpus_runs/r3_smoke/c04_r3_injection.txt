@@ -1,0 +1,89 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: D8 seed: deformations parametrize new positivity for zeros
+18: 3-4-1 machine transported to ζ_R, min S>0 verified
+19: ζ_R Euler product ⟹ zero-free for Re(s)>1, exact
+20: pole heavier: F(σ)~2/(σ−1), 19.33 vs 20.00 at σ=1.1
+21: deformations repackage the pole; no new zero-detector
+22: Dirichlet positivity converges only for σ>1
+23: hybrid division: geometry owns inputs, analysis owns continuation
+24: Λ≥0 + pole at s=1 at most recovers ζ(1+it)≠0
+25: Selberg parity barrier: sieve positivity can't resolve ω(n)
+26: MTY 2022: σ≥1−1/(5.558691 log|t|), degree-16 polynomial
+27: BTY 2026: zero-free 1/(4.896 log|t|)
+28: polynomial-improvement avenue from geometry essentially closed
+29: autocorrelation family P(θ)=|Q(e^{iθ})|², a₁>a₀ exclusion criterion
+30: 9c′: do degree-16 optimizers have small-support autocorrelation structure?
+31: 9c-as-prove-RH-by-positivity closed; 9c′ and hybrid remain
+32: explicit formula verified: ψ from sieve, 400 zeros γ≤679.7
+33: E(x)=ψ(x)−x is made of zeros; zeros regulate face-sum error
+34: Weil thesis: W(f∗f̃)≥0 constrains face-sum error (heuristic)
+35: Guinand–Weil zero-vs-prime agreement to machine precision
+36: prime-side positivity cancellatory: 2.266297−1.196347−1.069950≈0
+37: square dictionary: h=|H|² ⟷ P(θ)=|Q(e^{iθ})|²
+38: 10a-step3: optimize over H for maximal constraining power
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 21
+S0:22 24 25 26 27 28
+S31:23 29 30 31
+S32:32 33 34
+S35:35 36 37 38
+E19:1 21
+E20:1 21
+E21:1 31,2 17
+E22:1 23
+E23:1 31,12 17
+E24:1 23
+E25:1 31
+E26:1 28
+E27:1 28
+E28:1 31
+E29:1 23
+E30:11 29
+E32:1 33
+E33:1 34
+E35:1 36
+E36:11 34
+E37:6 29,11 34
+E38:11 34
+A:17 15,18 14,19 14,20 14,21 13,22 13,23 13,24 13,25 13,26 13,27 13,28 13,29 14,30 16,31 13,32 14,33 13,34 13,35 14,36 14,37 13,38 16
+L:30 38
+N17: killed by Euler-product zero-freeness + pole measurement
+N18: min S>0 on t-grid, deformation_kill.py
+N19: exact: |R_p|p^{-σ}<1, no factor vanishes
+N20: F(σ)~2/(σ−1); 19.33 vs 20.00 at σ=1.1
+N21: rests on exact (a) + measured (b)
+N22: structural: inputs don't define objects left of line
+N23: geometry inputs, analysis continuation and bounds
+N24: at most ζ(1+it)≠0 recoverable
+N25: Selberg: parity of ω(n) unresolvable
+N26: MTY 2022, arXiv:2212.06867, degree-16
+N27: Bellotti–Trudgian–Yang 2026
+N28: experts' own assessment: near intrinsic limit
+N29: q=(1,1):a₁/a₀=1 weak; (1,2,1) excludes; (1,1,1):4/3; (1,0,1):a₁=0 blind; (1,3,3,1):3/2
+N30: saturated optimizers' structure unknown
+N31: 9c closed; 9c′ + hybrid remain
+N32: T=50→4.55, 100→2.46, 200→1.95, 400→1.36; x=100.5: −6.4547 vs −6.5852
+N33: zeros regulate face-sum error
+N34: programmatic: W as face-sum-error positivity
+N35: a=0.02/0.10/0.50: diffs 2.4e-16, 2.2e-17, 5.3e-15; 60 zeros, 26152 p-powers
+N36: pole + archimedean(−1.196347) − prime drain ≈ 0
+N37: Weil criterion cited (1952), not derived
+N38: which square H maximizes constraining power?

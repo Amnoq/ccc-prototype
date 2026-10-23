@@ -1,0 +1,645 @@
+### HITCHIN INTEGRABLE SYSTEMS, DEFORMATIONS OF SPECTRAL
+
+### CURVES, AND KP-TYPE EQUATIONS
+
+### ANDREW R. HODGE1 AND MOTOHICO MULASE2
+
+|  | Abstract. An effective family of spectral curves appearing in Hitchin fibrations is determined. |
+
+| --- | --- |
+
+|  | Using this family the moduli spaces of stable Higgs bundles on an algebraic curve are embedded |
+
+| 008 | into the Sato Grassmannian. We show that the Hitchin integrable system, the natural algebraically |
+
+|  | completely integrable Hamiltonian system defined on the Higgs moduli space, coincides with the |
+
+|  | KP equations. It is shown that the Serre duality on these moduli spaces corresponds to the |
+
+| an 2 | formal adjoint of pseudo-differential operators acting on the Grassmannian. From this fact we |
+
+|  | then identify the Hitchin integrable system on the moduli space of Sp2m-Higgs bundles in terms |
+
+|  | of a reduction of the KP equations. We also show that the dual Abelian fibration (the SYZ mirror |
+
+| 14 J | dual) to the Sp2m-Higgs moduli space is constructed by taking the symplectic quotient of a Lie |
+
+|  | algebra action on the moduli space of GL-Higgs bundles. |
+
+| AG] |  |
+
+Contents
+
+| math. | 1. Introduction  1 |
+
+| --- | --- |
+
+|  | 2. Hitchin integrable systems  4 |
+
+|  | 3. Deformations of spectral curves  10 |
+
+|  | 4. Symplectic quotient of the Higgs moduli space and Prym fibrations 15 |
+
+| v2 [ | 5. Hitchin’s integrable systems and the KP equations 20 |
+
+|  | 6. Serre duality and formal adjoint of pseodo-differential operators 25 |
+
+| 015 | 7. The Hitchin integrable system for Sp2m  30 |
+
+|  | References  32 |
+
+| 01.0 |  |
+
+| v:08 | 1. Introduction |
+
+|  | The purpose of this paper is to determine the relation between the KP-type equations |
+
+defined on the Sato Grassmannians and the Hitchin integrable systems defined on the moduli
+
+# arXi
+
+spaces of stable Higgs bundles. The results established are the following:
+
+| (1) We determine the effective family of spectral curves appearing in the Hitchin fibration of the moduli spaces of stable Higgs bundles. |  |
+
+| --- | --- |
+
+| (2) We embed the effective family of Jacobian varieties of the spectral curves into the |
+
+|  | Sato Grassmannian and show that the KP flows are tangent to each fiber of the |
+
+|  | Hitchin fibration. |
+
+| (3) The moduli space of Higgs bundles of rank n and degree n(g − 1) on an algebraic |
+
+|  | curve of genus g ≥ 2 is embedded into the relative Grassmannian of [2, 20]. Using |
+
+|  | this embedding we show that the Hitchin integrable system is exactly the restriction |
+
+|  | of the KP equations on the Grassmannian to the image of this embedding. |
+
+| 1Research supported by NSF grants DMS-0135345 (VIGRE) and DMS-0406077. |  |
+
+| 2Research supported by NSF grant DMS-0406077 and UC Davis. |  |
+
+### 2  ANDREW HODGE AND MOTOHICO MULASE
+
+(4) It is shown that the Krichever construction transforms the Serre duality of the geometric data consisting of algebraic curves and vector bundles on them to
+
+the formal adjoint of pseudo-differential operators acting on the Grassmannian. By identifying the fixed-point-set of the Serre duality and the formal adjoint
+
+operation we determine the KP-type equations that are equivalent to the Hitchin integrable system defined on the moduli space of Sp2m-Higgs bundles.
+
+(5) There are two ways to reduce an algebraically completely integrable Hamiltonian system: one by restriction and the other by taking a quotient of a Lie
+
+algebra action that is similar to the symplectic quotient. When applied to the moduli spaces of Higgs bundles, these constructions yield SYZ-mirror pairs. We
+
+interpret the SLP GL and Sp2m-SO2m+1 dualities in this way.
+
+Let GC be the category of complex Lie groups, and CY the category of Calabi-Yau spaces.
+
+For a compact oriented surface Σ of genus g ≥ 2, the functor Hom(ˆπ1(Σ), · )// · : GC −→ CY //G, where ˆπ1(Σ) assigns to each complex Lie group G its character
+
+variety Hom πˆ1(Σ), G is the central extension of the fundamental group of Σ. The quotient by conjugation is the geometric invariant theory quotient of Mumford
+
+\[19\]. An amazing discovery of Hausel and Thaddeus \[7\], and its generalizations by \[4, 12\] and others, is that the character variety functor transforms the
+
+Langlands duality in GC to the mirror symmetry of Calabi-Yau spaces
+
+### in the sense of Strominger-Yau-Zaslow \[25\]:
+
+Hom(ˆπ1(Σ), · )// ·
+
+### GC
+
+### −−−−−−−−−−−→ CY
+
+|  |  |
+
+| --- | --- |
+
+| Langlands Dual  |  Mirror Dual |
+
+| y | y |
+
+### GC −−−−−−−−−−−→ CY
+
+Hom(ˆπ1(Σ), · )// ·
+
+The character variety Hom //G has many distinct complex structures \[7, 12\]. To
+
+πˆ1(Σ), G
+
+understand the SYZ mirror symmetry among the character varieties, it is most convenient to realize them as Hitchin integrable systems. In his seminal papers
+
+\[8, 9\], Hitchin identifies the character variety with the moduli space of stable G-Higgs bundles, which has the structure of an algebraically completely
+
+integrable Hamiltonian system.
+
+An algebraically completely integrable Hamiltonian system \[28\] is a holomorphic symplectic manifold (X, ω) of dimension 2N together with a holomorphic map H :
+
+X → g
+
+### ∗
+
+### such that
+
+\[
+
+a general fiber H-1 (s), s \in g^*
+
+\]
+
+### , is an Abelian variety of dimension N,
+
+\[
+
+g^* is the dual Lie algebra of a general fiber H-1 (s) considered as a Lie group, and (3) the coordinate components of the map H are Poisson commutative with
+
+respect to the symplectic structure \omega .
+
+\]
+
+The notion corresponding to an algebraically completely integrable Hamiltonian system in real symplectic geometry is the cotangent bundle of a torus. The
+
+procedure of symplectic quotient is to remove the effect of this cotangent bundle from a given symplectic manifold.
+
+In the holomorphic context, it is often useful to take the quotient by a family of groups that have the same Lie algebra. Suppose we have a Lie algebra direct
+
+sum decomposition g = g1 \oplus g2. If g1-action on X is integrable to a group G1,s-action in each fiber H−1 (s) for s ∈ g ∗ (s)/G1,s over
+
+2 , then we can define a quotient X//g1 as the family of quotients H−1
+
+### g ∗ ∗ and
+
+2 . We can also construct a reduction of (X, ω, H) by restricting the fibration to g_2
+
+### (s), if the g2-action is integrated to a group action
+
+### considering the family of g2-orbits in H−1
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 3
+
+### over g ∗
+
+2 . When applied to the moduli space of Higgs bundles, these two constructions yield
+
+Abelian fibrations that are dual to one another, producing an SYZ mirror pair. We examine these constructions for the SL-P GL and Sp2m-SO2m+1 dualities.
+
+From the results established in \[14, 15, 17\], we know that linear integrable evolution equations on the Jacobians or Prym varieties are realized as the
+
+restriction of KP-type equations defined on the Sato Grassmannians through a generalization of Krichever construction. Since the Hitchin integrable systems are
+
+defined on a family of Jacobian varieties
+
+or Prym varieties, we need to embed the whole family into the Sato Grassmannian to compare the Hitchin systems and the KP equations. To deal with families, we
+
+approaches in this article. One approach is to utilize the theory of Sato Grassmannians defined over an arbitrary scheme developed by Quandt \[20\]. In this way
+
+we can directly compare the integrable Hamiltonian systems on the Higgs moduli spaces and the KP equations. The other approach is to examine the deformations
+
+of spectral curves that appear in
+
+the Hitchin Hamiltonian systems. Once we identify the effective family of spectral curves, we can embed the whole family into a single Sato Grassmannian over C,
+
+using the method developed in \[14\].
+
+The second approach has an unexpected application: we can identify the effect of Serre duality operation on the algebro-geometric data in terms of the language
+
+of Grassmannians.
+
+Note that Sato Grassmannians are constructed from pseudo-differential operators \[21, 22\].
+
+We will show, using Abel’s theorem, that the Serre duality is simply the formal adjoint operation on the pseudo-differential operators. Since the Sp-Hitchin
+
+system is the fixedpoint-set of the Serre duality on the GL-Hitchin system, we can determine the integrable
+
+equations corresponding to the Sp case as a reduction of the KP equations on the fixedpoint-set of the formal adjoint action on pseudo-differential operators.
+
+adjoint is slightly different from what has been studied in the literature \[11, 24, 26\], the equations coming up for the symplectic groups are not BKP or CKP
+
+equations. Let
+
+### ∂
+
+### P = Xai(x)
+
+### \partial_x i
+
+be a formal pseudo-differential operator, where ai(x) is a matrix valued functions. We define
+
+### the formal adjoint by
+
+### ∂
+
+### P ∗ = X_t
+
+### \partial_x i · ai(−x) .
+
+The reduction of the KP equations that corresponds to the Sp-Hitchin system is the 2mcomponent KP equations that preserve the algebraic condition
+
+### Im Im
+
+### (1.1)  L ∗ =
+
+### Im · L · Im
+
+for a 2m × 2m matrix Lax operator L with the leading term I2m · ∂/∂x. Several authors have proposed integrable systems with Sp2m-symmetry (cf. \[27\]). It would
+
+be interesting to study our reduction (1.1) from the point of view of integrable systems and to investigate the relation with the other Sp integrable systems.
+
+The paper is organized as follows. The first section is devoted to reviewing the Hitchin integrable systems of \[3, 9\]. We then determine an effective family
+
+of spectral curves in Section_3. Section_4 is devoted to giving two constructions of reduced integrable systems from a Hitchin system: one is a straightforward
+
+specialization, and the other is a kind of symplectic reduction by a Lie subalgebra. These two constructions give rise to an Abelian fibration and its dual
+
+Abelian fibration. We show that the GL-Hitchin integrable system is
+
+### 4  ANDREW HODGE AND MOTOHICO MULASE
+
+equivalent to the KP equations in Section 5. The identification of the Serre duality in terms of Grassmannians and pseudo-differential operators is carried out
+
+in Section 6. Finally we determine the KP-type equations for the Sp Hitchin system.
+
+The relation between the Hitchin integrable systems and the KP equations was first studied in \[13\]. The treatment there was limited to the study of the
+
+Hitchin system on a single fiber. The present article extend the result therein.
+
+### 2. Hitchin integrable systems
+
+In this section we review the algebraically completely integrable Hamiltonian systems defined on the moduli spaces of Higgs bundles, following \[3, 8, 9\].
+
+\[
+
+Throughout the paper we denote by C a non-singular algebraic curve of genus g \ge 2. The moduli space of semistable algebraic vector bundles on C of rank_n and
+
+degree d is denoted by UC(n,d). When_n and d are relatively prime, a semistable bundle is automatically stable,
+
+\]
+
+2 (g−1)+1.
+
+and the moduli space is a non-singular projective algebraic variety of dimension n
+
+### We denote by
+
+\[
+
+UC(n) = a UC(n,d)
+
+\]
+
+### d∈Z
+
+the space of all stable vector bundles. A Higgs bundle is a pair (E, φ) consisting of an
+
+### algebraic vector bundle E on C and a global section
+
+\[
+
+\varphi \in H_0 (C,End(E) \otimes KC)
+
+\]
+
+of the endomorphism sheaf of E twisted by the canonical sheaf KC of C. A Higgs bundle is
+
+deg E for every φ-invariant proper holomorphic vector subbundle F. An
+
+### stable if deg F
+
+\[
+
+rank F < rank E endomorphism of a Higgs bundle (E,\varphi) is an endomorphism \psi of E that commutes with \varphi :
+
+\]
+
+### ψ
+
+E
+
+### −−−−→  E
+
+###
+
+### φ
+
+### y yφ
+
+### E \otimes KC −−−−→ E \otimes KC
+
+### ψ\otimes 1
+
+It is known that H0 (C,End(E, φ)) = C for a stable Higgs bundle, and one can define the moduli space of stable objects. We denote by HC(n, d) the moduli space
+
+of stable Higgs
+
+### bundles of rank n and degree d on C, and
+
+\[
+
+HC(n) = a HC(n,d).
+
+\]
+
+### d∈Z
+
+\[
+
+Note that the Serre duality induces an involution on HC(n) defined by \tag{2.4}
+
+\]
+
+\[
+
+HC(n,d) ∋ (E,\varphi) 7-\to (E^* \otimes KC,-\varphi^*) \in HC(n,-d + 2n(g - 1)). The dual of the Higgs field \varphi : E \to E \otimes KC is a homomorphism
+
+\varphi^*
+
+\]
+
+### : E∗ \otimes K−1
+
+### C → E∗ . We
+
+use the same notation for the homomorphism E∗ \otimes KC → E∗ \otimes K\otimes 2 induced by φ ∗
+
+C .
+
+\[
+
+If E is stable, then (E,\varphi) is stable for any \varphi of \tag{2.2}
+
+\]
+
+\[
+
+. And if \varphi = 0, then the stability of (E,\varphi) simply means E is stable. Therefore, the Higgs moduli space contains the total
+
+### space of the holomorphic cotangent bundle
+
+### (2.5)  T ∗UC(n, d) ⊂ HC(n, d),
+
+### since
+
+\[
+
+H_0 (C,End(E) \otimes KC) ∼= H_1 (C,End(E))^* ∼= T^*
+
+\]
+
+E UC(n, d).
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 5
+
+Note that p ∗Λ_1 (UC(n, d)) ⊂ Λ_1 (T ∗UC(n, d)) has a tautological section (2.6) η ∈ H_0 (T ∗UC(n, d), p∗Λ_1 (UC(n, d))), where p : T ∗UC(n, d) → UC(n, d) is
+
+the projection, and \Lambda_r denotes the sheaf of holomorphic_r-forms. The differential ω = −dη of the tautological section defines the canonical holomorphic
+
+symplectic form on T ∗UC(n, d). The restriction of ω on UC(n, d), which is the_0-section of the cotangent bundle, is identically_0. Therefore the_0-section is a
+
+Lagrangian submanifold of this holomorphic symplectic space.
+
+### Let us denote by
+
+(2.7)  V ∗ ∗ Mn H 0 (C, K\otimes i ).
+
+GL = V GLn(C) = C
+
+### i=1
+
+### As a vector space V ∗ (C,End(E) \otimes KC). The Higgs field
+
+### GL has the same dimension of H0
+
+\[
+
+\varphi : E \to E \otimes KC induces a homomorphism of the_i-th anti-symmetric tensor product spaces i (\varphi) : ∧ i (E) -\to ∧i (E \otimes KC) = ∧ i (E)
+
+\otimes K \otimes i
+
+### ∧
+
+### C ,
+
+\[
+
+i (\varphi) \in H_0 (C,End(∧ i (E)) \otimes K\otimes i). Taking its natural trace, we obtain
+
+\]
+
+### or equivalently ∧
+
+C
+
+\[
+
+tr ∧ i (\varphi) \in H_0 (C,K\otimes i).
+
+\]
+
+C
+
+This is exactly the i-th characteristic coefficient of the twisted endomorphism φ:
+
+\[
+
+det(x - \varphi) = x_n + Xn (-1)i_i (\varphi) · x_n-i
+
+\]
+
+### tr ∧
+
+.
+
+### i=1
+
+By assigning the coefficients of (2.8), Hitchin \[9\] defines a holomorphic map, now known as
+
+### the Hitchin fibration or Hitchin map,
+
+\[
+
+H : HC(n,d) ∋ (E,\varphi) 7-\to det(x - \varphi) \in Mn H_0 (C,K\otimes i) = V^*
+
+\]
+
+#### C GL.
+
+### i=1
+
+The map H to the vector space V ∗ 2 (g − 1) + 1 globally defined
+
+GL is a collection of N = n
+
+holomorphic functions on HC(n, d). The 0-fiber of the Hitchin fibration is the moduli space UC(n, d).
+
+To determine the generic fiber of H, the notion of spectral curves is introduced in \[9\].
+
+\[
+
+The total space of the canonical sheaf KC = \Lambda_1 (C) on C is the cotangent bundle T^*C. Let \tag{2.10}
+
+\]
+
+\[
+
+\pi : T^*C -\to C
+
+\]
+
+### be the projection, and
+
+\[
+
+(T^*C,\pi^*KC) \subset H_0 (T^*C,\Lambda_1 (T^*C)) \tau \in H_0 be the tautological section of \pi^*KC on T^*C. Here again \omega T^*C = -d\tau is the
+
+holomorphic symplectic form on T^*C. The tautological section \tau satisfies that \sigma^* \tau = \sigma for every section (C,KC) viewed as a holomorphic map
+
+\sigma : C \to T^*C. The characteristic coefficients \sigma \in H_0 \tag{2.8}
+
+\]
+
+\[
+
+of \varphi give a section \tag{2.11}
+
+\]
+
+\[
+
+s = det(\tau - \varphi) = \tau \otimes n + Xn (-1)i_i (\varphi) · \tau \otimes n-1 \in H_0 (T^*C,\pi^*K\otimes n).
+
+\]
+
+### tr ∧
+
+C
+
+### i=1
+
+\[
+
+We define the spectral curve Cs associated with a Higgs pair (E,\varphi) as the divisor of_0-points of the section s = det(\tau - \varphi) of the line bundle
+
+\pi^*K\otimes n :
+
+\]
+
+C
+
+\[
+
+Cs = (s)0 \subset T^*C.
+
+\]
+
+### 6  ANDREW HODGE AND MOTOHICO MULASE
+
+\[
+
+The projection \pi of \tag{2.10}
+
+\]
+
+\[
+
+defines a ramified covering map \pi : Cs \to C of degree_n. There is yet another construction of the spectral curve Cs. Since the section s = det(\tau -\varphi)
+
+is determined by the characteristic coefficients of \varphi, by abuse of notation we identify s as
+
+\]
+
+### an element of V ∗
+
+### GL:
+
+\[
+
+2 (\varphi), . . .,(-1)n_n (\varphi)) \in Mn H_0 (C,K\otimes i). s = (s_1,s_2,. . .,sn) = (-tr \varphi,tr ∧ tr ∧
+
+\]
+
+C
+
+### i=1
+
+It defines an OC-module (s1 + s2 + · · · + sn) · K\otimes−n
+
+### C . Let Is denote the ideal generated by
+
+this module in the symmetric tensor algebra Sym(K−1 ). Since K−1 is the sheaf of linear
+
+### C C
+
+functions on T ∗C, the scheme associated to this tensor algebra is Spec Sym(K−1 ) ∗C.
+
+C = T
+
+The spectral curve as the divisor of 0-points of s is then defined by
+
+### ) !
+
+### Sym(K−1
+
+\[
+
+Cs = Spec C Sym(K-1)^*C.
+
+\]
+
+### ⊂ Spec = T
+
+### Is C
+
+We denote by Ureg the set consisting of points s for which Cs is non-singular. It is an
+
+### open dense subset of V ∗
+
+GL \[3\]. We note that since deg(KC) = 2g − 2 > 0, every divisor of
+
+T ∗C intersects with the 0-section C. Therefore, if Cs is non-singular, then it has only one
+
+### 2 (g − 1) + 1, which
+
+component, and is therefore irreducible. The genus of Cs is g(Cs) = n
+
+### follows from an isomorphism
+
+### )/Is Mn−1
+
+π∗OCs = Sym(K−1 ∼= K\otimes−i
+
+### C C
+
+### i=0
+
+as an OC-module.
+
+\[
+
+The Higgs field \varphi \in H_0 (C,End(E) \otimes KC) gives a homomorphism \varphi : K-1 C -\to End(E),
+
+\]
+
+which induces an algebra homomorphism, still denoted by the same letter,
+
+) −→ End(E).
+
+### ϕ : Sym(K−1
+
+C
+
+Since s ∈ V ∗
+
+GL is the characteristic coefficients of ϕ, by the Cayley-Hamilton theorem, the
+
+### homomorphism ϕ factors through
+
+Sym(K −1 ) −→ Sym(K −1 )/Is −→ End(E).
+
+### C C
+
+Hence E is a module over Sym(K−1 )/Is of rank 1. The rank is 1 because the ranks of
+
+C

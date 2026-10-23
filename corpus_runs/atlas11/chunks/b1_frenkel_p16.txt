@@ -1,0 +1,493 @@
+Up to now we have considered the case of one insertion point. It is easy to generalize this construction to the case of multiple insertion points. We then
+
+obtain a functor assigning to_n-tuples of highest weight bg-modules (inserted at the points x1,... ,xn of a curve X) to the moduli space of G-bundles on X with
+
+parabolic structures at the points x1,... ,xn (see \[20\], Sect. 18.1.3).67 Thus, we see that the conformal field theory “factory” producing D-modules on BunG
+
+is neatly expressed by the mathematical formalism of “localization functors” from representations of bg to D-modules on BunG.
+
+7.6. Example: the WZW D-module. Let us see what the D-modules of coinvariants look like in the most familiar case of the WZW model corresponding to a compact
+
+group U and a positive integer level k (we will be under the assumptions of Sect. 7.1). Let L0,k be the vacuum irreducible integrable representation of bg of
+
+level k (it has highest weight 0).
+
+Then the corresponding sheaf of coinvariants is just the D′
+
+k -module \Delta(L0,k). Because L0,k
+
+is an integrable module, so not only the action of the Lie subalgebra g\[\[t\]\] exponentiates, but the action of the entire Lie algebra bg exponentiates to an
+
+action of the corresponding
+
+P
+
+group Gb, the space of coinvariants L0,k/g
+
+### out are isomorphic to each other for different
+
+\[
+
+bundles. Hence \Delta \tag{L0,k}
+
+\]
+
+\[
+
+is a vector bundle with a projectively flat connection in this case.
+
+\]
+
+We will consider the dual bundle of conformal blocks Cg(L0,k).
+
+The fiber Cg(L0,k) of this bundle at the trivial G-bundle is just the space of gout-invariant functionals on L0,k. One can show that it coincides with the space
+
+of Gout-invariant functionals on L0,k. By an analogue of the Borel-Weil-Bott theorem, the dual space to the vacuum representation L0,k is realized as the space
+
+of sections of a line bundle Le\otimes k on the quotient LU/U, which is nothing but the affine Grassmannian Gr = G((t))/G[\[t]\] discussed above, where G is
+
+the complexification of U. Therefore the space of conformal blocks Cg(L0,k) is the space of global sections of the corresponding line bundle L \otimes k on
+
+BunG, realized as the quotient (7.8) of Gr. We obtain that the space of conformal blocks
+
+\otimes k ) of global
+
+corresponding to the vacuum representation is realized as the space Γ(BunG, L
+
+\otimes k over BunG.
+
+sections of L
+
+66various integral powers of L may be constructed as determinant line bundles corresponding to representations of G, see \[20\], Sect. 18.1.2 and references
+
+therein for more details 67The reason for the appearance of parabolic structures (i.e., reductions of the fibers of the G-bundle at the marked points to a Borel
+
+subgroup B of G) is that a general highest weight module is not a (bg, G[\[t]\])- module, but a (bg, I)-module, where I is the Iwahori subgroup of G((t)), the
+
+preimage of B in G[\[t]\] under the homomorphism G[\[t]\] → G. For more on this, see Sect. 9.7.
+
+### 84  EDWARD FRENKEL
+
+\[
+
+It is not hard to derive from this fact that the bundle Cg \tag{L0,k}
+
+\]
+
+\[
+
+of conformal blocks over BunG is just the tensor product of the vector space \Gamma(BunG,L \otimes k) and the line bundle
+
+\]
+
+### L \otimes(−k) \otimes k ) ∗ \otimes L \otimes k
+
+. Thus, the dual bundle \Delta(L0,k) of coinvariants is Γ(BunG, L . It has a canonical section φ whose values are the projections of the vacuum vector in L0,k
+
+onto the spaces of coinvariants. This is the chiral partition function of the WZW model. The partition function is the square of length of this section
+
+\|\|φ\|\|2 with respect to a hermitean inner product on \Delta(L0,k). Since the bundle \Delta(L0,k) of coinvariants in the WZW model is the tensor product L
+
+\otimes k \otimes V , where L is the determinant line bundle on BunG and V is a vector space, we find that the dependence of \Delta(L0,k) on the BunG moduli is
+
+only through the determinant line bundle L \otimes k
+
+. However, despite this decoupling, it is still very useful to take into account
+
+the dependence of the correlation functions in the WZW model on the moduli of bundles.
+
+More precisely, we should combine the above two constructions and consider the sheaf of coinvariants on the combined moduli space of curves and bundles. Then
+
+the variation along the moduli of curves is given in terms of the Segal-Sugawara stress tensor, which is quadratic in the Kac-Moody currents. Therefore we find
+
+that the correlation functions satisfy a non-abelian version of the heat equation. These are the Knizhnik-ZamolodchikovBernard equations \[9, 93\].68 In
+
+addition, the bundle of conformal blocks over BunG may
+
+be used to define the hermitean inner product on the space of conformal blocks, see \[83\].
+
+However, it would be misleading to think that L \otimes k \otimes V is the only possible twisted Dmodule that can arise from the data of a conformal field
+
+theory with Kac-Moody symmetry.
+
+There are more complicated examples of such D-modules which arise from other (perhaps, more esoteric) conformal field theories, some of which we will consider
+
+in the next section.
+
+We believe that this is an important point that up to now has not been fully appreciated in the physics literature.
+
+It is instructive to illustrate this by an analogy with the Borel-Weil-Bott theorem. This theorem says that an irreducible finite-dimensional representation of
+
+highest weight λ of a compact group U may be realized as the space of global holomorphic sections of a holomorphic line bundle O(λ) on the flag variety U/T,
+
+where T is the maximal torus of U. Any representation of U is a direct sum of such irreducible representations, so based on that, one may conclude that the only
+
+interesting twisted D-modules on U/T are the sheaves of sections of the line bundles O(λ). But in fact, the space of global sections of any twisted D-module on
+
+the flag variety has a natural structure of a representation of the corresponding (complexified) Lie algebra g. Moreover, according to a theorem of A.
+
+Beilinson and
+
+J. Bernstein, the category of DO(λ)
+
+-modules corresponding to a non-degenerate weight \lambda is equivalent to the category of g-modules with a fixed central character determined by \lambda . So
+
+if one is interested in representations of the Lie algebra g, then there are a lot more interesting D-modules to go around. For example, the Verma modules, with
+
+respect to a particular Borel subalgebra b \subset g come from the D-modules of =delta-functions” supported at the point of the flag variety stabilized by b.
+
+\]
+
+Likewise, we have a Borel-Weil-Bott type theorem for the loop group LU of U: all irreducible representations of the central extension of LU of positive energy
+
+may be realized
+
+68for an interpretation of these equations in the framework of the above construction of twisted Dmodules see \[74\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 85
+
+as the duals of the spaces of global holomorphic sections of line bundles on the quotient LU/T, which is the affine analogue of U/T. This quotient is isomorphic
+
+to the quotient G((t))/I, where I is the Iwahori subgroup. The vacuum irreducible representation of a given level_k is realized as the dual space to the space
+
+of sections of a line bundle Le\otimes k on the smaller quotient Gr = LU/U. This is the reason why the space of conformal blocks in the corresponding WZW theory
+
+(with one insertion) is the space of global sections of a line bundle on BunG, as we saw above.
+
+But again, just as in the finite-dimensional case, it would be misleading to think that these line bundles on the affine Grassmannian and on BunG tell us the
+
+whose story about twisted D-modules in this context. Indeed, the infinitesimal symmetries of our conformal field theories are generated by the corresponding Lie
+
+algebra, that is the affine Kac-Moody algebra bg (just as the Virasoro algebra generates the infinitesimal conformal transformations). The sheaves of
+
+coinvariants corresponding to representations of bg that are not
+
+necessarily integrable to the corresponding group Gb (but only integrable to its subgroup G\[\[t\]\]) give rise to more sophisticated D-modules on BunG, and
+
+this one of the main points we wish to underscore in this survey. In the next section we will see that this way we can actually construct the sought-after Hecke
+
+eigensheaves.
+
+8. Conformal field theory at the critical level
+
+In this section we apply the construction of the sheaves of coinvariants from conformal field theory to a particular class of representations of the affine
+
+Kac-Moody algebra of
+
+### ∨, where h ∨ is the dual Coxeter number of g
+
+critical level. The critical level is_k = −h (see \[100\]). Thus, we may think about these sheaves as encoding a chiral conformal field theory with Kac-Moody
+
+symmetry of critical level. This conformal field theory is peculiar because it lacks the stress tensor (the Segal-Sugawara current becomes commutative at_k = −h
+
+∨). As bizarre as this may sound, this cannot prevent us from constructing the corresponding sheaves of coinvariants on BunG. Indeed, as we explained in the
+
+previous section, all we need to construct them is an action of bg. The stress tensor (and the action of the Virasoro algebra it generates) is needed in order
+
+to construct sheaves of coinvariants on the moduli spaces of punctured curves (or on the combined moduli of curves and bundles), and this we will not be able
+
+do. But the Hecke eigensheaves that we wish to construct in the geometric Langlands correspondence are supposed to live on BunG, so this will be sufficient for
+
+our purposes.69 Before explaining all of this, we wish to indicate a simple reason why one should expect Hecke eigensheaves to have something to do with the
+
+critical level. The Hecke eigensheaves that we will construct in this section, following Beilinson and Drinfeld, will be of the type discussed in Sect. 3.4:
+
+they will correspond to systems of differential equations on BunG obtained from a large algebra of global commuting differential operators on it. However, one
+
+can show that there are no global commuting differential operators on BunG, except for the constant functions. Hence we look at twisted global differential
+
+operators acting
+
+\otimes k introduced in the previous section. Suppose we find that for
+
+on the line bundle L some value of k there is a large commutative algebra of differential operators acting on
+
+### L \otimes k
+
+. Then the adjoint differential operators will be acting on the Serre dual line bundle
+
+69affine algebras at the critical level have also been considered recently by physicists, see \[101, 102\]
+
+### 86  EDWARD FRENKEL
+
+### K \otimes L \otimes(−k)
+
+, where K is the canonical line bundle. It is natural to guess that k should be
+
+such that the two line bundles are actually isomorphic to each other. But one can show
+
+### \otimes−2h ∨
+
+that K ≃ L
+
+. Therefore we find that if such global differential operators were to
+
+### ∨, when L \otimes k ≃ K1/2
+
+exist, they would most likely be found for_k = −h
+
+. This is indeed the
+
+case. In fact, these global commuting differential operators come from the Segal-Sugawara
+
+### ∨ become commutative, and
+
+current and its higher order generalizations which at level −h moreover central, in the chiral algebra generated by bg, as we shall see presently.
+
+8.1. The chiral algebra. We start with the description of the chiral vertex algebra
+
+### ∨. We recall that a representation of bg defined as the
+
+\[
+
+associated to bg at the level -h extension \tag{7.1}
+
+\]
+
+\[
+
+with the commutation relations (7.2), where \kappa_0 is the standard normalized invariant inner product on g, is called a representation of level_k if the
+
+central element_1
+
+\]
+
+### ∨ may be described
+
+\[
+
+acts as_k times the identity. Representation of bg of the critical level -h as representations of bg with the relations \tag{7.2}
+
+\]
+
+\[
+
+, where \kappa_0 is replaced by the critical inner product -1 \kappa Kil, such that_1 acts as the identity. Here \kappa Kil(A,B) = Trg(ad A ad B) is the
+
+\]
+
+Killing form.
+
+In conformal field theory we have state-field correspondence. So we may think of elements of chiral algebras in two different ways: as the space of states and
+
+the space of
+
+fields. In what follows we will freely switch between these two pictures.
+
+\[
+
+Viewed as the space of states, the chiral algebra at level_k \in C is just the vacuum Verma module Vk(g) = Indbg Ck = U(bg) \otimes Ck,
+
+\]
+
+g\[\[t\]\]\oplus CK
+
+### U(g\[\[t\]\]\oplus C1) where Ck is the one-dimensional representation of g\[\[t\]\] \oplus C1 on which g\[\[t\]\] acts by 0 and
+
+### 1 acts as multiplication by k. As a vector space,
+
+Vk(g) ≃ U(g \otimes t −1C\[t −1 \]).
+
+\[
+
+Let {J a}a=1,...,dim g be a basis of g. For any A \in g and_n \in Z, we denote An = A\otimes t_n \in Lg.
+
+\]
+
+Then the elements J a
+
+\[
+
+n,n \in Z, and_1 form a (topological) basis for bg. The commutation
+
+\]
+
+relations read
+
+\[
+
+[J a a]n+m + n(J a)\delta n,-m_1. n,Jb_m] = [J,Jb,Jb Denote by vk the vacuum vector in Vk(g), the image of_1 \otimes 1 \in Ubg \otimes Ck in Vk. We define a
+
+Z-grading on bg and on Vk(g) by the formula deg J a n = -n, deg vk = 0. By the
+
+\]
+
+Poincar´e-Birkhoff-Witt theorem, Vk(g) has a basis of lexicographically ordered monomials of the form
+
+### J a1 vk,
+
+### n1 ... Jam nm
+
+\[
+
+where n_1 \le n_2 \le ... \le nm < 0, and if ni = ni+1, then ai \le ai+1. Here is the picture of the first few =layers” (i.e.,homogeneous components) of Vk(g):
+
+\]
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 87
+
+### vk
+
+✁ ✉ ❆ ✁ ❆ ✁ ❆ ✁ {J a ❆
+
+### vk}
+
+✁ ✉ −1 ❆ ✁ ❆ ✁ ❆ {J ✁ {J b ❆ a vk} a vk}
+
+### ✁ −2 ✉ ✉ −1J −1 ❆
+
+✁ ❆ ✁ ❆ ✁ ❆
+
+{J a
+
+✁ vk} ❆
+
+−3 ... ...
+
+✉ ✉ ✉
+
+✁✁ ❆❆
+
+The state-field correspondence is given by the following assignment of fields to vectors in Vk(g):
+
+### vk 7→ Id,
+
+J a a (z) = X J a −n−1
+
+### vk 7→ J z
+
+### −1 n ,
+
+### n∈Z
+
+J a1 −n1−1 a1 (z)... ∂−nm−1 am (z):
+
+### vk  7→
+
+n1 ... Jam nm (−n1 − 1)! ...(−nm − 1)!:∂ z J z J
+
+(the normal ordering is understood as nested from right to left).
+
+\[
+
+In addition, we have the translation operator \frac{\partial Vk}{\partial on}(g), defined by the formulas \partial_v k = 0, [\partial,Ja] = -nJa n_n-1 . It is
+
+defined so that the field (\partial A)(z) is \partial_z A(z). These data combine
+
+\]
+
+into what mathematicians call the structure of a (chiral) vertex algebra. In particular, the space of fields is closed under the operator product expansion
+
+(OPE), see \[20\] for more details.
+
+\[
+
+Let {Ja} be the basis of g dual to {J a} with respect to the inner product \kappa_0. Consider the following vector in Vk(g): \tag{8.2}
+
+\]
+
+\[
+
+S = Ja,-1J a
+
+\]
+
+### vk
+
+### 2 −1
+
+(summation over repeating indices is understood). The corresponding field is the SegalSugawara current
+
+\[
+
+S(z) = 1 a (z): = X Snz -n-2
+
+\]
+
+:Ja(z)J 2 .
+
+### n∈Z
+
+We have the following OPEs:
+
+J a (w)
+
+S(z)J a (w) = (k + h ∨ ) + reg .,
+
+### z − w
+
+k dim g/2 2S(w) ∂wS(w) S(z)S(w) = (k + h ∨ ) + + + reg .,
+
+(z − w) 4 (z − w) 2
+
+### z − w
+
+### 88  EDWARD FRENKEL
+
+which imply the following commutation relations:
+
+\[Sn,Ja ∨ )mJa
+
+\[
+
+m] = -(k + h_n+m,[Sn,Sm] = (k + h ∨) (n - m)Sn+m + k dim g \delta n,-m
+
+\]
+
+12 .
+
+\[
+
+Thus, if_k 6= -h ∨, the second set of relations shows that the rescaled operators Ln = (k + h) -1Sn generate the Virasoro algebra with central charge ck = k dim
+
+g/(k + h). The commutation relations \tag{8.4}
+
+\]
+
+\[
+
+[Ln,Ja
+
+\]
+
+### m\] = −mJa n+m
+
+show that the action of this Virasoro algebra on bg coincides with the natural action of infinitesimal diffeomorphisms of the punctured disc.
+
+But if_k = h ∨, then the operators Sn commute with bg and therefore belong to the center
+
+### ∨. In fact, one can easily show that
+
+of the completed enveloping algebra of bg at_k = −h the chiral algebra at this level does not contain any elements which generate an action of the Virasoro
+
+algebra and have commutation relations (8.4) with bg. In other words, the Lie algebra of infinitesimal diffeomorphisms of the punctured disc acting on bg cannot
+
+be realized as an “internal symmetry” of the chiral algebra V−h∨ (g). This is the reason why the level_k = −h ∨ is called the critical level.70 8.2. The center
+
+of the chiral algebra. It is natural to ask what is the center of the completed enveloping algebra of bg at level_k. This may be reformulated as the question
+
+of finding the fields in the chiral algebra Vk(g) which have regular OPEs with the currents J a (z). If this is the case, then the Fourier coefficients of these
+
+fields commute with bg and hence lie in the center of the enveloping algebra. Such fields are in one-to-one correspondence with the vectors in Vk(g) which are
+
+annihilated by the Lie subalgebra g[\[t]\]. We denote the subspace of g[\[t]\]-invariants in Vk(g) by zk(g). This is a commutative chiral subalgebra of Vk(g),
+
+and hence it forms an ordinary commutative algebra. According to the above formulas, S ∈ z−h∨ (g). Since the translation operator T commutes with g[\[t]\], we
+
+find that ∂ mS = m!S−m−2vk,m ≥ 0 is also in z−h∨ (g). Therefore the commutative algebra C[∂ mS]m≥0 = C[Sn]n≤−2 is a commutative chiral subalgebra of z(g).
+
+Consider first the case when g = sl2. In this case the critical level is_k = −2. Theorem_7. (1) zk(sl2) = Cvk, if_k 6= −2.(2) z−2(sl2) = C[Sn]n≤−2. Thus, the
+
+center of V−2(sl2) is generated by the Segal-Sugawara current S(z) and its derivatives. In order to get a better understanding of the structure of the center, we
+
+need to understand how S(z) transforms under coordinate changes. For_k 6= −2, the stress tensor T(z) = (k + 2)−1S(z) transforms in the usual way under the
+
+coordinate change w = ϕ(z):
+
+### ck
+
+T(w) 7→ T(ϕ(z))ϕ ′ (z) 2 − {ϕ,z},
+
+70This terminology is somewhat unfortunate because of the allusion to the “critical central charge”
+
+### ∨

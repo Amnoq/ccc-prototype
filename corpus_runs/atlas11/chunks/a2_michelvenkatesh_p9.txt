@@ -1,0 +1,991 @@
+( Ξ(g) 2 [K : U] 2kx1k_2 2 2
+
+Y hgxi U kx2k U kx3k ,
+
+, xii_6 Ξ(g) 3 Q \pi_i (xi) 2
+
+i i S ,
+
+To analyze \|L(x1, x2, x3)\|, we split the g-integral into Bη and its complement, applying the former bound on Bη and the latter on its complement. This leads
+
+to the stated bound; the bounds on Ξ(g) are obtained using only the fact that
+
+Z
+
+\|Ξ(g)\| 2+ε ε_1.
+
+g∈G
+
+Remark. — When π3 is not necessarily tempered, an analysis of the
+
+prior argument shows that, if xi are invariant by subgroups Ui
+
+, then \|L(x1, x2, x3)\|
+
+is bounded above by
+
+\[
+
+[K : U_3]q kx1kU kx2kU kx3k + Y [K : Ui] \frac{1}{2} (\theta -1/2)(m+1)kx1kkx2kkx3k \tag{3.37}
+
+\]
+
+\[
+
+m\theta /2 q
+
+\]
+
+i
+
+3.6. Choice of test vectors in the trilinear form.
+
+In this section, we estimate L and Iπ3 for specifically chosen test vectors.
+
+\[
+
+3.6.1. Proposition. — Let \pi_1, \pi_2 be the two generic unitary representations of GL2(k). Suppose that \pi_3 is the principal series representation_1 \chi_3,
+
+where \chi -1 is the product of central characters of \pi_1, \pi_2. Write the analytic conductors Ci = C(\pi i). Then, for any > 0, there exists vectors xi \in
+
+\pi_i with the following properties:
+
+\]
+
+- kxik = 1 ;
+
+\[
+
+\pi_2 \tag{x2}
+
+\]
+
+\[
+
+d,\pi 2 1; - For d > 0, S d \pi_3 (x_3) d,\pi 1,\pi 2 1; - For d > 0, S d
+
+\]
+
+−1/4+ ;
+
+- kx3kU \pi_2, C_1
+
+−1/2− ;
+
+- \|L(x1, x2, x3)\| \pi_2, C_1
+
+- If k is non-archimedean and all the πi are unramified, we may take
+
+x1, x2, x3 to be the new vectors. In this case,
+
+\|L(x1, x2, x3)\| 2 1 )
+
+\[
+
+Q kxik = \zeta_k \tag{2}
+
+\]
+
+\[
+
+2L(\pi 1 \otimes \pi_2 \otimes \pi_3,Q i L(1,\pi_i,Ad) .
+
+\]
+
+The rest of this section indicates the choice of test vector and the proof of the assertions. The unramified case has already been noted.
+
+#### 60 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+3.6.2. Case of k nonarchimedean. — Write f to be the larger of the
+
+\[
+
+valuations of the conductors of \pi_1, \pi_2. We set: 1. x_1 \in \pi_1 to be the new vector in the Whittaker model W(\pi 1,\psi),
+
+\]
+
+normalized to have norm 1;
+
+\[
+
+2. x_2 \in \pi_2 to be the new vector in the Whittaker model W(\pi 2,\psi),
+
+\]
+
+normalized to have norm 1;
+
+\[
+
+3. x_3 \in \pi_3 to be the vector in the principal series representation corresponding to the function f_3 \in I_3 of norm_1 which upon restriction to K,
+
+\]
+
+is supported on the compact subgroup K0\[f\], and is a K0\[f\]-eigenvector: explicitly
+
+a b
+
+f3\|K : 7→ vol(K0[f])−1/2χ3(d)1K0[f]
+
+c d .  (3.38) The ratio \|W(1)\|
+
+kWk , when W is the new vector, is well-known (e.g. \[66, §7\]),
+
+and in particular is absolutely bounded above and below at nonarchimedean
+
+\pi_i (xi) (i = 2, 3) follows from the fact that xi is
+
+places; the assertion on S
+
+di
+
+invariant under K\[fi \], with fi the conductor of πi
+
+.
+
+Any K-translate of x3 is either orthogonal or proportional to x3, and
+
+therefore
+
+kx3kU = vol(K0[f])1/4 \pi_2 C −1/4
+
+1 .
+
+The lower bound for L follows from (3.28) taking into account that the function k 7→ W1(a(y)k)W2(a(y)k)f3(k) is supported on K0[f] and is K0[f]- invariant:
+
+Z Z
+
+L(x1, x2, x3) = W1(a(y)k)W2(a(y)k)f3(k)\|y\| −1/2 d ×ydk
+
+K k×
+
+Z
+
+W1(a(y))W2(a(y))\|y\| −1/2 d ×y  C −1/2
+
+= vol(K0[f])1/2 1
+
+k×
+
+Thus in the non-archimedean case, the proposition is valid with  = 0.
+
+3.6.3. Case of k archimedean: the tempered case. — We assume that
+
+\[
+
+\pi_2 is tempered. Let \varphi be a smooth function on_k \times, with \varphi \tag{1}
+
+\]
+
+\[
+
+= 1, which is supported in a fixed compact neighbourhood of the identity and so that R\|\varphi\| 2d \times y = 1 and R\|\varphi\| 2\|y\| \times y = 1. Fix
+
+\delta, M > 0; later, we will choose \delta
+
+\]
+
+−1/2d
+
+to be “small”, to an extent depending on the parameter  chosen in Proposition 3.6.1, whereas M will be a “large” but absolute constant.
+
+We set
+
+\[
+
+C := C M_1+\delta
+
+\]
+
+2 max(C1, C2) .  (3.39)
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 61
+
+Intuitively, the reader should think of C as being “a tiny bit larger than C1.” It will be convenient to define
+
+\[
+
+KC := {g \in K :\|g - k\| 6 C -1 for some_k \in K ∩ B} \tag{3.40}
+
+\]
+
+\[
+
+where\|g - k\| simply denotes the largest absolute value of any matrix entry of g - k. Thus KC is a small neighbourhood of K ∩ B whose volume, with respect to
+
+the Haar measure on K, is C -1
+
+\]
+
+.
+
+a b
+
+If C is large enough, a matrix g = ∈ K belongs to KC iff
+
+c d
+
+\|c\| 6 C p 1 − \|c\| 2
+
+−1 ; indeed, if this is so, \|b\| = \|c\| and \|a\| = \|d\| =
+
+, from
+
+where we see that \|g −k\| 6 C −1
+
+, where k is the diagonal matrix with entries
+
+a/\|a\|, d/\|d\|.
+
+The vectors x1, x2, x3 are as follows:
+
+\[
+
+1. x_1 \in \pi_1 is y_7\to \varphi(y) in the Kirillov model K (\pi 1,\psi): W_1(a(y)) =
+
+\]
+
+ϕ(y) in the Whittaker model.
+
+\[
+
+2. x_2 \in \pi_2 is \varphi(y) in the Kirillov model K (\pi 2,\psi): W_2(a(y)) = \varphi(y) in
+
+\]
+
+the Whittaker model.
+
+\[
+
+3. We give an explicit construction of x_3 \in \pi_3 below: for the moment it is sufficient to say that correspond to a function f_3 \in I_3 which upon
+
+restriction to K is a smooth bump function around K ∩ B, supported in KC.
+
+\]
+
+We advise the reader to skip the details of the explicit construction below; the properties just mentioned are all that is needed to follow the proof.
+
+\[
+
+3.6.4. Definition. — (Construction of x_3). Let \varphi be a (non-negative) bump function on R, taking value_1 at zero, and supported in\|x\| 6 \delta_0. Set
+
+\Psi 3(x,y) = \varphi 1(x)\varphi 2(y), where \varphi 1(x) = \varphi(C\|x\|), \varphi 2(y) = \chi 3(y).\varphi(\|y\| - 1) \tag{3.41}
+
+\]
+
+\[
+
+Then, for sufficiently small (absolute) \delta_0 > 0, the restriction to K of
+
+\]
+
+Z
+
+\[
+
+f(g) = \| det g\| \frac{1}{2} \Psi 3((0,t)g)\chi(t)\|t\|d \times t \tag{3.42}
+
+\]
+
+\[
+
+-1
+
+\]
+
+k×
+
+is supported in KC, and has kfkL2(K) ∼ C f
+
+−1/2
+
+. We take f3 = kfkL2(K) , and
+
+\[
+
+x_3 \in \pi_3 the vector corresponding to f_3.
+
+\]
+
+a b
+
+\[
+
+Proof. — For g = \in K, we note that \Psi 3(ct,dt) 6= 0 implies (for
+
+\]
+
+c d
+
+(since \|d\| 6 1) and
+
+sufficiently small \delta_0) that \|dt\| > (9/10)2 so \|t\| > (9/10)2
+
+#### 62 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+then \|c\|  C −1
+
+. From this we deduce – for sufficiently values of δ0 – that
+
+f3\|K is supported in KC.
+
+\[
+
+Moreover, f(g) = \zeta_k \tag{1}
+
+\]
+
+\[
+
+\chi 3(d) R \varphi(C\|ct\|)\varphi(\|dt\|-1)dt. From this expression,
+
+\]
+
+t
+
+it is easy to verify kfkL2(K) ∼ C −1/2 ; later on, we shall also use the fact that, at least if M is sufficiently large,
+
+Z_1 Z \| f(k)\| > \|f(k)\|dk C −1
+
+2 .  (3.43)
+
+#### KC KC
+
+\[
+
+The point in this inequality is that \omega(d) remains close to_1 so long as g \in KC. It follows that corresponding inequalities hold for f_3, but with the
+
+last expression replaced by C -\frac{1}{2}
+
+\]
+
+.  ut
+
+We remark for later usage that, if v is nonarchimedean and we take
+
+\[
+
+\varphi_1 = vol(K_0[f])-1/2 1$f o -1, \varphi_2 = \omega .1o\times, \tag{3.44}
+
+\]
+
+\[
+
+then the function f_3 defined by (3.42) coincides with that defined in (3.38).
+
+\]
+
+The assertions concerning kx1k, kx2k are immediate; the assertions concerning the Sobolev norms of x1, x2 follow from discussion of §3.2.5.
+
+By (3.28), we have
+
+Z
+
+\[
+
+L(x_1,x_2,x_3) = +(k.W1,k.W2)f3(k)dk \tag{3.45}
+
+\]
+
+\[
+
+K) denote the (Borel-equivariant) functional on W(\pi 1,\psi)\otimes W(\pi 2,\psi)
+
+\]
+
+where \`(W, W0 given by
+
+Z
+
+\`(W, W0 ) := W(a(y))W0 (a(y))\|y\| −1/2 d ×y.
+
+y∈k×
+
+Write
+
+\[
+
++(k.W1,k.W2) = +(W_1,W_2) + +(W_1,k.W2 - W_2) + +(k.W1 - W_1,W_2) + +(k.W1 - W_1,k.W2 - W_2) We need to bound the terms only for_k \in KC; they are individually
+
+\]
+
+bounded thus:
+
+25 By construction, the integral belongs to I3 so it is sufficient to check the equality for g = a b
+
+∈ K.
+
+c d
+
+In that case the right hand side equals
+
+Z Ψ3(ct, dt)χ −1 (t)\|t\|d ×t.
+
+k×
+
+\[
+
+Note that max(\|ct\|,\|dt\|) = \|t\| since g \in K; so the integrand is nonvanishing only when\|t\| = 1. In that case it is nonvanishing only if d \in o\times
+
+and c \in $f o, in which case the integral equals vol(K_0[f])-1/2\chi 3(d) proving our claim.
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 63
+
+1. We have set things up so that \`(W1, W2) > 0.9;
+
+2. By Cauchy-Schwarz and (3.19) 26
+
+,
+
+\|\`(W1, k.W2 − W2)\|  kW1kkk.W2 − W2k
+
+1/ deg(k)
+
+−1/ deg(k)C
+
+kW1kC 2
+
+−1/ deg(k)
+
+\pi_2 C .
+
+3. Similarly we have \|\`(k.W1 − W1, W2)\|  kW2kC 1/ deg(k)
+
+−1/ deg(k)C
+
+1 .
+
+4. As for the last term: set
+
+\[
+
+W(y) = (k.W1 - W_1)(a(y)), W_0 (y) = (k.W2 - W_2)(a(y)). Given \epsilon > 0 small enough, we have, since \pi_2 is tempered, by Proposition_3.2.3,
+
+\]
+
+#### Z Z Z
+
+2 1/2 2 1/2
+
+W(y)W0 (y)\|y\| −1/2 d ×y \|W(y)\| \|y\| −ε d ×y \|W0 (y)\| \|y\| −1+ε d ×y (W0 ) kWk + kWk_1−O(ε)S (W) O(ε)
+
+π1
+
+Sπ2
+
+(1−dε)/ deg(k)C d 0ε
+
+(C1/C) 1
+
+\[
+
+for some d_0 > 0. Here, to bound R\|W(y)\| 2\|y\| \times y, we split into\|y\| > 1,
+
+\]
+
+−εd
+
+where the bound kWk suffices, and \|y\| 6 1, which gives – by Proposition 3.2.3 and interpolation – a term kWk
+
+1−O(ε)S \pi_1 (W) O(ε)
+
+; we also used
+
+\[
+
+S \pi_2 (W_0) \pi_2 1, as well as \tag{3.19}
+
+\]
+
+\[
+
+.
+
+\]
+
+It follows by taking M large enough, we will have \|\`(k.W1, k.W2)−1\| 6
+
+\[
+
+1 R f_3(k)\| > 1 R\|f3(k)\|. Therefore, 100 for all_k \in KC. On the other hand,\| KC_2 KC
+
+\]
+
+Z
+
+L(x1, x2, x3) f3(k) −1/2−δ/2 \pi_2 C_1 .
+
+KC
+
+We choose δ 6  to conclude.
+
+\[
+
+3.6.5. The non-tempered case. — If \pi_2 is not tempered, then \pi_2 is an unramified principal series representation and may be written into the form_0 it
+
+with_t \in R and C(\pi_0) 6 9. Let W_0 \pi_2 .\|.\| 2 2 be the K-invariant vector in the Whittaker model of \pi_0 2
+
+\]
+
+2 , normalized to have L -norm 1. Since the set
+
+0 is precompact, there exists a
+
+of possibilities for the isomorphism class of π
+
+\[
+
+finite set F of smooth non-negative function \varphi, each compactly supported in [1/2, 2] and with \varphi_i \tag{1}
+
+\]
+
+\[
+
+= 1, with the following property:
+
+\]
+
+26 using the fact that y 7→ Wi(a(y)) is supported on a fixed compact set of k×
+
+#### 64 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+For any such \pi_2, there exists \varphi \in F such that:
+
+\]
+
+Z
+
+(a(y))\|y\| −1/2 d ×y  1
+
+ϕi(y)W0
+
+k×
+
+where the constant implied is absolute.
+
+Let π 0
+
+\[
+
+2 be as above, and let \varphi \in F be the corresponding function. We take x_1 to be the vector corresponding to y_7\to \varphi(y)y -it in the Kirillov model
+
+\]
+
+it in the Kirillov
+
+of \pi_1; take x2 to be the vector corresponding to W2(y)\|y\|
+
+0 \| · \|it. In the previous notations, we have by definition
+
+\[
+
+model of \pi_2 = \pi
+
+\]
+
+\`(W1, W2)  1
+
+\[
+
+Now for_k \in supp(f_3\|K) we have by K-invariance of W_2, +(k.W1,k.W2) = +(W_1,W_2) + +(k.W1 - W_1,W_2) Since the term +(kW1-W_1,W_2) is bounded by
+
+\mathcal{O}((C_1/C) 1/ deg(k)C_m), for some
+
+\]
+
+m > 1, we deduce, just as in the prior argument, that
+
+L(x1, x2, x3) C −1/2−δ/2
+
+1 .
+
+ut
+
+3.7. Bounds for trilinear functionals, II: computations
+
+In this section we shall establish the following result, which can be replaced by the results of §3.5 under the assumption of the Ramanujan-Petersson
+
+\[
+
+conjecture. Indeed central bound \tag{3.46}
+
+\]
+
+\[
+
+follows from Lemma_3.5.3 if \pi is tempered. The reader may, indeed, wish to omit the present section at a first
+
+\]
+
+reading, because it contains “ugly” computations.
+
+3.7.1. Proposition. — Let π be a generic unitary representation with
+
+trivial central character.
+
+\[
+
+Let \pi_1, \pi_2 be two generic unitary representations and > 0.We denote the product of the central characters of \pi_1, \pi_2 by \chi -1
+
+\]
+
+3 . Let
+
+\[
+
+\pi_3 = 1 \chi_3 be the corresponding unitary principal series representation. Let x_3 \in \pi_3 be the vector constructed in Proposition_3.6.1 - applied to
+
+\pi_1, \pi_2, \pi_3, ; let x˜3 be the conjugate vector in in the contragredient representation \pi e_3 = 1 \omega(i.e.,the vector representing the functional
+
+v_7\to hv,x3i). - For \pi, \pi_j all unramified, and x \in \pi the new vector of norm_1, one
+
+\]
+
+has
+
+\|L(x, x3, x˜3)\| 2 1 )
+
+\[
+
+kxk = \zeta_k \tag{2}
+
+\]
+
+\[
+
+2 L(\pi \otimes \pi_3 \otimes \pi \tilde{3},2kx3k 2kx˜3k_2 L(\pi,Ad,1)L(\pi 3,Ad,1)L(\tilde{\pi} 3,Ad,1)
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 65
+
+- In general, there is an absolute constant d0 > 0 (independent of_k)
+
+such that:
+
+θ−1/2
+
+C1
+
+\[
+
+\|L(x,x_3,x˜3)\| 2,\pi 2 C d_0 S \pi(x). (x \in \pi) \tag{3.46}
+
+\]
+
+\[
+
+-\frac{1}{2} 1 C(\chi 3) C(\chi 3) d_0 Averaging (3.46) over an orthogonal basis B(\pi) of \pi we obtain Corollary. — With the previous notations, if \pi, \pi_j
+
+are all unramified,
+
+\]
+
+one has
+
+kIπ(x3 \otimes x˜3)k 2 1 )
+
+\[
+
+kx3k = \zeta_k \tag{2}
+
+\]
+
+\[
+
+2 L(\pi \otimes \pi_3 \otimes \pi \tilde{3},2kx˜3k_2 L(\pi,Ad,1)L(\pi 3,Ad,1)L(\tilde{\pi} 3,Ad,1). In general,there is an absolute constant d_0 > 0
+
+(independent of_k) so that:
+
+\]
+
+θ−1/2
+
+C1
+
+S π (Iπ(x3 \otimes x˜3)) ,π2 C d0
+
+−1/2
+
+\[
+
+1 C(\chi 3) C(\chi 3) \tag{3.47}
+
+\]
+
+\[
+
+-d_0
+
+\]
+
+We observe that the proof is parallel in nonarchimedean and archimedean cases, and we could indeed have given an integrated treatment. The unramified assertion
+
+has already been discussed.
+
+\[
+
+Proof. — Let C = C M_1+\delta 2 max(C_1,C_2), where M, \delta are as in the prior section (cf \tag{3.39}
+
+\]
+
+\[
+
+; recall that \delta is chosen depending on, whereas M is f when_k nonarchimedean; here f is the larger of the conductors of \pi_1 and \pi_2. Let KC be an
+
+absolute constant) when_k is archimedean, and C = q
+
+\]
+
+as in (3.40) when v is archimedean, and K0[f] when v is nonarchimedean.
+
+We realize π and \pi_3 in their respective Whittaker models, i.e., fix isometric intertwiners between π, \pi_3 and these models. Similarly, we realize ˜π3
+
+in the induced model \tilde{I}
+
+\[
+
+3. Denote by W, W_3 and \tilde{f_3} the corresponding vectors: W_3 is obtained from f_3 \in I_3 by means of the interwiner \tag{3.10}
+
+\]
+
+\[
+
+. By
+
+\]
+
+(3.28) and (3.43), we have
+
+Z Z
+
+\[
+
+L(x,x_3,x˜3) = W(a(y)\kappa)W3(a(y)\kappa) ˜f3(\kappa)\|y\| d \times yd\kappa
+
+\]
+
+−1/2
+
+K k×
+
+Z
+
+−1/2 max \|W(a(y)κ)W3(a(y)κ)\|\|y\| −1/2 d ×y
+
+C
+
+\[
+
+\kappa \in KC_k\times
+
+\]
+
+Z
+
+−1/2S π (W) max \|W3(a(y)κ)\|\|y\| −θ (1 + \|y\|) −N d ×y,
+
+C
+
+\[
+
+\kappa \in KC_k\times where we applied Proposition_3.2.3 for the last inequality. In the nonarchimedean case, it suffices to specialize to \kappa = 1, since W_3
+
+is in any case
+
+\]
+
+KC-invariant.
+
+#### 66 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+We now apply the bounds of the next Lemma to conclude. Loosely
+
+\[
+
+speaking, it says that the Whittaker function W_3 is peaked near y ∼ C(\chi 3)/C and it takes a value of size ∼ 1 there. The reason for this can already be
+
+discerned from \tag{3.10}
+
+\]
+
+\[
+
+: W_3(y) is, approximately, the Fourier transform of a oscillating function restricted to an interval of the shape\|y\| > C. The =frequency” of the function
+
+near the endpoints of this interval are approximately
+
+\]
+
+C(χ3)/C.  ut
+
+3.7.2. Lemma. — Notations as above, for any M, ε > 0, one has
+
+C 1/2
+
+\|W3(a(y)κ)\| M,ε,ψ,π2 (C/\|y\|) ε \|y\| 1/2 (1 + \|y\|
+
+−M.
+
+C(χ3) C(χ3)/C )
+
+The proof of Lemma 3.7.2 is, regrettably, an explicit calculation. Let us
+
+note that
+
+Z Z
+
+1/2 1/2 Ψ3((t, tx)g)ψ(x)\|t\|χ (t)dxd×t,
+
+η −1
+
+k W3(g) = \| det g\| 3
+
+k× k
+
+where Ψ is as in Definition 3.6.4 in the archimedean case; in particular
+
+\[
+
+\Psi 1(x,y) = \varphi 1(x)\varphi 2(y), where \varphi_i are as in \tag{3.41}
+
+\]
+
+\[
+
+; in the nonarchimedean case the same is true with \varphi_i as in (3.44); finally \eta_k is as in (3.10), and is a harmless constant. In particular \eta_1/2
+
+\]
+
+k W3(a(y)) may be expressed as
+
+Z Z_1/2 φ1(tx)φ2(ty)ψ(x)\|t\|χ (t)dxd×t.
+
+y −1
+
+k× k
+
+Proof. — (of Lemma 3.7.2 – nonarchimedean case.) It suffices to check
+
+κ = 1.
+
+Z Z
+
+\[
+
+\frac{1}{2}\|y\| \frac{1}{2} (yt)\|t\|d \times t \eta_1$f o \chi 3(x)1o\times (tx)\psi(x)dx_k W_3(a(y)) = vol(K_0[f])-1/2
+
+\]
+
+k× k
+
+Z Z
+
+1/2 \|y\| 1/2 \|t\|d ×t
+
+χ3(x)ψ(x)dx.
+
+C
+
+\[
+
+\|t\|\|y\|C61\|x\|\|t\|=1 If \chi_3 is ramified, this equals, in absolute value, \psi(C/C\chi) \frac{1}{2}\|y\| \frac{1}{2} when\|y\| 6 DC(\chi 3) d\psi, and_0
+
+otherwise (cf. §3.1.13). On the other hand, if C, where D = q \chi_3 is unramified, it is zero for\|y\| > qD/C, and otherwise is bounded by
+
+\]
+
+1/2 \|y\| 1/2 log(1 + qD ).  ut
+
+ψ C \|y\|\|C\|
+
+Proof. — (of Lemma 3.7.2 – archimedean case.) We prove the bound
+
+first when κ = Id as it is notationally more pleasant; we will comment on the necessary modifications afterwards.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 67
+
+We have
+
+Z Z
+
+\[
+
+W_3(a(y)) C_1/2\|y\| \frac{1}{2} d \times t\varphi(C\|t\|\|y\|)\|t\| \chi 3(x)\varphi(\|tx\| - 1)\psi(x)dx \tag{3.48}
+
+\]
+
+\[
+
+k× k Set G(t) = \|t\| R (t) R \varphi(\|x\| - 1)\psi(x/t)\chi 3(x)dx; \chi 3(x)\varphi(\|tx\| - 1)\psi(x)dx = \chi -1
+
+\]
+
+k 3 k
+
+\[
+
+then by Lemma_3.1.14, one has for any N > 0 and \epsilon > 0
+
+\]
+
+1 + \|t\| −1
+
+\[
+
+\|G(t)\| N,\epsilon,\varphi C(\chi 3) -1/2+\epsilon min(C(\chi 3)\|t\|,) N . C(\chi 3) We deduce that\|W3(a(y)\| is bounded,up to an implicit constant,by Z
+
+C_1/2\|y\| 1/2-\epsilon C_1/2\|y\| \frac{1}{2} \varphi(C\|t\|\|y\|)G(t)d \times t \epsilon,\pi 2,N C \epsilon C(\chi 3 (1 +\|y\| \tag{3.49}
+
+\]
+
+\[
+
+N
+
+\]
+
+k×
+
+C(χ3)/C )
+
+a b
+
+\[
+
+For general \kappa = \in KC, replace \Psi_3 by the function \kappa .\Psi 3 with
+
+\]
+
+c d
+
+\[
+
+\kappa .\Psi 3 : (x,y) 7\to \Psi 3((x,y)\kappa) = \Psi 3(ax+cy,bx+dy) = \varphi(C\|ax+cy\|)\varphi(\|bx+dy\|-1). In \tag{3.48}
+
+\]
+
+\[
+
+we then need to replace \varphi(C\|t\|\|y\|)\|t\| R \chi 3(x)\varphi(\|tx\| - 1)\psi(x)dx by
+
+\]
+
+k
+
+Z \|t\| φ(C\|aty + ctx\|)φ(\|bty + dtx\| − 1)ψ(x)χ3(x)dx
+
+k
+
+Z
+
+\[
+
+-1 (t) \varphi(C\|aty + cx\|)\varphi(\|bty + dx\| − 1)\psi(x/t)\chi 3(x)dx = \chi_3
+
+\]
+
+k

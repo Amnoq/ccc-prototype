@@ -1,0 +1,34 @@
+# c04 probes — written 2026-10-03 from c04_deriv_d9_d10a12.txt source prose, BEFORE any extraction.
+# Prose answers locked now. Probes test argumentative understanding (why/how), not trivia lookup.
+
+probes:
+- id: P1
+  probe: "The D8 seed — that sieve deformations parametrize new positivity for constraining zeros — was killed. What are the two pieces of evidence that killed it, and why do they matter?"
+  answer_prose: "First, ζ_R is an Euler product, hence zero-free for Re(s) > 1 exactly (no factor vanishes since |R_p|p^{−σ} < 1), so the zero-exclusion machine runs with nothing to exclude. Second, the pole only gets heavier — F(σ) ~ 2/(σ−1), verified 19.33 vs 20.00 at σ = 1.1 with tail correction — which makes the 3-4-1 inequality easier to satisfy, not stronger. Deformations repackage the pole; they create no new zero-detector."
+- id: P2
+  probe: "Why is Dirichlet-series positivity 'blind left of the line,' and what is the honest division of labor that follows?"
+  answer_prose: "The positivity ΣΛ(n)n^{−σ}P(t log n) ≥ 0 converges only for σ > 1. Everything left of Re(s) = 1 comes from analytic input — the zero's own partial-fraction term 1/(s−ρ) and bounds on ζ′/ζ. An argument using only (Λ ≥ 0 plus the pole at s = 1) can at most recover ζ(1+it) ≠ 0; the inputs do not even define the objects left of the line. Division of labor: geometry owns the positivity inputs, analysis owns the continuation and bounds."
+- id: P3
+  probe: "What does the parity barrier (Selberg) imply for any attempt to reach RH via pure positivity, and why is it a principled block rather than a difficulty?"
+  answer_prose: "Pure sieve/combinatorial positivity cannot resolve the parity of ω(n), so some oscillatory/analytic input is necessary, not optional. 9c-via-pure-positivity was therefore blocked by theorem, not by lack of trying — no amount of better positivity built from positivity-only inputs can cross that barrier."
+- id: P4
+  probe: "Why is 'better polynomials from geometry' as an improvement avenue considered essentially closed?"
+  answer_prose: "The literature has saturated the polynomial optimization: Mossinghoff–Trudgian–Yang (2022) reached σ ≥ 1−1/(5.558691 log|t|) with a degree-16 optimized nonnegative trig polynomial, calling the trigonometric-polynomial method 'near its intrinsic limit,' and Bellotti–Trudgian–Yang (2026) reached 1/(4.896 log|t|). The closure rests on the experts' own assessment of their method's limit."
+- id: P5
+  probe: "How does the autocorrelation family let the sieve *explain* the literature's positivity inputs even where it cannot *improve* them, and what open question (9c′) remains?"
+  answer_prose: "Every charge pattern q on residues produces P(θ) = |Q(e^{iθ})|² ≥ 0 by autocorrelation with coefficients a_d = 2Σ_jq_jq_{j+d} (d ≥ 1), and a₁ > a₀ kills simple line zeros (from a₀−a₁m ≥ 0 forcing m < 1). Examples: q=(1,1) → 2+2cosθ, a₁/a₀ = 1, too weak (the classical fact); q=(1,2,1) → 2×(3-4-1), excludes; q=(1,1,1) → 3+4cosθ+2cos2θ, a₁/a₀ = 4/3, excludes — the unweighted 3-block works; q=(1,0,1) (twin residues) → a₁ = 0, blind; q=(1,3,3,1) → a₁/a₀ = 3/2, stronger. So the family the literature optimizes over has a residue-pattern interpretation. The open computable question 9c′: do the saturated degree-16 optimizers have small-support autocorrelation structure? Unknown — the literature's are black-box (simulated annealing/SDP)."
+- id: P6
+  probe: "What is the verdict on 9c, and what does it mean to call the 'almost' a 'measured almost'?"
+  answer_prose: "9c-as-'prove RH by stronger positivity' is closed: blocked by the blindness-left-of-line, the parity barrier, and the saturation — principled limits, not difficulty. What survives is 9c′ (the explanatory autocorrelation program) and the hybrid division of labor as the bridge's true shape. The 'almost' is now measured: we know exactly how far the bridge goes, what it carries, and what must carry the rest."
+- id: P7
+  probe: "How does D10a-step1 make 'the zeta zeros are the regulators of the infinite face-sum' concrete, and what was the computational evidence?"
+  answer_prose: "The classical explicit formula (Davenport, exact) gives ψ(x) = x − Σ_ρ x^ρ/ρ − log(2π) − ½log(1−x^{−2}), so the error term E(x) = ψ(x) − x is literally made of zeros. ψ(x) was computed from the sieve itself as exactly the D1 face-sum (no independent ψ routine), and the truncated zero sum with the first 400 zeros (γ ≤ 679.7) matches it pointwise: max |ψ − S_T| over half-integers in [20.5, 200.5] falls 4.55 → 2.46 → 1.95 → 1.36 as T goes 50 → 100 → 200 → 400, well inside the O(x log²x/T) bound, e.g. at x = 100.5: ψ−x = −6.4547 vs zero-sum −6.5852. The face-sum knows the primes; the zeros know the face-sum's error — this is the joint both abutments share."
+- id: P8
+  probe: "What was the derived structural finding in D10a-step2 about the *kind* of positivity on the prime side, and why did it refine the step-1 thesis?"
+  answer_prose: "Prime-side positivity is not termwise — it is a cancellation. For a = 0.5: pole 2.266297 + archimedean (−1.196347) − prime drain 1.069950 ≈ 0, agreeing to 15 digits. The archimedean background is negative and nearly cancels the pole; the prime-power sum eats the remainder. This refined the step-1 thesis: the span's positivity is subtler than D8's manifest termwise kind — on the zero side it is termwise (Σ_ρ|H(γ_ρ)|² ≥ 0 under RH), on the prime side it is a global balance. The bridge is the formula equating them. W(h_a) ≥ 0 was exhibited with no zeros used, computed purely from prime powers plus digamma integral plus pole terms."
+- id: P9
+  probe: "What is the square dictionary between Weil's objects and ours, and what does it say about how positivity is manufactured?"
+  answer_prose: "Weil's square h = |H|² ↔ our autocorrelation square P(θ) = |Q(e^{iθ})|² (D9) — the same generative move: squares manufacture positivity. The prime sum −2ΣΛ(n)n^{−1/2}g(log n) is a weighted vertex-tower sum — our native objects carrying Weil's functional. The test family used was h_a(r) = e^{−ar²} = |e^{−ar²/2}|², a square, and both sides agreed to machine precision (e.g. a = 0.02: 3.708258e-02 vs 3.708258e-02, diff 2.4e-16) using 60 zeros and 26152 prime powers."
+- id: P10
+  probe: "What is the honesty boundary in D10a-step2, and why would the argument be circular without an independent geometric source of positivity?"
+  answer_prose: "Weil's criterion — W(h) ≥ 0 for all admissible square-type h ⟺ RH (Weil 1952; Bombieri 2000 exposition) — is cited, not derived. What was derived: the prime-side presentation, its cancellatory structure, and the square dictionary. Translation ≠ proof: the positivity must come from the geometry independently, or the argument is circular. The forward pointer is 10a-step3: optimize over H — the Weil analogue of the degree-16 polynomial optimization — asking which square test function maximizes the positivity's constraining power."

@@ -1,0 +1,79 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Bridge span: geometric positivity must connect to Weil positivity
+18: Weil's criterion: W(f∗f̃) ≥ 0 for all test f
+19: 10a: Weil's criterion in the energy language
+20: Truncated zero sum reproduces ψ oscillations: error 4.55→1.36, T=50→400
+21: Guinand-Weil verified zero vs prime side to 2e-16
+22: Prime-side positivity cancellatory: pole+arch+drain≈0 at a=0.5
+23: Prime-side zero detector h_{T0,w} with 4e-16 agreement
+24: Resonance: oscillatory prime sum negative exactly when zero in window
+25: Figure of merit: concentration 0.68→0.30→0.0007, no finite optimum
+26: Li's criterion λ_n ≥ 0 natively on the face-sum
+27: Li is Dirichlet-native: λ_n needs finite parts, sharp-cutoff limit
+28: 10c: Selberg λ² sieve on the complex, optimized weights
+29: Exact theorem: λ*=μ unique, minimum δ(z), 12 digits, z≤19
+30: 10d: function-field template from intersection pairing on C×C
+31: Ledger: missing Jacobian-role space, Frobenius operator, pairing
+32: Frobenius-like operator for Δ∞ (refines D4)
+33: 10e: large sieve and explicit-formula uncertainty tools
+34: Uncertainty wall: w=0.5 needs 2.9e6 primes; w=0.25 infeasible
+35: Montgomery-Vaughan mean →1 (0.995→1.007); sieve ratios 0.004, 0.008
+36: Three verified positivity kinds; none detects zeros independently
+
+INJECTED STRUCTURE (grouped compact):
+
+S19:18 19 20 21 22 23 24 25
+S26:26 27
+S28:28 29
+S30:30 31 32
+S33:33 34 35
+S0:17 36
+E19:5 18
+E21:1 19
+E22:1 19
+E23:1 19
+E24:11 23
+E25:3 23
+E27:2 26
+E29:1 28
+E31:11 30
+E34:3 33
+E35:1 33
+E36:11 17
+A:17 13,18 13,20 14,21 14,22 14,23 14,24 14,25 14,26 15,27 14,28 13,29 14,30 14,31 14,32 16,33 14,34 14,35 14,36 13
+L:32
+N17: Weil 1952: RH is positivity; source must be geometric
+N18: Weil 1952; Bombieri 2000; Connes–Consani 2020
+N20: error 4.55→1.36 as T=50→400; explicit_formula.py
+N21: 2e-16; Gaussian squares a=0.02/0.1/0.5; weil_positivity.py
+N22: pole 2.266297 − arch 1.196347 − drain 1.069950 ≈ 0, a=0.5
+N23: prime-side agrees with zero side to 4e-16; counts zeros
+N24: T0=50: −0.59/−0.98; empty window T0=100: +0.36
+N25: leakage 0.68→0.30→0.0007; envelope 41/1700/2.8e6
+N26: killed 2026-09-30: face-sum carries smoothed positivity only
+N27: λ_n≥0 n≤40 both ways; S1=1+γ/2−½log(4π) archimedean; k!/ε^{k+1} divergence
+N28: 10c executed: Selberg quadratic form on complex, small cases
+N29: 12-digit verification, z≤19; proved via (1−1)^{|S|}
+N30: F5, F7 elliptic curves; finite exact explicit formula by counting
+N31: ledger: HAVE counting positivity, face forms, windowed formula; MISS 3
+N32: refines D4's; belongs to bridge program's 10d
+N33: verified on our objects; estimates cited not derived
+N34: w=0.5→2.9e6 primes; w=0.25→8.2e12 infeasible
+N35: MV ratio 0.995→1.007; large-sieve ratios 0.004, 0.008
+N36: bridge program complete; 10a–10e closed 2026-09-30

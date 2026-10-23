@@ -1,0 +1,173 @@
+2. An improved GPY sieve method
+
+We first give an explanation of the key idea behind our new approach. The basic idea of the GPY method is, for a fixed admissible set ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dotsc,h_{k}\}, to consider the sum
+
+(2.1)
+
+S⁡(N,ρ)\displaystyle S(N,\rho)
+=∑N≤n<2​N(∑i=1kχℙ​(n+hi)−ρ)​wn.\displaystyle=\sum_{N\leq n<2N}\Bigl(\sum_{i=1}^{k}\chi_{\mathbb{P}}(n+h_{i})-\rho\Bigr)w_{n}.
+
+Here χℙ\chi_{\mathbb{P}} is the characteristic function of the primes, ρ>0\rho>0 and wnw_{n} are non-negative weights. If we can show that S⁡(N,ρ)>0S(N,\rho)>0 then at least one term in the sum over nn must have a positive contribution. By the non-negativity of wnw_{n}, this means that there must be some integer n∈[N,2​N]n\in[N,2N] such that at least ⌊ρ+1⌋\lfloor\rho+1\rfloor of the n+hin+h_{i} are prime. (Here ⌊x⌋\lfloor x\rfloor denotes the largest integer less than or equal to xx.) Thus if S⁡(N,ρ)>0S(N,\rho)>0 for all large NN, there are infinitely many integers nn for which at least ⌊ρ+1⌋\lfloor\rho+1\rfloor of the n+hin+h_{i} are prime (and so there are infinitely many bounded length intervals containing ⌊ρ+1⌋\lfloor\rho+1\rfloor primes).
+
+The weights wnw_{n} are typically chosen to mimic Selberg sieve weights. Estimating (2.1) can be interpreted as a ‘kk-dimensional’ sieve problem. The standard Selberg kk-dimensional weights (which can be shown to be essentially optimal in other contexts) are
+
+(2.2)
+
+wn=(∑d|∏i=1k(n+hi)d<Rλd)2,λd=μ⁡(d)​(log⁡R/d)k.w_{n}=\Bigl(\sum_{\begin{subarray}{c}d|\prod_{i=1}^{k}(n+h_{i})\\
+d<R\end{subarray}}\lambda_{d}\Bigr)^{2},\qquad\lambda_{d}=\mu(d)(\log{R/d})^{k}.
+
+With this choice we find that we just fail to prove the existence of bounded gaps between primes if we assume the Elliott-Halberstam conjecture. The key new idea in the paper of Goldston, Pintz and Yıldırım [5] was to consider more general sieve weights of the form
+
+(2.3)
+
+λd=μ⁡(d)​F​(log⁡R/d),\lambda_{d}=\mu(d)F(\log{R/d}),
+
+for a suitable smooth function FF. Goldston, Pintz and Yıldırım chose F⁡(x)=xk+lF(x)=x^{k+l} for suitable l∈ℕl\in\mathbb{N}, which has been shown to be essentially optimal when kk is large. This allows us to gain a factor of approximately 22 for large kk over the previous choice of sieve weights. As a result we just fail to prove bounded gaps using the fact that the primes have exponent of distribution θ\theta for any θ<1/2\theta<1/2, but succeed in doing so if we assume they have level of distribution θ>1/2\theta>1/2.
+
+The new ingredient in our method is to consider a more general form of the sieve weights
+
+(2.4)
+
+wn=(∑di|n+hi​∀iλd1,…,dk)2.w_{n}=\Bigl(\sum_{d_{i}|n+h_{i}\forall i}\lambda_{d_{1},\dotsc,d_{k}}\Bigr)^{2}.
+
+Using such weights with λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} is the key feature of our method. It allows us to improve on the previous choice of sieve weights by an arbitrarily large factor, provided that kk is sufficiently large. It is the extra flexibility gained by allowing the weights to depend on the divisors of each factor individually which gives this improvement.
+
+The idea to use such weights is not entirely new. Selberg [8, Page 245] suggested the possible use of similar weights in his work on approximations to the twin prime problem, and Goldston and Yıldırım [6] considered similar weights in earlier work on the GPY method, but with the support restricted to di<R1/kd_{i}<R^{1/k} for all ii.
+
+We comment that our choice of λd1,…,dk\lambda_{d_{1},\dots,d_{k}} will look like
+
+(2.5)
+
+λd1,…,dk≈(∏i=1kμ⁡(di))​f​(d1,…,dk),\lambda_{d_{1},\dots,d_{k}}\approx\Bigl(\prod_{i=1}^{k}\mu(d_{i})\Bigr)f(d_{1},\dots,d_{k}),
+
+for a suitable smooth function ff. For our precise choice of λd1,…,dk\lambda_{d_{1},\dots,d_{k}} (given in Proposition 4.1) we find it convenient to give a slightly different form of λd1,…,dk\lambda_{d_{1},\dots,d_{k}}, but weights of the form (2.5) should produce essentially the same results.
+
+3. Notation
+
+We shall view kk as a fixed integer, and ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dots,h_{k}\} as a fixed admissible set. In particular, any constants implied by the asymptotic notation oo, OO or ≪\ll may depend on kk and ℋ\mathcal{H}. We will let NN denote a large integer, and all asymptotic notation should be interpreted as referring to the limit N→∞N\rightarrow\infty.
+
+All sums, products and suprema will be assumed to be taken over variables lying in the natural numbers ℕ={1,2,…}\mathbb{N}=\{1,2,\dots\} unless specified otherwise. The exception to this is when sums or products are over a variable pp, which instead will be assumed to lie in the prime numbers ℙ={2,3,…,}\mathbb{P}=\{2,3,\dots,\}.
+
+Throughout the paper, φ\varphi will denote the Euler totient function, τr​(n)\tau_{r}(n) the number of ways of writing nn as a product of rr natural numbers and μ\mu the Moebius function. We will let ϵ\epsilon be a fixed positive real number, and we may assume without further comment that ϵ\epsilon is sufficiently small at various stages of our argument. We let pnp_{n} denote the nt​hn^{th} prime, and #​𝒜\#\mathcal{A} denote the number of elements of a finite set 𝒜\mathcal{A}. We use ⌊x⌋\lfloor x\rfloor to denote the largest integer n≤xn\leq x, and ⌈x⌉\lceil x\rceil the smallest integer n≥xn\geq x. We let (a,b)(a,b) be the greatest common divisor of integers aa and bb. Finally, [a,b][a,b] will denote the closed interval on the real line with endpoints aa and bb, except for in Section 5 where it will denote the least common multiple of integers aa and bb instead.
+
+4. Outline of the proof
+
+We will find it convenient to choose our weights wnw_{n} to be zero unless nn lies in a fixed residue class v0(modW)v_{0}\pmod{W}, where W=∏p≤D0pW=\prod_{p\leq D_{0}}p. This is a technical modification which removes some minor complications in dealing with the effect of small prime factors. The precise choice of D0D_{0} is unimportant, but it will suffice to choose
+
+(4.1)
+
+D0=log⁡log⁡log⁡N,D_{0}=\log\log\log{N},
+
+so certainly W≪(log⁡log⁡N)2W\ll(\log\log{N})^{2} by the prime number theorem. By the Chinese remainder theorem, we can choose v0v_{0} such that v0+hiv_{0}+h_{i} is coprime to WW for each ii since ℋ\mathcal{H} is admissible. When n≡v0(modW)n\equiv v_{0}\pmod{W}, we choose our weights wnw_{n} of the form (2.4). We now wish to estimate the sums
+
+(4.2)
+
+S1\displaystyle S_{1}
+=∑N≤n<2​Nn≡v0(modW)(∑di|n+hi​∀iλd1,…,dk)2,\displaystyle=\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\end{subarray}}\left(\sum_{d_{i}|n+h_{i}\forall i}\lambda_{d_{1},\dotsc,d_{k}}\right)^{2},
+
+(4.3)
+
+S2\displaystyle S_{2}
+=∑N≤n<2​Nn≡v0(modW)(∑i=1kχℙ​(n+hi))​(∑di|n+hi​∀iλd1,…,dk)2.\displaystyle=\sum_{\begin{subarray}{c}N\leq n<2N\\
+n\equiv v_{0}\pmod{W}\end{subarray}}\Bigl(\sum_{i=1}^{k}\chi_{\mathbb{P}}(n+h_{i})\Bigr)\left(\sum_{d_{i}|n+h_{i}\forall i}\lambda_{d_{1},\dotsc,d_{k}}\right)^{2}.
+
+We evaluate these sums using the following proposition.
+
+Proposition 4.1.
+
+Let the primes have exponent of distribution θ>0\theta>0, and let R=Nθ/2−δR=N^{\theta/2-\delta} for some small fixed δ>0\delta>0. Let λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} be defined in terms of a fixed smooth function FF by
+
+λd1,…,dk=(∏i=1kμ⁡(di)​di)​∑r1,…,rkdi|ri​∀i(ri,W)=1​∀iμ​(∏i=1kri)2∏i=1kφ⁡(ri)​F​(log⁡r1log⁡R,…,log⁡rklog⁡R),\lambda_{d_{1},\dotsc,d_{k}}=\Bigl(\prod_{i=1}^{k}\mu(d_{i})d_{i}\Bigr)\sum_{\begin{subarray}{c}r_{1},\dotsc,r_{k}\\
+d_{i}|r_{i}\forall i\\
+(r_{i},W)=1\forall i\end{subarray}}\frac{\mu(\prod_{i=1}^{k}r_{i})^{2}}{\prod_{i=1}^{k}\varphi(r_{i})}F\left(\frac{\log{r_{1}}}{\log{R}},\dotsc,\frac{\log{r_{k}}}{\log{R}}\right),
+
+whenever (∏i=1kdi,W)=1(\prod_{i=1}^{k}d_{i},W)=1, and let λd1,…,dk=0\lambda_{d_{1},\dotsc,d_{k}}=0 otherwise. Moreover, let FF be supported on ℛk={(x1,…,xk)∈[0,1]k:∑i=1kxi≤1}\mathcal{R}_{k}=\{(x_{1},\dotsc,x_{k})\in[0,1]^{k}:\sum_{i=1}^{k}x_{i}\leq 1\}.
+Then we have
+
+S1\displaystyle S_{1}
+=(1+o⁡(1))​φ​(W)k​N​(log⁡R)kWk+1​Ik​(F),\displaystyle=\frac{(1+o(1))\varphi(W)^{k}N(\log{R})^{k}}{W^{k+1}}I_{k}(F),
+
+S2\displaystyle S_{2}
+=(1+o⁡(1))​φ​(W)k​N​(log⁡R)k+1Wk+1​log⁡N​∑m=1kJk(m)​(F),\displaystyle=\frac{(1+o(1))\varphi(W)^{k}N(\log{R})^{k+1}}{W^{k+1}\log{N}}\sum_{m=1}^{k}J_{k}^{(m)}(F),
+
+provided Ik​(F)≠0I_{k}(F)\neq 0 and Jk(m)​(F)≠0J_{k}^{(m)}(F)\neq 0 for each mm, where
+
+Ik​(F)\displaystyle I_{k}(F)
+=∫01⋯​∫01F​(t1,…,tk)2​d​t1​…​d​tk,\displaystyle=\int_{0}^{1}\dotsi\int_{0}^{1}F(t_{1},\dotsc,t_{k})^{2}dt_{1}\dotsc dt_{k},
+
+Jk(m)​(F)\displaystyle J_{k}^{(m)}(F)
+=∫01⋯​∫01(∫01F⁡(t1,…,tk)​d​tm)2​d​t1​…​d​tm−1​d​tm+1​…​d​tk.\displaystyle=\int_{0}^{1}\dotsi\int_{0}^{1}\left(\int_{0}^{1}F(t_{1},\dotsc,t_{k})dt_{m}\right)^{2}dt_{1}\dotsc dt_{m-1}dt_{m+1}\dotsc dt_{k}.
+
+We recall that if S2S_{2} is large compared to S1S_{1}, then using the GPY method we can show that there are infinitely many integers nn such that several of the n+hin+h_{i} are prime. The following proposition makes this precise.
+
+Proposition 4.2.
+
+Let the primes have level of distribution θ>0\theta>0. Let δ>0\delta>0 and ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dotsc,h_{k}\} be an admissible set. Let Ik​(F)I_{k}(F) and Jk(m)​(F)J_{k}^{(m)}(F) be given as in Proposition 4.1, and let 𝒮k\mathcal{S}_{k} denote the set of Riemann-integrable functions F:[0,1]k→ℝF:[0,1]^{k}\rightarrow\mathbb{R} supported on ℛk={(x1,…,xk)∈[0,1]k:∑i=1kxi≤1}\mathcal{R}_{k}=\{(x_{1},\dotsc,x_{k})\in[0,1]^{k}:\sum_{i=1}^{k}x_{i}\leq 1\} with Ik​(F)≠0I_{k}(F)\neq 0 and Jk(m)​(F)≠0J_{k}^{(m)}(F)\neq 0 for each mm. Let
+
+Mk=supF∈𝒮k∑m=1kJk(m)​(F)Ik​(F),rk=⌈θ​Mk2⌉.M_{k}=\sup_{F\in\mathcal{S}_{k}}\frac{\sum_{m=1}^{k}J_{k}^{(m)}(F)}{I_{k}(F)},\qquad\qquad r_{k}=\Bigl\lceil\frac{\theta M_{k}}{2}\Bigr\rceil.
+
+Then there are infinitely many integers nn such that at least rkr_{k} of the n+hin+h_{i} (1≤i≤k1\leq i\leq k) are prime. In particular, lim infn(pn+rk−1−pn)≤max1≤i,j≤k⁡(hi−hj)\liminf_{n}(p_{n+r_{k}-1}-p_{n})\leq\max_{1\leq i,j\leq k}(h_{i}-h_{j}).
+
+Proof of Proposition 4.2.
+
+We let S=S2−ρ​S1S=S_{2}-\rho S_{1}, and recall that from Section 2 that if we can show S>0S>0 for all large NN, then there are infinitely many integers nn such that at least ⌊ρ+1⌋\lfloor\rho+1\rfloor of the n+hin+h_{i} are prime.
+
+We put R=Nθ/2−δR=N^{\theta/2-\delta} for a small δ>0\delta>0. By the definition of MkM_{k}, we can choose F0∈𝒮kF_{0}\in\mathcal{S}_{k} such that ∑m=1kJk(m)​(F0)>(Mk−δ)​Ik​(F0)>0\sum_{m=1}^{k}J_{k}^{(m)}(F_{0})>(M_{k}-\delta)I_{k}(F_{0})>0. Since F0F_{0} is Riemann-integrable, there is a smooth function F1F_{1} such that ∑m=1kJk(m)​(F1)>(Mk−2​δ)​Ik​(F1)>0\sum_{m=1}^{k}J_{k}^{(m)}(F_{1})>(M_{k}-2\delta)I_{k}(F_{1})>0. Using Proposition 4.1, we can then choose λd1,…,dk\lambda_{d_{1},\dotsc,d_{k}} such that
+
+S\displaystyle S
+=φ​(W)k​N​(log⁡R)kWk+1​(log⁡Rlog⁡N​∑j=1kJk(m)​(F1)−ρ​Ik​(F1)+o⁡(1))\displaystyle=\frac{\varphi(W)^{k}N(\log{R})^{k}}{W^{k+1}}\Bigl(\frac{\log{R}}{\log{N}}\sum_{j=1}^{k}J_{k}^{(m)}(F_{1})-\rho I_{k}(F_{1})+o(1)\Bigr)
+
+(4.4)
+
+≥φ​(W)k​N​(log⁡R)k​Ik​(F1)Wk+1​((θ2−δ)​(Mk−2​δ)−ρ+o⁡(1)).\displaystyle\geq\frac{\varphi(W)^{k}N(\log{R})^{k}I_{k}(F_{1})}{W^{k+1}}\Bigl(\Bigl(\frac{\theta}{2}-\delta\Bigr)\Bigl(M_{k}-2\delta\Bigr)-\rho+o(1)\Bigr).
+
+If ρ=θ​Mk/2−ϵ\rho=\theta M_{k}/2-\epsilon then, by choosing δ\delta suitably small (depending on ϵ\epsilon), we see that S>0S>0 for all large NN. Thus there are infinitely many integers nn for which at least ⌊ρ+1⌋\lfloor\rho+1\rfloor of the n+hin+h_{i} are prime. Since ⌊ρ+1⌋=⌈θ​Mk/2⌉\lfloor\rho+1\rfloor=\lceil\theta M_{k}/2\rceil if ϵ\epsilon is suitably small, we obtain Proposition 4.2.
+∎
+
+Thus, if the primes have a fixed level of distribution θ\theta, to show the existence of many of the n+hin+h_{i} being prime for infinitely many n∈ℕn\in\mathbb{N} we only require a suitable lower bound for MkM_{k}. The following proposition establishes such a bound for different values of kk.
+
+Proposition 4.3.
+
+Let k∈ℕk\in\mathbb{N}, and MkM_{k} be as given by Proposition 4.2. Then
+
+(1) 
+
+We have M5>2M_{5}>2.
+
+(2) 
+
+We have M105>4M_{105}>4.
+
+(3) 
+
+If kk is sufficiently large, we have Mk>log⁡k−2​log⁡log⁡k−2M_{k}>\log{k}-2\log\log{k}-2.
+
+We now prove Theorems 1.1, 1.2, 1.3 and 1.4 from Propositions 4.2 and 4.3.
+
+First we consider Theorem 1.3. We take k=105k=105. By Proposition 4.3, we have M105>4M_{105}>4. By the Bombieri-Vinogradov theorem, the primes have level of distribution θ=1/2−ϵ\theta=1/2-\epsilon for every ϵ>0\epsilon>0. Thus, if we take ϵ\epsilon sufficiently small, we have θ​M105/2>1\theta M_{105}/2>1. Therefore, by Proposition 4.2, we have lim inf(pn+1−pn)≤max1≤i,j≤105⁡(hi−hj)\liminf(p_{n+1}-p_{n})\leq\max_{1\leq i,j\leq 105}(h_{i}-h_{j}) for any admissible set ℋ={h1,…,h105}\mathcal{H}=\{h_{1},\dotsc,h_{105}\}. By computations performed by Thomas Engelsma (unpublished), we can choose22
+ 2
+ 
+ 
+ 
+ Explicitly, we can take ℋ={\mathcal{H}=\{0, 10, 12, 24, 28, 30, 34, 42, 48, 52, 54, 64, 70, 72, 78, 82, 90, 94, 100, 112, 114, 118, 120, 124, 132, 138, 148, 154, 168, 174, 178, 180, 184, 190, 192, 202, 204, 208, 220, 222, 232, 234, 250, 252, 258, 262, 264, 268, 280, 288, 294, 300, 310, 322, 324, 328, 330, 334, 342, 352, 358, 360, 364, 372, 378, 384, 390, 394, 400, 402, 408, 412, 418, 420, 430, 432, 442, 444, 450, 454, 462, 468, 472, 478, 484, 490, 492, 498, 504, 510, 528, 532, 534, 538, 544, 558, 562, 570, 574, 580, 582, 588, 594, 598, 600}.\}. This set was obtained from the website http://math.mit.edu/~primegaps/ maintained by Andrew Sutherland. ℋ\mathcal{H} such that 0≤h1<…<h1050\leq h_{1}<\dotsc<h_{105} and h105−h1=600h_{105}-h_{1}=600. This gives Theorem 1.3.
+
+If we assume the Elliott-Halberstam conjecture then the primes have level of distribution θ=1−ϵ\theta=1-\epsilon. First we take k=105k=105, and see that θ​M105/2>2\theta M_{105}/2>2 for ϵ\epsilon sufficiently small (since M105>4M_{105}>4). Therefore, by Proposition 4.2, lim infn(pn+2−pn)≤max1≤i,j≤105⁡(hi−hj)\liminf_{n}(p_{n+2}-p_{n})\leq\max_{1\leq i,j\leq 105}(h_{i}-h_{j}). Thus, choosing the same admissible set ℋ\mathcal{H} as above, we see lim infn(pn+2−pn)≤600\liminf_{n}(p_{n+2}-p_{n})\leq 600 under the Elliott-Halberstam conjecture.
+
+Next we take k=5k=5 and ℋ={0,2,6,8,12}\mathcal{H}=\{0,2,6,8,12\}, with θ=1−ϵ\theta=1-\epsilon again. By Proposition 4.3 we have M5>2M_{5}>2, and so θ​M5/2>1\theta M_{5}/2>1 for ϵ\epsilon sufficiently small. Thus, by Proposition 4.2, lim infn(pn+1−pn)≤12\liminf_{n}(p_{n+1}-p_{n})\leq 12 under the Elliott-Halberstam conjecture. This completes the proof of Theorem 1.4.
+
+Finally, we consider the case when kk is large. For the rest of this section, any constants implied by asymptotic notation will be independent of kk. By the Bombieri-Vinogradov theorem, we can take θ=1/2−ϵ\theta=1/2-\epsilon. Thus, by Proposition 4.3, we have for kk sufficiently large
+
+(4.5)
+
+θ​Mk2≥(14−ϵ2)​(log⁡k−2​log⁡log⁡k−2).\frac{\theta M_{k}}{2}\geq\Bigl(\frac{1}{4}-\frac{\epsilon}{2}\Bigr)\Bigl(\log{k}-2\log\log{k}-2\Bigr).
+
+We choose ϵ=1/k\epsilon=1/k, and see that θ​Mk/2>m\theta M_{k}/2>m if k≥C​m2​e4​mk\geq Cm^{2}e^{4m} for some absolute constant CC (independent of mm and kk). Thus, for any admissible set ℋ={h1,…,hk}\mathcal{H}=\{h_{1},\dotsc,h_{k}\} with k≥C​m2​e4​mk\geq Cm^{2}e^{4m}, at least m+1m+1 of the n+hin+h_{i} must be prime for infinitely many integers nn. We can choose our set ℋ\mathcal{H} to be the set {pπ⁡(k)+1,…,pπ⁡(k)+k}\{p_{\pi(k)+1},\dotsc,p_{\pi(k)+k}\} of the first kk primes which are greater than kk. This is admissible, since no element is a multiple of a prime less than kk (and there are kk elements, so it cannot cover all residue classes modulo any prime greater than kk.) This set has diameter pπ⁡(k)+k−pπ⁡(k)+1≪k​log⁡kp_{\pi(k)+k}-p_{\pi(k)+1}\ll k\log{k}. Thus lim infn(pn+m−pn)≪k​log⁡k≪m3​e4​m\liminf_{n}(p_{n+m}-p_{n})\ll k\log{k}\ll m^{3}e^{4m} if we take k=⌈C​m2​e4​m⌉k=\lceil Cm^{2}e^{4m}\rceil. This gives Theorem 1.1.
+
+We can now establish Theorem 1.2 by a simple counting argument. Given mm, we let k=⌈C​m2​e4​m⌉k=\lceil Cm^{2}e^{4m}\rceil as above. Therefore if {h1,…,hk}\{h_{1},\dotsc,h_{k}\} is admissible, then there exists a subset {h1′,…,hm′}⊆{h1,…,hk}\{h_{1}^{\prime},\dotsc,h_{m}^{\prime}\}\subseteq\{h_{1},\dotsc,h_{k}\} with the property that there are infinitely many integers nn for which all of the n+hi′n+h^{\prime}_{i} are prime (1≤i≤m1\leq i\leq m).
+
+We let 𝒜2\mathcal{A}_{2} denote the set formed by starting with the given set 𝒜={a1,…,ar}\mathcal{A}=\{a_{1},\dotsc,a_{r}\}, and for each prime p≤kp\leq k in turn removing all elements of the residue class modulo pp which contains the fewest integers. We see that #𝒜2≥r∏p≤k(1−1/p)≫mr\#\mathcal{A}_{2}\geq r\prod_{p\leq k}(1-1/p)\gg_{m}r. Moreover, any subset of 𝒜2\mathcal{A}_{2} of size kk must be admissible, since it cannot cover all residue classes modulo pp for any prime p≤kp\leq k. We let s=#​𝒜2s=\#\mathcal{A}_{2}, and since rr is taken sufficiently large in terms of mm, we may assume that s>ks>k.
+
+We see there are (sk)\binom{s}{k} sets ℋ⊆𝒜2\mathcal{H}\subseteq\mathcal{A}_{2} of size kk. Each of these is admissible, and so contains at least one subset {h1′,…,hm′}⊆𝒜2\{h_{1}^{\prime},\dotsc,h_{m}^{\prime}\}\subseteq\mathcal{A}_{2} which satisfies the prime mm-tuples conjecture. Any admissible set ℬ⊆𝒜2\mathcal{B}\subseteq\mathcal{A}_{2} of size mm is contained in (s−mk−m)\binom{s-m}{k-m} sets ℋ⊆𝒜2\mathcal{H}\subseteq\mathcal{A}_{2} of size kk. Thus there are at least (sk)(s−mk−m)−1≫msm≫mrm\binom{s}{k}\binom{s-m}{k-m}^{-1}\gg_{m}s^{m}\gg_{m}r^{m} admissible sets ℬ⊆𝒜2\mathcal{B}\subseteq\mathcal{A}_{2} of size mm which satisfy the prime mm-tuples conjecture. Since there are (rm)≤rm\binom{r}{m}\leq r^{m} sets {h1,…,hm}⊆𝒜\{h_{1},\dotsc,h_{m}\}\subseteq\mathcal{A}, Theorem 1.2 holds.
+
+We are left to establish Propositions 4.1 and 4.3.

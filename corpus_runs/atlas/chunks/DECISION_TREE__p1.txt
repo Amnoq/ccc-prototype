@@ -1,0 +1,230 @@
+# Prime-Sieve Geometry Decision Tree
+
+The documented path of the circle-sieve / Figueiredo investigation.
+Each node: date, the question, options considered, the decision, the
+evidence, and status (closed / open / forked). Numbers are stable
+references — cite them in future notes (e.g. "reopening node 4").
+
+Companion record: `DERIVATIONS.md` (D1–D6, each with an honest
+epistemic label: exact / computationally verified / conjectural /
+heuristic). Labels say what kind of thing each claim is; this tree
+says where the exploration has been and what is still open. Analyze
+both when choosing the next move.
+
+---
+
+## 0. Root — 2026-09-29
+**Q:** Can Figueiredo's positive-geometry method be brought to bear on
+prime distribution via the user's linear circle sieve?
+**Decision:** Pursue. User's framing: the sieve is a deterministic
+relational machine ("composites relating to the primes and the primes
+relating back to zero"); her binary/geometric work is the same kind of
+move — definition through relations, not intrinsic coordinates.
+**Status:** closed (the program this tree records).
+
+## 1. Survey her method — 2026-09-29
+**Q:** What is actually transferable from her work?
+**Decision:** Transfer the *process*, not the implementation. Her
+recurring moves: identify a positive region; construct its canonical
+form; read off the observable; derive zeros, factorizations, soft
+limits afterward — never put the answer in by hand. Papers surveyed:
+arXiv:2309.15913, 2312.16282, 2402.06719, 2403.04826, 2405.09608,
+2412.19881, 2506.05456, 2603.03425. None touches primes.
+**Status:** closed. Standing steer (node 5 reinforced it).
+
+## 2. Finite incidence complex — 2026-09-29
+**Q:** Does the sieve's territory structure carry computable geometry?
+- **Experiment:** `sieve_complex.py` — vertices = primes ≤ N, faces =
+  prime sets with product ≤ N (the divisor complex). Verified the
+  corrected sieve equals the classical primes; link recursion exact;
+  Betti numbers grow with N (e.g. N=1000: [74,101,26,0]).
+- **Finding:** no positive region, no canonical form found; everything
+  depends on the cutoff N.
+**Status:** closed. Negative result, kept — it killed the naive hope
+and forced node 4.
+
+## 3. First derivations D1–D3 — 2026-09-29
+**Q:** Do her recipe's steps have analogues on the sieve?
+- **D1** (verified): Chebyshev ψ(x) as a signed face-sum — the
+  observable read off the complex (Möbius, reframed).
+- **D2** (verified): Lehmer's φ-recursion IS the link recursion —
+  the fast prime counter was the facet recursion all along.
+- **D3** (verified): binary/zero-locus form — composites as the zero
+  locus of F(n) = ∏ dist(n, pℤ), primes as its support.
+**Decision:** the SHAPE of her recipe fits (steps 2–4 analogues).
+**Status:** closed. Honest label: classical theorems in new clothes.
+
+## 4. The N → ∞ limit — 2026-09-29
+**Q:** Is there a limit object, or does cutoff-dependence kill the analogy?
+- **Bare limit trivializes:** Δ_∞ is the contractible infinite simplex
+  — no topology. The geometry must live in the weights, not the bare
+  complex.
+- **D4** (verified): canonical face-weights w(S) = (−1)^{|S|+1}log(∏S)/∏S;
+  Σw(S) → 1 IS the Prime Number Theorem ("the weighted infinite simplex
+  has total weight 1"; 1.001658 at 2·10⁶). Weights' Dirichlet generating
+  function = −ζ′/ζ² (verified ~4 digits) → the zeta zeros regulate the
+  face-sum.
+**Status:** closed as a derivation. **Opened:** the positivity question —
+weights are SIGNED (alternating), not positive. Sharpest open question:
+a positive region with these weights as stratum residues?
+
+## 5. Methodological steer — 2026-09-29
+**Q:** Copy her implementation or take her generative insights?
+**Decision (user):** do NOT copy the implementation; take her GENERATIVE
+insights on the process — whatever most benefits the analysis or derives
+an equation.
+- **D5** (conceptual): territory removal = her soft-limit/splitting move
+  (arXiv:2405.09608); φ(x,a) = φ(x,a−1) − φ(x/p_a,a−1) iterated to all
+  orders = the D1 face-sum. The sieve was doing splits before we knew
+  her name for them.
+- Deepest such insight, applied throughout: *never put the answer in by
+  hand* — the sieve never tests primality with a predicate.
+**Status:** closed (standing methodology).
+
+## 6. Deformation program — 2026-09-29
+**Q:** What does her "deformations" move generate on the sieve?
+**Decision (user: "proceed"):** deform the marking rule to R_p = {0}
+(p = 2), {0, −2} (p odd).
+- Deformation SEPARATES markers (primes) from survivors (twin prime
+  lowers) — verified: generative survivors ≤ 200000 are exactly the
+  2160 twin lowers.
+- Exact deformed μ-identity for the static z-sieve (verified at z=30,
+  x=200000); face multiplicities m(S) = ∏|R_p|; δ(z) = ∏(1−|R_p|/p)
+  with S(x,z)/x → δ(z) (6 digits at z=7).
+- **D6** (verified algebra): the Hardy–Littlewood twin constant DERIVED
+  as renormalized total weight — 𝔖(z) → 2C₂ = 1.32032 (1.3228 at z=100).
+**Status:** closed on the algebra. **Honest boundary:** π₂(x) ~ 𝔖x/(log x)²
+remains the UNPROVEN twin conjecture (ratio 1.6091 at 2·10⁵). We verify
+the algebra, not the conjecture.
+
+## 7. The paper — 2026-09-29 — OPEN
+**Q:** Does this arc belong in a paper, and which one?
+- NOT the primorial-wheel paper (different subject: wheel state-space
+  reduction mod 210). This arc wants its own paper.
+- Honest vehicle: an expository/synthesis paper — "a geometric language
+  for sieve theory" — not a claimed breakthrough. Novelty is in the
+  framework/language (D6's framing appears new; the underlying
+  computations are classical).
+**Next:** draft outline (title, abstract sketch, section map over D1–D6
++ pictures) for user approval, then LaTeX draft with reproducible
+verification scripts.
+**Status:** open, outline drafted 2026-09-30 (PAPER_OUTLINE.md, updated to
+cover D10/Node 11/CCM/Nodes 13-14 + failures appendix). Awaiting user
+approval on title/scope + prior-art search before novelty claims.
+
+## 8. The RH bridge question — 2026-09-29 — OPEN
+**Q:** (user) RH is unproved for lack of an analytic–geometric bridge;
+do we have enough to make that bridge?
+**Analysis:** we have a DICTIONARY (analytic ↔ geometric translations),
+not a bridge. Weil's template: topology supplies the actors, positivity
+tells them where to stand. Our bare complex is contractible (node 4) —
+no topology to exploit; the hope lives in the weights, which are signed.
+The bridge, if it exists, attaches at POSITIVITY — which is node 9.
+**Status:** open. The claim is a research heuristic with precedent, not
+an established result.
+
+## 9. Hunt the positive region — 2026-09-29/30 — SPLIT
+**Q:** Is there a positive region whose canonical form has the
+face-weights w(S) as its stratum residues?
+- **9a — CLOSED 2026-09-30 (D7):** where positivity lives is located.
+  The primitive objects are positive: −ζ′/ζ = ΣΛ(n)n^{−s} (Λ ≥ 0),
+  log ζ(s) > 0, δ(z) = ∏(1−1/p) > 0 with −log δ(z) a manifestly
+  positive prime sum (verified 6 digits). The weight generating function
+  factors as (positive)·(Σμ(m)m^{−s}) — the signs come entirely from the
+  Möbius factor, i.e. from inclusion-exclusion. δ(X) > 0 monotone → 0
+  while Σ_{d≤X}μ(d)/d oscillates in sign toward the same 0: the signs
+  are an expansion artifact, not a property of the volume.
+- **Classical template verified:** the 3-4-1 positivity
+  (3+4cosθ+cos2θ ≥ 0 on −ζ′/ζ = ΣΛ(n)n^{−s}) forces ζ(1+it) ≠ 0 —
+  positivity of the primitive ⟹ a zero-free region. Re-verified
+  numerically from the Λ-sieve (sum stays positive, grows 2.26 → 8.30 →
+  20.62 as σ → 1⁺). This is the Weil-shaped mechanism in miniature.
+- **9b — CLOSED 2026-09-30 (D8):** the bridge carries traffic — with an
+  honest boundary. The full 3-4-1 argument is now expressible in the
+  sieve's language: −ζ′/ζ as vertex-tower energies E₀/E₁/E₂, the trig
+  polynomial as ½|1+e^{iθ}|⁴, stratum energies e_{p,k} ≥ 0 termwise
+  (identity verified 6 digits). The proof restated: a zero on Re(s)=1
+  would force negative-infinite total energy from nonnegative strata —
+  impossible. The contradiction is *visible* in a way the trig identity
+  hides. Boundary: the singularity structure (residue −m) is analytic
+  fact the complex houses but doesn't derive — same traffic, new
+  bridge, no new theorem yet.
+- **9c — CLOSED 2026-09-30 (D9):** answered negatively, by theorem not by
+  difficulty. (i) The D8 deformation seed is killed: 3-4-1 transports to
+  zeta_R (verified) but zeta_R is an Euler product, hence zero-free for
+  Re(s)>1 — the machine runs with nothing to exclude; the pole merely
+  gets heavier (order 2, verified). (ii) Positivity is blind left of the
+  line: Dirichlet-series positivity converges only for sigma>1; the
+  crossing is done by analytic input (partial fractions, zeta'/zeta
+  bounds) — geometry owns positivity, analysis owns continuation.
+  (iii) Parity barrier: pure sieve positivity cannot resolve omega(n)
+  parity (Selberg) — analytic input is *necessary*. (iv) Literature:
+  trig-polynomial optimization is saturated (Mossinghoff-Trudgian-Yang
+  2022: R=5.558691, "near its intrinsic limit"; Bellotti-Trudgian-Yang
+  2026: 1/(4.896 log|t|)).
+- **9c' — CLOSED NEGATIVE 2026-09-30:** the saturated degree-16
+  optimizers do NOT have small-support autocorrelation structure.
+  F16 (Mossinghoff-Trudgian 2015, Table 5 — the degree-16 optimizer
+  behind R0<5.57353; MTY 2022's "essentially saturated" method):
+  all 32 real Fejer-Riesz factors c=(c_k) are FULLY DENSE — 17/17
+  nonzero at 1e-6 relative tolerance (sparsest at 1e-3 still 15/17);
+  a_k lags 14/17 nonzero; participation ratio 3.62; coefficients span
+  3 orders of magnitude with mass piled at high lags (c11..c16).
+  Table-5 internal consistency verified to 5e-15; F16>=0 on fine grid.
+  The density holds across EVERY zero-reflection choice, so it is
+  structural, not an annealing accident. Interpretation: saturation
+  comes from numerical optimization over R^16, not from a hidden
+  small charge pattern — the sieve's small-support |Q|^2 language
+  captures 3-4-1 (9b) but not the saturated optimum. Consistent with
+  9c's "near intrinsic limit": the remaining slack is genuinely
+  numerical, not geometric. [computationally verified]
+  (zero_free_support.py)
+**Status:** 9a/9b/9c/9c' closed. Node 8 (RH bridge) now has its
+attachment point and its mechanism-template.
+
+## Node 10 — Completing the bridge: candidate spans (OPEN, 2026-09-30)
+
+**Question:** granted the load limits (D9), what methodology / perspective /
+reference could construct the *rest* of the bridge — the hybrid span
+between geometric positivity (built, D1–D9) and the analysis that crosses
+Re(s) = 1?
+
+**Key orienting fact (literature):** Weil (1952) proved RH *is* a
+positivity — W(f∗f̃) ≥ 0 for all test f, where W is the explicit-formula
+distribution (Bombieri 2000 exposition; Connes–Consani 2020). And over
+function fields, RH was proved *by* a positivity with a known geometric
+source (intersection pairing on C×C). So: we know exactly what the
+missing span must be made of — a *source* of positivity — and we know
+such sources are geometric. Our program has been building a candidate
+source (stratum energies). The rest of the bridge = connecting our
+geometric positivity to Weil's positivity.
+
+**Options:**
+- **10a — Weil's criterion in the energy language.** The explicit
+  formula's arithmetic side is a prime-power sum (vertex towers, our
+  native objects) minus archimedean terms; the test functions f∗f̃ are
+  *squares* — same shape as our |Q|² autocorrelation family. Concrete
+  first step: implement W(f∗f̃) numerically via prime powers for simple
+  f, verify positivity on examples; then ask which test functions match
+  which residue patterns. *This is D8's move, but where the positivity
+  IS RH.* Circularity warning (literature): translating Weil ≠ proving
+  RH — the positivity must come from the geometry *independently*.
+- **10b — Li's criterion via the face-sum.** RH ⟺ λ_n ≥ 0 ∀n
+  (Li 1997), λ_n = Σ_ρ[1−(1−1/ρ)^n]; λ_n expand via power sums
+  Σ_ρρ^{−k}, which the explicit formula ties to ψ(x) — our D1
+  face-sum. Most *computable* of the positivity criteria.
+- **10c — Selberg's λ² sieve on the complex.** Selberg positivity is
+  already |Σ|²-shaped (same move as our autocorrelations) but with
+  *optimized* weights — an eigenvector problem. Our D6 used fixed
+  patterns; Selberg optimizes the charge distribution. Concrete:
+  formulate the Selberg quadratic form on the complex, solve small
+  cases numerically. Ref: Friedlander–Iwaniec, *Opera de Cribro*.
+- **10d — Function-field template (perspective).** The only known
+  *source* of RH-positivity is geometric (intersection theory). Ask:
+  what is the number-field analogue of the intersection pairing on the
+  incidence complex? Deepest, most speculative. Ref: Weil; Bombieri;
+  Connes–Consani.
+- **10e — Tools:** large sieve (positivity of quadratic forms;
+  Montgomery's zero-density engine) and the explicit formula's
+  z-vs-T cutoff trade-off as "geometric uncertainty." Ref: Montgomery;
+  Iwaniec–Kowalski.

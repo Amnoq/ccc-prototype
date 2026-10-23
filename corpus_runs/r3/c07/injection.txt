@@ -1,0 +1,82 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Figueiredo method transferred as process, not implementation
+18: never put the answer in by hand
+19: sieve as relational machine: composites to primes, primes to zero
+20: finite incidence complex: vertices primes <=N, faces products <=N
+21: no positive region in finite complex; cutoff-N dependent
+22: D1: Chebyshev psi(x) as signed face-sum
+23: D2: Lehmer phi-recursion is the link recursion
+24: D3: composites as zero locus of F(n)=prod dist(n,pZ)
+25: D4: face-weights w(S)=(-1)^{|S|+1}log(prod S)/prod S
+26: weighted infinite simplex total weight 1 = PNT
+27: naive hope: geometry lived in the bare incidence complex
+28: geometry lives in the weights, not the bare complex
+29: D5: territory removal = Figueiredo soft-limit/splitting move
+30: deformation R_p={0}/{0,-2} derives twin constant 2C2=1.32032
+31: unproven twin conjecture pi_2(x)~S x/(log x)^2
+32: positivity located: primitive objects positive, signs from Moebius
+33: 3-4-1 template re-verified from Lambda-sieve
+34: D8: 3-4-1 restated in sieve language, nonnegative stratum energies
+35: D9 negative: positivity blind left of Re(s)=1
+36: saturated degree-16 optimizers lack small-support structure
+37: RH bridge: dictionary not bridge; attaches at positivity
+38: expository paper arc on D1-D6, outline drafted
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 28 29 30
+S25:20 21 22 23 24 25 26 27 28 29
+S37:32 33 34 35 36 37
+S38:25 30 38
+E21:7 28
+E25:4 22
+E26:6 25
+E28:12 27
+E29:6 23,10 17,11 22
+E30:1 38,6 25,10 17
+E31:3 30
+E32:11 25
+E33:1 32
+E34:1 37,6 33
+E35:3 37
+E36:1 35
+A:17 13,18 13,19 13,20 14,21 14,22 14,23 14,24 14,25 14,26 14,27 15,28 13,29 13,30 14,31 16,32 14,33 14,34 14,35 14,36 14,37 16,38 16
+L:31 37 38
+N17: 8 papers 2309.15913-2603.03425, none touch primes
+N18: standing methodology, sieve tests no predicate
+N19: user's framing, root node decision
+N20: sieve_complex.py; corrected sieve = classical primes
+N21: Betti [74,101,26,0] at N=1000; killed naive hope
+N22: Moebius reframed; classical theorems in new clothes
+N23: phi(x,a)=phi(x,a-1)-phi(x/p_a,a-1)
+N24: primes as support of F(n)
+N25: 1.001658 at 2e6; gf -zeta'/zeta^2 ~4 digits
+N26: Sum w(S)->1 IS the PNT
+N27: Delta_infty contractible; replaced by c12
+N28: zeta zeros regulate the face-sum
+N29: conceptual ID; arXiv:2405.09608
+N30: 2160 twin lowers <=200000; 1.3228 at z=100
+N31: ratio 1.6091 at 2e5; algebra not conjecture
+N32: 6 digits; -log delta(z) positive prime sum
+N33: sum 2.26->8.30->20.62 as sigma->1+
+N34: e_{p,k}>=0 termwise 6 digits; residue -m analytic
+N35: Selberg parity; analysis owns continuation
+N36: F16 dense 17/17; PR 3.62; numerically not geometric
+N37: Weil-shaped heuristic, precedent not result
+N38: PAPER_OUTLINE.md 2026-09-30; awaiting approval

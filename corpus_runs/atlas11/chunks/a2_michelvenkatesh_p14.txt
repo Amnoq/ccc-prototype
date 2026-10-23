@@ -1,0 +1,823 @@
+constraints on the parameters of \pi_i so as to stay away from singular Eisenstein series. The general case will reduce to this constrained case, as we explain
+
+now. If \pi_2 is not cuspidal, it will be sufficient to take \pi_2 = 1\|.\| z
+
+\]
+
+. Let π3 be
+
+\[
+
+the Eisenstein series_1 \chi_3 where \chi_3 = (\chi 1\chi 2) 2 is
+
+\]
+
+−1 ; we shall suppose that χ
+
+2it for \|t\| < \|z\|/3. Under such constraints we will establish
+
+not of the form \|.\| the bound30
+
+L(π1 \otimes \pi_2 \otimes \pi_3, ) \pi_2 C(π1 \otimes \pi_2) 1/2−δ \|z\|
+
+−8
+
+2 ,
+
+for some absolute δ > 0.
+
+This implies our main result: from Theorem 5.1, we may assume that
+
+\[
+
+\pi_1 is cuspidal. In that case, we wish a subconvex bound for L(\pi 1 \otimes \pi_2,1/2)with either \pi_2 cuspidal or \pi_2 = 1 1 (which yield a subconvex
+
+bound for L(\pi 1,1/2)). We take z such that\|z\| = C(\pi 1) -\delta /9
+
+\]
+
+, and apply the previous
+
+\[
+
+bound to a triple (\pi 1,\pi_0 0 equals \pi_2 or \pi_2 \otimes\|.\| z if \pi_2 cuspidal,2,\pi_3) where \pi_2 z if not, while \pi_3 = 1 (\chi 1\chi_0)
+
+\]
+
+and equals 1  \|.\| −1
+
+2 , choices being made so
+
+that (π1, \pi_0 2 , \pi_3) fulfills the above constraints. A subconvex bound follows for L(π1 \otimes \pi_2, 1/2) since, by convexity, we have, for any_t ∈ [−1,
+
+1], \|L(π1, 1/2) − L(π1, 1/2 + it)\| C(π1) 1/4+o(1)\|t\|, \|L(π1 \otimes \pi_2, 1/2) − L(π1 \otimes \pi_2, 1/2 + it)\| \pi_2 C(π1) 1/2+o(1)\|t\|. 5.2.2. Choice
+
+of the test vectors. — Factorize \pi_i = \otimes vπi,v, and choose unitary structures on each πi,v so that the product coincides with the canonical norm on
+
+\pi_i . Given > 0 small and_i = 1, 2, 3, let \varphi_1 ∈ \pi_1, \varphi_2 ∈ \pi_2,
+
+\[
+
+E \in \pi_3 be the tensor product of the test vectors (\varphi 1,v)v,(\varphi 2,v)v, \tag{E3,v}
+
+\]
+
+\[
+
+v constructed in Proposition_3.6.1 for each place v (applied with the parameter
+
+\]
+
+).
+
+The canonical norm of \varphi_1, \varphi_2, E are easy to estimate: they are, by
+
+definition, the product of the norms of these local vectors, and are therefore
+
+equal to 1; moreover we have for any d,
+
+Sd(ϕ2) \pi_2 1.
+
+Applying (4.21), we have, from the hypotheses made in the above section,
+
+L(π1 \otimes \pi_2, 1/2) Z \|L ∗ (π2, Ad, 1)L ∗ (π3, Ad, 1)\| ϕ1ϕ2E(g)dg. C(π1) 1/2+ ,π2
+
+X
+
+\[
+
+\|z\| -4 h\varphi 1, \varphi_2 E_i \tag{5.10}
+
+\]
+
+\[
+
+,\pi 2 30 of course the exponent_8 is not optimal for specific configuration (e. g. if \pi_2 is cuspidal) but this
+
+\]
+
+will be sufficient for our present needs
+
+#### 98 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+Set Q := C(\pi 1)C(\pi 2). We want to check that h\varphi 1, \varphi_2 E_i \pi_2 Q-\delta
+
+\]
+
+. Roughly,
+
+we use Cauchy-Schwarz to bound the square of this quantity by hϕ2E, \varphi_2 E_i. The later equals hϕ2ϕ2, EEi which may be decomposed along the automorphic
+
+representations of PGL2(A). It turns out that the contribution of each
+
+of these is small except for one-dimensional representations. Naively speaking, their contribution would be kϕ2k 2kEk 2
+
+can; the truth is a little more complicated because we need to use regularization. In any case, to reduce this
+
+“large” term, we use Friedlander-Iwaniec’s amplification method.
+
+5.2.3. The amplification method. — We choose a real signed measure
+
+σ compactly supported on GL2(Af ) which satisfies
+
+\[
+
+1. u \in supp(\sigma) =\Rightarrow kuk_6 K where K > 0 is some parameter which
+
+\]
+
+will be chosen to be a small fixed positive power of Q.
+
+2. supp(σ) commutes with GL2(Fv) at all archimedean places v and
+
+at all places v for which either \pi_1 or \pi_2 is not spherical or the chosen additive character \psi is ramified.31 3. (\varphi 2E) ? \sigma ˇ is of rapid
+
+decay on X. 4. Let\|\sigma\| denote the total variation measure. Then the total mass of\|\sigma\| is bounded above by KB, for some absolute constant B.
+
+Moreover, \tag{2}
+
+\]
+
+\[
+
+= \|\sigma\| ?\|\sigma ˇ\|, one has for any \gamma > \frac{1}{2} with\|\sigma\|
+
+\]
+
+Z
+
+\[
+
+kAd(u)k d\|\sigma\| \tag{2}
+
+\]
+
+(u) 6 K-\eta
+
+\]
+
+−γ
+
+\[
+
+, for some \eta = \eta(\gamma) > 0. 5. \varphi_1 ? \sigma = \lambda 1.\varphi 1 with \lambda_1 F,\epsilon Q-\epsilon for any \epsilon > 0.
+
+\]
+
+The construction of such a measure (which is inspired by \[18,19\]) is
+
+given in [67, §4.1], except for the remark that (ϕ2E) ? σˇ is of rapid decay. However, this follows by convolving with a measure as in the remark of
+
+§4.3.7; one may choose the place v so that qv  (log Q) 2
+
+.
+
+By property (5) of σ, stated above and Cauchy-Schwarz, we have
+
+2 2
+
+\[
+
+\|\lambda 1\| 2 h\varphi 1, \varphi_2 E_i h\varphi 1 ? \sigma, \varphi_2 E_i h\varphi 1,(\varphi 2.E) ? \sigma ˇi = = 6 h(\varphi 2.E) ? \sigma, ˇ (\varphi 2.E)
+
+? \sigma ˇi;
+
+\]
+
+Thus far, the integrals considered are convergent. However, we shall now expand the integral implicit in convolving with ˇσ; at this point, we need to
+
+(2)),
+
+\[
+
+make use of regularized integrals. This is possible since, for u \in supp(\|\sigma\|
+
+\]
+
+31 i.e. the places dividing the discriminant of F.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 99
+
+\[
+
+the set of exponents of \varphi u 2\varphi 2EuE is either ∅ (if \pi_2 is cuspidal) or is comprised of characters with real part equal to_2. Noting that h\varphi
+
+u u 2 .Eu, \varphi 2.Eireg = h\varphi 2\varphi 2, EuEireg \tag{5.11}
+
+\]
+
+\[
+
+we obtain that
+
+\]
+
+Z
+
+\[
+
+2 \tag{2}
+
+\]
+
+\[
+
+(u) (5.12)\|\lambda 1\| 2 h\varphi 1, \varphi 2Ei_6 h\varphi u 2\varphi 2, EuEireg d\|\sigma\|
+
+\]
+
+Now, applying properties (1) and (4) of σ to (5.12), we conclude that it suffices to prove:
+
+\[
+
+5.2.4. Proposition. — For u \in GL2(A), put \Phi 2,u := \varphi u 2\varphi 2 and \Phi 3,u := EuE. For u \in supp(\|\sigma\| \tag{2}
+
+\]
+
+\[
+
+)\|h\Phi 2,u, \Phi 3,uireg\| \pi_2,\|z\| kAd(u)k AQ -4 -\gamma + kuk -\delta for some absolute positive constants \gamma > \frac{1}{2} and \delta, A > 0.
+
+\]
+
+The proof will follow. Roughly, we evaluate the right-hand side via the
+
+regularized Plancherel formula in §5.2.7; we handle the spectral sum (cuspidal and Eisenstein) in §5.2.8, and we bound the “degenerate” terms that arise in
+
+§5.2.9.
+
+\[
+
+5.2.5. Good and bad places. — Fixing now u \in supp(\|\sigma\| \tag{2}
+
+\]
+
+\[
+
+), we make
+
+\]
+
+the following definitions of “good” and “bad” places:
+
+Let R be the set of finite places where ϕ2,v, E3,v are spherical and where
+
+uv = 1; let S be the set of places where uv_6= 1: by the choice made in §5.2.2 S consists of finite places, and the data ϕ2,v, E3,v, ψv are all unramified for v
+
+∈ S; let T denote the complement of R ∪ S. Observe that \|S\|+\|T\| = o(log C(π1)+log C(π2)), the bound on \|S\| arising from property (1) of the signed
+
+measure σ. This property will be used to control a product, over v ∈ S ∪ T, of “implicit constants.” 5.2.6. Deformation. — In this section, we shall deform
+
+\pi_2, \pi_3 in such a way that we will be able to apply the regularized Plancherel formula. These deformations will be parameterized by s ∈ C (for \pi_2) and_t
+
+∈ C (for \pi_3). We shall fix rather specific deformations of the vectors \varphi_2 ∈ \pi_2, E ∈ \pi_3. We shall also fix factorizations into local
+
+constituents of various vectors that will arise. Write \pi_3 = 1 \chi_3 and let π3(t) := \|.\| t \chi_3\|.\|
+
+−t
+
+\[
+
+, for_t \in C, be the one-parameter deformation of \pi_3 as described in §4.1.6. We choose f_3 so
+
+\]
+
+#### 100 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+\[
+
+that E = Eis \tag{f3}
+
+\]
+
+\[
+
+. We denote the corresponding deformation of E by E(t): E(t) = Eis(f_3(t)). If \pi_2 = 1\|.\| z s\|.\| z-s, we consider the deformation (\|.\|,\varphi 2(s)) of
+
+(\pi 2,\varphi_2): after choosing f_2 so that \varphi_2 = Eis \tag{f2}
+
+\]
+
+\[
+
+, we set \varphi 2(s) = Eis(f_2(s)). (By convention,if \pi_2 is cuspidal we regard (\pi 2(s),\varphi(s)) as being constant.) Note that
+
+\]
+
+kE(t)kcan and kϕ2(s)kcan are both constant by Lemma 2.2.3.
+
+Factorizing f2 = c2,f Q f2,v and f3 = c3,f Q f3,v, where kf2,vk = kf3,vk =
+
+v v
+
+1 for all v; then
+
+\[
+
+\|c2,f\| 1,\|c3,f\| 1 \tag{5.13}
+
+\]
+
+\[
+
+Let W\varphi 2(s) be the image of \varphi 2(s) under the Whittaker intertwiner. We
+
+\]
+
+may then factorize
+
+Y
+
+\[
+
+W\varphi 2(s) = c_2,W (s) W\varphi 2,v(s),
+
+\]
+
+v
+
+\[
+
+where we take W\varphi 2,v(s) to be the image of f_2(s) under the intertwiner \tag{3.10}
+
+\]
+
+for v \in S ∪ T; and, for v \in R, we normalize so that W\varphi 2,v(s) takes the
+
+\]
+
+Q
+
+\[
+
+value_1 at_1. In a similar way, we factorize W\varphi 3(t) = c_3,W (t)
+
+\]
+
+v Wϕ3,v(t), the
+
+\[
+
+normalizations being identical. Notice that kW\varphi 2,v(s)k = kW\varphi 3,v(t)k = 1 for v \in S ∪ T, the intertwiner \tag{3.10}
+
+\]
+
+being isometric.
+
+\]
+
+The constant c2,W (s) may be evaluated by computing norms. By §2.2.2
+
+\[
+
+h\varphi 2, \varphi 2ican\|c2,W (s)\| 2\Lambda^* (\pi 2(s),Ad,1) Y \zeta v \tag{1}
+
+\]
+
+\[
+
+L(\pi 2,v(s),Ad,1)/\zeta v(2)v\in S∪T and therefore, for any \epsilon > 0, C(\pi 1) \epsilon C(\pi 2) \epsilon\|c2,W (s)\| 2 \epsilon L^* (\pi 2(s),Ad,1),
+
+(5.14) and similarly for c_3,W (t).
+
+\]
+
+5.2.7. Application of the regularized Plancherel formula. — We note
+
+that Φ2,u and Φ3,u descend to function on PGL2(A). Throughout this section we regard u as fixed; set (we have suppressed the dependence on u for
+
+typographical simplicity)
+
+\[
+
+\Phi 2(s) = \varphi u u 2\varphi 2(s), \Phi 3(t) = EuE(t), E_2(s) = Eis(\varphi 2N \varphi 2N (s)), E_3(t) = Eis(Eu N EN (t)). 1+s_1-s_1+z+s_1+z-s} - The set of
+
+exponents of \Phi 2(s) is S_2(s) = {\|.\|,\|.\|,\|.\|,\|.\|
+
+\]
+
+(or the empty set if π2 is cuspidal).
+
+\[
+
+1+t_1-t_1-t_1+t}. - The set of exponents of \Phi 3(t) is S_3(t) = {\|.\|,\|.\|, \chi_3\|.\|, \chi_3\|.\|
+
+\]
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 101
+
+In particular, (s, t) 7→ hΦ2(s), Φ3(t)ireg defines an (s, t)-anti-holomorphic
+
+function in a neighbourhood of (0, 0) in C2
+
+. We will bound the function
+
+hΦ2(s), Φ3(t)ireg at the point (0, 0) by analyzing it along a suitable non-empty subset N ⊂ D containing (0, 0) in its closure. The key point is that we should
+
+choose N so that (4.20) is applicable, and also so that π2(t), π3(s) do not equal_1 1 for (t, s) ∈ N . For explicitness, take N = {(s, t) = (t/2, t), t ∈ iR : 0
+
+< \|t\| < \|z\|/6}. (5.15) By choice of N , we can apply the regularized Plancherel formula (4.20). Moreover, for π belonging to the finite spectrum (π = χ,
+
+χ_2 = 1) and (s, t) ∈ N one has, again by invariance, Ππ(Φ3(t)) = 0. (In other words, there is no G(A)-equivariant functional from the tensor product \pi_3
+
+\otimes π3(t) to a onedimensional G(A)-representation). Therefore, for (s, t) ∈ N , we have hΦ2(s), Φ3(t)ireg = hΦ2(s), E3(t)ireg + hE2(s), Φ3(t)ireg (5.16) Z +
+
+hΠπ(Φ2(t)), Ππ(Φ3(s))idµP(π).
+
+π generic
+
+\[
+
+where \Pi \pi is defined in \tag{4.19}
+
+\]
+
+\[
+
+. We have already observed that (s,t) 7\to h\Phi 2(s), \Phi 3(t)ireg defines an (s,t)- antiholomorphic function in a neighbourhood of (0,0), and, in particular,
+
+a continuous function on N ; since the same is true of the function
+
+\]
+
+Z
+
+(s, t) 7→ hΠπ(Φ2(t)), Ππ(Φ3(s))idµP(π),
+
+π generic
+
+it follows from (5.16) that
+
+Lemma. — The degenerate term
+
+\[
+
+(s,t) \in N_7\to h\Phi 2(s), E_3(t)ireg + hE2(s), \Phi 3(t)ireg
+
+\]
+
+extends to a continuous function on N .
+
+5.2.8. Bounding the generic term. —
+
+\[
+
+Lemma. — For (s,t) \in N, the last term of \tag{5.16}
+
+\]
+
+\[
+
+is \pi_2 kuk AQ-\delta
+
+\]
+
+, for
+
+absolute δ > 0 and A. In fact, we need this bound only for (s, t) = (0, 0), and the reader is
+
+welcome to make this substitution in what follows.
+
+#### 102 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+Proof. — Let d0 be the larger than any of the (absolute) Sobolev degrees occuring in Lemmata 3.5.3 and 3.7.1 as well as the degree of (3.36).
+
+For any generic standard automorphic representation of PGL2, the inner product
+
+hΠπ(Φ2(s)), Ππ(Φ3(t))i is bounded above by S π (Φ2(s))S π (Φ3(t)) (as a
+
+d0
+
+−d0
+
+π (Φ) for S π (Ππ(Φ))), by the duality between the Sobolev
+
+short cut we write S
+
+d d
+
+norms in question . It will be sufficient to verify that
+
+S π (Φ3(t)) π2,π, kuk BQ
+
+−δ
+
+−d0 ,
+
+\[
+
+for absolute constants \delta > 0 and B; indeed, for any constant B > 0, one has Z Z C(\pi) BS \pi(\Phi 2(s)) B S \pi(\Phi 2(s)) \pi 2,B_1,
+
+\]
+
+d0 d0+O(B)
+
+π π
+
+the latter inequality following from (4.24).
+
+We shall apply the results of §4.4.1 especially (4.23). In the notations
+
+\[
+
+of that section, we utilize the corollary to Lemma_3.7.1 32 to see - since C(\chi 3) \pi_2 C(\pi 1) and_t \in iR -
+
+\]
+
+C(π1,v)
+
+\[
+
+d 0\epsilon C(\chi 3,v) 2\theta -1 (v \in T). Bv,\pi 2 C(\pi 1,v) -1
+
+\]
+
+C(χ3,v)
+
+\[
+
+for some absolute \delta > 0, d_0 > 0. Note that uv does not contribute, since uv = 1 for v \in T. On the other hand, we have Bv kuvk A for v \in S \tag{5.17}
+
+\]
+
+\[
+
+and some unspecified constant A: this follows from the =trivial” bound (3.36)(see the sentence following that equation).
+
+\]
+
+We take into account also the global subconvex bound of Theorem 5.1;
+
+it implies L(π3 \otimes \pi_3 \otimes π, 1/2) π C(χ3) 1−δ
+
+. Thus, by the results of §4.4.1,
+
+C(π1) 2θ−1 S π (Ππ(Φ3(t)) π2,π, C(χ3) kuk A kEk_2 2
+
+−δ
+
+−d0 C(χ3) cankE(t)k can.
+
+\[
+
+Now, kE(t)kcan = kEkcan = 1. Using again that C(\chi 3) \pi_2 C(\pi 1), we conclude the proof of the Lemma. ut 32 if \pi v is tempered, e.g., if \pi is
+
+Eisenstein or under the Ramanujan-Peterson conjecture we may, more
+
+\]
+
+simply, apply Lemma 3.5.3.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 103
+
+5.2.9. Bounding the degenerate term. —
+
+\[
+
+Lemma. — For (s,t) \in N we have, for any \epsilon > 0\|h\Phi 2(s), E_3(t)ireg + hE2(s), \Phi 3(t)ireg\| \pi 2,,\epsilon Q \epsilon\|z\| -4 kAd(u)k -\gamma
+
+\tag{5.18}
+
+\]
+
+\[
+
+for some absolute \gamma > \frac{1}{2}.
+
+\]
+
+Proof. — We start with the first portion of degenerate term: hΦ2(s), E3(t)ireg.
+
+Let us consider the linear functional on
+
+\[
+
+\Pi = \Pi(s,t) := \pi_2 \otimes \pi 2(s) \otimes \pi_3 \otimes \pi 3(t) \to C
+
+\]
+
+defined by the rule
+
+Z reg
+
+\[
+
+H = Hs,t : (\varphi 2,\varphi_0) 7\to 0 0 \varphi 2\varphi 2, \varphi_3, \varphi_0 3 2Eis(\varphi 3,N \varphi_3,N).
+
+\]
+
+### XPGL2
+
+\[
+
+Thus, h\Phi 2(s), E_3(t)i = H(\varphi u
+
+\]
+
+2 , ϕ2(s), Eu , E(t)); also, expanding the constant
+
+terms ϕ3,N , \varphi_0
+
+3,N , we may express Hs,t as a sum of four terms
+
+X ±±
+
+Hs,t = H
+
+s,t ,
+
+±,±
+
+where, if we realize \pi_2 in its Whittaker model and \pi_3 in the principal series model,
+
+++ Y∗ ++ H u u H
+
+\[
+
+s,t (\varphi_2,\varphi 2(s),Eis \tag{f3}
+
+\]
+
+\[
+
+, Eis(f_3(t))) = c v, \tag{5.19}
+
+\]
+
+\[
+
+v
+
+\]
+
+Z
+
+2 Wuv uv
+
+c = c2,W c2,W (s)\|c3,f \| :=
+
+, H++ v 2,vW2,v(s)f 3,vf3,v(t).
+
+N(Fv)\\PGL2(Fv)
+
+The other terms (e.g. H +− ) are defined similarly, by introducing
+
+s,t , H+− v
+
+standard intertwining operators M (see §4.1.8) in front of the f3’s. The second portion of the degenerate hE2(s), Φ3(t)ireg, admits analogous expansion,
+
+J ±± ±±
+
+of the shape P
+
+±,± s,t and the evaluation of each J s,t is entirely similar to
+
+that of H ±±
+
+s,t . We will examine in detail two terms: H++ and J
+
+−−. We then
+
+complete the proof of the Lemma in §5.2.12.
+
+#### 104 PHILIPPE MICHEL, AKSHAY VENKATESH
+
+5.2.10. Local bounds for H. — We shall need bounds for H++ as well
+
+as for its partial derivatives w.r.t. s, t on the unitary axes, ie. when s, t are purely imaginary. In fact, bounds for the partial derivatives will be derived
+
+from bounds for H++ in a small neighborhood of the unitary axes; however,
+
+v
+
+for clarity, we begin by explaining the bounds for H++
+
+v  when s, t are on the
+
+unitary axes.
+
+The evaluation of H++
+
+v , for v ∈ R, is the theory of local Rankin-Selberg
+
+integrals for GL2 (cf. (4.27)):
+
+\[
+
+Lv(\pi 2 \otimes \pi ˜2(s) \otimes\| ·\|t H ++,1) \tag{5.20}
+
+\]
+
+\[
+
+v = \zeta v(2 + 2t) For v \in S, the vectors are spherical and the additive character \psi v is
+
+\]
+
+unramified; we apply Lemma 3.2.7 to conclude:
+
+\|H ++ \|  kAd(uv)k
+
+−γ
+
+\[
+
+v, \gamma = 1 - \theta > \frac{1}{2} \tag{5.21}
+
+\]
+
+\[
+
+For v in T we have again by Lemma_3.2.7
+
+\]
+
+\|H ++ \| 6 kf3,vW2,vkNv\\Gv kf3,v(t)W2,v(s))kNv\\Gv (5.22)v
+
+2 kW2,vkkW2,v(s)k = 1.
+
+\[
+
+= kW2,vkkW2,v(s)kkf3,vkkf3,v(t)k = kf3,vk More generally, for any fixed_i, j > 0, v \in S ∪T and any \epsilon > 0, we have
+
+\]
+
+also
+
+\[
+
+\|\partial i_j ++\| i,j,\epsilon C(\pi 2,v) kAd(uv)k \epsilon \epsilon -\gamma ; \tag{5.23}
+
+\]
+
+\[
+
+s\partial t H v
+
+\]
+
+It is to verify (5.23) that we consider H++ off the unitary axes. The
+
+v
+
+function H++
+
+v  being antiholomorphic in s, t, it suffices by Cauchy’s formula
+
+\[
+
+to bound it in a small neighbourhood of (s,t) = (0,0). The required bound follows, for v \in S, from Lemma_3.2.8; for v \in T, it follows by a reasoning similar
+
+to the previous one that for\|<(s)\| +\|<(t)\| 6 \epsilon /2,
+
+\]
+
+Z
+
+\[
+
+\|H ++ (s, t)\| 2 6 \|W2,v(s)(a(y))\| 2 max(\|y\|, \|y\| ) ε d ×y ε S π2,v_2
+
+−1
+
+v dε (W2,v)
+
+d 0ε ε C(π2,v) ,
+
+where we applied Proposition 3.2.4, and d, d0 are absolute constants; we also used the bound for S(W2,v) given in Proposition 3.6.1.
+
+The same bounds apply to all the terms H±,±
+
+v . We give an example of
+
+how to handle the intertwining operators that intervene, in relation to the J-term.
+
+#### THE SUBCONVEXITY PROBLEM FOR GL2. 105
+
+5.2.11. The J terms. — For the corresponding terms J ±±
+
+a bound
+
+v
+
+similar to (5.23) applies. We shall study the term J −− to make this reasoning clear; it will also give us the opportunity to explain the reasoning
+
+v
+
+involving intertwining operators.
+
+\[
+
+The second degenerate term hE2(s), \Phi 3(t)ireg is zero unless \pi_2 is Eisenstein, so we shall suppose that \pi_2 is Eisenstein. Corresponding to \tag{5.19}
+
+\]
+
+\[
+
+we
+
+\]
+
+have the identity:

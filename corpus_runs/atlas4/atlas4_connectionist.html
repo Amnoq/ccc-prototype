@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-4 — connectionist sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-4 — connectionist sky</div>
+    <div class="sub">Rumelhart–Hinton–Williams 1986 (PDP ch.8, error propagation), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {"the-chapter-s-two-contributions-the-main-theoret": {"display": "the chapter's two contributions: the main theoretical contribution is an efficient way of computing the derivatives; the main empirical contribution is that the apparently fatal problem of local minima is irrelevant in a wide variety of learning tasks", "status": "exact", "cluster": "connectionist", "facets": [{"chunk": "connectionist_rhw86", "cid": "c5", "label": "the chapter's two contributions: the main theoretical contribution is an efficient way of computing the derivatives; the main empirical contribution is that the apparently fatal problem of local minima is irrelevant in a wide variety of learning tasks", "kind": "claim", "status": "exact", "genre": "original", "note": "Theoretical contribution: the efficient derivative computation derived in equations 7-16."}, {"chunk": "connectionist_rhw86", "cid": "c5", "label": "the chapter's two contributions: the main theoretical contribution is an efficient way of computing the derivatives; the main empirical contribution is that the apparently fatal problem of local minima is irrelevant in a wide variety of learning tasks", "kind": "claim", "status": "computationally_verified", "genre": "verified", "note": "Empirical contribution: demonstrated across the chapter's simulations (XOR, parity, encoding, symmetry, addition); qualified by the reliable local-minimum cases in XOR (2 cases) and addition."}], "status_note": null, "chunks": ["connectionist_rhw86"], "killed_facets": 0}}, "standalone": [{"id": "internal-representation-a-recoding-of-the-input-", "display": "internal representation: a recoding of the input patterns by the hidden units in which the similarity of the patterns among the hidden units can support any required mapping from input to output; networks without hidden units have no internal representation because pattern similarity (overlap) is fixed outside the learning system", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "definition", "genre": "reframed", "note": "Problem framing for the chapter: stipulates what counts as an internal representation and why two-layer networks lack one (cf. Chapters 2, 17, 18)."}, {"id": "the-exclusive-or-xor-problem-cannot-be-performed", "display": "the exclusive-or (XOR) problem cannot be performed by networks without hidden units: the patterns which overlap least must generate identical output values (Table 1); adding a third input that is 1 whenever the first two are 1 (Table 2) would make it solvable by a two-layer system", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "reframed", "note": "Instance demonstrated in Tables 1-2 (XOR; the conjunction-augmented Table 2 is solvable without hidden units); the general analysis is credited to Minsky and Papert (1969), cited not derived here."}, {"id": "hidden-units-with-linear-activation-functions-pr", "display": "hidden units with linear activation functions provide no advantage (Chapter 2); only nonlinear hidden units make the internal representation useful", "status": "conjectural", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "reframed", "note": "Stated as following from results in Chapter 2; no proof is given in this chunk."}, {"id": "the-generalized-delta-rule-a-learning-procedure-", "display": "the generalized delta rule: a learning procedure for networks with hidden units that works with deterministic units, involves only local computations, and is a clear generalization of the delta rule; offered against three alternatives (competitive learning, assuming the representation a priori, Boltzmann-machine procedures)", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "method", "genre": "original", "note": "The chapter's central presentation: deterministic units, only local computations, a clear generalization of the delta rule; independent derivations noted: Parker (1985) 'learning-logic', Le Cun (1985) a roughly similar scheme."}, {"id": "the-error-measure-e-p-1-2-sum-j-t-pj-o-pj-2-on-i", "display": "the error measure E_p = 1/2 sum_j (t_pj - o_pj)^2 on input/output pattern p, and E = sum_p E_p as the overall error measure", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "definition", "genre": "original", "note": "Definitional: the chapter's chosen error measure, used throughout the derivations."}, {"id": "the-delta-rule-implements-gradient-descent-in-e-", "display": "the delta rule implements gradient descent in E: for linear units it performs steepest descent on the error surface in weight space (-dE_p/dw_ji = delta_pj i_pi, equations 2-6); without hidden units the error surface is bowl-shaped with one minimum, guaranteeing the best weights", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "reframed", "note": "Chain-rule derivation in equations 2-6; qualified: strictly true only if weights are unchanged during a presentation cycle; with small enough learning rate a very close approximation, so the rule finds weights minimizing the error function."}, {"id": "semilinear-activation-function-the-output-of-a-u", "display": "semilinear activation function: the output of a unit is a nondecreasing and differentiable function of its net total input, o_pj = f_j(net_pj) with net_pj = sum_i w_ji o_pi; linear threshold units do not qualify (derivative infinite at the threshold, zero elsewhere)", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "definition", "genre": "original", "note": "Named class introduced for the analysis (see Chapter 2); the exclusion of linear threshold units is argued from the infinite/zero derivative."}, {"id": "the-error-signal-recursion-delta-p-w-ji-eta-delt", "display": "the error-signal recursion: Delta_p w_ji = eta delta_pj o_pi (11); for output units delta_pj = (t_pj - o_pj) f'_j(net_pj) (13); for hidden units delta_pj = f'_j(net_pj) sum_k delta_pk w_kj (14) - error signals propagated backward through the network", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "original", "note": "Derived by the chain rule in equations 9-14; equations 13-14 constitute the recursive backward computation."}, {"id": "the-generalized-delta-rule-is-a-two-phase-proced", "display": "the generalized delta rule is a two-phase procedure: a forward pass computing o_pj for each unit followed by a backward pass that propagates the error signal layer by layer and makes the weight changes; the backward pass has the same computational complexity as the forward pass and is not unduly expensive", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "original", "note": "Direct consequence of equations 11-14; complexity claim and the fixed-weights and output-fed-by-output remarks are derived in the text."}, {"id": "the-logistic-activation-function-o-pj-1-1-e-sum-", "display": "the logistic activation function o_pj = 1/(1 + e^{-(sum_i w_ji o_pi + theta_j)}) (15), with derivative o_pj(1 - o_pj) maximal at o_pj = 0.5; weights change most for units near midrange, 'not yet committed to being either on or off', which contributes to stability; the bias theta_j is learned like any other weight", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "definition", "genre": "original", "note": "Definitional (equation 15) plus the derivative identity d o_pj/d net_pj = o_pj(1 - o_pj) shown in the text; the midrange/stability reading and the 0.1/0.9 target practice are the authors' own analysis."}, {"id": "the-error-signals-for-the-logistic-for-output-un", "display": "the error signals for the logistic: for output units delta_pj = (t_pj - o_pj) o_pj (1 - o_pj); for hidden units delta_pj = o_pj (1 - o_pj) sum_k delta_pk w_kj", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "original", "note": "Substitution of the logistic derivative into equations 13-14; shown in the text."}, {"id": "the-momentum-term-delta-w-ji-n-1-eta-delta-pj-o-", "display": "the momentum term Delta w_ji(n+1) = eta(delta_pj o_pi) + alpha Delta w_ji(n) (16), alpha about 0.9 in most simulations; momentum filters out high-frequency variations of the error surface (long ravines), allowing bigger effective steps; the same solutions are found with alpha = 0 and smaller eta, but learning is much faster with larger alpha and eta", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "method", "genre": "original", "note": "Introduced as equation 16; ravine/filtering rationale is the authors' argument; the alpha approx 0.9 practice and the alpha=0 comparison are reported from their simulations."}, {"id": "symmetry-breaking-if-all-weights-start-equal-err", "display": "symmetry breaking: if all weights start equal, error is propagated back in proportion to the weights, so all hidden units get identical error signals and their weights stay identical (a local maximum of the error function); countered by starting with small random weights", "status": "exact", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "claim", "genre": "original", "note": "Argument given in the text: error propagates back in proportion to the weights, forcing identical error signals and weight changes under equal initialization; the small-random-weights remedy is their stated practice."}, {"id": "xor-learned-the-system-solved-xor-hundreds-of-ti", "display": "XOR learned: the system solved XOR hundreds of times; one solution after 558 sweeps at eta = 0.5 (Figure 3, a mirror image of the hand-designed Figure 2); only two cases in hundreds hit a local minimum (two-hidden-unit version, correct on 00 and 10, output 0.5 on 11 and 01), so local minima are 'quite rare'", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Figure 3 solution: 558 sweeps, eta=0.5, positive biases (on unless turned off), mirror image of Figure 2; local-minimum case (Figure 5): two hidden units, correct on 00 and 10, output 0.5 on 11 and 01, 6,587 presentations at eta=0.25, escaped at eta=0.5."}, {"id": "xor-time-to-solution-scaling-yves-chauvin-p-280-", "display": "XOR time-to-solution scaling (Yves Chauvin): P = 280 - 33log2 H presentations (eta = 0.25, 0.01/pattern criterion), from about 245 at 2 hidden units to about 120 at 32; time to solution reduced linearly with the logarithm of hidden units up to about 40; larger learning rates speed learning until unstable behavior", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Yves Chauvin's study reported in the text: P = 280 - 33log2 H (eta=0.25, 0.01/pattern criterion), 245 presentations at 2 hidden units down to 120 at 32; learning-rate effect ~450 at eta=0.1 to ~68 at eta=0.75 (8 hidden units)."}, {"id": "parity-at-least-n-hidden-units-are-required-for-", "display": "parity: at least N hidden units are required for length-N patterns; the discovered solution counts the on-inputs (the m-th hidden unit comes on when m or more inputs are on) with alternating positive and negative weights giving zero net input for even counts; the internal representation records the number of hidden units on, depending only on the count - 'not the kind of representation readily discovered by unsupervised learning schemes such as competitive learning'", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Four-input case solved after 2,825 presentations at eta=0.5 (Table 3); the counting/ alternating-weight scheme and the 'not discoverable by competitive learning' remark are the authors' reading of the discovered solution."}, {"id": "the-encoding-problem-ackley-hinton-and-sejnowski", "display": "the encoding problem (Ackley, Hinton, and Sejnowski 1985): N orthogonal patterns through log2 N hidden units learn a binary code for the input patterns; the 8-pattern identity mapping is solved (Table 5) with intermediate activation values (0.5s); a distributed representation over two units is converted to a local representation over four through a singleton hidden unit taking a distinct activation value per pattern (Table 7, Figure 8)", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Problem posed by Ackley, Hinton, and Sejnowski (1985); 8-pattern identity mapping solved (Table 5, with 0.5 intermediate values); distributed-to-local conversion solved in 5,226 presentations at eta=0.05 (Table 7, Figure 8)."}, {"id": "the-propensity-of-hidden-units-for-extreme-value", "display": "the propensity of hidden units for extreme values follows from the logistic being a sigmoid; problems requiring intermediate values need moderate incoming weights; the generalized delta rule derivation does not require identical activation functions - graded-encoding units could be linear (wider dynamic range) while others are logistic", "status": "heuristic", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "conjecture", "genre": "original", "note": "Suggestive discussion by the authors, not a precise claim: the sigmoid reading of the extreme-value propensity and the mixed linear/logistic proposal."}, {"id": "symmetry-classifying-strings-by-symmetry-about-t", "display": "symmetry: classifying strings by symmetry about their center is always solvable with only two hidden units; the discovered solution makes weights symmetric about the middle equal in magnitude and opposite in sign (zero net input for symmetric patterns), with 1:2:4 weight ratios on each side giving a unique activation sum - a more elegant solution than the authors had previously considered", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Six-bit solution after 1,208 presentations of each pattern at eta=0.1 (Figure 9); the 1:2:4 side-weight ratio and the zero-net-input-for-symmetric-patterns mechanism are the authors' analysis of the discovered weights."}, {"id": "binary-addition-a-minimal-network-with-2m-inputs", "display": "binary addition: a minimal network with 2m inputs, m hidden units, m+1 outputs where the hidden units correspond to the carry bits (Figure 10); the one problem reliably leading into local minima, because hidden units are not 'equipotential' (about half the time the wrong unit solves the low-order XOR and misses the carry: 11+11 -> 100); cured by extra hidden units; generally hidden units are not readily interpreted - 'very little tendency for localist representations to develop'; it is the pattern of activity over the hidden units that matters (distributed representations)", "status": "computationally_verified", "cluster": "connectionist", "chunk": "connectionist_rhw86", "kind": "result", "genre": "verified", "note": "Minimal 2m/m/m+1 carry-bit network (Figure 10); the equipotential local-minimum mechanism (11+11 -> 100 instead of 110, ~half the time) and the extra-hidden-unit cure (3,020 presentations, eta=0.5, Figure 11, Table 8) are reported from their runs; the anti-localist moral is the authors' stated conclusion."}], "edges": [{"a": "the-generalized-delta-rule-a-learning-procedure-", "b": "the-delta-rule-implements-gradient-descent-in-e-", "rel": "generalizes", "count": 1}, {"a": "the-delta-rule-implements-gradient-descent-in-e-", "b": "the-error-measure-e-p-1-2-sum-j-t-pj-o-pj-2-on-i", "rel": "depends_on", "count": 1}, {"a": "the-error-signal-recursion-delta-p-w-ji-eta-delt", "b": "semilinear-activation-function-the-output-of-a-u", "rel": "depends_on", "count": 1}, {"a": "the-error-signal-recursion-delta-p-w-ji-eta-delt", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "refines", "count": 1}, {"a": "the-generalized-delta-rule-is-a-two-phase-proced", "b": "the-error-signal-recursion-delta-p-w-ji-eta-delt", "rel": "depends_on", "count": 1}, {"a": "the-error-signals-for-the-logistic-for-output-un", "b": "the-logistic-activation-function-o-pj-1-1-e-sum-", "rel": "depends_on", "count": 1}, {"a": "the-momentum-term-delta-w-ji-n-1-eta-delta-pj-o-", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "refines", "count": 1}, {"a": "symmetry-breaking-if-all-weights-start-equal-err", "b": "the-error-signal-recursion-delta-p-w-ji-eta-delt", "rel": "depends_on", "count": 1}, {"a": "xor-learned-the-system-solved-xor-hundreds-of-ti", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "illustrates", "count": 1}, {"a": "parity-at-least-n-hidden-units-are-required-for-", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "illustrates", "count": 1}, {"a": "the-encoding-problem-ackley-hinton-and-sejnowski", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "illustrates", "count": 1}, {"a": "symmetry-classifying-strings-by-symmetry-about-t", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "illustrates", "count": 1}, {"a": "binary-addition-a-minimal-network-with-2m-inputs", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "illustrates", "count": 1}, {"a": "xor-time-to-solution-scaling-yves-chauvin-p-280-", "b": "xor-learned-the-system-solved-xor-hundreds-of-ti", "rel": "refines", "count": 1}, {"a": "semilinear-activation-function-the-output-of-a-u", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "supports", "count": 1}, {"a": "the-chapter-s-two-contributions-the-main-theoret", "b": "the-generalized-delta-rule-a-learning-procedure-", "rel": "supports", "count": 1}, {"a": "the-logistic-activation-function-o-pj-1-1-e-sum-", "b": "semilinear-activation-function-the-output-of-a-u", "rel": "depends_on", "count": 1}, {"a": "the-propensity-of-hidden-units-for-extreme-value", "b": "the-logistic-activation-function-o-pj-1-1-e-sum-", "rel": "depends_on", "count": 1}, {"a": "binary-addition-a-minimal-network-with-2m-inputs", "b": "the-chapter-s-two-contributions-the-main-theoret", "rel": "refines", "count": 1}, {"a": "the-exclusive-or-xor-problem-cannot-be-performed", "b": "internal-representation-a-recoding-of-the-input-", "rel": "supports", "count": 1}], "loops": [{"chunk": "connectionist_rhw86", "label": "the chapter's two contributions: the main theoretical contribution is an efficient way of computing the derivatives; the main empirical contribution is that the apparently fatal problem of local minima is irrelevant in a wide variety of learning tasks", "node": "the-chapter-s-two-contributions-the-main-theoret"}, {"chunk": "connectionist_rhw86", "label": "xor-learned-the-system-solved-xor-hundreds-of-ti", "node": null}, {"chunk": "connectionist_rhw86", "label": "the-generalized-delta-rule-a-learning-procedure-", "node": null}], "stats": {"subjects": 1, "cross_edges": 20, "concepts": 22}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

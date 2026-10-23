@@ -1,0 +1,155 @@
+, and Y (t) is an invertible infinite order differential operator introduced in [16]. We impose that the time evolution S(t) satisfies the same twisted
+
+self-adjoint
+
+\]
+
+condition (7.3). Applying the adjoint-inverse operation and conjugation by A of (7.1) to
+
+### (7.5), we obtain
+
+### A −D1 A ∗ )
+
+exp −1 −1A).
+
+\[
+
+· S \tag{0}
+
+\]
+
+\[
+
+-1 = S(t) · (A(Y (t)
+
+\]
+
+### −D2
+
+\[
+
+Therefore, the time evolution \tag{7.5}
+
+\]
+
+\[
+
+with the condition D_2 = -D_1 preserves the twisted
+
+\]
+
+### self-adjointness (7.3). We have thus established
+
+Theorem 7.1. The KP-type equations that generate the Hitchin integrable systems on the moduli spaces of Sp2m-Higgs bundles are the reduction of the 2m-component
+
+KP equations that preserve the twisted self-adjointness (7.3) for the operator S, or (7.4) for the Lax operator L. The time evolution S 7−→ S(t) preserving the
+
+condition is given by the generalized
+
+### Birkhoff decomposition
+
+· S(0)−1 = S(t)
+
+### (7.6) exp  D −1
+
+### · Y (t),
+
+### −D
+
+### 32  ANDREW HODGE AND MOTOHICO MULASE
+
+# where
+
+P tj1∂ j
+
+### j≥1
+
+# D =
+
+#  . . P
+
+.
+
+### tjm∂ j
+
+### j≥1
+
+# Remark 7.2. Since the time evolution of (7.6) is given by a traceless matrix diag(D, −D),
+
+# every finite-dimsntional orbit of this system is a Prym variety by the general theory of \[14\],
+
+# which is expected from the Sp Hitchin fibrartion.
+
+# References
+
+\[1\] Malcolm R. Adams and Maarten J. Bergvelt, The Krichever map, vector bundles over algebraic curves, and Heisenberg algebras, Commun. Math. Phys. 154
+
+(1993), 265–305.\[2\] A. Alvarez V´azquez, J. M. Mu˜noz Porras, and F. J. Plaza Mart´ı ´ n, The algebraic formalism of soliton equations over arbitrary base
+
+elds, in “Workshop on Abelian Varieties and Theta Functions,” Aportaciones Mat. Investig. 13 (1998), 3–40.\[3\] Arnaud Beauville, M. S. Narasimhan, and S.
+
+Ramanan, Spectral curves and the generalized theta divisor, J. reine angew. Math. 398 (1989), 169–179.\[4\] Ron Donagi and Tony Pantev, Langlands duality for
+
+Hitchin systems, arXiv:math/0604617v2 (2006).
+
+\[5\] Edward Frenkel, Lectures on the Langlands program and conformal field theory, arXiv:hep-th/0512172 (2005).
+
+\[6\] Robin Hartshorne, Algebraic geometry, Graduate Texts in Mathematics 52, Springer-Verlag, 1977.\[7\] Tam´as Hausel and Michael Thaddeus, Mirror symmetry,
+
+Langlands duality, and the Hitchin system, Inventiones Math. 153 (2003), 197–229.\[8\] Nigel J. Hitchin, The self-duality equations on a Riemann surface, Proc.
+
+London Math. Soc. (Ser. 3) 55 (1987), 59–126.\[9\] Nigel J. Hitchin, Stable bundles and integrable systems, Duke Math. J. 54 (1987), 91–114.\[10\] Nigel J.
+
+Hitchin, Langlands duality and G2 spectral curves, arXiv:math.AG/0611524 (2006).
+
+\[13\] Yingchen Li and Motohico Mulase, Hitchin systems and KP equations, Intern. J. Math. 7 \tag{1996}
+
+\]
+
+\]
+
+, 277-244.\[14\] Yingchen Li and Motohico Mulase, Prym varieties and integrable systems, Commun. Analysis and Geom. 5 (1997), 279-332.\[15\] Motohico Mulase,
+
+Cohomological structure in soliton equations and Jacobian varieties, J. Diff. Geom. 19 (1984), 403-430.\[16\] Motohico Mulase, Solvability of the super KP
+
+equation and a generalization of the Birkhoff decomposition,
+
+### Inventiones Math. 92 (1988), 1–46
+
+\[17\] Motohico Mulase, Category of vector bundles on algebraic curves and infinite dimensional Grassmannians, Intern. J. Math. 1 (1990), 293–342.\[18\]
+
+Motohico Mulase, Geometry of character varieties of surface groups, to appear in RIMS Kˆokyˆuroku, RIMS, Kyoto University, 2008.\[19\] David Mumford, John
+
+Fogarty, and Frances Kirwan, Geometric invariant theory, Third Edition, Springer-Verlag, 1994.\[20\] Ines Quandt, On a relative version of the Krichever
+
+correspondence, Bayreuther Mathematische Schriften 52 (1997), 1–74.\[21\] Mikio Sato and Yasuko Sato, Soliton equations as dynamical systems on
+
+infinite-dimensional Grassmann manifold, in “Nonlinear partial differential equations in applied science,” North-Holland Math. Stud. 81 (1983), 259–271.\[22\]
+
+Graeme Segal and George Wilson, Loop groups and equations of KdV type, Inst. Hautes Etudes Sci. Publ. Math. ´ 61 (1985), 5–65.\[23\] Takahiro Shiota,
+
+Characterization of Jacobian varieties in terms of soliton equations, Inventiones Math. 83 (1986), 333–382.\[24\] Takahiro Shiota, Prym varieties and soliton
+
+equations, in “Infinite-dimensional Lie algebras and groups,” Adv.
+
+Ser. Math. Phys. 7 (1989), 407–448.\[25\] Andrew Strominger, Shing-Tung Yau, and Eric Zaslow, Mirror symmetry is T-duality, Nuclear Phys. B 479 (1996),
+
+243–259.\[26\] Kanehisa Takasahi, The world of integrable systems–the fellowship of the Toda lattice (in Japanese), Kyoritsu Shuppan Publ. Co., 2001.
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 33
+
+| \[27\] Takayuki Tsuchida, New reductions of integrable matrix PDEs–Sp(2m)-invariant systems, arXiv:0712.4373 |  |
+
+| --- | --- |
+
+|  | [nlin.SI] (2008). |  |
+
+|  | 1638, Springer-Verlag, 1996. |  |
+
+|  | Department of Mathematics, University of California, Davis, CA 95616–8633 |  |
+
+|  | E-mail address: hodge@math.ucdavis.edu |  |
+
+|  | Department of Mathematics, University of California, Davis, CA 95616–8633 |  |
+
+|  | E-mail address: mulase@math.ucdavis.edu |  |

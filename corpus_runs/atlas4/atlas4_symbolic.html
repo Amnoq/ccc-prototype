@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Atlas-4 — symbolic sky</title>
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; }
+  body { background:#0e1116; color:#e6edf3;
+         font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #err { display:none; background:#f85149; color:#fff; padding:10px 14px;
+         font-size:13px; font-weight:600; }
+  #app { display:flex; flex-direction:column; height:100dvh; }
+  #topbar { background:#161b22; border-bottom:1px solid #30363d; padding:10px 14px; }
+  #topbar .title { font-size:16px; font-weight:700; margin-bottom:2px; }
+  #topbar .sub { font-size:12px; color:#8b949e; margin-bottom:8px; }
+  #topbar .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #topbar input[type=text] { flex:1 1 160px; min-width:120px; background:#0e1116; color:#e6edf3;
+    border:1px solid #30363d; border-radius:6px; padding:7px 10px; font-size:14px; }
+  #topbar label.tgl { display:inline-flex; align-items:center; gap:5px; font-size:12px;
+    color:#c9d1d9; background:#0e1116; border:1px solid #30363d; border-radius:999px;
+    padding:5px 10px; cursor:pointer; white-space:nowrap; }
+  #topbar label.tgl input { accent-color:#58a6ff; }
+  #legend { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:8px; font-size:11px; color:#8b949e; }
+  #legend .li { display:inline-flex; align-items:center; gap:5px; }
+  .dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #main { flex:1; display:flex; min-height:0; }
+  #stage { flex:1; position:relative; min-width:0; min-height:0; touch-action:none; }
+  canvas { display:block; width:100%; height:100%; }
+  #side { width:360px; flex:none; background:#161b22; border-left:1px solid #30363d;
+          overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  #side h2 { margin:0 0 4px; font-size:15px; }
+  .facet { border:1px solid #30363d; border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .facet .lbl { font-weight:600; word-break:break-word; }
+  .facet .meta { color:#8b949e; font-size:12px; margin-top:4px; }
+  .facet .note { font-size:12px; margin-top:4px; color:#c9d1d9; word-break:break-word; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:999px;
+          margin-right:6px; color:#0e1116; font-weight:700; }
+  .st-exact { background:#3fb950; } .st-computationally_verified { background:#58a6ff; }
+  .st-conjectural { background:#d29922; } .st-heuristic { background:#8b949e; }
+  .st-killed { background:#f85149; } .st-open { background:#e6edf3; }
+  .hint { color:#8b949e; font-size:12px; }
+  #loops .loop { font-size:12px; color:#c9d1d9; margin:5px 0; }
+  #loops .loop b { color:#e6edf3; }
+  #empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+           color:#8b949e; font-size:14px; pointer-events:none; text-align:center; padding:20px; }
+  @media (max-width: 900px) {
+    #main { flex-direction:column; }
+    #stage { min-height:52dvh; }
+    #side { width:100%; border-left:none; border-top:1px solid #30363d; flex:1; min-height:0; }
+  }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<div id="app">
+  <header id="topbar">
+    <div class="title">Atlas-4 — symbolic sky</div>
+    <div class="sub">McCarthy 1959 (Programs with Common Sense / Advice Taker), extracted blind · tap a node for detail · drag to pan, pinch/scroll to zoom</div>
+    <div class="row">
+      <input type="text" id="q" placeholder="search nodes…" autocomplete="off">
+      <label class="tgl"><input type="checkbox" id="f-detail"> detail nodes</label>
+      <label class="tgl"><input type="checkbox" id="f-edges" checked> all edges</label>
+      <label class="tgl"><input type="checkbox" id="f-killed" checked> killed</label>
+      <label class="tgl"><input type="checkbox" id="f-heur" checked> heuristic</label>
+    </div>
+    <div id="legend"></div>
+  </header>
+  <div id="main">
+    <div id="stage">
+      <canvas id="cv"></canvas>
+      <div id="empty" hidden>no nodes match the current filters</div>
+    </div>
+    <aside id="side">
+      <div id="detail"><p class="hint">Select a node to inspect its facets, notes and provenance.</p></div>
+      <div id="loops"><h2 style="font-size:14px;margin-top:14px">Open loops</h2><div id="looplo"></div></div>
+    </aside>
+  </div>
+</div>
+<script>
+window.addEventListener('error', function(e){
+  var b = document.getElementById('err');
+  b.style.display = 'block';
+  b.textContent = 'Atlas error: ' + (e.message || e.type) + ' — please report this text.';
+});
+const GRAPH = /*__GRAPH__*/{"subjects": {}, "standalone": [{"id": "the-advice-taker-a-proposed-program-for-solving-", "display": "the Advice Taker -- a proposed program for solving problems by manipulating sentences in formal languages, with the procedures (especially the heuristics) described in the language itself, unlike the Logic Theory Machine and the Geometry Program where heuristics were embodied in the program", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "definition", "genre": "original", "note": "Named in title/abstract; proposed (unbuilt) program for solving problems by manipulating sentences in formal languages; heuristics described in the language itself rather than embodied in the program."}, {"id": "common-sense-a-program-has-common-sense-if-it-au", "display": "common sense -- a program has common sense if it automatically deduces for itself a sufficiently wide class of immediate consequences of anything it is told and what it already knows", "status": "exact", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "definition", "genre": "original", "note": "Exact definition given: a program has common sense if it automatically deduces for itself a sufficiently wide class of immediate consequences of anything it is told and what it already knows."}, {"id": "behavior-improvable-merely-by-being-told-the-adv", "display": "behavior improvable merely by being told -- the Advice Taker's behavior improves by making statements to it about its symbolic environment and what is wanted, requiring little knowledge of the program", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "Expected advantage: behavior improvable merely by making statements to it about its symbolic environment and what is wanted, requiring little knowledge of the program."}, {"id": "capable-of-being-told-as-precondition-of-learnin", "display": "capable of being told as precondition of learning -- in order for a program to be capable of learning something it must first be capable of being told it", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "Stated doctrine: to be capable of learning something a program must first be capable of being told it; early versions concentrate entirely on being told improvements with no more internal knowledge than instructing a human requires."}, {"id": "the-five-features-a-system-evolving-intelligence", "display": "the five features a system evolving intelligence of human order should have -- all behaviors representable; interesting changes expressible simply; all but routine aspects improvable (including the improving mechanism); concepts of partial success; subroutines creatable with selection for interesting/powerful subroutines", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "definition", "genre": "original", "note": "Five listed requirements for evolving human-order intelligence: arbitrary automata representable; interesting changes expressible simply; all but routine aspects improvable (incl. the improving mechanism); concepts of partial success; subroutines creatable with interesting/powerful-subroutine selection."}, {"id": "the-behavior-search-critique-searching-nerve-net", "display": "the behavior-search critique -- searching nerve nets, Turing machines, or calculator programs for arbitrary behavior fails because the density of interesting behaviors is incredibly low and high-level changes lack simple representations", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "Twofold critique of searching nerve nets (Minsky 1956), Turing machines (McCarthy 1956), calculator programs (Friedberg 1958): density of interesting behaviors incredibly low; high-level changes lack simple representations (genetic blueprint/wart analogy)."}, {"id": "abstractions-expressible-only-in-language-the-on", "display": "abstractions expressible only in language -- the only known way of expressing abstractions (e.g., the principle of the opposition in checkers) is in language, hence a system that reasons verbally", "status": "conjectural", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "Claimed rationale for verbal reasoning: the only known way of expressing abstractions (e.g., the opposition in checkers) is in language."}, {"id": "declarative-versus-imperative-instruction-machin", "display": "declarative versus imperative instruction -- machines instructed mainly by imperative sequences, humans mainly by declarative situation descriptions with a few imperatives; the listed advantages of each", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "definition", "genre": "original", "note": "Enumerated contrast: machines instructed by sequences of imperatives vs humans instructed by declaratives plus a few imperatives; advantages of each listed (imperatives laid out and fast; declaratives leverage prior knowledge, have logical consequences, are order-independent and state-independent)."}, {"id": "construction-of-the-advice-taker-recursive-expre", "display": "construction of the Advice Taker -- recursive expressions on list structures; logical system analogous to a universal Post canonical system with a single rule combining substitution and modus ponens; immediate deduction routine of one-step consequences without semantic heuristics; intelligence in premise-choosing procedures; objects with property lists; cyclic operation where deduced imperatives are obeyed, including the 'deduce and obey' routine", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "method", "genre": "original", "note": "Six stated construction features: recursive expressions on list structures (Newell and Simon 1957); logical system analogous to a universal Post canonical system with a single rule combining substitution and modus ponens; immediate deduction routine writing one-step consequences with no semantic heuristics; intelligence located in premise-selection procedures; objects carry property lists; cyclic deduction with obeyed imperatives including 'deduce and obey'. Design only, unimplemented."}, {"id": "the-17-premise-airport-formalization-at-walkable", "display": "the 17-premise airport formalization -- at, walkable, drivable, can(go), did(go), canachult, prog, want, do; premises (1)-(17) and the deduction culminating in do(go(desk, car, walking))", "status": "exact", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "method", "genre": "original", "note": "Full worked formalization of the desk-to-airport problem: 17 premises with predicates at, walkable, drivable, can(go), did(go), canachult, prog, do; the paper exhibits the 8-step deduction ending in do(go(desk, car, walking)) as the derived action. Deductive derivation from premises exact as presented; the premises themselves heuristic."}, {"id": "the-premise-collection-heuristics-main-list-l-ob", "display": "the premise-collection heuristics -- main list L, 'observations of the main list', standing orders list, property lists, abstraction hierarchy from want(at(I, x)) to want(x), and the search for a y such that at(I, y) and at(airport, y)", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "method", "genre": "original", "note": "Tentative mechanism sketched: main list L holding want(at(I, airport)); 'observations of the main list' list; standing orders list (contents not worked out); property lists consulted up an abstraction hierarchy want(at(I, x)) then want(x); search for y with at(I, y) and at(airport, y) by working up origin/destination property lists."}, {"id": "the-stimulus-response-boundary-conjecture-the-co", "display": "the stimulus-response boundary conjecture -- the conscious/unconscious division in man occurs at the boundary between stimulus-response heuristics (obeyed, not reasoned) and statements serving as premises in deductions", "status": "conjectural", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "conjecture", "genre": "original", "note": "Explicitly marked 'one might conjecture': the human conscious/unconscious division occurs at the boundary between stimulus-response heuristics (obeyed, not reasoned) and statements that serve as premises in deductions."}, {"id": "the-common-sense-memory-requirement-the-problem-", "display": "the common-sense memory requirement -- the problem's premises may reasonably be expected present in the memory of a machine with human-order competence at finding its way around, without anticipating this particular problem", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "Plausibility requirement: all but the goal and 'whereamI' premise may reasonably be expected present in the memory of a machine with human-order competence at finding its way around; none so specific as to anticipate this particular problem."}, {"id": "bar-hillel-s-transitivity-objection-at-read-as-p", "display": "Bar-Hillel's transitivity objection -- 'at' read as physical part or immediate spatial neighborhood is not transitive, so the worked example starts from false premises", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "identification", "note": "Bar-Hillel (discussion): at read as physical-part or immediate-spatial-neighborhood is not transitive, so the argument starts from false premises; McCarthy replies it was a mnemonic for the place/sub-place relation, not English 'at'. Objection and reply both recorded; neither side proved."}, {"id": "bar-hillel-s-relevance-question-how-a-machine-wi", "display": "Bar-Hillel's relevance question -- how a machine with countless millions of facts picks out the premises that serve its deduction; whether any program could divide all facts into relevant and irrelevant for a given problem", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "question", "genre": "original", "note": "Bar-Hillel's decisive question: how a machine with countless millions of stored facts picks out the serving premises; doubts any program could divide all facts into relevant vs irrelevant for a given problem; treatment promised in another paper."}, {"id": "selfridge-s-amendability-criterion-deductive-log", "display": "Selfridge's amendability criterion -- deductive logic is inferred as much as anything else; judge the program by whether it can be amended so that it works, not by logical consistency", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "identification", "note": "Selfridge (discussion): deductive logic is inferred as much as anything else, not sacred; the criticism should be whether the program can be amended so it works (logic plus program details), not whether it is logically consistent."}, {"id": "mccarthy-s-reply-every-program-that-learns-from-", "display": "McCarthy's reply -- every program that learns from experience builds in an epistemology; epistemology may one day be reformulated as a branch of applied mathematics; the logic is intended faultless although its premises cannot be guaranteed", "status": "heuristic", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "McCarthy in reply: every experience-learning program builds in an epistemology; he hopes epistemology can one day be reformulated as a branch of applied mathematics no more mysterious than physics; the logic is intended faultless although its premises cannot be guaranteed."}, {"id": "the-intended-conclusion-the-advice-taker-conclud", "display": "the intended conclusion -- the advice taker concludes do(go(desk, car, walking)), not at(I, airport)", "status": "exact", "cluster": "symbolic", "chunk": "symbolic_mccarthy59", "kind": "claim", "genre": "original", "note": "McCarthy in reply: the intended conclusion is do(go(desk, car, walking)) -- not at(I, airport); the model oversimplifies but not to the extent of deducing one's way to the airport."}], "edges": [{"a": "common-sense-a-program-has-common-sense-if-it-au", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "supports", "count": 1}, {"a": "behavior-improvable-merely-by-being-told-the-adv", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "supports", "count": 1}, {"a": "capable-of-being-told-as-precondition-of-learnin", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "supports", "count": 1}, {"a": "the-five-features-a-system-evolving-intelligence", "b": "capable-of-being-told-as-precondition-of-learnin", "rel": "supports", "count": 1}, {"a": "the-behavior-search-critique-searching-nerve-net", "b": "abstractions-expressible-only-in-language-the-on", "rel": "supports", "count": 1}, {"a": "abstractions-expressible-only-in-language-the-on", "b": "declarative-versus-imperative-instruction-machin", "rel": "supports", "count": 1}, {"a": "declarative-versus-imperative-instruction-machin", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "supports", "count": 1}, {"a": "construction-of-the-advice-taker-recursive-expre", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "refines", "count": 1}, {"a": "the-17-premise-airport-formalization-at-walkable", "b": "the-advice-taker-a-proposed-program-for-solving-", "rel": "illustrates", "count": 1}, {"a": "the-premise-collection-heuristics-main-list-l-ob", "b": "construction-of-the-advice-taker-recursive-expre", "rel": "depends_on", "count": 1}, {"a": "the-stimulus-response-boundary-conjecture-the-co", "b": "the-premise-collection-heuristics-main-list-l-ob", "rel": "depends_on", "count": 1}, {"a": "the-common-sense-memory-requirement-the-problem-", "b": "the-premise-collection-heuristics-main-list-l-ob", "rel": "supports", "count": 1}, {"a": "bar-hillel-s-transitivity-objection-at-read-as-p", "b": "the-17-premise-airport-formalization-at-walkable", "rel": "contradicts", "count": 1}, {"a": "selfridge-s-amendability-criterion-deductive-log", "b": "bar-hillel-s-transitivity-objection-at-read-as-p", "rel": "contradicts", "count": 1}, {"a": "mccarthy-s-reply-every-program-that-learns-from-", "b": "bar-hillel-s-transitivity-objection-at-read-as-p", "rel": "refines", "count": 1}, {"a": "bar-hillel-s-relevance-question-how-a-machine-wi", "b": "the-premise-collection-heuristics-main-list-l-ob", "rel": "depends_on", "count": 1}, {"a": "the-intended-conclusion-the-advice-taker-conclud", "b": "the-17-premise-airport-formalization-at-walkable", "rel": "depends_on", "count": 1}], "loops": [{"chunk": "symbolic_mccarthy59", "label": "the-premise-collection-heuristics-main-list-l-ob", "node": null}, {"chunk": "symbolic_mccarthy59", "label": "bar-hillel-s-relevance-question-how-a-machine-wi", "node": null}], "stats": {"subjects": 0, "cross_edges": 17, "concepts": 18}};
+const COLORS = { exact:'#3fb950', computationally_verified:'#58a6ff',
+  conjectural:'#d29922', heuristic:'#8b949e', killed:'#f85149', open:'#e6edf3' };
+const NAMES = { exact:'exact', computationally_verified:'computationally verified',
+  conjectural:'conjectural', heuristic:'heuristic', killed:'killed', open:'open (unanchored)' };
+
+let nodes = [], nodeById = {};
+for (const [sid, s] of Object.entries(GRAPH.subjects)) {
+  const st = s.status || 'open';
+  nodes.push({ id:sid, label:s.display, status:st, facets:s.facets,
+    note:s.status_note, chunks:s.chunks, killedFacets:s.killed_facets,
+    r: 7 + Math.min(13, Math.sqrt(s.facets.length) * 4), subject:true, cluster:s.cluster||'misc' });
+}
+for (const s of GRAPH.standalone) {
+  const st = s.status || 'open';
+  nodes.push({ id:s.id, label:s.display, status:st,
+    facets:[{chunk:s.chunk, cid:'', label:s.display, kind:s.kind,
+              status:s.status, genre:s.genre, note:s.note, subjects:[]}],
+    note:null, chunks:[s.chunk], killedFacets:0, r:4.5, subject:false, cluster:s.cluster||'misc' });
+}
+nodes.forEach(n => nodeById[n.id] = n);
+let edges = GRAPH.edges.map(e => ({ a:e.a, b:e.b, rel:e.rel, w:e.count }))
+  .filter(e => nodeById[e.a] && nodeById[e.b]);
+
+const stage = document.getElementById('stage');
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W=0, H=0;
+function resize(){
+  const r = stage.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+// deterministic circle init once we know the size
+let inited = false;
+const clusterC = {};
+function maybeInit(){
+  if (inited || W < 50 || H < 50) return;
+  inited = true;
+  const clusters = [...new Set(nodes.map(n => n.cluster||'misc'))].sort();
+  const R = Math.min(W,H) * 0.30;
+  clusters.forEach((c, ci) => {
+    const a = (ci / clusters.length) * Math.PI * 2 - Math.PI/2;
+    clusterC[c] = { x: Math.cos(a)*R, y: Math.sin(a)*R };
+  });
+  const per = {};
+  nodes.forEach((n) => {
+    const c = n.cluster || 'misc';
+    const cc = clusterC[c];
+    const k = (per[c] = (per[c]||0) + 1);
+    const a = k * 2.39996, r = 16 * Math.sqrt(k);
+    n.x = cc.x + Math.cos(a)*r; n.y = cc.y + Math.sin(a)*r;
+    n.vx = 0; n.vy = 0;
+  });
+}
+if (window.ResizeObserver) new ResizeObserver(()=>{ resize(); maybeInit(); }).observe(stage);
+window.addEventListener('resize', ()=>{ resize(); maybeInit(); });
+resize(); maybeInit();
+
+let selected = null, hover = null;
+let cam = { x:0, y:0, z:1 };
+function tick(){
+  if (W < 50) return;
+  for (let i=0;i<nodes.length;i++){ const a=nodes[i];
+    for (let j=i+1;j<nodes.length;j++){ const b=nodes[j];
+      let dx=a.x-b.x, dy=a.y-b.y, d2=dx*dx+dy*dy+60, d=Math.sqrt(d2);
+      const f = Math.min(8000/d2, 5);
+      dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+    a.vx += -a.x*0.004; a.vy += -a.y*0.004;
+    const cc = clusterC[a.cluster||'misc'];
+    if (cc){ a.vx += (cc.x-a.x)*0.03; a.vy += (cc.y-a.y)*0.03; }
+  }
+  for (const e of edges){ const a=nodeById[e.a], b=nodeById[e.b]; if(!a||!b) continue;
+    let dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+    const want = 80 + Math.min(70, a.r+b.r);
+    const f = (d-want)*0.018*Math.min(3, e.w);
+    dx/=d; dy/=d; a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f; }
+  for (const n of nodes){ n.vx*=0.86; n.vy*=0.86;
+    n.x+=Math.max(-9,Math.min(9,n.vx)); n.y+=Math.max(-9,Math.min(9,n.vy)); }
+}
+function visible(n){
+  if (!n.subject && !document.getElementById('f-detail').checked) return false;
+  if (n.status==='killed' && !document.getElementById('f-killed').checked) return false;
+  if (n.status==='heuristic' && !document.getElementById('f-heur').checked) return false;
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (q && !(n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q))) return false;
+  return true;
+}
+function draw(){
+  if (W >= 50){
+    ctx.clearRect(0,0,W,H);
+    const cx = W/2 + cam.x, cy = H/2 + cam.y, z = cam.z;
+    const showAll = document.getElementById('f-edges').checked;
+    const vis = nodes.filter(visible);
+    const visSet = new Set(vis.map(n=>n.id));
+    document.getElementById('empty').hidden = vis.length > 0;
+    for (const e of edges){
+      if (!visSet.has(e.a) || !visSet.has(e.b)) continue;
+      const sel = selected && (e.a===selected.id || e.b===selected.id);
+      if (!showAll && !sel) continue;
+      const a=nodeById[e.a], b=nodeById[e.b];
+      ctx.strokeStyle = sel ? 'rgba(230,237,243,.5)' : (e.rel.indexOf('cross:')===0 ? 'rgba(255,215,0,.6)' : 'rgba(139,148,158,.16)');
+      ctx.lineWidth = sel ? Math.min(3, .6+e.w*.5) : 1;
+      ctx.beginPath(); ctx.moveTo(cx+a.x*z, cy+a.y*z); ctx.lineTo(cx+b.x*z, cy+b.y*z); ctx.stroke();
+    }
+    for (const n of vis){
+      const x=cx+n.x*z, y=cy+n.y*z, r=n.r*Math.sqrt(z);
+      if (x<-50||y<-50||x>W+50||y>H+50) continue;
+      ctx.beginPath(); ctx.arc(x,y,Math.max(1.5,r),0,6.2832);
+      ctx.globalAlpha = n.subject ? .92 : .5;
+      ctx.fillStyle = COLORS[n.status] || '#8b949e';
+      ctx.fill(); ctx.globalAlpha = 1;
+      if (n===selected || n===hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=2; ctx.stroke(); }
+      if (n===hover || n.r>10 || z>1.7){
+        ctx.fillStyle='#e6edf3'; ctx.font='11px sans-serif'; ctx.textAlign='center';
+        const t = n.label.length>36 ? n.label.slice(0,35)+'…' : n.label;
+        ctx.fillText(t, x, y - r - 6);
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+// pointer: mouse + touch
+let drag=null, pinch=null;
+function pos(e){ const r=cv.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x:t.clientX-r.left, y:t.clientY-r.top }; }
+function nodeAt(mx,my){
+  const cx=W/2+cam.x, cy=H/2+cam.y, z=cam.z;
+  for (const n of nodes){ if(!visible(n)) continue;
+    const x=cx+n.x*z, y=cy+n.y*z;
+    if (Math.hypot(mx-x,my-y) < n.r*Math.sqrt(z)+6) return n; }
+  return null;
+}
+cv.addEventListener('mousedown', e=>{ drag={x:e.clientX,y:e.clientY,moved:false}; });
+window.addEventListener('mousemove', e=>{
+  if (drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>4) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=e.clientX; drag.y=e.clientY; }
+});
+window.addEventListener('mouseup', e=>{
+  if (drag && !drag.moved && e.target===cv){
+    const p=pos(e); select(nodeAt(p.x,p.y));
+  }
+  drag=null;
+});
+cv.addEventListener('wheel', e=>{ e.preventDefault();
+  cam.z = Math.max(.3, Math.min(4, cam.z * (e.deltaY<0? 1.12 : .9))); }, {passive:false});
+cv.addEventListener('touchstart', e=>{
+  if (e.touches.length===1){ const p=pos(e); drag={x:p.x,y:p.y,moved:false,id:e.touches[0].identifier}; }
+  else if (e.touches.length===2){ const a=e.touches[0], b=e.touches[1];
+    pinch={ d:Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY), z:cam.z }; drag=null; }
+}, {passive:true});
+cv.addEventListener('touchmove', e=>{
+  if (e.touches.length===1 && drag){
+    const p=pos(e); const dx=p.x-drag.x, dy=p.y-drag.y;
+    if (Math.abs(dx)+Math.abs(dy)>6) drag.moved=true;
+    cam.x+=dx; cam.y+=dy; drag.x=p.x; drag.y=p.y;
+  } else if (e.touches.length===2 && pinch){
+    const a=e.touches[0], b=e.touches[1];
+    const d=Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY);
+    if (d>0) cam.z = Math.max(.3, Math.min(4, pinch.z * d/pinch.d));
+  }
+  e.preventDefault();
+}, {passive:false});
+cv.addEventListener('touchend', e=>{
+  if (drag && !drag.moved && e.changedTouches.length){
+    const t=e.changedTouches[0], r=cv.getBoundingClientRect();
+    select(nodeAt(t.clientX-r.left, t.clientY-r.top));
+  }
+  drag=null; pinch=null;
+});
+function pill(st){ return `<span class="pill st-${st}">${NAMES[st]||st}</span>`; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function select(n){
+  selected = n;
+  const d = document.getElementById('detail');
+  if (!n){ d.innerHTML = '<p class="hint">Select a node to inspect its facets, notes and provenance.</p>'; return; }
+  let h = `<h2 style="word-break:break-word">${esc(n.label)}</h2>`;
+  h += `<div style="margin-bottom:6px">${pill(n.status)} <span class="hint">${esc(n.id)}</span></div>`;
+  if (n.note) h += `<p style="font-size:12px;color:#c9d1d9"><i>merge note:</i> ${esc(n.note)}</p>`;
+  if (n.killedFacets) h += `<p style="font-size:12px;color:#f85149">${n.killedFacets} killed facet(s) — see below</p>`;
+  const nb = edges.filter(e=>e.a===n.id||e.b===n.id);
+  if (nb.length){ h += `<p class="hint">${nb.length} relation(s):</p>`;
+    nb.slice(0,24).forEach(e=>{ const o = e.a===n.id? e.b : e.a;
+      const on = nodeById[o];
+      h += `<div style="font-size:12px;margin:3px 0"><a href="#" data-n="${esc(o)}" style="color:#58a6ff">${esc(on?on.label:o)}</a> <span class="hint">— ${e.a===n.id? esc(e.rel)+' →' : '← '+esc(e.rel)} (×${e.w})</span></div>`; });
+  }
+  h += `<p class="hint" style="margin-top:10px">${n.facets.length} facet(s) · chunks: ${esc(n.chunks.join(', '))}</p>`;
+  n.facets.forEach(f=>{
+    h += `<div class="facet"><div class="lbl">${esc(f.label)}</div>`
+      + `<div class="meta">${pill(f.status||'open')}<span class="hint">${esc(f.kind)}${f.genre?' · '+esc(f.genre):''} · ${esc(f.chunk)}${f.cid?' / '+esc(f.cid):''}</span></div>`
+      + (f.note? `<div class="note">${esc(f.note)}</div>` : '') + `</div>`;
+  });
+  d.innerHTML = h;
+  d.querySelectorAll('a[data-n]').forEach(a=>a.addEventListener('click', ev=>{
+    ev.preventDefault(); const t=nodeById[a.getAttribute('data-n')]; if(t) select(t); }));
+}
+document.getElementById('legend').innerHTML =
+  Object.keys(COLORS).map(k=>`<span class="li"><span class="dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join('')
+  + `<span class="li hint">node size ∝ facet count</span>`;
+(function(){
+  const st = GRAPH.stats;
+  const el = document.querySelector('#topbar .sub');
+  el.textContent += ` · ${st.subjects} subjects · ${st.cross_edges} relations · ${GRAPH.loops.length} open loops · ${st.concepts} concepts`;
+})();
+document.getElementById('looplo').innerHTML = GRAPH.loops.map(l=>
+  `<div class="loop"${l.node?` data-node="${esc(l.node)}" title="trace this constellation" style="cursor:pointer"`:''}><b>${esc(l.chunk)}</b> — ${esc(l.label)}</div>`).join('');
+document.getElementById('looplo').addEventListener('click', e=>{
+  const t = e.target.closest('[data-node]');
+  if (t){ const n = nodeById[t.getAttribute('data-node')]; if (n) select(n); }
+});
+setInterval(tick, 30);
+draw();
+</script>
+</body>
+</html>

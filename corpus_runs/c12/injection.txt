@@ -1,0 +1,55 @@
+LEGEND (index: label):
+1: supports
+2: contradicts
+3: bounds
+4: generalizes
+5: implements
+6: depends_on
+7: causes
+8: measures
+9: defines
+10: exemplifies
+11: refines
+12: supersedes
+13: asserted
+14: verified
+15: superseded
+16: open_question
+17: Connes adele-class trace formula (1999)
+18: zeros as absorption spectrum from continuum
+19: semilocal trace formula proved; full RH-equivalent
+20: Weil positivity W(h)≥0 equivalent to RH
+21: D_log self-adjoint zeta spectral triple
+22: zeros as genuine self-adjoint operator eigenvalues
+23: prime-input construction with numerical zero coincidence
+24: Bost–Connes Hecke system producing zeta pole
+25: Deninger foliated dynamical cohomology program
+26: Ruelle transfer operator lacking independent dynamics
+27: Sierra xp-models reproduce smooth counting function only
+28: Bender–Brody–Müller PT-symmetric operator
+29: Wu–Sprung inverse potential fit to zeros
+30: Selberg zeta via Mayer transfer operator control
+31: sieve z-filtration parallels place and orbit cutoffs
+32: guardrail D10: imported bridge not derived
+33: ranked shortlist prioritizing B and D-heuristic computation
+34: does D_log converge to zeros as N,λ→∞?
+
+INJECTED STRUCTURE (grouped compact):
+
+S17:17 18 19 20 31
+S21:21 22 23 33 34
+S25:24 25 26 30
+S28:27 28 29 32
+S0:31 32 33
+E17:1 31,6 20,9 18
+E19:3 17
+E21:1 31,11 17
+E22:6 21
+E26:6 25
+E27:3 22
+E28:10 32
+E29:10 32
+E30:10 25
+E33:6 23
+A:17 13,18 14,19 14,20 14,21 14,22 13,23 13,24 14,25 16,26 13,27 14,28 15,29 15,30 14,31 13,32 13,33 13,34 16
+L:25 34

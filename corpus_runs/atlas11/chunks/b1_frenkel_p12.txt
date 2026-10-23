@@ -1,0 +1,445 @@
+sheaf on a variety V is uniquely determined by its restriction to an open dense subset U ⊂ V , if it is non-zero (and in that case it is necessarily an
+
+irreducible perverse sheaf on U). Let us take Grλ as V and Grλ as U. Then U is smooth and so the rank one constant sheaf on U, placed in cohomological degree −
+
+dimC U = −2hρ,λ ˇ_i, is a perverse sheaf. Therefore there exists a unique, up to an isomorphism, irreducible perverse sheaf on Grλ whose restriction to Grλ is
+
+this constant sheaf. The sheaf on Grλ is called the Goresky-MacPherson or intersection cohomology sheaf on Grλ. We will denote it by ICλ. This is quite a
+
+remarkable complex of sheaves on Grλ. The cohomology of Grλ with coefficients in ICλ, the so-called intersection cohomology of Grλ, satisfies the Poincar´e
+
+duality: Hi (Grλ,ICλ) ≃ H−i (Grλ,ICλ).46 If Grλ were a smooth variety, then ICλ would be just the constant sheaf placed in cohomological degree − dimC Grλ, and
+
+so its cohomology would just be the ordinary cohomology of Grλ, shifted by dimC Grλ. A beautiful result (due to Goresky and MacPherson when V is defined over a
+
+field of characteristic zero and to Beilinson, Bernstein and Deligne when V is defined over a finite field) is that a complex of sheaves satisfying the
+
+Poincar´e duality property always exists on singular varieties, and it is unique (up to an isomorphism) if we require in addition that its restriction to any
+
+smooth open subset (such as Grλ in our case) is a rank one constant sheaf. 45µ ≤ λ means that λ − µ can be written as a linear combination of simple roots with
+
+non-negative integer coefficients 46the unusual normalization is due to the fact that we have shifted the cohomological degrees by dimC Grλ = 1 dimR Grλ
+
+### 62  EDWARD FRENKEL
+
+The perverse sheaves ICλ are in fact all the irreducible objects of the category PG(O)
+
+up to an isomorphism.47 Assigning to a perverse sheaf its “trace of Frobenius” function, as explained in Sect. 3.3, we obtain an identification between the
+
+Grothendieck group of PG(O) and the algebra of G(O)-invariant functions on G(F)/G(O), i.e., the spherical Hecke algebra H. In that sense, PG(O) is a
+
+categorification of the Hecke algebra. A remarkable fact is that the function Hλ in formula (5.2) is precisely equal to the function associated to the perverse
+
+sheaf ICλ, up to a sign (−1)2hρ,λ ˇ_i
+
+.
+
+Now we can truly appreciate formula (5.2). Under the Satake isomorphism the classes of irreducible representations Vλ of LG do not go to the characteristic
+
+functions cλ of the orbits, as one could naively expect. The reason is that those functions correspond to the constant sheaves on Grλ. The constant sheaf on Grλ
+
+(extended by zero to Grλ) is the wrong sheaf. The correct substitute for it, from the geometric perspective, is the irreducible perverse sheaf ICλ. The
+
+corresponding function is then (−1)2hρ,λ ˇ iHλ, where Hλ is given by formula (5.2), and this is precisely the function that corresponds to Vλ under the Satake
+
+correspondence. The coefficients aλµ appearing in Hλ also have a transparent geometric meaning: they | measure the dimensions of the stalk cohomologies of ICλ
+
+at various strata Grµ,µ ≤ λ that | | |
+
+| --- | --- | --- |  |
+
+| P lie in the closure of Grλ; more precisely, aλµ = | (i) i/2 | (i) | | i | a λµq , where a | λµ is the dimension of | | 48 the ith stalk cohomology of ICλ on
+
+Grλ. | | | We have Hλ = q −hρ,λˇ_i cλ only if the orbit Grλ is already closed. This is equivalent to the weight λ being miniscule, i.e., the only dominant
+
+integral weight occurring in the weight decomposition of Vλ is λ itself. This is a very rare occurrence. A notable exception is the case of G = GLn, when all
+
+fundamental weights \omega_i ,i = 1,... ,n − 1, are
+
+miniscule. The corresponding G(O)-orbit is the (ordinary) Grassmannian Gr(i,n) of idimensional subspaces of the n-dimensional vector space. Whenever we have the
+
+equality
+
+Hλ = q −hρ,λˇ_i cλ the definition of the Hecke operators, both at the level of functions and at the level of sheaves, simplifies dramatically. 5.5. Example: the
+
+affine Grassmannian of PGL2. Let us look more closely at the affine Grassmannian Gr = PGL2((t))/PGL2[\[t]\] associated to PGL2(C). Since the fundamental group
+
+of PGL2 is Z2, the loop group PGL2((t)) has two connected components, and so does its Grassmannian. We will denote them by Gr(0) and Gr(1). The component Gr(0)
+
+is in fact isomorphic to the Grassmannian SL2((t))/SL2[\[t]\] of SL2.The PGL2[\[t]\]-orbits in Gr are parameterized by set of dominant integral weights of the
+
+dual group of PGL2, which is SL2. We identify it with the set Z+ of non-negative integers. The orbit Grn corresponding to_n ∈ Zn is equal to
+
+### t n 0
+
+Grn = PGL2[\[t]\] PGL2[\[t]\].
+
+0 1
+
+47in general, we would also have to include the perverse sheaves obtained by extensions of non-trivial (irreducible) local systems on the smooth strata, such as
+
+our Grλ; but since these strata are simplyconnected in our case, there are no non-trivial local systems supported on them 48to achieve this, we need to
+
+restrict ourselves to the so-called pure perverse sheaves; otherwise, Hλ could in principle be multiplied by an arbitrary overall scalar
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 63
+
+\[
+
+It has complex dimension 2n. If_n = 2k is even, then it belongs to Gr \tag{0}
+
+\]
+
+\[
+
+= GrSL2 and may be realized as
+
+\]
+
+### t k  0
+
+Gr2k = SL2[\[t]\] SL2[\[t]\].
+
+### 0 t −k
+
+The smallest of those is Gr0, which is a point.
+
+If n is odd, then Grn belongs to Gr(1). The smallest is Gr1, which is isomorphic to CP1
+
+.
+
+\[
+
+The closure Grn of Grn is the disjoint union of Grm, where_m \le n and_m has the same parity as_n. The irreducible perverse sheaf ICn is actually a constant
+
+sheaf in this case (placed in cohomological dimension -2n), even though Grn is a singular algebraic variety.
+
+\]
+
+This variety has a nice description in terms of the N((t))-orbits in Gr (where N is the subgroup of upper triangular unipotent matrices). These are
+
+### t m 0
+
+Sm = N((t)) PGL2[\[t]\], m ∈ Z.
+
+0 1
+
+\[
+
+Then Grn is the disjoint union of the intersections Grn ∩ Sm where\|m\| \le n and_m has the same parity as_n, and in this case
+
+### 1 Pn−1 i t n 0
+
+### ait (n+m)/2
+
+Grn ∩ Sm = i=(n−m)/2
+
+### · ≃ C
+
+### 0 1 0 1 , ai ∈ C
+
+(otherwise Grn ∩ Sm = ∅).
+
+5.6. The geometric Satake equivalence. We have seen above that the Satake isomorphism may be interpreted as an isomorphism between the Grothendieck group of the
+
+category PG(O) and the Grothendieck group of the category Rep LG of finite-dimensional representations of the Langlands dual group LG. Under this isomorphism
+
+the irreducible perverse sheaf ICλ goes to the irreducible representation Vλ. This suggests that perhaps the Satake isomorphism may be elevated from the level
+
+of Grothendieck groups to the level of categories. This is indeed true.
+
+In fact, it is possible to define the structure of tensor category on PG(O) with the tensor product given by a convolution functor corresponding to the
+
+convolution product (5.1) at the level of functions. The definition of this tensor product, which is due to Beilinson and Drinfeld (see \[69\]), is reminiscent
+
+of the fusion product arising in conformal field theory.
+
+It uses a remarkable geometric object, the Beilinson-Drinfeld Grassmannian Gr(2), which may be defined for any curve X. This Gr(2) fibers over X2
+
+, but its fiber over (x,y) ∈ X2 ,
+
+\[
+
+where x_6= y, is isomorphic to Gr \times Gr, whereas the fiber over (x,x) \in X_2 is isomorphic to a single copy of Gr (see [20],Sect. 20.3,for a review of this
+
+construction). One can define in terms of Gr \tag{2}
+
+\]
+
+\[
+
+the other ingredients necessary for the structure of tensor category on
+
+### PG(O)
+
+, namely, the commutativity and associativity constraints (see \[69\]).
+
+Then we have the following beautiful result. It has been conjectured by V. Drinfeld and proved in the most general setting by I. Mirkovi´c and K. Vilonen \[69\]
+
+(some important results in this direction were obtained earlier by V. Ginzburg \[70\] and G. Lusztig \[71\]).
+
+Theorem 6. The tensor category PG(O) is equivalent to the tensor category Rep LG.
+
+Moreover, the fiber functor from PG(O) to the category of vector spaces, corresponding to the forgetful functor on Rep LG, is just the global cohomology functor
+
+F 7→ L (Gr,F).
+
+### i Hi
+
+### 64  EDWARD FRENKEL
+
+The second assertion allows one to reconstruct the Langlands dual group LG by means of the standard Tannakian formalism.
+
+\[
+
+For instance, let us consider the irreducible perverse sheaves IC\omega i corresponding to the closed GLn(O)-orbits Gr\omega i in the Grassmannian, attached to
+
+the miniscule fundamental weights \omega_i of the dual GLn. As we saw above, Gr\omega i is the Grassmannian Gr(i,n), and IC\omega i is the constant sheaf on it
+
+placed in the cohomological degree - dimC Gr(i,n) = -i(n-i). Therefore the fiber functor takes IC\omega i) to L (Gr(i,n - i),C), which is isomorphic to
+
+\]
+
+### i Hi
+
+### ∧ iC n
+
+of the
+
+. This space is indeed isomorphic to the ith fundamental representation Vωi
+
+dual GLn. 49 In particular, the Langlands dual group of GLn can be defined as the group of automorphisms of the total cohomology space H∗
+
+(Grω1 n−1
+
+, C) of Grω1 ≃ P , which is the
+
+projectivization of the n-dimensional defining representation of the original group GLn.
+
+It just happens that the dual group is isomorphic to GLn again, but this construction makes it clear that it is a different GLn!
+
+So we get a completely new perspective on the nature of the Langlands dual group (as compared to the Satake construction). This is a good illustration of why
+
+geometry is useful in the Langlands Program.
+
+The above theorem should be viewed as a categorification of the Satake isomorphism of Theorem 4. We will now use it to define the notion of a Hecke eigensheaf
+
+for an arbitrary reductive group and to formulate a geometric version of the Langlands correspondence.
+
+6. The geometric Langlands conjecture over C
+
+From now on we will work exclusively with curves over C, even though the definition of the Hecke eigensheaves, for example, can be made for curves over the
+
+finite field as well. In this section we will formulate the geometric Langlands conjecture for an arbitrary reductive group G over C. Once we do that, we will
+
+be able to use methods of conformal field theory to try and establish this correspondence.
+
+\[
+
+6.1. Hecke eigensheaves. Let us recall from the previous section that we have the affine Grassmannian Gr (over C) and the category PG(O) of G(O)-equivariant
+
+perverse sheaves (of C-vector spaces) on Gr. This category is equivalent, as a tensor category, to the category of finite-dimensional representations of the
+
+Langlands dual group LG(C). Under this equivalence, the irreducible representation of LG with highest weight \lambda \in P+ corresponds to the irreducible
+
+perverse sheaf IC\lambda .
+
+\]
+
+Now we can define the analogues of the GLn Hecke functors introduced in Sect. 3.7 for a general reductive group G. Let BunG be the moduli stack of G-bundles on
+
+X. Consider the stack Hecke which classifies quadruples (M,M′
+
+\[
+
+,x,\beta), where M and M′ are G-bundles on X, x \in X, and \beta is an isomorphism between the restrictions of M and M′ to X\\x. We have natural morphisms
+
+\]
+
+### Hecke
+
+### h← h→
+
+### ւ ց
+
+BunG  X × BunG
+
+49note that this space comes with a cohomological gradation, which we have already encountered in Sect. 3.8
+
+LECTURES ON THE LANGLANDS PROGRAM AND CONFORMAL FIELD THEORY 65
+
+| where h←(M,M′ | ). |  |
+
+| --- | --- |  |
+
+\[
+
+|,x,\beta) = M and h\to (M,M′ |,x,\beta) = (x,M′ |
+
+\]
+
+| Note that the fiber of Hecke over (x,M′ | ) is the moduli space of pairs (M,β), where |  |
+
+\[
+
+| ∼\to M\|X\x. It is known that this moduli space is\|X\x M is a G-bundles on X, and \beta : M′ | | | isomorphic to a twist of Grx = G(Fx)/G(Ox) by the
+
+G(O)x-torsor M′ | (Ox) of sections of |
+
+\]
+
+| M′ over Spec Ox: |  |
+
+\[
+
+(h \to) -1 (x,M′) = M′ (Ox) \times Grx .
+
+\]
+
+### G(Ox)
+
+Therefore we have a stratification of each fiber, and hence of the entire Hecke, by the substacks Heckeλ,λ ∈ P+, which correspond to the G(O)-orbits Grλ in Gr.
+
+Consider the irreducible perverse sheaf on Hecke, which is the Goresky-MacPherson extension of the constant sheaf on Heckeλ. Its restriction to each fiber is
+
+isomorphic to ICλ, and by abuse of notation we will denote this entire sheaf also by ICλ. Define the Hecke functor Hλ from the derived category of perverse
+
+sheaves on BunG to the derived category of perverse sheaves on X × BunG by the formula (6.1) Hλ(F) = h → (h ←∗(F) \otimes ICλ).
+
+### ∗
+
+\[
+
+Let E be a LG-local system on X. Then for each irreducible representation V\lambda of LG we have a local system V E V\lambda . \lambda = E \times
+
+### LG
+
+\[
+
+Now we define Hecke eigensheaves as follows. A perverse sheaf (or,more generally,a complex of sheaves) on BunG is a called a Hecke eigensheaf with eigenvalue E
+
+if we are given isomorphisms \tag{6.2}
+
+\]
+
+\[
+
+ı\lambda : H\lambda(F) ∼-\to V E \lambda ⊠ F, \lambda \in P+,
+
+\]
+
+which are compatible with the tensor product structure on the category of representations of LG.
+
+\[
+
+In the case when G = GLn this definition is equivalent to equations \tag{3.9}
+
+\]
+
+\[
+
+. This is because the fundamental representations V\omega i,i = 1,...,n - 1, and the one-dimensional
+
+determinant representation generate the tensor category of representations of GLn. Hence it is sufficient to have the isomorphisms (6.2) just for those
+
+representations. These conditions are equivalent to the Hecke conditions (3.9).
+
+Now we wish state the geometric Langlands conjecture which generalizes the geometric Langlands correspondence for G = GLn (see Theorem_3). One subtle point is
+
+what should take place of the irreducibility condition of a local system E for a general group G. As we saw in Sect. 3.8, this condition is very important. It
+
+seems that there is no consensus on this question at present, so in what follows we will use a provisional definition: LG-local system is called irreducible if
+
+it cannot be reduced to a proper parabolic subgroup of LG.
+
+Conjecture 1. Let E be an irreducible LG-local system on X. Then there exists a nonzero Hecke eigensheaf AutE on BunG with the eigenvalue E whose restriction to
+
+each
+
+connected component of BunG is an irreducible perverse sheaf.
+
+irreducible Hecke eigensheaves
+
+### LG-local systems on X −→
+
+on BunG
+
+### E  −→  AutE
+
+### 66  EDWARD FRENKEL
+
+As explained in Sect. 3.4, when working over C we may switch from perverse sheaves to D-modules, using the Riemann-Hilbert correspondence (see \[49, 50, 51,
+
+54\]). Therefore we may replace in the above conjecture perverse sheaves by D-modules. In what follows we will consider this D-module version of the geometric
+
+Langlands conjecture.
+
+The Hecke eigensheaves corresponding to a fixed LG-local system E give rise to a
+
+), where F is an object of the
+
+\[
+
+category AutE whose objects are collections (F,{ı\lambda }\lambda \in P+ derived category of sheaves on BunG,and ı\lambda are the isomorphisms entering the
+
+definition of Hecke eigensheaves \tag{6.2}
+
+\]
+
+\[
+
+which are compatible with the tensor product structure on the category of representations of LG. Just as in the case of G = GLn (see Sect. 3.8), it is important
+
+to realize that the structure of this category changes dramatically depending on whether E is irreducible (in the above sense) or not.
+
+\]
+
+If E is irreducible, then we expect that this category contains a unique, up to an isomorphism, perverse sheaf (or a D-module) that is irreducible on each
+
+component of BunG.
+
+But this is not true for a reducible local system: it may have non-isomorphic objects, and the objects may not be perverse sheaves, but complexes of perverse
+
+sheaves. For example, in \[61\] Hecke eigensheaves corresponding to LG-local systems that are reducible to
+
+the maximal torus LT ⊂ LG were constructed. These are the geometric Eisenstein series generalizing those discussed in Sect. 3.8. In the best case scenario these
+
+are direct sums of infinitely many irreducible perverse sheaves on BunG, but in general these are complicated complexes of perverse sheaves.
+
+The group of automorphisms of E naturally acts on the category AutE as follows.
+
+Given an automorphism g of E, we obtain a compatible system of automorphisms of the local systems V E
+
+λ , which we also denote by g. The corresponding functor AutE → AutE ) to {g ◦ ıλ}λ∈P+ ). For a generic E the group of automorphisms is sends (F, {ıλ}λ∈P+ the
+
+center Z( LG) of LG, which is naturally identified with the group of characters of the fundamental group π1(G) of G. The latter group labels connected
+
+components of BunG = ∩γ∈π1(G) Bunγ LG), we obtain a character χz : π1(G) → C ×. G . So given z ∈ Z( The action of z on AutE then amounts to multiplying F\|Bunγ
+
+by χz(γ). On the other
+
+hand, the group of automorphisms of the trivial local system E0 is LG itself, and the corresponding action of LG on the category AutE0 is more sophisticated.
+
+As we discussed in the case of GLn (see Sect. 3.8), we do not know any elementary examples of Hecke eigensheaves for reductive groups other than the tori.
+
+However, just as in the case of GLn, the constant sheaf C on BunG may be viewed as a Hecke eigensheaf, except that its eigenvalue is not a local system on X but
+
+a complex of local systems.
+
+\[
+
+Indeed, by definition, for a dominant integral weight \lambda \in P+ of LG, H\lambda(C) is the constant (Gr\lambda,IC\lambda), which is isomorphic
+
+\]
+
+sheaf on Bunn with the fiber being the cohomology L
+
+### i Hi
+
+\[
+
+to V\lambda, according to Theorem_6, as a vector space. But it is =spread out” in cohomological degrees, and so one cannot say that C is a Hecke eigensheaf with
+
+the eigenvalue being a local system on X. Rather, its =eigenvalue” is something like a complex of local systems.
+
+\]

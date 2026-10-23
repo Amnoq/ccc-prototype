@@ -1,0 +1,713 @@
+E and Sym(K−1 )/Is are the same as OC-modules. In this way a Higgs pair (E, φ) gives
+
+C
+
+rise to a line bundle LE on the spectral curve Cs, if it is non-singluar. Since LE being an
+
+### OCs )/Is-module, we recover E from LE simply
+
+### -module is equivalent to E being a Sym(K−1 C
+
+\[
+
+by E = \pi^*LE, which has rank_n because \pi is a covering of degree_n. From the equality \chi(C,E) = \chi(Cs,LE) and Riemann-Roch, we find that deg LE = d +
+
+n(n - 1)(g - 1). To
+
+\]
+
+### summarize, the above construction defines an inclusion map
+
+H−1 (s) ⊂ Picd+n(n−1)(g−1)(Cs) ∼= Jac(Cs),
+
+if Cs is non-singular.
+
+\[
+
+Conversely, suppose we have a line bundle L of degree d + n(n - 1)(g - 1) on a nonsingular spectral curve Cs. Then \pi^*L is a module over \pi^*OCs = Sym(K-1
+
+\]
+
+### )/Is, which
+
+C
+
+### defines a homomorphism K−1
+
+\[
+
+C \to End(\pi^*L), or equivalently, \psi : \pi^*L \to \pi^*L \otimes KC. It is easy to see that the Higgs pair (\pi^*L,\psi) is stable. Suppose we had a \psi
+
+-invariant subbundle F \subset \pi^*L of rank_k < n. Since (F,\psi\|F) is a Higgs pair, it gives rise to a spectral curve Cs
+
+\]
+
+### ′
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 7
+
+\[
+
+that is a degree_k covering of C. Note that the characteristic polynomial s ′ = det(x - \psi) is a factor of the full characteristic polynomial s = det(x -
+
+\varphi). Therefore, Cs ′ is a component of Cs, which contradicts to our assumption that Cs is irreducible. Therefore, \pi^*L has no
+
+\]
+
+### ψ-invariant proper subbundle. Thus we have established that
+
+\[
+
+H-1 (s) = Picd+n(n-1)(g-1)(Cs) ∼= Jac(Cs), s \in Ureg \subset V^*
+
+\]
+
+GL.
+
+The vector bundle π∗L itself is not necessarily stable. It is proved in \[3\] that the locus of L in Picd+n(n−1)(g−1)(Cs) that gives unstable π∗L has
+
+codimension two or more. Recall that the tautological section η ∈ H0 (T ∗UC(n, d), p∗Λ_1 (UC(n, d))) is a holomorphic_1-form on T ∗UC(n, d) ⊂ HC(n, d). Its
+
+restriction to the fiber H−1 (s) of s ∈ Ureg for which Cs is non-singular extends to a holomorphic_1-form on the whole fiber H−1 (s) ∼= Jac(Cs) since η is
+
+undefined only on a codimension_2 subset. Hence η extends as a holomorphic_1-form on H−1 (Ureg). Thus η is well defined on T ∗UC(n, d)∪H−1 (Ureg). The
+
+complement of this open subset in HC(n, d) consists of such Higgs pairs (E, φ) that E is unstable and Cs is singular. Since the stability of E and the
+
+non-singular condition for Cs are both open conditions, this complement has codimension at least two. Consequently, both the tautological section η and the
+
+holomorphic symplectic form ω = −dη extend holomorphically to the whole Higgs moduli space HC(n, d).
+
+We note that there are no holomorphic 1-forms other than constants on a Jacobian variety
+
+### since its cotangent bundle is trivial. It implies that
+
+### ) ≡ 0
+
+\[
+
+\omega\|H-1(s) = -d(\eta\|H-1(s) for s \in Ureg. Therefore,a generic fiber of the Hitchin fibration is a Lagrangian subvariety of the holomorphic symplectic
+
+variety (HC(n,d),\omega). The Poisson structure on
+
+\]
+
+### H0 (HC(n, d), OHC (n,d) ) is defined by
+
+\[
+
+{f, g} = \omega(Xf,Xg), f, g \in H_0 (HC(n,d),OHC (n,d)), where Xf denotes the Hamiltonian vector field defined by the relation df = \omega(Xf,·). Since \omega
+
+vanishes on a generic fiber of H, the holomorphic functions on HC(n,d) coming from the coordinates of the Hitchin fibration are Poisson commutative with respect
+
+to the holomorphic symplectic structure \omega . Therefore, (HC(n,d),\omega,H) is an algebraically completely
+
+\]
+
+integrable Hamiltonian system \[28\], called the Hitchin integrable system.
+
+### Theorem 2.1 (Hitchin \[9\]). The Hitchin fibration
+
+### H : HC(n, d) −→ V ∗
+
+### GL
+
+is a generically Lagrangian Jacobian fibration that defines an algebraically completely integrable Hamiltonian system (HC(n, d), ω, H). A generic fiber H−1
+
+### (s) is a Lagrangian with
+
+respect to the holomorphic symplectic structure ω and is isomorphic to the Jacobian variety of a spectral curve Cs.
+
+### The Hitchin map H restricted to T ∗
+
+### E UC(n, d) for a stable E is a polynomial map
+
+\[
+
+T^* 0 (C,End(E) \otimes KC) ∋ \varphi_7-\to det(x - \varphi) \in Mn H_0 (C,K\otimes i) E UC(n,d) = H C
+
+\]
+
+### i=1
+
+consisting of g linear components, 3g − 3 quadratic components, 5g − 5 cubic components, etc., and (2n − 1)(g − 1) components of degree n. Thus the inverse
+
+image
+
+### H −1 (s) ∩ T ∗
+
+### E UC(n, d)
+
+### 8  ANDREW HODGE AND MOTOHICO MULASE
+
+\[
+
+for a generic (E,\varphi) consists of \tag{2.15}
+
+\]
+
+\[
+
+\delta = Yn_i (2i-1)(g-1)
+
+\]
+
+### i=1
+
+### points \[3\]. Consequently, the map
+
+\[
+
+p : Jac(Cs) ∼= H -1 (s) -\to H -1 \tag{0}
+
+\]
+
+\[
+
+= UC(n,d) is a covering morphism of degree \delta .
+
+\]
+
+Let us now determine the Hamiltonian vector field associated to each coordinate function
+
+\[
+
+|^*UC(n,d)∩H-1 of H. Take a point (E,\varphi) \in T | (Ureg). The tangent space of the Higgs moduli |
+
+| --- | --- |
+
+| space at this point is given by |
+
+\[
+
+| \tag{2.17}
+
+\]
+
+\[
+
+T(E,\varphi)HC(n,d) = H_1 (C,End(E)) \oplus H_0 | (C,End(E) \otimes KC). | | Since the symplectic form \omega = -d\eta is the exterior derivative of the
+
+tautological_1-form \eta of | | | \tag{2.6}
+
+\]
+
+\[
+
+on T^*UC(n,d), the evaluation of \omega at (E,\varphi) is given by | | | \tag{2.18}
+
+\]
+
+### h·, ·i : H 1 (C,End(E)) \oplus H 0 (C,End(E) \otimes KC) −→ C
+
+is the Serre duality pairing. This expression is the standard Darboux form of the symplectic form ω. Choose an open neighborhood Y1 of E in UC(n, d) on which
+
+the cotangent bundle
+
+### T ∗UC(n, d) is trivial. Then H is a polynomial map
+
+### 0 (C,End(E) \otimes KC) ∋ (E ′ Mn H 0 (C, K\otimes i )
+
+### H : Y1 × H
+
+\[
+
+, \varphi) 7-\to s = det(x - \varphi) \in C
+
+\]
+
+### i=1
+
+that depends only on the second factor. The differential dH(E,φ) at the point (E, φ) gives a
+
+### linear isomorphism
+
+\[
+
+dH(E,\varphi) (C,End(E) \otimes KC) ∼-\to Mn H_0 (C,K\otimes i).
+
+\]
+
+### : H0
+
+C
+
+### i=1
+
+As to the first factor of the tangent space of (2.17), we use the differential of the covering
+
+### map p of (2.16):
+
+### (2.20)  dp(E,φ) 1 (Cs, OCs ) ∼−→ H 1 (C,End(E)),
+
+### : H
+
+\[
+
+where s = H(E,\varphi). The dual of \tag{2.19}
+
+\]
+
+\[
+
+, together with (2.20), gives an isomorphism
+
+### def = Mn−1 1 1 ∼−→ H 1 1
+
+\[
+
+VGL H (C,K-\otimes i) = H (C,\pi^*OCs) (C,End(E)) ∼= H (Cs,OCs).
+
+\]
+
+C
+
+### i=0
+
+From (2.19) and (2.21), we see that the tangent space to the Higgs moduli is given by
+
+\[
+
+T(E,\varphi)HC(n,d) ∼= Mn (C,K-\otimes (i-1)) \oplus Mn (C,K\otimes i) = VGL \oplus V^*
+
+\]
+
+### H1 H0
+
+#### C C GL.
+
+\[
+
+i=1 i=1 Therefore, the symplectic form has a decomposition into_n pieces \omega = \omega_1 + \omega_2 + · · · + \omega_n, (C,K-\otimes (i-1)) \oplus H_0
+
+(C,K\otimes i), \omega_i takes the standard Darboux form
+
+\]
+
+### and in each factor H1
+
+### C C
+
+\[
+
+\omega_i (a_i),(a_i) i ii - ha_i ii
+
+\]
+
+### 1 , bi 1 2 , bi 2 = ha 1 , bi 2 2 , bi 1 ,
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 9
+
+\[
+
+i),(a_i) \in H_1 (C,K-\otimes (i-1)) \oplus H_0 (C,K\otimes i), and h·, ·ii is the duality pairing of
+
+\]
+
+### where (a
+
+### 1 , bi 1 2 , bi 2 C C
+
+H1 (C, K−\otimes(i−1) ) and H0 (C, K\otimes i ).
+
+### C C
+
+\[
+
+Since s = H(E,\varphi) \in Ureg is a regular value of H, there is an open subset Y_2 \subset Ureg \subset V^*
+
+### GL
+
+(Y2) is locally the product of the fiber H−1 (s) and Y2. By taking
+
+### around s such that H−1
+
+Y1 smaller if necessary, we thus obtain a local product neighborhood
+
+\[
+
+-1 \tag{Y1}
+
+\]
+
+\[
+
+∩ H-1 \tag{Y2}
+
+\]
+
+\[
+
+∼= Y_1 \times Y_2 = Y
+
+\]
+
+p
+
+of (E, φ) in HC(n, d). By construction, the projections to the first and the second factors coincide with the projection p : T ∗UC(n, d) → UC(n, d) and the
+
+Hitchin map H:
+
+Y ~ A p ~ A A H ~ A ~ A ~ A ~ A ~ A Y1  Y2.
+
+\[
+
+The neighborhood Y and these projections provide the Darboux coordinate system for \omega, and its expression (2.18,2.23) globally holds on Y . In particular,
+
+the Hamiltonian vector fields corresponding to the components of H on Y are constant vector fields that are determined by elements of H_1 (C,K-\otimes (i-1))
+
+for each_i = 1, . . ., n. Llet (h_1,. . .,hN) be a
+
+\]
+
+C
+
+linear coordinate system of V ∗ 2 (g − 1) + 1. Since V ∗ Ln (C, K\otimes i ),
+
+GL, where N = n GL = i=1 H0 C
+
+### each coordinate function is an element of VGL:
+
+\[
+
+h_1, . . ., hN \in VGL = Mn-1 H_1 (C,K-\otimes i).
+
+\]
+
+C
+
+### i=0
+
+Since H0 (Cs, OCs ) = C, the Hitchin map H : HC(n, d) → V ∗
+
+### GL is actually the pull back of
+
+the coordinate functions H−1 (h1), . . . , H−1 (hN ) on H−1 (Ureg) ⊂ HC(n, d). The identification of VGL as the first factor of the tangent space in (2.22)
+
+gives the Hamiltonian vector
+
+fields corresponding to the coordinate components of the Hitchin map. We have therefore established that the Hamiltonian vector fields are linear flows with
+
+respect to the linear coordinate of the Jacobian Jac(Cs) determined by (2.21). Of course each of these linear flows extends globally on Jac(Cs) since the
+
+tangent bundle of a Jacobian is trivial and a local linear function extends globally as a linear function.
+
+\[
+
+Theorem_2.2 (Hitchin [9]). The Hamiltonian vector fields corresponding to the Hitchin fibration are linear Jacobian flows on a generic fiber H-1 (s) ∼= Jac(Cs).
+
+How does the construction of the spectral data (LE,Cs) from a Higgs pair (E,\varphi) change
+
+\]
+
+### ∗ )? To answer this question, first we note
+
+\[
+
+when we consider the Serre dual (E^* \otimes KC,-\varphi \tag{2.25}
+
+\]
+
+\[
+
+tr ∧ i (\varphi) = tr ∧ i (\varphi^*) \in H_0 (C,End(∧ iE) \otimes Ki_0 (C,End(∧ i (E^* \otimes KC)) \otimes Ki C) = H C). For s = (s_1,s_2,. . .,sn) \in V^*^*
+
+= (-s_1,s_2,. . .,(-1)n sn). By definition, the
+
+\]
+
+### GL, we write s
+
+### spectral curves Cs and Cs ∗C, their isomorphism Cs ∼=
+
+### ∗ are isomorphic. As divisors of T
+
+### ǫ(Cs ∗C
+
+### ∗ ) is induced by the involution of T
+
+\[
+
+ǫ : T^*C ∋ (p,x) 7-\to (p,-x) \in T^*C, where p \in C and x \in T^*
+
+\]
+
+p C.
+
+### 10  ANDREW HODGE AND MOTOHICO MULASE
+
+Proposition 2.3 (Hitchin \[10\]). The spectral data (LE∗\otimes KC
+
+### , Cs ∗ ) corresponding to the Serre
+
+dual (E∗ \otimes KC, −φ ∗ ) of the Higgs pair (E, φ) is given by
+
+(
+
+LE∗\otimes KC = ǫ ∗ (L ∗ )
+
+### E \otimes KCs
+
+### Cs
+
+∗ = ǫ(Cs).
+
+The degree of these isomorphic line bundles is − deg(E) + (n 2 + n)(g − 1).
+
+Proof. We use the exact sequence of \[3, 10\] that characterizes LE:
+
+0 −→ LE \otimes K−1 \otimes π ∗KC −→ π ∗E −→ π ∗ (E \otimes KC) −→ LE \otimes π ∗KC −→ 0.
+
+### Cs
+
+### The dual of this sequence is then
+
+0 −→ L∗ ∗KC −→ π ∗ (E ∗ \otimes KC) −→ π ∗ (E ∗ \otimes K\otimes 2 ) −→ L∗ ∗KC −→ 0. E \otimes π C E \otimes KCs \otimes π Thus the spectral data of the Higgs
+
+pair (E∗ \otimes KC, φ∗ ) is (L ∗
+
+### E \otimes KCs , Cs). The involution
+
+∗ ).
+
+ǫ comes in here when we consider the Higgs pair (E∗ \otimes KC, −φ Proposition_2.4. Hitchin’s integrable system for the group Sp2m(C) is realized as the
+
+fixedpoint-set of the Serre duality involution (E, φ) 7→ (E∗\otimes KC, −φ
+
+### ∗ ) defined on the Higgs moduli
+
+space HC(2m, 2m(g − 1)).
+
+\[
+
+Proof. The fixed-point-set consists of Higgs pairs (E,\varphi) such that E ∼= E^* \otimes KC and \varphi = -\varphi^* -\frac{1}{2}^* . Choose a square root of
+
+KC and define F = E \otimes K C . The Higgs field \varphi = -\varphi naturally acts on this bundle, and the pair (F,\varphi) forms the moduli space of
+
+Sp2m-Higgs bundles [10]. The characteristic coefficients satisfy the relation s = s^*
+
+\]
+
+### , hence
+
+### def = Mm
+
+\[
+
+s \in V^* H_0 (C,K\otimes 2i).
+
+\]
+
+### Sp C
+
+### i=1
+
+The spectral curve Cs has a non-trivial involution ǫ : Cs → Cs. From the exact sequence
+
+\[
+
+\frac{1}{2} (E \otimes K) -\to \pi(E \otimes K_1/2) -\to LE \otimes \pi_1/2 0 -\to LE \otimes K-1 \otimes \pi^*K^* -\frac{1}{2}^*^*K Cs C -\to \pi C C C -\to 0,
+
+we see that LF ∼= LE \otimes \pi^*K -\frac{1}{2} and LF^* ∼= ǫ^*L^*^*K -\frac{1}{2} C F \otimes KCs \otimes \pi C . If we define L_0 = LF \otimes \pi^*K -m+1/2
+
+following [10], then L^* ∼= ǫ^*L_0.
+
+\]
+
+### C 0
+
+### 3. Deformations of spectral curves
+
+The Hitchin fibration (2.9) is a family of deformations of Jacobians, but it is not effective. In this section we determine the natural effective family
+
+associated with the Hitchin
+
+fibration.
+
+\[
+
+An obvious action on HC(n,d) that preserves the spectral curves is the scalar multiplication of Higgs fields \varphi_7\to \lambda · \varphi by \lambda \in C
+
+\]
+
+### ∗ ∗
+
+### . Although this C -action is not symplectomorphic
+
+because it changes the symplectic form ω_7→ λ · ω, from the point of view of constructing an effective family of Jacobians, we need to quotient it out. We note
+
+that the C ∗
+
+### -action on
+
+### V ∗
+
+### GL defined by
+
+\[
+
+V^* Mn H_0 (C,K\otimes i) ∋ s = (s_1,s_2,. . .,sn) 7-\to \lambda · s = (\lambda s_1,\lambda_2^* GL = s_2,. . .,\lambda_n sn) \in V GL
+
+\]
+
+C
+
+### i=1
+
+### HITCHIN SYSTEMS, SPECTRAL CURVES, AND KP EQUATIONS 11
+
+### makes the Hitchin fibration C ∗
+
+### -equivariant:
+
+λ −−−−−−−−→ HC(n, d)
+
+### HC(n, d)
+
+###
+
+\[
+
+H H \lambda \in C^*
+
+\]
+
+y y .
+
+### Ln (C, K\otimes i ) −−−−−−−−→ Ln (C, K\otimes i ),
+
+\[
+
+i=1 H_0 C_i=1 H_0 C diag(\lambda,...,\lambda n)
+
+\]
+
+Since Cs is defined by the equation (2.11), the natural C ∗
+
+### -action on the cotangent bundle
+
+T ∗C gives the isomorphism λ : Cs → Cλ·s that commutes with the projetion π : T ∗C → C. The line bundles L(E,φ) on Cs and L(E,λφ) on Cλ·s corresponding to E are
+
+related by this
+
+### isomorphism by
+
+λ ∗L(E,λφ) ∼−→ L(E,φ)
+
+.
+
+\[
+
+Another group action on the Higgs moduli space that leads to trivial deformations of the spectral curves is the Jacobian action. The Jac(C)-action on HC(n,d) is
+
+defined by (E,\varphi) 7-\to (E \otimes L,\varphi), where L \in Jac(C) = Pic0 (C) is a line bundle on C of degree_0. The Higgs field is preserved in this
+
+action because (E \otimes L)^* \otimes (E \otimes L) = E^* \otimes E is unchanged,
+
+\]
+
+### hence
+
+\[
+
+\varphi \in H_0 (C,End(E) \otimes KC) = H_0 (C,End(E \otimes L) \otimes KC).
+
+\]
+
+Thus the cotangent bundle T ∗UC(n, d) is trivial along every orbit of the Jac(C)-action on UC(n, d), and each Jac(C)-orbit in HC(n, d) lies in the same fiber of
+
+the Hitchin fibration.
+
+\[
+
+Let us identify the Jac(C)-action on a generic fiber H-1 (s) ∼= Jac(Cs). The covering map \pi : Cs \to C induces an injective homomorphism \pi^* : Jac(C) ∋
+
+L_7-\to \pi^*L \in Jac(Cs). This is injective because if \pi^*L ∼= OCs
+
+\]
+
+### , then by the projection formula we have
+
+\[
+
+^*L) ∼= \pi^*OCs \otimes L ∼= Mn-1 \pi^*(\pi L \otimes K\otimes -i
+
+\]
+
+### C ,
+
+### i=0
+
+### (s) and
+
+\[
+
+which has a nowhere vanishing section. Hence L ∼= OC. Take a point (E,\varphi) \in H-1 let LE be the corresponding line bundle on Cs. Since \pi^*(LE \otimes
+
+\pi^*L) ∼= E \otimes L, the action of Jac(C) on H-1 (s) ∼= Jac(Cs) is through the canonical action of the subgroup Jac(C) ∼= \pi^* Jac(C) \subset Jac(Cs)
+
+\]
+
+on Jac(Cs).
+
+On the open subset T ∗UC(n, d) of HC(n, d), the Jac(C)-action is symplectomorphic because it is induced by the action on the base space UC(n, d). On the other
+
+open subset
+
+\[
+
+H-1 (Ureg) the action is also symplectomorphic because it preserves each fiber which is a Lagrangian. Since the symplectic form \omega is defined by extending
+
+the canonical form \omega = -d\eta to HC(n,d), the Jac(C)-action is globally holomorphic symplectomorphic on HC(n,d). This action is actually a Hamiltonian
+
+action and the first component of the Hitchin map \tag{3.3}
+
+\]
+
+\[
+
+H_1 : HC(n,d) ∋ (E,\varphi) 7-\to tr(\varphi) \in H_0 (C,KC)
+
+\]
+
+is the moment map. Note that H1 (C, OC ) is the Lie algebra of the Abelian group Jac(C),
+
+### and H0
+
+(C, KC ) is its dual Lie algebra. Since the infinitesimal action of H1 (C, OC ) on the
+
+Higgs moduli space defines a vector field which is obtained by identifying H1 (C, OC) with the first component of (2.21), the symplectic dual to this vector
+
+field is the map to the first component of second factor in (2.22), i.e, H1.We can therefore construct the symplectic quotient HC(n, d)//Jac(C), which we will
+
+do in Section 4. Here our interest is to determine an effective family of spectral curves. The
+
+### 12  ANDREW HODGE AND MOTOHICO MULASE
+
+\[
+
+moment map H_1 of \tag{3.3}
+
+\]
+
+\[
+
+being the trace of \varphi, it is natural to define
+
+### (3.4)  V ∗ ∗ Mn H 0 (C, K\otimes i ) ⊂ V ∗
+
+SL = V SLn(C) = C GL.
+
+### i=2
+
+This is a vector space of dimension (n 2 − 1)(g − 1). Now consider a partial projective space
+
+### (3.5)  P(HSL H −1 (V ∗ −1 (0)C ∗
+
+C (n, d)) = SL) \\ H .
+
+This is no longer a holomorphic symplectic manifold, yet the Hitchin fibration naturally
+
+### descends to a generically Jacobian fibration
+
+### (3.6)  P H : P(HSL ∗

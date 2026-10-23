@@ -1,0 +1,114 @@
+7. The dispersion method
+
+        In this and the next three sections we treat the Type I and II estimates
+simultaneously via the methods in [5] and [1, §§3-7]. We henceforth assume
+that 7 = a * ß satisfies (Ai), (A2) and (A3). Recall that x\ and X2 are given
+by (2.13). We shall apply Lemma 4 with
+
+  (7.1) R* = x~£N
+ if 7 is of Type 1 (x\ < N < X2), and
+
+  (7.2) R* = x~3wN
+ if 7 is of Type II (x^ < N < 2z1/2).
+   Note that D\ < R* < D^. By Lemma 4 and
+ is reduced to showing that
+
+              S IMr)l ZI \A(r,r,a]q,b
+        R*/D\<r<R* a£Ci(r) D2/r<q<D2 /r beCi(q)
+                                              q\V
+                                          {q,r~Po)=l
+
+where, for \ß(qr)\ = (a,r) = (b,q) = 1,
+
+                   A(r,r,a\q,b)= £ t(») ~ "7^n)
+                                           n=a(r) (n,qr)—1
+                                           n=b(q)
+
+ It therefore suffices to prove that
+(7-3)
+      B(r,Q,R) ~ \^r)\ E E E \A(r,r,a;q,b)\ <^xC~A3A,
+                      r~R a6Ci(r) q~Q beCi(q)
+                                                    q\V
+                                              (qxVo)=i
+
+subject to the conditions
+
+ (7.4) x~wR* < R < R*
+and
+
+ (7.5) \x1,2~£ <QR< x1/2+2ro,
+which are henceforth assumed.
+        For notational simplicity, in some expressions the subscript i will be omit
+ted even though they depend on it. In what follows we assume that
+
+ (7.6) r ~ R. |/i(r)| = 1, a£Ci(r).
+        Let c(r, a; q, b) be given by
+
+                                c(r, a; q, b) = sgn A(7; r, a; q, b)
+
+                   128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                             All use subject to https://about.jstor.org/terms
+                            BOUNDED GAPS BETWEEN PRIMES 1147
+
+if
+
+                       q ~ Q, q\V, {q, rVo) = 1, be Ci(q),
+and
+
+                               c(r, a; q, b) — 0 otherwise.
+ Changing the order of summation we obtain
+
+                 E E |A(7;r, a; q,b)\ = E a(m)V(r, a; m),
+                           beCi(q) (m,r)=1
+               «IP
+           (q,rP0)=l
+where
+
+      V(r,a\m)=(</,ra)=l
+                 ^ ^c(r,a;g,6)^ ^ /3(n) j—r ^ 0(n)).
+                         6 ^ mn=a(r) r\H J (n^qr^=i
+                                                     mn=b(q)
+
+ It follows by Cauchy's inequality that
+
+     (7.7) B(r,Q,R)2CMR£BJ2\»(r)\ X ra)2,
+                                      X f(m)V(r
+                                           r~R a£Ci(r) (m,r)=l
+
+ where f(y) is as in Lemma 7 with 77* = ry19. We have
+
+     (7-8) XI f{rn)V(r,a-,m)2 = S1(r,a)-2S2{r,a) + S3(r,
+           (m,r)=1
+
+ where <Sj(r, a), j = 1, 2, 3 are defined by
+
+          5i(r.«)= X /(m)( X Xc(r'ö;<?^) X ^(n)
+               (m,r)=l ^ (g,m)=l 6 mn=a(r) '
+                                                                              mn=b(q)
+
+                                             c(r,a;q1,bi)c(r,a;q2,b2)
+          52(r,a) = XX XX
+               <n 6l 92 fe2 V(®r)
+               X X ß(ni)ß(n2) X /(m)'
+                       x
+
+                           nl (n2,q2r)=l mn\=a(r)
+                                           mnisbi(qi)
+                                            (m,q2)=1
+
+         c / \ v-* c(r' a' ^i' ^i)c(r' a'i 92> ^2)
+           3(') = ÇÇÇÇ ^W.r)
+                           x S S ß(nl)ß(n2) Y /M"
+                           (ni,gir)=l (n2,<j2r)=l (m,<Ji<J27-)=l
+
+ By (7.7) and (7.8), the proof of (7.3) is reduced to showing that
+
+ (7-9) YY (5l(r'a) ~ 2S2(r,a) +53(r,a)) <C xNR~1£~87A
+             r   a
+
+     on assuming A > B. Here we h
+     notational simplicity, so they
+
+                 128.6.45.205 on Fri, 09 Dec 2022 16:59:26 UTC
+                           All use subject to https://about.jstor.org/terms
+ 1148         YITANG                   ZHANG
